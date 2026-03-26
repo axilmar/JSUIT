@@ -107,3 +107,14 @@ export const countSubstrings = (str, substr) => {
 export const sortStringData = (str, delim = ',', compareFn) => {
     return str.split(delim).sort(compareFn).join(delim);
 }
+
+/**
+ * Helper function for setting the children of an element to the enabled or disabled state.
+ * @param {*} elem the parent element.
+ * @param {*} enabled the enabled value.
+ */
+export const setChildrenEnabled = (elem, enabled) => {
+    for(let child = elem.firstElementChild; child; child = child.nextElementSibling) {
+        child.enabled = enabled;
+    }
+}

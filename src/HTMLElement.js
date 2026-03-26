@@ -20,7 +20,7 @@ function getStates() {
         result.push("hover");
     }
     
-    return result;
+    return result.join(',');
 }
 
 function setHover(v) {
@@ -87,7 +87,7 @@ function updateTheme() {
         return;
     }
 
-    let stateString = this.getStates?.() ?? [];
+    let stateString = this.getStates?.() ?? '';
 
     //iterate classes from super to derived
     for(let classIndex = 0; classIndex < this.classList.length; ++classIndex) {
@@ -264,9 +264,7 @@ const addEventHandlers = (elem) => {
  * 
  * The following methods are added to an HTMLElement:
  * 
- *  - 'getStates()': invoked to return the states of the object as an array of strings, separated by comma; 
- *      An array of strings can also be returned. The order of states returned is important:
- *      the closest to the end of the string or array a state is, the more priority it has.
+ *  - 'getStates()': invoked to return the states of the object as an string of states, separated by comma; 
  *      it can be overriden to add more states to the element.
  * 
  *  - 'setTheme(theme)': invoked when a theme is set or reset, allowing the element to theme itself.

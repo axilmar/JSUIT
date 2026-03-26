@@ -1,4 +1,4 @@
-import { isInstanceOfHTMLElement } from "./util.js";
+import { isInstanceOfHTMLElement, setChildrenEnabled } from "./util.js";
 
 /*
     All elements shall have border-box sizing, because it makes size calculations easier for the developer.
@@ -60,8 +60,9 @@ const observerCallback = (mutationsList, observer) => {
         }
         else if (mutation.attributeName === 'disabled') {
             mutation.target.updateTheme?.();
+            setChildrenEnabled(mutation.target, !mutation.target.disabled);
         }
     }
 };
 const observer = new MutationObserver(observerCallback);
-observer.observe(document.body, { childList: true, subtree: true});
+observer.observe(document.body, { childList: true, subtree: true, attributes: true });
