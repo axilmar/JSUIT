@@ -1,5 +1,5 @@
-import { initElement, addClassName } from "./Element.js";
-import { isInstanceOfHTMLElement, sortStringData } from "./util.js";
+import { initElement } from "./Element.js";
+import { isInstanceOfHTMLElement, addClassName, sortStringData } from "./util.js";
 
 const HOVER_VALUE_PROPERTY = "__hover";
 const THEME_VALUE_PROPERTY = "__theme";

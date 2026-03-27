@@ -1,5 +1,5 @@
 import { initNode } from "./Node.js";
-import { isInstanceOfElement, appendChildrenToElement } from "./util.js";
+import { isInstanceOfElement, addClassName, appendChildrenToElement } from "./util.js";
 
 let autoIds = {};
 
@@ -26,20 +26,6 @@ const setAutoElementId = (props) => {
         const autoId = getAutoId(lastClassName);
         props.id = `${lastClassName}-${autoId}`;
     }
-    return props;
-}
-
-/**
- * Helper function for adding a class name to props.
- * The new class name is added as a prefix to the existing class name.
- * @param {*} props the properties object.
- * @param {*} className the new classname.
- * @returns the properties.
- */
-export const addClassName = (props, className) => {
-    const existingClassName = props.className ?? '';
-    const space = existingClassName ? ' ' : '';
-    props.className = `${className}${space}${existingClassName}`;
     return props;
 }
 

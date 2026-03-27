@@ -1,6 +1,5 @@
-import { addClassName } from "./Element.js";
 import { initHTMLElement } from "./HTMLElement.js";
-import { isInstanceOfHTMLDivElement } from "./util.js";
+import { isInstanceOfHTMLDivElement, addClassName } from "./util.js";
 
 /**
  * Initializes an HTML div element.

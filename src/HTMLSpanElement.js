@@ -1,6 +1,5 @@
-import { addClassName } from "./Element.js";
 import { initHTMLElement } from "./HTMLElement.js";
-import { isInstanceOfHTMLSpanElement } from "./util.js";
+import { isInstanceOfHTMLSpanElement, addClassName } from "./util.js";
 
 /**
  * Initializes an HTML span element.

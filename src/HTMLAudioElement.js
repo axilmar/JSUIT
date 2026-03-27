@@ -1,6 +1,5 @@
-import { addClassName } from "./Element.js";
 import { initHTMLMediaElement } from "./HTMLMediaElement.js";
-import { isInstanceOfHTMLAudioElement } from "./util.js";
+import { isInstanceOfHTMLAudioElement, addClassName } from "./util.js";
 
 /**
  * Initializes an HTML audio element.

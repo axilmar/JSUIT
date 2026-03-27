@@ -106,6 +106,20 @@ export const isInstanceOfHTMLBRElement = (obj) => obj instanceof HTMLBRElement;
 export const isInstanceOfHTMLButtonElement = (obj) => obj instanceof HTMLButtonElement;
 
 /**
+ * Helper function for adding a class name to props.
+ * The new class name is added as a prefix to the existing class name.
+ * @param {*} props the properties object.
+ * @param {*} className the new classname.
+ * @returns the properties.
+ */
+export const addClassName = (props, className) => {
+    const existingClassName = props.className ?? '';
+    const space = existingClassName ? ' ' : '';
+    props.className = `${className}${space}${existingClassName}`;
+    return props;
+}
+
+/**
  * Removes all whitespace from a string.
  * @param {*} str string to remove the whitespace from; if undefined or null, an empty string is returned.
  * @returns a new string without the whitespace.

@@ -1,6 +1,5 @@
-import { addClassName } from "./Element.js";
 import { initHTMLElement } from "./HTMLElement.js";
-import { isInstanceOfHTMLAreaElement } from "./util.js";
+import { isInstanceOfHTMLAreaElement, addClassName } from "./util.js";
 
 const defineProperties = (elem) => {
     Object.defineProperty(elem, "value", {

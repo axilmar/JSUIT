@@ -1,6 +1,5 @@
-import { addClassName } from "./Element.js";
 import { initHTMLElement } from "./HTMLElement.js";
-import { isInstanceOfHTMLBRElement } from "./util.js";
+import { isInstanceOfHTMLBRElement, addClassName } from "./util.js";
 
 /**
  * Initializes an HTML br element.
