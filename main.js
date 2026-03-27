@@ -1,5 +1,6 @@
 import { Text } from "./src/Text.js";
 import { Image } from "./src/HTMLImageElement.js";
+import { Span } from "./src/HTMLSpanElement.js";
 
 const btn1 = document.createElement("button");
 btn1.innerHTML = "Click me";
@@ -8,7 +9,7 @@ document.body.append(btn1);
 const btn2 = document.createElement("button");
 document.body.append(btn2);
 
-Text({parent: document.body, value: "The quick brown fox"});
+Span({parent: document.body, fontSize: "32px"}, Text({value: "The quick brown fox"}));
 const img = Image({parent: btn2, value: "test.png", border: "16px solid"});
 
 const theme = {
@@ -32,7 +33,7 @@ const theme = {
         "enabled": {
             backgroundColor: "white"
         }/*,
-        ["enabled,hover,active"]: {
+        "enabled,hover,active": {
             backgroundColor: "red"
         }*/
     }

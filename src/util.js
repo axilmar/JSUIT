@@ -48,6 +48,13 @@ export const isInstanceOfHTMLElement = (obj) => obj instanceof HTMLElement;
 export const isInstanceOfHTMLImageElement = (obj) => obj instanceof HTMLImageElement;
 
 /**
+ * Checks if the given object is an instance of class HTMLSpanElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLSpanElement, false otherwise.
+ */
+export const isInstanceOfHTMLSpanElement = (obj) => obj instanceof HTMLSpanElement;
+
+/**
  * Checks if the given object is an instance of class HTMLButtonElement.
  * @param {*} object the object to check.
  * @returns true if the given object is an instance of class HTMLButtonElement, false otherwise.
@@ -116,5 +123,70 @@ export const sortStringData = (str, delim = ',', compareFn) => {
 export const setChildrenEnabled = (elem, enabled) => {
     for(let child = elem.firstElementChild; child; child = child.nextElementSibling) {
         child.enabled = enabled;
+    }
+}
+
+/**
+ * Appends children to an element, using the element's 'append' method.
+ * @param {*} parent parent element; if falsy, nothing happens.
+ * @param {*} children children to add; it can be an array of nodes or a single node; if falsy, nothing happens.
+ */
+export const appendChildrenToElement = (parent, children) => {
+    if (parent) {
+        console.assert(isInstanceOfElement(parent));
+        if (children) {
+            if (Array.isArray(children)) {
+                parent.append(...children);
+            }
+            else {
+                parent.append(children);
+            }
+        }
+    }
+}
+
+
+/**
+ * Appends children to a node, using the node's 'appendChild' method.
+ * @param {*} parent parent node; if falsy, nothing happens.
+ * @param {*} children children to add; it can be an array of nodes or a single node; if falsy, nothing happens.
+ */
+export const appendChildrenToNode = (parent, children) => {
+    if (parent) {
+        console.assert(isInstanceOfNode(parent));
+        if (children) {
+            if (Array.isArray(children)) {
+                for(const child of children) {
+                    parent.appenChild(child);
+                }
+            }
+            else {
+                parent.appendChild(children);
+            }
+        }
+    }
+}
+
+/**
+ * Appends children to a parent.
+ * The parent can be an element or a node.
+ * If the parent is an element, then the method 'append' is used.
+ * If the parent is a node, then the method 'appendChild' is used.
+ * If the parent is not an element or a node, an exception is thrown.
+ * @param {*} parent the element or node to add the children to; if falsy, nothing happens.
+ * @param {*} children the array of children to add or a single node to add; if falsy, nothing happens.
+ * @throws Error if the parent is not an element or a node.
+ */
+export const appendChildren = (parent, children) => {
+    if (parent) {
+        if (isInstanceOfElement(parent)) {
+            appendChildrenToElement(parent, children);
+        }
+        else if (isInstanceOfNode(parent)) {
+            appendChildrenToNode(parent, children);
+        }
+        else {
+            throw new Error("appendChildren: parent is not an Element or a Node.");
+        }
     }
 }

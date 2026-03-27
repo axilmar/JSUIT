@@ -1,5 +1,5 @@
 import { initNode } from "./Node.js";
-import { isInstanceOfElement } from "./util.js";
+import { isInstanceOfElement, appendChildrenToElement } from "./util.js";
 
 let autoIds = {};
 
@@ -58,10 +58,6 @@ export const addClassName = (props, className) => {
  */
 export const initElement = (elem, props, children) => {
     console.assert(isInstanceOfElement(elem));
-
-    if (children) {
-        elem.append(...children);
-    }
-
+    appendChildrenToElement(elem, children);
     return initNode(elem, setAutoElementId(addClassName(props, "Element")));
 }
