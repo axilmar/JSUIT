@@ -9,7 +9,7 @@ import { isInstanceOfHTMLSpanElement } from "./util.js";
  * 
  * @param {*} elem the element to initialize.
  * @param {*} props the properties object.
- * @param {*} children array of nodes to add to this node as children.
+ * @param {*} children array of nodes/strings to add to this node as children.
  * 
  * @returns the element.
  */
@@ -22,7 +22,7 @@ export const initHTMLSpanElement = (elem, props, children) => {
  * creates an HTML span element.
  * 
  * @param {*} props the properties object.
- * @param {*} children array of nodes to add to this node as children.
+ * @param {*} children array of nodes/strings to add to this node as children.
  * 
  * @returns the element.
  */

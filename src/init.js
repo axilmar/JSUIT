@@ -26,6 +26,19 @@ document.head.appendChild(styleSheet);
     Also, both elements' margin/padding/border is set to 0, because on some browsers it is not zero by default.
  */
 
+//setup the document
+Object.defineProperty(document, 'focusedElement', {
+    get: function () { return this.activeElement; },
+    set: function (e) { 
+        if (e) {
+            e.focus();
+        }
+        else {
+            this.activeElement.blur();
+        }
+    } 
+})
+
 //setup the html element    
 document.documentElement.style.width = "100%";
 document.documentElement.style.minWidth = "100%";

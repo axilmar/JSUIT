@@ -55,6 +55,13 @@ export const isInstanceOfHTMLImageElement = (obj) => obj instanceof HTMLImageEle
 export const isInstanceOfHTMLSpanElement = (obj) => obj instanceof HTMLSpanElement;
 
 /**
+ * Checks if the given object is an instance of class HTMLDivElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLDivElement, false otherwise.
+ */
+export const isInstanceOfHTMLDivElement = (obj) => obj instanceof HTMLDivElement;
+
+/**
  * Checks if the given object is an instance of class HTMLButtonElement.
  * @param {*} object the object to check.
  * @returns true if the given object is an instance of class HTMLButtonElement, false otherwise.
@@ -189,4 +196,13 @@ export const appendChildren = (parent, children) => {
             throw new Error("appendChildren: parent is not an Element or a Node.");
         }
     }
+}
+
+/**
+ * Checks if an object is a string.
+ * @param {*} obj object to check. 
+ * @returns returns true if object is a string.
+ */
+export const isString = (obj) => {
+    return typeof obj === 'string' || obj instanceof String;
 }

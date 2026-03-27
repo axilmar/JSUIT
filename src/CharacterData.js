@@ -8,7 +8,7 @@ import { isInstanceOfCharacterData } from "./util.js";
  * 
  * @param {*} node the node object to initialize.
  * @param {*} props the properties object.
- * @param {*} children array of nodes to add to this node as children.
+ * @param {*} children array of nodes/strings to add to this node as children.
  * 
  * @returns the node object.
  */

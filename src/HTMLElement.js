@@ -9,7 +9,7 @@ function getStates() {
     const result = [];
     
     if (this.active) {
-        result.push("active");
+        result.push("pressed");
     }
 
     if (this.enabled) {

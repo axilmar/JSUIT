@@ -2,6 +2,13 @@ import { addClassName } from "./Element.js";
 import { initHTMLElement } from "./HTMLElement.js";
 import { isInstanceOfHTMLImageElement } from "./util.js";
 
+const defineProperties = (elem) => {
+    Object.defineProperty(elem, "value", {
+        get: function () { return this.src; },
+        set: function (v) { this.src = v; }
+    });    
+}
+
 /**
  * Initializes an HTML image element.
  * 
@@ -11,20 +18,13 @@ import { isInstanceOfHTMLImageElement } from "./util.js";
  * 
  * @param {*} elem the element to initialize.
  * @param {*} props the properties object.
- * @param {*} children array of nodes to add to this node as children.
+ * @param {*} children array of nodes/strings to add to this node as children.
  * 
  * @returns the element.
  */
 export const initHTMLImageElement = (elem, props, children) => {
     console.assert(isInstanceOfHTMLImageElement(elem));
-
-    //add the value property
-    Object.defineProperty(elem, "value", {
-        get: function () { return this.src; },
-        set: function (v) { this.src = v; }
-    });    
-
-
+    defineProperties(elem);
     return initHTMLElement(elem, addClassName(props, "HTMLImageElement img"), children);
 }
 
@@ -32,7 +32,7 @@ export const initHTMLImageElement = (elem, props, children) => {
  * creates an HTML image element.
  * 
  * @param {*} props the properties object.
- * @param {*} children array of nodes to add to this node as children.
+ * @param {*} children array of nodes/strings to add to this node as children.
  * 
  * @returns the element.
  */
