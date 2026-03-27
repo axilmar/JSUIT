@@ -76,6 +76,23 @@ export const isInstanceOfHTMLAnchorElement = (obj) => obj instanceof HTMLAnchorE
 export const isInstanceOfHTMLAreaElement = (obj) => obj instanceof HTMLAreaElement;
 
 /**
+ * Checks if the given object is an instance of class HTMLMediaElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLMediaElement, false otherwise.
+ */
+export const isInstanceOfHTMLMediaElement = (obj) => obj instanceof HTMLMediaElement;
+
+/**
+ * Checks if the given object is an instance of class HTMLAudioElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLAudioElement, false otherwise.
+ */
+export const isInstanceOfHTMLAudioElement = (obj) => obj instanceof HTMLAudioElement;
+
+
+
+
+/**
  * Checks if the given object is an instance of class HTMLButtonElement.
  * @param {*} object the object to check.
  * @returns true if the given object is an instance of class HTMLButtonElement, false otherwise.

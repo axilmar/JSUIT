@@ -4,6 +4,7 @@ import { span } from "./src/HTMLSpanElement.js";
 import { div } from "./src/HTMLDivElement.js";
 import { a } from "./src/HTMLAnchorElement.js";
 import { area } from "./src/HTMLAreaElement.js";
+import { audio } from "./src/HTMLAudioElement.js";
 
 const btn1 = document.createElement("button");
 btn1.innerHTML = "Click me";
@@ -57,3 +58,5 @@ div({parent: document.body, backgroundColor: "yellow"}, "A Div");
 a({parent: document.body, value:"http://www.cnn.com"}, "cnn");
 
 area({parent: document.body, value:"http://www.cnn.com", shape: "rect"}, "cnn");
+
+audio({parent: document.body});
