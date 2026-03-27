@@ -12,7 +12,7 @@ const defineProperties = (elem) => {
 /**
  * Initializes an HTML image element.
  * 
- * The element gets the 'HTMLImageElement' and 'img' class names.
+ * The element gets the 'HTMLImageElement' and 'image', 'img' class names.
  * 
  * A 'value' property is added to the object, which is equivalent to the 'src' property.
  * 

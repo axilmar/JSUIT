@@ -2,6 +2,7 @@ import { Text } from "./src/Text.js";
 import { Image } from "./src/HTMLImageElement.js";
 import { Span } from "./src/HTMLSpanElement.js";
 import { Div } from "./src/HTMLDivElement.js";
+import { A } from "./src/HTMLAnchorElement.js";
 
 const btn1 = document.createElement("button");
 btn1.innerHTML = "Click me";
@@ -50,3 +51,5 @@ btn1.addEventListener("mousedown", () => {
 //btn1.disabled = true;
 
 Div({parent: document.body, backgroundColor: "yellow"}, "A Div");
+
+A({parent: document.body, value:"http://www.cnn.com"}, "cnn");
