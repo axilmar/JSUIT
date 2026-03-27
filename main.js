@@ -6,6 +6,7 @@ import { a } from "./src/HTMLAnchorElement.js";
 import { area } from "./src/HTMLAreaElement.js";
 import { audio } from "./src/HTMLAudioElement.js";
 import { br } from "./src/HTMLBRElement.js";
+import { button } from "./src/HTMLButtonElement.js";
 
 const btn1 = document.createElement("button");
 btn1.innerHTML = "Click me";
@@ -63,3 +64,5 @@ area({parent: document.body, value:"http://www.cnn.com", shape: "rect"}, "cnn");
 audio({parent: document.body});
 
 br({parent: document.body});
+
+button({parent: document.body, onclick: () => alert("Clicked!")}, "Another button");

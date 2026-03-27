@@ -96,14 +96,18 @@ export const isInstanceOfHTMLAudioElement = (obj) => obj instanceof HTMLAudioEle
  */
 export const isInstanceOfHTMLBRElement = (obj) => obj instanceof HTMLBRElement;
 
-
-
 /**
  * Checks if the given object is an instance of class HTMLButtonElement.
  * @param {*} object the object to check.
  * @returns true if the given object is an instance of class HTMLButtonElement, false otherwise.
  */
 export const isInstanceOfHTMLButtonElement = (obj) => obj instanceof HTMLButtonElement;
+
+
+
+
+
+
 
 /**
  * Helper function for adding a class name to props.
@@ -252,8 +256,17 @@ export const appendChildren = (parent, children) => {
 /**
  * Checks if an object is a string.
  * @param {*} obj object to check. 
- * @returns returns true if object is a string.
+ * @returns returns true if the object is a string.
  */
 export const isString = (obj) => {
     return typeof obj === 'string' || obj instanceof String;
+}
+
+/**
+ * Checks if an object is a function.
+ * @param {*} obj object to check.
+ * @returns true if the object is a function.
+ */
+export const isFunction = (obj) => {
+    return typeof obj === 'function';
 }
