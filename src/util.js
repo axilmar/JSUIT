@@ -69,6 +69,13 @@ export const isInstanceOfHTMLDivElement = (obj) => obj instanceof HTMLDivElement
 export const isInstanceOfHTMLAnchorElement = (obj) => obj instanceof HTMLAnchorElement;
 
 /**
+ * Checks if the given object is an instance of class HTMLAreaElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLAreaElement, false otherwise.
+ */
+export const isInstanceOfHTMLAreaElement = (obj) => obj instanceof HTMLAreaElement;
+
+/**
  * Checks if the given object is an instance of class HTMLButtonElement.
  * @param {*} object the object to check.
  * @returns true if the given object is an instance of class HTMLButtonElement, false otherwise.

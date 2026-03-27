@@ -3,6 +3,7 @@ import { img } from "./src/HTMLImageElement.js";
 import { span } from "./src/HTMLSpanElement.js";
 import { div } from "./src/HTMLDivElement.js";
 import { a } from "./src/HTMLAnchorElement.js";
+import { area } from "./src/HTMLAreaElement.js";
 
 const btn1 = document.createElement("button");
 btn1.innerHTML = "Click me";
@@ -54,3 +55,5 @@ btn1.addEventListener("mousedown", () => {
 div({parent: document.body, backgroundColor: "yellow"}, "A Div");
 
 a({parent: document.body, value:"http://www.cnn.com"}, "cnn");
+
+area({parent: document.body, value:"http://www.cnn.com", shape: "rect"}, "cnn");
