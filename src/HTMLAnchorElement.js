@@ -45,10 +45,4 @@ export const HTMLAnchorElement = (props, children) => {
  * creates an HTML anchor element.
  * Same as `HTMLAnchorElement`.
  */
-export const Anchor = HTMLAnchorElement;
-
-/**
- * creates an HTML anchor element.
- * Same as `HTMLAnchorElement`.
- */
-export const A = HTMLAnchorElement;
+export const a = HTMLAnchorElement;

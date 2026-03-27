@@ -35,4 +35,4 @@ export const HTMLDivElement = (props, children) => {
  * creates an HTML div element.
  * Same as `HTMLDivElement`.
  */
-export const Div = HTMLDivElement;
+export const div = HTMLDivElement;

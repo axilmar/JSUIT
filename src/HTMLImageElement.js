@@ -45,4 +45,4 @@ export const HTMLImageElement = (props, children) => {
  * creates an HTML image element.
  * Same as `HTMLImageElement`.
  */
-export const Image = HTMLImageElement;
+export const img = HTMLImageElement;

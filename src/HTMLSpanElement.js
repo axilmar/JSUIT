@@ -35,4 +35,4 @@ export const HTMLSpanElement = (props, children) => {
  * creates an HTML span element.
  * Same as `HTMLSpanElement`.
  */
-export const Span = HTMLSpanElement;
+export const span = HTMLSpanElement;
