@@ -89,6 +89,12 @@ export const isInstanceOfHTMLMediaElement = (obj) => obj instanceof HTMLMediaEle
  */
 export const isInstanceOfHTMLAudioElement = (obj) => obj instanceof HTMLAudioElement;
 
+/**
+ * Checks if the given object is an instance of class HTMLBRElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLBRElement, false otherwise.
+ */
+export const isInstanceOfHTMLBRElement = (obj) => obj instanceof HTMLBRElement;
 
 
 

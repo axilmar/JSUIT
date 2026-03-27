@@ -5,6 +5,7 @@ import { div } from "./src/HTMLDivElement.js";
 import { a } from "./src/HTMLAnchorElement.js";
 import { area } from "./src/HTMLAreaElement.js";
 import { audio } from "./src/HTMLAudioElement.js";
+import { br } from "./src/HTMLBRElement.js";
 
 const btn1 = document.createElement("button");
 btn1.innerHTML = "Click me";
@@ -60,3 +61,5 @@ a({parent: document.body, value:"http://www.cnn.com"}, "cnn");
 area({parent: document.body, value:"http://www.cnn.com", shape: "rect"}, "cnn");
 
 audio({parent: document.body});
+
+br({parent: document.body});
