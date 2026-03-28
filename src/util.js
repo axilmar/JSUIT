@@ -117,6 +117,12 @@ export const isInstanceOfHTMLCanvasElement = (obj) => obj instanceof HTMLCanvasE
  */
 export const isInstanceOfHTMLDataElement = (obj) => obj instanceof HTMLDataElement;
 
+/**
+ * Checks if the given object is an instance of class HTMLDataListElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLDataListElement, false otherwise.
+ */
+export const isInstanceOfHTMLDataListElement = (obj) => obj instanceof HTMLDataListElement;
 
 
 
