@@ -110,6 +110,12 @@ export const isInstanceOfHTMLButtonElement = (obj) => obj instanceof HTMLButtonE
  */
 export const isInstanceOfHTMLCanvasElement = (obj) => obj instanceof HTMLCanvasElement;
 
+/**
+ * Checks if the given object is an instance of class HTMLDataElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLDataElement, false otherwise.
+ */
+export const isInstanceOfHTMLDataElement = (obj) => obj instanceof HTMLDataElement;
 
 
 

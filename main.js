@@ -8,6 +8,7 @@ import { audio } from "./src/HTMLAudioElement.js";
 import { br } from "./src/HTMLBRElement.js";
 import { button } from "./src/HTMLButtonElement.js";
 import { canvas } from "./src/HTMLCanvasElement.js";
+import { data } from "./src/HTMLDataElement.js";
 
 const btn1 = document.createElement("button");
 btn1.innerHTML = "Click me";
@@ -69,3 +70,7 @@ br({parent: document.body});
 button({parent: document.body, onclick: () => alert("Clicked!")}, "Another button");
 
 canvas({parent: document.body, width: 400, height: 300});
+
+data({parent: document.body, value:1}, "Value 1");
+data({parent: document.body, value:2}, "Value 2");
+data({parent: document.body, value:3}, "Value 3");
