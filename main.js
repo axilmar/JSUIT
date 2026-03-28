@@ -12,6 +12,7 @@ import { data } from "./src/HTMLDataElement.js";
 import { datalist } from "./src/HTMLDataListElement.js";
 import { dialog } from "./src/HTMLDialogElement.js";
 import { dl } from "./src/HTMLDListElement.js";
+import { fieldset } from "./src/HTMLFieldSetElement.js";
 
 const btn1 = document.createElement("button");
 btn1.innerHTML = "Click me";
@@ -24,6 +25,12 @@ span({parent: document.body, fontSize: "32px"}, "The quick brown fox");
 const img1 = img({parent: btn2, value: "test.png", border: "16px solid"});
 
 const theme = {
+    /*
+    "Element": {
+        "enabled": {
+            backgroundColor: "green"
+        }
+    },*/
     "img": {
         "": {
             borderColor: "grey",
@@ -82,3 +89,5 @@ datalist({parent: document.body});
 dialog({parent: document.body, open:false}, "this is a dialog!");
 
 dl({parent: document.body});
+
+fieldset({parent: document.body});

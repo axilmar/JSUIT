@@ -138,6 +138,12 @@ export const isInstanceOfHTMLDialogElement = (obj) => obj instanceof HTMLDialogE
  */
 export const isInstanceOfHTMLDListElement = (obj) => obj instanceof HTMLDListElement;
 
+/**
+ * Checks if the given object is an instance of class HTMLFieldSetElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLFieldSetElement, false otherwise.
+ */
+export const isInstanceOfHTMLFieldSetElement = (obj) => obj instanceof HTMLFieldSetElement;
 
 
 
