@@ -103,7 +103,12 @@ export const isInstanceOfHTMLBRElement = (obj) => obj instanceof HTMLBRElement;
  */
 export const isInstanceOfHTMLButtonElement = (obj) => obj instanceof HTMLButtonElement;
 
-
+/**
+ * Checks if the given object is an instance of class HTMLCanvasElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLCanvasElement, false otherwise.
+ */
+export const isInstanceOfHTMLCanvasElement = (obj) => obj instanceof HTMLCanvasElement;
 
 
 
@@ -206,7 +211,6 @@ export const appendChildrenToElement = (parent, children) => {
         }
     }
 }
-
 
 /**
  * Appends children to a node, using the node's 'appendChild' method.

@@ -41,7 +41,7 @@ const initEvents = (eventTarget, props) => {
  * Properties that start with 'on' and are lowercase are treated as events: the 'on' prefix is removed
  * from the string, and an event handler is added with the remaining string as the event type.
  * 
- * Properties that end with 'event' or 'Event' are treated as events: the 'event' suffix is removed
+ * Properties that end with 'event' or 'Event' are also treated as events: the 'event' suffix is removed
  * from the string, and an event handler is added with the remaining string as the event type.
  * 
  * @param {*} eventTarget the event target object to initialize.
