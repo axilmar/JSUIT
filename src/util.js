@@ -131,6 +131,25 @@ export const isInstanceOfHTMLDataListElement = (obj) => obj instanceof HTMLDataL
  */
 export const isInstanceOfHTMLDialogElement = (obj) => obj instanceof HTMLDialogElement;
 
+/**
+ * Checks if the given object is an instance of class HTMLDListElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLDListElement, false otherwise.
+ */
+export const isInstanceOfHTMLDListElement = (obj) => obj instanceof HTMLDListElement;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * Helper function for adding a class name to props.

@@ -11,6 +11,7 @@ import { canvas } from "./src/HTMLCanvasElement.js";
 import { data } from "./src/HTMLDataElement.js";
 import { datalist } from "./src/HTMLDataListElement.js";
 import { dialog } from "./src/HTMLDialogElement.js";
+import { dl } from "./src/HTMLDListElement.js";
 
 const btn1 = document.createElement("button");
 btn1.innerHTML = "Click me";
@@ -79,3 +80,5 @@ data({parent: document.body, value:3}, "Value 3");
 datalist({parent: document.body});
 
 dialog({parent: document.body, open:false}, "this is a dialog!");
+
+dl({parent: document.body});
