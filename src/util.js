@@ -124,6 +124,12 @@ export const isInstanceOfHTMLDataElement = (obj) => obj instanceof HTMLDataEleme
  */
 export const isInstanceOfHTMLDataListElement = (obj) => obj instanceof HTMLDataListElement;
 
+/**
+ * Checks if the given object is an instance of class HTMLDialogElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLDialogElement, false otherwise.
+ */
+export const isInstanceOfHTMLDialogElement = (obj) => obj instanceof HTMLDialogElement;
 
 
 /**
