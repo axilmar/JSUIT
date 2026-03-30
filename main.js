@@ -1,20 +1,28 @@
-import { Text } from "./src/Text.js";
-import { img } from "./src/HTMLImageElement.js";
-import { span } from "./src/HTMLSpanElement.js";
-import { div } from "./src/HTMLDivElement.js";
-import { a } from "./src/HTMLAnchorElement.js";
-import { area } from "./src/HTMLAreaElement.js";
-import { audio } from "./src/HTMLAudioElement.js";
-import { br } from "./src/HTMLBRElement.js";
-import { button } from "./src/HTMLButtonElement.js";
-import { canvas } from "./src/HTMLCanvasElement.js";
-import { data } from "./src/HTMLDataElement.js";
-import { datalist } from "./src/HTMLDataListElement.js";
-import { dialog } from "./src/HTMLDialogElement.js";
-import { dl } from "./src/HTMLDListElement.js";
-import { fieldset } from "./src/HTMLFieldSetElement.js";
-import { form } from "./src/HTMLFormElement.js";
-import { h1, h2, h3, h4, h5, h6 } from "./src/HTMLHeadingElement.js";
+import { 
+    img, 
+    span, 
+    div, 
+    a, 
+    area, 
+    audio, 
+    br, 
+    button, 
+    canvas, 
+    data, 
+    datalist, 
+    dialog, 
+    dl, 
+    fieldset, 
+    form, 
+    h1, 
+    h2, 
+    h3, 
+    h4, 
+    h5, 
+    h6, 
+    hr, 
+    iframe
+} from "./src/HTML.js";
 
 const btn1 = document.createElement("button");
 btn1.innerHTML = "Click me";
@@ -102,3 +110,7 @@ h3({parent: document.body}, "A title with H3 style");
 h4({parent: document.body}, "A title with H4 style");
 h5({parent: document.body}, "A title with H5 style");
 h6({parent: document.body}, "A title with H6 style");
+
+hr({parent: document.body});
+
+iframe({parent: document.body});

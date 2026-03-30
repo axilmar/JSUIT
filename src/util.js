@@ -159,7 +159,19 @@ export const isInstanceOfHTMLFormElement = (obj) => obj instanceof HTMLFormEleme
  */
 export const isInstanceOfHTMLHeadingElement = (obj) => obj instanceof HTMLHeadingElement;
 
+/**
+ * Checks if the given object is an instance of class HTMLHRElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLHRElement, false otherwise.
+ */
+export const isInstanceOfHTMLHRElement = (obj) => obj instanceof HTMLHRElement;
 
+/**
+ * Checks if the given object is an instance of class HTMLIFrameElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLIFrameElement, false otherwise.
+ */
+export const isInstanceOfHTMLIFrameElement = (obj) => obj instanceof HTMLIFrameElement;
 
 
 

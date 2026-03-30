@@ -1,0 +1,18 @@
+export { a } from "./HTMLAnchorElement.js";
+export { area } from "./HTMLAreaElement.js";
+export { audio } from "./HTMLAudioElement.js";
+export { br } from "./HTMLBRElement.js";
+export { button } from "./HTMLButtonElement.js";
+export { canvas } from "./HTMLCanvasElement.js";
+export { data } from "./HTMLDataElement.js";
+export { datalist } from "./HTMLDataListElement.js";
+export { dialog } from "./HTMLDialogElement.js";
+export { div } from "./HTMLDivElement.js";
+export { dl } from "./HTMLDListElement.js";
+export { fieldset } from "./HTMLFieldSetElement.js";
+export { form } from "./HTMLFormElement.js";
+export { h1, h2, h3, h4, h5, h6 } from "./HTMLHeadingElement.js";
+export { hr } from "./HTMLHRElement.js";
+export { iframe } from "./HTMLIFrameElement.js";
+export { img } from "./HTMLImageElement.js";
+export { span } from "./HTMLSpanElement.js";
