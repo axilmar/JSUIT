@@ -22,7 +22,7 @@ const defineProperties = (elem) => {
  * @returns the element.
  */
 export const initHTMLAreaElement = (elem, props, children) => {
-    console.assert(isInstanceOfHTMLAreaElement(elem));
+    console.assert(isInstanceOfHTMLAreaElement(elem), 'instanceof HTMLAreaElement');
     defineProperties(elem);
     return initHTMLElement(elem, addClassName(props, "HTMLAreaElement area"), children);
 }

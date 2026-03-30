@@ -13,7 +13,7 @@ import { isInstanceOfHTMLHRElement, addClassName } from "./util.js";
  * @returns the element.
  */
 export const initHTMLHRElement = (elem, props, children) => {
-    console.assert(isInstanceOfHTMLHRElement(elem));
+    console.assert(isInstanceOfHTMLHRElement(elem), 'instanceof HTMLHRElement');
     return initHTMLElement(elem, addClassName(props, "HTMLHRElement hr"), children);
 }
 

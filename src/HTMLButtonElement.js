@@ -13,7 +13,7 @@ import { isInstanceOfHTMLButtonElement, addClassName } from "./util.js";
  * @returns the element.
  */
 export const initHTMLButtonElement = (elem, props, children) => {
-    console.assert(isInstanceOfHTMLButtonElement(elem));
+    console.assert(isInstanceOfHTMLButtonElement(elem), 'instanceof HTMLButtonElement');
     return initHTMLElement(elem, addClassName(props, "HTMLButtonElement button"), children);
 }
 

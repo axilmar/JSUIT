@@ -50,7 +50,7 @@ const initEvents = (eventTarget, props) => {
  * @returns the event target object.
  */
 export const initEventTarget = (eventTarget, props) => {
-    console.assert(isInstanceOfEventTarget(eventTarget));
+    console.assert(isInstanceOfEventTarget(eventTarget), 'instanceof EventTarget');
     props = initEvents(eventTarget, props);
     return initObject(eventTarget, props);
 }

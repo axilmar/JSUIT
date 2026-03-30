@@ -25,8 +25,8 @@ export const HeadingType = makeEnum({
  * @returns the element.
  */
 export const initHTMLHeadingElement = (elem, props, children) => {
-    console.assert(HeadingType.hasValue(props.type));
-    console.assert(isInstanceOfHTMLHeadingElement(elem));
+    console.assert(HeadingType.hasValue(props.type), `Invalid heading type: ${props.type}`);
+    console.assert(isInstanceOfHTMLHeadingElement(elem), 'instanceof HTMLHeadingElement');
     return initHTMLElement(elem, addClassName(props, `HTMLHeadingElement ${props.type}`), children);
 }
 
@@ -42,7 +42,7 @@ export const initHTMLHeadingElement = (elem, props, children) => {
  * @returns the element.
  */
 export const HTMLHeadingElement = (props, children) => {
-    console.assert(HeadingType.hasValue(props.type));
+    console.assert(HeadingType.hasValue(props.type), `Invalid heading type: ${props.type}`);
     const obj = document.createElement(props.type);
     return initHTMLHeadingElement(obj, props, children);
 }

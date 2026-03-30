@@ -400,7 +400,7 @@ const addEventHandlers = (elem) => {
  * @returns the html element object.
  */
 export const initHTMLElement = (elem, props, children) => {
-    console.assert(isInstanceOfHTMLElement(elem));
+    console.assert(isInstanceOfHTMLElement(elem), 'instanceof HTMLElement');
     defineProperties(elem);
     defineMethods(elem);
     addEventHandlers(elem);

@@ -13,7 +13,7 @@ import { isInstanceOfHTMLDataListElement, addClassName } from "./util.js";
  * @returns the element.
  */
 export const initHTMLDataListElement = (elem, props, children) => {
-    console.assert(isInstanceOfHTMLDataListElement(elem));
+    console.assert(isInstanceOfHTMLDataListElement(elem), 'instanceof HTMLDataListElement');
     return initHTMLElement(elem, addClassName(props, "HTMLDataListElement datalist"), children);
 }
 

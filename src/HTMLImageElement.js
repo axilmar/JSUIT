@@ -22,7 +22,7 @@ const defineProperties = (elem) => {
  * @returns the element.
  */
 export const initHTMLImageElement = (elem, props, children) => {
-    console.assert(isInstanceOfHTMLImageElement(elem));
+    console.assert(isInstanceOfHTMLImageElement(elem), 'instanceof HTMLImageElement');
     defineProperties(elem);
     return initHTMLElement(elem, addClassName(props, "HTMLImageElement img"), children);
 }

@@ -13,7 +13,7 @@ import { isInstanceOfHTMLDialogElement, addClassName } from "./util.js";
  * @returns the element.
  */
 export const initHTMLDialogElement = (elem, props, children) => {
-    console.assert(isInstanceOfHTMLDialogElement(elem));
+    console.assert(isInstanceOfHTMLDialogElement(elem), 'instanceof HTMLDialogElement');
     return initHTMLElement(elem, addClassName(props, "HTMLDialogElement dialog"), children);
 }
 

@@ -13,7 +13,7 @@ import { isInstanceOfHTMLFormElement, addClassName } from "./util.js";
  * @returns the element.
  */
 export const initHTMLFormElement = (elem, props, children) => {
-    console.assert(isInstanceOfHTMLFormElement(elem));
+    console.assert(isInstanceOfHTMLFormElement(elem), 'instanceof HTMLFormElement');
     return initHTMLElement(elem, addClassName(props, "HTMLFormElement form"), children);
 }
 

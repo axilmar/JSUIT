@@ -267,7 +267,7 @@ export const setChildrenEnabled = (elem, enabled) => {
  */
 export const appendChildrenToElement = (parent, children) => {
     if (parent) {
-        console.assert(isInstanceOfElement(parent));
+        console.assert(isInstanceOfElement(parent), 'instanceof Element');
         if (children) {
             if (Array.isArray(children)) {
                 parent.append(...children);
@@ -286,7 +286,7 @@ export const appendChildrenToElement = (parent, children) => {
  */
 export const appendChildrenToNode = (parent, children) => {
     if (parent) {
-        console.assert(isInstanceOfNode(parent));
+        console.assert(isInstanceOfNode(parent), 'instanceof Node');
         if (children) {
             if (Array.isArray(children)) {
                 for(const child of children) {

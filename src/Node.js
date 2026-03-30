@@ -30,7 +30,7 @@ const initMethods = (node) => {
  * @returns the node object.
  */
 export const initNode = (node, props, children) => {
-    console.assert(isInstanceOfNode(node));
+    console.assert(isInstanceOfNode(node), 'instanceof Node');
     initMethods(node);
     appendChildren(props.parent, node);
     appendChildren(node, children);

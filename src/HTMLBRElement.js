@@ -13,7 +13,7 @@ import { isInstanceOfHTMLBRElement, addClassName } from "./util.js";
  * @returns the element.
  */
 export const initHTMLBRElement = (elem, props, children) => {
-    console.assert(isInstanceOfHTMLBRElement(elem));
+    console.assert(isInstanceOfHTMLBRElement(elem), 'instanceof HTMLBRElement');
     return initHTMLElement(elem, addClassName(props, "HTMLBRElement br"), children);
 }
 

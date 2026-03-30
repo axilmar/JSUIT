@@ -11,7 +11,7 @@ import { isInstanceOfText } from "./util.js";
  * @returns the node object.
  */
 export const initText = (node, props, children) => {
-    console.assert(isInstanceOfText(node));
+    console.assert(isInstanceOfText(node), 'instanceof Text');
     return initCharacterData(node, props, children);
 }
 

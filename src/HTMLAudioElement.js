@@ -13,7 +13,7 @@ import { isInstanceOfHTMLAudioElement, addClassName } from "./util.js";
  * @returns the element.
  */
 export const initHTMLAudioElement = (elem, props, children) => {
-    console.assert(isInstanceOfHTMLAudioElement(elem));
+    console.assert(isInstanceOfHTMLAudioElement(elem), 'instanceof HTMLAudioElement');
     return initHTMLMediaElement(elem, addClassName(props, "HTMLAudioElement audio"), children);
 }
 

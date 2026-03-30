@@ -13,7 +13,7 @@ import { isInstanceOfHTMLDataElement, addClassName } from "./util.js";
  * @returns the element.
  */
 export const initHTMLDataElement = (elem, props, children) => {
-    console.assert(isInstanceOfHTMLDataElement(elem));
+    console.assert(isInstanceOfHTMLDataElement(elem), 'instanceof HTMLDataElement');
     return initHTMLElement(elem, addClassName(props, "HTMLDataElement data"), children);
 }
 

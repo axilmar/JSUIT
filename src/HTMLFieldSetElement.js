@@ -13,7 +13,7 @@ import { isInstanceOfHTMLFieldSetElement, addClassName } from "./util.js";
  * @returns the element.
  */
 export const initHTMLFieldSetElement = (elem, props, children) => {
-    console.assert(isInstanceOfHTMLFieldSetElement(elem));
+    console.assert(isInstanceOfHTMLFieldSetElement(elem), 'instanceof HTMLFieldSetElement');
     return initHTMLElement(elem, addClassName(props, "HTMLFieldSetElement fieldset"), children);
 }
 

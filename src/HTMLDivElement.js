@@ -13,7 +13,7 @@ import { isInstanceOfHTMLDivElement, addClassName } from "./util.js";
  * @returns the element.
  */
 export const initHTMLDivElement = (elem, props, children) => {
-    console.assert(isInstanceOfHTMLDivElement(elem));
+    console.assert(isInstanceOfHTMLDivElement(elem), 'instanceof HTMLDivElement');
     return initHTMLElement(elem, addClassName(props, "HTMLDivElement div"), children);
 }
 

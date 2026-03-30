@@ -22,7 +22,7 @@ const defineProperties = (elem) => {
  * @returns the element.
  */
 export const initHTMLIFrameElement = (elem, props, children) => {
-    console.assert(isInstanceOfHTMLIFrameElement(elem));
+    console.assert(isInstanceOfHTMLIFrameElement(elem), 'instanceof HTMLIFrameElement');
     defineProperties(elem);
     return initHTMLElement(elem, addClassName(props, "HTMLIFrameElement iframe"), children);
 }
