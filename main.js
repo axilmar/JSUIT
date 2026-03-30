@@ -13,6 +13,8 @@ import { datalist } from "./src/HTMLDataListElement.js";
 import { dialog } from "./src/HTMLDialogElement.js";
 import { dl } from "./src/HTMLDListElement.js";
 import { fieldset } from "./src/HTMLFieldSetElement.js";
+import { form } from "./src/HTMLFormElement.js";
+import { h1, h2, h3, h4, h5, h6 } from "./src/HTMLHeadingElement.js";
 
 const btn1 = document.createElement("button");
 btn1.innerHTML = "Click me";
@@ -91,3 +93,12 @@ dialog({parent: document.body, open:false}, "this is a dialog!");
 dl({parent: document.body});
 
 fieldset({parent: document.body});
+
+form({parent: document.body});
+
+h1({parent: document.body}, "A title with H1 style");
+h2({parent: document.body}, "A title with H2 style");
+h3({parent: document.body}, "A title with H3 style");
+h4({parent: document.body}, "A title with H4 style");
+h5({parent: document.body}, "A title with H5 style");
+h6({parent: document.body}, "A title with H6 style");

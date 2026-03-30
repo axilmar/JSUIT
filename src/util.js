@@ -145,7 +145,19 @@ export const isInstanceOfHTMLDListElement = (obj) => obj instanceof HTMLDListEle
  */
 export const isInstanceOfHTMLFieldSetElement = (obj) => obj instanceof HTMLFieldSetElement;
 
+/**
+ * Checks if the given object is an instance of class HTMLFormElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLFormElement, false otherwise.
+ */
+export const isInstanceOfHTMLFormElement = (obj) => obj instanceof HTMLFormElement;
 
+/**
+ * Checks if the given object is an instance of class HTMLHeadingElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLHeadingElement, false otherwise.
+ */
+export const isInstanceOfHTMLHeadingElement = (obj) => obj instanceof HTMLHeadingElement;
 
 
 
@@ -316,4 +328,57 @@ export const isString = (obj) => {
  */
 export const isFunction = (obj) => {
     return typeof obj === 'function';
+}
+
+/**
+ * Converts the given object to an enumeration.
+ * 
+ * The input object shall be a map of names to unique values.
+ * 
+ * The input object is transformed like this:
+ * 
+ *  1. the object is frozen.
+ *  2. the object get a `getName(value)` method that returns the name from a value.
+ *  3. the object gets a `getNames()` method for retrieving an array of names.
+ *  4. the object gets a `hasName(name)` method for checking if a name is valid.
+ *  4. the object gets a `hasValue(value)` method for checking if a value is valid.
+ * 
+ * @param {*} defs the enumeration definition.
+ * 
+ * @returns a new object that is transformed as described above.
+ */
+export const makeEnum = (defs) => {
+    const enumObj = {...defs};
+
+    enumObj.getName = (value) => {
+        for(const key in enumObj) {
+            if (enumObj[key] === value) {
+                return key;
+            }
+        }
+        return null;
+    };
+
+    enumObj.getNames = () => {
+        const result = [];
+        for(const key in enumObj) {
+            result.push(key);
+        }
+        return result;
+    }
+
+    enumObj.hasName = (name) => {
+        return Boolean(enumObj[name]);
+    }
+
+    enumObj.hasValue = (value) => {
+        for(const key in enumObj) {
+            if (enumObj[key] === value) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    return Object.freeze(enumObj);
 }
