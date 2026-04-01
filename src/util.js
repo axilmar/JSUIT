@@ -451,3 +451,11 @@ export const countDecimals = (value) => {
 export const getHTMLInputElementValuePropertyDescriptor = () => {
     return Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value");
 }
+
+/**
+ * Returns the pattern property descriptor of the HTMLInputElement class.
+ * @returns the pattern property descriptor of the HTMLInputElement class.
+ */
+export const getHTMLInputElementPatternPropertyDescriptor = () => {
+    return Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "pattern");
+}

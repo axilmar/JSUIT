@@ -72,13 +72,25 @@ const observerCallback = (mutationsList, observer) => {
             });
         }
         else if (mutation.attributeName === 'disabled') {
-            mutation.target.updateTheme?.();
+            mutation.target.updateStyle?.();
             setChildrenEnabled(mutation.target, !mutation.target.disabled);
         }
         else if (mutation.type === 'attributes') {
-            mutation.target.updateTheme?.();
+            if (mutation.attributeName !== 'style') {
+                mutation.target.updateStyle?.();
+            }
         }
     }
 };
 const observer = new MutationObserver(observerCallback);
 observer.observe(document.body, { childList: true, subtree: true, attributes: true });
+
+//monitor focus in to update the focused element
+document.body.addEventListener('focusin', (event) => {
+    event.target.updateStyle?.();
+});
+
+//monitor focus out to update the unfocused element
+document.body.addEventListener('focusout', (event) => {
+    event.target.updateStyle?.();
+});

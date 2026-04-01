@@ -48,7 +48,7 @@ const theme = {
         }
     },*/
     "img": {
-        "": {
+        "disabled": {
             borderColor: "grey",
             borderStyle: "solid"
         },
@@ -70,6 +70,26 @@ const theme = {
         "enabled,hover,pressed": {
             backgroundColor: "red"
         }*/
+    },
+    "input": {
+        "enabled": {            
+            color: "black",
+            outlineStyle: 'none',
+            outlineColor: "black"
+        },
+        "focused": {
+            outlineStyle: 'solid',
+            outlineColor: "cyan"
+        },
+        "hover": {            
+            outlineStyle: 'solid',
+            outlineColor: "yellow"
+        },
+        "invalid": {
+            color: "red",
+            outlineStyle: 'solid',
+            outlineColor: "red"
+        }
     }
 };
 
@@ -122,7 +142,7 @@ hr({parent: document.body});
 iframe({parent: document.body});
 
 input({parent: document.body});
-number({parent: document.body}).value = 5;
+number({parent: document.body, step: 0.25}).value = 5;
 password({parent: document.body});
 file({parent: document.body});
 checkbox({parent: document.body});
