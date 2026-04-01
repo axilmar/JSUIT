@@ -173,6 +173,21 @@ export const isInstanceOfHTMLHRElement = (obj) => obj instanceof HTMLHRElement;
  */
 export const isInstanceOfHTMLIFrameElement = (obj) => obj instanceof HTMLIFrameElement;
 
+/**
+ * Checks if the given object is an instance of class HTMLInputElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLInputElement, false otherwise.
+ */
+export const isInstanceOfHTMLInputElement = (obj) => obj instanceof HTMLInputElement;
+
+
+
+
+
+
+
+
+
 
 
 
@@ -393,4 +408,46 @@ export const makeEnum = (defs) => {
     }
 
     return Object.freeze(enumObj);
+}
+
+/**
+ * Checks if a value is a number.
+ * @param {*} value the value to check.
+ * @returns true if value is a number, false otherwise.
+ */
+export const isNumber = (value) => {
+    return Number.isFinite(value);
+}
+
+/**
+ * Returns the decimal separator for the platform.
+ * @returns the current decimal separator.
+ */
+export const getDecimalSeparator = () => {
+    const numberWithDecimalSeparator = 1.1; 
+    const parts = new Intl.NumberFormat().formatToParts(numberWithDecimalSeparator);
+    const decimalPart = parts.find(part => part.type === 'decimal');  
+    return decimalPart ? decimalPart.value : '.';
+}
+
+/**
+ * Counts the number of decimals of the given value.
+ * @param {*} value the value to get the decimals of.
+ * @returns the number of decimals; if the value has no decimals, or it is not a number, then 0.
+ */
+export const countDecimals = (value) => {
+    if (isNumber(value)) {
+        const decimalSeparator = getDecimalSeparator();
+        const parts = value.toString().split(decimalSeparator);
+        return parts.length === 2 ? parts[1].length : 0;
+    }
+    return 0;
+}
+
+/**
+ * Returns the value property descriptor of the HTMLInputElement class.
+ * @returns the value property descriptor of the HTMLInputElement class.
+ */
+export const getHTMLInputElementValuePropertyDescriptor = () => {
+    return Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value");
 }

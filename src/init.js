@@ -75,6 +75,9 @@ const observerCallback = (mutationsList, observer) => {
             mutation.target.updateTheme?.();
             setChildrenEnabled(mutation.target, !mutation.target.disabled);
         }
+        else if (mutation.type === 'attributes') {
+            mutation.target.updateTheme?.();
+        }
     }
 };
 const observer = new MutationObserver(observerCallback);

@@ -21,7 +21,13 @@ import {
     h5, 
     h6, 
     hr, 
-    iframe
+    iframe,
+    input,
+    checkbox,
+    radio,
+    number,
+    password,
+    file
 } from "./src/HTML.js";
 
 const btn1 = document.createElement("button");
@@ -114,3 +120,11 @@ h6({parent: document.body}, "A title with H6 style");
 hr({parent: document.body});
 
 iframe({parent: document.body});
+
+input({parent: document.body});
+number({parent: document.body}).value = 5;
+password({parent: document.body});
+file({parent: document.body});
+checkbox({parent: document.body});
+radio({parent: document.body, name: "group1"});
+radio({parent: document.body, name: "group2"});
