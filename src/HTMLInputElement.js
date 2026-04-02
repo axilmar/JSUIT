@@ -2,14 +2,10 @@ import { initHTMLElement } from "./HTMLElement.js";
 import { 
     getHTMLInputElementValuePropertyDescriptor, 
     isInstanceOfHTMLInputElement, 
-    addClassName, 
-    isNumber, 
-    getDecimalSeparator, 
-    countDecimals
+    addClassName
 } from "./util.js";
 
 const valuePropertyDescriptor = getHTMLInputElementValuePropertyDescriptor();
-const VALID_PROPERTY_NAME = "__valid";
 
 const defineProperties = (elem) => {
     Object.defineProperty(elem, 'value', {
@@ -31,120 +27,52 @@ const defineProperties = (elem) => {
 
         set: function (v) {
             if (this.type === 'checkbox' || this.type === 'radio') {
-                this.__value = Boolean(v);
                 this.checked = v;
                 return;
             }
 
             if (this.type === 'image') {
-                this.__value = v;
                 this.src = v;
                 return;
             }
 
             if (this.type === 'number' || this.type === 'range') {
-                this.__value = Number(v);
                 this.valueAsNumber = v;
                 return;
             }
 
-            this.__value = v;
             valuePropertyDescriptor.set.call(this, v);
         }
     });    
-
-    Object.defineProperty(elem, 'valid', {
-        get: function() {
-            return this.checkValidity();
-        }
-    });
-}
-
-const createNumberPattern = (sign, numberOfDecimals) => {
-    let str = '^';
-
-    if (sign) {
-        str += '[+-]?';
-    }
-
-    str += '\\d+';
-
-    if (numberOfDecimals > 0) {
-        str += `([${getDecimalSeparator()}]\\d{0,${numberOfDecimals}})?`;
-    }
-
-    str += '$';
-
-    return new RegExp(str);
 }
 
 const processProperties = (props) => {
-    if (props.type === 'number') {
-        if (!isNumber(props.value)) {
-            throw new Error("value is not a number");
-        }
-
-        if (!props.pattern) {
-            const sign = props.value < 0 || isNumber(props.min) && props.min < 0;
-            const numberOfDecimals = Math.max(countDecimals(props.min), countDecimals(props.step), countDecimals(props.max));
-            props.pattern = createNumberPattern(sign, numberOfDecimals);
-        }
+    if (!props.step) {
+        props.step = "any";
     }
-
     return props;
-}
-
-const validityChanged = (elem, valid) => {
-    elem[VALID_PROPERTY_NAME] = valid;
-    if (valid) {
-        elem.dispatchEvent(new Event("valid"));
-    }
-    else {
-        elem.dispatchEvent(new Event("invalid"));
-    }
 }
 
 const addEventHandlers = (elem) => {
     elem.addEventListener("input", (event) => {
-        event.target.checkValidity();
+        if (event.isComposing) {
+            return;
+        }
+        console.log(elem.validity);
+        //TODO validate the input properly
     });
-
-    elem.addEventListener("invalid", (event) => {
-        event.target.updateStyle?.();
-    });
-
-    elem.addEventListener("valid", (event) => {
-        event.target.updateStyle?.();
-    });
-}
-
-const initValidProperty = (elem) => {
-    elem[VALID_PROPERTY_NAME] = elem.checkValidity();
 }
 
 const overrideMethods = (elem) => {
-    //check validity
-    const originalCheckValidity = elem.checkValidity;
-    elem.checkValidity = function () {
-        const result = originalCheckValidity.call(this);
-        if (this[VALID_PROPERTY_NAME] === undefined || result !== this[VALID_PROPERTY_NAME]) {
-            validityChanged(this, result);
-        }
-        return result;
-    }
-
-    //get states
     const originalGetStates = elem.getStates;
     elem.getStates = function() {
-        const result = originalGetStates.call(this);
-        
+        const result = originalGetStates.call(this);        
         if (this[VALID_PROPERTY_NAME]) {
             result.push("valid");
         }
         else {
             result.push("invalid");
         }
-
         return result;
     }
 }
@@ -154,25 +82,18 @@ const overrideMethods = (elem) => {
  * 
  * The element gets the 'HTMLInputElement' and 'input' class names.
  * 
- * A `value` property is added to the object, which is interpreted as the 'value' property 
- * of the HTMLInput class, except in these cases:
+ * The following properties are added to the input element:
  * 
- *  - checkbox, radio: property 'checked'.
- *  - image: property 'src'.
- *  - number, range: property 'valueAsNumber'.
+ *      - 'value': 
+ *          - for checkbox and radio, it returns the 'checked' value; 
+ *          - for image, it returns the 'src' value;
+ *          - for number and range, it returns a numeric value (i.e. 'valueAsNumber');
+ *          - for other types, it returns the normal value of the input element.
  * 
- * If the type is 'number', and a pattern is not defined, then the appropriate
- * pattern is created from the properties 'value', 'step', 'min', and 'max', in that order:
- * if any of them defines decimal digits, then the pattern constructed
- * contains the highest number of decimal digits between these values.
- * The presence of a sign is also determined from the 'value' or 'min' value:
- * if negative, then a sign is added to the pattern.
+ * The following states are added to the input element:
  * 
- * A `valid` property is also added to the element, which returns the value of the method `checkValidity`.
- * 
- * States 'valid' and 'invalid' are added to the property, set when the input is in the corresponding state.
- * 
- * The 'checkValidity' method is enhanced to dispatch 'valid' and 'invalid' events when the validity status changes.
+ *      - 'valid': set if the input element satisfies the validity constraints.
+ *      - 'invalid': set if the input element does not satisfy the validity constraints.
  * 
  * @param {*} elem the element to initialize.
  * @param {*} props the properties object.
@@ -186,7 +107,7 @@ export const initHTMLInputElement = (elem, props, children) => {
     addEventHandlers(elem);
     props = processProperties(props);
     initHTMLElement(elem, addClassName(props, "HTMLInputElement input"), children);
-    initValidProperty(elem);
+    initProperties(elem);
     overrideMethods(elem);
     return elem;
 }

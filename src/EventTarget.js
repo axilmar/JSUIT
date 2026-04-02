@@ -24,7 +24,6 @@ const initEvents = (eventTarget, props) => {
     }
 
     if (propsToRemove.length > 0) {
-        props = {...props};
         for(const propName of propsToRemove) {
             delete props[propName];
         }

@@ -77,8 +77,6 @@ function updateStyle() {
     //get the element states
     let elementStates = this.getStates?.() ?? [];
 
-    console.log(this.className, "element states =", JSON.stringify(elementStates));
-
     //iterate classes from super to derived
     for(let classIndex = 0; classIndex < this.classList.length; ++classIndex) {
         const className = this.classList.item(classIndex);
@@ -229,7 +227,6 @@ const processProperties = (elem, props) => {
 
         //remove properties from properties object to pass them to the inner function
         if (propertiesToRemove.length > 0) {
-            props = {...props};
             for(const propertyName of propertiesToRemove) {
                 delete props[propertyName];
             }

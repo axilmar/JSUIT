@@ -3,7 +3,6 @@ import { isInstanceOfHTMLCanvasElement, addClassName } from "./util.js";
 
 const processProperties = (elem, props) => {
     if (props.width || props.height) {
-        props = {...props};
         if (props.width) {
             elem.width = props.width;
         }
