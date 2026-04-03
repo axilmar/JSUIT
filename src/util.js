@@ -358,6 +358,15 @@ export const isFunction = (obj) => {
 }
 
 /**
+ * Checks if a value is a number.
+ * @param {*} value the value to check.
+ * @returns true if value is a number, false otherwise.
+ */
+export const isNumber = (value) => {
+    return Number.isFinite(value);
+}
+
+/**
  * Converts the given object to an enumeration.
  * 
  * The input object shall be a map of names to unique values.
@@ -411,15 +420,6 @@ export const makeEnum = (defs) => {
 }
 
 /**
- * Checks if a value is a number.
- * @param {*} value the value to check.
- * @returns true if value is a number, false otherwise.
- */
-export const isNumber = (value) => {
-    return Number.isFinite(value);
-}
-
-/**
  * Returns the decimal separator for the platform.
  * @returns the current decimal separator.
  */
@@ -450,4 +450,36 @@ export const countDecimals = (value) => {
  */
 export const getHTMLInputElementValuePropertyDescriptor = () => {
     return Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "value");
+}
+
+/**
+ * Returns the pattern property descriptor of the HTMLInputElement class.
+ * @returns the pattern property descriptor of the HTMLInputElement class.
+ */
+export const getHTMLInputElementPatternPropertyDescriptor = () => {
+    return Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "pattern");
+}
+
+/**
+ * Returns the min property descriptor of the HTMLInputElement class.
+ * @returns the min property descriptor of the HTMLInputElement class.
+ */
+export const getHTMLInputElementMinPropertyDescriptor = () => {
+    return Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "min");
+}
+
+/**
+ * Returns the max property descriptor of the HTMLInputElement class.
+ * @returns the max property descriptor of the HTMLInputElement class.
+ */
+export const getHTMLInputElementMaxPropertyDescriptor = () => {
+    return Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "max");
+}
+
+/**
+ * Returns the step property descriptor of the HTMLInputElement class.
+ * @returns the step property descriptor of the HTMLInputElement class.
+ */
+export const getHTMLInputElementStepPropertyDescriptor = () => {
+    return Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "step");
 }

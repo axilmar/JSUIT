@@ -90,5 +90,4 @@ const theme = {
 
 document.body.theme = theme;
 
-number({parent: document.body, maxIntegerPlaces:2, maxDecimalPlaces: 2, step: 0.25, value:5, min:-10, max:77});
-
+number({parent: document.body, value:5, step: 0.25, min:-100, max:100});
