@@ -1,5 +1,5 @@
 import { initElement } from "./Element.js";
-import { isInstanceOfHTMLElement, addClassName, sortStringData } from "./util.js";
+import { isInstanceOfHTMLElement, addClassName, addState } from "./util.js";
 
 const HOVER_VALUE_PROPERTY = "__hover";
 const THEME_VALUE_PROPERTY = "__theme";
@@ -7,35 +7,10 @@ const ENABLED_VALUE_PROPERTY = "__enabled";
 
 function getStates() {
     const result = [];
-    
-    if (this.enabled) {
-        result.push("enabled");
-    }
-    else {
-        result.push("disabled");
-    }
-    
-    if (this.focused) {
-        result.push("focused");
-    }
-    else {        
-        result.push("unfocused");
-    }
-    
-    if (this.hover) {
-        result.push("hover");
-    }
-    else {        
-        result.push("unhover");
-    }
-    
-    if (this.active) {
-        result.push("pressed");
-    }
-    else {        
-        result.push("unpressed");
-    }
-
+    addState(result, this.enabled, "enabled", "disabled");
+    addState(result, this.focused, "focused", "unfocused");
+    addState(result, this.hover, "hover", "unhover");
+    addState(result, this.active, "pressed", "unpressed");
     return result;
 }
 

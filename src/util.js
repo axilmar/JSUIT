@@ -461,25 +461,25 @@ export const getHTMLInputElementPatternPropertyDescriptor = () => {
 }
 
 /**
- * Returns the min property descriptor of the HTMLInputElement class.
- * @returns the min property descriptor of the HTMLInputElement class.
+ * Returns the validity property descriptor of the HTMLInputElement class.
+ * @returns the validity property descriptor of the HTMLInputElement class.
  */
-export const getHTMLInputElementMinPropertyDescriptor = () => {
-    return Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "min");
+export const getHTMLInputElementValidityPropertyDescriptor = () => {
+    return Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "validity");
 }
 
 /**
- * Returns the max property descriptor of the HTMLInputElement class.
- * @returns the max property descriptor of the HTMLInputElement class.
+ * Adds a state to a state array, depending on a validity flag.
+ * @param {*} stateArray the target state array.
+ * @param {*} valid the validity flag.
+ * @param {*} validState the valid state string.
+ * @param {*} invalidState the invalid state string.
  */
-export const getHTMLInputElementMaxPropertyDescriptor = () => {
-    return Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "max");
-}
-
-/**
- * Returns the step property descriptor of the HTMLInputElement class.
- * @returns the step property descriptor of the HTMLInputElement class.
- */
-export const getHTMLInputElementStepPropertyDescriptor = () => {
-    return Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "step");
+export const addState = (stateArray, valid, validState, invalidState) => {
+    if (valid) {
+        stateArray.push(validState);
+    }
+    else {
+        stateArray.push(invalidState);
+    }
 }

@@ -2,35 +2,19 @@ import { initHTMLElement } from "./HTMLElement.js";
 import { 
     getHTMLInputElementValuePropertyDescriptor, 
     getHTMLInputElementPatternPropertyDescriptor,
-    getHTMLInputElementMinPropertyDescriptor,
-    getHTMLInputElementMaxPropertyDescriptor,
-    getHTMLInputElementStepPropertyDescriptor,
+    getHTMLInputElementValidityPropertyDescriptor,
     isInstanceOfHTMLInputElement, 
     addClassName,
-    isNumber
+    addState
 } from "./util.js";
 
 const valuePropertyDescriptor = getHTMLInputElementValuePropertyDescriptor();
 const patternPropertyDescriptor = getHTMLInputElementPatternPropertyDescriptor();
-const minPropertyDescriptor = getHTMLInputElementMinPropertyDescriptor();
-const maxPropertyDescriptor = getHTMLInputElementMaxPropertyDescriptor();
-const stepPropertyDescriptor = getHTMLInputElementStepPropertyDescriptor();
+const validityPropertyDescriptor = getHTMLInputElementValidityPropertyDescriptor();
 
 const VALUE_PROP = "__value";
 const VALID_PROP = "__valid";
 const REGEX_PROP = "__regex";
-const MIN_PROP = "__min";
-const MAX_PROP = "__max";
-const STEP_PROP = "__step";
-
-const getNumericConstraint = (v) => {
-    try {
-        return Number(v);
-    }
-    catch {
-        return null;
-    }
-}
 
 const defineProperties = (elem) => {
     //the value property shall work for all types of input
@@ -70,7 +54,8 @@ const defineProperties = (elem) => {
         }
     });    
 
-    //override the pattern property to set a regular expression object
+    //override the pattern property to keep a regular expression object to use
+    //without creating a new regex each time the value changes
     Object.defineProperty(elem, 'pattern', {
         get: function() {            
             return patternPropertyDescriptor.get.call(this);
@@ -88,191 +73,93 @@ const defineProperties = (elem) => {
         }
     });
 
-    //since the min property is a string, we also keep it as a number
-    Object.defineProperty(elem, 'min', {
+    //override the validity property to check the pattern in case of a number
+    Object.defineProperty(elem, 'validity', {
         get: function () {
-            return minPropertyDescriptor.get.call(this);
-        },
-        set: function (v) {
-            minPropertyDescriptor.set.call(this, v);
-            this[MIN_PROP] = getNumericConstraint(v);
+            const validity = validityPropertyDescriptor.get.call(this);
+            let numericPatternValid, validUI;
+            if (this.type === 'number') {
+                numericPatternValid = this[REGEX_PROP]?.test(this.valueAsNumber) ?? true;
+                validUI = !validity.badInput && numericPatternValid && !validity.rangeOverflow && !validity.rangeUnderflow &&!validity.valueMissing;
+            }
+            else {
+                numericPatternValid = !validity.patternMismatch;
+                validUI = validity.valid;
+            }
+            return {
+                badInput: validity.badInput,
+                customError: validity.customError,
+                patternMismatch: !numericPatternValid,
+                rangeOverflow: validity.rangeOverflow,
+                rangeUnderflow: validity.rangeUnderflow,
+                stepMismatch: validity.stepMismatch,
+                tooLong: validity.tooLong,
+                tooShort: validity.tooShort,
+                typeMismatch: validity.typeMismatch,
+                valid: validity.valid && numericPatternValid,
+                validUI,
+                valueMissing: validity.valueMissing
+            };
         }
     })
-
-    //since the max property is a string, we also keep it as a number
-    Object.defineProperty(elem, 'max', {
-        get: function () {
-            return maxPropertyDescriptor.get.call(this);
-        },
-        set: function (v) {
-            maxPropertyDescriptor.set.call(this, v);
-            this[MAX_PROP] = getNumericConstraint(v);
-        }
-    })
-
-    //since the step property is a string, we also keep it as a number
-    Object.defineProperty(elem, 'step', {
-        get: function () {
-            return stepPropertyDescriptor.get.call(this);
-        },
-        set: function (v) {
-            stepPropertyDescriptor.set.call(this, v);
-            this[STEP_PROP] = getNumericConstraint(v);
-        }
-    })
-}
-
-//get the numeric value; returns one of the following:
-//1. false if the value is invalid.
-//2. true if the value is valid.
-//3. a number.
-const getNumericValue = (elem, newData) => {
-    let value = elem.valueAsNumber;
-
-    //if the value is a valid number, return it
-    if (isNumber(value)) {
-        return value;
-    }
-
-    //if it is not NaN, i.e. if it is infinity or negative infinity,
-    //then it is not allowed
-    if (!isNaN(value)) {
-        return false;
-    }
-
-    //check insertion
-    if (newData) {
-        //the only non-numeric character allowed is the '-'
-        if (newData !== '-') {
-            return false;
-        }
-
-        //if min is 0 or positive, then the '-' is not allowed
-        if (isNumber(elem.min) && elem.min >= 0) {
-            return false;
-        }
-
-        //if the previous value is already negative, then the '-' is not allowed
-        if (isNumber(elem[VALUE_PROP]) && elem[VALUE_PROP] < 0) {
-            return false;
-        }
-
-        //minus character allowed
-        return true;
-    }
-
-    return true;
-}
-
-//check validity of input value; returns false, true, or 'invalid' (to keep the value but set the UI state to 'invalid')
-const checkValidity = (elem, newData) => {
-    if (elem.type === 'number') {
-        const value = getNumericValue(elem, newData);
-
-        //if the value is empty, check the required property
-        if (value === null) {
-            return !elem.required;
-        }
-
-        //if the value is false, then return false
-        if (value === false) {
-            return false;
-        }
-
-        //if the value is true, then return true
-        if (value === true) {
-            return true;
-        }
-
-        //check against the pattern
-        const regex = elem[REGEX_PROP];
-        if (regex && !regex.test(value)) {
-            return false;            
-        }
-
-        //check against the min
-        if (isNumber(elem[MIN_PROP]) && value < elem[MIN_PROP]) {
-            return false;
-        }
-
-        //check against the max
-        if (isNumber(elem[MAX_PROP]) && value > elem[MAX_PROP]) {
-            return false;
-        }
-
-        //check against the step
-        if (isNumber(elem[STEP_PROP]) && Math.abs(value % elem[STEP_PROP]) > 0) {
-            return 'invalid';
-        }
-
-        //success
-        return true;
-    }
-
-    //for other types, return the default validity
-    return elem.validity.valid;
 }
 
 const addEventHandlers = (elem) => {
-    //validate input
     elem.addEventListener("input", (event) => {
-        //during composition, do not validate anything
-        if (event.isComposing) {
-            return;
-        }
-
-        //check the validity of the value
-        const validility = checkValidity(elem, event.data);
-        let valid = validility === true;
-        const keepValue = validility !== false;
-
-        //if valid, save the value, else restore it from last good value
-        if (keepValue) {
-            elem[VALUE_PROP] = elem.value;
-        }
-        else {
-            //if the previous value is restored, then it is valid
-            elem.value = elem[VALUE_PROP];
-            valid = true;
-        }
-
-        //if validity changed, update the valid prop and dispatch the valid or invalid event
-        if (!elem[VALID_PROP] || valid != elem[VALID_PROP]) {
-            elem[VALID_PROP] = valid;
-            elem.updateStyle?.();
-            if (valid) {
-                elem.dispatchEvent(new Event('valid'));
-            }
-            else {
-                elem.dispatchEvent(new Event('invalid'));
-            }
+        if (!event.isComposing) {
+            event.target.checkValidity();
         }
     });
 }
 
-const initProperties = (elem) => {
-    elem[VALUE_PROP] = elem.value;
-    elem[VALID_PROP] = checkValidity(elem);
-    elem[MIN_PROP] = getNumericConstraint(elem.min);
-    elem[MAX_PROP] = getNumericConstraint(elem.max);
-    elem[STEP_PROP] = getNumericConstraint(elem.step);
+const overrideMethodGetStates = (elem) => {    
+    const originalGetStates = elem.getStates;
+    elem.getStates = function() {
+        const result = originalGetStates.call(this);
+        addState(result, this[VALID_PROP], "valid", "invalid");
+        return result;
+    }
+}
+
+const overrideMethodCheckValidity = (elem) => {
+    elem.checkValidity = function () {
+        const validity = this.validity;
+        const valid = validity.valid;
+        const validUI = validity.validUI;
+
+        //revert value if needed
+        if (validUI) {
+            this[VALUE_PROP] = this.value;
+        }
+        else {
+            this.value = this[VALUE_PROP];
+            valid = true;
+        }
+
+        //update valid property
+        if (this[VALID_PROP] === undefined || valid !== this[VALID_PROP]) {
+            this[VALID_PROP] = valid;
+            this.updateStyle?.();
+            if (valid) {
+                this.dispatchEvent(new Event('valid'));
+            }
+            else {                
+                this.dispatchEvent(new Event('invalid'));
+            }
+        }
+
+        return valid;
+    }
 }
 
 const overrideMethods = (elem) => {
-    const originalGetStates = elem.getStates;
-    elem.getStates = function() {
-        const result = originalGetStates.call(this);        
+    overrideMethodGetStates(elem);
+    overrideMethodCheckValidity(elem);
+}
 
-        //add validity style
-        if (this[VALID_PROP]) {
-            result.push("valid");
-        }
-        else {
-            result.push("invalid");
-        }
-
-        return result;
-    }
+const initProperties = (elem) => {
+    elem[VALUE_PROP] = elem.value;
+    elem.checkValidity();
 }
 
 /**
@@ -289,27 +176,16 @@ const overrideMethods = (elem) => {
  *          - for other types, it returns the normal value of the input element.
  * 
  *      - 'valid':
- *          Read only property which returns the validity status of the object.
- * 
- * The following events are dispatched on the input element:
- * 
- *      - 'valid': 
- *          Dispatched when the element becomes valid.
- * 
- *      - 'invalid':
- *          Dispatched when the element becomes invalid.
+ *          Read only property which returns the current validity status of the object.
  * 
  * The following states are added to the input element:
  * 
- *      - 'valid': set if the input element satisfies the validity constraints.
- *      - 'invalid': set if the input element does not satisfy the validity constraints.
- * 
- * A generic Event is dispatched in all the above cases.
+ *      - 'valid'/'invalid': set according to the validity of the value.
  * 
  * Additional changes:
  *      
- *      1. When the type is 'number', the input value is checked against the pattern, if the pattern exists.
- *         If the test is negative, then the element becomes invalid.
+ *      1. the pattern is also checked for numbers.
+ *      2. invalid values are not allowed, except when they can become valid with additional input.
  * 
  * @param {*} elem the element to initialize.
  * @param {*} props the properties object.
@@ -322,8 +198,8 @@ export const initHTMLInputElement = (elem, props, children) => {
     defineProperties(elem);
     addEventHandlers(elem);
     initHTMLElement(elem, addClassName(props, "HTMLInputElement input"), children);
-    initProperties(elem);
     overrideMethods(elem);
+    initProperties(elem);
     return elem;
 }
 
