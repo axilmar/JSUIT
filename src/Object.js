@@ -1,5 +1,12 @@
 import "./init.js";
 
+const initObjectProperties = (obj, props) => {
+    for(const propName in props) {
+        const propValue = props[propName];
+        obj[propName] = propValue;
+    }
+}
+
 /**
  * Initializes an object.
  * 
@@ -12,9 +19,6 @@ import "./init.js";
  * @returns the object.
  */
 export const initObject = (obj, props) => {
-    for(const propName in props) {
-        const propValue = props[propName];
-        obj[propName] = propValue;
-    }
+    initObjectProperties(obj, props);
     return obj;    
 }

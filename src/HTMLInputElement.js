@@ -12,9 +12,9 @@ const valuePropertyDescriptor = getHTMLInputElementValuePropertyDescriptor();
 const patternPropertyDescriptor = getHTMLInputElementPatternPropertyDescriptor();
 const validityPropertyDescriptor = getHTMLInputElementValidityPropertyDescriptor();
 
-const VALUE_PROP = "__value";
-const VALID_PROP = "__valid";
-const REGEX_PROP = "__regex";
+const REGEX_PROP = '__regex';
+const VALIDITY_PROP = '__validity';
+const VALID_PROP = '__valid';
 
 const defineProperties = (elem) => {
     //the value property shall work for all types of input
@@ -23,39 +23,33 @@ const defineProperties = (elem) => {
             if (this.type === 'checkbox' || this.type === 'radio') {
                 return this.checked;
             }
-
             if (this.type === 'image') {
                 return this.src;
             }
-
             if (this.type === 'number' || this.type === 'range') {
                 return this.valueAsNumber;
             }
-
             return valuePropertyDescriptor.get.call(this);
         },
+
         set: function (v) {
             if (this.type === 'checkbox' || this.type === 'radio') {
                 this.checked = v;
-                return;
             }
-
-            if (this.type === 'image') {
+            else if (this.type === 'image') {
                 this.src = v;
-                return;
             }
-
-            if (this.type === 'number' || this.type === 'range') {
+            else if (this.type === 'number' || this.type === 'range') {
                 this.valueAsNumber = v;
-                return;
+                updateValidity(this);
             }
-
-            valuePropertyDescriptor.set.call(this, v);
+            else {
+                valuePropertyDescriptor.set.call(this, v);            
+            }
         }
     });    
 
-    //override the pattern property to keep a regular expression object to use
-    //without creating a new regex each time the value changes
+    //maintain a regex for quick access
     Object.defineProperty(elem, 'pattern', {
         get: function() {            
             return patternPropertyDescriptor.get.call(this);
@@ -63,47 +57,55 @@ const defineProperties = (elem) => {
         set: function(v) {
             patternPropertyDescriptor.set.call(this, v);
             this[REGEX_PROP] = v ? new RegExp(v) : null;
-        }
-    })
-
-    //the valid property; read only
-    Object.defineProperty(elem, 'valid', {
-        get: function () {
-            return this[VALID_PROP];
+            updateValidity(this);
         }
     });
 
-    //override the validity property to check the pattern in case of a number
+    //return own validity state structure for number
     Object.defineProperty(elem, 'validity', {
-        get: function () {
-            const validity = validityPropertyDescriptor.get.call(this);
-            let numericPatternValid, validUI;
-            if (this.type === 'number') {
-                numericPatternValid = this[REGEX_PROP]?.test(this.valueAsNumber) ?? true;
-                validUI = !validity.badInput && numericPatternValid && !validity.rangeOverflow && !validity.rangeUnderflow &&!validity.valueMissing;
-            }
-            else {
-                numericPatternValid = !validity.patternMismatch;
-                validUI = validity.valid;
-            }
-            return {
-                badInput: validity.badInput,
-                customError: validity.customError,
-                patternMismatch: !numericPatternValid,
-                rangeOverflow: validity.rangeOverflow,
-                rangeUnderflow: validity.rangeUnderflow,
-                stepMismatch: validity.stepMismatch,
-                tooLong: validity.tooLong,
-                tooShort: validity.tooShort,
-                typeMismatch: validity.typeMismatch,
-                valid: validity.valid && numericPatternValid,
-                validUI,
-                valueMissing: validity.valueMissing
-            };
+        get: function() {
+            return this.type === 'number' ? { ...this[VALIDITY_PROP] } : validityPropertyDescriptor.get.call(this);
         }
-    })
+    });
+
+    //the default value for the saved validity state
+    elem[VALID_PROP] = true;
 }
 
+const updateValidity = (elem) => {
+    let valid;
+    const originalValidity = validityPropertyDescriptor.get.call(elem);
+
+    //for number, do additional checks
+    if (elem.type === 'number') {
+        elem[VALIDITY_PROP] = {
+            badInput: originalValidity.badInput,
+            customError: originalValidity.customError,
+            patternMismatch: originalValidity.patternMismatch,
+            rangeOverflow: originalValidity.rangeOverlow,
+            rangeUnderflow: originalValidity.rangeUnderflow,
+            stepMismatch: originalValidity.stepMismatch,
+            tooLong: originalValidity.tooLong,
+            tooShort: originalValidity.tooShort,
+            typeMismatch: originalValidity.typeMismatch,
+            valid: originalValidity.valid,
+            valueMissing: originalValidity.valueMissing
+        };
+        elem[VALIDITY_PROP].patternMismatch = !isNaN(elem.valueAsNumber) && elem[REGEX_PROP] ? !elem[REGEX_PROP].test(elem.valueAsNumber) : false;
+        elem[VALIDITY_PROP].valid &&= !elem[VALIDITY_PROP].patternMismatch;
+        valid = elem[VALIDITY_PROP].valid;
+    }
+
+    else {
+        valid = originalValidity.valid;
+    }
+
+    const changed = elem[VALID_PROP] != valid;
+    elem[VALID_PROP] = valid;
+    return changed;
+}
+
+//validate input
 const addEventHandlers = (elem) => {
     elem.addEventListener("input", (event) => {
         if (!event.isComposing) {
@@ -112,54 +114,25 @@ const addEventHandlers = (elem) => {
     });
 }
 
-const overrideMethodGetStates = (elem) => {    
+const overrideMethods = (elem) => {
+    //override the 'getStates()' method to get the appropriate state from its valid property
     const originalGetStates = elem.getStates;
     elem.getStates = function() {
         const result = originalGetStates.call(this);
         addState(result, this[VALID_PROP], "valid", "invalid");
         return result;
     }
-}
 
-const overrideMethodCheckValidity = (elem) => {
+    //override the checkValidity() method to update the UI status of an object and fire a 'valid'/'invalid' event
     elem.checkValidity = function () {
-        const validity = this.validity;
-        const valid = validity.valid;
-        const validUI = validity.validUI;
-
-        //revert value if needed
-        if (validUI) {
-            this[VALUE_PROP] = this.value;
-        }
-        else {
-            this.value = this[VALUE_PROP];
-            valid = true;
-        }
-
-        //update valid property
-        if (this[VALID_PROP] === undefined || valid !== this[VALID_PROP]) {
-            this[VALID_PROP] = valid;
+        const changed = updateValidity(this);
+        const valid = this[VALID_PROP];
+        if (changed) {
             this.updateStyle?.();
-            if (valid) {
-                this.dispatchEvent(new Event('valid'));
-            }
-            else {                
-                this.dispatchEvent(new Event('invalid'));
-            }
+            this.dispatchEvent(new Event(valid ? 'valid' : 'invalid'));
         }
-
         return valid;
     }
-}
-
-const overrideMethods = (elem) => {
-    overrideMethodGetStates(elem);
-    overrideMethodCheckValidity(elem);
-}
-
-const initProperties = (elem) => {
-    elem[VALUE_PROP] = elem.value;
-    elem.checkValidity();
 }
 
 /**
@@ -167,25 +140,31 @@ const initProperties = (elem) => {
  * 
  * The element gets the 'HTMLInputElement' and 'input' class names.
  * 
- * The following properties are added to the input element:
+ * The following properties are added to/overriden for the input element:
  * 
  *      - 'value': 
- *          - for checkbox and radio, it returns the 'checked' value; 
- *          - for image, it returns the 'src' value;
- *          - for number and range, it returns a numeric value (i.e. 'valueAsNumber');
- *          - for other types, it returns the normal value of the input element.
+ *          - for checkbox and radio, it gets and sets the 'checked' value; 
+ *          - for image, it gets and sets the 'src' value;
+ *          - for number and range, it gets and sets the numeric value (i.e. 'valueAsNumber');
+ *          - for other types, it gets and sets the normal value of the input element.
  * 
- *      - 'valid':
- *          Read only property which returns the current validity status of the object.
+ *      - 'validity:
+ *          - returns custom structure with enhanced values: 
+ *              - patternMismatch is also set to true if the pattern is set and the number as string does not conform to it.
+ * 
+ * The following methods are overriden for the input element:
+ * 
+ *      - 'checkValidity': 
+ *          - it updates the style of the element.
+ *          - if fires a 'valid' or 'invalid' generic event depending on validity state.
  * 
  * The following states are added to the input element:
  * 
  *      - 'valid'/'invalid': set according to the validity of the value.
  * 
- * Additional changes:
- *      
- *      1. the pattern is also checked for numbers.
- *      2. invalid values are not allowed, except when they can become valid with additional input.
+ * Other changes:
+ * 
+ *      - input validity changes as the input element value is modified, and not on 'submit'.
  * 
  * @param {*} elem the element to initialize.
  * @param {*} props the properties object.
@@ -198,8 +177,8 @@ export const initHTMLInputElement = (elem, props, children) => {
     defineProperties(elem);
     addEventHandlers(elem);
     initHTMLElement(elem, addClassName(props, "HTMLInputElement input"), children);
+    updateValidity(elem);
     overrideMethods(elem);
-    initProperties(elem);
     return elem;
 }
 
@@ -275,7 +254,7 @@ export const file = (props, children) => {
  * Same as `HTMLInputElement`.
  */
 export const number = (props, children) => {
-    return input({type: 'number', value:0, ...props}, children);
+    return input({type: 'number', ...props}, children);
 }
 
 /**

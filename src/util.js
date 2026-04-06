@@ -367,6 +367,22 @@ export const isNumber = (value) => {
 }
 
 /**
+ * Converts the given value to a number.
+ * In case of exception,it returns the default value.
+ * @param {*} value the value to convert to a number.
+ * @param {*} defaultValue the value to return in case of error.
+ * @returns the value as a number,or the default value.
+ */
+export const getNumber = (value, defaultValue = undefined) => {
+    try {
+        return Number(value);
+    }
+    catch {
+        return defaultValue;
+    }
+}
+
+/**
  * Converts the given object to an enumeration.
  * 
  * The input object shall be a map of names to unique values.
@@ -482,4 +498,62 @@ export const addState = (stateArray, valid, validState, invalidState) => {
     else {
         stateArray.push(invalidState);
     }
+}
+
+/**
+ * Returns the value, except if the value is outside the range;
+ * in that case, either min is returned (on underflow)
+ * or max (on overflow).
+ * @param {*} min the minimum value.
+ * @param {*} value the value.
+ * @param {*} max the max value.
+ * @returns the mid value.
+ */
+export const getMidNumber = (min, value, max) => {
+    return Math.max(min, Math.min(val, max));
+}
+
+/**
+ * Returns the appropriate min and max values.
+ * @param {*} min the min value; if not defined, the default min value is used.
+ * @param {*} max the max value; if not defined, the default max value is used.
+ * @returns an array with the min value at index 0 and the max value at index 1.
+ */
+export const getMinMaxNumber = (min, max, defaultMinValue = -Number.MAX_VALUE, defaultMaxValue = Number.MAX_VALUE) => {
+    let minValue = getNumber(min, defaultMinValue);
+    let maxValue = getNumber(max, defaultMaxValue);
+    return minValue <= maxValue ? [minValue, maxValue] : [maxValue, minValue];
+}
+
+/**
+ * Checks if the given character is a digit.
+ * @param {*} ch the character to check.
+ * @returns true if the character is a digit, false otherwise.
+ */
+export const isDigit = (ch) => {
+    if (isString(c) && c.length === 1) {
+        try {
+            Number(c);
+            return true;
+        }
+        catch {
+        }
+    }
+    return false;
+}
+
+/**
+ * Counts the number of digits in a number.
+ * @param {*} value the value to check.
+ * @returns the number of digits.
+ */
+export const countDigits = (value) => {
+    const s = String(value);
+    let count = 0;
+    for(const ch of s) {
+        if (isDigit(ch)) {
+            ++count;
+        }
+    }
+    return count;
 }
