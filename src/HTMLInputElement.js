@@ -16,6 +16,39 @@ const REGEX_PROP = '__regex';
 const VALIDITY_PROP = '__validity';
 const VALID_PROP = '__valid';
 
+const updateValidity = (elem) => {
+    let valid;
+    const originalValidity = validityPropertyDescriptor.get.call(elem);
+
+    //for number, do additional checks
+    if (elem.type === 'number') {
+        elem[VALIDITY_PROP] = {
+            badInput: originalValidity.badInput,
+            customError: originalValidity.customError,
+            patternMismatch: originalValidity.patternMismatch,
+            rangeOverflow: originalValidity.rangeOverlow,
+            rangeUnderflow: originalValidity.rangeUnderflow,
+            stepMismatch: originalValidity.stepMismatch,
+            tooLong: originalValidity.tooLong,
+            tooShort: originalValidity.tooShort,
+            typeMismatch: originalValidity.typeMismatch,
+            valid: originalValidity.valid,
+            valueMissing: originalValidity.valueMissing
+        };
+        elem[VALIDITY_PROP].patternMismatch = !isNaN(elem.valueAsNumber) && elem[REGEX_PROP] ? !elem[REGEX_PROP].test(elem.valueAsNumber) : false;
+        elem[VALIDITY_PROP].valid &&= !elem[VALIDITY_PROP].patternMismatch;
+        valid = elem[VALIDITY_PROP].valid;
+    }
+
+    else {
+        valid = originalValidity.valid;
+    }
+
+    const changed = elem[VALID_PROP] != valid;
+    elem[VALID_PROP] = valid;
+    return changed;
+}
+
 const defineProperties = (elem) => {
     //the value property shall work for all types of input
     Object.defineProperty(elem, 'value', {
@@ -70,39 +103,6 @@ const defineProperties = (elem) => {
 
     //the default value for the saved validity state
     elem[VALID_PROP] = true;
-}
-
-const updateValidity = (elem) => {
-    let valid;
-    const originalValidity = validityPropertyDescriptor.get.call(elem);
-
-    //for number, do additional checks
-    if (elem.type === 'number') {
-        elem[VALIDITY_PROP] = {
-            badInput: originalValidity.badInput,
-            customError: originalValidity.customError,
-            patternMismatch: originalValidity.patternMismatch,
-            rangeOverflow: originalValidity.rangeOverlow,
-            rangeUnderflow: originalValidity.rangeUnderflow,
-            stepMismatch: originalValidity.stepMismatch,
-            tooLong: originalValidity.tooLong,
-            tooShort: originalValidity.tooShort,
-            typeMismatch: originalValidity.typeMismatch,
-            valid: originalValidity.valid,
-            valueMissing: originalValidity.valueMissing
-        };
-        elem[VALIDITY_PROP].patternMismatch = !isNaN(elem.valueAsNumber) && elem[REGEX_PROP] ? !elem[REGEX_PROP].test(elem.valueAsNumber) : false;
-        elem[VALIDITY_PROP].valid &&= !elem[VALIDITY_PROP].patternMismatch;
-        valid = elem[VALIDITY_PROP].valid;
-    }
-
-    else {
-        valid = originalValidity.valid;
-    }
-
-    const changed = elem[VALID_PROP] != valid;
-    elem[VALID_PROP] = valid;
-    return changed;
 }
 
 //validate input
