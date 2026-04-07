@@ -613,16 +613,25 @@ export const findOrCreateCSSRuleBySelector = (selector) => {
 }
 
 /**
- * It creates or updates a css style for the given classname's selection style.
- * @param {*} className the class name to set the selection style of.
+ * It creates or updates a css style for the given selector.
+ * @param {*} selctor the selector.
  * @param {*} styleObject the object with style properties.
  */
-export const setSelectionStyle = (className, styleObject) => {
+export const setCSSStyle = (selector, styleObject) => {
     //find the rule
-    const rule = findOrCreateCSSRuleBySelector(`.${className}::selection`);
+    const rule = findOrCreateCSSRuleBySelector(selector);
 
     //set the properties of the rule's style
     for(const propName in styleObject) {
         rule.style[propName] = styleObject[propName];
     }
+}
+
+/**
+ * It creates or updates a css style for the given classname's selection style.
+ * @param {*} className the class name to set the selection style of.
+ * @param {*} styleObject the object with style properties.
+ */
+export const setSelectionStyle = (className, styleObject) => {
+    setCSSStyle(`.${className}::selection`, styleObject);
 }

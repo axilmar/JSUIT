@@ -88,7 +88,7 @@ function updateStyle() {
                 continue;
             }
 
-            //if the state string is 'selection', then create/update a css style for the '<classname>::selection' class.
+            //if the state string is 'selection', then create/update a css style for the '.<classname>::selection' selector.
             if (stateString === 'selection') {
                 setSelectionStyle(className, stateStyle);
                 continue;
