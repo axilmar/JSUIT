@@ -604,7 +604,7 @@ export const findOrCreateCSSRuleBySelector = (selector) => {
     //get the sheet to create the rule at
     const sheet0 = document.styleSheets.item(0);
 
-    //create an empty rule for it nd get it
+    //create an empty rule for it and get it
     const index = sheet0.insertRule(`${selector} {}`, sheet0.cssRules.length);
     const newRule = sheet0.cssRules.item(index);
 
