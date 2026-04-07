@@ -67,7 +67,7 @@ const observerCallback = (mutationsList, observer) => {
         if (mutation.addedNodes.length > 0) {
             mutation.addedNodes.forEach(node => {
                 if (isInstanceOfHTMLElement(node)) {
-                    node.theme = node.parentElement.theme;
+                    node.theme = node.parentElement?.theme;
                 }
             });
         }

@@ -15,6 +15,9 @@ const validityPropertyDescriptor = getHTMLInputElementValidityPropertyDescriptor
 const REGEX_PROP = '__regex';
 const VALIDITY_PROP = '__validity';
 const VALID_PROP = '__valid';
+const CHECK_VALID_PROP = '__checkValid';
+const VALUE_PROP = '__value';
+const MINUS_PROP = '__minus';
 
 const updateValidity = (elem) => {
     let valid;
@@ -22,21 +25,19 @@ const updateValidity = (elem) => {
 
     //for number, do additional checks
     if (elem.type === 'number') {
-        elem[VALIDITY_PROP] = {
-            badInput: originalValidity.badInput,
-            customError: originalValidity.customError,
-            patternMismatch: originalValidity.patternMismatch,
-            rangeOverflow: originalValidity.rangeOverlow,
-            rangeUnderflow: originalValidity.rangeUnderflow,
-            stepMismatch: originalValidity.stepMismatch,
-            tooLong: originalValidity.tooLong,
-            tooShort: originalValidity.tooShort,
-            typeMismatch: originalValidity.typeMismatch,
-            valid: originalValidity.valid,
-            valueMissing: originalValidity.valueMissing
-        };
-        elem[VALIDITY_PROP].patternMismatch = !isNaN(elem.valueAsNumber) && elem[REGEX_PROP] ? !elem[REGEX_PROP].test(elem.valueAsNumber) : false;
-        elem[VALIDITY_PROP].valid &&= !elem[VALIDITY_PROP].patternMismatch;
+        const validity = elem[VALIDITY_PROP];
+        validity.badInput = originalValidity.badInput;
+        validity.customError = originalValidity.customError;
+        validity.patternMismatch = !isNaN(elem.valueAsNumber) && elem[REGEX_PROP] ? !elem[REGEX_PROP].test(elem.valueAsNumber) : false;
+        validity.rangeOverflow = originalValidity.rangeOverflow;
+        validity.rangeUnderflow = originalValidity.rangeUnderflow;
+        validity.stepMismatch = originalValidity.stepMismatch;
+        validity.tooLong = originalValidity.tooLong;
+        validity.tooShort = originalValidity.tooShort;
+        validity.typeMismatch = originalValidity.typeMismatch;
+        validity.valueMissing = originalValidity.valueMissing;
+        validity.valid = originalValidity.valid && !elem[VALIDITY_PROP].patternMismatch;
+        validity.validText = !validity.badInput && !validity.patternMismatch && !validity.rangeOverflow && !validity.rangeUnderflow && !validity.tooLong && !validity.tooShort && !validity.typeMismatch && !validity.valueMissing;
         valid = elem[VALIDITY_PROP].valid;
     }
 
@@ -74,11 +75,13 @@ const defineProperties = (elem) => {
             }
             else if (this.type === 'number' || this.type === 'range') {
                 this.valueAsNumber = v;
-                updateValidity(this);
+                this[MINUS_PROP] = elem.valueAsNumber < 0;
             }
             else {
                 valuePropertyDescriptor.set.call(this, v);            
             }
+            this[VALUE_PROP] = v;
+            updateValidity(this);
         }
     });    
 
@@ -101,17 +104,69 @@ const defineProperties = (elem) => {
         }
     });
 
-    //the default value for the saved validity state
+    //the default value for the valid property
     elem[VALID_PROP] = true;
+}
+
+const handleBeforeInputEvent = (event) => {
+    const elem = event.target;
+    if (elem.type === 'number') {        
+        //do not allow second 'minus'
+        if (event.data === '-') {
+            if (elem.valueAsNumber < 0) {
+                elem.preventDefault();
+            } 
+        }
+
+        //do not allow decimal part if the step does not allow it
+        else if (event.data === '.') {
+            if (Number.isInteger(elem.step)) {
+                elem.preventDefault();
+            } 
+        }
+
+        //do not allow characters that are not numbers
+        else if (isNaN(event.data)) {
+            event.preventDefault();
+        }
+    }
+}
+
+const handleInputEvent = (event) => {
+    const elem = event.target;
+    if (elem.type === 'number') {
+        const validText = elem[VALIDITY_PROP].validText;
+        if (validText) {
+            elem[VALUE_PROP] = elem.valueAsNumber;
+        }
+        else {
+            elem.valueAsNumber = elem[VALUE_PROP];
+            updateValidity(elem);
+        }
+    }
 }
 
 //validate input
 const addEventHandlers = (elem) => {
+    elem.addEventListener("beforeinput", (event) => {
+        if (!event.isComposing) {
+            handleBeforeInputEvent(event);
+        }
+    });
+
     elem.addEventListener("input", (event) => {
         if (!event.isComposing) {
+            updateValidity(event.target);
+            handleInputEvent(event);
             event.target.checkValidity();
         }
     });
+}
+
+const initState = (elem) => {
+    elem[VALIDITY_PROP] = {};
+    elem[VALUE_PROP] = elem.value;
+    elem[CHECK_VALID_PROP] = true;
 }
 
 const overrideMethods = (elem) => {
@@ -125,9 +180,9 @@ const overrideMethods = (elem) => {
 
     //override the checkValidity() method to update the UI status of an object and fire a 'valid'/'invalid' event
     elem.checkValidity = function () {
-        const changed = updateValidity(this);
         const valid = this[VALID_PROP];
-        if (changed) {
+        if (valid !== this[CHECK_VALID_PROP]) {
+            this[CHECK_VALID_PROP] = valid;
             this.updateStyle?.();
             this.dispatchEvent(new Event(valid ? 'valid' : 'invalid'));
         }
@@ -176,8 +231,8 @@ export const initHTMLInputElement = (elem, props, children) => {
     console.assert(isInstanceOfHTMLInputElement(elem), 'instanceof HTMLInputElement');
     defineProperties(elem);
     addEventHandlers(elem);
+    initState(elem);
     initHTMLElement(elem, addClassName(props, "HTMLInputElement input"), children);
-    updateValidity(elem);
     overrideMethods(elem);
     return elem;
 }
