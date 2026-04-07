@@ -557,3 +557,72 @@ export const countDigits = (value) => {
     }
     return count;
 }
+
+/**
+ * Searches all available style sheets for a rule with the given selector.
+ * @param {*} selector the selector to search for.
+ * @return the CSS rule for the given selector or null if not found.
+ */
+export const findCSSRuleBySelector = (selector) => {    
+    for (let i = 0; i < document.styleSheets.length; i++) {
+        const styleSheet = document.styleSheets[i];
+        const rules = styleSheet.cssRules || styleSheet.rules;
+        if (!rules) {
+            continue;
+        }
+        for (let j = 0; j < rules.length; j++) {
+            if (rules[j].selectorText === selector) {
+                return rules[j];
+            }
+        }
+    }
+    return null;
+}
+
+/**
+ * Searches all available style sheets for a rule with the given selector.
+ * If not found, then it creates one at sheet[0] as the last rule.
+ * If sheet[0] does not exist, then it is created.
+ * @param {*} selector the selector to search for.
+ * @return the CSS rule for the given selector or null if not found.
+ */
+export const findOrCreateCSSRuleBySelector = (selector) => {
+    //find the rule
+    const rule = findCSSRuleBySelector(selector);
+
+    //rule found
+    if (rule) {
+        return rule;
+    }
+
+    //if there are no style sheets, create one
+    if (document.styleSheets.length === 0) {
+        const style = document.createElement('style');
+        document.head.appendChild(style);
+    }
+
+    //get the sheet to create the rule at
+    const sheet0 = document.styleSheets.item(0);
+
+    //create an empty rule for it nd get it
+    const index = sheet0.insertRule(`${selector} {}`, sheet0.cssRules.length);
+    const newRule = sheet0.cssRules.item(index);
+
+    //return the new rule
+    return newRule;
+}
+
+/**
+ * It creates or updates a css style for the given classname's selection style.
+ * @param {*} className the class name to set the selection style of.
+ * @param {*} styleObject the object with style properties.
+ */
+export const setSelectionStyle = (className, styleObject) => {
+    //find the rule
+    const rule = findOrCreateCSSRuleBySelector(`.${className}::selection`);
+
+    //set the properties of the rule's style
+    for(const propName in styleObject) {
+        rule.style[propName] = styleObject[propName];
+    }
+}

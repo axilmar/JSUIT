@@ -31,6 +31,11 @@ import {
 } from "./src/HTML.js";
 
 const theme = {
+    "HTMLElement": {
+        "selection": {
+            backgroundColor: "yellow"
+        }
+    },
     "img": {
         "disabled": {
             borderColor: "grey",
@@ -84,6 +89,9 @@ const theme = {
             outlineColor: "red",
             outlineWidth: "2px",
             borderRadius: "2px"
+        },
+        "selection": {
+            backgroundColor: "pink"
         }
     }
 };
@@ -91,3 +99,4 @@ const theme = {
 document.body.theme = theme;
 
 number({parent: document.body, value:5, step: 0.25, min:-10000, max:10000, pattern: /^[-]?\d{0,3}([.]\d{0,3})?$/, required:true});
+document.body.append('aaa');

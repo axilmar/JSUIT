@@ -1,5 +1,5 @@
 import { initElement } from "./Element.js";
-import { isInstanceOfHTMLElement, addClassName, addState } from "./util.js";
+import { isInstanceOfHTMLElement, addClassName, addState, setSelectionStyle } from "./util.js";
 
 const HOVER_VALUE_PROPERTY = "__hover";
 const THEME_VALUE_PROPERTY = "__theme";
@@ -10,7 +10,7 @@ function getStates() {
     addState(result, this.enabled, "enabled", "disabled");
     addState(result, this.focused, "focused", "unfocused");
     addState(result, this.hover, "hover", "unhover");
-    addState(result, this.active, "pressed", "unpressed");
+    addState(result, this.pressed, "pressed", "unpressed");
     return result;
 }
 
@@ -88,6 +88,12 @@ function updateStyle() {
                 continue;
             }
 
+            //if the state string is 'selection', then create/update a css style for the '<classname>::selection' class.
+            if (stateString === 'selection') {
+                setSelectionStyle(className, stateStyle);
+                continue;
+            }
+
             //find the states of the state string
             const states = stateString.split(',');
             for(let index = 0; index < states.length; ++index) {
@@ -153,7 +159,7 @@ const defineProperties = (elem) => {
         set: setHover
     });
 
-    Object.defineProperty(elem, 'active', {
+    Object.defineProperty(elem, 'pressed', {
         get: function() { return this.matches(':active'); }
     });
 
@@ -250,7 +256,7 @@ const addEventHandlers = (elem) => {
  * 
  *  - 'hover': returns and sets the hover state.
  * 
- *  - 'active': returns if true if the element matches the ':active' selector.
+ *  - 'pressed': returns if true if the element matches the ':active' selector.
  * 
  *  - 'state': returns the state array of the object.
  * 
@@ -338,11 +344,13 @@ const addEventHandlers = (elem) => {
  * State strings
  * -------------
  * 
+ * The HTMLElement 'class' recognizes the following state strings:
+ * 
  *  - 'enabled'/'disabled'
  *  - 'focused/'unfocused'
  *  - 'hover'/'unhover'
  *  - 'pressed'/'unpressed'
- *  - 'valid'/'invalid'
+ *  - 'selection'
  * 
  * Theme Application
  * -----------------
@@ -378,17 +386,22 @@ const addEventHandlers = (elem) => {
  * 
  * finally, a state style is applied by the following algorithm:
  * 
- *  ```
- *  if state style has method `apply(stateStyle, element)' then
- *      invoke apply(stateStyle, element)
- *  else
- *      for each property of the state style
- *          apply the property to the element's style
- *      end if
- *  end if
- *  ```
- *  Since a class theme or a state style can contain a custom `apply` function,
- *  the types of properties in those objects can be anything.
+ * ```
+ * if state style has method `apply(stateStyle, element)' then
+ *     invoke apply(stateStyle, element)
+ * else
+ *     for each property of the state style
+ *         apply the property to the element's style
+ *     end if
+ * end if
+ * ```
+ * Since a class theme or a state style can contain a custom `apply` function,
+ * the types of properties in those objects can be anything.
+ * 
+ * For the 'selection' state string, a special style class is created (or updated)
+ * for the '<classname>::selection' class.
+ * 
+ * The '<classname>' above is the classname specified at the theme.
  * 
  * @param {*} elem the html element object to initialize.
  * @param {*} props the properties object.
