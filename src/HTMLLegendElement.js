@@ -12,9 +12,9 @@ import { isInstanceOfHTMLLegendElement, addClassName } from "./util.js";
  * 
  * @returns the element.
  */
-export const initHTMLLegendElement = (elem, props, children) => {
+export const initHTMLLegendElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLLegendElement(elem), 'instanceof HTMLLegendElement');
-    return initHTMLElement(elem, addClassName(props, "HTMLLegendElement legend"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLLegendElement legend"), ...children);
 }
 
 /**
@@ -25,9 +25,9 @@ export const initHTMLLegendElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLLegendElement = (props, children) => {
+export const HTMLLegendElement = (props, ...children) => {
     const obj = document.createElement('legend');
-    return initHTMLLegendElement(obj, props, children);
+    return initHTMLLegendElement(obj, props, ...children);
 }
 
 /**

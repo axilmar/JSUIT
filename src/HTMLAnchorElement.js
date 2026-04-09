@@ -21,10 +21,10 @@ const defineProperties = (elem) => {
  * 
  * @returns the element.
  */
-export const initHTMLAnchorElement = (elem, props, children) => {
+export const initHTMLAnchorElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLAnchorElement(elem), 'instanceof HTMLAnchorElement');
     defineProperties(elem);
-    return initHTMLElement(elem, addClassName(props, "HTMLAnchorElement a"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLAnchorElement a"), ...children);
 }
 
 /**
@@ -35,9 +35,9 @@ export const initHTMLAnchorElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLAnchorElement = (props, children) => {
+export const HTMLAnchorElement = (props, ...children) => {
     const obj = document.createElement('a');
-    return initHTMLAnchorElement(obj, props, children);
+    return initHTMLAnchorElement(obj, props, ...children);
 }
 
 /**

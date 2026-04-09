@@ -12,9 +12,9 @@ import { isInstanceOfHTMLBRElement, addClassName } from "./util.js";
  * 
  * @returns the element.
  */
-export const initHTMLBRElement = (elem, props, children) => {
+export const initHTMLBRElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLBRElement(elem), 'instanceof HTMLBRElement');
-    return initHTMLElement(elem, addClassName(props, "HTMLBRElement br"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLBRElement br"), ...children);
 }
 
 /**
@@ -25,9 +25,9 @@ export const initHTMLBRElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLBRElement = (props, children) => {
+export const HTMLBRElement = (props, ...children) => {
     const obj = document.createElement('br');
-    return initHTMLBRElement(obj, props, children);
+    return initHTMLBRElement(obj, props, ...children);
 }
 
 /**

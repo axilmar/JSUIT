@@ -24,10 +24,10 @@ export const HeadingType = makeEnum({
  * 
  * @returns the element.
  */
-export const initHTMLHeadingElement = (elem, props, children) => {
+export const initHTMLHeadingElement = (elem, props, ...children) => {
     console.assert(HeadingType.hasValue(props.type), `Invalid heading type: ${props.type}`);
     console.assert(isInstanceOfHTMLHeadingElement(elem), 'instanceof HTMLHeadingElement');
-    return initHTMLElement(elem, addClassName(props, `HTMLHeadingElement ${props.type}`), children);
+    return initHTMLElement(elem, addClassName(props, `HTMLHeadingElement ${props.type}`), ...children);
 }
 
 /**
@@ -41,10 +41,10 @@ export const initHTMLHeadingElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLHeadingElement = (props, children) => {
+export const HTMLHeadingElement = (props, ...children) => {
     console.assert(HeadingType.hasValue(props.type), `Invalid heading type: ${props.type}`);
     const obj = document.createElement(props.type);
-    return initHTMLHeadingElement(obj, props, children);
+    return initHTMLHeadingElement(obj, props, ...children);
 }
 
 /**
@@ -61,8 +61,8 @@ export const heading = HTMLHeadingElement;
  * 
  * @returns the element.
  */
-export const h1 = (props, children) => {
-    return heading({type: HeadingType.H1, ...props}, children);
+export const h1 = (props, ...children) => {
+    return heading({type: HeadingType.H1, ...props}, ...children);
 }
 
 /**
@@ -73,8 +73,8 @@ export const h1 = (props, children) => {
  * 
  * @returns the element.
  */
-export const h2 = (props, children) => {
-    return heading({type: HeadingType.H2, ...props}, children);
+export const h2 = (props, ...children) => {
+    return heading({type: HeadingType.H2, ...props}, ...children);
 }
 
 /**
@@ -85,8 +85,8 @@ export const h2 = (props, children) => {
  * 
  * @returns the element.
  */
-export const h3 = (props, children) => {
-    return heading({type: HeadingType.H3, ...props}, children);
+export const h3 = (props, ...children) => {
+    return heading({type: HeadingType.H3, ...props}, ...children);
 }
 
 /**
@@ -97,8 +97,8 @@ export const h3 = (props, children) => {
  * 
  * @returns the element.
  */
-export const h4 = (props, children) => {
-    return heading({type: HeadingType.H4, ...props}, children);
+export const h4 = (props, ...children) => {
+    return heading({type: HeadingType.H4, ...props}, ...children);
 }
 
 /**
@@ -109,8 +109,8 @@ export const h4 = (props, children) => {
  * 
  * @returns the element.
  */
-export const h5 = (props, children) => {
-    return heading({type: HeadingType.H5, ...props}, children);
+export const h5 = (props, ...children) => {
+    return heading({type: HeadingType.H5, ...props}, ...children);
 }
 
 /**
@@ -121,6 +121,6 @@ export const h5 = (props, children) => {
  * 
  * @returns the element.
  */
-export const h6 = (props, children) => {
-    return heading({type: HeadingType.H6, ...props}, children);
+export const h6 = (props, ...children) => {
+    return heading({type: HeadingType.H6, ...props}, ...children);
 }

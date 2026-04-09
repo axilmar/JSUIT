@@ -28,10 +28,10 @@ const processProperties = (elem, props) => {
  * 
  * @returns the element.
  */
-export const initHTMLCanvasElement = (elem, props, children) => {
+export const initHTMLCanvasElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLCanvasElement(elem), 'instanceof HTMLCanvasElement');
     props = processProperties(elem, props);
-    return initHTMLElement(elem, addClassName(props, "HTMLCanvasElement canvas"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLCanvasElement canvas"), ...children);
 }
 
 /**
@@ -42,9 +42,9 @@ export const initHTMLCanvasElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLCanvasElement = (props, children) => {
+export const HTMLCanvasElement = (props, ...children) => {
     const obj = document.createElement('canvas');
-    return initHTMLCanvasElement(obj, props, children);
+    return initHTMLCanvasElement(obj, props, ...children);
 }
 
 /**

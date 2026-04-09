@@ -12,9 +12,9 @@ import { isInstanceOfHTMLDataListElement, addClassName } from "./util.js";
  * 
  * @returns the element.
  */
-export const initHTMLDataListElement = (elem, props, children) => {
+export const initHTMLDataListElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLDataListElement(elem), 'instanceof HTMLDataListElement');
-    return initHTMLElement(elem, addClassName(props, "HTMLDataListElement datalist"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLDataListElement datalist"), ...children);
 }
 
 /**
@@ -25,9 +25,9 @@ export const initHTMLDataListElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLDataListElement = (props, children) => {
+export const HTMLDataListElement = (props, ...children) => {
     const obj = document.createElement('datalist');
-    return initHTMLDataListElement(obj, props, children);
+    return initHTMLDataListElement(obj, props, ...children);
 }
 
 /**

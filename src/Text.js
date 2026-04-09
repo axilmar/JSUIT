@@ -10,9 +10,9 @@ import { isInstanceOfText } from "./util.js";
  * 
  * @returns the node object.
  */
-export const initText = (node, props, children) => {
+export const initText = (node, props, ...children) => {
     console.assert(isInstanceOfText(node), 'instanceof Text');
-    return initCharacterData(node, props, children);
+    return initCharacterData(node, props, ...children);
 }
 
 /**
@@ -23,7 +23,7 @@ export const initText = (node, props, children) => {
  * 
  * @returns the node object.
  */
-export const Text = (props, children) => {
+export const Text = (props, ...children) => {
     const obj = document.createTextNode("");
-    return initText(obj, props, children);
+    return initText(obj, props, ...children);
 }

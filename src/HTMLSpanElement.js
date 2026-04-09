@@ -12,9 +12,9 @@ import { isInstanceOfHTMLSpanElement, addClassName } from "./util.js";
  * 
  * @returns the element.
  */
-export const initHTMLSpanElement = (elem, props, children) => {
+export const initHTMLSpanElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLSpanElement(elem), 'instanceof HTMLSpanElement');
-    return initHTMLElement(elem, addClassName(props, "HTMLSpanElement span"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLSpanElement span"), ...children);
 }
 
 /**
@@ -25,9 +25,9 @@ export const initHTMLSpanElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLSpanElement = (props, children) => {
+export const HTMLSpanElement = (props, ...children) => {
     const obj = document.createElement('span');
-    return initHTMLSpanElement(obj, props, children);
+    return initHTMLSpanElement(obj, props, ...children);
 }
 
 /**

@@ -42,8 +42,8 @@ const setAutoElementId = (props) => {
  * 
  * @returns the element object.
  */
-export const initElement = (elem, props, children) => {
+export const initElement = (elem, props, ...children) => {
     console.assert(isInstanceOfElement(elem), 'instanceof Element');
-    appendChildrenToElement(elem, children);
+    appendChildrenToElement(elem, ...children);
     return initNode(elem, setAutoElementId(addClassName(props, "Element")));
 }

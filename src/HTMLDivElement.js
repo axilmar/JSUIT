@@ -12,9 +12,9 @@ import { isInstanceOfHTMLDivElement, addClassName } from "./util.js";
  * 
  * @returns the element.
  */
-export const initHTMLDivElement = (elem, props, children) => {
+export const initHTMLDivElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLDivElement(elem), 'instanceof HTMLDivElement');
-    return initHTMLElement(elem, addClassName(props, "HTMLDivElement div"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLDivElement div"), ...children);
 }
 
 /**
@@ -25,9 +25,9 @@ export const initHTMLDivElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLDivElement = (props, children) => {
+export const HTMLDivElement = (props, ...children) => {
     const obj = document.createElement('div');
-    return initHTMLDivElement(obj, props, children);
+    return initHTMLDivElement(obj, props, ...children);
 }
 
 /**

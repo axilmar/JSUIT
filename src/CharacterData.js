@@ -12,7 +12,7 @@ import { isInstanceOfCharacterData } from "./util.js";
  * 
  * @returns the node object.
  */
-export const initCharacterData = (node, props, children) => {
+export const initCharacterData = (node, props, ...children) => {
     console.assert(isInstanceOfCharacterData(node), 'instanceof CharacterData');
 
     //add the value property
@@ -21,5 +21,5 @@ export const initCharacterData = (node, props, children) => {
         set: function (v) { this.data = v; }
     });    
 
-    return initNode(node, props, children);
+    return initNode(node, props, ...children);
 }

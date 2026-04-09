@@ -12,9 +12,9 @@ import { isInstanceOfHTMLDListElement, addClassName } from "./util.js";
  * 
  * @returns the element.
  */
-export const initHTMLDListElement = (elem, props, children) => {
+export const initHTMLDListElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLDListElement(elem), 'instanceof HTMLDListElement');
-    return initHTMLElement(elem, addClassName(props, "HTMLDListElement dl"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLDListElement dl"), ...children);
 }
 
 /**
@@ -25,9 +25,9 @@ export const initHTMLDListElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLDListElement = (props, children) => {
+export const HTMLDListElement = (props, ...children) => {
     const obj = document.createElement('dl');
-    return initHTMLDListElement(obj, props, children);
+    return initHTMLDListElement(obj, props, ...children);
 }
 
 /**

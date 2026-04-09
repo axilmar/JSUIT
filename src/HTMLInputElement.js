@@ -183,7 +183,7 @@ const overrideMethods = (elem) => {
         const valid = this[VALID_PROP];
         if (valid !== this[CHECK_VALID_PROP]) {
             this[CHECK_VALID_PROP] = valid;
-            this.updateStyle?.();
+            this.updateStyle();
             this.dispatchEvent(new Event(valid ? 'valid' : 'invalid'));
         }
         return valid;
@@ -227,12 +227,12 @@ const overrideMethods = (elem) => {
  * 
  * @returns the element.
  */
-export const initHTMLInputElement = (elem, props, children) => {
+export const initHTMLInputElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLInputElement(elem), 'instanceof HTMLInputElement');
     defineProperties(elem);
     addEventHandlers(elem);
     initState(elem);
-    initHTMLElement(elem, addClassName(props, "HTMLInputElement input"), children);
+    initHTMLElement(elem, addClassName(props, "HTMLInputElement input"), ...children);
     overrideMethods(elem);
     return elem;
 }
@@ -245,9 +245,9 @@ export const initHTMLInputElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLInputElement = (props, children) => {
+export const HTMLInputElement = (props, ...children) => {
     const obj = document.createElement('input');
-    return initHTMLInputElement(obj, props, children);
+    return initHTMLInputElement(obj, props, ...children);
 }
 
 /**
@@ -260,94 +260,94 @@ export const input = HTMLInputElement;
  * creates an HTML checkbox input element.
  * Same as `HTMLInputElement`.
  */
-export const checkbox = (props, children) => {
-    return input({type: 'checkbox', ...props}, children);
+export const checkbox = (props, ...children) => {
+    return input({type: 'checkbox', ...props}, ...children);
 }
 
 /**
  * creates an HTML color input element.
  * Same as `HTMLInputElement`.
  */
-export const color = (props, children) => {
-    return input({type: 'color', ...props}, children);
+export const color = (props, ...children) => {
+    return input({type: 'color', ...props}, ...children);
 }
 
 /**
  * creates an HTML date input element.
  * Same as `HTMLInputElement`.
  */
-export const date = (props, children) => {
-    return input({type: 'date', ...props}, children);
+export const date = (props, ...children) => {
+    return input({type: 'date', ...props}, ...children);
 }
 
 /**
  * creates an HTML datetime-local input element.
  * Same as `HTMLInputElement`.
  */
-export const datetime = (props, children) => {
-    return input({type: 'datetime-local', ...props}, children);
+export const datetime = (props, ...children) => {
+    return input({type: 'datetime-local', ...props}, ...children);
 }
 
 /**
  * creates an HTML email input element.
  * Same as `HTMLInputElement`.
  */
-export const email = (props, children) => {
-    return input({type: 'email', ...props}, children);
+export const email = (props, ...children) => {
+    return input({type: 'email', ...props}, ...children);
 }
 
 /**
  * creates an HTML file input element.
  * Same as `HTMLInputElement`.
  */
-export const file = (props, children) => {
-    return input({type: 'file', ...props}, children);
+export const file = (props, ...children) => {
+    return input({type: 'file', ...props}, ...children);
 }
 
 /**
  * creates an HTML number input element.
  * Same as `HTMLInputElement`.
  */
-export const number = (props, children) => {
-    return input({type: 'number', ...props}, children);
+export const number = (props, ...children) => {
+    return input({type: 'number', ...props}, ...children);
 }
 
 /**
  * creates an HTML password input element.
  * Same as `HTMLInputElement`.
  */
-export const password = (props, children) => {
-    return input({type: 'password', ...props}, children);
+export const password = (props, ...children) => {
+    return input({type: 'password', ...props}, ...children);
 }
 
 /**
  * creates an HTML radio input element.
  * Same as `HTMLInputElement`.
  */
-export const radio = (props, children) => {
-    return input({type: 'radio', ...props}, children);
+export const radio = (props, ...children) => {
+    return input({type: 'radio', ...props}, ...children);
 }
 
 /**
  * creates an HTML range input element.
  * Same as `HTMLInputElement`.
  */
-export const range = (props, children) => {
-    return input({type: 'range', ...props}, children);
+export const range = (props, ...children) => {
+    return input({type: 'range', ...props}, ...children);
 }
 
 /**
  * creates an HTML time input element.
  * Same as `HTMLInputElement`.
  */
-export const time = (props, children) => {
-    return input({type: 'time', ...props}, children);
+export const time = (props, ...children) => {
+    return input({type: 'time', ...props}, ...children);
 }
 
 /**
  * creates an HTML url input element.
  * Same as `HTMLInputElement`.
  */
-export const url = (props, children) => {
-    return input({type: 'url', ...props}, children);
+export const url = (props, ...children) => {
+    return input({type: 'url', ...props}, ...children);
 }

@@ -21,10 +21,10 @@ const defineProperties = (elem) => {
  * 
  * @returns the element.
  */
-export const initHTMLIFrameElement = (elem, props, children) => {
+export const initHTMLIFrameElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLIFrameElement(elem), 'instanceof HTMLIFrameElement');
     defineProperties(elem);
-    return initHTMLElement(elem, addClassName(props, "HTMLIFrameElement iframe"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLIFrameElement iframe"), ...children);
 }
 
 /**
@@ -35,9 +35,9 @@ export const initHTMLIFrameElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLIFrameElement = (props, children) => {
+export const HTMLIFrameElement = (props, ...children) => {
     const obj = document.createElement('iframe');
-    return initHTMLIFrameElement(obj, props, children);
+    return initHTMLIFrameElement(obj, props, ...children);
 }
 
 /**

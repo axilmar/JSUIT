@@ -201,8 +201,33 @@ export const isInstanceOfHTMLLegendElement = (obj) => obj instanceof HTMLLegendE
  */
 export const isInstanceOfHTMLLIElement = (obj) => obj instanceof HTMLLIElement;
 
+/**
+ * Checks if the given object is an instance of class HTMLMapElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLMapElement, false otherwise.
+ */
+export const isInstanceOfHTMLMapElement = (obj) => obj instanceof HTMLMapElement;
 
+/**
+ * Checks if the given object is an instance of class HTMLMenuElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLMenuElement, false otherwise.
+ */
+export const isInstanceOfHTMLMenuElement = (obj) => obj instanceof HTMLMenuElement;
 
+/**
+ * Checks if the given object is an instance of class HTMLMeterElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLMeterElement, false otherwise.
+ */
+export const isInstanceOfHTMLMeterElement = (obj) => obj instanceof HTMLMeterElement;
+
+/**
+ * Checks if the given object is an instance of class HTMLModElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLModElement, false otherwise.
+ */
+export const isInstanceOfHTMLModElement = (obj) => obj instanceof HTMLModElement;
 
 
 
@@ -298,7 +323,7 @@ export const setChildrenEnabled = (elem, enabled) => {
  * @param {*} parent parent element; if falsy, nothing happens.
  * @param {*} children children to add; it can be an array of nodes or a single node; if falsy, nothing happens.
  */
-export const appendChildrenToElement = (parent, children) => {
+export const appendChildrenToElement = (parent, ...children) => {
     if (parent) {
         console.assert(isInstanceOfElement(parent), 'instanceof Element');
         if (children) {
@@ -317,7 +342,7 @@ export const appendChildrenToElement = (parent, children) => {
  * @param {*} parent parent node; if falsy, nothing happens.
  * @param {*} children children to add; it can be an array of nodes or a single node; if falsy, nothing happens.
  */
-export const appendChildrenToNode = (parent, children) => {
+export const appendChildrenToNode = (parent, ...children) => {
     if (parent) {
         console.assert(isInstanceOfNode(parent), 'instanceof Node');
         if (children) {
@@ -343,13 +368,13 @@ export const appendChildrenToNode = (parent, children) => {
  * @param {*} children the array of children to add or a single node to add; if falsy, nothing happens.
  * @throws Error if the parent is not an element or a node.
  */
-export const appendChildren = (parent, children) => {
+export const appendChildren = (parent, ...children) => {
     if (parent) {
         if (isInstanceOfElement(parent)) {
-            appendChildrenToElement(parent, children);
+            appendChildrenToElement(parent, ...children);
         }
         else if (isInstanceOfNode(parent)) {
-            appendChildrenToNode(parent, children);
+            appendChildrenToNode(parent, ...children);
         }
         else {
             throw new Error("appendChildren: parent is not an Element or a Node.");

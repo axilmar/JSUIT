@@ -21,10 +21,10 @@ const defineProperties = (elem) => {
  * 
  * @returns the element.
  */
-export const initHTMLImageElement = (elem, props, children) => {
+export const initHTMLImageElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLImageElement(elem), 'instanceof HTMLImageElement');
     defineProperties(elem);
-    return initHTMLElement(elem, addClassName(props, "HTMLImageElement img"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLImageElement img"), ...children);
 }
 
 /**
@@ -35,9 +35,9 @@ export const initHTMLImageElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLImageElement = (props, children) => {
+export const HTMLImageElement = (props, ...children) => {
     const obj = document.createElement('img');
-    return initHTMLImageElement(obj, props, children);
+    return initHTMLImageElement(obj, props, ...children);
 }
 
 /**

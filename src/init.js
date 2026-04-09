@@ -72,12 +72,12 @@ const observerCallback = (mutationsList, observer) => {
             });
         }
         else if (mutation.attributeName === 'disabled') {
-            mutation.target.updateStyle?.();
+            mutation.target.updateStyle();
             setChildrenEnabled(mutation.target, !mutation.target.disabled);
         }
         else if (mutation.type === 'attributes') {
             if (mutation.attributeName !== 'style') {
-                mutation.target.updateStyle?.();
+                mutation.target.updateStyle();
             }
         }
     }
@@ -87,10 +87,10 @@ observer.observe(document.body, { childList: true, subtree: true, attributes: tr
 
 //monitor focus in to update the focused element
 document.body.addEventListener('focusin', (event) => {
-    event.target.updateStyle?.();
+    event.target.updateStyle();
 });
 
 //monitor focus out to update the unfocused element
 document.body.addEventListener('focusout', (event) => {
-    event.target.updateStyle?.();
+    event.target.updateStyle();
 });

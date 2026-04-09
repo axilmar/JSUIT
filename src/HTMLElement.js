@@ -17,13 +17,13 @@ function getStates() {
 function setHover(v) {
     if (v != this[HOVER_VALUE_PROPERTY]) {
         this[HOVER_VALUE_PROPERTY] = v;
-        this.updateStyle?.();
+        this.updateStyle();
     }
 }
 
 function setTheme(newTheme) {
     this[THEME_VALUE_PROPERTY] = newTheme;
-    this.updateStyle?.();
+    this.updateStyle();
     for(let child = this.firstElementChild; child; child = child.nextElementSibling) {
         child.setTheme?.(newTheme);
     }
@@ -227,11 +227,11 @@ const addEventHandlers = (elem) => {
     });
 
     elem.addEventListener("mousedown", function () {
-        this.updateStyle?.();
+        this.updateStyle();
     })
 
     elem.addEventListener("mouseup", function () {
-        this.updateStyle?.();
+        this.updateStyle();
     })
 }
 
@@ -409,13 +409,13 @@ const addEventHandlers = (elem) => {
  * 
  * @returns the html element object.
  */
-export const initHTMLElement = (elem, props, children) => {
+export const initHTMLElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLElement(elem), 'instanceof HTMLElement');
     defineProperties(elem);
     defineMethods(elem);
     addEventHandlers(elem);
     props = processProperties(elem, props);
-    return initElement(elem, addClassName(props, "HTMLElement"), children);
+    return initElement(elem, addClassName(props, "HTMLElement"), ...children);
 }
 
 //the root html element is an HTML element

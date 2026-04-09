@@ -30,11 +30,16 @@ import {
     file,
     label,
     legend,
-    li
+    li,
+    del,
+    ins
 } from "./src/HTML.js";
 
 const theme = {
     "HTMLElement": {
+        "disabled": {
+            color: "grey"
+        },
         "selection": {
             backgroundColor: "yellow"
         }
@@ -96,6 +101,16 @@ const theme = {
         "selection": {
             backgroundColor: "pink"
         }
+    },
+    "del": {
+        "enabled": {
+            backgroundColor: '#ffbbbb'
+        }
+    },
+    "ins": {
+        "enabled": {
+            backgroundColor: '#d4fcbc'
+        }
     }
 };
 
@@ -108,4 +123,6 @@ label({parent: document.body, controlId: 'test1'}, "The quick brown fox.");
 
 fieldset({parent: document.body}, legend({}, "Legendary"));
 
-li({parent: document.body}, "List Item 1");
+li({parent: document.body}, "List Item 1", del({}, "deleted"), ins({}, "added"));
+
+//document.body.enabled = false;

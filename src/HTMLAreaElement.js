@@ -21,10 +21,10 @@ const defineProperties = (elem) => {
  * 
  * @returns the element.
  */
-export const initHTMLAreaElement = (elem, props, children) => {
+export const initHTMLAreaElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLAreaElement(elem), 'instanceof HTMLAreaElement');
     defineProperties(elem);
-    return initHTMLElement(elem, addClassName(props, "HTMLAreaElement area"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLAreaElement area"), ...children);
 }
 
 /**
@@ -35,9 +35,9 @@ export const initHTMLAreaElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLAreaElement = (props, children) => {
+export const HTMLAreaElement = (props, ...children) => {
     const obj = document.createElement('area');
-    return initHTMLAreaElement(obj, props, children);
+    return initHTMLAreaElement(obj, props, ...children);
 }
 
 /**

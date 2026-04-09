@@ -12,9 +12,9 @@ import { isInstanceOfHTMLDataElement, addClassName } from "./util.js";
  * 
  * @returns the element.
  */
-export const initHTMLDataElement = (elem, props, children) => {
+export const initHTMLDataElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLDataElement(elem), 'instanceof HTMLDataElement');
-    return initHTMLElement(elem, addClassName(props, "HTMLDataElement data"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLDataElement data"), ...children);
 }
 
 /**
@@ -25,9 +25,9 @@ export const initHTMLDataElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLDataElement = (props, children) => {
+export const HTMLDataElement = (props, ...children) => {
     const obj = document.createElement('data');
-    return initHTMLDataElement(obj, props, children);
+    return initHTMLDataElement(obj, props, ...children);
 }
 
 /**

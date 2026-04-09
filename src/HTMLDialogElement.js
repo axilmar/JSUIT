@@ -12,9 +12,9 @@ import { isInstanceOfHTMLDialogElement, addClassName } from "./util.js";
  * 
  * @returns the element.
  */
-export const initHTMLDialogElement = (elem, props, children) => {
+export const initHTMLDialogElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLDialogElement(elem), 'instanceof HTMLDialogElement');
-    return initHTMLElement(elem, addClassName(props, "HTMLDialogElement dialog"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLDialogElement dialog"), ...children);
 }
 
 /**
@@ -25,9 +25,9 @@ export const initHTMLDialogElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLDialogElement = (props, children) => {
+export const HTMLDialogElement = (props, ...children) => {
     const obj = document.createElement('dialog');
-    return initHTMLDialogElement(obj, props, children);
+    return initHTMLDialogElement(obj, props, ...children);
 }
 
 /**

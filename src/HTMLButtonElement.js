@@ -12,9 +12,9 @@ import { isInstanceOfHTMLButtonElement, addClassName } from "./util.js";
  * 
  * @returns the element.
  */
-export const initHTMLButtonElement = (elem, props, children) => {
+export const initHTMLButtonElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLButtonElement(elem), 'instanceof HTMLButtonElement');
-    return initHTMLElement(elem, addClassName(props, "HTMLButtonElement button"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLButtonElement button"), ...children);
 }
 
 /**
@@ -25,9 +25,9 @@ export const initHTMLButtonElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLButtonElement = (props, children) => {
+export const HTMLButtonElement = (props, ...children) => {
     const obj = document.createElement('button');
-    return initHTMLButtonElement(obj, props, children);
+    return initHTMLButtonElement(obj, props, ...children);
 }
 
 /**

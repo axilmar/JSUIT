@@ -20,3 +20,7 @@ export { input, checkbox, color, date, datetime, email, file, number, password, 
 export { label } from './HTMLLabelElement.js';
 export { legend } from "./HTMLLegendElement.js";
 export { li} from "./HTMLLIElement.js";
+export { map } from "./HTMLMapElement.js";
+export { menu } from "./HTMLMenuElement.js";
+export { meter } from "./HTMLMeterElement.js";
+export { del, ins } from "./HTMLModElement.js";

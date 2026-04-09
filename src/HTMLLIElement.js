@@ -12,9 +12,9 @@ import { isInstanceOfHTMLLIElement, addClassName } from "./util.js";
  * 
  * @returns the element.
  */
-export const initHTMLLIElement = (elem, props, children) => {
+export const initHTMLLIElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLLIElement(elem), 'instanceof HTMLLIElement');
-    return initHTMLElement(elem, addClassName(props, "HTMLLIElement li"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLLIElement li"), ...children);
 }
 
 /**
@@ -25,9 +25,9 @@ export const initHTMLLIElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLLIElement = (props, children) => {
+export const HTMLLIElement = (props, ...children) => {
     const obj = document.createElement('li');
-    return initHTMLLIElement(obj, props, children);
+    return initHTMLLIElement(obj, props, ...children);
 }
 
 /**

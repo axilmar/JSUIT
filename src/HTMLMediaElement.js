@@ -21,8 +21,8 @@ const defineProperties = (elem) => {
  * 
  * @returns the element.
  */
-export const initHTMLMediaElement = (elem, props, children) => {
+export const initHTMLMediaElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLMediaElement(elem), 'instanceof HTMLMediaElement');
     defineProperties(elem);
-    return initHTMLElement(elem, addClassName(props, "HTMLMediaElement media"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLMediaElement media"), ...children);
 }

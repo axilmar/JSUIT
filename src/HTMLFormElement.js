@@ -12,9 +12,9 @@ import { isInstanceOfHTMLFormElement, addClassName } from "./util.js";
  * 
  * @returns the element.
  */
-export const initHTMLFormElement = (elem, props, children) => {
+export const initHTMLFormElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLFormElement(elem), 'instanceof HTMLFormElement');
-    return initHTMLElement(elem, addClassName(props, "HTMLFormElement form"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLFormElement form"), ...children);
 }
 
 /**
@@ -25,9 +25,9 @@ export const initHTMLFormElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLFormElement = (props, children) => {
+export const HTMLFormElement = (props, ...children) => {
     const obj = document.createElement('form');
-    return initHTMLFormElement(obj, props, children);
+    return initHTMLFormElement(obj, props, ...children);
 }
 
 /**

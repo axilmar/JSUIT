@@ -41,10 +41,10 @@ const defineProperties = (elem) => {
  * 
  * @returns the element.
  */
-export const initHTMLLabelElement = (elem, props, children) => {
+export const initHTMLLabelElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLLabelElement(elem), 'instanceof HTMLLabelElement');
     defineProperties(elem);
-    return initHTMLElement(elem, addClassName(props, "HTMLLabelElement label"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLLabelElement label"), ...children);
 }
 
 /**
@@ -55,9 +55,9 @@ export const initHTMLLabelElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLLabelElement = (props, children) => {
+export const HTMLLabelElement = (props, ...children) => {
     const obj = document.createElement('label');
-    return initHTMLLabelElement(obj, props, children);
+    return initHTMLLabelElement(obj, props, ...children);
 }
 
 /**

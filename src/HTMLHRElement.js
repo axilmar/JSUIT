@@ -12,9 +12,9 @@ import { isInstanceOfHTMLHRElement, addClassName } from "./util.js";
  * 
  * @returns the element.
  */
-export const initHTMLHRElement = (elem, props, children) => {
+export const initHTMLHRElement = (elem, props, ...children) => {
     console.assert(isInstanceOfHTMLHRElement(elem), 'instanceof HTMLHRElement');
-    return initHTMLElement(elem, addClassName(props, "HTMLHRElement hr"), children);
+    return initHTMLElement(elem, addClassName(props, "HTMLHRElement hr"), ...children);
 }
 
 /**
@@ -25,9 +25,9 @@ export const initHTMLHRElement = (elem, props, children) => {
  * 
  * @returns the element.
  */
-export const HTMLHRElement = (props, children) => {
+export const HTMLHRElement = (props, ...children) => {
     const obj = document.createElement('hr');
-    return initHTMLHRElement(obj, props, children);
+    return initHTMLHRElement(obj, props, ...children);
 }
 
 /**
