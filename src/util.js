@@ -180,6 +180,12 @@ export const isInstanceOfHTMLIFrameElement = (obj) => obj instanceof HTMLIFrameE
  */
 export const isInstanceOfHTMLInputElement = (obj) => obj instanceof HTMLInputElement;
 
+/**
+ * Checks if the given object is an instance of class HTMLLabelElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLLabelElement, false otherwise.
+ */
+export const isInstanceOfHTMLLabelElement = (obj) => obj instanceof HTMLLabelElement;
 
 
 
@@ -482,6 +488,14 @@ export const getHTMLInputElementPatternPropertyDescriptor = () => {
  */
 export const getHTMLInputElementValidityPropertyDescriptor = () => {
     return Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, "validity");
+}
+
+/**
+ * Returns the control property descriptor of the HTMLInputElement class.
+ * @returns the control property descriptor of the HTMLInputElement class.
+ */
+export const getHTMLLabelElementControlPropertyDescriptor = () => {
+    return Object.getOwnPropertyDescriptor(HTMLLabelElement.prototype, "control");
 }
 
 /**

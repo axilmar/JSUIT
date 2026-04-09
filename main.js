@@ -27,7 +27,8 @@ import {
     radio,
     number,
     password,
-    file
+    file,
+    label
 } from "./src/HTML.js";
 
 const theme = {
@@ -98,5 +99,7 @@ const theme = {
 
 document.body.theme = theme;
 
-number({parent: document.body, value:5, step: 0.25, min:-10000, max:10000, pattern: /^[-]?\d{0,3}([.]\d{0,3})?$/, required:true});
+number({parent: document.body, id: 'test1', value:5, step: 0.25, min:-10000, max:10000, pattern: /^[-]?\d{0,3}([.]\d{0,3})?$/, required:true});
 document.body.append('aaa');
+
+label({parent: document.body, controlId: 'test1'}, "The quick brown fox.");

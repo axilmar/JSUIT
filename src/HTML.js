@@ -17,3 +17,4 @@ export { iframe } from "./HTMLIFrameElement.js";
 export { img } from "./HTMLImageElement.js";
 export { span } from "./HTMLSpanElement.js";
 export { input, checkbox, color, date, datetime, email, file, number, password, radio, time, url } from "./HTMLInputElement.js";
+export { label } from './HTMLLabelElement.js';
