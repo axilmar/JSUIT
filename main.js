@@ -29,7 +29,8 @@ import {
     password,
     file,
     label,
-    legend
+    legend,
+    li
 } from "./src/HTML.js";
 
 const theme = {
@@ -106,3 +107,5 @@ document.body.append('aaa');
 label({parent: document.body, controlId: 'test1'}, "The quick brown fox.");
 
 fieldset({parent: document.body}, legend({}, "Legendary"));
+
+li({parent: document.body}, "List Item 1");

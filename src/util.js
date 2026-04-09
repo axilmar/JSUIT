@@ -194,6 +194,12 @@ export const isInstanceOfHTMLLabelElement = (obj) => obj instanceof HTMLLabelEle
  */
 export const isInstanceOfHTMLLegendElement = (obj) => obj instanceof HTMLLegendElement;
 
+/**
+ * Checks if the given object is an instance of class HTMLLIElement.
+ * @param {*} object the object to check.
+ * @returns true if the given object is an instance of class HTMLLIElement, false otherwise.
+ */
+export const isInstanceOfHTMLLIElement = (obj) => obj instanceof HTMLLIElement;
 
 
 
