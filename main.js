@@ -1,128 +1,40 @@
-import { 
-    img, 
-    span, 
-    div, 
-    a, 
-    area, 
-    audio, 
-    br, 
-    button, 
-    canvas, 
-    data, 
-    datalist, 
-    dialog, 
-    dl, 
-    fieldset, 
-    form, 
-    h1, 
-    h2, 
-    h3, 
-    h4, 
-    h5, 
-    h6, 
-    hr, 
-    iframe,
-    input,
-    checkbox,
-    radio,
-    number,
-    password,
-    file,
-    label,
-    legend,
-    li,
-    del,
-    ins
-} from "./src/HTML.js";
+import { initHTMLElement } from "./src/HTMLElement.js";
 
-const theme = {
-    "HTMLElement": {
-        "disabled": {
-            color: "grey"
+const theme1 = {
+    "Element": {
+        "": {
+            backgroundColor: "yellow",
+            "color": "brown",
         },
-        "selection": {
-            backgroundColor: "yellow"
+        ":disabled": {
+            backgroundColor: "gray",
+            "color": "red",
+        },
+    },
+    "HTMLBodyElement": {
+        "": {
+            backgroundColor: "white",
+            "color": "black",
         }
     },
-    "img": {
-        "disabled": {
-            borderColor: "grey",
-            borderStyle: "solid"
+    "HTMLInputElement": {
+        "::selection": {
+            backgroundColor: "purple",
+            color: "yellow",
         },
-
-        "enabled": {
-            borderColor: "cyan",
-            borderStyle: "dotted"
-        },
-
-        "enabled,hover": {
-            borderColor: "pink",
-            borderStyle: "dashed"
-        }
-    },
-    "body": {
-        "enabled": {
-            backgroundColor: "white"
-        }
-    },
-    "input": {
-        "enabled": {            
-            color: "black",
-            outlineStyle: 'none',
-            outlineColor: "black",
-            outlineWidth: 0,
-            borderRadius: 0
-        },
-        "focused": {
-            outlineStyle: 'solid',
-            outlineColor: "blue",
-            outlineWidth: "2px",
-            borderRadius: "2px"
-        },
-        "hover": {            
-            outlineStyle: 'solid',
-            outlineColor: "yellow",
-            outlineWidth: "2px",
-            borderRadius: "2px"
-        },
-        "focused,hover": {            
-            outlineStyle: 'solid',
-            outlineColor: "orange",
-            outlineWidth: "2px",
-            borderRadius: "2px"
-        },
-        "invalid": {
-            color: "red",
-            outlineStyle: 'solid',
-            outlineColor: "red",
-            outlineWidth: "2px",
-            borderRadius: "2px"
-        },
-        "selection": {
-            backgroundColor: "pink"
-        }
-    },
-    "del": {
-        "enabled": {
-            backgroundColor: '#ffbbbb'
-        }
-    },
-    "ins": {
-        "enabled": {
-            backgroundColor: '#d4fcbc'
+        ":hover::selection": {
+            backgroundColor: "lightblue",
+            color: "white",
         }
     }
 };
 
-document.body.theme = theme;
+initHTMLElement(document.body, {className: "HTMLBodyElement"});
+document.body.theme = theme1;
 
-number({parent: document.body, id: 'test1', value:5, step: 0.25, min:-10000, max:10000, pattern: /^[-]?\d{0,3}([.]\d{0,3})?$/, required:true});
-document.body.append('aaa');
-
-label({parent: document.body, controlId: 'test1'}, "The quick brown fox.");
-
-fieldset({parent: document.body}, legend({}, "Legendary"));
-
-li({parent: document.body}, "List Item 1", del({}, "deleted"), ins({}, "added"));
-
-//document.body.enabled = false;
+const input1 = document.createElement('input');
+document.body.append(input1);
+initHTMLElement(input1, {className: "HTMLInputElement", value: "the quick brown fox"});
+  
+const input2 = document.createElement('input');
+document.body.append(input2);

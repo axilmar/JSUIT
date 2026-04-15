@@ -1,49 +1,42 @@
-import { initNode } from "./Node.js";
-import { isInstanceOfElement, addClassName, appendChildrenToElement } from "./util.js";
-
-let autoIds = {};
-
-const getLastClassName = (className) => {
-    const parts = (className ?? '').split(' ');
-    return parts.length > 0 ? parts[parts.length - 1] : null;
-}
-
-const getAutoId = (className) => {
-    const actualClassName = className ?? 'Element';
-    let entry = autoIds[actualClassName];
-    if (!entry) {
-        entry = 1;
-        autoIds[actualClassName] = entry;
-    }
-    const result = autoIds[actualClassName];
-    ++autoIds[actualClassName];
-    return result;
-}
-
-const setAutoElementId = (props) => {
-    if (!('id' in props)) {
-        const lastClassName = getLastClassName(props.className);
-        const autoId = getAutoId(lastClassName);
-        props.id = `${lastClassName}-${autoId}`;
-    }
-    return props;
-}
+import './init.js';
 
 /**
  * Initializes an element.
  * 
- * If the element does not have an id, then it gets a numeric id prefixed with its class name.
+ * The element gets the class `Element`.
  * 
- * It initializes the node by invoking `initNode(elem, props)`.
+ * @param {*} element the element to initialize.
  * 
- * @param {*} elem the element object to initialize.
- * @param {*} props the properties object.
- * @param {*} children array of children to add to this element.
+ * @param {*} props the properties object; 
+ *  each property contained in this object is used to initialize the relevant property of the element;
+ *  if a property value contains the method `apply(element, propertyName, propertyValue)`, 
+ *  then it is invoked, otherwise the property is set directly on the element.
  * 
- * @returns the element object.
+ * @param  {...any} children the children; 
+ *  appended to the element.
  */
-export const initElement = (elem, props, ...children) => {
-    console.assert(isInstanceOfElement(elem), 'instanceof Element');
-    appendChildrenToElement(elem, ...children);
-    return initNode(elem, setAutoElementId(addClassName(props, "Element")));
+export const initElement = (element, props, ...children) => {
+    //init missing argument values
+    props ??= {};
+    children ??= [];
+
+    //ensure the element inherits from Element
+    console.assert(element instanceof Element);
+
+    //add the Element class name
+    props.className = `Element ${props?.className ?? ''}`;
+
+    //set the element properties
+    for(const propName in props) {
+        const prop = props[propName];
+        if (prop.apply) {
+            prop.apply(element, propName, prop);
+        }
+        else {
+            element[propName] = prop;
+        }
+    }
+
+    //add the children
+    element.append(...children);
 }
