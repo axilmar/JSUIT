@@ -63,7 +63,7 @@ const defineMethods = (element) => {
 /**
  * Initializes an HTML element.
  * 
- * The element gets the class `HTMLElement`.
+ * The element gets the class 'HTMLElement'.
  * 
  * The element gets the following new properties:
  * 
@@ -159,6 +159,8 @@ const defineMethods = (element) => {
  * @param {*} element the html element to initialize.
  * @param {*} props the properties object.
  * @param  {...any} children the children. 
+ * 
+ * @return the element.
  */
 export const initHTMLElement = (element, props, ...children) => {
     //init missing argument values
@@ -185,5 +187,5 @@ export const initHTMLElement = (element, props, ...children) => {
     }
 
     //init the element
-    initElement(element, props, ...children);
+    return initElement(element, props, ...children);
 }
