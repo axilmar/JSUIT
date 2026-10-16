@@ -111,3 +111,19 @@ export const loadCSS = (url) => {
     //add the link
     document.head.appendChild(link);
 };
+
+/**
+ * Loads an SVG file.
+ * @param {*} url the url for the svg file.
+ * @returns the svg text.
+ */
+export async function loadSVG(url) {
+    try {
+        const response = await fetch(url);
+        const svgText = await response.text();
+        return svgText;
+    }
+    catch (error) {
+        console.error('loadSVG: error:', error);
+    }
+}

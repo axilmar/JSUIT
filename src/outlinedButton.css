@@ -1,0 +1,98 @@
+/*
+ * MUI "outlined" variant button, with the MUI default palette.
+ *
+ * Usage: <button class="outlinedButton">Text</button>
+ * Optional color classes: outlinedButton-secondary, -error, -warning, -info, -success.
+ *
+ * MUI's JS-driven ripple is approximated with a CSS-only pulse on :active.
+ */
+
+.outlinedButton {
+    --outlinedButton-color: 25, 118, 210;       /* primary.main #1976d2 */
+    --outlinedButton-disabled: 0, 0, 0;
+
+    position: relative;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 64px;
+    margin: 0;
+    padding: 5px 15px;
+    border: 1px solid rgba(var(--outlinedButton-color), 0.5);
+    border-radius: 4px;
+    outline: 0;
+    background-color: transparent;
+    color: rgb(var(--outlinedButton-color));
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    transition:
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.outlinedButton::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: currentColor;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+}
+
+.outlinedButton:hover {
+    background-color: rgba(var(--outlinedButton-color), 0.04);
+    border-color: rgb(var(--outlinedButton-color));
+    text-decoration: none;
+}
+
+.outlinedButton:focus-visible {
+    background-color: rgba(var(--outlinedButton-color), 0.12);
+}
+
+.outlinedButton:active::after {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(2);
+    transition: transform 550ms cubic-bezier(0.4, 0, 0.2, 1), opacity 100ms linear;
+}
+
+.outlinedButton:disabled,
+.outlinedButton[aria-disabled="true"] {
+    color: rgba(var(--outlinedButton-disabled), 0.26);
+    border-color: rgba(var(--outlinedButton-disabled), 0.12);
+    background-color: transparent;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* No sticky hover on touch devices, as in MUI. */
+@media (hover: none) {
+    .outlinedButton:hover {
+        background-color: transparent;
+    }
+}
+
+.outlinedButton-secondary { --outlinedButton-color: 156, 39, 176; }   /* #9c27b0 */
+.outlinedButton-error     { --outlinedButton-color: 211, 47, 47; }    /* #d32f2f */
+.outlinedButton-warning   { --outlinedButton-color: 237, 108, 2; }    /* #ed6c02 */
+.outlinedButton-info      { --outlinedButton-color: 2, 136, 209; }    /* #0288d1 */
+.outlinedButton-success   { --outlinedButton-color: 46, 125, 50; }    /* #2e7d32 */

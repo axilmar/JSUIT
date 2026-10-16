@@ -1,42 +1,9 @@
 import './init.js';
-import { isFunction, isObject, isPropertyWritable, isTreeNode } from "./utility.js";
+import { isFunction, isObject, isTreeNode } from "./utility.js";
 
 //sets an object's property
 const setProperty = (object, propertyName, propertyValue) => {    
-
-    //if the property is writable or not defined, simply set the property
-    if (isPropertyWritable(object, propertyName)) {
-        object[propertyName] = propertyValue;
-        return;
-    }
-
-    //read-only properties
-
-    //both sides (the target value and the property value)
-    //must be objects, otherwise the properties of the target value
-    //cannot be set from the properties of the property value
-
-    //the target value
-    const targetValue = object[propertyName];
-
-    //if the target value is undefined or null, then throw an error
-    if (targetValue === undefined || targetValue === null) {
-        throw new Error(`initObject: read-only property '${propertyName}' is undefined or null.`, { cause: targetValue });
-    }
-
-    //the target value must be an object
-    if (!isObject(targetValue)) {
-        throw new Error(`initObject: read-only property '${propertyName}' not an object.`, { cause: targetValue });
-
-    }
-
-    //the property value must be an object
-    if (!isObject(propertyValue)) {
-        throw new Error(`initObject: property value for property '${propertyName}' not anobject`, { cause: propertyValue });
-    }
-
-    //set the properties of the target object
-    setProperties(targetValue, propertyValue);
+    object[propertyName] = propertyValue;
 }
 
 //sets the properties of an object from another object that contains properties
@@ -64,8 +31,6 @@ const setProperties = (targetObject, propertiesObject) => {
  * 
  *  1. a given property is not a function, a tree node, an object with properties, or a value to be converted to a string while the object is not a element.
  *  2. a given property is a tree node but the given object is not a tree node.
- *  3. a property of an object is read-only but not an object.
- *  4. a property of an object is read-only but the value to set to it is not an object.
  */
 export const initObject = (object, ...properties) => {
     //iterate properties
