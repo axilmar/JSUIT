@@ -1,4 +1,3 @@
-import { div } from "./src/div.js";
-import { button } from "/src/button.js";
+import { textButton } from "./src/textButton.js";
 
-document.body.append(button({enabled: true}, "The quick brown fox"));
+document.body.append(textButton("Click me!"));
