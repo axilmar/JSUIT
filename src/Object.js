@@ -1,3 +1,4 @@
+import './init.js';
 import { isFunction, isObject, isPropertyWritable, isTreeNode } from "./utility.js";
 
 //sets an object's property
