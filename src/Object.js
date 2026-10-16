@@ -52,15 +52,16 @@ const setProperties = (targetObject, propertiesObject) => {
  * The array of given properties can contain:
  *  1. functions to use for initialization; the functions are passed the given object.
  *  2. descentants of DOM Node; added to the given object using the method `appendChild`.
- *  3. objects that have a method 'isTreeNode()' that returns true; added to the given object using the method 'appendChild'.
+ *  3. objects that have a method 'isTreeNode()' that returns true; added to the given object using the method 'appendChild' or 'append'.
  *  4. objects with properties to apply on the given object.
+ *  5. values to be converted to a string and added as text in the parent element node.
  * 
  * @param {*} object the object to initialize.
  * @param  {...any} properties array of properties.
  * 
  * @throws Error an error is thrown in one of the following cases:
  * 
- *  1. a given property is not a function, a tree node, or an object with properties.
+ *  1. a given property is not a function, a tree node, an object with properties, or a value to be converted to a string while the object is not a element.
  *  2. a given property is a tree node but the given object is not a tree node.
  *  3. a property of an object is read-only but not an object.
  *  4. a property of an object is read-only but the value to set to it is not an object.
@@ -77,7 +78,7 @@ export const initObject = (object, ...properties) => {
         //else the property is a tree node, so insert it in another tree node
         else if (isTreeNode(property)) {
             if (isTreeNode(object)) {
-                object.appendChild(property);
+                object.append?.(property) ?? object.appendChild(property);
             }
             else {
                 throw new Error(`initObject: object not a tree node.`);
@@ -87,6 +88,11 @@ export const initObject = (object, ...properties) => {
         //else if the property is an object, then set the object's properties from that
         else if (isObject(property)) {
             setProperties(object, property);
+        }
+
+        //else if the object is an element, add the value as a string
+        else if (object instanceof Element) {
+            object.append(property.toString());
         }
 
         //else throw exception; cannot set the property
