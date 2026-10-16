@@ -1,3 +1,4 @@
 import { div } from "./src/div.js";
+import { button } from "/src/button.js";
 
-document.body.append(div("The quick brown fox", 3.14));
+document.body.append(button({enabled: true}, "The quick brown fox"));
