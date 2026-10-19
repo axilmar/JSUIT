@@ -94,3 +94,17 @@
 .textButton-warning   { --textButton-color: 237, 108, 2; }    /* #ed6c02 */
 .textButton-info      { --textButton-color: 2, 136, 209; }    /* #0288d1 */
 .textButton-success   { --textButton-color: 46, 125, 50; }    /* #2e7d32 */
+
+/* Busy: like disabled (no interaction), but keeping a vibrant version of the button's color. */
+.textButton.textButton-busy,
+.textButton.textButton-busy:hover,
+.textButton.textButton-busy:focus-visible {
+    color: rgba(var(--textButton-color), 0.7);
+    background-color: transparent;
+    cursor: default;
+    pointer-events: none;
+}
+
+.textButton.textButton-busy::after {
+    display: none;
+}

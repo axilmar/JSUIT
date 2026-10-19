@@ -96,3 +96,18 @@
 .outlinedButton-warning   { --outlinedButton-color: 237, 108, 2; }    /* #ed6c02 */
 .outlinedButton-info      { --outlinedButton-color: 2, 136, 209; }    /* #0288d1 */
 .outlinedButton-success   { --outlinedButton-color: 46, 125, 50; }    /* #2e7d32 */
+
+/* Busy: like disabled (no interaction), but keeping a vibrant version of the button's color. */
+.outlinedButton.outlinedButton-busy,
+.outlinedButton.outlinedButton-busy:hover,
+.outlinedButton.outlinedButton-busy:focus-visible {
+    color: rgba(var(--outlinedButton-color), 0.7);
+    border-color: rgba(var(--outlinedButton-color), 0.35);
+    background-color: transparent;
+    cursor: default;
+    pointer-events: none;
+}
+
+.outlinedButton.outlinedButton-busy::after {
+    display: none;
+}

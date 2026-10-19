@@ -1,5 +1,5 @@
 import { initButton } from "./button.js";
-import { adoptStyleSheet, defineErrorProperty } from "./utility.js";
+import { adoptStyleSheet } from "./utility.js";
 
 import textButtonStyleSheet from './textButton.css' with { type: 'css' };
 
@@ -10,17 +10,16 @@ adoptStyleSheet(textButtonStyleSheet);
  * 
  * It invokes the function `initButton(element, ...properties)`.
  * 
- * The element gets the class 'textButton' by default; an `extraClasses` property adds further classes.
- * 
- * The element gets a boolean property 'error' that adds/removes the style 'textButton-error'.
+ * The element gets the class 'textButton' by default; an `additionalClassName` property adds further classes.
+ * Its `errorClassName` defaults to 'textButton-error'.
+ * Its `busyClassName` defaults to 'textButton-busy'.
  * 
  * @param {*} element the element to initialize.
  * @param  {...any} properties the object's properties.
  */
 export const initTextButton = (element, ...properties) => {
     console.assert(element instanceof HTMLButtonElement);
-    defineErrorProperty(element, 'textButton-error');
-    initButton(element, { extraClasses: 'textButton' }, ...properties);
+    initButton(element, { additionalClassName: 'textButton', errorClassName: 'textButton-error', busyClassName: 'textButton-busy' }, ...properties);
 }
 
 /**

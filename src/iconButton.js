@@ -1,5 +1,5 @@
 import { initButton } from "./button.js";
-import { adoptStyleSheet, defineErrorProperty } from "./utility.js";
+import { adoptStyleSheet } from "./utility.js";
 import { icon as createIcon } from "./icon.js";
 
 import iconButtonStyleSheet from './iconButton.css' with { type: 'css' };
@@ -42,9 +42,9 @@ const defineUrlProperty = (element) => {
  * 
  * It invokes the function `initButton(element, ...properties)`.
  * 
- * The element gets the class 'iconButton' by default; an `extraClasses` property adds further classes.
- * 
- * The element gets a boolean property 'error' that adds/removes the style 'iconButton-error'.
+ * The element gets the class 'iconButton' by default; an `additionalClassName` property adds further classes.
+ * Its `errorClassName` defaults to 'iconButton-error'.
+ * Its `busyClassName` defaults to 'iconButton-busy'.
  * 
  * The button contains an internal icon element, and gets the following properties:
  *  - `icon`: returns or replaces the internal icon element.
@@ -56,13 +56,12 @@ const defineUrlProperty = (element) => {
 export const initIconButton = (element, ...properties) => {
     console.assert(element instanceof HTMLButtonElement);
 
-    const state = { icon: createIcon({ extraClasses: ICON_CLASS, stretch: true }) };
+    const state = { icon: createIcon({ additionalClassName: ICON_CLASS, stretch: true }) };
     element.append(state.icon);
 
     defineIconProperty(element, state);
     defineUrlProperty(element);
-    defineErrorProperty(element, 'iconButton-error');
-    initButton(element, { extraClasses: 'iconButton' }, ...properties);
+    initButton(element, { additionalClassName: 'iconButton', errorClassName: 'iconButton-error', busyClassName: 'iconButton-busy' }, ...properties);
 }
 
 /**

@@ -107,3 +107,17 @@
 .iconButton-warning   { --iconButton-rgb: 237, 108, 2;  --iconButton-alpha: 1; }   /* #ed6c02 */
 .iconButton-info      { --iconButton-rgb: 2, 136, 209;  --iconButton-alpha: 1; }   /* #0288d1 */
 .iconButton-success   { --iconButton-rgb: 46, 125, 50;  --iconButton-alpha: 1; }   /* #2e7d32 */
+
+/* Busy: like disabled (no interaction), but keeping a vibrant version of the button's color. */
+.iconButton.iconButton-busy,
+.iconButton.iconButton-busy:hover,
+.iconButton.iconButton-busy:focus-visible {
+    color: rgba(var(--iconButton-rgb), calc(var(--iconButton-alpha) * 0.7));
+    background-color: transparent;
+    cursor: default;
+    pointer-events: none;
+}
+
+.iconButton.iconButton-busy::after {
+    display: none;
+}
