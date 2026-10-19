@@ -1,4 +1,5 @@
 import { initButton } from "./button.js";
+import { defineErrorProperty } from "./utility.js";
 import { icon as createIcon } from "./icon.js";
 
 import iconButtonStyleSheet from './iconButton.css' with { type: 'css' };
@@ -7,12 +8,43 @@ document.adoptedStyleSheets = [...document.adoptedStyleSheets, iconButtonStyleSh
 
 const ICON_CLASS = 'iconButton-icon';
 
+//defines the property 'icon'; the icon is held in the given state object
+const defineIconProperty = (element, state) => {
+    Object.defineProperty(element, 'icon', {
+        configurable: true,
+        enumerable: true,
+        get: () => state.icon,
+        set: (newIcon) => {
+            console.assert(newIcon instanceof HTMLDivElement);
+            if (newIcon === state.icon) {
+                return;
+            }
+            newIcon.classList.add(ICON_CLASS);
+            newIcon.stretch = true;
+            state.icon.replaceWith(newIcon);
+            state.icon = newIcon;
+        }
+    });
+};
+
+//defines the property 'url', which forwards to the internal icon
+const defineUrlProperty = (element) => {
+    Object.defineProperty(element, 'url', {
+        configurable: true,
+        enumerable: true,
+        get: () => element.icon.url,
+        set: (url) => { element.icon.url = url; }
+    });
+};
+
 /**
  * Initializes an instance of HTMLButtonElement as an icon button.
  * 
  * It invokes the function `initButton(element, ...properties)`.
  * 
- * The element gets the class 'iconButton' by default; a `className` property overrides it.
+ * The element gets the class 'iconButton' by default; an `addClassName` property adds further classes.
+ * 
+ * The element gets a boolean property 'error' that adds/removes the style 'iconButton-error'.
  * 
  * The button contains an internal icon element, and gets the following properties:
  *  - `icon`: returns or replaces the internal icon element.
@@ -24,33 +56,13 @@ const ICON_CLASS = 'iconButton-icon';
 export const initIconButton = (element, ...properties) => {
     console.assert(element instanceof HTMLButtonElement);
 
-    let internalIcon = createIcon({ className: ICON_CLASS, stretch: true });
-    element.append(internalIcon);
+    const state = { icon: createIcon({ addClassName: ICON_CLASS, stretch: true }) };
+    element.append(state.icon);
 
-    Object.defineProperty(element, 'icon', {
-        configurable: true,
-        enumerable: true,
-        get: () => internalIcon,
-        set: (newIcon) => {
-            console.assert(newIcon instanceof HTMLDivElement);
-            if (newIcon === internalIcon) {
-                return;
-            }
-            newIcon.classList.add(ICON_CLASS);
-            newIcon.stretch = true;
-            internalIcon.replaceWith(newIcon);
-            internalIcon = newIcon;
-        }
-    });
-
-    Object.defineProperty(element, 'url', {
-        configurable: true,
-        enumerable: true,
-        get: () => internalIcon.url,
-        set: (url) => { internalIcon.url = url; }
-    });
-
-    initButton(element, { className: 'iconButton' }, ...properties);
+    defineIconProperty(element, state);
+    defineUrlProperty(element);
+    defineErrorProperty(element, 'iconButton-error');
+    initButton(element, { addClassName: 'iconButton' }, ...properties);
 }
 
 /**

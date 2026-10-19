@@ -1,4 +1,5 @@
 import { initButton } from "./button.js";
+import { defineErrorProperty } from "./utility.js";
 
 import containedButtonStyleSheet from './containedButton.css' with { type: 'css' };
 
@@ -9,14 +10,17 @@ document.adoptedStyleSheets = [...document.adoptedStyleSheets, containedButtonSt
  * 
  * It invokes the function `initButton(element, ...properties)`.
  * 
- * The element gets the class 'containedButton' by default; a `className` property overrides it.
+ * The element gets the class 'containedButton' by default; an `addClassName` property adds further classes.
+ * 
+ * The element gets a boolean property 'error' that adds/removes the style 'containedButton-error'.
  * 
  * @param {*} element the element to initialize.
  * @param  {...any} properties the object's properties.
  */
 export const initContainedButton = (element, ...properties) => {
     console.assert(element instanceof HTMLButtonElement);
-    initButton(element, { className: 'containedButton' }, ...properties);
+    defineErrorProperty(element, 'containedButton-error');
+    initButton(element, { addClassName: 'containedButton' }, ...properties);
 }
 
 /**

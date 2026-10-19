@@ -1,6 +1,56 @@
 import { initDiv } from "./div.js";
 import { loadSVG } from "./utility.js";
 
+//applies the stretch setting to the svg currently in the element
+const applyStretch = (element, stretch) => {
+    const svg = element.querySelector('svg');
+    if (!svg) {
+        return;
+    }
+    if (stretch) {
+        svg.setAttribute('preserveAspectRatio', 'none');
+    }
+    else {
+        svg.removeAttribute('preserveAspectRatio');
+    }
+};
+
+//defines the property 'stretch'
+const defineStretchProperty = (element) => {
+    let stretch = false;
+
+    Object.defineProperty(element, 'stretch', {
+        configurable: true,
+        enumerable: true,
+        get: () => stretch,
+        set: (value) => {
+            stretch = !!value;
+            applyStretch(element, stretch);
+        }
+    });
+};
+
+//defines the property 'url'
+const defineUrlProperty = (element) => {
+    let url;
+
+    Object.defineProperty(element, 'url', {
+        configurable: true,
+        enumerable: true,
+        get: () => url,
+        set: async (newUrl) => {
+            url = newUrl;
+            const svg = await loadSVG(newUrl);
+
+            //ignore the result if the url changed while loading or loading failed
+            if (url === newUrl && svg !== undefined) {
+                element.innerHTML = svg;
+                applyStretch(element, element.stretch);
+            }
+        }
+    });
+};
+
 /**
  * Initializes an icon element.
  * 
@@ -17,50 +67,8 @@ import { loadSVG } from "./utility.js";
  */
 export const initIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-
-    let url;
-    let stretch = false;
-
-    //applies the stretch setting to the svg currently in the element
-    const applyStretch = () => {
-        const svg = element.querySelector('svg');
-        if (!svg) {
-            return;
-        }
-        if (stretch) {
-            svg.setAttribute('preserveAspectRatio', 'none');
-        }
-        else {
-            svg.removeAttribute('preserveAspectRatio');
-        }
-    };
-
-    Object.defineProperty(element, 'stretch', {
-        configurable: true,
-        enumerable: true,
-        get: () => stretch,
-        set: (value) => {
-            stretch = !!value;
-            applyStretch();
-        }
-    });
-
-    Object.defineProperty(element, 'url', {
-        configurable: true,
-        enumerable: true,
-        get: () => url,
-        set: async (newUrl) => {
-            url = newUrl;
-            const svg = await loadSVG(newUrl);
-
-            //ignore the result if the url changed while loading or loading failed
-            if (url === newUrl && svg !== undefined) {
-                element.innerHTML = svg;
-                applyStretch();
-            }
-        }
-    });
-
+    defineStretchProperty(element);
+    defineUrlProperty(element);
     initDiv(element, ...properties);
 }
 

@@ -103,3 +103,21 @@ export async function loadSVG(url) {
         console.error('loadSVG: error:', error);
     }
 }
+
+/**
+ * Defines the boolean property 'error' on an element.
+ * 
+ * Setting it to true adds the given style (css class) to the element;
+ * setting it to false removes the style. Getting it returns whether the element has the style.
+ * 
+ * @param {*} element the element to define the property on.
+ * @param {string} errorStyleName the name of the css class for the error style.
+ */
+export const defineErrorProperty = (element, errorStyleName) => {
+    Object.defineProperty(element, 'error', {
+        configurable: true,
+        enumerable: true,
+        get: () => element.classList.contains(errorStyleName),
+        set: (value) => { element.classList.toggle(errorStyleName, !!value); }
+    });
+}
