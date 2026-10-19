@@ -121,3 +121,14 @@ export const defineErrorProperty = (element, errorStyleName) => {
         set: (value) => { element.classList.toggle(errorStyleName, !!value); }
     });
 }
+
+/**
+ * Adds a stylesheet to the document's adopted stylesheets, if it is not already there.
+ * 
+ * @param {CSSStyleSheet} styleSheet the stylesheet to add.
+ */
+export const adoptStyleSheet = (styleSheet) => {
+    if (!document.adoptedStyleSheets.includes(styleSheet)) {
+        document.adoptedStyleSheets = [...document.adoptedStyleSheets, styleSheet];
+    }
+}

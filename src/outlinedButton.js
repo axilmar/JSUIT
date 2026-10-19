@@ -1,9 +1,9 @@
 import { initButton } from "./button.js";
-import { defineErrorProperty } from "./utility.js";
+import { adoptStyleSheet, defineErrorProperty } from "./utility.js";
 
 import outlinedButtonStyleSheet from './outlinedButton.css' with { type: 'css' };
 
-document.adoptedStyleSheets = [...document.adoptedStyleSheets, outlinedButtonStyleSheet];
+adoptStyleSheet(outlinedButtonStyleSheet);
 
 /**
  * Initializes an instance of HTMLButtonElement as an outlined button.

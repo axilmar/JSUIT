@@ -1,9 +1,9 @@
 import { initButton } from "./button.js";
-import { defineErrorProperty } from "./utility.js";
+import { adoptStyleSheet, defineErrorProperty } from "./utility.js";
 
 import textButtonStyleSheet from './textButton.css' with { type: 'css' };
 
-document.adoptedStyleSheets = [...document.adoptedStyleSheets, textButtonStyleSheet];
+adoptStyleSheet(textButtonStyleSheet);
 
 /**
  * Initializes an instance of HTMLButtonElement as a text button.

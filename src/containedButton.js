@@ -1,9 +1,9 @@
 import { initButton } from "./button.js";
-import { defineErrorProperty } from "./utility.js";
+import { adoptStyleSheet, defineErrorProperty } from "./utility.js";
 
 import containedButtonStyleSheet from './containedButton.css' with { type: 'css' };
 
-document.adoptedStyleSheets = [...document.adoptedStyleSheets, containedButtonStyleSheet];
+adoptStyleSheet(containedButtonStyleSheet);
 
 /**
  * Initializes an instance of HTMLButtonElement as a contained button.

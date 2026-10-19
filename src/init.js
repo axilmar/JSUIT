@@ -1,3 +1,5 @@
+import { adoptStyleSheet } from './utility.js';
+
 // 1. Programmatically structure html and body layouts directly
 const html = document.documentElement; 
 const body = document.body;            
@@ -25,4 +27,4 @@ globalSheet.insertRule('*, *::before, *::after { box-sizing: border-box; }', 0);
 globalSheet.insertRule('*, *::before, *::after { overflow: hidden !important; }', 1);
 
 // Adopt the stylesheet into the global document context
-document.adoptedStyleSheets = [...document.adoptedStyleSheets, globalSheet];
+adoptStyleSheet(globalSheet);

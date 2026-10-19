@@ -1,10 +1,10 @@
 import { initButton } from "./button.js";
-import { defineErrorProperty } from "./utility.js";
+import { adoptStyleSheet, defineErrorProperty } from "./utility.js";
 import { icon as createIcon } from "./icon.js";
 
 import iconButtonStyleSheet from './iconButton.css' with { type: 'css' };
 
-document.adoptedStyleSheets = [...document.adoptedStyleSheets, iconButtonStyleSheet];
+adoptStyleSheet(iconButtonStyleSheet);
 
 const ICON_CLASS = 'iconButton-icon';
 
