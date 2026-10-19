@@ -1,7 +1,8 @@
 import { initButton } from "./button.js";
-import { loadCSS } from "./utility.js";
 
-loadCSS(new URL('./textButton.css', import.meta.url).href);
+import textButtonStyleSheet from './textButton.css' with { type: 'css' };
+
+document.adoptedStyleSheets = [...document.adoptedStyleSheets, textButtonStyleSheet];
 
 /**
  * Initializes an instance of HTMLButtonElement as a text button.

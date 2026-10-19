@@ -89,30 +89,6 @@ export const isTreeNode = (object) => {
 }
 
 /**
- * Loads a css file dynamically.
- * @param {*} url the url of the css.
- */
-export const loadCSS = (url) => {
-    //create the link
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = url;
-
-    //on successful loading
-    link.onload = () => {
-        console.debug(`CSS File ${url} successfully loaded.`);
-    };
-
-    //on error
-    link.onerror = () => {
-        console.error(`CSS File ${url} could not loaded.`);
-    };
-
-    //add the link
-    document.head.appendChild(link);
-};
-
-/**
  * Loads an SVG file.
  * @param {*} url the url for the svg file.
  * @returns the svg text.

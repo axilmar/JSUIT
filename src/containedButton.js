@@ -1,7 +1,8 @@
 import { initButton } from "./button.js";
-import { loadCSS } from "./utility.js";
 
-loadCSS(new URL('./containedButton.css', import.meta.url).href);
+import containedButtonStyleSheet from './containedButton.css' with { type: 'css' };
+
+document.adoptedStyleSheets = [...document.adoptedStyleSheets, containedButtonStyleSheet];
 
 /**
  * Initializes an instance of HTMLButtonElement as a contained button.

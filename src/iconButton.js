@@ -1,8 +1,9 @@
 import { initButton } from "./button.js";
 import { icon as createIcon } from "./icon.js";
-import { loadCSS } from "./utility.js";
 
-loadCSS(new URL('./iconButton.css', import.meta.url).href);
+import iconButtonStyleSheet from './iconButton.css' with { type: 'css' };
+
+document.adoptedStyleSheets = [...document.adoptedStyleSheets, iconButtonStyleSheet];
 
 const ICON_CLASS = 'iconButton-icon';
 

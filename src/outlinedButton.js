@@ -1,7 +1,8 @@
 import { initButton } from "./button.js";
-import { loadCSS } from "./utility.js";
 
-loadCSS(new URL('./outlinedButton.css', import.meta.url).href);
+import outlinedButtonStyleSheet from './outlinedButton.css' with { type: 'css' };
+
+document.adoptedStyleSheets = [...document.adoptedStyleSheets, outlinedButtonStyleSheet];
 
 /**
  * Initializes an instance of HTMLButtonElement as an outlined button.
