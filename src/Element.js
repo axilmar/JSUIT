@@ -1,8 +1,8 @@
 import { initNode } from "./Node.js";
 
-//defines the write-only property 'addClassName'
-const defineAddClassNameProperty = (element) => {
-    Object.defineProperty(element, 'addClassName', {
+//defines the write-only property 'extraClasses'
+const defineExtraClassesProperty = (element) => {
+    Object.defineProperty(element, 'extraClasses', {
         configurable: true,
         enumerable: false,
         set: (classNames) => {
@@ -17,7 +17,7 @@ const defineAddClassNameProperty = (element) => {
  * 
  * It invokes the function `initNode(element, ...properties)`.
  * 
- * The element gets a write-only property 'addClassName', which accepts a string of
+ * The element gets a write-only property 'extraClasses', which accepts a string of
  * space-delimited class names or an array of strings; the class names are appended
  * to the element's class list, keeping the existing ones.
  * 
@@ -26,6 +26,6 @@ const defineAddClassNameProperty = (element) => {
  */
 export const initElement = (element, ...properties) => {
     console.assert(element instanceof Element);
-    defineAddClassNameProperty(element);
+    defineExtraClassesProperty(element);
     initNode(element, ...properties);
 }

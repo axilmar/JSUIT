@@ -10,7 +10,7 @@ document.adoptedStyleSheets = [...document.adoptedStyleSheets, textButtonStyleSh
  * 
  * It invokes the function `initButton(element, ...properties)`.
  * 
- * The element gets the class 'textButton' by default; an `addClassName` property adds further classes.
+ * The element gets the class 'textButton' by default; an `extraClasses` property adds further classes.
  * 
  * The element gets a boolean property 'error' that adds/removes the style 'textButton-error'.
  * 
@@ -20,7 +20,7 @@ document.adoptedStyleSheets = [...document.adoptedStyleSheets, textButtonStyleSh
 export const initTextButton = (element, ...properties) => {
     console.assert(element instanceof HTMLButtonElement);
     defineErrorProperty(element, 'textButton-error');
-    initButton(element, { addClassName: 'textButton' }, ...properties);
+    initButton(element, { extraClasses: 'textButton' }, ...properties);
 }
 
 /**

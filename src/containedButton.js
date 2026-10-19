@@ -10,7 +10,7 @@ document.adoptedStyleSheets = [...document.adoptedStyleSheets, containedButtonSt
  * 
  * It invokes the function `initButton(element, ...properties)`.
  * 
- * The element gets the class 'containedButton' by default; an `addClassName` property adds further classes.
+ * The element gets the class 'containedButton' by default; an `extraClasses` property adds further classes.
  * 
  * The element gets a boolean property 'error' that adds/removes the style 'containedButton-error'.
  * 
@@ -20,7 +20,7 @@ document.adoptedStyleSheets = [...document.adoptedStyleSheets, containedButtonSt
 export const initContainedButton = (element, ...properties) => {
     console.assert(element instanceof HTMLButtonElement);
     defineErrorProperty(element, 'containedButton-error');
-    initButton(element, { addClassName: 'containedButton' }, ...properties);
+    initButton(element, { extraClasses: 'containedButton' }, ...properties);
 }
 
 /**

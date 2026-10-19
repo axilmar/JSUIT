@@ -42,7 +42,7 @@ const defineUrlProperty = (element) => {
  * 
  * It invokes the function `initButton(element, ...properties)`.
  * 
- * The element gets the class 'iconButton' by default; an `addClassName` property adds further classes.
+ * The element gets the class 'iconButton' by default; an `extraClasses` property adds further classes.
  * 
  * The element gets a boolean property 'error' that adds/removes the style 'iconButton-error'.
  * 
@@ -56,13 +56,13 @@ const defineUrlProperty = (element) => {
 export const initIconButton = (element, ...properties) => {
     console.assert(element instanceof HTMLButtonElement);
 
-    const state = { icon: createIcon({ addClassName: ICON_CLASS, stretch: true }) };
+    const state = { icon: createIcon({ extraClasses: ICON_CLASS, stretch: true }) };
     element.append(state.icon);
 
     defineIconProperty(element, state);
     defineUrlProperty(element);
     defineErrorProperty(element, 'iconButton-error');
-    initButton(element, { addClassName: 'iconButton' }, ...properties);
+    initButton(element, { extraClasses: 'iconButton' }, ...properties);
 }
 
 /**
