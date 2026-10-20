@@ -35,10 +35,10 @@ const defineSelectedProperty = (element) => {
             if (value === element.classList.contains(SELECTED_CLASS)) {
                 return;
             }
-            element.classList.toggle(SELECTED_CLASS, value);
             if (value) {
                 unselectOthers(element);
             }
+            element.classList.toggle(SELECTED_CLASS, value);
             element.dispatchEvent(new SelectedChangedEvent(value));
         }
     });
