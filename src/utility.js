@@ -1,4 +1,13 @@
 /**
+ * Checks if a value is a string.
+ * @param {*} value the value to check.
+ * @returns true if the value is a string, false otherwise.
+ */
+export const isString = (value) => {
+    return typeof value === 'string' || value instanceof String;
+}
+
+/**
  * Checks if a value is a function.
  * @param {*} value the value to check.
  * @returns true if the value is a function, false otherwise.
@@ -131,4 +140,48 @@ export const adoptStyleSheet = (styleSheet) => {
     if (!document.adoptedStyleSheets.includes(styleSheet)) {
         document.adoptedStyleSheets = [...document.adoptedStyleSheets, styleSheet];
     }
+}
+
+/**
+ * Creates a deep copy of the given value.
+ * @param {*} value the value to create a deep copy of.
+ * @param {Boolean} cloneDOMNodes if true, DOM nodes are cloned too.
+ * @returns the deep copy of the given value.
+ */
+export const deepCopy = (value, cloneDOMNodes = false) => {
+    let result;
+
+    //copy array
+    if (Array.isArray(value)) {
+        result = [];
+        for(const arrayValue of value) {
+            result.push(deepCopy(arrayValue, cloneDOMNodes));
+        }
+    }
+
+    //else dom node
+    else if (isDOMNode(value)) {
+        if (cloneDOMNodes) {
+            result = value.cloneNode(true);
+        }
+        else {
+            result = value;
+        }
+    }
+
+    //else copy object
+    else if (isObject(value)) {
+        result = {};
+        for(const prop in value) {
+            const objectValue = value[prop];
+            result[prop] = deepCopy(objectValue, cloneDOMNodes);
+        }
+    }
+
+    //else copy value
+    else {
+        result = value;
+    }
+
+    return result;
 }
