@@ -13,6 +13,7 @@ const createApp = () => {
             },
             button({ onclick: () => navigate('/app/pink') }, "Pink"),
             button({ onclick: () => navigate('/app/blue') }, "Blue"),
+            "Press a button - Πιεσε ενα πληκτρο"
         ),
         div(
             {
