@@ -4,7 +4,7 @@ import { initIcon } from "./icon.js";
 const CHECK_MARK_URL = new URL('../icons/check.svg', import.meta.url).href;
 
 /**
- * Initializes an icon element as a check mark icon.
+ * Initializes an icon element as a check icon.
  * 
  * It invokes the function `initIcon(element, ...properties)`.
  * 
@@ -13,20 +13,20 @@ const CHECK_MARK_URL = new URL('../icons/check.svg', import.meta.url).href;
  * @param {*} element the element to initialize.
  * @param  {...any} properties the object's properties.
  */
-export const initCheckMarkIcon = (element, ...properties) => {
+export const initCheckIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
     initIcon(element, { url: CHECK_MARK_URL }, ...properties);
 }
 
 /**
- * Creates a check mark icon.
+ * Creates a check icon.
  * 
  * @param  {...any} properties the element's properties.
  * 
  * @return the created element.
  */
-export const checkMarkIcon = (...properties) => {
+export const checkIcon = (...properties) => {
     const element = document.createElement('div');
-    initCheckMarkIcon(element, ...properties);
+    initCheckIcon(element, ...properties);
     return element;
 }

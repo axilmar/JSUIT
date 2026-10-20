@@ -1,5 +1,5 @@
 import { initIconButton } from "./iconButton.js";
-import { checkMarkIcon } from "./checkMarkIcon.js";
+import { checkIcon } from "./checkIcon.js";
 import { adoptStyleSheet } from "./utility.js";
 import { SelectedChangedEvent } from "./SelectedChangedEvent.js";
 
@@ -52,7 +52,7 @@ const defineOnSelectedChangedProperty = (element) => {
  * 
  * It invokes the function `initIconButton(element, ...properties)`.
  * 
- * The element gets the class 'checkBox' by default, and contains a check mark icon.
+ * The element gets the class 'checkBox' by default, and contains a check icon.
  * 
  * The element gets a boolean property 'selected' (default false), and looks like a MUI checkbox: the check mark is visible
  * only while it is true. The button has the same size in both cases.
@@ -72,7 +72,7 @@ export const initCheckBox = (element, ...properties) => {
     defineSelectedProperty(element);
     defineOnSelectedChangedProperty(element);
     element.addEventListener('click', () => { element.selected = !element.selected; });
-    initIconButton(element, { additionalClassName: 'checkBox', icon: checkMarkIcon() }, ...properties);
+    initIconButton(element, { additionalClassName: 'checkBox', icon: checkIcon() }, ...properties);
 }
 
 /**

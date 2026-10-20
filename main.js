@@ -2,6 +2,7 @@ import { button } from '/src/button.js';
 import { div } from '/src/div.js';
 import { router, navigate } from './src/router.js';
 import { checkBox } from './src/checkBox.js';
+import { radioButton } from '/src/radioButton.js';
 
 const createApp = () => {
     return div(
@@ -15,7 +16,9 @@ const createApp = () => {
             button({ onclick: () => navigate('/app/pink') }, "Pink"),
             button({ onclick: () => navigate('/app/blue') }, "Blue"),
             "Press a button - Πιεσε ενα πληκτρο",
-            checkBox({enabled: true, error: false, selected: true}, "Label")
+            checkBox({enabled: true, error: false, selected: true}, "Label"),
+            radioButton({name: "option1"}, "Radio 1"),
+            radioButton({name: "option1"}, "Radio 2"),
         ),
         div(
             {
