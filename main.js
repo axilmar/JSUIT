@@ -5,11 +5,11 @@ import { router, navigate } from './src/router.js';
 const createApp = () => {
     return div(
         {
-            style: "background-color: gray; width: 100%; height: 100%; display: flex; flex-direction: column"
+            style: "width: 100%; height: 100%; display: flex; flex-direction: column"
         },
         div(
             {
-                style: "background-color: white; width: 100%; display: flex; flex-direction: row"
+                style: "width: 100%; display: flex; flex-direction: row"
             },
             button({ onclick: () => navigate('/app/pink') }, "Pink"),
             button({ onclick: () => navigate('/app/blue') }, "Blue"),
@@ -17,7 +17,7 @@ const createApp = () => {
         ),
         div(
             {
-                style: "background-color: lightgray; width: 100%; height: 75%",
+                style: "background-color: cyan; width: 100%; height: 75%",
                 additionalClassName: 'outlet'
             }
         )

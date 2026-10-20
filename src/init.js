@@ -17,13 +17,14 @@ body.style.height = '100%';
 body.style.minHeight = '100vh';
 body.style.overflow = 'hidden'; // Lock down body overflow
 
-// MUI's default typography (body1) and text color (text.primary)
+// MUI's default typography (body1), text color (text.primary) and background (background.default)
 body.style.fontFamily = '"Roboto", "Helvetica", "Arial", sans-serif';
 body.style.fontSize = '1rem';
 body.style.fontWeight = '400';
 body.style.lineHeight = '1.5';
 body.style.letterSpacing = '0.00938em';
 body.style.color = 'rgba(0, 0, 0, 0.87)';
+body.style.backgroundColor = '#fff';
 
 // 2. Globally inject box-sizing and overflow rules without creating tags
 const globalSheet = new CSSStyleSheet();
