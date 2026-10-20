@@ -1,6 +1,7 @@
 import { button } from '/src/button.js';
 import { div } from '/src/div.js';
 import { router, navigate } from './src/router.js';
+import { checkBox } from './src/checkBox.js';
 
 const createApp = () => {
     return div(
@@ -9,11 +10,12 @@ const createApp = () => {
         },
         div(
             {
-                style: "width: 100%; display: flex; flex-direction: row"
+                style: "width: 100%; display: flex; flex-direction: row; gap: 0"
             },
             button({ onclick: () => navigate('/app/pink') }, "Pink"),
             button({ onclick: () => navigate('/app/blue') }, "Blue"),
-            "Press a button - Πιεσε ενα πληκτρο"
+            "Press a button - Πιεσε ενα πληκτρο",
+            checkBox({enabled: true, error: false, selected: true}, "Label")
         ),
         div(
             {
