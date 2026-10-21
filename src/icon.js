@@ -34,6 +34,30 @@ const defineStretchProperty = (element) => {
     });
 };
 
+//the custom property that carries the fill color to the svg; an svg uses it as in `fill: var(--icon-fill-color, currentColor)`
+const FILL_COLOR_PROPERTY = '--icon-fill-color';
+
+//defines the property 'fillColor'
+const defineFillColorProperty = (element) => {
+    let fillColor = '';
+
+    Object.defineProperty(element, 'fillColor', {
+        configurable: true,
+        enumerable: true,
+        get: () => fillColor,
+        set: (value) => {
+            console.assert(value === null || value === undefined || typeof value === 'string');
+            fillColor = value ?? '';
+            if (fillColor) {
+                element.style.setProperty(FILL_COLOR_PROPERTY, fillColor);
+            }
+            else {
+                element.style.removeProperty(FILL_COLOR_PROPERTY);
+            }
+        }
+    });
+};
+
 //defines the property 'url'
 const defineUrlProperty = (element) => {
     let url;
@@ -69,12 +93,17 @@ const defineUrlProperty = (element) => {
  * It also gets a boolean property 'stretch' (default false); when true, the SVG is
  * stretched to the element's size, ignoring its aspect ratio.
  * 
+ * It also gets a string property 'fillColor' (default empty); when it is not empty, it is made available to the SVG as the
+ * css custom property `--icon-fill-color`; an SVG that fills its shapes with `var(--icon-fill-color, currentColor)`,
+ * like `icons/star.svg`, is filled with that color, otherwise with the current color.
+ * 
  * @param {*} element the element to initialize.
  * @param  {...any} properties the object's properties.
  */
 export const initIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
     defineStretchProperty(element);
+    defineFillColorProperty(element);
     defineUrlProperty(element);
     initDiv(element, ...properties);
 }

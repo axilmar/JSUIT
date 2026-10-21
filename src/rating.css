@@ -1,0 +1,115 @@
+/*
+ * Rating, styled like MUI's Rating.
+ *
+ * MUI's sizes: small 1.125rem (18px), medium 1.5rem (24px, the default), large 1.875rem (30px); the icons are as wide as that
+ * size, with no gap, padding, border or margin between them. The empty icons are in MUI's action.disabled color
+ * (rgba(0,0,0,0.26)); the filled icons are clipped by their filled part, in the fill color (#faaf00 by default). The icon under the
+ * mouse is enlarged by 20%, and the icon of the value has an outline while the rating has the keyboard focus.
+ *
+ * Structure (built by rating.js):
+ *   <div class="rating"> <span class="rating-item"> empty icon + <span class="rating-filled"> filled icon </span> </span> ... label </div>
+ * Vertical layout: rating-vertical.
+ *
+ * The overflow of the rating and its items is visible, because the label is outside of them.
+ */
+
+.rating {
+    --rating-size: 24px;
+    --rating-empty-color: rgba(0, 0, 0, 0.26);      /* action.disabled */
+
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    gap: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    overflow: visible !important;
+    cursor: pointer;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    text-align: left;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.rating-vertical {
+    flex-direction: column;
+}
+
+.rating-small {
+    --rating-size: 18px;
+}
+
+.rating-large {
+    --rating-size: 30px;
+}
+
+.rating-item {
+    position: relative;
+    display: block;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    width: var(--rating-size);
+    height: var(--rating-size);
+    overflow: visible !important;
+    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.rating-item-active {
+    transform: scale(1.2);
+}
+
+.rating-item-focus {
+    outline: 1px solid #999;
+}
+
+.rating .rating-icon {
+    width: var(--rating-size);
+    height: var(--rating-size);
+}
+
+.rating-empty {
+    color: var(--rating-empty-color);
+}
+
+/* the filled part of an item: as wide as the filled fraction, clipping the filled icon, which has the full size */
+.rating-filled {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    overflow: hidden !important;
+    pointer-events: none;
+}
+
+.rating-filled > .rating-icon {
+    flex: none;
+}
+
+/* the label: above the item under the mouse, centered on it (rating.js sets left and top) */
+.rating-label {
+    position: absolute;
+    z-index: 1;
+    display: none;
+    transform: translate(-50%, calc(-100% - 8px));
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.rating-hovering > .rating-label {
+    display: block;
+}
+
+/* the default label looks like MUI's Tooltip */
+.rating-label-default {
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: rgba(97, 97, 97, 0.92);
+    color: #fff;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1.4;
+}

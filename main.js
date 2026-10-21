@@ -10,7 +10,7 @@ import { passwordInput } from './src/passwordInput.js';
 import { rangeInput } from './src/rangeInput.js';
 import { datetimeLocalInput } from './src/datetimeLocalInput.js';
 import { group } from './src/group.js';
-
+import { rating } from './src/rating.js';
 
 const createApp = () => {
     return div(
@@ -58,7 +58,8 @@ router([
                     onrouted: () => console.log("pink routed!"),
                     onunrouted: () => console.log("pink unrouted!")
                     }, 
-                    "Pink"
+                    "Pink",
+
                 )
             },
             {
@@ -74,7 +75,14 @@ router([
                         radioButton("Option 1"),
                         radioButton("Option 2"),
                         radioButton("Option 3"),
-                    )
+                    ),
+                    rating({
+                        step: 0.5,
+                        value: 3.5,
+                        values: { 1: "Useless", 2: "Poor", 3: "Ok", 4: "Good", 5: "Excellent" },
+                        oninput: (e) => console.log("rating input:", e.target.value),
+                        onchange: (e) => console.log("rating change:", e.target.value)
+                    })
                 )
             }
         ]
