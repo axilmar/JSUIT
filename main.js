@@ -8,6 +8,7 @@ import { textInput } from './src/textInput.js';
 import { numberInput } from './src/numberInput.js';
 import { passwordInput } from './src/passwordInput.js';
 import { rangeInput } from './src/rangeInput.js';
+import { datetimeLocalInput } from './src/datetimeLocalInput.js';
 
 
 const createApp = () => {
@@ -28,7 +29,8 @@ const createApp = () => {
             floatingActionButton('+'),
             numberInput({value: 0, label: "A number"}),
             passwordInput({label: "Password"}),
-            rangeInput()
+            rangeInput(),
+            datetimeLocalInput()
         ),
         div(
             {
