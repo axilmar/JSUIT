@@ -1,0 +1,176 @@
+/*
+ * MUI "outlined" text field look for an input element, with the MUI default palette.
+ *
+ * Usage: <input class="inputField" type="text" placeholder="...">
+ * Size: default (medium), inputField-small.
+ * Optional color classes (the focus color): inputField-secondary, -warning, -info, -success.
+ * Error: inputField-error.
+ *
+ * An input element has no room for a label, so the floating label of MUI's TextField is not part of this.
+ * The 2px focus border of MUI is drawn with an inset box-shadow, so that the size does not change on focus.
+ */
+
+.inputField {
+    --inputField-main: #1976d2;                 /* primary.main */
+
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 0;
+    margin: 0;
+    padding: 16.5px 14px;
+    border: 1px solid rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+    outline: 0;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4375em;
+    letter-spacing: 0.00938em;
+    height: calc(1.4375em + 34px);
+    vertical-align: middle;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: border-color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms, box-shadow 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.inputField-small {
+    padding-top: 8.5px;
+    padding-bottom: 8.5px;
+    height: calc(1.4375em + 18px);
+}
+
+.inputField::placeholder {
+    color: currentColor;
+    opacity: 0.42;
+}
+
+.inputField:hover {
+    border-color: rgba(0, 0, 0, 0.87);
+}
+
+.inputField:focus {
+    border-color: var(--inputField-main);
+    box-shadow: inset 0 0 0 1px var(--inputField-main);
+}
+
+.inputField:disabled {
+    color: rgba(0, 0, 0, 0.38);
+    border-color: rgba(0, 0, 0, 0.26);
+    box-shadow: none;
+    cursor: default;
+}
+
+.inputField-secondary { --inputField-main: #9c27b0; }
+.inputField-warning   { --inputField-main: #ed6c02; }
+.inputField-info      { --inputField-main: #0288d1; }
+.inputField-success   { --inputField-main: #2e7d32; }
+
+.inputField-error,
+.inputField-error:hover,
+.inputField-error:focus {
+    --inputField-main: #d32f2f;                 /* error.main */
+    border-color: #d32f2f;
+}
+
+.inputField-error:focus {
+    box-shadow: inset 0 0 0 1px #d32f2f;
+}
+
+/* Busy: like disabled (no interaction), but keeping the field's color. */
+.inputField.inputField-busy,
+.inputField.inputField-busy:hover,
+.inputField.inputField-busy:focus {
+    opacity: 0.7;
+    pointer-events: none;
+    cursor: default;
+}
+
+/* The browser's own spin buttons and date/time indicators keep working; just align them with the MUI colors. */
+.inputField::-webkit-calendar-picker-indicator {
+    opacity: 0.54;
+    cursor: pointer;
+}
+
+.inputField:disabled::-webkit-calendar-picker-indicator {
+    opacity: 0.26;
+    cursor: default;
+}
+
+/*
+ * Label: the floating label of MUI's outlined text field (see the property 'label' in inputField.js).
+ * The input is wrapped in a container together with the label; the label is positioned over the field's top left corner.
+ * Its background (--inputField-label-background, default white) opens the notch in the border while it is shrunk.
+ */
+
+.inputField-container {
+    --inputField-label-background: #fff;
+
+    position: relative;
+    display: inline-flex;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+.inputField-label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    max-width: calc(100% - 24px);
+    padding: 0 5px;
+    overflow: hidden;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4375em;
+    letter-spacing: 0.00938em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transform-origin: top left;
+    transform: translate(9px, 16px) scale(1);
+    pointer-events: none;
+    user-select: none;
+    transition:
+        color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+        transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+        max-width 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.inputField-small + .inputField-label {
+    transform: translate(9px, 9px) scale(1);
+}
+
+.inputField-label.inputField-label-shrunk,
+.inputField-small + .inputField-label.inputField-label-shrunk {
+    max-width: calc(133% - 32px);
+    background-color: var(--inputField-label-background);
+    transform: translate(9px, -9px) scale(0.75);
+}
+
+/* the placeholder would overlap the label while it is inside the field */
+.inputField-labeled:not(:focus)::placeholder {
+    opacity: 0;
+}
+
+/* label colors: primary (the field's color) while focused, error, disabled; the asterisk of required fields */
+.inputField-container:focus-within > .inputField-label {
+    color: var(--inputField-main);
+}
+
+.inputField-container:has(> .inputField-error) > .inputField-label {
+    color: #d32f2f;
+}
+
+.inputField-container:has(> .inputField:disabled) > .inputField-label {
+    color: rgba(0, 0, 0, 0.38);
+}
+
+.inputField-container:has(> .inputField[required]) > .inputField-label::after {
+    content: " *";
+}

@@ -4,6 +4,10 @@ import { router, navigate } from './src/router.js';
 import { checkBox } from './src/checkBox.js';
 import { radioButton } from './src/radioButton.js';
 import { floatingActionButton } from './src/floatingActionButton.js';
+import { textInput } from './src/textInput.js';
+import { numberInput } from './src/numberInput.js';
+import { passwordInput } from './src/passwordInput.js';
+import { rangeInput } from './src/rangeInput.js';
 
 
 const createApp = () => {
@@ -21,7 +25,10 @@ const createApp = () => {
             checkBox({id: "cb1"}, "Label"),
             radioButton({name: "option1"}, "Radio 1"),
             radioButton({name: "option1", id: "radio2"}, "Radio 2"),
-            floatingActionButton('+')
+            floatingActionButton('+'),
+            numberInput({value: 0, label: "A number"}),
+            passwordInput({label: "Password"}),
+            rangeInput()
         ),
         div(
             {

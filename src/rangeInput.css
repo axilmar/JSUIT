@@ -1,0 +1,106 @@
+/*
+ * MUI Slider look for an input of type range, with the MUI default palette.
+ *
+ * Usage: <input class="rangeInput" type="range">
+ * Optional color classes: rangeInput-secondary, -error, -warning, -info, -success.
+ *
+ * The filled part of the track uses the property --rangeInput-fill, kept up to date by rangeInput.js.
+ * The thumb halo of MUI (hover 8px, active 14px) is a box-shadow.
+ */
+
+.rangeInput {
+    --rangeInput-main: #1976d2;
+    --rangeInput-fill: 0%;
+
+    box-sizing: border-box;
+    width: 200px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    outline: 0;
+    vertical-align: middle;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.rangeInput::-webkit-slider-runnable-track {
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(to right, var(--rangeInput-main) var(--rangeInput-fill), color-mix(in srgb, var(--rangeInput-main) 38%, transparent) var(--rangeInput-fill));
+}
+
+.rangeInput::-moz-range-track {
+    height: 4px;
+    border-radius: 2px;
+    background: color-mix(in srgb, var(--rangeInput-main) 38%, transparent);
+}
+
+.rangeInput::-moz-range-progress {
+    height: 4px;
+    border-radius: 2px;
+    background: var(--rangeInput-main);
+}
+
+.rangeInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    margin-top: -8px;
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--rangeInput-main);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--rangeInput-main) 16%, transparent);
+    transition: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.rangeInput::-moz-range-thumb {
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--rangeInput-main);
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--rangeInput-main) 16%, transparent);
+    transition: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.rangeInput:hover::-webkit-slider-thumb,
+.rangeInput:focus-visible::-webkit-slider-thumb {
+    box-shadow: 0 0 0 8px color-mix(in srgb, var(--rangeInput-main) 16%, transparent);
+}
+
+.rangeInput:active::-webkit-slider-thumb {
+    box-shadow: 0 0 0 14px color-mix(in srgb, var(--rangeInput-main) 16%, transparent);
+}
+
+.rangeInput:hover::-moz-range-thumb,
+.rangeInput:focus-visible::-moz-range-thumb {
+    box-shadow: 0 0 0 8px color-mix(in srgb, var(--rangeInput-main) 16%, transparent);
+}
+
+.rangeInput:active::-moz-range-thumb {
+    box-shadow: 0 0 0 14px color-mix(in srgb, var(--rangeInput-main) 16%, transparent);
+}
+
+.rangeInput:disabled {
+    --rangeInput-main: #bdbdbd;                 /* grey[400] */
+    cursor: default;
+    pointer-events: none;
+}
+
+.rangeInput-secondary { --rangeInput-main: #9c27b0; }
+.rangeInput-error     { --rangeInput-main: #d32f2f; }
+.rangeInput-warning   { --rangeInput-main: #ed6c02; }
+.rangeInput-info      { --rangeInput-main: #0288d1; }
+.rangeInput-success   { --rangeInput-main: #2e7d32; }
+
+.rangeInput.rangeInput-busy {
+    opacity: 0.7;
+    pointer-events: none;
+    cursor: default;
+}

@@ -1,0 +1,40 @@
+/* File field: an inputField whose file selector button looks like a MUI text button. */
+
+.fileInput {
+    padding: 8px 14px;
+    cursor: pointer;
+}
+
+.fileInput.inputField-small {
+    padding: 4px 14px;
+}
+
+.fileInput::file-selector-button {
+    margin: 0 12px 0 0;
+    padding: 6px 8px;
+    border: 0;
+    border-radius: 4px;
+    background-color: transparent;
+    color: var(--inputField-main);
+    font-family: inherit;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.fileInput::file-selector-button:hover {
+    background-color: color-mix(in srgb, var(--inputField-main) 4%, transparent);
+}
+
+.fileInput:disabled {
+    cursor: default;
+}
+
+.fileInput:disabled::file-selector-button {
+    color: rgba(0, 0, 0, 0.26);
+    cursor: default;
+}
