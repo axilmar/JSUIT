@@ -12,13 +12,13 @@ const SELECTED_CLASS = 'radioButton-selected';
 //the radio buttons that were created by this module
 const radioButtons = new WeakSet();
 
-//unselects the other radio buttons with the same name, within the same parent element
+//unselects the other radio buttons within the same parent element: the ones with the same name, or all of them if the element has no name
 const unselectOthers = (element) => {
-    if (!element.name || !element.parentElement) {
+    if (!element.parentElement) {
         return;
     }
     for (const sibling of element.parentElement.children) {
-        if (sibling !== element && radioButtons.has(sibling) && sibling.name === element.name) {
+        if (sibling !== element && radioButtons.has(sibling) && (!element.name || sibling.name === element.name)) {
             sibling.selected = false;
         }
     }
@@ -84,6 +84,7 @@ const defineOnSelectedChangedProperty = (element) => {
  * 
  * When a radio button gets selected, the other radio buttons with the same (non-empty) `name`
  * in the same parent element are unselected. The `name` is the button's standard `name` property.
+ * If the radio button has no name, then all the other radio buttons in the same parent element are unselected, whatever their names.
  * 
  * Clicking the button selects it; as with a native radio button, a click never deselects it. This is a click listener, so an `onclick` property still works in addition to it.
  * 

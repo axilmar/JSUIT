@@ -9,6 +9,7 @@ import { numberInput } from './src/numberInput.js';
 import { passwordInput } from './src/passwordInput.js';
 import { rangeInput } from './src/rangeInput.js';
 import { datetimeLocalInput } from './src/datetimeLocalInput.js';
+import { group } from './src/group.js';
 
 
 const createApp = () => {
@@ -63,11 +64,17 @@ router([
             {
                 path: '/blue',
                 render: () => div({
-                    style: "background-color: blue; width: 64px; height: 64px", 
+                    style: "background-color: white; width: 256px; height: 256px;display: flex; flex-direction: column;gap:16px", 
                     onrouted: () => console.log("blue routed!"),
                     onunrouted: () => console.log("blue unrouted!")
                     }, 
-                    "Blue"
+                    "Blue",
+                    group(
+                        {label: "Options"},
+                        radioButton("Option 1"),
+                        radioButton("Option 2"),
+                        radioButton("Option 3"),
+                    )
                 )
             }
         ]
