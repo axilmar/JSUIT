@@ -185,3 +185,20 @@ export const deepCopy = (value, cloneDOMNodes = false) => {
 
     return result;
 }
+
+/**
+ * Defines an event property.
+ * @param {*} element target element.
+ * @param {*} propertyName name of property.
+ * @param {*} eventName name of event.
+ */
+export const defineEventProperty = (element, propertyName, eventName) => {
+    Object.defineProperty(element, propertyName, {
+        configurable: true,
+        enumerable: true,
+        set: (value) => {
+            element.addEventListener(eventName, value);
+        }
+    });
+}
+

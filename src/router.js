@@ -1,9 +1,14 @@
 import { isString, isFunction, isDOMNode } from "./utility.js";
 
+/******************************************************************************
+    PRIVATE
+ ******************************************************************************/
+
 const PARAMETER_PREFIX = ':';
 const OUTLET_CLASS = '.outlet';
 
 let routes = [];
+let currentParameters = {};
 
 //match a path against a route path
 const matchPath = (routePath, path, currentParameters) => {
@@ -43,11 +48,18 @@ const matchPath = (routePath, path, currentParameters) => {
 }
 
 //show element
-const showElement = (parent, child) => {
-    if (child.parentElement !== parent) {
-        parent.replaceChildren(child);
+const showElement = (parent, newChild, parameters) => {
+    for(let existingChild = parent.firstElementChild; existingChild; ) {
+        const nextExistingChild = existingChild.nextElementSibling;
+        existingChild.remove();
+        existingChild.dispatchEvent(new UnroutedEvent());
+        existingChild = nextExistingChild;
     }
-    const result = child.querySelector(OUTLET_CLASS);
+
+    newChild.dispatchEvent(new RoutedEvent(parameters));
+    parent.append(newChild);
+
+    const result = newChild.querySelector(OUTLET_CLASS);
     return result;
 }
 
@@ -75,6 +87,9 @@ const navigateLocally = (path, routes, parentParameters = {}, parentElement = do
             continue;
         }
 
+        //setup the current parameters
+        currentParameters = parameters;
+
         //get the element to show or the redirection string
         const elementOrRedirect = getElementOrRedirect(route.render, parameters);
 
@@ -88,7 +103,7 @@ const navigateLocally = (path, routes, parentParameters = {}, parentElement = do
 
         //show the element
         if (isDOMNode(elementOrRedirect)) {
-            parentElement = showElement(parentElement, elementOrRedirect);
+            parentElement = showElement(parentElement, elementOrRedirect, parameters);
         }
 
         //process children for the remaining path
@@ -152,6 +167,61 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("popstate", (event) => {
     navigateInternal(window.location.href, false);
 })
+
+/******************************************************************************
+    PUBLIC
+ ******************************************************************************/
+
+/**
+ * Event dispatched on an element if it is shown because of routing.
+ * It contains a `parameters` property which returns the route parameters.
+ * It is dispatched before the element is made visible.
+ */
+class RoutedEvent extends Event {
+    /**
+     * The name of the event.
+     */
+    static NAME = "routed";
+
+    #parameters;
+
+    /**
+     * The constructor.
+     * @param {*} parameters the current parameters
+     * @param {*} options the event options.
+     */
+    constructor(parameters, options) {
+        super(RoutedEvent.NAME, options);
+        this.#parameters = parameters ?? {};
+    }
+
+    /**
+     * Returns the route parameters.
+     * @return the route parameters.
+     */
+    get parameters() {
+        return this.#parameters;
+    }
+}    
+
+/**
+ * Event dispatched on an element that was removed from the screen due to routing.
+ * It is dispatched after the element was removed from the screen.
+ */
+class UnroutedEvent extends Event {
+    /**
+     * The name of the event.
+     */
+    static NAME = "unrouted";
+
+    /**
+     * The constructor.
+     * @param {*} options event options.
+     */
+    constructor(options) {
+        super(UnroutedEvent.NAME, options);
+    }
+}
 
 /**
  * Route not found error.
@@ -221,4 +291,12 @@ export const router = (newRoutes) => {
  */
 export const navigate = (url) => {
     navigateInternal(url, true);
+}
+
+/**
+ * Returns the parameters for the current route as derived from the url path.
+ * @returns an object with key-value pairs for the parameters defined in the path.
+ */
+export const getParameters = () => {
+    return { ...currentParameters };
 }

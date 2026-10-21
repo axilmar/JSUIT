@@ -41,11 +41,23 @@ router([
         children: [
             {
                 path: '/pink',
-                render: () => div({style: "background-color: pink; width: 64px; height: 64px"}, "Pink")
+                render: () => div({
+                    style: "background-color: pink; width: 64px; height: 64px", 
+                    onrouted: () => console.log("pink routed!"),
+                    onunrouted: () => console.log("pink unrouted!")
+                    }, 
+                    "Pink"
+                )
             },
             {
                 path: '/blue',
-                render: () => div({style: "background-color: blue; width: 64px; height: 64px"}, "Blue")
+                render: () => div({
+                    style: "background-color: blue; width: 64px; height: 64px", 
+                    onrouted: () => console.log("blue routed!"),
+                    onunrouted: () => console.log("blue unrouted!")
+                    }, 
+                    "Blue"
+                )
             }
         ]
     }

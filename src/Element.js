@@ -1,5 +1,5 @@
 import { initNode } from "./Node.js";
-import { adoptStyleSheet } from "./utility.js";
+import { adoptStyleSheet, defineEventProperty } from "./utility.js";
 
 import busySpinnerStyleSheet from './busySpinner.css' with { type: 'css' };
 
@@ -167,6 +167,9 @@ const defineSpinner = (element) => {
  * The element also gets a property 'spinner', the element shown centered over the content while the element is busy.
  * Its default is a div that, with the default 'busySpinnerClassName', looks like a spinning circle.
  * 
+ * The element also gets the 'onrouted' and 'onunrouted' properties, which are used to set the event handlers
+ * for the 'routed' and 'unrouted' events respectively.
+ * 
  * @param {*} element the node to initialize.
  * @param  {...any} properties the object's properties.
  */
@@ -177,6 +180,8 @@ export const initElement = (element, ...properties) => {
     defineClassNameProperty(element, 'busyClassName');
     defineStateProperty(element, 'error', 'errorClassName');
     defineClassNameProperty(element, 'busySpinnerClassName', 'busySpinner');
+    defineEventProperty(element, "onrouted", "routed");
+    defineEventProperty(element, "onunrouted", "unrouted");
     const spinner = defineSpinner(element);
     defineStateProperty(element, 'busy', 'busyClassName', (busy) => busy ? spinner.show() : spinner.hide());
     initNode(element, ...properties);

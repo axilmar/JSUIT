@@ -9,6 +9,8 @@ export class SelectedChangedEvent extends Event {
      */
     static NAME = 'selectedchanged';
 
+    #selected;
+
     /**
      * Creates the event.
      * 
@@ -17,12 +19,14 @@ export class SelectedChangedEvent extends Event {
      */
     constructor(selected, eventInitDict) {
         super(SelectedChangedEvent.NAME, eventInitDict);
+        this.#selected = !!selected;
+    }
 
-        /**
-         * The new selected state.
-         * 
-         * @type {boolean}
-         */
-        this.selected = !!selected;
+    /**
+     * Returns the selected state.
+     * @return true if the selected state was true, false otherwise.
+     */
+    get selected() {
+        return this.#selected;
     }
 }
