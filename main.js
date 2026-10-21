@@ -64,7 +64,7 @@ router([
             {
                 path: '/blue',
                 render: () => div({
-                    style: "background-color: white; width: 256px; height: 256px;display: flex; flex-direction: column;gap:16px", 
+                    style: "background-color: white; width: 256px; height: 256px;display: flex; flex-direction: column;gap:16px; padding: 16px", 
                     onrouted: () => console.log("blue routed!"),
                     onunrouted: () => console.log("blue unrouted!")
                     }, 
