@@ -2,8 +2,9 @@ import { button } from '/src/button.js';
 import { div } from '/src/div.js';
 import { router, navigate } from './src/router.js';
 import { checkBox } from './src/checkBox.js';
-import { radioButton } from '/src/radioButton.js';
-import { label } from '/src/label.js';
+import { radioButton } from './src/radioButton.js';
+import { floatingActionButton } from './src/floatingActionButton.js';
+
 
 const createApp = () => {
     return div(
@@ -20,6 +21,7 @@ const createApp = () => {
             checkBox({id: "cb1"}, "Label"),
             radioButton({name: "option1"}, "Radio 1"),
             radioButton({name: "option1", id: "radio2"}, "Radio 2"),
+            floatingActionButton('+')
         ),
         div(
             {
