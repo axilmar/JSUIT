@@ -277,6 +277,12 @@ export class OutletNotFoundError extends Error {
  * 
  * Outlet elements are those with an 'outlet' class.
  * 
+ * Elements that appear on the screen because of routing get a 'routed' event.
+ * The element or elements that are removed from the screen due to routing get an 'unrouted' event.
+ * The 'unrouted' event always comes before the 'routed' event.
+ * 
+ * When redirecting, the new route must come after the route that caused the redirection in the route array.
+ * 
  * @exception RouteNotFoundError thrown if a route is not found.
  */
 export const router = (newRoutes) => {
