@@ -1,21 +1,9 @@
 import { initInput } from "./input.js";
-import { adoptStyleSheet } from "./utility.js";
+import { adoptStyleSheet, defineDisplaySizeProperty } from "./utility.js";
 
 import inputFieldStyleSheet from './inputField.css' with { type: 'css' };
 
 adoptStyleSheet(inputFieldStyleSheet);
-
-const SMALL_CLASS = 'inputField-small';
-
-//defines the boolean property 'small'
-const defineSmallProperty = (element) => {
-    Object.defineProperty(element, 'small', {
-        configurable: true,
-        enumerable: true,
-        get: () => element.classList.contains(SMALL_CLASS),
-        set: (value) => { element.classList.toggle(SMALL_CLASS, !!value); }
-    });
-};
 
 const LABEL_CLASS = 'inputField-label';
 const LABEL_SHRUNK_CLASS = 'inputField-label-shrunk';
@@ -115,7 +103,9 @@ const defineLabelProperty = (element) => {
  * Its `errorClassName` defaults to 'inputField-error'.
  * Its `busyClassName` defaults to 'inputField-busy'.
  * 
- * The element gets a boolean property 'small' (default false), for MUI's small (dense) size.
+ * The element gets the property 'displaySize', which accepts 'small', 'medium' (the default) and 'large'. The small and medium
+ * sizes are MUI's: the vertical padding is 8.5px and 16.5px, so the height is 40px and 56px for the 16px font. MUI has no large
+ * input, so the large size extends them: a 1.25rem font with 20px vertical padding (a height of about 69px). The label follows the size.
  * 
  * The element gets a property 'label', which accepts an element or a string (a string becomes the text of a span).
  * The label is shown like the floating label of MUI's outlined text field: inside the field while it is empty and not focused,
@@ -136,7 +126,7 @@ const defineLabelProperty = (element) => {
  */
 export const initInputField = (element, ...properties) => {
     console.assert(element instanceof HTMLInputElement);
-    defineSmallProperty(element);
+    defineDisplaySizeProperty(element, 'inputField-small', 'inputField-large');
     defineLabelProperty(element);
     initInput(element, { additionalClassName: 'inputField', errorClassName: 'inputField-error', busyClassName: 'inputField-busy' }, ...properties);
 }

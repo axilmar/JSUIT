@@ -1,6 +1,6 @@
 import { initInput } from "./input.js";
 import { validateOnInput } from "./validateOnInput.js";
-import { adoptStyleSheet } from "./utility.js";
+import { adoptStyleSheet, defineDisplaySizeProperty } from "./utility.js";
 
 import rangeInputStyleSheet from './rangeInput.css' with { type: 'css' };
 
@@ -26,6 +26,10 @@ const updateFill = (element) => {
  *
  * While the user types, the property `error` is set to true if the value does not match the `pattern` attribute (when there is one).
  * 
+ * The element gets the property 'displaySize', which accepts 'small', 'medium' (the default) and 'large'. The small and medium
+ * sizes are MUI's slider sizes (track 2px and 4px, thumb 12px and 20px); MUI has no large slider, so the large size extends
+ * them (track 6px, thumb 28px).
+ * 
  * @param {*} element the element to initialize.
  * @param  {...any} properties the object's properties.
  */
@@ -33,6 +37,7 @@ export const initRangeInput = (element, ...properties) => {
     console.assert(element instanceof HTMLInputElement);
     element.type = 'range';
     element.addEventListener('input', () => updateFill(element));
+    defineDisplaySizeProperty(element, 'rangeInput-small', 'rangeInput-large');
     initInput(element, { additionalClassName: 'rangeInput', errorClassName: 'rangeInput-error', busyClassName: 'rangeInput-busy' }, ...properties);
     validateOnInput(element);
     updateFill(element);

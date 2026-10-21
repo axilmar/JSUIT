@@ -202,3 +202,35 @@ export const defineEventProperty = (element, propertyName, eventName) => {
     });
 }
 
+
+/**
+ * Defines the property 'displaySize' on an element.
+ * 
+ * The property accepts the values 'small', 'medium' (the default) and 'large'. Setting it removes the css classes of the
+ * previous value and adds the css class of the new one; the 'medium' size has no css class, because it is the style
+ * of the element without any size class.
+ * 
+ * @param {*} element the element to define the property on.
+ * @param {string} smallClassName the name of the css class for the 'small' size.
+ * @param {string} largeClassName the name of the css class for the 'large' size.
+ */
+export const defineDisplaySizeProperty = (element, smallClassName, largeClassName) => {
+    let displaySize = 'medium';
+
+    Object.defineProperty(element, 'displaySize', {
+        configurable: true,
+        enumerable: true,
+        get: () => displaySize,
+        set: (value) => {
+            console.assert(value === 'small' || value === 'medium' || value === 'large');
+            element.classList.remove(smallClassName, largeClassName);
+            if (value === 'small') {
+                element.classList.add(smallClassName);
+            }
+            else if (value === 'large') {
+                element.classList.add(largeClassName);
+            }
+            displaySize = value;
+        }
+    });
+}

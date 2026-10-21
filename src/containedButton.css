@@ -124,3 +124,14 @@
 .containedButton.containedButton-busy::after {
     display: none;
 }
+
+/* displaySize: MUI's small and large button sizes */
+.containedButton-small {
+    padding: 4px 10px;
+    font-size: 0.8125rem;
+}
+
+.containedButton-large {
+    padding: 8px 22px;
+    font-size: 0.9375rem;
+}

@@ -63,6 +63,8 @@ const clickEventListener = (event) => {
  * The element gets a boolean property 'selected' (default false), and looks like a MUI checkbox: the check mark is visible
  * only while it is true. The button has the same size in both cases.
  * 
+ * The 'displaySize' property of the icon button sets the size of the box: 'small' 20px, 'medium' 24px (the default), 'large' 28px.
+ * 
  * Whenever 'selected' changes, a `SelectedChangedEvent` is dispatched on the element.
  * 
  * The element gets a property 'onselectedchanged', a function (or null) that handles the 'selectedchanged' event.

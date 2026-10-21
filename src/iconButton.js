@@ -1,5 +1,5 @@
 import { initButton } from "./button.js";
-import { adoptStyleSheet } from "./utility.js";
+import { adoptStyleSheet, defineDisplaySizeProperty } from "./utility.js";
 import { icon as createIcon } from "./icon.js";
 
 import iconButtonStyleSheet from './iconButton.css' with { type: 'css' };
@@ -47,6 +47,8 @@ const defineUrlProperty = (element) => {
  * Its `busyClassName` defaults to 'iconButton-busy'.
  * 
  * The button contains an internal icon element, and gets the following properties:
+ *  - `displaySize`: 'small' (20px), 'medium' (24px, the default) or 'large' (35px), the sizes of MUI's icons; the icon always
+ *    has the size of the button.
  *  - `icon`: returns or replaces the internal icon element.
  *  - `url`: returns or sets the url of the internal icon.
  * 
@@ -61,6 +63,7 @@ export const initIconButton = (element, ...properties) => {
 
     defineIconProperty(element, state);
     defineUrlProperty(element);
+    defineDisplaySizeProperty(element, 'iconButton-small', 'iconButton-large');
     initButton(element, { additionalClassName: 'iconButton', errorClassName: 'iconButton-error', busyClassName: 'iconButton-busy' }, ...properties);
 }
 

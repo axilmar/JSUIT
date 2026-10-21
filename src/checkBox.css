@@ -119,3 +119,12 @@
     --iconButton-rgb: 25, 118, 210;
     --iconButton-alpha: 1;
 }
+
+/* displaySize: the icon is 20px, 24px (default) or 28px high, as in MUI's Checkbox */
+.iconButton.checkBox.iconButton-small {
+    height: 20px;
+}
+
+.iconButton.checkBox.iconButton-large {
+    height: 28px;
+}

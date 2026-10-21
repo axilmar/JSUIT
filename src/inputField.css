@@ -2,7 +2,7 @@
  * MUI "outlined" text field look for an input element, with the MUI default palette.
  *
  * Usage: <input class="inputField" type="text" placeholder="...">
- * Size: default (medium), inputField-small.
+ * Size: default (medium, 56px high), inputField-small (40px), inputField-large (about 69px; MUI has no large input).
  * Optional color classes (the focus color): inputField-secondary, -warning, -info, -success.
  * Error: inputField-error.
  *
@@ -12,23 +12,25 @@
 
 .inputField {
     --inputField-main: #1976d2;                 /* primary.main */
+    --inputField-padding-y: 16.5px;             /* MUI's vertical padding; the border of 1px is inside the height */
+    --inputField-font-size: 1rem;
 
     box-sizing: border-box;
     display: inline-block;
     min-width: 0;
     margin: 0;
-    padding: 16.5px 14px;
+    padding: calc(var(--inputField-padding-y) - 1px) 14px;
     border: 1px solid rgba(0, 0, 0, 0.23);
     border-radius: 4px;
     outline: 0;
     background-color: transparent;
     color: rgba(0, 0, 0, 0.87);
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-size: 1rem;
+    font-size: var(--inputField-font-size);
     font-weight: 400;
     line-height: 1.4375em;
     letter-spacing: 0.00938em;
-    height: calc(1.4375em + 34px);
+    height: calc(1.4375em + 2 * var(--inputField-padding-y));
     vertical-align: middle;
     appearance: none;
     -webkit-appearance: none;
@@ -37,9 +39,12 @@
 }
 
 .inputField-small {
-    padding-top: 8.5px;
-    padding-bottom: 8.5px;
-    height: calc(1.4375em + 18px);
+    --inputField-padding-y: 8.5px;
+}
+
+.inputField-large {
+    --inputField-padding-y: 20px;
+    --inputField-font-size: 1.25rem;
 }
 
 .inputField::placeholder {
@@ -133,7 +138,7 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     transform-origin: top left;
-    transform: translate(9px, 16px) scale(1);
+    transform: translate(9px, 16.5px) scale(1);
     pointer-events: none;
     user-select: none;
     transition:
@@ -143,11 +148,17 @@
 }
 
 .inputField-small + .inputField-label {
-    transform: translate(9px, 9px) scale(1);
+    transform: translate(9px, 8.5px) scale(1);
+}
+
+.inputField-large + .inputField-label {
+    font-size: 1.25rem;
+    transform: translate(9px, 20px) scale(1);
 }
 
 .inputField-label.inputField-label-shrunk,
-.inputField-small + .inputField-label.inputField-label-shrunk {
+.inputField-small + .inputField-label.inputField-label-shrunk,
+.inputField-large + .inputField-label.inputField-label-shrunk {
     max-width: calc(133% - 32px);
     background-color: var(--inputField-label-background);
     transform: translate(9px, -9px) scale(0.75);
@@ -173,4 +184,9 @@
 
 .inputField-container:has(> .inputField[required]) > .inputField-label::after {
     content: " *";
+}
+
+/* the shrunk label of the large size is taller, so it moves up a little more to stay centered on the border */
+.inputField-large + .inputField-label.inputField-label-shrunk {
+    transform: translate(9px, -10px) scale(0.75);
 }

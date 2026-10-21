@@ -28,3 +28,7 @@
     cursor: default;
     opacity: 0.6;
 }
+
+.colorInput.inputField-large {
+    padding: 10px 8px;
+}

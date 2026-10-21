@@ -2,6 +2,7 @@
  * MUI Slider look for an input of type range, with the MUI default palette.
  *
  * Usage: <input class="rangeInput" type="range">
+ * Sizes: default (medium: 4px track, 20px thumb), rangeInput-small (2px, 12px), rangeInput-large (6px, 28px; MUI has no large slider).
  * Optional color classes: rangeInput-secondary, -error, -warning, -info, -success.
  *
  * The filled part of the track uses the property --rangeInput-fill, kept up to date by rangeInput.js.
@@ -11,10 +12,12 @@
 .rangeInput {
     --rangeInput-main: #1976d2;
     --rangeInput-fill: 0%;
+    --rangeInput-track: 4px;                    /* medium; see rangeInput-small and rangeInput-large */
+    --rangeInput-thumb: 20px;
 
     box-sizing: border-box;
     width: 200px;
-    height: 20px;
+    height: var(--rangeInput-thumb);
     margin: 0;
     padding: 0;
     background: transparent;
@@ -27,20 +30,20 @@
 }
 
 .rangeInput::-webkit-slider-runnable-track {
-    height: 4px;
-    border-radius: 2px;
+    height: var(--rangeInput-track);
+    border-radius: calc(var(--rangeInput-track) / 2);
     background: linear-gradient(to right, var(--rangeInput-main) var(--rangeInput-fill), color-mix(in srgb, var(--rangeInput-main) 38%, transparent) var(--rangeInput-fill));
 }
 
 .rangeInput::-moz-range-track {
-    height: 4px;
-    border-radius: 2px;
+    height: var(--rangeInput-track);
+    border-radius: calc(var(--rangeInput-track) / 2);
     background: color-mix(in srgb, var(--rangeInput-main) 38%, transparent);
 }
 
 .rangeInput::-moz-range-progress {
-    height: 4px;
-    border-radius: 2px;
+    height: var(--rangeInput-track);
+    border-radius: calc(var(--rangeInput-track) / 2);
     background: var(--rangeInput-main);
 }
 
@@ -48,9 +51,9 @@
     -webkit-appearance: none;
     appearance: none;
     box-sizing: border-box;
-    width: 20px;
-    height: 20px;
-    margin-top: -8px;
+    width: var(--rangeInput-thumb);
+    height: var(--rangeInput-thumb);
+    margin-top: calc((var(--rangeInput-track) - var(--rangeInput-thumb)) / 2);
     border: 0;
     border-radius: 50%;
     background-color: var(--rangeInput-main);
@@ -60,8 +63,8 @@
 
 .rangeInput::-moz-range-thumb {
     box-sizing: border-box;
-    width: 20px;
-    height: 20px;
+    width: var(--rangeInput-thumb);
+    height: var(--rangeInput-thumb);
     border: 0;
     border-radius: 50%;
     background-color: var(--rangeInput-main);
@@ -91,6 +94,16 @@
     --rangeInput-main: #bdbdbd;                 /* grey[400] */
     cursor: default;
     pointer-events: none;
+}
+
+.rangeInput-small {
+    --rangeInput-track: 2px;
+    --rangeInput-thumb: 12px;
+}
+
+.rangeInput-large {
+    --rangeInput-track: 6px;
+    --rangeInput-thumb: 28px;
 }
 
 .rangeInput-secondary { --rangeInput-main: #9c27b0; }

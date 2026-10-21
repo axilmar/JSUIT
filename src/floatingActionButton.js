@@ -1,5 +1,5 @@
 import { initButton } from "./button.js";
-import { adoptStyleSheet } from "./utility.js";
+import { adoptStyleSheet, defineDisplaySizeProperty } from "./utility.js";
 import { icon as createIcon } from "./icon.js";
 
 import floatingActionButtonStyleSheet from './floatingActionButton.css' with { type: 'css' };
@@ -7,7 +7,6 @@ import floatingActionButtonStyleSheet from './floatingActionButton.css' with { t
 adoptStyleSheet(floatingActionButtonStyleSheet);
 
 const ICON_CLASS = 'floatingActionButton-icon';
-const SIZE_CLASSES = { small: 'floatingActionButton-small', medium: 'floatingActionButton-medium', large: null };
 const EXTENDED_CLASS = 'floatingActionButton-extended';
 
 //defines the property 'icon'; the icon is held in the given state object
@@ -39,29 +38,6 @@ const defineUrlProperty = (element) => {
     });
 };
 
-//defines the property 'size': 'small', 'medium' or 'large' (the default)
-const defineSizeProperty = (element) => {
-    let size = 'large';
-
-    Object.defineProperty(element, 'size', {
-        configurable: true,
-        enumerable: true,
-        get: () => size,
-        set: (newSize) => {
-            console.assert(newSize in SIZE_CLASSES);
-            for (const className of Object.values(SIZE_CLASSES)) {
-                if (className) {
-                    element.classList.remove(className);
-                }
-            }
-            size = newSize;
-            if (SIZE_CLASSES[newSize]) {
-                element.classList.add(SIZE_CLASSES[newSize]);
-            }
-        }
-    });
-};
-
 //defines the property 'extended': if true, the button is a pill that can hold a label after the icon
 const defineExtendedProperty = (element) => {
     Object.defineProperty(element, 'extended', {
@@ -85,7 +61,8 @@ const defineExtendedProperty = (element) => {
  * The button contains an internal icon element, and gets the following properties:
  *  - `icon`: returns or replaces the internal icon element.
  *  - `url`: returns or sets the url of the internal icon.
- *  - `size`: 'small' (40px), 'medium' (48px) or 'large' (56px, the default).
+ *  - `displaySize`: 'small' (40px), 'medium' (48px, the default) or 'large' (56px), the sizes of MUI's Fab; the extended fab
+ *    has the heights 34px, 40px and 48px respectively.
  *  - `extended`: if true, the button is an extended fab; text appended after the icon is the label.
  *
  * @param {*} element the element to initialize.
@@ -99,7 +76,7 @@ export const initFloatingActionButton = (element, ...properties) => {
 
     defineIconProperty(element, state);
     defineUrlProperty(element);
-    defineSizeProperty(element);
+    defineDisplaySizeProperty(element, 'floatingActionButton-small', 'floatingActionButton-large');
     defineExtendedProperty(element);
     initButton(element, { additionalClassName: 'floatingActionButton', errorClassName: 'floatingActionButton-error', busyClassName: 'floatingActionButton-busy' }, ...properties);
 }

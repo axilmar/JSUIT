@@ -1,5 +1,9 @@
 import { initDiv } from "./div.js";
-import { loadSVG } from "./utility.js";
+import { loadSVG, adoptStyleSheet, defineDisplaySizeProperty } from "./utility.js";
+
+import iconStyleSheet from './icon.css' with { type: 'css' };
+
+adoptStyleSheet(iconStyleSheet);
 
 //applies the stretch setting to the svg currently in the element
 const applyStretch = (element, stretch) => {
@@ -58,6 +62,9 @@ const defineUrlProperty = (element) => {
  * 
  * The element gets a property 'url'; when set, the SVG at that url is loaded
  * with `loadSVG` and set as the inner html of the element.
+ * 
+ * The element gets the class 'icon' by default, and a property 'displaySize', which accepts 'small' (20px), 'medium'
+ * (24px, the default) and 'large' (35px), the sizes of MUI's SvgIcon. An icon inside a button takes the size of the button instead.
  * 
  * It also gets a boolean property 'stretch' (default false); when true, the SVG is
  * stretched to the element's size, ignoring its aspect ratio.

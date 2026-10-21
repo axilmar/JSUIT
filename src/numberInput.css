@@ -1,0 +1,64 @@
+/*
+ * Number field: an inputField with MUI's increment / decrement buttons at the right edge.
+ *
+ * The buttons are background layers of the input (arrow icons, hover and pressed backgrounds, dividers); the
+ * pointer is handled by numberInput.js, which sets the classes numberInput-hover-up/-down and numberInput-pressed-up/-down.
+ * Each button is 28px wide and half of the field's height.
+ */
+
+.numberInput {
+    --numberInput-up: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23757575' d='m7 14 5-5 5 5z'/%3E%3C/svg%3E");
+    --numberInput-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23757575' d='m7 10 5 5 5-5z'/%3E%3C/svg%3E");
+    --numberInput-divider: linear-gradient(rgba(0, 0, 0, 0.23), rgba(0, 0, 0, 0.23));
+    --numberInput-up-background: transparent;
+    --numberInput-down-background: transparent;
+
+    padding-right: 36px;
+    background-repeat: no-repeat;
+    background-image:
+        var(--numberInput-up),
+        var(--numberInput-down),
+        linear-gradient(var(--numberInput-up-background), var(--numberInput-up-background)),
+        linear-gradient(var(--numberInput-down-background), var(--numberInput-down-background)),
+        var(--numberInput-divider),
+        var(--numberInput-divider);
+    background-size:
+        28px 50%,
+        28px 50%,
+        28px 50%,
+        28px 50%,
+        1px 100%,
+        28px 1px;
+    background-position:
+        right 0 top 0,
+        right 0 bottom 0,
+        right 0 top 0,
+        right 0 bottom 0,
+        right 28px top 0,
+        right 0 top 50%;
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+/* the browser's own spin buttons */
+.numberInput::-webkit-inner-spin-button,
+.numberInput::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+.numberInput.numberInput-hover-up { --numberInput-up-background: rgba(0, 0, 0, 0.04); }
+.numberInput.numberInput-hover-down { --numberInput-down-background: rgba(0, 0, 0, 0.04); }
+.numberInput.numberInput-pressed-up { --numberInput-up-background: rgba(0, 0, 0, 0.12); }
+.numberInput.numberInput-pressed-down { --numberInput-down-background: rgba(0, 0, 0, 0.12); }
+
+.numberInput:disabled,
+.numberInput[readonly] {
+    --numberInput-up-background: transparent;
+    --numberInput-down-background: transparent;
+}
+
+.numberInput:disabled {
+    opacity: 0.6;
+}

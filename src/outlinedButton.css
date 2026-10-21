@@ -111,3 +111,14 @@
 .outlinedButton.outlinedButton-busy::after {
     display: none;
 }
+
+/* displaySize: MUI's small and large button sizes (1px less padding than the contained button, because of the border) */
+.outlinedButton-small {
+    padding: 3px 9px;
+    font-size: 0.8125rem;
+}
+
+.outlinedButton-large {
+    padding: 7px 21px;
+    font-size: 0.9375rem;
+}

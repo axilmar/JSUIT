@@ -27,8 +27,8 @@ const createApp = () => {
             radioButton({name: "option1"}, "Radio 1"),
             radioButton({name: "option1", id: "radio2"}, "Radio 2"),
             floatingActionButton('+'),
-            numberInput({value: 0, label: "A number"}),
-            passwordInput({label: "Password"}),
+            numberInput({value: 0, label: "A number", displaySize: "large"}),
+            passwordInput({label: "Password", displaySize: "large"}),
             rangeInput(),
             datetimeLocalInput()
         ),

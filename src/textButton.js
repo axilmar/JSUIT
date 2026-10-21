@@ -1,5 +1,5 @@
 import { initButton } from "./button.js";
-import { adoptStyleSheet } from "./utility.js";
+import { adoptStyleSheet, defineDisplaySizeProperty } from "./utility.js";
 
 import textButtonStyleSheet from './textButton.css' with { type: 'css' };
 
@@ -14,11 +14,15 @@ adoptStyleSheet(textButtonStyleSheet);
  * Its `errorClassName` defaults to 'textButton-error'.
  * Its `busyClassName` defaults to 'textButton-busy'.
  * 
+ * The element gets the property 'displaySize', which accepts 'small', 'medium' (the default) and 'large', with the
+ * MUI's button sizes (padding and font size: small 4px 5px, 13px; medium 6px 8px, 14px; large 8px 11px, 15px).
+ * 
  * @param {*} element the element to initialize.
  * @param  {...any} properties the object's properties.
  */
 export const initTextButton = (element, ...properties) => {
     console.assert(element instanceof HTMLButtonElement);
+    defineDisplaySizeProperty(element, 'textButton-small', 'textButton-large');
     initButton(element, { additionalClassName: 'textButton', errorClassName: 'textButton-error', busyClassName: 'textButton-busy' }, ...properties);
 }
 

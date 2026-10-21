@@ -1,5 +1,5 @@
 import { initButton } from "./button.js";
-import { adoptStyleSheet } from "./utility.js";
+import { adoptStyleSheet, defineDisplaySizeProperty } from "./utility.js";
 
 import outlinedButtonStyleSheet from './outlinedButton.css' with { type: 'css' };
 
@@ -14,11 +14,15 @@ adoptStyleSheet(outlinedButtonStyleSheet);
  * Its `errorClassName` defaults to 'outlinedButton-error'.
  * Its `busyClassName` defaults to 'outlinedButton-busy'.
  * 
+ * The element gets the property 'displaySize', which accepts 'small', 'medium' (the default) and 'large', with the
+ * MUI's button sizes (padding and font size, without the 1px border: small 4px 10px, 13px; medium 6px 16px, 14px; large 8px 22px, 15px).
+ * 
  * @param {*} element the element to initialize.
  * @param  {...any} properties the object's properties.
  */
 export const initOutlinedButton = (element, ...properties) => {
     console.assert(element instanceof HTMLButtonElement);
+    defineDisplaySizeProperty(element, 'outlinedButton-small', 'outlinedButton-large');
     initButton(element, { additionalClassName: 'outlinedButton', errorClassName: 'outlinedButton-error', busyClassName: 'outlinedButton-busy' }, ...properties);
 }
 

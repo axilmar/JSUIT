@@ -38,3 +38,7 @@
     color: rgba(0, 0, 0, 0.26);
     cursor: default;
 }
+
+.fileInput.inputField-large {
+    padding: 12px 14px;
+}
