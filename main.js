@@ -17,7 +17,7 @@ const createApp = () => {
             button({ onclick: () => navigate('/app/pink') }, "Pink"),
             button({ onclick: () => navigate('/app/blue') }, "Blue"),
             "Press a button - Πιεσε ενα πληκτρο",
-            checkBox({id: "cb1"}, label({htmlFor: "cb1"}, "Label")),
+            checkBox({id: "cb1"}, "Label"),
             radioButton({name: "option1"}, "Radio 1"),
             radioButton({name: "option1", id: "radio2"}, "Radio 2"),
         ),

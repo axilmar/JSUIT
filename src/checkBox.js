@@ -47,6 +47,12 @@ const defineOnSelectedChangedProperty = (element) => {
     });
 };
 
+//the click event listener; clicks stop at checkbox level
+const clickEventListener = (event) => {
+    event.stopPropagation(); 
+    event.currentTarget.selected = !event.currentTarget.selected;
+}
+
 /**
  * Initializes an instance of HTMLButtonElement as a check box.
  * 
@@ -71,7 +77,7 @@ export const initCheckBox = (element, ...properties) => {
     console.assert(element instanceof HTMLButtonElement);
     defineSelectedProperty(element);
     defineOnSelectedChangedProperty(element);
-    element.addEventListener('click', () => { element.selected = !element.selected; });
+    element.addEventListener('click', clickEventListener, true);
     initIconButton(element, { additionalClassName: 'checkBox', icon: checkIcon() }, ...properties);
 }
 
