@@ -25,25 +25,13 @@ const updateLabel = (element, state) => {
     }
 };
 
-/**
- * Returns the container of an input: the span of class 'input-container' that holds the input and the elements that go with it (the label,
- * the overlay of the text). The container is created if the input has a parent and does not have it yet; the input takes its place.
- *
- * @param {*} element the input element.
- *
- * @return {Element|null} the container, or null if the input has no parent yet.
- */
-export const getInputContainer = (element) => {
-    if (element.parentNode?.classList.contains(CONTAINER_CLASS)) {
-        return element.parentNode;
-    }
-    if (!element.parentNode) {
-        return null;
-    }
-    const container = document.createElement('span');
-    container.className = CONTAINER_CLASS;
+const preparedContainers = new WeakMap();   //element -> the container that it gets when it has a parent, instead of a new one
+const containers = new WeakMap();           //element -> its container, once it has one
+let followObserver = null;
 
-    //moving the input in the page makes it lose the focus and the selection, which are given back
+//puts the container in the place of the element, and the element in the container, as its first child; the element keeps the focus and the
+//selection, which moving it in the page would lose
+const putInContainer = (element, container) => {
     const focused = document.activeElement === element;
     let selection = null;
     try {
@@ -53,14 +41,84 @@ export const getInputContainer = (element) => {
         //the types of input that have no selection
     }
     element.replaceWith(container);
-    container.append(element);
+    container.prepend(element);
     if (focused) {
         element.focus({ preventScroll: true });
-        if (selection) {
+        if (selection && selection[0] !== undefined && typeof element.setSelectionRange === 'function') {
             element.setSelectionRange(...selection);
         }
     }
+};
+
+//the container follows its element: if the element is moved out of the container, the container goes to where the element is; if the element is
+//removed, the container is removed too (and it comes back when the element is added again)
+const followElements = (records) => {
+    const moved = new Set();
+    for (const record of records) {
+        for (const node of [...record.removedNodes, ...record.addedNodes]) {
+            if (containers.has(node)) {
+                moved.add(node);
+            }
+        }
+    }
+    for (const element of moved) {
+        const container = containers.get(element);
+        if (element.parentNode === container) {
+            continue;
+        }
+        if (!element.parentNode) {
+            container.remove();
+        }
+        else if (!element.parentNode.classList?.contains(CONTAINER_CLASS)) {
+            putInContainer(element, container);
+        }
+    }
+};
+
+/**
+ * Returns the container of an input: the span of class 'input-container' that holds the input and the elements that go with it (the label,
+ * the overlay of the text). The container is created if the input has a parent and does not have it yet; the input takes its place.
+ *
+ * The container follows the input: if the input is moved to another parent, the container goes with it; if the input is removed, the container
+ * is removed too, and it is back when the input is added again. So an input is moved or removed as any other element, and the
+ * elements of the container (the label, the buttons) are not left behind.
+ *
+ * @param {*} element the input element.
+ *
+ * @return {Element|null} the container, or null if the input has no parent yet.
+ */
+export const getInputContainer = (element) => {
+    const prepared = preparedContainers.get(element);
+    let container;
+    if (element.parentNode === prepared || element.parentNode?.classList.contains(CONTAINER_CLASS)) {
+        container = element.parentNode;
+    }
+    else if (!element.parentNode) {
+        return null;
+    }
+    else {
+        container = prepared ?? document.createElement('span');
+        container.classList.add(CONTAINER_CLASS);
+        putInContainer(element, container);
+    }
+    containers.set(element, container);
+    if (!followObserver) {
+        followObserver = new MutationObserver(followElements);
+        followObserver.observe(document, { childList: true, subtree: true });
+    }
     return container;
+};
+
+/**
+ * Sets the container that an element gets when it is added to the page (see `getInputContainer`), instead of a new span: the element takes
+ * the place of the container, and goes in it, as its first child. It is for the components that have more elements around the element
+ * that the user holds, as the combo box, which is a select element; the container is created by the component, with the other elements.
+ *
+ * @param {*} element the element.
+ * @param {Element} container the container, which gets the class 'input-container'.
+ */
+export const setInputContainer = (element, container) => {
+    preparedContainers.set(element, container);
 };
 
 const pendingRefs = new Set();          //the inputs that wait for a parent, as weak references
@@ -212,7 +270,7 @@ const defineVariantProperty = (element) => {
  * shrunk otherwise (above the field in the standard variant, on the top of the field in the filled one, on the border in the outlined
  * one; always shrunk for the types that always show something, like date and color).
  * An input cannot contain the label, so the input is wrapped in a span of class 'input-container' together with the label,
- * as soon as it has a parent; use the container (`element.parentNode`) to move the field. In the outlined variant, the label has
+ * as soon as it has a parent; the container follows the input when it is moved or removed. In the outlined variant, the label has
  * an opaque background (css property `--input-label-background`, default white) that opens the notch in the border.
  * Setting it to null removes the label.
  * 

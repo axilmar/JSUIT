@@ -14,6 +14,9 @@ import { rating } from './src/rating.js';
 import { span } from '/src/span.js';
 import { property, event } from './src/utility.js';
 import { maskedInput } from './src/maskedInput.js';
+import { comboBox } from './src/comboBox.js';
+import { optGroup } from './src/optGroup.js';
+import { option } from './src/option.js';
 
 const ipv4mask =
 [
@@ -129,7 +132,14 @@ router([
                          "Hide/Show"
                     ),
                     span({id: "hideme"}, "Some widget"),
-                    maskedInput({mask:ipv4mask})
+                    maskedInput({mask:ipv4mask}),
+                    comboBox({label: "Select option"},
+                        optGroup({label: "Options"},
+                            option("Option 1"),
+                            option("Option 2"),
+                            option("Option 3")
+                        )
+                    )
                 )
             }
         ]
