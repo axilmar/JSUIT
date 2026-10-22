@@ -1,4 +1,6 @@
 import { isString, isFunction, isDOMNode } from "./utility.js";
+import { RouteNotFoundError } from "./RouteNotFoundError.js";
+import { OutletNotFoundError } from "./OutletNotFoundError.js";
 
 /******************************************************************************
     PRIVATE
@@ -220,34 +222,6 @@ class UnroutedEvent extends Event {
      */
     constructor(options) {
         super(UnroutedEvent.NAME, options);
-    }
-}
-
-/**
- * Route not found error.
- * Thrown when no route is found for a path.
- */
-export class RouteNotFoundError extends Error {
-    /**
-     * The constructor.
-     * @param {*} path the path for which a route was not found.
-     */
-    constructor(path) {
-        super(`Route not found for path '${path}'`);
-    }
-}
-
-/**
- * Outlet not found error.
- * Thrown when no outlet element exists for a route.
- */
-export class OutletNotFoundError extends Error {
-    /**
-     * The constructor.
-     * @param {*} path the path for which an outlet was not found.
-     */
-    constructor(path) {
-        super(`Outlet not found for path '${path}'`);
     }
 }
 

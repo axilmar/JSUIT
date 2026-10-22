@@ -13,6 +13,44 @@ import { group } from './src/group.js';
 import { rating } from './src/rating.js';
 import { span } from '/src/span.js';
 import { property, event } from './src/utility.js';
+import { maskedInput } from './src/maskedInput.js';
+
+const ipv4mask =
+[
+    {
+        label: "   ",
+        pattern: "[0-9]{3}",
+        min: 0,
+        max: 255
+    },
+    {
+        label: '.'
+    },
+    {
+        label: "   ",
+        pattern: "[0-9]{3}",
+        min: 0,
+        max: 255
+    },
+    {
+        label: '.'
+    },
+    {
+        label: "   ",
+        pattern: "[0-9]{3}",
+        min: 0,
+        max: 255
+    },
+    {
+        label: '.'
+    },
+    {
+        label: "   ",
+        pattern: "[0-9]{3}",
+        min: 0,
+        max: 255
+    }
+];
 
 const createApp = () => {
     return div(
@@ -90,7 +128,8 @@ router([
                         event("click", () => {document.getElementById("hideme").visible = !document.getElementById("hideme").visible}),
                          "Hide/Show"
                     ),
-                    span({id: "hideme"}, "Some widget")
+                    span({id: "hideme"}, "Some widget"),
+                    maskedInput({mask:ipv4mask})
                 )
             }
         ]

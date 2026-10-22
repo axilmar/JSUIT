@@ -391,3 +391,45 @@
 .input-container:has(> .input[required]) > .input-label::after {
     content: " *";
 }
+
+/*
+ * The overlay of the text: the segmented inputs (the date and time inputs, and the masked input) show parts of their text in the error color,
+ * which an input cannot do; see attachTextOverlay in segmentedInputUtil.js. The text of the input is transparent, and the overlay, which is
+ * placed exactly over the input, shows the same text. The caret and the selection are the ones of the input.
+ */
+
+.input.input-overlaid,
+.input.input-overlaid:disabled {
+    color: transparent;
+    caret-color: rgba(0, 0, 0, 0.87);
+}
+
+.input-overlaid::selection {
+    background-color: rgba(25, 118, 210, 0.3);
+}
+
+.input-overlay {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: transparent;
+    overflow: hidden;
+    white-space: pre;
+    pointer-events: none;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.input-container:has(> .input:disabled) > .input-overlay {
+    color: rgba(0, 0, 0, 0.38);
+}
+
+.input-overlay-error {
+    color: #d32f2f;
+}
+
+.input-overlay-placeholder {
+    opacity: 0.42;
+}

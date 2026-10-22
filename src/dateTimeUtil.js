@@ -1,4 +1,5 @@
 import { showDateTimePicker } from "./dateTimePicker.js";
+import { attachSegmentedEditor } from "./segmentedInputUtil.js";
 import { adoptStyleSheet } from "./utility.js";
 
 import dateTimePickerInputStyleSheet from './dateTimePickerInput.css' with { type: 'css' };
@@ -96,33 +97,22 @@ export const getNow = () => {
 //returns 1 if the value is after now, -1 if it is before now, and 0 if it is now, at the granularity
 export const compareWithNow = (value, granularity) => Math.sign(keyAt(value, granularity) - keyAt(getNow(), granularity));
 
-const nativeValue = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value');
-
 const SAMPLE_DATE = new Date(2000, 0, 15, 13, 5);   //any date and time with a 2-digit PM hour, to get the layout of the locale
-
-//the elements that must submit their ISO value with a form, as weak references
-let submitters = [];
-
-//replaces, in the data of a submitted form, the displayed text of the segmented inputs by their values
-document.addEventListener('formdata', (event) => {
-    submitters = submitters.filter(reference => reference.deref());
-    for (const reference of submitters) {
-        const element = reference.deref();
-        if (element.form === event.target && element.name && !element.disabled) {
-            event.formData.set(element.name, element.value);
-        }
-    }
-});
 
 const daysInMonth = (year, month) => new Date(year ?? 2000, month ?? 1, 0).getDate();     //month is 1-12
 
 const weeksInYear = (year) => getIsoWeek(year, 11, 28).week;                              //december 28th is always in the last week
 
-//creates the segments and literals of the type, as an array of { literal } and { segment } objects
-const createLayout = (type, hour12, seconds) => {
-    const segment = (kind, digits, min, max, placeholder) => ({ segment: { kind, digits, min, max, placeholder, value: null, buffer: '' } });
+//returns the AM and PM labels of the locale
+const getPeriodLabels = () => [1, 13].map(hour => {
+    const label = new Intl.DateTimeFormat(undefined, { hour: 'numeric', hour12: true }).formatToParts(new Date(2000, 0, 15, hour)).find(part => part.type === 'dayPeriod');
+    return label?.value ?? (hour < 12 ? 'AM' : 'PM');
+});
+
+//creates the segments and literals of the type, as an array of { literal } and { segment } objects; the functions create the segments
+const createLayout = (type, hour12, seconds, createNumber, createPeriod) => {
     if (type === 'week') {
-        return [{ literal: 'Week ' }, segment('week', 2, 1, 53, 'ww'), { literal: ', ' }, segment('weekYear', 4, 1, 9999, 'yyyy')];
+        return [{ literal: 'Week ' }, { segment: createNumber('week', 2, 1, 53, 'ww') }, { literal: ', ' }, { segment: createNumber('weekYear', 4, 1, 9999, 'yyyy') }];
     }
 
     const options = {
@@ -135,31 +125,17 @@ const createLayout = (type, hour12, seconds) => {
         options.second = '2-digit';
     }
     const layout = [];
-    const periods = [];
 
     for (const part of new Intl.DateTimeFormat(undefined, options).formatToParts(SAMPLE_DATE)) {
         switch (part.type) {
-            case 'month': layout.push(segment('month', 2, 1, 12, 'mm')); break;
-            case 'day': layout.push(segment('day', 2, 1, 31, 'dd')); break;
-            case 'year': layout.push(segment('year', 4, 1, 9999, 'yyyy')); break;
-            case 'hour': layout.push(hour12 ? segment('hour', 2, 1, 12, 'hh') : segment('hour', 2, 0, 23, 'hh')); break;
-            case 'minute': layout.push(segment('minute', 2, 0, 59, 'mm')); break;
-            case 'second': layout.push(segment('second', 2, 0, 59, 'ss')); break;
-            case 'dayPeriod': layout.push(segment('ampm', 0, 0, 1, '')); break;
+            case 'month': layout.push({ segment: createNumber('month', 2, 1, 12, 'mm') }); break;
+            case 'day': layout.push({ segment: createNumber('day', 2, 1, 31, 'dd') }); break;
+            case 'year': layout.push({ segment: createNumber('year', 4, 1, 9999, 'yyyy') }); break;
+            case 'hour': layout.push({ segment: hour12 ? createNumber('hour', 2, 1, 12, 'hh') : createNumber('hour', 2, 0, 23, 'hh') }); break;
+            case 'minute': layout.push({ segment: createNumber('minute', 2, 0, 59, 'mm') }); break;
+            case 'second': layout.push({ segment: createNumber('second', 2, 0, 59, 'ss') }); break;
+            case 'dayPeriod': layout.push({ segment: createPeriod() }); break;
             case 'literal': layout.push({ literal: part.value }); break;
-        }
-    }
-
-    //the AM and PM labels of the locale
-    for (const hour of [1, 13]) {
-        const label = new Intl.DateTimeFormat(undefined, { hour: 'numeric', hour12: true }).formatToParts(new Date(2000, 0, 15, hour)).find(part => part.type === 'dayPeriod');
-        periods.push(label?.value ?? (hour < 12 ? 'AM' : 'PM'));
-    }
-    for (const item of layout) {
-        if (item.segment?.kind === 'ampm') {
-            item.segment.labels = periods;
-            item.segment.digits = Math.max(...periods.map(period => period.length));
-            item.segment.placeholder = '-'.repeat(item.segment.digits);
         }
     }
     return layout;
@@ -171,7 +147,12 @@ const createLayout = (type, hour12, seconds) => {
  *
  * The element is a text input that shows the locale's format ('mm/dd/yyyy, HH:mm'; the order of the parts and the separators are the locale's); the user edits one segment at a time:
  * digits fill the selected segment and move to the next one when it is complete, ArrowUp and ArrowDown change the segment,
- * ArrowLeft, ArrowRight and Tab move between segments, Backspace and Delete clear the segment.
+ * ArrowLeft, ArrowRight and Tab move between segments, Backspace and Delete clear the segment. The editing is done by the segmented input
+ * engine (see `attachSegmentedEditor` in segmentedInputUtil.js).
+ *
+ * The digits that the user types are never changed: a month 13, or a day 30 in February, is accepted, and the segment is shown in the error
+ * color (and the border and the label of the input too, as the input is invalid), so that the user sees what to correct. The value of the
+ * input is the empty string while a segment is out of range.
  *
  * The element keeps the interface of the native input of the given type:
  *  - `type` returns the given type, and `value` returns and accepts the ISO value of that type ('2026-10-21T14:30', '14:30',
@@ -219,40 +200,10 @@ export const attachSegmentedInput = (element, type) => {
 
     let hour12 = state.hour12;
     let seconds = state.seconds;
-    let layout = [];
     let segments = [];
-    const ranges = [];              //the [start, end) of each segment in the displayed text
-    const textSetter = Object.getOwnPropertyDescriptor(element, 'value')?.set ?? nativeValue.set;
-    const textGetter = Object.getOwnPropertyDescriptor(element, 'value')?.get ?? nativeValue.get;
-    let active = 0;                 //the index of the selected segment
-    let mouseDown = false;
-    let lastValue = '';
 
     const now = new Date();
     const find = (kind) => segments.find(segment => segment.kind === kind);
-
-    //creates the segments for the current hour format
-    const build = () => {
-        hour12 = state.hour12;
-        seconds = state.seconds;
-        layout = createLayout(type, hour12, seconds);
-        segments = layout.filter(item => item.segment).map(item => item.segment);
-        ranges.length = 0;
-        active = Math.min(active, segments.length - 1);
-    };
-
-    //the text shown for a segment
-    const display = (segment) => {
-        let text;
-        if (segment.kind === 'ampm') {
-            text = segment.value === null ? segment.placeholder : segment.labels[segment.value];
-            return text.padEnd(segment.digits);
-        }
-        if (segment.buffer) {
-            return segment.buffer.padStart(segment.digits, '0');
-        }
-        return segment.value === null ? segment.placeholder : String(segment.value).padStart(segment.digits, '0');
-    };
 
     //the largest value of a segment; the days depend on the month and year
     const maxOf = (segment) => {
@@ -264,132 +215,6 @@ export const attachSegmentedInput = (element, type) => {
             return year ? weeksInYear(year) : 53;
         }
         return segment.max;
-    };
-
-    //keeps the day and week inside their month and year; not while the year is being typed, because its first digits are not the year yet
-    const clamp = () => {
-        if (find('year')?.buffer || find('weekYear')?.buffer) {
-            return;
-        }
-        for (const kind of ['day', 'week']) {
-            const segment = find(kind);
-            if (segment && segment.value !== null && segment.value > maxOf(segment)) {
-                segment.value = maxOf(segment);
-            }
-        }
-    };
-
-    //returns the ISO value of the segments, or '' if they are incomplete or not a date
-    const getIsoValue = () => {
-        if (segments.some(segment => segment.value === null)) {
-            return '';
-        }
-        const get = (kind) => find(kind)?.value;
-        if (type === 'week') {
-            const year = get('weekYear');
-            return get('week') <= weeksInYear(year) ? `${String(year).padStart(4, '0')}-W${String(get('week')).padStart(2, '0')}` : '';
-        }
-        const ampm = get('ampm');
-        const hour = hour12 ? get('hour') % 12 + 12 * (ampm ?? 0) : get('hour');
-        const value = { year: get('year') ?? 2000, month: (get('month') ?? 1) - 1, day: get('day') ?? 1, hour: hour ?? 0, minute: get('minute') ?? 0, second: get('second') ?? 0 };
-        if (value.day > daysInMonth(value.year, value.month + 1)) {
-            return '';
-        }
-        return formatValue(type, value, seconds);
-    };
-
-    //loads the segments from an ISO value; an invalid value clears them
-    const setIsoValue = (iso) => {
-        for (const segment of segments) {
-            segment.value = null;
-            segment.buffer = '';
-        }
-        const week = type === 'week' && /^(\d{4,})-W(\d{2})/.exec(iso ?? '');
-        const value = !week && parseValue(type, iso);
-        if (week) {
-            find('weekYear').value = +week[1];
-            find('week').value = +week[2];
-        }
-        else if (value) {
-            const set = (kind, number) => { const segment = find(kind); if (segment) segment.value = number; };
-            set('year', value.year);
-            set('month', value.month + 1);
-            set('day', value.day);
-            set('hour', hour12 ? (value.hour + 11) % 12 + 1 : value.hour);
-            set('ampm', value.hour >= 12 ? 1 : 0);
-            set('minute', value.minute);
-            set('second', value.second);
-        }
-    };
-
-    //updates the displayed text, keeping the selection on the active segment
-    const render = () => {
-        let text = '';
-        let index = 0;
-        for (const item of layout) {
-            const piece = item.segment ? display(item.segment) : item.literal;
-            if (item.segment) {
-                ranges[index++] = [text.length, text.length + piece.length];
-            }
-            text += piece;
-        }
-        textSetter.call(element, text);
-        if (document.activeElement === element) {
-            element.setSelectionRange(...ranges[active]);
-        }
-    };
-
-    //sets the validity of the element from the segments, min, max and required
-    const updateValidity = () => {
-        const filled = segments.filter(segment => segment.value !== null).length;
-        const iso = getIsoValue();
-        const min = element.min?.slice(0, iso.length || undefined);
-        const max = element.max?.slice(0, iso.length || undefined);
-        let message = '';
-        if (filled === 0) {
-            message = element.required ? 'Please fill out this field.' : '';
-        }
-        else if (filled < segments.length) {
-            message = 'Please enter a complete value.';
-        }
-        else if (!iso) {
-            message = 'Please enter a valid value.';
-        }
-        else if (min && iso < min) {
-            message = `Value must be ${element.min} or later.`;
-        }
-        else if (max && iso > max) {
-            message = `Value must be ${element.max} or earlier.`;
-        }
-        else if (!state.futureEnabled && compareWithNow(parseValue(type, iso), getGranularity(type, seconds)) > 0) {
-            message = 'Value must not be in the future.';
-        }
-        else if (!state.pastEnabled && compareWithNow(parseValue(type, iso), getGranularity(type, seconds)) < 0) {
-            message = 'Value must not be in the past.';
-        }
-        element.setCustomValidity(message);
-    };
-
-    //called after the user changed a segment
-    const edited = () => {
-        clamp();
-        render();
-        updateValidity();
-        element.dispatchEvent(new Event('input', { bubbles: true }));
-        const value = getIsoValue();
-        if (value !== lastValue) {
-            lastValue = value;
-            element.dispatchEvent(new Event('change', { bubbles: true }));
-        }
-    };
-
-    //selects a segment
-    const select = (index) => {
-        const previous = segments[active];
-        previous.buffer = '';
-        active = Math.max(0, Math.min(segments.length - 1, index));
-        render();
-        element.setSelectionRange(...ranges[active]);
     };
 
     //the value of a segment while it has none, when the user presses the arrows
@@ -409,7 +234,7 @@ export const attachSegmentedInput = (element, type) => {
     };
 
     //changes a segment by one step, wrapping around
-    const step = (segment, direction) => {
+    const stepSegment = (segment, direction) => {
         segment.buffer = '';
         if (segment.value === null) {
             segment.value = defaultValue(segment);
@@ -421,21 +246,20 @@ export const attachSegmentedInput = (element, type) => {
         }
     };
 
-    //types a digit in a segment; returns true if the segment is complete and the selection should move on
+    //types a digit in a segment; returns true if the segment is complete and the selection should move on. The value is what was typed, even if
+    //it is out of the range of the segment, so that the user sees the error (the segment is shown in the error color) and corrects it.
     const typeDigit = (segment, digit) => {
         const max = maxOf(segment);
-        let buffer = segment.buffer + digit;
-        if (+buffer > max) {
-            buffer = digit;
-        }
+        const buffer = segment.buffer + digit;
         const number = +buffer;
         const complete = buffer.length >= segment.digits || number * 10 > max;
-        if (complete || number >= segment.min) {
-            segment.value = Math.max(number, segment.min);
-        }
+        segment.value = number;
         segment.buffer = complete ? '' : buffer;
         return complete;
     };
+
+    //true if the value of a segment with a number is out of its range
+    const isOutOfRange = (segment) => segment.value !== null && (segment.value < segment.min || segment.value > maxOf(segment));
 
     //types a letter in the AM/PM segment
     const typeLetter = (segment, letter) => {
@@ -449,6 +273,119 @@ export const attachSegmentedInput = (element, type) => {
         return false;
     };
 
+    //creates a segment with a number: the year, month, day, hour, minute, second, week or week year
+    const createNumber = (kind, digits, min, max, placeholder) => ({
+        kind, digits, min, max, placeholder, value: null, buffer: '',
+        text() {
+            if (this.buffer) {
+                return this.buffer.padStart(this.digits, '0');
+            }
+            return this.value === null ? this.placeholder : String(this.value).padStart(this.digits, '0');
+        },
+        isEmpty() { return this.value === null && !this.buffer; },
+        clear() { this.value = null; this.buffer = ''; },
+        endTyping() { this.buffer = ''; },
+        type(char) { return /^\d$/.test(char) ? typeDigit(this, char) : null; },
+        step(direction) { stepSegment(this, direction); },
+        isError() { return !this.buffer && isOutOfRange(this); }
+    });
+
+    //creates the AM/PM segment
+    const createPeriod = () => {
+        const labels = getPeriodLabels();
+        const digits = Math.max(...labels.map(label => label.length));
+        return {
+            kind: 'ampm', digits, min: 0, max: 1, placeholder: '-'.repeat(digits), labels, value: null, buffer: '',
+            text() { return (this.value === null ? this.placeholder : this.labels[this.value]).padEnd(this.digits); },
+            isEmpty() { return this.value === null; },
+            clear() { this.value = null; },
+            endTyping() { },
+            type(char) { return /^\S$/.test(char) && typeLetter(this, char) ? true : null; },
+            step(direction) { stepSegment(this, direction); }
+        };
+    };
+
+    //creates the layout, for the current hour format
+    const build = () => {
+        hour12 = state.hour12;
+        seconds = state.seconds;
+        const layout = createLayout(type, hour12, seconds, createNumber, createPeriod);
+        segments = layout.filter(item => item.segment).map(item => item.segment);
+        return layout;
+    };
+
+    //returns the ISO value of the segments, or '' if they are incomplete or not a date
+    const getIsoValue = () => {
+        if (segments.some(segment => segment.value === null || (segment.kind !== 'ampm' && isOutOfRange(segment)))) {
+            return '';
+        }
+        const get = (kind) => find(kind)?.value;
+        if (type === 'week') {
+            const year = get('weekYear');
+            return get('week') <= weeksInYear(year) ? `${String(year).padStart(4, '0')}-W${String(get('week')).padStart(2, '0')}` : '';
+        }
+        const ampm = get('ampm');
+        const hour = hour12 ? get('hour') % 12 + 12 * (ampm ?? 0) : get('hour');
+        const value = { year: get('year') ?? 2000, month: (get('month') ?? 1) - 1, day: get('day') ?? 1, hour: hour ?? 0, minute: get('minute') ?? 0, second: get('second') ?? 0 };
+        if (value.day > daysInMonth(value.year, value.month + 1)) {
+            return '';
+        }
+        return formatValue(type, value, seconds);
+    };
+
+    //loads the segments from an ISO value; an invalid value clears them
+    const setIsoValue = (iso) => {
+        for (const segment of segments) {
+            segment.clear();
+        }
+        const week = type === 'week' && /^(\d{4,})-W(\d{2})/.exec(iso ?? '');
+        const value = !week && parseValue(type, iso);
+        if (week) {
+            find('weekYear').value = +week[1];
+            find('week').value = +week[2];
+        }
+        else if (value) {
+            const set = (kind, number) => { const segment = find(kind); if (segment) segment.value = number; };
+            set('year', value.year);
+            set('month', value.month + 1);
+            set('day', value.day);
+            set('hour', hour12 ? (value.hour + 11) % 12 + 1 : value.hour);
+            set('ampm', value.hour >= 12 ? 1 : 0);
+            set('minute', value.minute);
+            set('second', value.second);
+        }
+    };
+
+    //returns the message of why the value is not valid, from the segments, min, max, required, futureEnabled and pastEnabled
+    const getValidationMessage = () => {
+        const filled = segments.filter(segment => segment.value !== null).length;
+        const iso = getIsoValue();
+        const min = element.min?.slice(0, iso.length || undefined);
+        const max = element.max?.slice(0, iso.length || undefined);
+        if (filled === 0) {
+            return element.required ? 'Please fill out this field.' : '';
+        }
+        if (filled < segments.length) {
+            return 'Please enter a complete value.';
+        }
+        if (!iso) {
+            return 'Please enter a valid value.';
+        }
+        if (min && iso < min) {
+            return `Value must be ${element.min} or later.`;
+        }
+        if (max && iso > max) {
+            return `Value must be ${element.max} or earlier.`;
+        }
+        if (!state.futureEnabled && compareWithNow(parseValue(type, iso), getGranularity(type, seconds)) > 0) {
+            return 'Value must not be in the future.';
+        }
+        if (!state.pastEnabled && compareWithNow(parseValue(type, iso), getGranularity(type, seconds)) < 0) {
+            return 'Value must not be in the past.';
+        }
+        return '';
+    };
+
     //assigns pasted text: an ISO value, or the numbers of the text in the order of the segments
     const paste = (text) => {
         text = text.trim();
@@ -459,9 +396,9 @@ export const attachSegmentedInput = (element, type) => {
             const numbers = text.match(/\d+/g) ?? [];
             const numeric = segments.filter(segment => segment.kind !== 'ampm');
             if (numbers.length < numeric.length) {
-                return;
+                return false;
             }
-            numeric.forEach((segment, index) => { segment.value = Math.max(segment.min, Math.min(maxOf(segment), +numbers[index])); });
+            numeric.forEach((segment, index) => { segment.value = +numbers[index]; });
             const period = find('ampm');
             if (period) {
                 const letter = text.replace(/[\d\s:,./-]/g, '');
@@ -469,143 +406,20 @@ export const attachSegmentedInput = (element, type) => {
                 if (period.value < 0) period.value = null;
             }
         }
-        edited();
+        return true;
     };
 
-    //the events
-    element.addEventListener('beforeinput', (event) => {
-        event.preventDefault();
-        const segment = segments[active];
-        switch (event.inputType) {
-            case 'insertText': {
-                const text = event.data ?? '';
-                if (/^\d$/.test(text) && segment.kind !== 'ampm') {
-                    const complete = typeDigit(segment, text);
-                    edited();
-                    if (complete) {
-                        select(active + 1);
-                    }
-                }
-                else if (segment.kind === 'ampm' && /^\S$/.test(text)) {
-                    if (typeLetter(segment, text)) {
-                        edited();
-                        select(active + 1);
-                    }
-                }
-                break;
-            }
-            case 'insertFromPaste':
-            case 'insertFromDrop':
-                paste(event.data ?? event.dataTransfer?.getData('text') ?? '');
-                break;
-            case 'deleteContentBackward':
-            case 'deleteContentForward':
-            case 'deleteByCut':
-            case 'deleteWordBackward':
-            case 'deleteWordForward':
-                if (segment.value !== null || segment.buffer) {
-                    segment.value = null;
-                    segment.buffer = '';
-                    edited();
-                }
-                break;
-        }
+    const editor = attachSegmentedEditor(element, {
+        type,
+        inputMode: 'numeric',
+        build,
+        getValue: getIsoValue,
+        setValue: setIsoValue,
+        validate: getValidationMessage,
+        paste
     });
-
-    element.addEventListener('keydown', (event) => {
-        if (event.ctrlKey || event.metaKey || event.altKey || element.readOnly) {
-            return;
-        }
-        switch (event.key) {
-            case 'ArrowUp':
-            case 'ArrowDown':
-                event.preventDefault();
-                step(segments[active], event.key === 'ArrowUp' ? 1 : -1);
-                edited();
-                break;
-            case 'ArrowLeft':
-                event.preventDefault();
-                select(active - 1);
-                break;
-            case 'ArrowRight':
-                event.preventDefault();
-                select(active + 1);
-                break;
-            case 'Tab': {
-                const target = active + (event.shiftKey ? -1 : 1);
-                if (target >= 0 && target < segments.length) {
-                    event.preventDefault();
-                    select(target);
-                }
-                break;
-            }
-        }
-    });
-
-    //selects the segment under the caret after a click
-    element.addEventListener('mousedown', () => { mouseDown = true; });
-    element.addEventListener('mouseup', () => { mouseDown = false; });
-    element.addEventListener('click', () => {
-        const caret = element.selectionStart;
-        const index = ranges.findIndex(([start, end]) => caret >= start && caret <= end);
-        select(index >= 0 ? index : caret < ranges[0][0] ? 0 : segments.length - 1);
-    });
-
-    //selects the first segment when the field gets the focus from the keyboard; completes the typing in progress on blur
-    element.addEventListener('focus', () => {
-        if (!mouseDown) {
-            select(0);
-        }
-    });
-    element.addEventListener('blur', () => {
-        segments[active].buffer = '';
-        render();
-    });
-
-    //the interface of a native input
-    Object.defineProperty(element, 'type', { configurable: true, enumerable: true, get: () => type, set: () => {} });
-    Object.defineProperty(element, 'value', {
-        configurable: true,
-        enumerable: true,
-        get: () => getIsoValue(),
-        set: (value) => {
-            setIsoValue(value);
-            render();
-            updateValidity();
-            lastValue = getIsoValue();
-        }
-    });
-
-    //shows the segments, and sizes the field for them
-    const show = () => {
-        render();
-        updateValidity();
-        lastValue = getIsoValue();
-        element.size = layout.map(item => item.segment ? display(item.segment) : item.literal).join('').length + 1;
-    };
-
-    //the hour format changed: the segments are created again, and the value is kept if it is complete
-    state.validate = updateValidity;
-    state.apply = () => {
-        const iso = getIsoValue();
-        build();
-        setIsoValue(iso);
-        show();
-    };
-
-    element.autocomplete = 'off';
-    element.spellcheck = false;
-    element.inputMode = 'numeric';
-
-    //load the value the element already has (properties are applied before this function is invoked), then show the label as shrunk
-    const initialValue = textGetter.call(element);
-    build();
-    setIsoValue(initialValue);
-    show();
-    submitters.push(new WeakRef(element));
-    if (element.label) {
-        element.label = element.label;
-    }
+    state.validate = editor.validate;
+    state.apply = editor.rebuild;
 }
 
 //defines a boolean property that is held in the state shared with the segmented field, which is notified through the function of the state with the given name

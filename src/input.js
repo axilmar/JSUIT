@@ -25,16 +25,99 @@ const updateLabel = (element, state) => {
     }
 };
 
+/**
+ * Returns the container of an input: the span of class 'input-container' that holds the input and the elements that go with it (the label,
+ * the overlay of the text). The container is created if the input has a parent and does not have it yet; the input takes its place.
+ *
+ * @param {*} element the input element.
+ *
+ * @return {Element|null} the container, or null if the input has no parent yet.
+ */
+export const getInputContainer = (element) => {
+    if (element.parentNode?.classList.contains(CONTAINER_CLASS)) {
+        return element.parentNode;
+    }
+    if (!element.parentNode) {
+        return null;
+    }
+    const container = document.createElement('span');
+    container.className = CONTAINER_CLASS;
+
+    //moving the input in the page makes it lose the focus and the selection, which are given back
+    const focused = document.activeElement === element;
+    let selection = null;
+    try {
+        selection = focused ? [element.selectionStart, element.selectionEnd] : null;
+    }
+    catch (error) {
+        //the types of input that have no selection
+    }
+    element.replaceWith(container);
+    container.append(element);
+    if (focused) {
+        element.focus({ preventScroll: true });
+        if (selection) {
+            element.setSelectionRange(...selection);
+        }
+    }
+    return container;
+};
+
+const pendingRefs = new Set();          //the inputs that wait for a parent, as weak references
+const pendingCallbacks = new WeakMap(); //input -> the functions to invoke when it has a parent
+let pendingObserver = null;
+
+//gives the container to the pending inputs that have a parent now
+const placePending = () => {
+    for (const reference of [...pendingRefs]) {
+        const element = reference.deref();
+        const container = element && getInputContainer(element);
+        if (!element) {
+            pendingRefs.delete(reference);
+        }
+        else if (container) {
+            pendingRefs.delete(reference);
+            const callbacks = pendingCallbacks.get(element);
+            pendingCallbacks.delete(element);
+            callbacks.forEach(callback => callback(container));
+        }
+    }
+    if (pendingRefs.size === 0) {
+        pendingObserver.disconnect();
+        pendingObserver = null;
+    }
+};
+
+/**
+ * Invokes a function with the container of an input (see `getInputContainer`), as soon as the input has a parent: immediately, if it
+ * has one, or when it is added to the page.
+ *
+ * @param {*} element the input element.
+ * @param {Function} callback the function, which is passed the container.
+ */
+export const whenInputPlaced = (element, callback) => {
+    const container = getInputContainer(element);
+    if (container) {
+        callback(container);
+        return;
+    }
+    if (pendingCallbacks.has(element)) {
+        pendingCallbacks.get(element).push(callback);
+        return;
+    }
+    pendingCallbacks.set(element, [callback]);
+    pendingRefs.add(new WeakRef(element));
+    if (!pendingObserver) {
+        pendingObserver = new MutationObserver(placePending);
+        pendingObserver.observe(document, { childList: true, subtree: true });
+    }
+};
+
 //puts the input and the label in a container, if the input has a parent; returns true if the container exists
 const placeLabel = (element, state) => {
+    state.container = getInputContainer(element);
     if (!state.container) {
-        if (!element.parentNode) {
-            return false;
-        }
-        state.container = document.createElement('span');
-        state.container.className = CONTAINER_CLASS;
-        element.replaceWith(state.container);
-        state.container.append(element);
+        return false;
     }
     state.container.append(state.label);
     return true;
@@ -42,20 +125,15 @@ const placeLabel = (element, state) => {
 
 //defines the property 'label'
 const defineLabelProperty = (element) => {
-    const state = { label: null, container: null, observer: null };
+    const state = { label: null, container: null };
 
-    //an element without a parent cannot get its container yet; it is placed when the element is first rendered
-    const placeWhenRendered = () => {
-        if (state.observer) {
-            return;
-        }
-        state.observer = new ResizeObserver(() => {
-            if (!state.label || placeLabel(element, state)) {
-                state.observer.disconnect();
-                state.observer = null;
+    //an element without a parent cannot get its container yet; the label is placed when the element is added to the page
+    const placeWhenAdded = () => {
+        whenInputPlaced(element, () => {
+            if (state.label) {
+                placeLabel(element, state);
             }
         });
-        state.observer.observe(element);
     };
 
     Object.defineProperty(element, 'value', {
@@ -87,7 +165,7 @@ const defineLabelProperty = (element) => {
                 state.label.classList.add(LABEL_CLASS);
                 updateLabel(element, state);
                 if (!placeLabel(element, state)) {
-                    placeWhenRendered();
+                    placeWhenAdded();
                 }
             }
         }
