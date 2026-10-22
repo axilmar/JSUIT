@@ -139,6 +139,14 @@ const defineSpinner = (element) => {
     return { show, hide };
 };
 
+//if the element has a disabled property, then define an enabled property for it,
+//if it does not have one
+const defineEnabledProperty = (element) => {
+    if ('disabled' in element && !('enabled' in element)) {
+        defineReverseBooleanProperty(element, 'enabled', 'disabled');
+    }
+}
+
 /**
  * Initializes an element.
  * 
@@ -183,6 +191,7 @@ export const initElement = (element, ...properties) => {
     defineEventProperty(element, "onrouted", "routed");
     defineEventProperty(element, "onunrouted", "unrouted");
     defineReverseBooleanProperty(element, "visible", "hidden");
+    defineEnabledProperty(element);
     const spinner = defineSpinner(element);
     defineStateProperty(element, 'busy', 'busyClassName', (busy) => busy ? spinner.show() : spinner.hide());
     initNode(element, ...properties);
