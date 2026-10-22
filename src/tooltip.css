@@ -1,0 +1,35 @@
+/*
+ * Tooltip, styled like MUI's Tooltip (without the arrow). Each element that has a tooltip has its own tooltip element, which is
+ * added to the body while it is shown; see tooltip.js. It is fixed, so that the hidden overflow of the elements cannot clip it,
+ * and it ignores the pointer.
+ */
+
+.tooltip {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1500;                              /* theme.zIndex.tooltip */
+    box-sizing: border-box;
+    max-width: 300px;
+    margin: 0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background-color: rgba(97, 97, 97, 0.92);
+    color: #fff;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 0.6875rem;
+    font-weight: 500;
+    line-height: 1.4em;
+    letter-spacing: 0.00938em;
+    word-wrap: break-word;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, visibility 0s linear 200ms;
+}
+
+.tooltip-visible {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0ms;
+}

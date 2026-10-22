@@ -22,8 +22,8 @@ const createApp = () => {
             {
                 style: "width: 100%; display: flex; flex-direction: row; gap: 0"
             },
-            button({ onclick: () => navigate('/app/pink') }, "Pink"),
-            button({ onclick: () => navigate('/app/blue') }, "Blue"),
+            button({ tooltip: "Show the pink box", onclick: () => navigate('/app/pink') }, "Pink"),
+            button({ tooltip: "Show the blue box", onclick: () => navigate('/app/blue') }, "Blue"),
             "Press a button - Πιεσε ενα πληκτρο",
             checkBox({id: "cb1"}, "Label"),
             radioButton({name: "option1"}, "Radio 1"),
@@ -84,7 +84,7 @@ router([
                         oninput: (e) => console.log("rating input:", e.target.value),
                         onchange: (e) => console.log("rating change:", e.target.value)
                     }),
-                    button({onclick: () => {document.getElementById("hideme").visible = !document.getElementById("hideme").visible}}, "Hide/Show"),
+                    button({tooltip: "Show/hide the element below", onclick: () => {document.getElementById("hideme").visible = !document.getElementById("hideme").visible}}, "Hide/Show"),
                     span({id: "hideme"}, "Some widget")
                 )
             }

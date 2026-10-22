@@ -1,4 +1,5 @@
 import { initNode } from "./Node.js";
+import { defineTooltipProperty } from "./tooltip.js";
 import { adoptStyleSheet, defineEventProperty, defineReverseBooleanProperty } from "./utility.js";
 
 import busySpinnerStyleSheet from './busySpinner.css' with { type: 'css' };
@@ -175,6 +176,9 @@ const defineEnabledProperty = (element) => {
  * The element also gets a property 'spinner', the element shown centered over the content while the element is busy.
  * Its default is a div that, with the default 'busySpinnerClassName', looks like a spinning circle.
  * 
+ * The element also gets a property 'tooltip' (default empty): an element, or a value, shown in a tooltip above the mouse
+ * cursor while the cursor is inside the element; see `defineTooltipProperty`.
+ * 
  * The element also gets the 'onrouted' and 'onunrouted' properties, which are used to set the event handlers
  * for the 'routed' and 'unrouted' events respectively.
  * 
@@ -192,6 +196,7 @@ export const initElement = (element, ...properties) => {
     defineEventProperty(element, "onunrouted", "unrouted");
     defineReverseBooleanProperty(element, "visible", "hidden");
     defineEnabledProperty(element);
+    defineTooltipProperty(element);
     const spinner = defineSpinner(element);
     defineStateProperty(element, 'busy', 'busyClassName', (busy) => busy ? spinner.show() : spinner.hide());
     initNode(element, ...properties);
