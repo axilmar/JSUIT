@@ -266,11 +266,14 @@ export const attachSegmentedInput = (element, type) => {
         return segment.max;
     };
 
-    //keeps the day and week inside their month and year
+    //keeps the day and week inside their month and year; not while the year is being typed, because its first digits are not the year yet
     const clamp = () => {
+        if (find('year')?.buffer || find('weekYear')?.buffer) {
+            return;
+        }
         for (const kind of ['day', 'week']) {
             const segment = find(kind);
-            if (segment?.value !== null && segment?.value > maxOf(segment)) {
+            if (segment && segment.value !== null && segment.value > maxOf(segment)) {
                 segment.value = maxOf(segment);
             }
         }
