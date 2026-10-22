@@ -9,6 +9,7 @@ const LABEL_CLASS = 'input-label';
 const LABEL_SHRUNK_CLASS = 'input-label-shrunk';
 const LABELED_CLASS = 'input-labeled';
 const CONTAINER_CLASS = 'input-container';
+const VARIANTS = ['outlined', 'filled', 'standard'];     //the class of a variant is 'input-' followed by its name
 
 //the types that always show something in the field (a format, a swatch, an icon), so their label is always shrunk
 const ALWAYS_SHRUNK_TYPES = ['date', 'datetime-local', 'month', 'week', 'time', 'color', 'file', 'search'];
@@ -93,8 +94,25 @@ const defineLabelProperty = (element) => {
     });
 };
 
+//defines the property 'variant'
+const defineVariantProperty = (element) => {
+    let variant;
+
+    Object.defineProperty(element, 'variant', {
+        configurable: true,
+        enumerable: true,
+        get: () => variant,
+        set: (value) => {
+            console.assert(VARIANTS.includes(value));
+            element.classList.remove(...VARIANTS.map(name => 'input-' + name));
+            element.classList.add('input-' + value);
+            variant = value;
+        }
+    });
+};
+
 /**
- * Initializes an instance of HTMLInputElement as an input field, looking like MUI's outlined text field.
+ * Initializes an instance of HTMLInputElement as an input field, looking like MUI's text field.
  * 
  * It invokes the function `initInputBase(element, ...properties)`.
  * 
@@ -103,16 +121,21 @@ const defineLabelProperty = (element) => {
  * Its `errorClassName` defaults to 'input-error'.
  * Its `busyClassName` defaults to 'input-busy'.
  * 
+ * The element gets the property 'variant', which accepts 'outlined' (the default), 'filled' and 'standard': the looks of the
+ * variants of MUI's text field. In the standard variant there is only an underline, in the filled one a gray background
+ * with an underline, and in the outlined one a rounded border. The element has the class 'input-' and the variant.
+ * 
  * The element gets the property 'displaySize', which accepts 'small', 'medium' (the default) and 'large'. The small and medium
  * sizes are MUI's: the vertical padding is 8.5px and 16.5px, so the height is 40px and 56px for the 16px font. MUI has no large
  * input, so the large size extends them: a 1.25rem font with 20px vertical padding (a height of about 69px). The label follows the size.
  * 
  * The element gets a property 'label', which accepts an element or a string (a string becomes the text of a span).
- * The label is shown like the floating label of MUI's outlined text field: inside the field while it is empty and not focused,
- * shrunk on the border otherwise (always shrunk for the types that always show something, like date and color).
+ * The label is shown like the floating label of MUI's text field: inside the field while it is empty and not focused,
+ * shrunk otherwise (above the field in the standard variant, on the top of the field in the filled one, on the border in the outlined
+ * one; always shrunk for the types that always show something, like date and color).
  * An input cannot contain the label, so the input is wrapped in a span of class 'input-container' together with the label,
- * as soon as it has a parent; use the container (`element.parentNode`) to move the field. The label has an opaque background
- * (css property `--input-label-background`, default white) that opens the notch in the border.
+ * as soon as it has a parent; use the container (`element.parentNode`) to move the field. In the outlined variant, the label has
+ * an opaque background (css property `--input-label-background`, default white) that opens the notch in the border.
  * Setting it to null removes the label.
  * 
  * MUI's helper text and adornments are not available, because an input element cannot contain them.
@@ -127,7 +150,9 @@ const defineLabelProperty = (element) => {
 export const initInput = (element, ...properties) => {
     console.assert(element instanceof HTMLInputElement);
     defineDisplaySizeProperty(element, 'input-small', 'input-large');
+    defineVariantProperty(element);
     defineLabelProperty(element);
+    element.variant = 'outlined';
     initInputBase(element, { additionalClassName: 'input', errorClassName: 'input-error', busyClassName: 'input-busy' }, ...properties);
 }
 

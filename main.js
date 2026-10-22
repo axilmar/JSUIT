@@ -21,7 +21,7 @@ const createApp = () => {
         },
         div(
             {
-                style: "width: 100%; display: flex; flex-direction: row; gap: 0"
+                style: "width: 100%; display: flex; flex-direction: row; gap: 0;align-items: center"
             },
             button({ tooltip: "Show the pink box", onclick: () => navigate('/app/pink') }, "Pink"),
             button({ tooltip: "Show the blue box", onclick: () => navigate('/app/blue') }, "Blue"),
@@ -30,7 +30,7 @@ const createApp = () => {
             radioButton({name: "option1"}, "Radio 1"),
             radioButton({name: "option1", id: "radio2"}, "Radio 2"),
             floatingActionButton('+'),
-            numberInput({value: 0, label: "A number", displaySize: "large"}),
+            numberInput({value: 0, displaySize: "large"}),
             passwordInput({label: "Password", displaySize: "large"}),
             rangeInput(),
             datetimeLocalInput()
