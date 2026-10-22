@@ -12,6 +12,7 @@ import { datetimeLocalInput } from './src/datetimeLocalInput.js';
 import { group } from './src/group.js';
 import { rating } from './src/rating.js';
 import { span } from '/src/span.js';
+import { property, event } from './src/utility.js';
 
 const createApp = () => {
     return div(
@@ -84,7 +85,11 @@ router([
                         oninput: (e) => console.log("rating input:", e.target.value),
                         onchange: (e) => console.log("rating change:", e.target.value)
                     }),
-                    button({tooltip: "Show/hide the element below", onclick: () => {document.getElementById("hideme").visible = !document.getElementById("hideme").visible}}, "Hide/Show"),
+                    button(
+                        property("tooltip", "Show/hide the element below"),
+                        event("click", () => {document.getElementById("hideme").visible = !document.getElementById("hideme").visible}),
+                         "Hide/Show"
+                    ),
                     span({id: "hideme"}, "Some widget")
                 )
             }

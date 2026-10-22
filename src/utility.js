@@ -253,3 +253,28 @@ export const defineReverseBooleanProperty = (element, newPropertyName, srcProper
         set: (value) => { element[srcPropertyName] = !value; }
     });
 }
+
+/**
+ * Helper function for setting a property of an element during construction.
+ * @param {*} name the name of the property.
+ * @param {*} value the value of the property.
+ * @returns a function that accepts an element and sets its property.
+ */
+export const property = (name, value) => {
+    return (element) => {
+        element[name] = value;
+    }
+}
+
+/**
+ * Helper function for adding an event handler to an element during construction.
+ * @param {*} name the name of the event.
+ * @param {*} handler the event handler.
+ * @param {*} options the event options.
+ * @returns a function that accepts an element and adds the event handler to the event.
+ */
+export const event = (name, handler, options) => {
+    return (element) => {
+        element.addEventListener(name, handler, options);
+    }
+}
