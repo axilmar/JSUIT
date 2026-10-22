@@ -36,6 +36,10 @@ const observe = () => {
  * The property is empty by default. It accepts an element, which is shown inside the tooltip, or any other value, whose
  * string is shown. Setting it to null, undefined or an empty string removes the tooltip.
  * 
+ * The property 'tooltipClassName' (null by default) holds space-delimited class names that are added to the tooltip element,
+ * in addition to its own class, when it is created; if it is set after the tooltip element was created, the class names
+ * it held before are replaced with the new ones.
+ * 
  * Each element has its own tooltip element, created when it is first shown. While the mouse cursor is inside the element, the
  * tooltip is added to the body, above the cursor, and follows the cursor; it looks like MUI's Tooltip, without the arrow.
  * When the cursor leaves the element, or the element is removed from the page, the tooltip is removed from the body.
@@ -48,6 +52,15 @@ export const defineTooltipProperty = (element) => {
     let tooltipElement = null;      //created on demand
     let shown = false;              //true while the tooltip element is in the body
     let listening = false;
+    let className = null;           //the class names to add to the tooltip element, or null
+    let appliedClassNames = [];     //the class names that were added to the tooltip element
+
+    //adds the class names of the property 'tooltipClassName' to the tooltip element, replacing the ones added before
+    const applyClassNames = () => {
+        tooltipElement.classList.remove(...appliedClassNames);
+        appliedClassNames = className ? className.split(/\s+/).filter(name => name.length > 0) : [];
+        tooltipElement.classList.add(...appliedClassNames);
+    };
 
     //puts the content in the tooltip element
     const fill = () => {
@@ -81,6 +94,7 @@ export const defineTooltipProperty = (element) => {
         if (!tooltipElement) {
             tooltipElement = document.createElement('div');
             tooltipElement.classList.add(TOOLTIP_CLASS);
+            applyClassNames();
             fill();
         }
         if (!shown) {
@@ -117,6 +131,19 @@ export const defineTooltipProperty = (element) => {
             element.addEventListener('pointerleave', hide);
         }
     };
+
+    Object.defineProperty(element, 'tooltipClassName', {
+        configurable: true,
+        enumerable: true,
+        get: () => className,
+        set: (value) => {
+            console.assert(value === null || value === undefined || typeof value === 'string');
+            className = value ?? null;
+            if (tooltipElement) {
+                applyClassNames();
+            }
+        }
+    });
 
     Object.defineProperty(element, 'tooltip', {
         configurable: true,

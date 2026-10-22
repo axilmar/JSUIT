@@ -177,7 +177,8 @@ const defineEnabledProperty = (element) => {
  * Its default is a div that, with the default 'busySpinnerClassName', looks like a spinning circle.
  * 
  * The element also gets a property 'tooltip' (default empty): an element, or a value, shown in a tooltip above the mouse
- * cursor while the cursor is inside the element; see `defineTooltipProperty`.
+ * cursor while the cursor is inside the element; see `defineTooltipProperty`. The property 'tooltipClassName' (default null)
+ * holds class names that are added to the tooltip.
  * 
  * The element also gets the 'onrouted' and 'onunrouted' properties, which are used to set the event handlers
  * for the 'routed' and 'unrouted' events respectively.
