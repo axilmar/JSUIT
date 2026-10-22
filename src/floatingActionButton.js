@@ -1,4 +1,4 @@
-import { initButton } from "./button.js";
+import { initButtonBase } from "./buttonBase.js";
 import { adoptStyleSheet, defineDisplaySizeProperty } from "./utility.js";
 import { icon as createIcon } from "./icon.js";
 
@@ -51,7 +51,7 @@ const defineExtendedProperty = (element) => {
 /**
  * Initializes an instance of HTMLButtonElement as a floating action button (MUI's Fab).
  *
- * It invokes the function `initButton(element, ...properties)`.
+ * It invokes the function `initButtonBase(element, ...properties)`.
  *
  * The element gets the class 'floatingActionButton' by default; an `additionalClassName` property adds further classes
  * (e.g. 'floatingActionButton-primary', see floatingActionButton.css for the color classes).
@@ -78,7 +78,7 @@ export const initFloatingActionButton = (element, ...properties) => {
     defineUrlProperty(element);
     defineDisplaySizeProperty(element, 'floatingActionButton-small', 'floatingActionButton-large');
     defineExtendedProperty(element);
-    initButton(element, { additionalClassName: 'floatingActionButton', errorClassName: 'floatingActionButton-error', busyClassName: 'floatingActionButton-busy' }, ...properties);
+    initButtonBase(element, { additionalClassName: 'floatingActionButton', errorClassName: 'floatingActionButton-error', busyClassName: 'floatingActionButton-busy' }, ...properties);
 }
 
 /**

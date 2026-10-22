@@ -1,4 +1,4 @@
-import { textButton } from "./textButton.js";
+import { button } from "./button.js";
 import { adoptStyleSheet } from "./utility.js";
 
 import dateTimePickerStyleSheet from './dateTimePicker.css' with { type: 'css' };
@@ -202,8 +202,8 @@ export const showDateTimePicker = ({ anchor, type = 'date', value, min, max, ona
     const actions = create('div', 'dateTimePicker-actions');
     let close;
     actions.append(
-        textButton({ onclick: () => close() }, 'Cancel'),
-        textButton({ onclick: () => { onaccept?.(formatValue(type, draft)); close(); } }, 'OK')
+        button({ variant: "text", onclick: () => close() }, 'Cancel'),
+        button({ variant: "text", onclick: () => { onaccept?.(formatValue(type, draft)); close(); } }, 'OK')
     );
     paper.append(body, actions);
 

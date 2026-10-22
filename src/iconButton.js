@@ -1,4 +1,4 @@
-import { initButton } from "./button.js";
+import { initButtonBase } from "./buttonBase.js";
 import { adoptStyleSheet, defineDisplaySizeProperty } from "./utility.js";
 import { icon as createIcon } from "./icon.js";
 
@@ -40,7 +40,7 @@ const defineUrlProperty = (element) => {
 /**
  * Initializes an instance of HTMLButtonElement as an icon button.
  * 
- * It invokes the function `initButton(element, ...properties)`.
+ * It invokes the function `initButtonBase(element, ...properties)`.
  * 
  * The element gets the class 'iconButton' by default; an `additionalClassName` property adds further classes.
  * Its `errorClassName` defaults to 'iconButton-error'.
@@ -64,7 +64,7 @@ export const initIconButton = (element, ...properties) => {
     defineIconProperty(element, state);
     defineUrlProperty(element);
     defineDisplaySizeProperty(element, 'iconButton-small', 'iconButton-large');
-    initButton(element, { additionalClassName: 'iconButton', errorClassName: 'iconButton-error', busyClassName: 'iconButton-busy' }, ...properties);
+    initButtonBase(element, { additionalClassName: 'iconButton', errorClassName: 'iconButton-error', busyClassName: 'iconButton-busy' }, ...properties);
 }
 
 /**
