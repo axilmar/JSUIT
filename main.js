@@ -8,7 +8,7 @@ import { textInput } from './src/textInput.js';
 import { numberInput } from './src/numberInput.js';
 import { passwordInput } from './src/passwordInput.js';
 import { rangeInput } from './src/rangeInput.js';
-import { datetimeLocalInput } from './src/datetimeLocalInput.js';
+import { dateTimeLocalInput } from './src/dateTimeLocalInput.js';
 import { group } from './src/group.js';
 import { rating } from './src/rating.js';
 import { span } from '/src/span.js';
@@ -33,7 +33,7 @@ const createApp = () => {
             numberInput({value: 0, displaySize: "large"}),
             passwordInput({label: "Password", displaySize: "large"}),
             rangeInput(),
-            datetimeLocalInput()
+            dateTimeLocalInput({seconds:true, pastEnabled:false})
         ),
         div(
             {

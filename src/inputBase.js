@@ -75,7 +75,7 @@ export const date = (...properties) => {
  * 
  * @return the created element.
  */
-export const datetimeLocal = (...properties) => {
+export const dateTimeLocal = (...properties) => {
     const element = document.createElement('input');
     element.type = 'datetime-local';
     initInputBase(element, ...properties);

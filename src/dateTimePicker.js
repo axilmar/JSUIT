@@ -1,5 +1,6 @@
 import { button } from "./button.js";
 import { adoptStyleSheet } from "./utility.js";
+import { pad, parseValue, formatValue, keyAt, getGranularity, getNow } from "./dateTimeUtil.js";
 
 import dateTimePickerStyleSheet from './dateTimePicker.css' with { type: 'css' };
 
@@ -12,75 +13,9 @@ const ARROW_DROP_DOWN = "<svg viewBox='0 0 24 24'><path d='m7 10 5 5 5-5z'/></sv
 const MIN_YEAR = 1900;
 const MAX_YEAR = 2099;
 
-const pad = (number) => String(number).padStart(2, '0');
-
 const monthYearFormat = new Intl.DateTimeFormat(undefined, { month: 'long', year: 'numeric' });
 const monthFormat = new Intl.DateTimeFormat(undefined, { month: 'short' });
 const weekdayFormat = new Intl.DateTimeFormat(undefined, { weekday: 'narrow' });
-const hour12 = new Intl.DateTimeFormat(undefined, { hour: 'numeric' }).resolvedOptions().hour12 === true;
-
-//returns the iso week { year, week } of a date
-export const getIsoWeek = (year, month, day) => {
-    const date = new Date(year, month, day);
-    date.setDate(date.getDate() - (date.getDay() + 6) % 7 + 3);     //the thursday of the week
-    const isoYear = date.getFullYear();
-    const firstThursday = new Date(isoYear, 0, 4);
-    const week = 1 + Math.round(((date - firstThursday) / 864e5 - 3 + (firstThursday.getDay() + 6) % 7) / 7);
-    return { year: isoYear, week };
-};
-
-//returns the date fields of the monday of an iso week
-const getIsoWeekMonday = (isoYear, week) => {
-    const january4 = new Date(isoYear, 0, 4);
-    const monday = new Date(isoYear, 0, 4 - (january4.getDay() + 6) % 7 + (week - 1) * 7);
-    return { year: monday.getFullYear(), month: monday.getMonth(), day: monday.getDate() };
-};
-
-//parses a value of the given input type into { year, month (0-11), day, hour, minute }, or returns null
-export const parseValue = (type, text) => {
-    text = text ?? '';
-    let match;
-    switch (type) {
-        case 'time':
-            return (match = /^(\d{2}):(\d{2})/.exec(text)) && { year: 2000, month: 0, day: 1, hour: +match[1], minute: +match[2] };
-        case 'month':
-            return (match = /^(\d{4,})-(\d{2})/.exec(text)) && { year: +match[1], month: +match[2] - 1, day: 1, hour: 0, minute: 0 };
-        case 'week':
-            return (match = /^(\d{4,})-W(\d{2})/.exec(text)) && { ...getIsoWeekMonday(+match[1], +match[2]), hour: 0, minute: 0 };
-        default:
-            return (match = /^(\d{4,})-(\d{2})-(\d{2})(?:T(\d{2}):(\d{2}))?/.exec(text)) &&
-                { year: +match[1], month: +match[2] - 1, day: +match[3], hour: +(match[4] ?? 0), minute: +(match[5] ?? 0) };
-    }
-};
-
-//formats a value as the value of an input of the given type
-export const formatValue = (type, value) => {
-    const year = String(value.year).padStart(4, '0');
-    const date = `${year}-${pad(value.month + 1)}-${pad(value.day)}`;
-    switch (type) {
-        case 'time': return `${pad(value.hour)}:${pad(value.minute)}`;
-        case 'month': return `${year}-${pad(value.month + 1)}`;
-        case 'week': {
-            const isoWeek = getIsoWeek(value.year, value.month, value.day);
-            return `${String(isoWeek.year).padStart(4, '0')}-W${pad(isoWeek.week)}`;
-        }
-        case 'datetime-local': return `${date}T${pad(value.hour)}:${pad(value.minute)}`;
-        default: return date;
-    }
-};
-
-//returns a number that orders values chronologically, ignoring what is finer than the granularity
-const keyAt = (value, granularity) => {
-    const dayKey = Math.round(Date.UTC(value.year, value.month, value.day) / 864e5);
-    switch (granularity) {
-        case 'year': return value.year;
-        case 'month': return value.year * 12 + value.month;
-        case 'week': return dayKey - (new Date(value.year, value.month, value.day).getDay() + 6) % 7;
-        case 'day': return dayKey;
-        case 'timeOfDay': return value.hour * 60 + value.minute;
-        default: return dayKey * 1440 + value.hour * 60 + value.minute;
-    }
-};
 
 //creates an element with a class and optional text
 const create = (tag, className, text) => {
@@ -108,7 +43,7 @@ const createButton = (className, label, onclick) => {
  *
  * Depending on the input type, the popup contains:
  *  - 'date': the calendar (month header with previous/next buttons, weekday row, day grid).
- *  - 'datetime-local': the calendar, and scrolling lists for the hours, minutes and (for 12-hour locales) AM/PM.
+ *  - 'datetime-local': the calendar, and scrolling lists for the hours, minutes, (with `seconds`) seconds and (with 12-hour time) AM/PM.
  *  - 'time': only the lists for the time.
  *  - 'month': a grid of months for the shown year.
  *  - 'week': the calendar starting on Monday; selecting a day selects (highlights) its whole iso week.
@@ -124,36 +59,53 @@ const createButton = (className, label, onclick) => {
  *  - `type`: the input type: 'date', 'datetime-local', 'time', 'month' or 'week'.
  *  - `value`: the initial value, in the format of the input type; empty or invalid values start at the current time.
  *  - `min`, `max`: the limits, in the format of the input type; what is outside of them cannot be selected.
+ *  - `hour12`: if true, the time is shown as 12-hour time (hours 01 to 12, with an AM/PM list); otherwise it is shown as 24-hour time
+ *    (hours 00 to 23, without AM/PM). The default is false. The value is always in the 24-hour format of the input type.
+ *  - `seconds`: if true, the time has a list for the seconds, and the value has the seconds ('14:30:15'). The default is false, and then the time is
+ *    only hours and minutes, and the seconds of the value are cleared.
+ *  - `futureEnabled`, `pastEnabled`: if one is false, nothing after (futureEnabled) or before (pastEnabled) the current date and time can be selected.
+ *    They are true by default. The current time is compared at the granularity of what is selected: the current day, month, week, year or minute
+ *    (or second, with `seconds`) is neither in the future nor in the past. They are combined with `min` and `max`.
  *  - `onaccept(value)`: called with the selected value (in the format of the input type) when OK is pressed.
  *  - `onclose()`: called after the popup closed, however it closed.
  *
  * @return {Function} a function that closes the popup.
  */
-export const showDateTimePicker = ({ anchor, type = 'date', value, min, max, onaccept, onclose }) => {
+export const showDateTimePicker = ({ anchor, type = 'date', value, min, max, hour12 = false, seconds = false, futureEnabled = true, pastEnabled = true, onaccept, onclose }) => {
     const withDate = type !== 'time';
     const withTime = type === 'datetime-local' || type === 'time';
     const minValue = parseValue(type, min);
     const maxValue = parseValue(type, max);
     const initial = parseValue(type, value);
-    const now = new Date();
-    const today = { year: now.getFullYear(), month: now.getMonth(), day: now.getDate(), hour: now.getHours(), minute: now.getMinutes() };
+    const today = getNow();
 
     //the draft value, the month or year being shown, and the current view: 'days', 'months' or 'years'
     const draft = { ...(initial ?? today) };
     if (!initial && !withTime) {
-        draft.hour = draft.minute = 0;
+        draft.hour = draft.minute = draft.second = 0;
     }
     if (!initial && type === 'month') {
         draft.day = 1;
+    }
+    if (!seconds) {
+        draft.second = 0;
     }
     let hasDate = initial !== null;
     let viewYear = draft.year;
     let viewMonth = draft.month;
     let view = type === 'month' ? 'months' : 'days';
 
-    const isOutOfRange = (candidate, granularity) =>
+    //true if the candidate is before the minimum, or in the past when the past is not enabled
+    const isBelow = (candidate, granularity) =>
         (minValue && keyAt(candidate, granularity) < keyAt(minValue, granularity)) ||
-        (maxValue && keyAt(candidate, granularity) > keyAt(maxValue, granularity));
+        (!pastEnabled && keyAt(candidate, granularity) < keyAt(today, granularity));
+
+    //true if the candidate is after the maximum, or in the future when the future is not enabled
+    const isAbove = (candidate, granularity) =>
+        (maxValue && keyAt(candidate, granularity) > keyAt(maxValue, granularity)) ||
+        (!futureEnabled && keyAt(candidate, granularity) > keyAt(today, granularity));
+
+    const isOutOfRange = (candidate, granularity) => !!(isBelow(candidate, granularity) || isAbove(candidate, granularity));
 
     //build the popup
     const paper = create('div', 'dateTimePicker');
@@ -193,7 +145,7 @@ export const showDateTimePicker = ({ anchor, type = 'date', value, min, max, ona
     }
 
     if (withTime) {
-        for (let i = 0; i < (hour12 ? 3 : 2); i++) {
+        for (let i = 0; i < 2 + (seconds ? 1 : 0) + (hour12 ? 1 : 0); i++) {
             lists.push(create('div', 'dateTimePicker-list'));
         }
         body.append(...lists);
@@ -203,7 +155,7 @@ export const showDateTimePicker = ({ anchor, type = 'date', value, min, max, ona
     let close;
     actions.append(
         button({ variant: "text", onclick: () => close() }, 'Cancel'),
-        button({ variant: "text", onclick: () => { onaccept?.(formatValue(type, draft)); close(); } }, 'OK')
+        button({ variant: "text", onclick: () => { onaccept?.(formatValue(type, draft, seconds)); close(); } }, 'OK')
     );
     paper.append(body, actions);
 
@@ -240,6 +192,14 @@ export const showDateTimePicker = ({ anchor, type = 'date', value, min, max, ona
         days.hidden = weekdays.hidden = view !== 'days';
         grid.hidden = view === 'days';
         previous.style.visibility = next.style.visibility = view === 'years' ? 'hidden' : '';
+        if (view === 'months') {
+            previous.disabled = !!isBelow({ year: viewYear - 1, month: 0, day: 1, hour: 0, minute: 0 }, 'year');
+            next.disabled = !!isAbove({ year: viewYear + 1, month: 0, day: 1, hour: 0, minute: 0 }, 'year');
+        }
+        else {
+            previous.disabled = !!isBelow({ year: viewYear, month: viewMonth - 1, day: 1, hour: 0, minute: 0 }, 'month');
+            next.disabled = !!isAbove({ year: viewYear, month: viewMonth + 1, day: 1, hour: 0, minute: 0 }, 'month');
+        }
         title.innerHTML = '';
         title.append(view === 'days' ? monthYearFormat.format(new Date(viewYear, viewMonth, 1)) : String(viewYear));
         title.insertAdjacentHTML('beforeend', ARROW_DROP_DOWN);
@@ -314,7 +274,7 @@ export const showDateTimePicker = ({ anchor, type = 'date', value, min, max, ona
         }
     };
 
-    //renders the lists of the time: hours, minutes, and AM/PM
+    //renders the lists of the time: hours, minutes, seconds and AM/PM
     const showTime = () => {
         if (!withTime) {
             return;
@@ -331,7 +291,7 @@ export const showDateTimePicker = ({ anchor, type = 'date', value, min, max, ona
                 });
                 button.textContent = item.label;
                 button.classList.toggle('dateTimePicker-selected', item.selected);
-                button.disabled = !!isOutOfRange({ ...draft, ...item.change }, type === 'time' ? 'timeOfDay' : 'minute');
+                button.disabled = !!isOutOfRange({ ...draft, ...item.change }, getGranularity(type, seconds));
                 list.append(button);
             }
             list.scrollTop = scrollTop;
@@ -350,8 +310,15 @@ export const showDateTimePicker = ({ anchor, type = 'date', value, min, max, ona
         }
         fill(lists[0], hours);
         fill(lists[1], minutes);
+        if (seconds) {
+            const secondItems = [];
+            for (let i = 0; i < 60; i++) {
+                secondItems.push({ label: pad(i), selected: draft.second === i, change: { second: i } });
+            }
+            fill(lists[2], secondItems);
+        }
         if (hour12) {
-            fill(lists[2], [
+            fill(lists[seconds ? 3 : 2], [
                 { label: 'AM', selected: pm === 0, change: { hour: draft.hour % 12 } },
                 { label: 'PM', selected: pm === 12, change: { hour: draft.hour % 12 + 12 } }
             ]);
@@ -396,7 +363,7 @@ export const showDateTimePicker = ({ anchor, type = 'date', value, min, max, ona
     paper.style.top = Math.max(8, top) + 'px';
     paper.style.left = Math.max(8, Math.min(anchorRect.left, window.innerWidth - paperRect.width - 8)) + 'px';
 
-    //bring the selected hour, minute and AM/PM to the middle of their lists
+    //bring the selected hour, minute, second and AM/PM to the middle of their lists
     for (const list of lists) {
         const selected = list.querySelector('.dateTimePicker-selected');
         if (selected) {

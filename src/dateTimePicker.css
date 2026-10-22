@@ -71,6 +71,11 @@
     fill: currentColor;
 }
 
+.dateTimePicker-nav:disabled {
+    color: rgba(0, 0, 0, 0.26);
+    pointer-events: none;
+}
+
 .dateTimePicker-nav:hover {
     background-color: rgba(0, 0, 0, 0.04);
 }
@@ -164,7 +169,8 @@
     width: 64px;
     max-height: 308px;
     padding: 8px;
-    overflow-y: auto;
+    overflow-x: hidden !important;                  /* init.js hides the overflow of everything, so these need !important */
+    overflow-y: auto !important;
     border-left: 1px solid rgba(0, 0, 0, 0.12);
     scrollbar-width: thin;
 }
@@ -232,7 +238,8 @@
 
 .dateTimePicker-grid-years {
     height: 252px;
-    overflow-y: auto;
+    overflow-x: hidden !important;                  /* init.js hides the overflow of everything, so these need !important */
+    overflow-y: auto !important;
     grid-auto-rows: 36px;
     gap: 8px 0;
     scrollbar-width: thin;
