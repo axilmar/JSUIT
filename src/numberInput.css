@@ -1,5 +1,5 @@
 /*
- * Number field: an inputField with MUI's increment / decrement buttons at the right edge.
+ * Number field: an input with MUI's increment / decrement buttons at the right edge.
  *
  * The buttons are background layers of the input (arrow icons, hover and pressed backgrounds, dividers); the
  * pointer is handled by numberInput.js, which sets the classes numberInput-hover-up/-down and numberInput-pressed-up/-down.

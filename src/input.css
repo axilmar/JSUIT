@@ -1,36 +1,36 @@
 /*
  * MUI "outlined" text field look for an input element, with the MUI default palette.
  *
- * Usage: <input class="inputField" type="text" placeholder="...">
- * Size: default (medium, 56px high), inputField-small (40px), inputField-large (about 69px; MUI has no large input).
- * Optional color classes (the focus color): inputField-secondary, -warning, -info, -success.
- * Error: inputField-error.
+ * Usage: <input class="input" type="text" placeholder="...">
+ * Size: default (medium, 56px high), input-small (40px), input-large (about 69px; MUI has no large input).
+ * Optional color classes (the focus color): input-secondary, -warning, -info, -success.
+ * Error: input-error.
  *
  * An input element has no room for a label, so the floating label of MUI's TextField is not part of this.
  * The 2px focus border of MUI is drawn with an inset box-shadow, so that the size does not change on focus.
  */
 
-.inputField {
-    --inputField-main: #1976d2;                 /* primary.main */
-    --inputField-padding-y: 16.5px;             /* MUI's vertical padding; the border of 1px is inside the height */
-    --inputField-font-size: 1rem;
+.input {
+    --input-main: #1976d2;                 /* primary.main */
+    --input-padding-y: 16.5px;             /* MUI's vertical padding; the border of 1px is inside the height */
+    --input-font-size: 1rem;
 
     box-sizing: border-box;
     display: inline-block;
     min-width: 0;
     margin: 0;
-    padding: calc(var(--inputField-padding-y) - 1px) 14px;
+    padding: calc(var(--input-padding-y) - 1px) 14px;
     border: 1px solid rgba(0, 0, 0, 0.23);
     border-radius: 4px;
     outline: 0;
     background-color: transparent;
     color: rgba(0, 0, 0, 0.87);
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-size: var(--inputField-font-size);
+    font-size: var(--input-font-size);
     font-weight: 400;
     line-height: 1.4375em;
     letter-spacing: 0.00938em;
-    height: calc(1.4375em + 2 * var(--inputField-padding-y));
+    height: calc(1.4375em + 2 * var(--input-padding-y));
     vertical-align: middle;
     appearance: none;
     -webkit-appearance: none;
@@ -38,80 +38,80 @@
     transition: border-color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms, box-shadow 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 }
 
-.inputField-small {
-    --inputField-padding-y: 8.5px;
+.input-small {
+    --input-padding-y: 8.5px;
 }
 
-.inputField-large {
-    --inputField-padding-y: 20px;
-    --inputField-font-size: 1.25rem;
+.input-large {
+    --input-padding-y: 20px;
+    --input-font-size: 1.25rem;
 }
 
-.inputField::placeholder {
+.input::placeholder {
     color: currentColor;
     opacity: 0.42;
 }
 
-.inputField:hover {
+.input:hover {
     border-color: rgba(0, 0, 0, 0.87);
 }
 
-.inputField:focus {
-    border-color: var(--inputField-main);
-    box-shadow: inset 0 0 0 1px var(--inputField-main);
+.input:focus {
+    border-color: var(--input-main);
+    box-shadow: inset 0 0 0 1px var(--input-main);
 }
 
-.inputField:disabled {
+.input:disabled {
     color: rgba(0, 0, 0, 0.38);
     border-color: rgba(0, 0, 0, 0.26);
     box-shadow: none;
     cursor: default;
 }
 
-.inputField-secondary { --inputField-main: #9c27b0; }
-.inputField-warning   { --inputField-main: #ed6c02; }
-.inputField-info      { --inputField-main: #0288d1; }
-.inputField-success   { --inputField-main: #2e7d32; }
+.input-secondary { --input-main: #9c27b0; }
+.input-warning   { --input-main: #ed6c02; }
+.input-info      { --input-main: #0288d1; }
+.input-success   { --input-main: #2e7d32; }
 
-.inputField-error,
-.inputField-error:hover,
-.inputField-error:focus {
-    --inputField-main: #d32f2f;                 /* error.main */
+.input-error,
+.input-error:hover,
+.input-error:focus {
+    --input-main: #d32f2f;                 /* error.main */
     border-color: #d32f2f;
 }
 
-.inputField-error:focus {
+.input-error:focus {
     box-shadow: inset 0 0 0 1px #d32f2f;
 }
 
 /* Busy: like disabled (no interaction), but keeping the field's color. */
-.inputField.inputField-busy,
-.inputField.inputField-busy:hover,
-.inputField.inputField-busy:focus {
+.input.input-busy,
+.input.input-busy:hover,
+.input.input-busy:focus {
     opacity: 0.7;
     pointer-events: none;
     cursor: default;
 }
 
 /* The browser's own spin buttons and date/time indicators keep working; just align them with the MUI colors. */
-.inputField::-webkit-calendar-picker-indicator {
+.input::-webkit-calendar-picker-indicator {
     opacity: 0.54;
     cursor: pointer;
 }
 
-.inputField:disabled::-webkit-calendar-picker-indicator {
+.input:disabled::-webkit-calendar-picker-indicator {
     opacity: 0.26;
     cursor: default;
 }
 
 /*
- * Label: the floating label of MUI's outlined text field (see the property 'label' in inputField.js).
+ * Label: the floating label of MUI's outlined text field (see the property 'label' in input.js).
  * The input is wrapped in a container together with the label; the label is positioned over the field's top left corner.
- * Its background (--inputField-label-background, default white) opens the notch in the border while it is shrunk.
+ * Its background (--input-label-background, default white) opens the notch in the border while it is shrunk.
  */
 
-.inputField-container {
-    --inputField-label-background: #fff;
+.input-container {
+    --input-label-background: #fff;
 
     position: relative;
     display: inline-flex;
@@ -119,7 +119,7 @@
     vertical-align: middle;
 }
 
-.inputField-label {
+.input-label {
     position: absolute;
     left: 0;
     top: 0;
@@ -147,46 +147,46 @@
         max-width 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
 }
 
-.inputField-small + .inputField-label {
+.input-small + .input-label {
     transform: translate(9px, 8.5px) scale(1);
 }
 
-.inputField-large + .inputField-label {
+.input-large + .input-label {
     font-size: 1.25rem;
     transform: translate(9px, 20px) scale(1);
 }
 
-.inputField-label.inputField-label-shrunk,
-.inputField-small + .inputField-label.inputField-label-shrunk,
-.inputField-large + .inputField-label.inputField-label-shrunk {
+.input-label.input-label-shrunk,
+.input-small + .input-label.input-label-shrunk,
+.input-large + .input-label.input-label-shrunk {
     max-width: calc(133% - 32px);
-    background-color: var(--inputField-label-background);
+    background-color: var(--input-label-background);
     transform: translate(9px, -9px) scale(0.75);
 }
 
 /* the placeholder would overlap the label while it is inside the field */
-.inputField-labeled:not(:focus)::placeholder {
+.input-labeled:not(:focus)::placeholder {
     opacity: 0;
 }
 
 /* label colors: primary (the field's color) while focused, error, disabled; the asterisk of required fields */
-.inputField-container:focus-within > .inputField-label {
-    color: var(--inputField-main);
+.input-container:focus-within > .input-label {
+    color: var(--input-main);
 }
 
-.inputField-container:has(> .inputField-error) > .inputField-label {
+.input-container:has(> .input-error) > .input-label {
     color: #d32f2f;
 }
 
-.inputField-container:has(> .inputField:disabled) > .inputField-label {
+.input-container:has(> .input:disabled) > .input-label {
     color: rgba(0, 0, 0, 0.38);
 }
 
-.inputField-container:has(> .inputField[required]) > .inputField-label::after {
+.input-container:has(> .input[required]) > .input-label::after {
     content: " *";
 }
 
 /* the shrunk label of the large size is taller, so it moves up a little more to stay centered on the border */
-.inputField-large + .inputField-label.inputField-label-shrunk {
+.input-large + .input-label.input-label-shrunk {
     transform: translate(9px, -10px) scale(0.75);
 }

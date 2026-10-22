@@ -83,7 +83,7 @@ const createLayout = (type) => {
  *  - Form submission sends the ISO value.
  * `valueAsDate`, `valueAsNumber`, `stepUp` and `stepDown` are not available.
  *
- * It must be invoked after `initInputField`, because it wraps the element's 'value' property.
+ * It must be invoked after `initInput`, because it wraps the element's 'value' property.
  *
  * @param {*} element the input element.
  * @param {string} type 'date', 'datetime-local', 'time', 'month' or 'week'.

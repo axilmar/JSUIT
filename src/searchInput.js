@@ -1,4 +1,4 @@
-import { initInputField } from "./inputField.js";
+import { initInput } from "./input.js";
 import { validateOnInput } from "./validateOnInput.js";
 import { adoptStyleSheet } from "./utility.js";
 
@@ -9,7 +9,7 @@ adoptStyleSheet(searchInputStyleSheet);
 /**
  * Initializes an instance of HTMLInputElement as a search input, looking like a MUI search text field.
  *
- * It sets the element's type to 'search', then invokes the function `initInputField(element, ...properties)`.
+ * It sets the element's type to 'search', then invokes the function `initInput(element, ...properties)`.
  *
  * The element gets the class 'searchInput', which draws MUI's search icon at the left edge of the field and
  * replaces the browser's clear button with MUI's close icon.
@@ -22,7 +22,7 @@ adoptStyleSheet(searchInputStyleSheet);
 export const initSearchInput = (element, ...properties) => {
     console.assert(element instanceof HTMLInputElement);
     element.type = 'search';
-    initInputField(element, { additionalClassName: 'searchInput' }, ...properties);
+    initInput(element, { additionalClassName: 'searchInput' }, ...properties);
     validateOnInput(element, true);
 }
 

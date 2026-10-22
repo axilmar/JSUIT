@@ -1,4 +1,4 @@
-/* Color field: an inputField whose padding frames the browser's color swatch. */
+/* Color field: an input whose padding frames the browser's color swatch. */
 
 .colorInput {
     width: 64px;
@@ -6,7 +6,7 @@
     cursor: pointer;
 }
 
-.colorInput.inputField-small {
+.colorInput.input-small {
     padding: 4px 8px;
 }
 
@@ -29,6 +29,6 @@
     opacity: 0.6;
 }
 
-.colorInput.inputField-large {
+.colorInput.input-large {
     padding: 10px 8px;
 }

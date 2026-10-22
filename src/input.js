@@ -1,20 +1,138 @@
-import { initHTMLElement } from "./HTMLElement.js";
+import { initInputBase } from "./inputBase.js";
+import { adoptStyleSheet, defineDisplaySizeProperty } from "./utility.js";
+
+import inputStyleSheet from './input.css' with { type: 'css' };
+
+adoptStyleSheet(inputStyleSheet);
+
+const LABEL_CLASS = 'input-label';
+const LABEL_SHRUNK_CLASS = 'input-label-shrunk';
+const LABELED_CLASS = 'input-labeled';
+const CONTAINER_CLASS = 'input-container';
+
+//the types that always show something in the field (a format, a swatch, an icon), so their label is always shrunk
+const ALWAYS_SHRUNK_TYPES = ['date', 'datetime-local', 'month', 'week', 'time', 'color', 'file', 'search'];
+
+const getValue = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').get;
+const setValue = Object.getOwnPropertyDescriptor(HTMLInputElement.prototype, 'value').set;
+
+//shrinks the label (moves it to the border) if the field has focus or a value, or if the type always shows something
+const updateLabel = (element, state) => {
+    if (state.label) {
+        const shrunk = ALWAYS_SHRUNK_TYPES.includes(element.type) || document.activeElement === element || getValue.call(element) !== '';
+        state.label.classList.toggle(LABEL_SHRUNK_CLASS, shrunk);
+    }
+};
+
+//puts the input and the label in a container, if the input has a parent; returns true if the container exists
+const placeLabel = (element, state) => {
+    if (!state.container) {
+        if (!element.parentNode) {
+            return false;
+        }
+        state.container = document.createElement('span');
+        state.container.className = CONTAINER_CLASS;
+        element.replaceWith(state.container);
+        state.container.append(element);
+    }
+    state.container.append(state.label);
+    return true;
+};
+
+//defines the property 'label'
+const defineLabelProperty = (element) => {
+    const state = { label: null, container: null, observer: null };
+
+    //an element without a parent cannot get its container yet; it is placed when the element is first rendered
+    const placeWhenRendered = () => {
+        if (state.observer) {
+            return;
+        }
+        state.observer = new ResizeObserver(() => {
+            if (!state.label || placeLabel(element, state)) {
+                state.observer.disconnect();
+                state.observer = null;
+            }
+        });
+        state.observer.observe(element);
+    };
+
+    Object.defineProperty(element, 'value', {
+        configurable: true,
+        enumerable: true,
+        get: () => getValue.call(element),
+        set: (value) => { setValue.call(element, value); updateLabel(element, state); }
+    });
+
+    for (const eventName of ['input', 'change', 'focus', 'blur']) {
+        element.addEventListener(eventName, () => updateLabel(element, state));
+    }
+
+    Object.defineProperty(element, 'label', {
+        configurable: true,
+        enumerable: true,
+        get: () => state.label,
+        set: (label) => {
+            console.assert(label === null || label === undefined || typeof label === 'string' || label instanceof Element);
+            if (typeof label === 'string') {
+                const span = document.createElement('span');
+                span.textContent = label;
+                label = span;
+            }
+            state.label?.remove();
+            state.label = label ?? null;
+            element.classList.toggle(LABELED_CLASS, state.label !== null);
+            if (state.label) {
+                state.label.classList.add(LABEL_CLASS);
+                updateLabel(element, state);
+                if (!placeLabel(element, state)) {
+                    placeWhenRendered();
+                }
+            }
+        }
+    });
+};
 
 /**
- * Initializes an instance of HTMLInputElement.
+ * Initializes an instance of HTMLInputElement as an input field, looking like MUI's outlined text field.
  * 
- * It invokes the function `initHTMLElement(element, ...properties)`.
+ * It invokes the function `initInputBase(element, ...properties)`.
+ * 
+ * The element gets the class 'input' by default; an `additionalClassName` property adds further classes
+ * (the color classes 'input-secondary', '-error', '-warning', '-info', '-success' change the focus color).
+ * Its `errorClassName` defaults to 'input-error'.
+ * Its `busyClassName` defaults to 'input-busy'.
+ * 
+ * The element gets the property 'displaySize', which accepts 'small', 'medium' (the default) and 'large'. The small and medium
+ * sizes are MUI's: the vertical padding is 8.5px and 16.5px, so the height is 40px and 56px for the 16px font. MUI has no large
+ * input, so the large size extends them: a 1.25rem font with 20px vertical padding (a height of about 69px). The label follows the size.
+ * 
+ * The element gets a property 'label', which accepts an element or a string (a string becomes the text of a span).
+ * The label is shown like the floating label of MUI's outlined text field: inside the field while it is empty and not focused,
+ * shrunk on the border otherwise (always shrunk for the types that always show something, like date and color).
+ * An input cannot contain the label, so the input is wrapped in a span of class 'input-container' together with the label,
+ * as soon as it has a parent; use the container (`element.parentNode`) to move the field. The label has an opaque background
+ * (css property `--input-label-background`, default white) that opens the notch in the border.
+ * Setting it to null removes the label.
+ * 
+ * MUI's helper text and adornments are not available, because an input element cannot contain them.
+ * 
+ * The label is not available for the range input, which has no rectangular border.
+ * 
+ * The 'type' of the element must be set before this function is invoked.
  * 
  * @param {*} element the element to initialize.
  * @param  {...any} properties the object's properties.
  */
 export const initInput = (element, ...properties) => {
     console.assert(element instanceof HTMLInputElement);
-    initHTMLElement(element, ...properties);
+    defineDisplaySizeProperty(element, 'input-small', 'input-large');
+    defineLabelProperty(element);
+    initInputBase(element, { additionalClassName: 'input', errorClassName: 'input-error', busyClassName: 'input-busy' }, ...properties);
 }
 
 /**
- * Creates an instance of HTMLInputElement for tag 'input'.
+ * Creates an input field of type 'text'.
  * 
  * @param  {...any} properties the element's properties.
  * 
@@ -22,286 +140,7 @@ export const initInput = (element, ...properties) => {
  */
 export const input = (...properties) => {
     const element = document.createElement('input');
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'checkbox'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const checkbox = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'checkbox';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'color'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const color = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'color';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'date'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const date = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'date';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'datetime-local'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const datetimeLocal = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'datetime-local';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'email'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const email = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'email';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'file'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const file = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'file';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'hidden'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const hidden = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'hidden';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'image'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const image = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'image';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'month'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const month = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'month';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'number'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const number = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'number';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'password'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const password = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'password';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'radio'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const radio = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'radio';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'range'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const range = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'range';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'reset'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const reset = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'reset';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'search'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const search = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'search';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'submit'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const submit = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'submit';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'tel'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const tel = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'tel';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'text'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const text = (...properties) => {
-    const element = document.createElement('input');
     element.type = 'text';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'url'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const url = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'url';
-    initInput(element, ...properties);
-    return element;
-}
-
-/**
- * Creates an instance of HTMLInputElement of type 'week'.
- * 
- * @param  {...any} properties the element's properties.
- * 
- * @return the created element.
- */
-export const week = (...properties) => {
-    const element = document.createElement('input');
-    element.type = 'week';
     initInput(element, ...properties);
     return element;
 }

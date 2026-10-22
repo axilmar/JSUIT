@@ -1,4 +1,4 @@
-import { initInputField } from "./inputField.js";
+import { initInput } from "./input.js";
 import { validateOnInput } from "./validateOnInput.js";
 import { attachDateTimePicker } from "./pickerInput.js";
 import { attachSegmentedInput } from "./segmentedInput.js";
@@ -6,7 +6,7 @@ import { attachSegmentedInput } from "./segmentedInput.js";
 /**
  * Initializes an instance of HTMLInputElement as a date input, looking like a MUI text field.
  * 
- * It invokes the function `initInputField(element, ...properties)`.
+ * It invokes the function `initInput(element, ...properties)`.
  * 
  * While the user types, the property `error` is set to true if the value is invalid (`element.validity.valid` is false). It is also set to true if the value does not match the `pattern` attribute, when there is one.
  * 
@@ -20,7 +20,7 @@ import { attachSegmentedInput } from "./segmentedInput.js";
  */
 export const initDateInput = (element, ...properties) => {
     console.assert(element instanceof HTMLInputElement);
-    initInputField(element, ...properties);
+    initInput(element, ...properties);
     validateOnInput(element, true);
     attachSegmentedInput(element, 'date');
     attachDateTimePicker(element);

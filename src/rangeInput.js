@@ -1,4 +1,4 @@
-import { initInput } from "./input.js";
+import { initInputBase } from "./inputBase.js";
 import { validateOnInput } from "./validateOnInput.js";
 import { adoptStyleSheet, defineDisplaySizeProperty } from "./utility.js";
 
@@ -17,7 +17,7 @@ const updateFill = (element) => {
 /**
  * Initializes an instance of HTMLInputElement as a range input, looking like a MUI slider.
  *
- * It sets the element's type to 'range', then invokes the function `initInput(element, ...properties)`.
+ * It sets the element's type to 'range', then invokes the function `initInputBase(element, ...properties)`.
  *
  * The element gets the class 'rangeInput' by default; an `additionalClassName` property adds further classes
  * (the color classes 'rangeInput-secondary', '-error', '-warning', '-info', '-success').
@@ -38,7 +38,7 @@ export const initRangeInput = (element, ...properties) => {
     element.type = 'range';
     element.addEventListener('input', () => updateFill(element));
     defineDisplaySizeProperty(element, 'rangeInput-small', 'rangeInput-large');
-    initInput(element, { additionalClassName: 'rangeInput', errorClassName: 'rangeInput-error', busyClassName: 'rangeInput-busy' }, ...properties);
+    initInputBase(element, { additionalClassName: 'rangeInput', errorClassName: 'rangeInput-error', busyClassName: 'rangeInput-busy' }, ...properties);
     validateOnInput(element);
     updateFill(element);
 }

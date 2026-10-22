@@ -1,4 +1,4 @@
-import { initInputField } from "./inputField.js";
+import { initInput } from "./input.js";
 import { validateOnInput } from "./validateOnInput.js";
 import { adoptStyleSheet } from "./utility.js";
 
@@ -43,7 +43,7 @@ const clickListener = (event) => {
 /**
  * Initializes an instance of HTMLInputElement as a password input, looking like a MUI password text field.
  *
- * It sets the element's type to 'password', then invokes the function `initInputField(element, ...properties)`.
+ * It sets the element's type to 'password', then invokes the function `initInput(element, ...properties)`.
  *
  * The element gets the class 'passwordInput', which draws MUI's visibility icon at the right edge of the field.
  * Clicking the icon toggles the boolean property 'visible' (default false), which switches the field between
@@ -60,7 +60,7 @@ export const initPasswordInput = (element, ...properties) => {
     defineVisibleProperty(element);
     element.addEventListener('mousemove', mouseMoveListener);
     element.addEventListener('click', clickListener);
-    initInputField(element, { additionalClassName: 'passwordInput' }, ...properties);
+    initInput(element, { additionalClassName: 'passwordInput' }, ...properties);
     validateOnInput(element, true);
 }
 
