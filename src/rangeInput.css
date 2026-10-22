@@ -6,7 +6,10 @@
  * Optional color classes: rangeInput-secondary, -error, -warning, -info, -success.
  *
  * The filled part of the track uses the property --rangeInput-fill, kept up to date by rangeInput.js.
- * The thumb halo of MUI (hover 8px, active 14px) is a box-shadow.
+ * The thumb halo of MUI (hover 8px, active 14px) is a box-shadow, out of the box of the input: the overflow of the input is visible (the
+ * global rule that hides the overflow of everything needs !important to be overridden), and the input has a margin of 14px on the two sides
+ * of the track (above and below the horizontal slider, at the left and right of the vertical one), so that the halo is inside the box of
+ * the parent, which hides it otherwise. MUI's slider has a padding for the same reason.
  */
 
 .rangeInput {
@@ -18,8 +21,9 @@
     box-sizing: border-box;
     width: 200px;
     height: var(--rangeInput-thumb);
-    margin: 0;
+    margin: 14px 0;
     padding: 0;
+    overflow: visible !important;
     background: transparent;
     outline: 0;
     vertical-align: middle;
@@ -116,4 +120,219 @@
     opacity: 0.7;
     pointer-events: none;
     cursor: default;
+}
+
+/*
+ * The marks and the label of the value of a discrete slider, like MUI's. They are elements in the container of the input (see
+ * rangeInput.js), which has copies of the colors and sizes of the input, and the property --rangeInput-ratio, the position of the thumb (0 to 1).
+ * The thumb of a native range input does not go to the ends of the input: its center is at half of the thumb from the ends, so the
+ * positions are calc(thumb / 2 + ratio * (100% - thumb)).
+ */
+
+/* the container has the margin of the slider that it holds, so that the marks and the label of the value, which are placed in the container, are on the slider */
+.rangeInput-container > .rangeInput {
+    margin: 0;
+}
+
+.rangeInput-container {
+    margin: 14px 0;
+    --rangeInput-main: #1976d2;
+    --rangeInput-thumb: 20px;
+    --rangeInput-track: 4px;
+    --rangeInput-ratio: 0;
+}
+
+/* room for the label of the value, which is over the slider, and for the labels of the marks, which are below it */
+.rangeInput-container.rangeInput-hasValueLabel {
+    margin-top: 30px;
+}
+
+.rangeInput-container.rangeInput-hasMarkLabels {
+    margin-bottom: 24px;
+}
+
+.rangeInput-marks {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: var(--rangeInput-thumb);
+    overflow: visible !important;               /* the labels of the marks are below the layer */
+    pointer-events: none;
+}
+
+.rangeInput-mark {
+    position: absolute;
+    top: 50%;
+    left: calc(var(--rangeInput-thumb) / 2 + var(--rangeInput-markRatio) * (100% - var(--rangeInput-thumb)));
+    width: 2px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: var(--rangeInput-main);
+    opacity: 0.7;
+    transform: translate(-1px, -50%);
+}
+
+.rangeInput-mark-active {
+    background-color: #fff;                     /* primary.contrastText */
+    opacity: 0.8;
+}
+
+.rangeInput-mark-hidden {
+    visibility: hidden;
+}
+
+.rangeInput-markLabel {
+    position: absolute;
+    top: calc(var(--rangeInput-thumb) / 2 + 15px);
+    left: calc(var(--rangeInput-thumb) / 2 + var(--rangeInput-markRatio) * (100% - var(--rangeInput-thumb)));
+    transform: translateX(-50%);
+    color: rgba(0, 0, 0, 0.6);                  /* text.secondary */
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    white-space: nowrap;
+}
+
+.rangeInput-markLabel-active {
+    color: rgba(0, 0, 0, 0.87);                 /* text.primary */
+}
+
+.rangeInput-valueLabel {
+    position: absolute;
+    z-index: 1;
+    top: -6px;
+    left: calc(var(--rangeInput-thumb) / 2 + var(--rangeInput-ratio) * (100% - var(--rangeInput-thumb)));
+    box-sizing: border-box;
+    padding: 4px 12px;
+    border-radius: 2px;
+    background-color: #757575;                  /* grey[600] */
+    color: #fff;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.03333em;
+    white-space: nowrap;
+    overflow: visible !important;               /* the arrow is out of the label */
+    pointer-events: none;
+    transform: translate(-50%, -100%) scale(0);
+    transform-origin: 50% 100%;
+    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+/* the arrow of the label */
+.rangeInput-valueLabel::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 8px;
+    height: 8px;
+    background-color: inherit;
+    transform: translate(-50%, 50%) rotate(45deg);
+}
+
+/* the label is seen always ('on'), or while the mouse is over the slider, it has the focus, or it is dragged ('auto') */
+.rangeInput-valueLabel-on,
+.rangeInput-container:has(> .rangeInput:hover:not(:disabled)) > .rangeInput-valueLabel-auto,
+.rangeInput-container:has(> .rangeInput:focus-visible) > .rangeInput-valueLabel-auto,
+.rangeInput-container:has(> .rangeInput:active) > .rangeInput-valueLabel-auto {
+    transform: translate(-50%, -100%) scale(1);
+}
+
+/*
+ * The vertical slider (the property 'orientation'): the input is written vertically, so that the browser draws it vertically, with the minimum at
+ * the bottom (direction rtl); the track and the thumb are then sized and centered with the other dimensions. The container of the marks and the
+ * label of the value has the class rangeInput-container-vertical: the marks are along the track, their labels are at the right of the slider, and the
+ * label of the value is at the left of the thumb, with its arrow to the right, as in MUI.
+ */
+
+.rangeInput-vertical {
+    writing-mode: vertical-lr;
+    direction: rtl;
+    width: var(--rangeInput-thumb);
+    height: 200px;
+    margin: 0 14px;
+}
+
+.rangeInput-container-vertical {
+    margin: 0 14px;
+}
+
+.rangeInput-vertical::-webkit-slider-runnable-track {
+    width: var(--rangeInput-track);
+    height: auto;
+    border-radius: calc(var(--rangeInput-track) / 2);
+    background: linear-gradient(to top, var(--rangeInput-main) var(--rangeInput-fill), color-mix(in srgb, var(--rangeInput-main) 38%, transparent) var(--rangeInput-fill));
+}
+
+.rangeInput-vertical::-webkit-slider-thumb {
+    margin-top: 0;
+    margin-left: calc((var(--rangeInput-track) - var(--rangeInput-thumb)) / 2);
+}
+
+.rangeInput-vertical::-moz-range-track {
+    width: var(--rangeInput-track);
+    height: auto;
+}
+
+.rangeInput-vertical::-moz-range-progress {
+    width: var(--rangeInput-track);
+    height: auto;
+}
+
+.rangeInput-container-vertical.rangeInput-hasValueLabel {
+    margin-top: 0;
+    margin-left: 50px;
+}
+
+.rangeInput-container-vertical.rangeInput-hasMarkLabels {
+    margin-bottom: 0;
+    margin-right: 44px;
+}
+
+.rangeInput-container-vertical > .rangeInput-marks {
+    width: var(--rangeInput-thumb);
+    height: 100%;
+}
+
+.rangeInput-container-vertical .rangeInput-mark {
+    top: auto;
+    left: 50%;
+    bottom: calc(var(--rangeInput-thumb) / 2 + var(--rangeInput-markRatio) * (100% - var(--rangeInput-thumb)));
+    transform: translate(-50%, 50%);
+}
+
+.rangeInput-container-vertical .rangeInput-markLabel {
+    top: auto;
+    left: calc(var(--rangeInput-thumb) / 2 + 15px);
+    bottom: calc(var(--rangeInput-thumb) / 2 + var(--rangeInput-markRatio) * (100% - var(--rangeInput-thumb)));
+    transform: translateY(50%);
+}
+
+.rangeInput-container-vertical > .rangeInput-valueLabel {
+    top: auto;
+    left: auto;
+    right: calc(100% + 6px);
+    bottom: calc(var(--rangeInput-thumb) / 2 + var(--rangeInput-ratio) * (100% - var(--rangeInput-thumb)));
+    transform: translateY(50%) scale(0);
+    transform-origin: 100% 50%;
+}
+
+.rangeInput-container-vertical > .rangeInput-valueLabel::before {
+    top: 50%;
+    right: 0;
+    bottom: auto;
+    left: auto;
+    transform: translate(50%, -50%) rotate(45deg);
+}
+
+.rangeInput-container-vertical > .rangeInput-valueLabel-on,
+.rangeInput-container-vertical:has(> .rangeInput:hover:not(:disabled)) > .rangeInput-valueLabel-auto,
+.rangeInput-container-vertical:has(> .rangeInput:focus-visible) > .rangeInput-valueLabel-auto,
+.rangeInput-container-vertical:has(> .rangeInput:active) > .rangeInput-valueLabel-auto {
+    transform: translateY(50%) scale(1);
 }

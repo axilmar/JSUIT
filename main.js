@@ -73,7 +73,7 @@ const createApp = () => {
             floatingActionButton('+'),
             numberInput({value: 0, displaySize: "large"}),
             passwordInput({label: "Password", displaySize: "large"}),
-            rangeInput(),
+            rangeInput({valueLabelDisplay: "on"}),
             dateTimeLocalInput({seconds:true, pastEnabled:false})
         ),
         div(

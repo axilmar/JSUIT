@@ -6,6 +6,8 @@ adoptStyleSheet(tooltipStyleSheet);
 
 const TOOLTIP_CLASS = 'tooltip';
 const VISIBLE_CLASS = 'tooltip-visible';
+const BELOW_CLASS = 'tooltip-below';
+const ARROW_EDGE = 10;      //the minimum distance between the arrow and the sides of the tooltip
 const DISTANCE = 14;        //MUI's distance between the tooltip and what it is for; here, the mouse cursor
 const EDGE = 4;             //the minimum distance between the tooltip and the edge of the window
 
@@ -41,7 +43,8 @@ const observe = () => {
  * it held before are replaced with the new ones.
  * 
  * Each element has its own tooltip element, created when it is first shown. While the mouse cursor is inside the element, the
- * tooltip is added to the body, above the cursor, and follows the cursor; it looks like MUI's Tooltip, without the arrow.
+ * tooltip is added to the body, above the cursor, and follows the cursor; it looks like MUI's Tooltip, with the arrow.
+ * The arrow points at the cursor: it is at the bottom of the tooltip, or at the top if the tooltip is below the cursor because there is no room above.
  * When the cursor leaves the element, or the element is removed from the page, the tooltip is removed from the body.
  * If an element inside this one has a tooltip, then that one is shown while the cursor is inside the inner element.
  * 
@@ -78,15 +81,22 @@ export const defineTooltipProperty = (element) => {
 
     //places the tooltip above the point, or below it if there is no room above
     const place = (x, y) => {
+        //the size is measured at the left of the window, where the tooltip has all the room that it can have; at the right it could be narrower
+        tooltipElement.style.left = '0px';
         const { width, height } = tooltipElement.getBoundingClientRect();
         const maxLeft = Math.max(document.documentElement.clientWidth - width - EDGE, EDGE);
         const left = Math.min(Math.max(x - width / 2, EDGE), maxLeft);
         let top = y - height - DISTANCE;
-        if (top < EDGE) {
+        const below = top < EDGE;
+        if (below) {
             top = y + DISTANCE + 10;        //the cursor itself is about 20px high
         }
         tooltipElement.style.left = left + 'px';
         tooltipElement.style.top = top + 'px';
+
+        //the arrow points at the cursor, also when the tooltip is moved to keep it inside the window; it is on the top edge if the tooltip is below the cursor
+        tooltipElement.style.setProperty('--tooltip-arrow-x', Math.min(Math.max(x - left, ARROW_EDGE), Math.max(width - ARROW_EDGE, ARROW_EDGE)) + 'px');
+        tooltipElement.classList.toggle(BELOW_CLASS, below);
     };
 
     //adds the tooltip to the body, if it is not there yet, above the point

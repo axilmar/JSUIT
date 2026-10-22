@@ -1,5 +1,5 @@
 /*
- * Tooltip, styled like MUI's Tooltip (without the arrow). Each element that has a tooltip has its own tooltip element, which is
+ * Tooltip, styled like MUI's Tooltip (with the arrow). Each element that has a tooltip has its own tooltip element, which is
  * added to the body while it is shown; see tooltip.js. It is fixed, so that the hidden overflow of the elements cannot clip it,
  * and it ignores the pointer.
  */
@@ -32,4 +32,32 @@
     opacity: 1;
     visibility: visible;
     transition-delay: 0ms;
+}
+
+/*
+ * The arrow: a triangle at the bottom of the tooltip, pointing down at the cursor (tooltip.js sets its position, --tooltip-arrow-x), or at the top,
+ * pointing up, if the tooltip is below the cursor (class tooltip-below). It has the color of the tooltip. The overflow of the tooltip is visible,
+ * because the arrow is out of it.
+ */
+
+.tooltip {
+    overflow: visible !important;
+}
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: var(--tooltip-arrow-x, 50%);
+    width: 12px;
+    height: 6px;
+    margin-left: -6px;
+    background-color: inherit;
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+}
+
+.tooltip-below::after {
+    top: -6px;
+    bottom: auto;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
 }
