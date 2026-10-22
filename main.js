@@ -62,7 +62,7 @@ const createApp = () => {
         },
         div(
             {
-                style: "width: 100%; display: flex; flex-direction: row; gap: 0;align-items: center"
+                style: "width: 100%; display: flex; flex-direction: row; gap: 8px;align-items: center"
             },
             button({ tooltip: "Show the pink box", onclick: () => navigate('/app/pink') }, "Pink"),
             button({ tooltip: "Show the blue box", onclick: () => navigate('/app/blue') }, "Blue"),
@@ -107,7 +107,7 @@ router([
             },
             {
                 path: '/blue',
-                render: () => div({
+                render: div({
                     style: "background-color: white; width: 256px; height: 512px;display: flex; flex-direction: column;gap:16px; padding: 16px", 
                     onrouted: () => console.log("blue routed!"),
                     onunrouted: () => console.log("blue unrouted!")
