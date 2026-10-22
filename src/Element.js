@@ -1,5 +1,5 @@
 import { initNode } from "./Node.js";
-import { adoptStyleSheet, defineEventProperty } from "./utility.js";
+import { adoptStyleSheet, defineEventProperty, defineReverseBooleanProperty } from "./utility.js";
 
 import busySpinnerStyleSheet from './busySpinner.css' with { type: 'css' };
 
@@ -182,6 +182,7 @@ export const initElement = (element, ...properties) => {
     defineClassNameProperty(element, 'busySpinnerClassName', 'busySpinner');
     defineEventProperty(element, "onrouted", "routed");
     defineEventProperty(element, "onunrouted", "unrouted");
+    defineReverseBooleanProperty(element, "visible", "hidden");
     const spinner = defineSpinner(element);
     defineStateProperty(element, 'busy', 'busyClassName', (busy) => busy ? spinner.show() : spinner.hide());
     initNode(element, ...properties);

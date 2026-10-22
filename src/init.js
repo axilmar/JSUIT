@@ -35,7 +35,10 @@ globalSheet.insertRule('*, *::before, *::after { box-sizing: border-box; }', 0);
 // Rule 2: Force overflow hidden on all classes, elements, and pseudo-elements
 globalSheet.insertRule('*, *::before, *::after { overflow: hidden !important; }', 1);
 
-// Rule 3: Roboto font faces (urls are resolved relative to this module, not to the page)
+// Rule 3: make hidden actually hide the element in all cases
+globalSheet.insertRule('[hidden] { display: none !important; }', 2);
+
+// Rule 4: Roboto font faces (urls are resolved relative to this module, not to the page)
 for (const weight of [300, 400, 500, 700]) {
     const url = new URL(`../fonts/roboto-latin-${weight}-normal.woff2`, import.meta.url).href;
     globalSheet.insertRule(

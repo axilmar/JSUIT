@@ -234,3 +234,22 @@ export const defineDisplaySizeProperty = (element, smallClassName, largeClassNam
         }
     });
 }
+
+/**
+ * Defines a boolean property that is the opposite of another property.
+ * In many cases, the standard defines negative properties, for example like hidden,
+ * which is not very good as an approach, because the programmer then needs to remember
+ * which properties are negative and which properties are positive.
+ * This function allows to define the reverse boolean property of a property.
+ * @param {*} element target element.
+ * @param {*} newPropertyName the name of the reverse property.
+ * @param {*} srcPropertyName the name of the property to be reversed.
+ */
+export const defineReverseBooleanProperty = (element, newPropertyName, srcPropertyName) => {
+    Object.defineProperty(element, newPropertyName, {
+        configurable: true,
+        enumerable: true,
+        get: () => !element[srcPropertyName],
+        set: (value) => { element[srcPropertyName] = !value; }
+    });
+}

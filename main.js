@@ -11,6 +11,7 @@ import { rangeInput } from './src/rangeInput.js';
 import { datetimeLocalInput } from './src/datetimeLocalInput.js';
 import { group } from './src/group.js';
 import { rating } from './src/rating.js';
+import { span } from '/src/span.js';
 
 const createApp = () => {
     return div(
@@ -65,7 +66,7 @@ router([
             {
                 path: '/blue',
                 render: () => div({
-                    style: "background-color: white; width: 256px; height: 256px;display: flex; flex-direction: column;gap:16px; padding: 16px", 
+                    style: "background-color: white; width: 256px; height: 512px;display: flex; flex-direction: column;gap:16px; padding: 16px", 
                     onrouted: () => console.log("blue routed!"),
                     onunrouted: () => console.log("blue unrouted!")
                     }, 
@@ -82,7 +83,9 @@ router([
                         values: { 1: "Useless", 2: "Poor", 3: "Ok", 4: "Good", 5: "Excellent" },
                         oninput: (e) => console.log("rating input:", e.target.value),
                         onchange: (e) => console.log("rating change:", e.target.value)
-                    })
+                    }),
+                    button({onclick: () => {document.getElementById("hideme").visible = !document.getElementById("hideme").visible}}, "Hide/Show"),
+                    span({id: "hideme"}, "Some widget")
                 )
             }
         ]
