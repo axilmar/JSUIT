@@ -17,6 +17,7 @@ import { maskedInput } from './src/maskedInput.js';
 import { comboBox } from './src/comboBox.js';
 import { optGroup } from './src/optGroup.js';
 import { option } from './src/option.js';
+import { slider } from './src/slider.js';
 
 const ipv4mask =
 [
@@ -108,7 +109,7 @@ router([
             {
                 path: '/blue',
                 render: div({
-                    style: "background-color: white; width: 256px; height: 512px;display: flex; flex-direction: column;gap:16px; padding: 16px", 
+                    style: "background-color: white; width: 256px; height: 768px;display: flex; flex-direction: column;gap:16px; padding: 16px", 
                     onrouted: () => console.log("blue routed!"),
                     onunrouted: () => console.log("blue unrouted!")
                     }, 
@@ -139,7 +140,8 @@ router([
                             option("Option 2"),
                             option("Option 3")
                         )
-                    )
+                    ),
+                    slider()
                 )
             }
         ]
