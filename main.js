@@ -22,6 +22,7 @@ import { switchButton } from './src/ui/switchButton.js';
 import { toggleButton } from './src/ui/toggleButton.js';
 import { toggleButtonGroup } from './src/ui/toggleButtonGroup.js';
 import { checkIcon } from './src/ui/checkIcon.js';
+import { badge } from './src/ui/badge.js';
 
 const ipv4mask =
 [
@@ -112,7 +113,7 @@ router([
             {
                 path: '/blue',
                 render: div({
-                    style: "background-color: white; width: 256px; height: 100%;display: flex; flex-direction: column;gap:16px; padding: 16px", 
+                    style: "background-color: white; width: 100%; height: 100%;display: flex; flex-direction: row;gap:16px; padding: 16px;flex-flow: row wrap", 
                     onrouted: () => console.log("blue routed!"),
                     onunrouted: () => console.log("blue unrouted!")
                     }, 
@@ -151,7 +152,8 @@ router([
                         toggleButton("Center"),
                         toggleButton("Right")
                     ),
-                    toggleButton("alone")
+                    toggleButton("alone"),
+                    badge({label: 100}, checkIcon())
                 )
             }
         ]

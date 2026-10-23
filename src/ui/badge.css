@@ -1,0 +1,57 @@
+/*
+ * A badge, as MUI's Badge: a label (a number, a text, or a dot) attached to a corner of an element.
+ *
+ * Usage: <div class="badge"> ...content... <span class="badge-label">4</span></div>
+ * A dot: badge-label-dot (the label has no content).
+ *
+ * The position of the label is given by the properties --badge-left and --badge-top, which badge.js sets from the properties
+ * labelHorizontalPosition, labelHorizontalOffset, labelVerticalPosition and labelVerticalOffset: they are the position of the center of the label
+ * in the box of the badge. The default (50% from the center) is the corner of the box, as MUI's rectangular badge.
+ * The overflow of the badge is visible, because the label is partly outside of the box (init.js hides the overflow of everything).
+ */
+
+.badge {
+    --badge-main: #1976d2;                  /* primary.main */
+    --badge-contrast: #fff;                 /* primary.contrastText */
+    --badge-left: 100%;
+    --badge-top: 0%;
+
+    position: relative;
+    display: inline-flex;
+    flex-shrink: 0;
+    vertical-align: middle;
+    overflow: visible !important;
+}
+
+.badge-label {
+    position: absolute;
+    left: var(--badge-left);
+    top: var(--badge-top);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: flex;
+    flex-flow: row wrap;
+    place-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    border-radius: 10px;
+    background-color: var(--badge-main);
+    color: var(--badge-contrast);
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 500;
+    line-height: 1;
+    white-space: nowrap;
+    overflow: visible !important;
+}
+
+/* the dot: MUI's 'dot' variant */
+.badge-label-dot {
+    min-width: 8px;
+    height: 8px;
+    padding: 0;
+    border-radius: 4px;
+}
