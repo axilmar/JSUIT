@@ -5,7 +5,7 @@ import switchButtonStyleSheet from './switchButton.css' with { type: 'css' };
 
 adoptStyleSheet(switchButtonStyleSheet);
 
-const ON_CLASS = 'switchButton-on';
+const SELECTED_CLASS = 'switchButton-selected';
 const DISABLED_CLASS = 'switchButton-disabled';
 
 //defines the properties of a switch, which keeps its state in the closure
@@ -21,7 +21,7 @@ const defineSwitchButtonProperties = (element) => {
     };
 
     const update = () => {
-        element.classList.toggle(ON_CLASS, value);
+        element.classList.toggle(SELECTED_CLASS, value);
         element.classList.toggle(DISABLED_CLASS, disabled);
         element.setAttribute('aria-checked', String(value));
         element.setAttribute('aria-disabled', String(disabled));
@@ -129,7 +129,7 @@ const defineSwitchButtonProperties = (element) => {
  *    takes the color of the switch when it is on. It is set to an element, or to a function that returns one (so that a function can create the element
  *    for each switch); setting it to null brings back the default one. The element is centered in the base, which moves and has the halo, and it has
  *    no style of its own: it has the size, the colors, the shadow and the transitions that the programmer gives it. It can follow the state with
- *    the css selectors `.switchButton-on` and `.switchButton-disabled` over it, and use `currentColor` for the color of the switch.
+ *    the css selectors `.switchButton-selected` and `.switchButton-disabled` over it, and use `currentColor` for the color of the switch.
  *    The getter returns the element that is in use.
  *  - `track`: the element of the bar behind the thumb. The default is the rounded bar (a span with the class 'switchButton-track'), black at 38%
  *    of opacity when the switch is off, and in the color of the switch at 50% when it is on. It is set as the thumb is. The element fills the area of the

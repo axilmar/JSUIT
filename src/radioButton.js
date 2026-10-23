@@ -1,7 +1,6 @@
 import { initIconButton } from "./iconButton.js";
 import { bulletIcon } from "./bulletIcon.js";
 import { adoptStyleSheet } from "./utility.js";
-import { SelectedChangedEvent } from "./SelectedChangedEvent.js";
 
 import radioButtonStyleSheet from './radioButton.css' with { type: 'css' };
 
@@ -12,21 +11,21 @@ const SELECTED_CLASS = 'radioButton-selected';
 //the radio buttons that were created by this module
 const radioButtons = new WeakSet();
 
-//unselects the other radio buttons within the same parent element: the ones with the same name, or all of them if the element has no name
+//unselects the other radio buttons within the same parent element that have the same name (the ones with no name are one group, too)
 const unselectOthers = (element) => {
     if (!element.parentElement) {
         return;
     }
     for (const sibling of element.parentElement.children) {
-        if (sibling !== element && radioButtons.has(sibling) && (!element.name || sibling.name === element.name)) {
-            sibling.selected = false;
+        if (sibling !== element && radioButtons.has(sibling) && sibling.name === element.name) {
+            sibling.value = false;
         }
     }
 };
 
-//defines the boolean property 'selected'
-const defineSelectedProperty = (element) => {
-    Object.defineProperty(element, 'selected', {
+//defines the boolean property 'value'
+const defineValueProperty = (element) => {
+    Object.defineProperty(element, 'value', {
         configurable: true,
         enumerable: true,
         get: () => element.classList.contains(SELECTED_CLASS),
@@ -39,28 +38,7 @@ const defineSelectedProperty = (element) => {
                 unselectOthers(element);
             }
             element.classList.toggle(SELECTED_CLASS, value);
-            element.dispatchEvent(new SelectedChangedEvent(value));
-        }
-    });
-};
-
-//defines the property 'onselectedchanged', which behaves like the DOM 'on<event>' properties
-const defineOnSelectedChangedProperty = (element) => {
-    let handler = null;
-
-    Object.defineProperty(element, 'onselectedchanged', {
-        configurable: true,
-        enumerable: true,
-        get: () => handler,
-        set: (newHandler) => {
-            console.assert(newHandler === null || typeof newHandler === 'function');
-            if (handler) {
-                element.removeEventListener(SelectedChangedEvent.NAME, handler);
-            }
-            handler = newHandler;
-            if (handler) {
-                element.addEventListener(SelectedChangedEvent.NAME, handler);
-            }
+            element.dispatchEvent(new Event('change', { bubbles: true }));
         }
     });
 };
@@ -72,19 +50,17 @@ const defineOnSelectedChangedProperty = (element) => {
  * 
  * The element gets the class 'radioButton' by default, and contains a bullet icon.
  * 
- * The element gets a boolean property 'selected' (default false), and looks like a MUI radio button: the bullet is visible
- * only while it is true. The button has the same size in both cases.
- * 
+ * The element gets a boolean property 'value' (default false; it replaces the string 'value' of a button), and looks like a MUI radio button:
+ * the bullet is visible only while it is true. The button has the same size in both cases.
+ *
  * The 'displaySize' property of the icon button sets the size of the bullet: 'small' 20px, 'medium' 24px (the default), 'large' 28px.
- * 
- * Whenever 'selected' changes, a `SelectedChangedEvent` is dispatched on the element.
- * 
- * The element gets a property 'onselectedchanged', a function (or null) that handles the 'selectedchanged' event.
- * Like the DOM 'on<event>' properties, setting it replaces the previous handler.
- * 
- * When a radio button gets selected, the other radio buttons with the same (non-empty) `name`
+ *
+ * Whenever 'value' changes, whether by the user or by the code, the event 'change' is dispatched on the element (it bubbles),
+ * so `onchange` sets its handler. It is dispatched for the radio button that gets selected and for the ones that are unselected by it.
+ *
+ * When a radio button gets selected (its value becomes true), the other radio buttons with the same `name`
  * in the same parent element are unselected. The `name` is the button's standard `name` property.
- * If the radio button has no name, then all the other radio buttons in the same parent element are unselected, whatever their names.
+ * If the radio button has no name, then only the other radio buttons in the same parent element that have no name are unselected; the ones with a name are not touched.
  * 
  * Clicking the button selects it; as with a native radio button, a click never deselects it. This is a click listener, so an `onclick` property still works in addition to it.
  * 
@@ -94,9 +70,8 @@ const defineOnSelectedChangedProperty = (element) => {
 export const initRadioButton = (element, ...properties) => {
     console.assert(element instanceof HTMLButtonElement);
     radioButtons.add(element);
-    defineSelectedProperty(element);
-    defineOnSelectedChangedProperty(element);
-    element.addEventListener('click', () => { element.selected = true; });
+    defineValueProperty(element);
+    element.addEventListener('click', () => { element.value = true; });
     initIconButton(element, { additionalClassName: 'radioButton', icon: bulletIcon() }, ...properties);
 }
 
