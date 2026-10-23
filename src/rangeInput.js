@@ -231,6 +231,45 @@ const defineSliderProperties = (element) => {
         };
     }
 
+    //the properties of the look of the thumb and the track: each sets a css custom property of the input, and null brings back the default
+    //(the one that the class of the input gives); the sizes are copied to the container by refresh()
+    const toLength = (value) => typeof value === 'number' ? value + 'px' : String(value);
+    const toImage = (value) => /^[\w-]+\(/.test(String(value).trim()) ? String(value) : `url("${value}")`;
+    const toRadius = (value) => ({ circle: '50%', square: '0' })[value] ?? toLength(value);
+    const appearance = {
+        thumbSize: ['--rangeInput-thumb', toLength],
+        trackSize: ['--rangeInput-track', toLength],
+        thumbColor: ['--rangeInput-thumbColor', String],
+        trackColor: ['--rangeInput-trackColor', String],
+        trackFillColor: ['--rangeInput-trackFillColor', String],
+        thumbShape: ['--rangeInput-thumbRadius', toRadius],
+        thumbImage: ['--rangeInput-thumbImage', toImage],
+        thumbBorder: ['--rangeInput-thumbBorder', String],
+        thumbShadow: ['--rangeInput-thumbShadow', String],
+        trackRadius: ['--rangeInput-trackRadius', toLength]
+    };
+    for (const [name, [variable, convert]] of Object.entries(appearance)) {
+        let current = null;
+        Object.defineProperty(element, name, {
+            configurable: true,
+            enumerable: true,
+            get: () => current,
+            set: (value) => {
+                current = value ?? null;
+                if (current === null) {
+                    element.style.removeProperty(variable);
+                }
+                else {
+                    element.style.setProperty(variable, convert(current));
+                }
+                if (name === 'thumbImage') {
+                    element.classList.toggle('rangeInput-thumbImage', current !== null);
+                }
+                refresh();
+            }
+        });
+    }
+
     //the limits and the step, changed by the code or by the attributes, move the marks and change the value; the class changes the colors and sizes
     new MutationObserver((records) => {
         if (records.some(record => ['min', 'max', 'step'].includes(record.attributeName))) {
@@ -281,6 +320,24 @@ const defineSliderProperties = (element) => {
  *  - `valueLabelDisplay`: 'off' (the default), 'auto' or 'on'. A label with the value is shown over the thumb: always ('on'), or while the mouse is
  *    over the slider, or the slider has the focus or is being dragged ('auto').
  *  - `valueLabelFormat`: a function that is passed the value (a number), and returns what the label shows; the default shows the number.
+ *
+ * The look of the thumb and of the track can be changed with the following properties. The browser draws them (an input of range has no elements
+ * for them), so they set their css: they are not elements, as the `thumb` and the `track` of the slider are. Each one is null (the default, which is
+ * the MUI look of the class of the input) or a value; a number is a length in pixels, and any other css value is a string. Setting null restores the default.
+ *  - `thumbSize` and `trackSize`: the diameter of the thumb and the thickness of the track; they replace those of the `displaySize`. The marks and the
+ *    label of the value follow the size of the thumb.
+ *  - `thumbColor`: the color of the thumb, and of its halo; the default is the color of the slider. `trackColor`: the color of the part of the track that is
+ *    not filled (the default is the color of the slider at 38% of opacity). `trackFillColor`: the color of the filled part (the color of the slider).
+ *  - `thumbShape`: 'circle' (the default), 'square', or a css border-radius ('4px', '30%'); it is also the shape of the halo.
+ *  - `thumbImage`: an image that is drawn in the thumb, centered and scaled to fit: the url of an image (also a data url, of an svg for example), or a css
+ *    image (such as `linear-gradient(...)`). While it is set, the thumb has no background color, so the image is the thumb, and the halo is the one
+ *    around the box of the thumb.
+ *  - `thumbBorder`: a css border (such as '2px solid white'), which is inside the size of the thumb. `thumbShadow`: a css box-shadow
+ *    for the thumb (a shadow of the thumb is drawn along with the halo).
+ *  - `trackRadius`: the border radius of the track; the default is half of its thickness, so that the ends are round.
+ * The properties are applied in both the browsers of the engines of Chrome and Firefox. They are values of the style of the input, so they can also be
+ * set as css (`--rangeInput-thumbColor`, `--rangeInput-trackRadius`, and so on).
+ *
  * The marks and the label are elements next to the input, so, when the slider has them, it is wrapped in a container (a span of class
  * 'input-container' and 'rangeInput-container') as soon as it has a parent; the container follows the input when it is moved or removed (see
  * `getInputContainer` in input.js). In the horizontal slider the label of the value is over the slider and the labels of the marks are below it;

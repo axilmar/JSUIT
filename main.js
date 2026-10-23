@@ -18,6 +18,8 @@ import { comboBox } from './src/comboBox.js';
 import { optGroup } from './src/optGroup.js';
 import { option } from './src/option.js';
 import { slider } from './src/slider.js';
+import { switchButton } from './src/switchButton.js';
+import { checkIcon } from './src/checkIcon.js';
 
 const ipv4mask =
 [
@@ -66,7 +68,7 @@ const createApp = () => {
                 style: "width: 100%; display: flex; flex-direction: row; gap: 8px;align-items: center"
             },
             button({ tooltip: "Show the pink box", onclick: () => navigate('/app/pink') }, "Pink"),
-            button({ tooltip: "Show the blue box", onclick: () => navigate('/app/blue') }, "Blue"),
+            button({ tooltip: "Show the blue box", onclick: () => navigate('/app/blue') }, "Blue", checkIcon()),
             "Press a button - Πιεσε ενα πληκτρο",
             checkBox({id: "cb1"}, "Label"),
             radioButton({name: "option1"}, "Radio 1"),
@@ -103,7 +105,6 @@ router([
                     onunrouted: () => console.log("pink unrouted!")
                     }, 
                     "Pink",
-
                 )
             },
             {
@@ -141,7 +142,8 @@ router([
                             option("Option 3")
                         )
                     ),
-                    slider()
+                    slider(),
+                    switchButton({ onchange: (e) => console.log("switch change:", e.target.value) })
                 )
             }
         ]

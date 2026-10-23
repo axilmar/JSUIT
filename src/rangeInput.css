@@ -18,6 +18,17 @@
     --rangeInput-track: 4px;                    /* medium; see rangeInput-small and rangeInput-large */
     --rangeInput-thumb: 20px;
 
+    /* the look of the thumb and the track, which the properties thumbSize, trackSize, thumbColor, trackColor, trackFillColor, thumbShape, thumbImage,
+       thumbBorder, thumbShadow and trackRadius of rangeInput.js set (the sizes are the two above); the values here are the defaults */
+    --rangeInput-thumbColor: var(--rangeInput-main);
+    --rangeInput-trackColor: color-mix(in srgb, var(--rangeInput-main) 38%, transparent);
+    --rangeInput-trackFillColor: var(--rangeInput-main);
+    --rangeInput-thumbRadius: 50%;
+    --rangeInput-thumbImage: none;
+    --rangeInput-thumbBorder: 0;
+    --rangeInput-thumbShadow: 0 0 0 0 transparent;
+    --rangeInput-trackRadius: calc(var(--rangeInput-track) / 2);
+
     box-sizing: border-box;
     width: 200px;
     height: var(--rangeInput-thumb);
@@ -35,20 +46,20 @@
 
 .rangeInput::-webkit-slider-runnable-track {
     height: var(--rangeInput-track);
-    border-radius: calc(var(--rangeInput-track) / 2);
-    background: linear-gradient(to right, var(--rangeInput-main) var(--rangeInput-fill), color-mix(in srgb, var(--rangeInput-main) 38%, transparent) var(--rangeInput-fill));
+    border-radius: var(--rangeInput-trackRadius);
+    background: linear-gradient(to right, var(--rangeInput-trackFillColor) var(--rangeInput-fill), var(--rangeInput-trackColor) var(--rangeInput-fill));
 }
 
 .rangeInput::-moz-range-track {
     height: var(--rangeInput-track);
-    border-radius: calc(var(--rangeInput-track) / 2);
-    background: color-mix(in srgb, var(--rangeInput-main) 38%, transparent);
+    border-radius: var(--rangeInput-trackRadius);
+    background: var(--rangeInput-trackColor);
 }
 
 .rangeInput::-moz-range-progress {
     height: var(--rangeInput-track);
-    border-radius: calc(var(--rangeInput-track) / 2);
-    background: var(--rangeInput-main);
+    border-radius: var(--rangeInput-trackRadius);
+    background: var(--rangeInput-trackFillColor);
 }
 
 .rangeInput::-webkit-slider-thumb {
@@ -58,10 +69,14 @@
     width: var(--rangeInput-thumb);
     height: var(--rangeInput-thumb);
     margin-top: calc((var(--rangeInput-track) - var(--rangeInput-thumb)) / 2);
-    border: 0;
-    border-radius: 50%;
-    background-color: var(--rangeInput-main);
-    box-shadow: 0 0 0 0 color-mix(in srgb, var(--rangeInput-main) 16%, transparent);
+    border: var(--rangeInput-thumbBorder);
+    border-radius: var(--rangeInput-thumbRadius);
+    background-color: var(--rangeInput-thumbColor);
+    background-image: var(--rangeInput-thumbImage);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--rangeInput-thumbColor) 16%, transparent), var(--rangeInput-thumbShadow);
     transition: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
@@ -69,29 +84,42 @@
     box-sizing: border-box;
     width: var(--rangeInput-thumb);
     height: var(--rangeInput-thumb);
-    border: 0;
-    border-radius: 50%;
-    background-color: var(--rangeInput-main);
-    box-shadow: 0 0 0 0 color-mix(in srgb, var(--rangeInput-main) 16%, transparent);
+    border: var(--rangeInput-thumbBorder);
+    border-radius: var(--rangeInput-thumbRadius);
+    background-color: var(--rangeInput-thumbColor);
+    background-image: var(--rangeInput-thumbImage);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--rangeInput-thumbColor) 16%, transparent), var(--rangeInput-thumbShadow);
     transition: box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .rangeInput:hover::-webkit-slider-thumb,
 .rangeInput:focus-visible::-webkit-slider-thumb {
-    box-shadow: 0 0 0 8px color-mix(in srgb, var(--rangeInput-main) 16%, transparent);
+    box-shadow: 0 0 0 8px color-mix(in srgb, var(--rangeInput-thumbColor) 16%, transparent), var(--rangeInput-thumbShadow);
 }
 
 .rangeInput:active::-webkit-slider-thumb {
-    box-shadow: 0 0 0 14px color-mix(in srgb, var(--rangeInput-main) 16%, transparent);
+    box-shadow: 0 0 0 14px color-mix(in srgb, var(--rangeInput-thumbColor) 16%, transparent), var(--rangeInput-thumbShadow);
 }
 
 .rangeInput:hover::-moz-range-thumb,
 .rangeInput:focus-visible::-moz-range-thumb {
-    box-shadow: 0 0 0 8px color-mix(in srgb, var(--rangeInput-main) 16%, transparent);
+    box-shadow: 0 0 0 8px color-mix(in srgb, var(--rangeInput-thumbColor) 16%, transparent), var(--rangeInput-thumbShadow);
 }
 
 .rangeInput:active::-moz-range-thumb {
-    box-shadow: 0 0 0 14px color-mix(in srgb, var(--rangeInput-main) 16%, transparent);
+    box-shadow: 0 0 0 14px color-mix(in srgb, var(--rangeInput-thumbColor) 16%, transparent), var(--rangeInput-thumbShadow);
+}
+
+/* a thumb with an image shows only the image */
+.rangeInput-thumbImage::-webkit-slider-thumb {
+    background-color: transparent;
+}
+
+.rangeInput-thumbImage::-moz-range-thumb {
+    background-color: transparent;
 }
 
 .rangeInput:disabled {
@@ -265,8 +293,8 @@
 .rangeInput-vertical::-webkit-slider-runnable-track {
     width: var(--rangeInput-track);
     height: auto;
-    border-radius: calc(var(--rangeInput-track) / 2);
-    background: linear-gradient(to top, var(--rangeInput-main) var(--rangeInput-fill), color-mix(in srgb, var(--rangeInput-main) 38%, transparent) var(--rangeInput-fill));
+    border-radius: var(--rangeInput-trackRadius);
+    background: linear-gradient(to top, var(--rangeInput-trackFillColor) var(--rangeInput-fill), var(--rangeInput-trackColor) var(--rangeInput-fill));
 }
 
 .rangeInput-vertical::-webkit-slider-thumb {

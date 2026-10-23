@@ -1,0 +1,168 @@
+/*
+ * Switch, styled like a MUI Switch. Created by switchButton.js.
+ *
+ * Structure:
+ *   <div class="switchButton" role="switch" tabindex="0">
+ *     <span class="switchButton-trackSlot"> <span class="switchButton-track"></span> </span>
+ *     <span class="switchButton-base"> <span class="switchButton-thumb"></span> </span>
+ *   </div>
+ * Sizes: default (medium: 58x38 box, 34x14 track, 20px thumb), switch-small (40x24, 26x10, 16px), switch-large (74x50, 42x18, 26px; MUI has no large switch).
+ *
+ * The color of the switch is the css 'color' of the element (primary.main, #1976d2, by default): set it with `style.color`. The thumb and the
+ * track (at half opacity) take it while the switch is on; the hover and focus halo around the thumb is in it too.
+ *
+ * The track and the thumb (the spans 'switchButton-track' and 'switchButton-thumb') are the defaults of the properties `track` and `thumb`, which
+ * replace them with any element: the track slot gives its element the area of the track, and the base centers its element, with no style of the own.
+ *
+ * The base is a circle as high as the box, which moves over the track, and has the halo, as in MUI (where it is the ripple of the thumb);
+ * it is inside the box of the switch.
+ *
+ * The overflow of the switch and of everything in it is visible, so that the thumb and the track of the programmer can be drawn out of the box
+ * (the global rule that hides the overflow of the elements needs !important to be overridden).
+ */
+
+.switchButton,
+.switchButton *,
+.switchButton *::before,
+.switchButton *::after {
+    overflow: visible !important;
+}
+
+.switchButton {
+    --switchButton-thumb: 20px;
+    --switchButton-track-width: 34px;
+    --switchButton-track-height: 14px;
+    --switchButton-padding: 12px;                     /* the space around the track */
+    --switchButton-height: calc(var(--switchButton-track-height) + 2 * var(--switchButton-padding));
+    --switchButton-shift: calc(var(--switchButton-track-width) - var(--switchButton-thumb) + 6px);        /* how far the base moves when the switch is on */
+
+    position: relative;
+    display: inline-block;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    width: calc(var(--switchButton-track-width) + 2 * var(--switchButton-padding));
+    height: var(--switchButton-height);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    border-radius: 7px;
+    color: #1976d2;                             /* primary.main */
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.switchButton-small {
+    --switchButton-thumb: 16px;
+    --switchButton-track-width: 26px;
+    --switchButton-track-height: 10px;
+    --switchButton-padding: 7px;
+}
+
+.switchButton-large {
+    --switchButton-thumb: 26px;
+    --switchButton-track-width: 42px;
+    --switchButton-track-height: 18px;
+    --switchButton-padding: 16px;
+}
+
+.switchButton-error {
+    color: #d32f2f;                             /* error.main */
+}
+
+/* the area of the track; the track, which is the default one or the one of the programmer, fills it */
+.switchButton-trackSlot {
+    position: absolute;
+    top: var(--switchButton-padding);
+    left: var(--switchButton-padding);
+    display: flex;
+    width: var(--switchButton-track-width);
+    height: var(--switchButton-track-height);
+}
+
+.switchButton-trackSlot > * {
+    flex: 1 1 auto;
+}
+
+.switchButton-track {
+    box-sizing: border-box;
+    border-radius: calc(var(--switchButton-track-height) / 2);
+    background-color: #000;                     /* common.black */
+    opacity: 0.38;
+    transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.switchButton-base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    width: var(--switchButton-height);
+    height: var(--switchButton-height);
+    border-radius: 50%;
+    transform: translateX(0);
+    transition: transform 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.switchButton-thumb {
+    box-sizing: border-box;
+    width: var(--switchButton-thumb);
+    height: var(--switchButton-thumb);
+    border-radius: 50%;
+    background-color: #fff;                     /* common.white */
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+/* on */
+.switchButton-on .switchButton-track {
+    background-color: currentColor;
+    opacity: 0.5;
+}
+
+.switchButton-on > .switchButton-base {
+    transform: translateX(var(--switchButton-shift));
+}
+
+.switchButton-on > .switchButton-base > .switchButton-thumb {
+    background-color: currentColor;
+}
+
+/* the halo: hover, keyboard focus, and pressed */
+.switchButton:hover > .switchButton-base {
+    background-color: color-mix(in srgb, currentColor 4%, transparent);
+}
+
+.switchButton:focus-visible > .switchButton-base,
+.switchButton:active > .switchButton-base {
+    background-color: color-mix(in srgb, currentColor 12%, transparent);
+}
+
+/* disabled */
+.switchButton-disabled {
+    pointer-events: none;
+    cursor: default;
+}
+
+.switchButton-disabled .switchButton-track,
+.switchButton-disabled.switchButton-on .switchButton-track {
+    background-color: #000;
+    opacity: 0.12;
+}
+
+.switchButton-disabled > .switchButton-base > .switchButton-thumb,
+.switchButton-disabled.switchButton-on > .switchButton-base > .switchButton-thumb {
+    background-color: #f5f5f5;                  /* grey[100] */
+}
+
+.switchButton-busy {
+    opacity: 0.7;
+    pointer-events: none;
+    cursor: default;
+}

@@ -10,7 +10,7 @@ const ACTIVE_CLASS = 'slider-active';
 const DRAGGING_CLASS = 'slider-dragging';
 const VALUE_LABELS = ['off', 'auto', 'on'];
 const ORIENTATIONS = ['horizontal', 'vertical'];
-const TRACKS = ['normal', 'inverted', false];
+const TRACK_MODES = ['normal', 'inverted', false];
 const EPSILON = 1e-9;
 
 //the number of decimals of a number, which is the precision of the values that are a multiple of it
@@ -44,7 +44,7 @@ const defineSliderProperties = (element) => {
         scale: (value) => value,
         getAriaLabel: null,
         getAriaValueText: null,
-        track: 'normal',
+        trackMode: 'normal',
         disabled: false,
         disableSwap: false,
         minDistance: 0,
@@ -52,6 +52,11 @@ const defineSliderProperties = (element) => {
         name: ''
     };
     let thumbs = [];
+    let fills = [];                 //the default visuals of the thumbs
+    let visuals = [];               //the visuals that the thumbs have: the default ones, or the ones that the programmer set
+    const customThumbs = { left: null, right: null };       //the visuals that the programmer set
+    let trackFill = null;           //the default visual of the track
+    let trackVisual = null;         //the visual that the track has
     let markElements = [];          //{ value, dot, label }
     let hiddenInputs = [];
     let rail = null;
@@ -158,12 +163,12 @@ const defineSliderProperties = (element) => {
 
     //the marks that are in the track
     const isMarkActive = (value) => {
-        if (state.track === false) {
+        if (state.trackMode === false) {
             return false;
         }
         const first = state.values[0];
         const last = state.values[state.values.length - 1];
-        if (state.track === 'inverted') {
+        if (state.trackMode === 'inverted') {
             return state.range ? value <= first || value >= last : value >= first;
         }
         return state.range ? value >= first && value <= last : value <= first;
@@ -238,16 +243,34 @@ const defineSliderProperties = (element) => {
         element.classList.toggle('slider-marked', markElements.some(mark => mark.label));
     };
 
+    //the role of a thumb: 'left' is the first one, 'right' is the last one of a range slider, and the ones between have none
+    const getThumbRole = (index) => index === 0 ? 'left' : (index === thumbs.length - 1 ? 'right' : null);
+
+    //puts in a thumb the visual that the programmer set for its role, or the default one
+    const showThumbVisual = (index) => {
+        const visual = customThumbs[getThumbRole(index)] ?? fills[index];
+        if (visuals[index] !== visual) {
+            visuals[index].replaceWith(visual);
+            visuals[index] = visual;
+        }
+    };
+
     //creates the thumbs, and the inputs of the name, for the number of values
     const renderThumbs = () => {
         thumbs.forEach(thumb => thumb.remove());
+        fills = [];
+        visuals = [];
         thumbs = state.values.map(() => {
             const thumb = create('span', 'slider-thumb');
             thumb.setAttribute('role', 'slider');
-            thumb.append(create('span', 'slider-valueLabel'));
+            const fill = create('span', 'slider-thumbFill');
+            thumb.append(create('span', 'slider-valueLabel'), fill);
+            fills.push(fill);
+            visuals.push(fill);
             element.append(thumb);
             return thumb;
         });
+        thumbs.forEach((_, index) => showThumbVisual(index));
         renderNames();
     };
 
@@ -465,9 +488,9 @@ const defineSliderProperties = (element) => {
         update();
     });
 
-    define('track', () => state.track, (value) => {
-        console.assert(TRACKS.includes(value));
-        state.track = value;
+    define('trackMode', () => state.trackMode, (value) => {
+        console.assert(TRACK_MODES.includes(value));
+        state.trackMode = value;
         element.classList.toggle('slider-track-inverted', value === 'inverted');
         element.classList.toggle('slider-track-none', value === false);
         update();
@@ -500,9 +523,38 @@ const defineSliderProperties = (element) => {
         update();
     });
 
+    //the visuals are set to an element, to a function that returns one, or to null (the default one)
+    const getComponent = (value) => {
+        const component = typeof value === 'function' ? value() : value ?? null;
+        console.assert(component === null || component instanceof Element, 'The thumb and the track must be elements.');
+        return component;
+    };
+
+    define('track', () => trackVisual, (value) => {
+        const visual = getComponent(value) ?? trackFill;
+        if (visual !== trackVisual) {
+            trackVisual.replaceWith(visual);
+            trackVisual = visual;
+        }
+    });
+
+    //'thumb' is the 'leftThumb'; the 'rightThumb' is the one of the last value, if there are several
+    const defineThumbProperty = (name, role) => define(name,
+        () => role === 'right' && thumbs.length < 2 ? customThumbs.right : visuals[role === 'left' ? 0 : thumbs.length - 1],
+        (value) => {
+            customThumbs[role] = getComponent(value);
+            thumbs.forEach((_, index) => showThumbVisual(index));
+        });
+    defineThumbProperty('thumb', 'left');
+    defineThumbProperty('leftThumb', 'left');
+    defineThumbProperty('rightThumb', 'right');
+
     //the elements of the slider that are always there
     rail = create('span', 'slider-rail');
     trackElement = create('span', 'slider-track');
+    trackFill = create('span', 'slider-trackFill');
+    trackVisual = trackFill;
+    trackElement.append(trackFill);
     element.append(rail, trackElement);
     renderThumbs();
     update();
@@ -538,8 +590,19 @@ const defineSliderProperties = (element) => {
  *    shows the number); the default is the identity. The positions use the value.
  *  - `getAriaLabel`: a function `(index)` that returns the aria-label of a thumb. `getAriaValueText`: a function `(scaledValue, index)` that returns its aria-valuetext.
  *  - `orientation`: 'horizontal' (the default) or 'vertical', with the minimum at the bottom; the height of a vertical slider is 200px by default (set it with `style.height`).
- *  - `track`: 'normal' (the default): the track is between the minimum and the thumb (or between the thumbs of a range slider); 'inverted': it is out of that;
+ *  - `trackMode`: 'normal' (the default): the track is between the minimum and the thumb (or between the thumbs of a range slider); 'inverted': it is out of that;
  *    false: there is no track.
+ *  - `track`: the visual of the track, the part that is selected. The default is the bar (a span with the class 'slider-trackFill'), in the color of the slider.
+ *    It is set to an element, or to a function that returns one; null brings back the default one. The element fills the area of the track, whose
+ *    position and length follow the values (and the mode), and has no style of its own: the programmer gives it its colors, border, radius, and so on.
+ *    The getter returns the element that is in use.
+ *  - `thumb`, `leftThumb`: the visual of the first thumb, the one at the left (at the bottom, if the slider is vertical). `thumb` and `leftThumb` are the same
+ *    property. `rightThumb`: the visual of the last thumb of a range slider, which is the thumb on the right; it is shown when the slider has several values (it is
+ *    kept until then), and the thumbs between the first and the last one have the default visual. The default visual is the circle (a span with the class
+ *    'slider-thumbFill'), in the color of the slider, with a shadow. They are set as `track` is. The element is centered in the thumb, which is the focusable
+ *    element, with the role 'slider', that has the position, the halo, the label of the value, and the area that the pointer hits (all of them
+ *    as large as the 'displaySize' says); the element has the size, the colors and the shadow that the programmer gives it, and it can follow
+ *    the state of the thumb with the css selectors `.slider-thumb:hover`, `.slider-thumb:focus-visible` and `.slider-thumb.slider-active` over it.
  *  - `disableSwap`: if true, the thumbs of a range slider cannot cross each other (by default, a thumb that is dragged past another one swaps with it).
  *  - `minDistance`: the least distance between the values of a range slider; the default is 0.
  *  - `shiftStep`: the number of steps that a key moves a thumb by when it is Page Up, Page Down, or an arrow with the shift key; the default is 10.
