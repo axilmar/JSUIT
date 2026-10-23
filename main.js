@@ -19,6 +19,8 @@ import { optGroup } from './src/optGroup.js';
 import { option } from './src/option.js';
 import { slider } from './src/slider.js';
 import { switchButton } from './src/switchButton.js';
+import { toggleButton } from './src/toggleButton.js';
+import { toggleButtonGroup } from './src/toggleButtonGroup.js';
 import { checkIcon } from './src/checkIcon.js';
 
 const ipv4mask =
@@ -110,7 +112,7 @@ router([
             {
                 path: '/blue',
                 render: div({
-                    style: "background-color: white; width: 256px; height: 768px;display: flex; flex-direction: column;gap:16px; padding: 16px", 
+                    style: "background-color: white; width: 256px; height: 100%;display: flex; flex-direction: column;gap:16px; padding: 16px", 
                     onrouted: () => console.log("blue routed!"),
                     onunrouted: () => console.log("blue unrouted!")
                     }, 
@@ -143,7 +145,13 @@ router([
                         )
                     ),
                     slider(),
-                    switchButton({ onchange: (e) => console.log("switch change:", e.target.value) })
+                    switchButton({ onchange: (e) => console.log("switch change:", e.target.value) }),
+                    toggleButtonGroup(
+                        toggleButton({ onchange: (e) => console.log("left:", e.target.value) }, "Left"),
+                        toggleButton("Center"),
+                        toggleButton("Right")
+                    ),
+                    toggleButton("alone")
                 )
             }
         ]
