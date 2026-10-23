@@ -1,0 +1,121 @@
+/*
+ * Radio button, styled like a MUI radio.
+ *
+ * - Unselected: an outlined circle in MUI's text.secondary color (rgba(0,0,0,0.6)), without dot.
+ * - Selected: the circle and a dot in the primary color (#1976d2).
+ *
+ * The circle is drawn on the icon's ::before with the MUI RadioButtonUnchecked shape; the dot is the icon's svg.
+ * Children are laid out horizontally after the icon, centered vertically. The dot is hidden with 'visibility',
+ * not 'display', so the button keeps the same size either way.
+ * Hover, focus, ripple, disabled, error and busy styles come from iconButton.css.
+ */
+
+.radioButton {
+    --radioButton-circle: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z'/%3E%3C/svg%3E");
+}
+
+/* layout: the children are laid out horizontally, one after the other, centered vertically.
+   The height of the button defines the size of the (square) icon; the width follows the content. */
+.iconButton.radioButton {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+    width: auto;
+
+    /* MUI's FormControlLabel margin-right (its -11px margin-left only compensates for the radio padding, which this button does not have) */
+    margin: 0 16px 0 0;
+
+    /* rounded square highlight, as in the check box */
+    border-radius: 4px;
+
+    /* MUI's default text (body1) for the children */
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+
+    /* MUI's default text color (text.primary) for the children; the icon has its own color, see below */
+    color: rgba(0, 0, 0, 0.87);
+}
+
+/* error: the text takes the error color (the circle already does, through the icon button's error style) */
+.iconButton.radioButton.iconButton-error {
+    color: rgba(var(--iconButton-rgb), var(--iconButton-alpha));
+}
+
+.iconButton.radioButton:disabled,
+.iconButton.radioButton[aria-disabled="true"] {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+.iconButton.radioButton.iconButton-busy,
+.iconButton.radioButton.iconButton-busy:hover,
+.iconButton.radioButton.iconButton-busy:focus-visible {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* the icon (circle) and the ripple use the radio color, not the text color */
+.radioButton::after {
+    background-color: rgba(var(--iconButton-rgb), var(--iconButton-alpha));
+}
+
+.radioButton > .iconButton-icon {
+    color: rgba(var(--iconButton-rgb), var(--iconButton-alpha));
+}
+
+.radioButton:disabled > .iconButton-icon,
+.radioButton[aria-disabled="true"] > .iconButton-icon {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+.radioButton.iconButton-busy > .iconButton-icon {
+    color: rgba(var(--iconButton-rgb), calc(var(--iconButton-alpha) * 0.7));
+}
+
+.radioButton > .iconButton-icon {
+    position: relative;
+    flex: 0 0 auto;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1;
+}
+
+/* the circle */
+.radioButton > .iconButton-icon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: currentColor;
+    mask: var(--radioButton-circle) center / 100% 100% no-repeat;
+    pointer-events: none;
+}
+
+/* the dot: above the circle, and visible only while selected */
+.radioButton > .iconButton-icon > svg {
+    position: relative;
+}
+
+.radioButton:not(.radioButton-selected) > .iconButton-icon > svg {
+    visibility: hidden;
+}
+
+/* colors: text.secondary when unselected, primary when selected (unless a color or error style is given) */
+.radioButton:not(.radioButton-selected, .iconButton-error) {
+    --iconButton-rgb: 0, 0, 0;
+    --iconButton-alpha: 0.6;
+}
+
+.radioButton-selected:not(.iconButton-primary, .iconButton-secondary, .iconButton-error, .iconButton-warning, .iconButton-info, .iconButton-success) {
+    --iconButton-rgb: 25, 118, 210;
+    --iconButton-alpha: 1;
+}
+
+/* displaySize: the icon is 20px, 24px (default) or 28px high, as in MUI's Radio */
+.iconButton.radioButton.iconButton-small {
+    height: 20px;
+}
+
+.iconButton.radioButton.iconButton-large {
+    height: 28px;
+}

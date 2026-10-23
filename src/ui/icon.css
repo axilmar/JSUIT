@@ -1,0 +1,31 @@
+/*
+ * MUI SvgIcon sizes: small 1.25rem (20px), medium 1.5rem (24px, the default), large 2.1875rem (35px).
+ *
+ * Usage: <div class="icon icon-small">...svg...</div>
+ * An icon inside a button takes the size of the button (see iconButton.css).
+ */
+
+.icon {
+    display: inline-block;
+    flex: 0 0 auto;
+    width: 24px;
+    height: 24px;
+    line-height: 1;
+    user-select: none;
+}
+
+.icon > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.icon-small {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-large {
+    width: 35px;
+    height: 35px;
+}

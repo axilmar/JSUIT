@@ -1,0 +1,435 @@
+/*
+ * Text field looks for an input element, with the MUI default palette. The 'variant' property of input.js adds one of the classes
+ * input-outlined (the default), input-filled and input-standard, which give the MUI looks of the same name.
+ *
+ * Usage: <input class="input input-standard" type="text" placeholder="...">
+ * Size: default (medium), input-small, input-large (MUI has no large input). The height of the field is 56px (outlined), 32px
+ * (standard) and 56px (filled, with or without a label); for the small size it is 40px, 29px and 48px (40px without a label).
+ * Optional color classes (the focus color): input-secondary, -warning, -info, -success.
+ * Error: input-error.
+ *
+ * An input element has no room for a label, so the floating label of MUI's TextField is made with a container, see below.
+ * The outlined border is a real border; its 2px focus border is drawn with an inset box-shadow, so that the size does not change
+ * on focus. The underline of the standard and the filled variants is the bottom border (1px), and an inset box-shadow adds the
+ * second pixel of the 2px hover (standard) and focus underlines; unlike MUI's, the focus underline does not grow from the center.
+ *
+ * The space around the text, border included, is given by --input-pt, --input-pb (top, bottom) and --input-px (left, right); the
+ * border widths of the variant are --input-bt, --input-bb (top, bottom) and --input-bx (left, right).
+ */
+
+.input {
+    --input-main: #1976d2;                 /* primary.main */
+    --input-error: #d32f2f;                /* error.main */
+    --input-font-size: 1rem;
+
+    box-sizing: border-box;
+    display: inline-block;
+    min-width: 0;
+    margin: 0;
+    padding: calc(var(--input-pt) - var(--input-bt)) calc(var(--input-px) - var(--input-bx)) calc(var(--input-pb) - var(--input-bb));
+    border-style: solid;
+    border-color: transparent;
+    border-width: var(--input-bt) var(--input-bx) var(--input-bb);
+    outline: 0;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.87);
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: var(--input-font-size);
+    font-weight: 400;
+    line-height: 1.4375em;
+    letter-spacing: 0.00938em;
+    height: calc(1.4375em + var(--input-pt) + var(--input-pb));
+    vertical-align: middle;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    transition:
+        background-color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+        border-color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+        box-shadow 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.input-large {
+    --input-font-size: 1.25rem;
+}
+
+.input::placeholder {
+    color: currentColor;
+    opacity: 0.42;
+}
+
+.input:disabled {
+    color: rgba(0, 0, 0, 0.38);
+    box-shadow: none;
+    cursor: default;
+}
+
+.input-secondary { --input-main: #9c27b0; }
+.input-warning   { --input-main: #ed6c02; }
+.input-info      { --input-main: #0288d1; }
+.input-success   { --input-main: #2e7d32; }
+
+.input-error {
+    --input-main: var(--input-error);
+}
+
+/* ---------- outlined ---------- */
+
+.input-outlined {
+    --input-bt: 1px;
+    --input-bx: 1px;
+    --input-bb: 1px;
+    --input-px: 14px;
+    --input-pt: 16.5px;                    /* MUI's vertical padding; the border of 1px is inside the height */
+    --input-pb: 16.5px;
+
+    border-color: rgba(0, 0, 0, 0.23);
+    border-radius: 4px;
+}
+
+.input-outlined.input-small {
+    --input-pt: 8.5px;
+    --input-pb: 8.5px;
+}
+
+.input-outlined.input-large {
+    --input-pt: 20px;
+    --input-pb: 20px;
+}
+
+.input-outlined:hover:not(:disabled) {
+    border-color: rgba(0, 0, 0, 0.87);
+}
+
+.input-outlined:focus:not(:disabled) {
+    border-color: var(--input-main);
+    box-shadow: inset 0 0 0 1px var(--input-main);
+}
+
+.input-outlined:disabled {
+    border-color: rgba(0, 0, 0, 0.26);
+}
+
+.input-outlined.input-error,
+.input-outlined.input-error:hover:not(:disabled),
+.input-outlined.input-error:focus:not(:disabled) {
+    border-color: var(--input-error);
+}
+
+.input-outlined.input-error:focus:not(:disabled) {
+    box-shadow: inset 0 0 0 1px var(--input-error);
+}
+
+/* ---------- standard ---------- */
+
+.input-standard {
+    --input-bt: 0px;
+    --input-bx: 0px;
+    --input-bb: 1px;
+    --input-px: 0px;
+    --input-pt: 4px;                       /* MUI's padding: 4px 0 5px; the underline of 1px is inside the height */
+    --input-pb: 5px;
+
+    border-bottom-color: rgba(0, 0, 0, 0.42);
+    border-radius: 0;
+}
+
+.input-standard.input-small {
+    --input-pt: 1px;
+}
+
+.input-standard.input-large {
+    --input-pt: 6px;
+    --input-pb: 7px;
+}
+
+/* the field leaves room above for the label, which is not inside the field */
+.input-standard.input-labeled {
+    margin-top: 16px;
+}
+
+.input-standard:hover:not(:disabled) {
+    border-bottom-color: rgba(0, 0, 0, 0.87);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.87);
+}
+
+.input-standard:focus:not(:disabled) {
+    border-bottom-color: var(--input-main);
+    box-shadow: inset 0 -1px 0 var(--input-main);
+}
+
+.input-standard:disabled {
+    border-bottom-style: dotted;
+    border-bottom-color: rgba(0, 0, 0, 0.42);
+}
+
+.input-standard.input-error,
+.input-standard.input-error:hover:not(:disabled),
+.input-standard.input-error:focus:not(:disabled) {
+    border-bottom-color: var(--input-error);
+    box-shadow: inset 0 -1px 0 var(--input-error);
+}
+
+/* ---------- filled ---------- */
+
+.input-filled {
+    --input-bt: 0px;
+    --input-bx: 0px;
+    --input-bb: 1px;
+    --input-px: 12px;
+    --input-pt: 16px;                      /* MUI's padding without a label (hiddenLabel): 16px 12px 17px */
+    --input-pb: 17px;
+
+    border-bottom-color: rgba(0, 0, 0, 0.42);
+    border-radius: 4px 4px 0 0;
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.input-filled.input-small {
+    --input-pt: 8px;
+    --input-pb: 9px;
+}
+
+.input-filled.input-large {
+    --input-pt: 20px;
+    --input-pb: 21px;
+}
+
+/* with a label, the label takes the top of the field: MUI's padding 25px 12px 8px */
+.input-filled.input-labeled {
+    --input-pt: 25px;
+    --input-pb: 8px;
+}
+
+.input-filled.input-labeled.input-small {
+    --input-pt: 21px;
+    --input-pb: 4px;
+}
+
+.input-filled.input-labeled.input-large {
+    --input-pt: 29px;
+    --input-pb: 10px;
+}
+
+.input-filled:hover:not(:disabled) {
+    border-bottom-color: rgba(0, 0, 0, 0.87);
+    background-color: rgba(0, 0, 0, 0.09);
+}
+
+.input-filled:focus:not(:disabled) {
+    border-bottom-color: var(--input-main);
+    box-shadow: inset 0 -1px 0 var(--input-main);
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.input-filled:disabled {
+    border-bottom-style: dotted;
+    border-bottom-color: rgba(0, 0, 0, 0.42);
+    background-color: rgba(0, 0, 0, 0.12);
+}
+
+.input-filled.input-error,
+.input-filled.input-error:hover:not(:disabled),
+.input-filled.input-error:focus:not(:disabled) {
+    border-bottom-color: var(--input-error);
+    box-shadow: inset 0 -1px 0 var(--input-error);
+}
+
+/* Busy: like disabled (no interaction), but keeping the field's color. */
+.input.input-busy,
+.input.input-busy:hover,
+.input.input-busy:focus {
+    opacity: 0.7;
+    pointer-events: none;
+    cursor: default;
+}
+
+/* The browser's own spin buttons and date/time indicators keep working; just align them with the MUI colors. */
+.input::-webkit-calendar-picker-indicator {
+    opacity: 0.54;
+    cursor: pointer;
+}
+
+.input:disabled::-webkit-calendar-picker-indicator {
+    opacity: 0.26;
+    cursor: default;
+}
+
+/*
+ * Label: the floating label of MUI's text field (see the property 'label' in input.js).
+ * The input is wrapped in a container together with the label; the label is positioned over the field's top left corner.
+ * Outlined: its background (--input-label-background, default white) opens the notch in the border while it is shrunk.
+ * Standard: it is above the field, which has a margin for it. Filled: it is inside the field.
+ */
+
+.input-container {
+    --input-label-background: #fff;
+
+    position: relative;
+    display: inline-flex;
+    max-width: 100%;
+    vertical-align: middle;
+    overflow: visible !important;           /* the shrunk label of the outlined variant sticks out above the container */
+}
+
+.input-label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0;
+    overflow: hidden;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.4375em;
+    letter-spacing: 0.00938em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    transform-origin: top left;
+    pointer-events: none;
+    user-select: none;
+    transition:
+        color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+        transform 200ms cubic-bezier(0, 0, 0.2, 1) 0ms,
+        max-width 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.input-large + .input-label {
+    font-size: 1.25rem;
+}
+
+/* outlined: the label is on the border while shrunk */
+.input-outlined + .input-label {
+    max-width: calc(100% - 24px);
+    padding: 0 5px;
+    transform: translate(9px, 16.5px) scale(1);
+}
+
+.input-outlined.input-small + .input-label {
+    transform: translate(9px, 8.5px) scale(1);
+}
+
+.input-outlined.input-large + .input-label {
+    transform: translate(9px, 20px) scale(1);
+}
+
+.input-outlined + .input-label.input-label-shrunk {
+    max-width: calc(133% - 32px);
+    background-color: var(--input-label-background);
+    transform: translate(9px, -9px) scale(0.75);
+}
+
+/* the shrunk label of the large size is taller, so it moves up a little more to stay centered on the border */
+.input-outlined.input-large + .input-label.input-label-shrunk {
+    transform: translate(9px, -10px) scale(0.75);
+}
+
+/* standard: the label is above the field, which has a margin of 16px */
+.input-standard + .input-label {
+    max-width: 100%;
+    transform: translate(0, 20px) scale(1);
+}
+
+.input-standard.input-small + .input-label {
+    transform: translate(0, 17px) scale(1);
+}
+
+.input-standard.input-large + .input-label {
+    transform: translate(0, 22px) scale(1);
+}
+
+.input-standard + .input-label.input-label-shrunk {
+    max-width: 133%;
+    transform: translate(0, -1.5px) scale(0.75);
+}
+
+/* filled: the label is inside the field */
+.input-filled + .input-label {
+    max-width: calc(100% - 24px);
+    transform: translate(12px, 16px) scale(1);
+}
+
+.input-filled.input-small + .input-label {
+    transform: translate(12px, 13px) scale(1);
+}
+
+.input-filled.input-large + .input-label {
+    transform: translate(12px, 20px) scale(1);
+}
+
+.input-filled + .input-label.input-label-shrunk {
+    max-width: calc(133% - 24px);
+    transform: translate(12px, 7px) scale(0.75);
+}
+
+.input-filled.input-small + .input-label.input-label-shrunk {
+    transform: translate(12px, 4px) scale(0.75);
+}
+
+/* the placeholder would overlap the label while it is inside the field */
+.input-labeled:not(:focus)::placeholder {
+    opacity: 0;
+}
+
+/* label colors: primary (the field's color) while focused, error, disabled; the asterisk of required fields */
+.input-container:focus-within > .input-label {
+    color: var(--input-main);
+}
+
+.input-container:has(> .input-error) > .input-label {
+    color: var(--input-error);
+}
+
+.input-container:has(> .input:disabled) > .input-label {
+    color: rgba(0, 0, 0, 0.38);
+}
+
+.input-container:has(> .input[required]) > .input-label::after {
+    content: " *";
+}
+
+/*
+ * The overlay of the text: the segmented inputs (the date and time inputs, and the masked input) show parts of their text in the error color,
+ * which an input cannot do; see attachTextOverlay in segmentedInputUtil.js. The text of the input is transparent, and the overlay, which is
+ * placed exactly over the input, shows the same text. The caret and the selection are the ones of the input.
+ */
+
+.input.input-overlaid,
+.input.input-overlaid:disabled {
+    color: transparent;
+    caret-color: rgba(0, 0, 0, 0.87);
+}
+
+.input-overlaid::selection {
+    background-color: rgba(25, 118, 210, 0.3);
+}
+
+.input-overlay {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color: transparent;
+    overflow: hidden;
+    white-space: pre;
+    pointer-events: none;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.input-container:has(> .input:disabled) > .input-overlay {
+    color: rgba(0, 0, 0, 0.38);
+}
+
+.input-overlay-error {
+    color: #d32f2f;
+}
+
+.input-overlay-placeholder {
+    opacity: 0.42;
+}

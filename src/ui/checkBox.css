@@ -1,0 +1,130 @@
+/*
+ * Check mark icon button, styled like a MUI checkbox.
+ *
+ * - Unselected: an outlined box in MUI's text.secondary color (rgba(0,0,0,0.6)), without check mark.
+ * - Selected: a filled box in the primary color (#1976d2) with a white check mark.
+ *
+ * The box is drawn on the icon's ::before with the MUI CheckBox / CheckBoxOutlineBlank shapes.
+ * Children are laid out horizontally after the icon, centered vertically. The check mark is hidden with 'visibility', not 'display', so the button
+ * keeps the same size either way. Hover, focus, ripple, disabled, error and busy styles come from iconButton.css.
+ */
+
+.checkBox {
+    --checkBox-box-outline: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z'/%3E%3C/svg%3E");
+    --checkBox-box-filled: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2z'/%3E%3C/svg%3E");
+}
+
+/* layout: the children are laid out horizontally, one after the other, centered vertically.
+   The height of the button defines the size of the (square) icon; the width follows the content. */
+.iconButton.checkBox {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+    width: auto;
+
+    /* MUI's FormControlLabel margin-right (its -11px margin-left only compensates for the checkbox padding, which this button does not have) */
+    margin: 0 16px 0 0;
+
+    /* not a circle: the corners of the box would be clipped */
+    border-radius: 4px;
+
+    /* MUI's default text (body1) for the children */
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+
+    /* MUI's default text color (text.primary) for the children; the icon has its own color, see below */
+    color: rgba(0, 0, 0, 0.87);
+}
+
+/* error: the text takes the error color (the box already does, through the icon button's error style) */
+.iconButton.checkBox.iconButton-error {
+    color: rgba(var(--iconButton-rgb), var(--iconButton-alpha));
+}
+
+.iconButton.checkBox:disabled,
+.iconButton.checkBox[aria-disabled="true"] {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+.iconButton.checkBox.iconButton-busy,
+.iconButton.checkBox.iconButton-busy:hover,
+.iconButton.checkBox.iconButton-busy:focus-visible {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* the icon (box) and the ripple use the checkbox color, not the text color */
+.checkBox::after {
+    background-color: rgba(var(--iconButton-rgb), var(--iconButton-alpha));
+}
+
+.checkBox > .iconButton-icon {
+    color: rgba(var(--iconButton-rgb), var(--iconButton-alpha));
+}
+
+.checkBox:disabled > .iconButton-icon,
+.checkBox[aria-disabled="true"] > .iconButton-icon {
+    color: rgba(0, 0, 0, 0.26);
+}
+
+.checkBox.iconButton-busy > .iconButton-icon {
+    color: rgba(var(--iconButton-rgb), calc(var(--iconButton-alpha) * 0.7));
+}
+
+.checkBox > .iconButton-icon {
+    position: relative;
+    flex: 0 0 auto;
+    width: auto;
+    height: 100%;
+    aspect-ratio: 1;
+}
+
+/* the box */
+.checkBox > .iconButton-icon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: currentColor;
+    mask: var(--checkBox-box-outline) center / 100% 100% no-repeat;
+    pointer-events: none;
+}
+
+.checkBox-selected > .iconButton-icon::before {
+    mask-image: var(--checkBox-box-filled);
+}
+
+/* the check mark: smaller than the box, above it, and visible only while selected */
+.checkBox > .iconButton-icon > svg {
+    position: relative;
+    scale: 0.7;
+}
+
+.checkBox:not(.checkBox-selected) > .iconButton-icon > svg {
+    visibility: hidden;
+}
+
+.checkBox-selected > .iconButton-icon > svg {
+    color: #fff;
+}
+
+/* colors: text.secondary when unselected, primary when selected (unless a color or error style is given) */
+.checkBox:not(.checkBox-selected, .iconButton-error) {
+    --iconButton-rgb: 0, 0, 0;
+    --iconButton-alpha: 0.6;
+}
+
+.checkBox-selected:not(.iconButton-primary, .iconButton-secondary, .iconButton-error, .iconButton-warning, .iconButton-info, .iconButton-success) {
+    --iconButton-rgb: 25, 118, 210;
+    --iconButton-alpha: 1;
+}
+
+/* displaySize: the icon is 20px, 24px (default) or 28px high, as in MUI's Checkbox */
+.iconButton.checkBox.iconButton-small {
+    height: 20px;
+}
+
+.iconButton.checkBox.iconButton-large {
+    height: 28px;
+}

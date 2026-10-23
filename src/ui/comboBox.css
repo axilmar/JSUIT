@@ -1,0 +1,204 @@
+/*
+ * Combo box, styled like MUI's Autocomplete (the combo box of MUI): a text field with a button that clears it, a button that opens the
+ * list of options, and a popup with the list. Created by comboBox.js.
+ *
+ * Structure (the text field is an input, see input.css):
+ *   <span class="input-container comboBox-container">
+ *     <select class="comboBox">...</select>          the element that the user holds, which keeps the options and the value; it is not seen
+ *     <span class="comboBox-indicators"> <button class="comboBox-clear"> <button class="comboBox-popupButton"> </span>
+ *     <input class="input comboBox-input">           the text field
+ *     <span class="input-label">                     the label of the input, if there is one
+ *   </span>
+ *   <div class="comboBox-popup"> <ul class="comboBox-listbox"> ... </ul> </div>      in the body, while the list is open
+ */
+
+.comboBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* room for the buttons at the right of the text */
+.input.comboBox-input {
+    padding-right: 64px;
+}
+
+.input-standard.comboBox-input {
+    padding-right: 56px;
+}
+
+.comboBox-container {
+    min-width: 0;
+}
+
+/* busy: like the busy input */
+.input-container:has(> .comboBox.comboBox-busy) {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+/* the buttons: MUI's small icon buttons; they are placed over the text field by comboBox.js */
+.comboBox-indicators {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+.comboBox-indicators > button {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    outline: 0;
+    background-color: transparent;
+    color: rgba(0, 0, 0, 0.54);                 /* action.active */
+    cursor: pointer;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: transparent;
+    transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.comboBox-indicators > button:hover {
+    background-color: rgba(0, 0, 0, 0.04);      /* action.hover */
+}
+
+.comboBox-indicators > button > svg {
+    fill: currentColor;
+    pointer-events: none;
+}
+
+.comboBox-clear > svg {
+    width: 20px;
+    height: 20px;
+}
+
+.comboBox-popupButton > svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.comboBox-open .comboBox-popupButton > svg {
+    transform: rotate(180deg);
+}
+
+/* the clear button is only there when there is something to clear, and is only seen while the mouse is over the field or it has the focus */
+.comboBox-clear {
+    display: none !important;
+    visibility: hidden;
+}
+
+.comboBox-dirty .comboBox-clear {
+    display: inline-flex !important;
+}
+
+.comboBox-dirty:hover .comboBox-clear,
+.comboBox-dirty:focus-within .comboBox-clear {
+    visibility: visible;
+}
+
+.comboBox-disabled .comboBox-indicators > button {
+    color: rgba(0, 0, 0, 0.26);                 /* action.disabled */
+    pointer-events: none;
+}
+
+/* the popup: MUI's Paper with elevation 8, as wide as the text field */
+.comboBox-popup {
+    position: fixed;
+    z-index: 1300;                              /* MUI's modal z-index */
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.87);
+    box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2), 0px 8px 10px 1px rgba(0,0,0,0.14), 0px 3px 14px 2px rgba(0,0,0,0.12);
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+}
+
+/* the list scrolls: the global rule that hides the overflow of everything needs !important to be overridden */
+.comboBox-listbox {
+    box-sizing: border-box;
+    max-height: 40vh;
+    margin: 0;
+    padding: 8px 0;
+    list-style: none;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+.comboBox-option {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: auto;
+    padding: 6px 16px;
+    overflow: hidden;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.comboBox-option-focused {
+    background-color: rgba(0, 0, 0, 0.04);      /* action.hover */
+}
+
+.comboBox-option[aria-selected="true"] {
+    background-color: rgba(25, 118, 210, 0.08); /* primary.main with the opacity of a selected item */
+}
+
+.comboBox-option[aria-selected="true"].comboBox-option-focused {
+    background-color: rgba(25, 118, 210, 0.12);
+}
+
+.comboBox-option[aria-disabled="true"] {
+    opacity: 0.38;                              /* action.disabledOpacity */
+    pointer-events: none;
+}
+
+/* the groups (optgroup): a sticky label, and the options */
+.comboBox-group {
+    margin: 0;
+    padding: 0;
+}
+
+.comboBox-group-label {
+    position: sticky;
+    top: -8px;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 0 16px;
+    background-color: #fff;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 48px;
+}
+
+.comboBox-group-options {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.comboBox-empty {
+    padding: 14px 16px;
+    color: rgba(0, 0, 0, 0.6);
+}

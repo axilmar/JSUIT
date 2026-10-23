@@ -1,0 +1,175 @@
+/*
+ * MUI "Fab" (floating action button) look, with the MUI default palette.
+ *
+ * Usage: <button class="floatingActionButton"><div class="floatingActionButton-icon">...svg...</div></button>
+ * Sizes: default (medium, 48px), floatingActionButton-small (40px), floatingActionButton-large (56px).
+ * Extended variant: add floatingActionButton-extended, with a text node after the icon.
+ * Default color is MUI's grey (the Fab's 'default' color).
+ * Optional color classes: floatingActionButton-primary, -secondary, -error, -warning, -info, -success.
+ *
+ * MUI's JS-driven ripple is approximated with a CSS-only pulse on :active.
+ */
+
+.floatingActionButton {
+    --floatingActionButton-main: #e0e0e0;       /* grey[300] */
+    --floatingActionButton-dark: #d5d5d5;       /* grey.A100 */
+    --floatingActionButton-contrast: rgba(0, 0, 0, 0.87);
+
+    --floatingActionButton-shadow-6: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 6px 10px 0px rgba(0,0,0,0.14), 0px 1px 18px 0px rgba(0,0,0,0.12);
+    --floatingActionButton-shadow-12: 0px 7px 8px -4px rgba(0,0,0,0.2), 0px 12px 17px 2px rgba(0,0,0,0.14), 0px 5px 22px 4px rgba(0,0,0,0.12);
+
+    --floatingActionButton-size: 48px;
+
+    position: relative;
+    box-sizing: border-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    width: var(--floatingActionButton-size);
+    height: var(--floatingActionButton-size);
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    outline: 0;
+    background-color: var(--floatingActionButton-main);
+    color: var(--floatingActionButton-contrast);
+    box-shadow: var(--floatingActionButton-shadow-6);
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    transition:
+        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.floatingActionButton-small { --floatingActionButton-size: 40px; }
+.floatingActionButton-large { --floatingActionButton-size: 56px; }
+
+.floatingActionButton-icon {
+    display: block;
+    flex: 0 0 auto;
+    width: 24px;
+    height: 24px;
+    line-height: 1;
+    user-select: none;
+}
+
+.floatingActionButton-icon > svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Extended variant: a pill with an icon and a label; its height follows the size. */
+.floatingActionButton-extended {
+    width: auto;
+    min-width: 40px;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 20px;
+}
+
+.floatingActionButton-extended.floatingActionButton-large {
+    height: 48px;
+    min-width: 48px;
+    border-radius: 24px;
+}
+
+.floatingActionButton-extended.floatingActionButton-small {
+    height: 34px;
+    min-width: 34px;
+    padding: 0 8px;
+    border-radius: 17px;
+}
+
+.floatingActionButton-extended > .floatingActionButton-icon {
+    margin-right: 8px;
+}
+
+.floatingActionButton::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: currentColor;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+}
+
+.floatingActionButton:hover {
+    background-color: var(--floatingActionButton-dark);
+    box-shadow: var(--floatingActionButton-shadow-12);
+    text-decoration: none;
+}
+
+.floatingActionButton:focus-visible {
+    box-shadow: var(--floatingActionButton-shadow-6);
+}
+
+.floatingActionButton:active {
+    box-shadow: var(--floatingActionButton-shadow-12);
+}
+
+.floatingActionButton:active::after {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(2);
+    transition: transform 550ms cubic-bezier(0.4, 0, 0.2, 1), opacity 100ms linear;
+}
+
+.floatingActionButton:disabled,
+.floatingActionButton[aria-disabled="true"] {
+    color: rgba(0, 0, 0, 0.26);
+    background-color: rgba(0, 0, 0, 0.12);
+    box-shadow: none;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* No sticky hover on touch devices, as in MUI. */
+@media (hover: none) {
+    .floatingActionButton:hover {
+        background-color: var(--floatingActionButton-main);
+        box-shadow: var(--floatingActionButton-shadow-6);
+    }
+}
+
+.floatingActionButton-primary   { --floatingActionButton-main: #1976d2; --floatingActionButton-dark: #1565c0; --floatingActionButton-contrast: #fff; }
+.floatingActionButton-secondary { --floatingActionButton-main: #9c27b0; --floatingActionButton-dark: #7b1fa2; --floatingActionButton-contrast: #fff; }
+.floatingActionButton-error     { --floatingActionButton-main: #d32f2f; --floatingActionButton-dark: #c62828; --floatingActionButton-contrast: #fff; }
+.floatingActionButton-warning   { --floatingActionButton-main: #ed6c02; --floatingActionButton-dark: #e65100; --floatingActionButton-contrast: #fff; }
+.floatingActionButton-info      { --floatingActionButton-main: #0288d1; --floatingActionButton-dark: #01579b; --floatingActionButton-contrast: #fff; }
+.floatingActionButton-success   { --floatingActionButton-main: #2e7d32; --floatingActionButton-dark: #1b5e20; --floatingActionButton-contrast: #fff; }
+
+/* Busy: like disabled (no interaction, no shadow), but keeping a vibrant version of the button's color. */
+.floatingActionButton.floatingActionButton-busy,
+.floatingActionButton.floatingActionButton-busy:hover,
+.floatingActionButton.floatingActionButton-busy:focus-visible,
+.floatingActionButton.floatingActionButton-busy:active {
+    color: var(--floatingActionButton-contrast);
+    background-color: color-mix(in srgb, var(--floatingActionButton-main) 60%, transparent);
+    box-shadow: none;
+    cursor: default;
+    pointer-events: none;
+}
+
+.floatingActionButton.floatingActionButton-busy::after {
+    display: none;
+}
