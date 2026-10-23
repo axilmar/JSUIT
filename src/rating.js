@@ -1,6 +1,6 @@
 import { initDiv } from "./div.js";
 import { starIcon } from "./starIcon.js";
-import { adoptStyleSheet, defineDisplaySizeProperty } from "./utility.js";
+import { adoptStyleSheet, defineDisplaySizeProperty, toLabelElement } from "./utility.js";
 
 import ratingStyleSheet from './rating.css' with { type: 'css' };
 
@@ -229,14 +229,8 @@ const defineRatingProperties = (element) => {
     });
 
     define('label', () => label, (newLabel) => {
-        console.assert(newLabel === null || newLabel === undefined || typeof newLabel === 'string' || newLabel instanceof HTMLElement);
-        if (typeof newLabel === 'string') {
-            const span = document.createElement('span');
-            span.textContent = newLabel;
-            newLabel = span;
-        }
         label?.remove();
-        label = newLabel ?? null;
+        label = toLabelElement(newLabel);
         if (label) {
             label.classList.add(LABEL_CLASS);
             element.append(label);
@@ -333,7 +327,7 @@ const defineRatingProperties = (element) => {
  *  - `values`: an object whose keys are numbers and whose values are strings; the default is empty. When it is not empty, the
  *    label shows the string of the key that is closest to the displayed value.
  *  - `label`: the element shown above the icon under the mouse, centered on the icon; its text is the string of `values`, or
- *    the displayed value, rounded by the step, when `values` is empty. A string is converted to a span. The default is a span
+ *    the displayed value, rounded by the step, when `values` is empty. Any value that is not an element is converted to a string, which becomes the text of a span. The default is a span
  *    that looks like MUI's Tooltip; null removes the label.
  *
  * When the user changes the value, the events 'input' and 'change' are dispatched, as in an input element. They are not

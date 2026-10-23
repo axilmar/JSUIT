@@ -143,6 +143,24 @@ export const adoptStyleSheet = (styleSheet) => {
 }
 
 /**
+ * Converts the value of a label property to the element that is the label.
+ *
+ * An element is returned as it is; null and undefined mean no label, and give null; any other value (a string, a number, a boolean, an object,
+ * and so on) is converted to a string, which becomes the text of a new span.
+ *
+ * @param {*} label the value of the label property.
+ * @returns {Element|null} the element of the label, or null if there is none.
+ */
+export const toLabelElement = (label) => {
+    if (label === null || label === undefined || label instanceof Element) {
+        return label ?? null;
+    }
+    const span = document.createElement('span');
+    span.textContent = String(label);
+    return span;
+}
+
+/**
  * Creates a deep copy of the given value.
  * @param {*} value the value to create a deep copy of.
  * @param {Boolean} cloneDOMNodes if true, DOM nodes are cloned too.

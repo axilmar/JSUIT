@@ -1,5 +1,5 @@
 import { initDiv } from "./div.js";
-import { adoptStyleSheet } from "./utility.js";
+import { adoptStyleSheet, toLabelElement } from "./utility.js";
 
 import groupStyleSheet from './group.css' with { type: 'css' };
 
@@ -11,7 +11,7 @@ const LABELED_CLASS = 'group-labeled';
 
 let nextLabelId = 1;
 
-//defines the property 'label': an element, or a string that becomes the text of a span; it is the first child of the group
+//defines the property 'label': an element, or any other value, which is converted to a string that becomes the text of a span; it is the first child of the group
 const defineLabelProperty = (element) => {
     let label = null;
     let observer = null;
@@ -26,12 +26,7 @@ const defineLabelProperty = (element) => {
         enumerable: true,
         get: () => label,
         set: (newLabel) => {
-            console.assert(newLabel === null || newLabel === undefined || typeof newLabel === 'string' || newLabel instanceof Element);
-            if (typeof newLabel === 'string') {
-                const span = document.createElement('span');
-                span.textContent = newLabel;
-                newLabel = span;
-            }
+            newLabel = toLabelElement(newLabel);
             observer?.disconnect();
             observer = null;
             label?.remove();
@@ -79,7 +74,7 @@ const defineOrientationProperty = (element) => {
  * color (2px) while a child has the focus.
  * 
  * The element gets the following properties:
- *  - `label`: an element, or a string (a span with that text is created from it). The label is shown on the top border, with the size of the text of the children, and is the first child of the group; its color is the primary color while a child has
+ *  - `label`: an element, or any other value (it is converted to a string, and a span with that text is created from it). The label is shown on the top border, with the size of the text of the children, and is the first child of the group; its color is the primary color while a child has
  *    the focus. The label interrupts the border: a notch as wide as the label
  *    is cut in the outline, so it works on any background. Setting it to null removes the label. The group is labelled by it for assistive technologies.
  *  - `orientation`: 'vertical' (the default) lays the children out one below the other; 'horizontal' lays them out in a

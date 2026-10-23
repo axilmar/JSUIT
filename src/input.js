@@ -1,5 +1,5 @@
 import { initInputBase } from "./inputBase.js";
-import { adoptStyleSheet, defineDisplaySizeProperty } from "./utility.js";
+import { adoptStyleSheet, defineDisplaySizeProperty, toLabelElement } from "./utility.js";
 
 import inputStyleSheet from './input.css' with { type: 'css' };
 
@@ -210,14 +210,8 @@ const defineLabelProperty = (element) => {
         enumerable: true,
         get: () => state.label,
         set: (label) => {
-            console.assert(label === null || label === undefined || typeof label === 'string' || label instanceof Element);
-            if (typeof label === 'string') {
-                const span = document.createElement('span');
-                span.textContent = label;
-                label = span;
-            }
             state.label?.remove();
-            state.label = label ?? null;
+            state.label = toLabelElement(label);
             element.classList.toggle(LABELED_CLASS, state.label !== null);
             if (state.label) {
                 state.label.classList.add(LABEL_CLASS);
@@ -265,7 +259,7 @@ const defineVariantProperty = (element) => {
  * sizes are MUI's: the vertical padding is 8.5px and 16.5px, so the height is 40px and 56px for the 16px font. MUI has no large
  * input, so the large size extends them: a 1.25rem font with 20px vertical padding (a height of about 69px). The label follows the size.
  * 
- * The element gets a property 'label', which accepts an element or a string (a string becomes the text of a span).
+ * The element gets a property 'label', which accepts an element, or any other value (it is converted to a string, which becomes the text of a span); null removes the label.
  * The label is shown like the floating label of MUI's text field: inside the field while it is empty and not focused,
  * shrunk otherwise (above the field in the standard variant, on the top of the field in the filled one, on the border in the outlined
  * one; always shrunk for the types that always show something, like date and color).
