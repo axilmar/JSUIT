@@ -9,9 +9,9 @@ adoptStyleSheet(passwordInputStyleSheet);
 const VISIBLE_CLASS = 'passwordInput-visible';
 const TOGGLE_WIDTH = 44;    //width of the area at the right edge that holds the visibility icon
 
-//defines the boolean property 'visible': true shows the password as text
-const defineVisibleProperty = (element) => {
-    Object.defineProperty(element, 'visible', {
+//defines the boolean property 'passwordVisible': true shows the password as text
+const definePasswordVisibleProperty = (element) => {
+    Object.defineProperty(element, 'passwordVisible', {
         configurable: true,
         enumerable: true,
         get: () => element.type === 'text',
@@ -36,7 +36,7 @@ const mouseMoveListener = (event) => {
 const clickListener = (event) => {
     const element = event.currentTarget;
     if (!element.disabled && isOverToggle(element, event)) {
-        element.visible = !element.visible;
+        element.passwordVisible = !element.passwordVisible;
     }
 };
 
@@ -46,7 +46,7 @@ const clickListener = (event) => {
  * It sets the element's type to 'password', then invokes the function `initInput(element, ...properties)`.
  *
  * The element gets the class 'passwordInput', which draws MUI's visibility icon at the right edge of the field.
- * Clicking the icon toggles the boolean property 'visible' (default false), which switches the field between
+ * Clicking the icon toggles the boolean property 'passwordVisible' (default false), which switches the field between
  * showing the password as bullets and as text.
  *
  * While the user types, the property `error` is set to true if the value is invalid: it does not match the `pattern` attribute, is shorter than `minLength` or longer than `maxLength`, or is missing while `required` is set.
@@ -57,7 +57,7 @@ const clickListener = (event) => {
 export const initPasswordInput = (element, ...properties) => {
     console.assert(element instanceof HTMLInputElement);
     element.type = 'password';
-    defineVisibleProperty(element);
+    definePasswordVisibleProperty(element);
     element.addEventListener('mousemove', mouseMoveListener);
     element.addEventListener('click', clickListener);
     initInput(element, { additionalClassName: 'passwordInput' }, ...properties);
