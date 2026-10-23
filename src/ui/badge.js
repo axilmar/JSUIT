@@ -7,6 +7,12 @@ adoptStyleSheet(badgeStyleSheet);
 
 const LABEL_CLASS = 'badge-label';
 const LABEL_DOT_CLASS = 'badge-label-dot';
+const LABEL_ENTER_CLASS = 'badge-label-enter';
+const LABEL_PULSE_CLASS = 'badge-label-pulse';
+const ANIMATION_TYPES = ['none', 'grow', 'pulse'];
+const LABEL_ANIMATED_CLASS = 'badge-label-animated';
+const LABEL_HIDDEN_CLASS = 'badge-label-hidden';
+const LEAVE_TIMEOUT = 300;    //ms: a little more than the 195ms of the transition
 
 const HORIZONTAL_POSITIONS = { start: 'start', left: 'start', end: 'end', right: 'end' };
 const VERTICAL_POSITIONS = { start: 'start', top: 'start', end: 'end', bottom: 'end' };
@@ -55,9 +61,45 @@ const definePositionProperties = (element) => {
     update();
 };
 
-//defines the property 'label'
-const defineLabelProperty = (element) => {
+//defines the properties 'label' and 'labelAnimationType'
+const defineLabelProperties = (element) => {
     let label = null;
+    let animationType = 'none';
+    let leaving = null;     //the label that is shrinking before it is removed, with the function that removes it
+
+    const finishLeaving = () => {
+        if (leaving) {
+            leaving.finish();
+        }
+    };
+
+    //plays the animation of the label growing, and pulsing if the type is 'pulse'; they are css animations, so they also run when the element is not shown yet
+    const enter = (newLabel) => {
+        newLabel.classList.add(LABEL_ENTER_CLASS);
+        newLabel.classList.toggle(LABEL_PULSE_CLASS, animationType === 'pulse');
+        newLabel.addEventListener('animationend', (event) => {
+            if (event.animationName === 'badge-label-enter' && animationType !== 'pulse') {
+                newLabel.classList.remove(LABEL_ENTER_CLASS);
+            }
+        });
+    };
+
+    //shrinks the label, then removes it
+    const leave = (oldLabel) => {
+        let timeout;
+        const finish = () => {
+            clearTimeout(timeout);
+            oldLabel.removeEventListener('transitionend', finish);
+            oldLabel.classList.remove(LABEL_HIDDEN_CLASS, LABEL_ANIMATED_CLASS, LABEL_ENTER_CLASS, LABEL_PULSE_CLASS);
+            oldLabel.remove();
+            leaving = null;
+        };
+        leaving = { finish };
+        oldLabel.classList.remove(LABEL_ENTER_CLASS, LABEL_PULSE_CLASS);     //an animation would override the transition
+        oldLabel.classList.add(LABEL_ANIMATED_CLASS, LABEL_HIDDEN_CLASS);
+        oldLabel.addEventListener('transitionend', finish);
+        timeout = setTimeout(finish, LEAVE_TIMEOUT);    //the transition does not run if the label is not shown
+    };
 
     Object.defineProperty(element, 'label', {
         configurable: true,
@@ -66,12 +108,49 @@ const defineLabelProperty = (element) => {
         set: (newLabel) => {
             const dot = newLabel === '';
             newLabel = toLabelElement(newLabel);
-            label?.remove();
+            finishLeaving();
+            const oldLabel = label;
             label = newLabel;
+            if (oldLabel === newLabel) {
+                return;
+            }
+            //a label that replaces another one does not animate, as in MUI: the badge was already shown
+            if (animationType !== 'none' && oldLabel && !newLabel) {
+                leave(oldLabel);
+            }
+            else {
+                oldLabel?.remove();
+            }
             if (label) {
                 label.classList.add(LABEL_CLASS);
                 label.classList.toggle(LABEL_DOT_CLASS, dot);
                 element.append(label);
+                if (animationType !== 'none' && !oldLabel) {
+                    enter(label);
+                }
+            }
+        }
+    });
+
+    Object.defineProperty(element, 'labelAnimationType', {
+        configurable: true,
+        enumerable: true,
+        get: () => animationType,
+        set: (value) => {
+            console.assert(ANIMATION_TYPES.includes(value));
+            animationType = ANIMATION_TYPES.includes(value) ? value : 'none';
+            if (!label) {
+                return;
+            }
+            if (animationType === 'none') {
+                label.classList.remove(LABEL_ENTER_CLASS, LABEL_PULSE_CLASS);
+            }
+            //the properties are set in the order they are given: a label set before this property, while the element is being created, enters now
+            else if (!element.isConnected && !label.classList.contains(LABEL_ENTER_CLASS)) {
+                enter(label);
+            }
+            else {
+                label.classList.toggle(LABEL_PULSE_CLASS, animationType === 'pulse');
             }
         }
     });
@@ -98,6 +177,10 @@ const defineLabelProperty = (element) => {
  *    (a number is in pixels); a percentage is of the width of the element. The default is '50%', which puts the center of the label on the
  *    side of the element.
  *  - `labelVerticalOffset`: the same for the vertical centers; a percentage is of the height of the element. The default is '50%'.
+ *  - `labelAnimationType`: 'none' (the default) shows and removes the label without animation; 'grow' animates it as in MUI: the label grows from nothing
+ *    (225ms) when it is set, and shrinks to nothing (195ms) before it is removed when the label is set to null or undefined; 'pulse' does the same
+ *    and, after growing, the label keeps pulsing gently (it becomes 30% larger and back, every 1.1s) for as long as it is shown. Replacing a label with
+ *    another one is not animated, as in MUI. The order of the properties does not matter.
  *
  * @param {*} element the element to initialize.
  * @param  {...any} properties the object's properties.
@@ -105,7 +188,7 @@ const defineLabelProperty = (element) => {
 export const initBadge = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
     definePositionProperties(element);
-    defineLabelProperty(element);
+    defineLabelProperties(element);
     initDiv(element, { additionalClassName: 'badge' }, ...properties);
 }
 
