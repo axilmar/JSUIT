@@ -6,7 +6,7 @@ import passwordInputStyleSheet from './passwordInput.css' with { type: 'css' };
 
 adoptStyleSheet(passwordInputStyleSheet);
 
-const VISIBLE_CLASS = 'passwordInput-visible';
+const PASSWORD_VISIBLE_CLASS = 'passwordInput-passwordVisible';
 const TOGGLE_WIDTH = 44;    //width of the area at the right edge that holds the visibility icon
 
 //defines the boolean property 'passwordVisible': true shows the password as text
@@ -18,7 +18,7 @@ const definePasswordVisibleProperty = (element) => {
         set: (value) => {
             value = !!value;
             element.type = value ? 'text' : 'password';
-            element.classList.toggle(VISIBLE_CLASS, value);
+            element.classList.toggle(PASSWORD_VISIBLE_CLASS, value);
         }
     });
 };
