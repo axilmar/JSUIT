@@ -1,0 +1,61 @@
+/*
+ * An avatar, as MUI's Avatar: a 40px circle that shows its content (an image, initials, an icon) only through its shape.
+ *
+ * Usage: <div class="avatar">AB</div>, <div class="avatar avatar-rounded"><img src="..."></div>
+ * Variants: the circle is the default, avatar-rounded (4px radius), avatar-square. Sizes: avatar-small (32px), avatar-large (56px);
+ * MUI has only the 40px, so the small and large ones extend it.
+ *
+ * The content is clipped by the border radius and the overflow, so it is visible only through the shape. The overflow is hidden with
+ * !important, so that it is not overridden by the rules of the components that need the overflow visible.
+ */
+
+.avatar {
+    --avatar-background: #bdbdbd;           /* grey[400] */
+    --avatar-color: #fff;                   /* background.default */
+
+    position: relative;
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: safe center;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--avatar-background);
+    color: var(--avatar-color);
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1;
+    overflow: hidden !important;
+    user-select: none;
+}
+
+.avatar-rounded {
+    border-radius: 4px;
+}
+
+.avatar-square {
+    border-radius: 0;
+}
+
+.avatar-small {
+    width: 32px;
+    height: 32px;
+    font-size: 1rem;
+}
+
+.avatar-large {
+    width: 56px;
+    height: 56px;
+    font-size: 1.75rem;
+}
+
+/* MUI's image of an avatar: it fills the shape */
+.avatar > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    text-align: center;
+    text-indent: 10000px;                   /* hides the alternative text of an image that does not load */
+}

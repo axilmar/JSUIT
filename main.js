@@ -23,6 +23,8 @@ import { toggleButton } from './src/ui/toggleButton.js';
 import { toggleButtonGroup } from './src/ui/toggleButtonGroup.js';
 import { checkIcon } from './src/ui/checkIcon.js';
 import { badge } from './src/ui/badge.js';
+import { avatar } from '/src/ui/avatar.js';
+import { avatarGroup } from '/src/ui/avatarGroup.js';
 
 const ipv4mask =
 [
@@ -153,7 +155,14 @@ router([
                         toggleButton("Right")
                     ),
                     toggleButton("alone"),
-                    badge({label: ''}, checkIcon())
+                    badge({label: ''}, checkIcon()),
+                    avatarGroup(
+                        avatar('A'),
+                        avatar('B'),
+                        avatar('C'),
+                        avatar('D'),
+                        avatar('E'),
+                    )
                 )
             }
         ]
