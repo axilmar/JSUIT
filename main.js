@@ -153,7 +153,7 @@ router([
                         toggleButton("Right")
                     ),
                     toggleButton("alone"),
-                    badge({label: 100, labelAnimationType: "pulse"}, checkIcon())
+                    badge({label: ''}, checkIcon())
                 )
             }
         ]

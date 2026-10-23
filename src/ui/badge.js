@@ -128,6 +128,10 @@ const defineLabelProperties = (element) => {
                 if (animationType !== 'none' && !oldLabel) {
                     enter(label);
                 }
+                //the new label takes the place of the old one: it does not grow, but it keeps pulsing
+                else if (animationType === 'pulse' && oldLabel) {
+                    label.classList.add(LABEL_PULSE_CLASS);
+                }
             }
         }
     });
