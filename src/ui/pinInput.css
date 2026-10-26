@@ -1,0 +1,143 @@
+/*
+ * Pin input: an outlined MUI text field whose characters are shown as bullets (see pinInput.js).
+ *
+ * The input is transparent (text and caret); the bullets are in an overlay over it, one slot per character, each slot taking an equal part of the
+ * width, so that the bullets are spread evenly. The slots of the characters not entered are light blue, the entered ones darker blue.
+ * The sizes are the heights of MUI's text field: small 40px, medium 56px; large, 69px, like the large input.
+ */
+
+.pinInput {
+    --pinInput-main: #1976d2;                   /* primary.main */
+    --pinInput-error: #d32f2f;                  /* error.main */
+    --pinInput-height: 56px;
+    --pinInput-border-color: rgba(0, 0, 0, 0.23);
+
+    box-sizing: border-box;
+    display: inline-block;
+    width: 200px;
+    max-width: 100%;
+    height: var(--pinInput-height);
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--pinInput-border-color);
+    border-radius: 4px;
+    outline: 0;
+    background-color: transparent;
+    color: transparent;
+    caret-color: transparent;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 1rem;
+    vertical-align: middle;
+    cursor: text;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: transparent;
+    transition: border-color 200ms cubic-bezier(0, 0, 0.2, 1) 0ms, box-shadow 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.pinInput-small {
+    --pinInput-height: 40px;
+}
+
+.pinInput-large {
+    --pinInput-height: 69px;
+}
+
+.pinInput::selection {
+    background: transparent;
+}
+
+.pinInput:hover {
+    --pinInput-border-color: rgba(0, 0, 0, 0.87);
+}
+
+.pinInput:focus {
+    --pinInput-border-color: var(--pinInput-main);
+    box-shadow: 0 0 0 1px var(--pinInput-main);
+}
+
+.pinInput.input-secondary { --pinInput-main: #9c27b0; }
+.pinInput.input-warning   { --pinInput-main: #ed6c02; }
+.pinInput.input-info      { --pinInput-main: #0288d1; }
+.pinInput.input-success   { --pinInput-main: #2e7d32; }
+
+.pinInput-error,
+.pinInput-error:hover,
+.pinInput-error:focus {
+    --pinInput-border-color: var(--pinInput-error);
+    --pinInput-main: var(--pinInput-error);
+}
+
+.pinInput:disabled {
+    --pinInput-border-color: rgba(0, 0, 0, 0.26);
+    cursor: default;
+}
+
+.pinInput-overlay {
+    grid-area: 1 / 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.pinInput-bullet {
+    --pinInput-empty-color: #bbdefb;            /* blue 100 */
+    --pinInput-entered-color: #1565c0;          /* blue 800 */
+
+    flex: 1 1 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    color: var(--pinInput-empty-color);
+    transition: color 150ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.pinInput-bullet-entered {
+    color: var(--pinInput-entered-color);
+}
+
+/* the stack: the input and the overlay share the only cell of the container's grid */
+.input-container:has(> .pinInput) {
+    display: inline-grid;
+    align-content: start;
+}
+
+.input-container > .pinInput {
+    grid-area: 1 / 1;
+}
+
+.pinInput-bullet svg,
+.pinInput-bullet svg * {
+    fill: currentColor;
+}
+
+/* the overlay is a sibling of the input, so it does not inherit the variables of the input: it gets the size of the bullet from the input's size class */
+.pinInput-overlay {
+    --pinInput-bullet-size: 24px;
+}
+
+.input-container:has(> .pinInput-small) > .pinInput-overlay {
+    --pinInput-bullet-size: 20px;
+}
+
+.input-container:has(> .pinInput-large) > .pinInput-overlay {
+    --pinInput-bullet-size: 36px;
+}
+
+.pinInput-bullet-component > svg {
+    display: block;                             /* an inline svg sits on the baseline, above the center of its box */
+    width: 100%;
+    height: 100%;
+}
+
+.pinInput-bullet-component {
+    width: var(--pinInput-bullet-size);
+    height: var(--pinInput-bullet-size);
+}
+
+.input-container:has(> .pinInput:disabled) > .pinInput-overlay {
+    opacity: 0.6;
+}

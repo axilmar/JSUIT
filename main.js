@@ -7,6 +7,7 @@ import { floatingActionButton } from './src/ui/floatingActionButton.js';
 import { textInput } from './src/ui/textInput.js';
 import { numberInput } from './src/ui/numberInput.js';
 import { passwordInput } from './src/ui/passwordInput.js';
+import { pinInput } from './src/ui/pinInput.js';
 import { rangeInput } from './src/ui/rangeInput.js';
 import { dateTimeLocalInput } from './src/ui/dateTimeLocalInput.js';
 import { group } from './src/ui/group.js';
@@ -83,6 +84,7 @@ const createApp = () => {
             floatingActionButton('+'),
             numberInput({value: 0, displaySize: "large"}),
             passwordInput({label: "Password", displaySize: "large"}),
+            pinInput({oncompleted: (e) => console.log("pin", e.target.value)}),
             rangeInput({valueLabelDisplay: "on"}),
             dateTimeLocalInput({seconds:true, pastEnabled:false})
         ),
@@ -166,7 +168,8 @@ router([
                         avatar('E'),
                     ),
                     chip({onclick: () => {}, onclose: () => {}}, "This is a chip"),
-                    divider({style: "width: 256px"}, "some text 1", " some text 2")
+                    divider({style: "width: 256px"}, "some text 1", " some text 2"),
+                    pinInput({displaySize: "medium"})
                 )
             }
         ]
