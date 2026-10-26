@@ -1,5 +1,5 @@
 import { initIconButton } from "./iconButton.js";
-import { checkIcon } from "./checkIcon.js";
+import { checkIcon } from "../icons/checkIcon.js";
 import { adoptStyleSheet } from "../utility/utility.js";
 
 import checkBoxStyleSheet from './checkBox.css' with { type: 'css' };

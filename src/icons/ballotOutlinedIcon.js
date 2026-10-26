@@ -1,0 +1,32 @@
+import { initIcon } from "./icon.js";
+
+//the url of the ballot outlined svg; resolved relative to this module
+const URL_BALLOTOUTLINED = new URL('../../assets/icons/ballotOutlined.svg', import.meta.url).href;
+
+/**
+ * Initializes an icon element as a ballot outlined icon.
+ *
+ * It invokes the function `initIcon(element, ...properties)`.
+ *
+ * The element displays the svg `assets/icons/ballotOutlined.svg`; a `url` property overrides it.
+ *
+ * @param {*} element the element to initialize.
+ * @param  {...any} properties the object's properties.
+ */
+export const initBallotOutlinedIcon = (element, ...properties) => {
+    console.assert(element instanceof HTMLDivElement);
+    initIcon(element, { url: URL_BALLOTOUTLINED }, ...properties);
+}
+
+/**
+ * Creates a ballot outlined icon.
+ *
+ * @param  {...any} properties the element's properties.
+ *
+ * @return the created element.
+ */
+export const ballotOutlinedIcon = (...properties) => {
+    const element = document.createElement('div');
+    initBallotOutlinedIcon(element, ...properties);
+    return element;
+}

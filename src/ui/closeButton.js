@@ -1,5 +1,5 @@
 import { initIconButton } from "./iconButton.js";
-import { closeIcon } from "./closeIcon.js";
+import { closeIcon } from "../icons/closeIcon.js";
 
 const VARIANTS = ['outlined', 'filled', 'standard'];
 

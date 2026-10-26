@@ -1,6 +1,6 @@
 import { initButtonBase } from "../html/buttonBase.js";
 import { adoptStyleSheet, defineDisplaySizeProperty } from "../utility/utility.js";
-import { icon as createIcon } from "./icon.js";
+import { icon as createIcon } from "../icons/icon.js";
 
 import floatingActionButtonStyleSheet from './floatingActionButton.css' with { type: 'css' };
 

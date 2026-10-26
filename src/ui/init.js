@@ -40,7 +40,7 @@ globalSheet.insertRule('[hidden] { display: none !important; }', 2);
 
 // Rule 4: Roboto font faces (urls are resolved relative to this module, not to the page)
 for (const weight of [300, 400, 500, 700]) {
-    const url = new URL(`../../fonts/roboto-latin-${weight}-normal.woff2`, import.meta.url).href;
+    const url = new URL(`../../assets/fonts/roboto-latin-${weight}-normal.woff2`, import.meta.url).href;
     globalSheet.insertRule(
         `@font-face { font-family: "Roboto"; font-style: normal; font-weight: ${weight}; font-display: swap; src: url("${url}") format("woff2"); }`,
         globalSheet.cssRules.length);

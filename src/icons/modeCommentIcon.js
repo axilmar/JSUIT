@@ -1,0 +1,32 @@
+import { initIcon } from "./icon.js";
+
+//the url of the mode comment svg; resolved relative to this module
+const URL_MODECOMMENT = new URL('../../assets/icons/modeComment.svg', import.meta.url).href;
+
+/**
+ * Initializes an icon element as a mode comment icon.
+ *
+ * It invokes the function `initIcon(element, ...properties)`.
+ *
+ * The element displays the svg `assets/icons/modeComment.svg`; a `url` property overrides it.
+ *
+ * @param {*} element the element to initialize.
+ * @param  {...any} properties the object's properties.
+ */
+export const initModeCommentIcon = (element, ...properties) => {
+    console.assert(element instanceof HTMLDivElement);
+    initIcon(element, { url: URL_MODECOMMENT }, ...properties);
+}
+
+/**
+ * Creates a mode comment icon.
+ *
+ * @param  {...any} properties the element's properties.
+ *
+ * @return the created element.
+ */
+export const modeCommentIcon = (...properties) => {
+    const element = document.createElement('div');
+    initModeCommentIcon(element, ...properties);
+    return element;
+}

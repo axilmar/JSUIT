@@ -1,0 +1,32 @@
+import { initIcon } from "./icon.js";
+
+//the url of the library music outlined svg; resolved relative to this module
+const URL_LIBRARYMUSICOUTLINED = new URL('../../assets/icons/libraryMusicOutlined.svg', import.meta.url).href;
+
+/**
+ * Initializes an icon element as a library music outlined icon.
+ *
+ * It invokes the function `initIcon(element, ...properties)`.
+ *
+ * The element displays the svg `assets/icons/libraryMusicOutlined.svg`; a `url` property overrides it.
+ *
+ * @param {*} element the element to initialize.
+ * @param  {...any} properties the object's properties.
+ */
+export const initLibraryMusicOutlinedIcon = (element, ...properties) => {
+    console.assert(element instanceof HTMLDivElement);
+    initIcon(element, { url: URL_LIBRARYMUSICOUTLINED }, ...properties);
+}
+
+/**
+ * Creates a library music outlined icon.
+ *
+ * @param  {...any} properties the element's properties.
+ *
+ * @return the created element.
+ */
+export const libraryMusicOutlinedIcon = (...properties) => {
+    const element = document.createElement('div');
+    initLibraryMusicOutlinedIcon(element, ...properties);
+    return element;
+}

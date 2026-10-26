@@ -1,0 +1,32 @@
+import { initIcon } from "./icon.js";
+
+//the url of the local pizza outlined svg; resolved relative to this module
+const URL_LOCALPIZZAOUTLINED = new URL('../../assets/icons/localPizzaOutlined.svg', import.meta.url).href;
+
+/**
+ * Initializes an icon element as a local pizza outlined icon.
+ *
+ * It invokes the function `initIcon(element, ...properties)`.
+ *
+ * The element displays the svg `assets/icons/localPizzaOutlined.svg`; a `url` property overrides it.
+ *
+ * @param {*} element the element to initialize.
+ * @param  {...any} properties the object's properties.
+ */
+export const initLocalPizzaOutlinedIcon = (element, ...properties) => {
+    console.assert(element instanceof HTMLDivElement);
+    initIcon(element, { url: URL_LOCALPIZZAOUTLINED }, ...properties);
+}
+
+/**
+ * Creates a local pizza outlined icon.
+ *
+ * @param  {...any} properties the element's properties.
+ *
+ * @return the created element.
+ */
+export const localPizzaOutlinedIcon = (...properties) => {
+    const element = document.createElement('div');
+    initLocalPizzaOutlinedIcon(element, ...properties);
+    return element;
+}

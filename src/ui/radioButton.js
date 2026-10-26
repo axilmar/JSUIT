@@ -1,5 +1,5 @@
 import { initIconButton } from "./iconButton.js";
-import { bulletIcon } from "./bulletIcon.js";
+import { bulletIcon } from "../icons/bulletIcon.js";
 import { adoptStyleSheet } from "../utility/utility.js";
 
 import radioButtonStyleSheet from './radioButton.css' with { type: 'css' };

@@ -1,5 +1,5 @@
 import { initDiv } from "../html/div.js";
-import { starIcon } from "./starIcon.js";
+import { starIcon } from "../icons/starIcon.js";
 import { adoptStyleSheet, defineDisplaySizeProperty, toLabelElement } from "../utility/utility.js";
 
 import ratingStyleSheet from './rating.css' with { type: 'css' };
@@ -314,7 +314,7 @@ const defineRatingProperties = (element) => {
  *
  * The element gets the following properties:
  *  - `icon`: the icon to show; either a function that returns a new icon each time it is invoked, or an icon element, which is
- *    cloned for each position. The icon must be filled with `var(--icon-fill-color, currentColor)`, like `icons/star.svg`,
+ *    cloned for each position. The icon must be filled with `var(--icon-fill-color, currentColor)`, like `assets/icons/star.svg`,
  *    so that its `fillColor` property works. The default is the function `starIcon`.
  *  - `fillColor`: the color of the filled part of the icons; the default is MUI's #faaf00. The empty part has MUI's color
  *    rgba(0, 0, 0, 0.26).

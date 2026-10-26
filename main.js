@@ -21,7 +21,7 @@ import { slider } from './src/ui/slider.js';
 import { switchButton } from './src/ui/switchButton.js';
 import { toggleButton } from './src/ui/toggleButton.js';
 import { toggleButtonGroup } from './src/ui/toggleButtonGroup.js';
-import { checkIcon } from './src/ui/checkIcon.js';
+import { checkIcon } from './src/icons/checkIcon.js';
 import { badge } from './src/ui/badge.js';
 import { avatar } from './src/ui/avatar.js';
 import { avatarGroup } from './src/ui/avatarGroup.js';
