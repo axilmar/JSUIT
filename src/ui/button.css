@@ -1,6 +1,6 @@
 /*
  * MUI button, with the MUI default palette. The 'variant' property of button.js adds one of the classes button-outlined (the
- * default), button-text and button-contained, which give the MUI looks of the same name.
+ * default), button-text and button-filled, which give the MUI looks of the same name.
  *
  * Usage: <button class="button button-outlined">Text</button>
  * Size: default (medium), button-small, button-large.
@@ -11,7 +11,7 @@
 
 .button {
     --button-color: 25, 118, 210;               /* primary.main #1976d2, as a list of rgb components */
-    --button-dark: #1565c0;                     /* primary.dark; the hover color of the contained variant */
+    --button-dark: #1565c0;                     /* primary.dark; the hover color of the filled variant */
     --button-contrast: #fff;                    /* primary.contrastText */
     --button-disabled: 0, 0, 0;
 
@@ -188,7 +188,7 @@
     pointer-events: none;
 }
 
-/* 1px less padding than the contained button, because of the border */
+/* 1px less padding than the filled button, because of the border */
 .button-outlined.button-small {
     padding: 3px 9px;
 }
@@ -197,9 +197,9 @@
     padding: 7px 21px;
 }
 
-/* ---------- contained ---------- */
+/* ---------- filled ---------- */
 
-.button-contained {
+.button-filled {
     padding: 6px 16px;
     border: 0;
     background-color: rgb(var(--button-color));
@@ -207,38 +207,38 @@
     box-shadow: var(--button-shadow-2);
 }
 
-.button-contained:hover {
+.button-filled:hover {
     background-color: var(--button-dark);
     box-shadow: var(--button-shadow-4);
 }
 
-.button-contained:focus-visible {
+.button-filled:focus-visible {
     box-shadow: var(--button-shadow-6);
 }
 
-.button-contained:active {
+.button-filled:active {
     box-shadow: var(--button-shadow-8);
 }
 
-.button-contained:disabled,
-.button-contained[aria-disabled="true"] {
+.button-filled:disabled,
+.button-filled[aria-disabled="true"] {
     color: rgba(0, 0, 0, 0.26);
     background-color: rgba(0, 0, 0, 0.12);
     box-shadow: none;
 }
 
 @media (hover: none) {
-    .button-contained:hover {
+    .button-filled:hover {
         background-color: rgb(var(--button-color));
         box-shadow: var(--button-shadow-2);
     }
 }
 
 /* Busy: like disabled (no interaction, no shadow), but keeping a vibrant version of the button's color. */
-.button-contained.button-busy,
-.button-contained.button-busy:hover,
-.button-contained.button-busy:focus-visible,
-.button-contained.button-busy:active {
+.button-filled.button-busy,
+.button-filled.button-busy:hover,
+.button-filled.button-busy:focus-visible,
+.button-filled.button-busy:active {
     color: var(--button-contrast);
     background-color: color-mix(in srgb, rgb(var(--button-color)) 60%, transparent);
     box-shadow: none;
@@ -246,10 +246,10 @@
     pointer-events: none;
 }
 
-.button-contained.button-small {
+.button-filled.button-small {
     padding: 4px 10px;
 }
 
-.button-contained.button-large {
+.button-filled.button-large {
     padding: 8px 22px;
 }

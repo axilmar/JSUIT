@@ -5,7 +5,7 @@ import buttonStyleSheet from './button.css' with { type: 'css' };
 
 adoptStyleSheet(buttonStyleSheet);
 
-const VARIANTS = ['text', 'outlined', 'contained'];     //the class of a variant is 'button-' followed by its name
+const VARIANTS = ['text', 'outlined', 'filled'];     //the class of a variant is 'button-' followed by its name
 
 //defines the property 'variant'
 const defineVariantProperty = (element) => {
@@ -34,12 +34,12 @@ const defineVariantProperty = (element) => {
  * Its `errorClassName` defaults to 'button-error'.
  * Its `busyClassName` defaults to 'button-busy'.
  *
- * The element gets the property 'variant', which accepts 'outlined' (the default), 'text' and 'contained': the looks of the
+ * The element gets the property 'variant', which accepts 'outlined' (the default), 'text' and 'filled': the looks of the
  * variants of MUI's button. The element has the class 'button-' and the variant.
  *
  * The element gets the property 'displaySize', which accepts 'small', 'medium' (the default) and 'large', with the
  * MUI's button sizes (padding and font size, without the 1px border of the outlined variant; text: small 4px 5px, 13px,
- * medium 6px 8px, 14px, large 8px 11px, 15px; outlined and contained: small 4px 10px, 13px, medium 6px 16px, 14px,
+ * medium 6px 8px, 14px, large 8px 11px, 15px; outlined and filled: small 4px 10px, 13px, medium 6px 16px, 14px,
  * large 8px 22px, 15px).
  *
  * @param {*} element the element to initialize.
