@@ -28,6 +28,10 @@ import { avatar } from './src/ui/avatar.js';
 import { avatarGroup } from './src/ui/avatarGroup.js';
 import { chip } from './src/ui/chip.js';
 import { divider } from './src/ui/divider.js';
+import { listBox } from './src/ui/listBox.js';
+import { listItem } from './src/ui/listItem.js';
+import { listDivider } from './src/ui/listDivider.js';
+import { orderedListBox } from './src/ui/orderedListBox.js';
 
 const ipv4mask =
 [
@@ -123,7 +127,7 @@ router([
                     onrouted: () => console.log("blue routed!"),
                     onunrouted: () => console.log("blue unrouted!")
                     }, 
-                    "Blue",
+                    /*"Blue",
                     group(
                         {label: "Options"},
                         radioButton("Option 1"),
@@ -169,7 +173,16 @@ router([
                     ),
                     chip({onclick: () => {}, onclose: () => {}}, "This is a chip"),
                     divider({style: "width: 256px"}, "some text 1", " some text 2"),
-                    pinInput({displaySize: "medium"})
+                    pinInput({displaySize: "medium"})*/
+                    orderedListBox(
+                        listItem("item1"),
+                        listItem("item2"),
+                        listItem("item3"),
+                        listDivider(),
+                        listItem("itemA"),
+                        listItem("itemB"),
+                        listItem("itemC")
+                    )
                 )
             }
         ]

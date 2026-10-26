@@ -1,0 +1,21 @@
+/*
+ * List box, as a MUI List drawn in a Box with a thin border: the list has MUI's vertical padding (8px), no bullets, and a 1px border of
+ * MUI's divider color with the rounded corners of MUI's shape (4px).
+ */
+
+.listBox {
+    box-sizing: border-box;
+    display: block;
+    margin: 0;
+    padding: 8px 0;
+    list-style: none;
+    border: 1px solid rgba(0, 0, 0, 0.12);        /* divider */
+    border-radius: 4px;                           /* shape.borderRadius */
+    background-color: #fff;                       /* background.paper */
+    color: rgba(0, 0, 0, 0.87);                   /* text.primary */
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.00938em;
+}
