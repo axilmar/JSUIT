@@ -1,0 +1,176 @@
+/*
+ * A chip, as MUI's Chip: a rounded, compact element with a label (text, an avatar, an icon), that can be clickable and have a close button.
+ *
+ * Usage: <div class="chip chip-filled">Label</div>
+ * Variants: chip-filled (the default) and chip-outlined. Sizes: chip-small (24px), medium (32px, MUI's default) and chip-large (40px);
+ * MUI has no large chip, so the large one extends them.
+ * Clickable: chip-clickable. Closable: chip-closable, with chip-closeEnd or chip-closeStart for the side of the close button
+ * (an element of class chip-closeButton). chip.js sets these classes.
+ *
+ * The children are laid out in a row. The size-dependent measures are the properties --chip-height, --chip-px (the horizontal padding),
+ * --chip-gap (the space between the children), --chip-edge (the padding at the side of the close button), --chip-avatar-size,
+ * --chip-avatar-font and --chip-close-size; they are what MUI's label padding and the margins of its avatar and delete icon give.
+ */
+
+.chip {
+    --chip-height: 32px;
+    --chip-px: 12px;
+    --chip-gap: 6px;
+    --chip-edge: 5px;
+    --chip-avatar-size: 24px;
+    --chip-avatar-font: 0.75rem;
+    --chip-close-size: 22px;
+    --chip-background: rgba(0, 0, 0, 0.08);             /* action.selected */
+    --chip-background-hover: rgba(0, 0, 0, 0.12);
+    --chip-border-color: #bdbdbd;                       /* grey[400] */
+    --chip-color: rgba(0, 0, 0, 0.87);                  /* text.primary */
+
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    gap: var(--chip-gap);
+    box-sizing: border-box;
+    height: var(--chip-height);
+    margin: 0;
+    padding: 0 var(--chip-px);
+    border: 1px solid transparent;
+    border-radius: calc(var(--chip-height) / 2);
+    outline: 0;
+    background-color: var(--chip-background);
+    color: var(--chip-color);
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.5;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: default;
+    user-select: none;
+    overflow: hidden;
+    transition: background-color 300ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chip-small {
+    --chip-height: 24px;
+    --chip-px: 8px;
+    --chip-gap: 4px;
+    --chip-edge: 4px;
+    --chip-avatar-size: 18px;
+    --chip-avatar-font: 0.625rem;
+    --chip-close-size: 16px;
+}
+
+.chip-large {
+    --chip-height: 40px;
+    --chip-px: 16px;
+    --chip-gap: 8px;
+    --chip-edge: 6px;
+    --chip-avatar-size: 32px;
+    --chip-avatar-font: 0.875rem;
+    --chip-close-size: 28px;
+    font-size: 1rem;
+}
+
+/* ---------- variants ---------- */
+
+.chip-filled {
+    border-color: transparent;
+    background-color: var(--chip-background);
+}
+
+.chip-outlined {
+    --chip-background-hover: rgba(0, 0, 0, 0.04);       /* action.hover */
+
+    border-color: var(--chip-border-color);
+    background-color: transparent;
+}
+
+/* ---------- clickable ---------- */
+
+.chip-clickable {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* the pulse on click of the buttons of this library, which approximates MUI's ripple; pressing the close button is not a press of the chip */
+.chip-clickable::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: currentColor;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    pointer-events: none;
+}
+
+.chip-clickable:active:not(:has(> .chip-closeButton:active))::after {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(2);
+    transition: transform 550ms cubic-bezier(0.4, 0, 0.2, 1), opacity 100ms linear;
+}
+
+.chip-clickable:hover,
+.chip-clickable:focus-visible {
+    background-color: var(--chip-background-hover);
+}
+
+.chip-clickable:active {
+    box-shadow: 0 2px 1px -1px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12);   /* elevation 1 */
+}
+
+.chip-outlined.chip-clickable:active {
+    box-shadow: none;
+}
+
+.chip-closable:focus-visible {
+    background-color: var(--chip-background-hover);
+}
+
+/* ---------- close button: its side is the one of the order, and the padding of that side is smaller ---------- */
+
+.chip-closable.chip-closeEnd {
+    padding-right: var(--chip-edge);
+}
+
+.chip-closable.chip-closeStart {
+    padding-left: var(--chip-edge);
+}
+
+.chip > .chip-closeButton {
+    --iconButton-alpha: 0.26;                           /* MUI's delete icon: text.primary at 26%, 40% on hover */
+
+    width: var(--chip-close-size);
+    height: var(--chip-close-size);
+    margin: 0;
+}
+
+.chip-closeEnd > .chip-closeButton {
+    order: 1;
+}
+
+.chip-closeStart > .chip-closeButton {
+    order: -1;
+}
+
+.chip > .chip-closeButton:hover {
+    --iconButton-alpha: 0.4;
+
+    background-color: transparent;
+}
+
+/* ---------- an avatar in the chip: MUI's size, and the margin that puts it close to the edge ---------- */
+
+.chip > .avatar {
+    width: var(--chip-avatar-size);
+    height: var(--chip-avatar-size);
+    margin-left: calc(var(--chip-edge) - var(--chip-px));
+    font-size: var(--chip-avatar-font);
+}

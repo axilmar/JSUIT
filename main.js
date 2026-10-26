@@ -23,8 +23,9 @@ import { toggleButton } from './src/ui/toggleButton.js';
 import { toggleButtonGroup } from './src/ui/toggleButtonGroup.js';
 import { checkIcon } from './src/ui/checkIcon.js';
 import { badge } from './src/ui/badge.js';
-import { avatar } from '/src/ui/avatar.js';
-import { avatarGroup } from '/src/ui/avatarGroup.js';
+import { avatar } from './src/ui/avatar.js';
+import { avatarGroup } from './src/ui/avatarGroup.js';
+import { chip } from '/src/ui/chip.js';
 
 const ipv4mask =
 [
@@ -162,7 +163,8 @@ router([
                         avatar('C'),
                         avatar('D'),
                         avatar('E'),
-                    )
+                    ),
+                    chip({onclick: () => {}, onclose: () => {}}, "This is a chip")
                 )
             }
         ]
