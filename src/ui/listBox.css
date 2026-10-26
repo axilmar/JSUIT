@@ -19,3 +19,25 @@
     line-height: 1.5;
     letter-spacing: 0.00938em;
 }
+
+/*
+ * Virtualized drawing (see virtualListBox.js): the list scrolls vertically, with a maximum height that a style of the element can override;
+ * the spacers take the place of the items that are not rendered.
+ */
+
+.listBox-virtual {
+    max-height: 400px;
+    overflow-y: auto !important;
+}
+
+.listBox-spacer {
+    display: block;
+    flex: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 0;
+    list-style: none;
+    visibility: hidden;
+    pointer-events: none;
+}

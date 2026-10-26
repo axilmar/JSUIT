@@ -1,5 +1,6 @@
 import { initOl } from "../html/ol.js";
 import { adoptStyleSheet } from "../utility/utility.js";
+import { defineNonVirtualCountProperty } from "./virtualListBox.js";
 
 import listBoxStyleSheet from './listBox.css' with { type: 'css' };
 import orderedListBoxStyleSheet from './orderedListBox.css' with { type: 'css' };
@@ -16,11 +17,15 @@ adoptStyleSheet(orderedListBoxStyleSheet);
  * Its children are usually list items (see `listItem`), which are numbered from 1, in a secondary text color, before their children. The attributes
  * 'start' and 'reversed' of the list are not used.
  *
+ * The element gets the property 'nonVirtualCount' (the default is 32), as the list box: when the list has more children, it renders only the visible
+ * items; the numbering is not affected; see `defineNonVirtualCountProperty`.
+ *
  * @param {*} element the element to initialize.
  * @param  {...any} properties the object's properties.
  */
 export const initOrderedListBox = (element, ...properties) => {
     console.assert(element instanceof HTMLOListElement);
+    defineNonVirtualCountProperty(element);
     initOl(element, { additionalClassName: 'listBox orderedListBox' }, ...properties);
 }
 
