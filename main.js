@@ -25,7 +25,8 @@ import { checkIcon } from './src/ui/checkIcon.js';
 import { badge } from './src/ui/badge.js';
 import { avatar } from './src/ui/avatar.js';
 import { avatarGroup } from './src/ui/avatarGroup.js';
-import { chip } from '/src/ui/chip.js';
+import { chip } from './src/ui/chip.js';
+import { divider } from './src/ui/divider.js';
 
 const ipv4mask =
 [
@@ -164,7 +165,8 @@ router([
                         avatar('D'),
                         avatar('E'),
                     ),
-                    chip({onclick: () => {}, onclose: () => {}}, "This is a chip")
+                    chip({onclick: () => {}, onclose: () => {}}, "This is a chip"),
+                    divider({style: "width: 256px"}, "some text 1", " some text 2")
                 )
             }
         ]

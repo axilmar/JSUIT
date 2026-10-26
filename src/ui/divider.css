@@ -1,0 +1,109 @@
+/*
+ * A divider, as MUI's Divider: a thin line that separates content. It is used by the divider (an hr) and the listDivider (an li).
+ *
+ * Usage: <hr class="divider divider-horizontal divider-stretch">
+ * Orientation: divider-horizontal (the default) and divider-vertical. Variant: divider-stretch (the default, the whole width or height),
+ * divider-inset (horizontal only: starts 72px from the start, as MUI's inset divider) and divider-middle (the ends are 16px, horizontal, or 8px,
+ * vertical, away from the edges).
+ *
+ * The color is the css property --divider-color (default MUI's divider color, black at 12%).
+ */
+
+.divider {
+    --divider-color: rgba(0, 0, 0, 0.12);       /* divider */
+
+    display: block;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid var(--divider-color);
+    background: none;
+    list-style: none;
+    overflow: visible !important;
+}
+
+.divider-horizontal {
+    width: auto;
+    height: 0;
+    border-bottom-width: thin;
+}
+
+.divider-vertical {
+    width: 0;
+    height: auto;
+    align-self: stretch;
+    border-right-width: thin;
+}
+
+.divider-horizontal.divider-inset {
+    margin-left: 72px;
+}
+
+.divider-horizontal.divider-middle {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+.divider-vertical.divider-middle {
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+/*
+ * A divider with content (any children): the content is laid out along the divider, with a line on each side of it, as MUI's Divider with
+ * children. The element itself has no line then; the lines are its ::before and ::after, which share the free space of the divider
+ * according to the alignment of the content: divider-center (the default, equal lines), divider-left (a short line before the content, which
+ * is the top of a vertical divider) and divider-right (a short line after the content, which is the bottom of a vertical divider).
+ */
+
+.divider:not(:empty) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-width: 0;
+}
+
+.divider-horizontal:not(:empty) {
+    height: auto;
+    flex-direction: row;
+}
+
+.divider-vertical:not(:empty) {
+    width: auto;
+    flex-direction: column;
+}
+
+.divider:not(:empty)::before,
+.divider:not(:empty)::after {
+    content: "";
+    box-sizing: border-box;
+    flex: 1 1 0;
+    border: 0 solid var(--divider-color);
+}
+
+.divider-horizontal:not(:empty)::before,
+.divider-horizontal:not(:empty)::after {
+    border-top-width: thin;
+}
+
+.divider-vertical:not(:empty)::before,
+.divider-vertical:not(:empty)::after {
+    border-left-width: thin;
+}
+
+.divider-left:not(:empty)::before {
+    flex-grow: 1;
+}
+
+.divider-left:not(:empty)::after {
+    flex-grow: 9;
+}
+
+.divider-right:not(:empty)::before {
+    flex-grow: 9;
+}
+
+.divider-right:not(:empty)::after {
+    flex-grow: 1;
+}
