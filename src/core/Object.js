@@ -55,7 +55,6 @@ const setProperties = (targetObject, propertiesObject) => {
  * Initializes an object.
  * 
  * The array of given properties can contain:
- * 
  *  1. functions to use for initialization; the functions are passed the given object.
  *  2. descentants of DOM Node; added to the given object using the method `appendChild`.
  *  3. objects that have a method 'isTreeNode()' that returns true; added to the given object using the method 'appendChild' or 'append'.
