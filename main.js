@@ -32,6 +32,7 @@ import { listBox } from './src/ui/listBox.js';
 import { listItem } from './src/ui/listItem.js';
 import { listDivider } from './src/ui/listDivider.js';
 import { orderedListBox } from './src/ui/orderedListBox.js';
+import { expandButton } from './src/ui/expandButton.js';
 
 const ipv4mask =
 [
@@ -186,7 +187,8 @@ router([
                         listItem("itemC"),
                         listDivider(),
                         ...Array.from(Array(5000).keys()).map((item, index) => listItem(`item${index}`))
-                    )
+                    ),
+                    expandButton()
                 )
             }
         ]
