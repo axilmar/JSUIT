@@ -59,12 +59,13 @@ const setProperties = (targetObject, propertiesObject) => {
  *  2. descentants of DOM Node; added to the given object using the method `appendChild`.
  *  3. objects that have a method 'isTreeNode()' that returns true; added to the given object using the method 'appendChild' or 'append'.
  *  4. objects with properties to apply on the given object.
- *  5. values to be converted to a string and added as text in the parent element node.
+ *  5. value to be converted to a string and added as text in the parent element node.
  * 
  * If a property of an object is itself a DOM node or an object, then it can be set from:
  *  1. another DOM node (to replace the existing DOM node).
  *  2. an array of properties like in this function.
  *  3. an object of key-value pairs to set its properties.
+ *  4. value to be converted to a string (if the property of an object is not a DOM node and it is an object, e.g. 'style').
  * 
  * This allows nested objects to be set from one init call.
  * 
