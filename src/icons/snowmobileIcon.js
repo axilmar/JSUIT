@@ -15,7 +15,7 @@ const URL_SNOWMOBILE = new URL('../../assets/icons/snowmobile.svg', import.meta.
  */
 export const initSnowmobileIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SNOWMOBILE }, ...properties);
+    initIcon(element, { additionalClassName: 'snowmobileIcon', url: URL_SNOWMOBILE }, ...properties);
 }
 
 /**

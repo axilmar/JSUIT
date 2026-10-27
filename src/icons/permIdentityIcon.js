@@ -15,7 +15,7 @@ const URL_PERMIDENTITY = new URL('../../assets/icons/permIdentity.svg', import.m
  */
 export const initPermIdentityIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERMIDENTITY }, ...properties);
+    initIcon(element, { additionalClassName: 'permIdentityIcon', url: URL_PERMIDENTITY }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_HEADPHONESBATTERYOUTLINED = new URL('../../assets/icons/headphonesBatt
  */
 export const initHeadphonesBatteryOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEADPHONESBATTERYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'headphonesBatteryOutlinedIcon', url: URL_HEADPHONESBATTERYOUTLINED }, ...properties);
 }
 
 /**

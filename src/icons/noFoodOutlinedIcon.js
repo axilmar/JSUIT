@@ -15,7 +15,7 @@ const URL_NOFOODOUTLINED = new URL('../../assets/icons/noFoodOutlined.svg', impo
  */
 export const initNoFoodOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOFOODOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'noFoodOutlinedIcon', url: URL_NOFOODOUTLINED }, ...properties);
 }
 
 /**

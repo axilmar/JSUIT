@@ -15,7 +15,7 @@ const URL_SPAOUTLINED = new URL('../../assets/icons/spaOutlined.svg', import.met
  */
 export const initSpaOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'spaOutlinedIcon', url: URL_SPAOUTLINED }, ...properties);
 }
 
 /**

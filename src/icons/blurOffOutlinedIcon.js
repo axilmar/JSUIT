@@ -15,7 +15,7 @@ const URL_BLUROFFOUTLINED = new URL('../../assets/icons/blurOffOutlined.svg', im
  */
 export const initBlurOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLUROFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'blurOffOutlinedIcon', url: URL_BLUROFFOUTLINED }, ...properties);
 }
 
 /**

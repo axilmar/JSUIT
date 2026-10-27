@@ -15,7 +15,7 @@ const URL_MUSICVIDEO = new URL('../../assets/icons/musicVideo.svg', import.meta.
  */
 export const initMusicVideoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MUSICVIDEO }, ...properties);
+    initIcon(element, { additionalClassName: 'musicVideoIcon', url: URL_MUSICVIDEO }, ...properties);
 }
 
 /**

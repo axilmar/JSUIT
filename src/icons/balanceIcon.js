@@ -15,7 +15,7 @@ const URL_BALANCE = new URL('../../assets/icons/balance.svg', import.meta.url).h
  */
 export const initBalanceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BALANCE }, ...properties);
+    initIcon(element, { additionalClassName: 'balanceIcon', url: URL_BALANCE }, ...properties);
 }
 
 /**

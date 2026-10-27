@@ -15,7 +15,7 @@ const URL_WIFIPASSWORDOUTLINED = new URL('../../assets/icons/wifiPasswordOutline
  */
 export const initWifiPasswordOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIFIPASSWORDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wifiPasswordOutlinedIcon', url: URL_WIFIPASSWORDOUTLINED }, ...properties);
 }
 
 /**

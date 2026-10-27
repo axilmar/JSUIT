@@ -15,7 +15,7 @@ const URL_CALLMERGEOUTLINED = new URL('../../assets/icons/callMergeOutlined.svg'
  */
 export const initCallMergeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALLMERGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'callMergeOutlinedIcon', url: URL_CALLMERGEOUTLINED }, ...properties);
 }
 
 /**

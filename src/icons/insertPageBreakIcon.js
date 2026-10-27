@@ -15,7 +15,7 @@ const URL_INSERTPAGEBREAK = new URL('../../assets/icons/insertPageBreak.svg', im
  */
 export const initInsertPageBreakIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INSERTPAGEBREAK }, ...properties);
+    initIcon(element, { additionalClassName: 'insertPageBreakIcon', url: URL_INSERTPAGEBREAK }, ...properties);
 }
 
 /**

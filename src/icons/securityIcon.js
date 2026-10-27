@@ -15,7 +15,7 @@ const URL_SECURITY = new URL('../../assets/icons/security.svg', import.meta.url)
  */
 export const initSecurityIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SECURITY }, ...properties);
+    initIcon(element, { additionalClassName: 'securityIcon', url: URL_SECURITY }, ...properties);
 }
 
 /**

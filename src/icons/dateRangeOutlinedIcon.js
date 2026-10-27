@@ -15,7 +15,7 @@ const URL_DATERANGEOUTLINED = new URL('../../assets/icons/dateRangeOutlined.svg'
  */
 export const initDateRangeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DATERANGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dateRangeOutlinedIcon', url: URL_DATERANGEOUTLINED }, ...properties);
 }
 
 /**

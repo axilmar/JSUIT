@@ -15,7 +15,7 @@ const URL_VERIFIEDUSEROUTLINED = new URL('../../assets/icons/verifiedUserOutline
  */
 export const initVerifiedUserOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VERIFIEDUSEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'verifiedUserOutlinedIcon', url: URL_VERIFIEDUSEROUTLINED }, ...properties);
 }
 
 /**

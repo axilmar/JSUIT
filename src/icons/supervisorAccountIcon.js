@@ -15,7 +15,7 @@ const URL_SUPERVISORACCOUNT = new URL('../../assets/icons/supervisorAccount.svg'
  */
 export const initSupervisorAccountIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUPERVISORACCOUNT }, ...properties);
+    initIcon(element, { additionalClassName: 'supervisorAccountIcon', url: URL_SUPERVISORACCOUNT }, ...properties);
 }
 
 /**

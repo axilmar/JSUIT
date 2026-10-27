@@ -15,7 +15,7 @@ const URL_ALLOUTOUTLINED = new URL('../../assets/icons/allOutOutlined.svg', impo
  */
 export const initAllOutOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALLOUTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'allOutOutlinedIcon', url: URL_ALLOUTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LOCALSHIPPING = new URL('../../assets/icons/localShipping.svg', import
  */
 export const initLocalShippingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALSHIPPING }, ...properties);
+    initIcon(element, { additionalClassName: 'localShippingIcon', url: URL_LOCALSHIPPING }, ...properties);
 }
 
 /**

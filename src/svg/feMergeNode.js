@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initFeMergeNode = (element, ...properties) => {
     console.assert(element instanceof SVGFEMergeNodeElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'feMergeNode' }, ...properties);
 }
 
 /**

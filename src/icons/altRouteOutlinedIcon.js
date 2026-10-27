@@ -15,7 +15,7 @@ const URL_ALTROUTEOUTLINED = new URL('../../assets/icons/altRouteOutlined.svg', 
  */
 export const initAltRouteOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALTROUTEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'altRouteOutlinedIcon', url: URL_ALTROUTEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_NETWORKCHECK = new URL('../../assets/icons/networkCheck.svg', import.m
  */
 export const initNetworkCheckIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NETWORKCHECK }, ...properties);
+    initIcon(element, { additionalClassName: 'networkCheckIcon', url: URL_NETWORKCHECK }, ...properties);
 }
 
 /**

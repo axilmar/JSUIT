@@ -15,7 +15,7 @@ const URL_RSSFEEDOUTLINED = new URL('../../assets/icons/rssFeedOutlined.svg', im
  */
 export const initRssFeedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RSSFEEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'rssFeedOutlinedIcon', url: URL_RSSFEEDOUTLINED }, ...properties);
 }
 
 /**

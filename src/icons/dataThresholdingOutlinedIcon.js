@@ -15,7 +15,7 @@ const URL_DATATHRESHOLDINGOUTLINED = new URL('../../assets/icons/dataThresholdin
  */
 export const initDataThresholdingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DATATHRESHOLDINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dataThresholdingOutlinedIcon', url: URL_DATATHRESHOLDINGOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DATASAVEROFFOUTLINED = new URL('../../assets/icons/dataSaverOffOutline
  */
 export const initDataSaverOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DATASAVEROFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dataSaverOffOutlinedIcon', url: URL_DATASAVEROFFOUTLINED }, ...properties);
 }
 
 /**

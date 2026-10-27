@@ -15,7 +15,7 @@ const URL_SIGNALCELLULAR3BAR = new URL('../../assets/icons/signalCellular3Bar.sv
  */
 export const initSignalCellular3BarIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNALCELLULAR3BAR }, ...properties);
+    initIcon(element, { additionalClassName: 'signalCellular3BarIcon', url: URL_SIGNALCELLULAR3BAR }, ...properties);
 }
 
 /**

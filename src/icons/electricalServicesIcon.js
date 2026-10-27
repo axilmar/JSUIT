@@ -15,7 +15,7 @@ const URL_ELECTRICALSERVICES = new URL('../../assets/icons/electricalServices.sv
  */
 export const initElectricalServicesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ELECTRICALSERVICES }, ...properties);
+    initIcon(element, { additionalClassName: 'electricalServicesIcon', url: URL_ELECTRICALSERVICES }, ...properties);
 }
 
 /**

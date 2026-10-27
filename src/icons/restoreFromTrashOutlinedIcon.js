@@ -15,7 +15,7 @@ const URL_RESTOREFROMTRASHOUTLINED = new URL('../../assets/icons/restoreFromTras
  */
 export const initRestoreFromTrashOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RESTOREFROMTRASHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'restoreFromTrashOutlinedIcon', url: URL_RESTOREFROMTRASHOUTLINED }, ...properties);
 }
 
 /**

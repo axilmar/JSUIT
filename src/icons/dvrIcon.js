@@ -15,7 +15,7 @@ const URL_DVR = new URL('../../assets/icons/dvr.svg', import.meta.url).href;
  */
 export const initDvrIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DVR }, ...properties);
+    initIcon(element, { additionalClassName: 'dvrIcon', url: URL_DVR }, ...properties);
 }
 
 /**

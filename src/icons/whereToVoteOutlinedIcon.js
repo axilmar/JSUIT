@@ -15,7 +15,7 @@ const URL_WHERETOVOTEOUTLINED = new URL('../../assets/icons/whereToVoteOutlined.
  */
 export const initWhereToVoteOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WHERETOVOTEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'whereToVoteOutlinedIcon', url: URL_WHERETOVOTEOUTLINED }, ...properties);
 }
 
 /**

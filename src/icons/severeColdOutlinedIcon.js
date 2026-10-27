@@ -15,7 +15,7 @@ const URL_SEVERECOLDOUTLINED = new URL('../../assets/icons/severeColdOutlined.sv
  */
 export const initSevereColdOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SEVERECOLDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'severeColdOutlinedIcon', url: URL_SEVERECOLDOUTLINED }, ...properties);
 }
 
 /**

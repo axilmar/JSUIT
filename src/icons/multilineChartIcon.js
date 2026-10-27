@@ -15,7 +15,7 @@ const URL_MULTILINECHART = new URL('../../assets/icons/multilineChart.svg', impo
  */
 export const initMultilineChartIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MULTILINECHART }, ...properties);
+    initIcon(element, { additionalClassName: 'multilineChartIcon', url: URL_MULTILINECHART }, ...properties);
 }
 
 /**

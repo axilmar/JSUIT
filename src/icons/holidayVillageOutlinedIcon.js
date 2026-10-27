@@ -15,7 +15,7 @@ const URL_HOLIDAYVILLAGEOUTLINED = new URL('../../assets/icons/holidayVillageOut
  */
 export const initHolidayVillageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOLIDAYVILLAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'holidayVillageOutlinedIcon', url: URL_HOLIDAYVILLAGEOUTLINED }, ...properties);
 }
 
 /**

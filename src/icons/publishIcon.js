@@ -15,7 +15,7 @@ const URL_PUBLISH = new URL('../../assets/icons/publish.svg', import.meta.url).h
  */
 export const initPublishIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PUBLISH }, ...properties);
+    initIcon(element, { additionalClassName: 'publishIcon', url: URL_PUBLISH }, ...properties);
 }
 
 /**

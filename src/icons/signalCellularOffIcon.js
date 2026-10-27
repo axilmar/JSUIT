@@ -15,7 +15,7 @@ const URL_SIGNALCELLULAROFF = new URL('../../assets/icons/signalCellularOff.svg'
  */
 export const initSignalCellularOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNALCELLULAROFF }, ...properties);
+    initIcon(element, { additionalClassName: 'signalCellularOffIcon', url: URL_SIGNALCELLULAROFF }, ...properties);
 }
 
 /**

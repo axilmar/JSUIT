@@ -15,7 +15,7 @@ const URL_HIGHQUALITY = new URL('../../assets/icons/highQuality.svg', import.met
  */
 export const initHighQualityIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HIGHQUALITY }, ...properties);
+    initIcon(element, { additionalClassName: 'highQualityIcon', url: URL_HIGHQUALITY }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FLIPTOFRONTOUTLINED = new URL('../../assets/icons/flipToFrontOutlined.
  */
 export const initFlipToFrontOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLIPTOFRONTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'flipToFrontOutlinedIcon', url: URL_FLIPTOFRONTOUTLINED }, ...properties);
 }
 
 /**

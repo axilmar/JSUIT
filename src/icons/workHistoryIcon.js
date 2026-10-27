@@ -15,7 +15,7 @@ const URL_WORKHISTORY = new URL('../../assets/icons/workHistory.svg', import.met
  */
 export const initWorkHistoryIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WORKHISTORY }, ...properties);
+    initIcon(element, { additionalClassName: 'workHistoryIcon', url: URL_WORKHISTORY }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_GRADE = new URL('../../assets/icons/grade.svg', import.meta.url).href;
  */
 export const initGradeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRADE }, ...properties);
+    initIcon(element, { additionalClassName: 'gradeIcon', url: URL_GRADE }, ...properties);
 }
 
 /**

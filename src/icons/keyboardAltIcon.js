@@ -15,7 +15,7 @@ const URL_KEYBOARDALT = new URL('../../assets/icons/keyboardAlt.svg', import.met
  */
 export const initKeyboardAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDALT }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardAltIcon', url: URL_KEYBOARDALT }, ...properties);
 }
 
 /**

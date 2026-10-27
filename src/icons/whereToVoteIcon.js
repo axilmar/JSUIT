@@ -15,7 +15,7 @@ const URL_WHERETOVOTE = new URL('../../assets/icons/whereToVote.svg', import.met
  */
 export const initWhereToVoteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WHERETOVOTE }, ...properties);
+    initIcon(element, { additionalClassName: 'whereToVoteIcon', url: URL_WHERETOVOTE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TABLETMACOUTLINED = new URL('../../assets/icons/tabletMacOutlined.svg'
  */
 export const initTabletMacOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TABLETMACOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tabletMacOutlinedIcon', url: URL_TABLETMACOUTLINED }, ...properties);
 }
 
 /**

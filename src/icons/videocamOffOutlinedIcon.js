@@ -15,7 +15,7 @@ const URL_VIDEOCAMOFFOUTLINED = new URL('../../assets/icons/videocamOffOutlined.
  */
 export const initVideocamOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOCAMOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'videocamOffOutlinedIcon', url: URL_VIDEOCAMOFFOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_EDITATTRIBUTES = new URL('../../assets/icons/editAttributes.svg', impo
  */
 export const initEditAttributesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EDITATTRIBUTES }, ...properties);
+    initIcon(element, { additionalClassName: 'editAttributesIcon', url: URL_EDITATTRIBUTES }, ...properties);
 }
 
 /**

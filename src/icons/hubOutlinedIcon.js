@@ -15,7 +15,7 @@ const URL_HUBOUTLINED = new URL('../../assets/icons/hubOutlined.svg', import.met
  */
 export const initHubOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HUBOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hubOutlinedIcon', url: URL_HUBOUTLINED }, ...properties);
 }
 
 /**

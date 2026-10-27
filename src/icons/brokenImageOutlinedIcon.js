@@ -15,7 +15,7 @@ const URL_BROKENIMAGEOUTLINED = new URL('../../assets/icons/brokenImageOutlined.
  */
 export const initBrokenImageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BROKENIMAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'brokenImageOutlinedIcon', url: URL_BROKENIMAGEOUTLINED }, ...properties);
 }
 
 /**

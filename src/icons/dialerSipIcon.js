@@ -15,7 +15,7 @@ const URL_DIALERSIP = new URL('../../assets/icons/dialerSip.svg', import.meta.ur
  */
 export const initDialerSipIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIALERSIP }, ...properties);
+    initIcon(element, { additionalClassName: 'dialerSipIcon', url: URL_DIALERSIP }, ...properties);
 }
 
 /**

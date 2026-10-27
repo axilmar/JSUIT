@@ -15,7 +15,7 @@ const URL_SETTINGSOVERSCAN = new URL('../../assets/icons/settingsOverscan.svg', 
  */
 export const initSettingsOverscanIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSOVERSCAN }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsOverscanIcon', url: URL_SETTINGSOVERSCAN }, ...properties);
 }
 
 /**

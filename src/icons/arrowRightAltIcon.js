@@ -15,7 +15,7 @@ const URL_ARROWRIGHTALT = new URL('../../assets/icons/arrowRightAlt.svg', import
  */
 export const initArrowRightAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARROWRIGHTALT }, ...properties);
+    initIcon(element, { additionalClassName: 'arrowRightAltIcon', url: URL_ARROWRIGHTALT }, ...properties);
 }
 
 /**

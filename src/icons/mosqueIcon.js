@@ -15,7 +15,7 @@ const URL_MOSQUE = new URL('../../assets/icons/mosque.svg', import.meta.url).hre
  */
 export const initMosqueIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOSQUE }, ...properties);
+    initIcon(element, { additionalClassName: 'mosqueIcon', url: URL_MOSQUE }, ...properties);
 }
 
 /**

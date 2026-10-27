@@ -15,7 +15,7 @@ const URL_APIOUTLINED = new URL('../../assets/icons/apiOutlined.svg', import.met
  */
 export const initApiOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_APIOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'apiOutlinedIcon', url: URL_APIOUTLINED }, ...properties);
 }
 
 /**

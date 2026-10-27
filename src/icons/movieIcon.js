@@ -15,7 +15,7 @@ const URL_MOVIE = new URL('../../assets/icons/movie.svg', import.meta.url).href;
  */
 export const initMovieIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOVIE }, ...properties);
+    initIcon(element, { additionalClassName: 'movieIcon', url: URL_MOVIE }, ...properties);
 }
 
 /**

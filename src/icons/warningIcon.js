@@ -15,7 +15,7 @@ const URL_WARNING = new URL('../../assets/icons/warning.svg', import.meta.url).h
  */
 export const initWarningIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WARNING }, ...properties);
+    initIcon(element, { additionalClassName: 'warningIcon', url: URL_WARNING }, ...properties);
 }
 
 /**

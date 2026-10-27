@@ -15,7 +15,7 @@ const URL_DIRECTIONSSUBWAY = new URL('../../assets/icons/directionsSubway.svg', 
  */
 export const initDirectionsSubwayIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRECTIONSSUBWAY }, ...properties);
+    initIcon(element, { additionalClassName: 'directionsSubwayIcon', url: URL_DIRECTIONSSUBWAY }, ...properties);
 }
 
 /**

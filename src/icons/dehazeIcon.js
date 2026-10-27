@@ -15,7 +15,7 @@ const URL_DEHAZE = new URL('../../assets/icons/dehaze.svg', import.meta.url).hre
  */
 export const initDehazeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEHAZE }, ...properties);
+    initIcon(element, { additionalClassName: 'dehazeIcon', url: URL_DEHAZE }, ...properties);
 }
 
 /**

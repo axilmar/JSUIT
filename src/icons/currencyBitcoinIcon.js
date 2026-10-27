@@ -15,7 +15,7 @@ const URL_CURRENCYBITCOIN = new URL('../../assets/icons/currencyBitcoin.svg', im
  */
 export const initCurrencyBitcoinIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CURRENCYBITCOIN }, ...properties);
+    initIcon(element, { additionalClassName: 'currencyBitcoinIcon', url: URL_CURRENCYBITCOIN }, ...properties);
 }
 
 /**

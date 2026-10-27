@@ -15,7 +15,7 @@ const URL_SDSTORAGEOUTLINED = new URL('../../assets/icons/sdStorageOutlined.svg'
  */
 export const initSdStorageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SDSTORAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sdStorageOutlinedIcon', url: URL_SDSTORAGEOUTLINED }, ...properties);
 }
 
 /**

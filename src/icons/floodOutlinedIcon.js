@@ -15,7 +15,7 @@ const URL_FLOODOUTLINED = new URL('../../assets/icons/floodOutlined.svg', import
  */
 export const initFloodOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLOODOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'floodOutlinedIcon', url: URL_FLOODOUTLINED }, ...properties);
 }
 
 /**

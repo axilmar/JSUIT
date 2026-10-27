@@ -15,7 +15,7 @@ const URL_SPORTSBASKETBALL = new URL('../../assets/icons/sportsBasketball.svg', 
  */
 export const initSportsBasketballIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPORTSBASKETBALL }, ...properties);
+    initIcon(element, { additionalClassName: 'sportsBasketballIcon', url: URL_SPORTSBASKETBALL }, ...properties);
 }
 
 /**

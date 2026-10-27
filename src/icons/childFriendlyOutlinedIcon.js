@@ -15,7 +15,7 @@ const URL_CHILDFRIENDLYOUTLINED = new URL('../../assets/icons/childFriendlyOutli
  */
 export const initChildFriendlyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHILDFRIENDLYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'childFriendlyOutlinedIcon', url: URL_CHILDFRIENDLYOUTLINED }, ...properties);
 }
 
 /**

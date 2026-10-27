@@ -15,7 +15,7 @@ const URL_NOBACKPACKOUTLINED = new URL('../../assets/icons/noBackpackOutlined.sv
  */
 export const initNoBackpackOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOBACKPACKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'noBackpackOutlinedIcon', url: URL_NOBACKPACKOUTLINED }, ...properties);
 }
 
 /**

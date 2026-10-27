@@ -15,7 +15,7 @@ const URL_FLUORESCENT = new URL('../../assets/icons/fluorescent.svg', import.met
  */
 export const initFluorescentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLUORESCENT }, ...properties);
+    initIcon(element, { additionalClassName: 'fluorescentIcon', url: URL_FLUORESCENT }, ...properties);
 }
 
 /**

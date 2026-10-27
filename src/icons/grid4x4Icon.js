@@ -15,7 +15,7 @@ const URL_GRID4X4 = new URL('../../assets/icons/grid4x4.svg', import.meta.url).h
  */
 export const initGrid4x4Icon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRID4X4 }, ...properties);
+    initIcon(element, { additionalClassName: 'grid4x4Icon', url: URL_GRID4X4 }, ...properties);
 }
 
 /**

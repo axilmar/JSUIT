@@ -15,7 +15,7 @@ const URL_REVIEWS = new URL('../../assets/icons/reviews.svg', import.meta.url).h
  */
 export const initReviewsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REVIEWS }, ...properties);
+    initIcon(element, { additionalClassName: 'reviewsIcon', url: URL_REVIEWS }, ...properties);
 }
 
 /**

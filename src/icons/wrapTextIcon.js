@@ -15,7 +15,7 @@ const URL_WRAPTEXT = new URL('../../assets/icons/wrapText.svg', import.meta.url)
  */
 export const initWrapTextIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WRAPTEXT }, ...properties);
+    initIcon(element, { additionalClassName: 'wrapTextIcon', url: URL_WRAPTEXT }, ...properties);
 }
 
 /**

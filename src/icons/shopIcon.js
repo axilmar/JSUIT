@@ -15,7 +15,7 @@ const URL_SHOP = new URL('../../assets/icons/shop.svg', import.meta.url).href;
  */
 export const initShopIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHOP }, ...properties);
+    initIcon(element, { additionalClassName: 'shopIcon', url: URL_SHOP }, ...properties);
 }
 
 /**

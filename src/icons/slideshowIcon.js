@@ -15,7 +15,7 @@ const URL_SLIDESHOW = new URL('../../assets/icons/slideshow.svg', import.meta.ur
  */
 export const initSlideshowIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SLIDESHOW }, ...properties);
+    initIcon(element, { additionalClassName: 'slideshowIcon', url: URL_SLIDESHOW }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DOORSLIDINGOUTLINED = new URL('../../assets/icons/doorSlidingOutlined.
  */
 export const initDoorSlidingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOORSLIDINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'doorSlidingOutlinedIcon', url: URL_DOORSLIDINGOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FIREPLACE = new URL('../../assets/icons/fireplace.svg', import.meta.ur
  */
 export const initFireplaceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIREPLACE }, ...properties);
+    initIcon(element, { additionalClassName: 'fireplaceIcon', url: URL_FIREPLACE }, ...properties);
 }
 
 /**

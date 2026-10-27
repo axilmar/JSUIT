@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initHTMLTableCellElement = (element, ...properties) => {
     console.assert(element instanceof HTMLTableCellElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'HTMLTableCellElement' }, ...properties);
 }
 
 /**
@@ -22,7 +22,7 @@ export const initHTMLTableCellElement = (element, ...properties) => {
  */
 export const th = (...properties) => {
     const element = document.createElement('th');
-    initHTMLTableCellElement(element, ...properties);
+    initHTMLTableCellElement(element, { additionalClassName: 'th' }, ...properties);
     return element;
 }
 
@@ -35,6 +35,6 @@ export const th = (...properties) => {
  */
 export const td = (...properties) => {
     const element = document.createElement('td');
-    initHTMLTableCellElement(element, ...properties);
+    initHTMLTableCellElement(element, { additionalClassName: 'td' }, ...properties);
     return element;
 }

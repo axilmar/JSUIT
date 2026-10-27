@@ -15,7 +15,7 @@ const URL_KEBABDININGOUTLINED = new URL('../../assets/icons/kebabDiningOutlined.
  */
 export const initKebabDiningOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEBABDININGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'kebabDiningOutlinedIcon', url: URL_KEBABDININGOUTLINED }, ...properties);
 }
 
 /**

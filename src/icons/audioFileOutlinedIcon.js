@@ -15,7 +15,7 @@ const URL_AUDIOFILEOUTLINED = new URL('../../assets/icons/audioFileOutlined.svg'
  */
 export const initAudioFileOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUDIOFILEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'audioFileOutlinedIcon', url: URL_AUDIOFILEOUTLINED }, ...properties);
 }
 
 /**

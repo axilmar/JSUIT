@@ -15,7 +15,7 @@ const URL_REPARTITIONOUTLINED = new URL('../../assets/icons/repartitionOutlined.
  */
 export const initRepartitionOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REPARTITIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'repartitionOutlinedIcon', url: URL_REPARTITIONOUTLINED }, ...properties);
 }
 
 /**

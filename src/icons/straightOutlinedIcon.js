@@ -15,7 +15,7 @@ const URL_STRAIGHTOUTLINED = new URL('../../assets/icons/straightOutlined.svg', 
  */
 export const initStraightOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STRAIGHTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'straightOutlinedIcon', url: URL_STRAIGHTOUTLINED }, ...properties);
 }
 
 /**

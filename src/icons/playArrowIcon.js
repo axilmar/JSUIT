@@ -15,7 +15,7 @@ const URL_PLAYARROW = new URL('../../assets/icons/playArrow.svg', import.meta.ur
  */
 export const initPlayArrowIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYARROW }, ...properties);
+    initIcon(element, { additionalClassName: 'playArrowIcon', url: URL_PLAYARROW }, ...properties);
 }
 
 /**

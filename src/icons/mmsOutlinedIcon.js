@@ -15,7 +15,7 @@ const URL_MMSOUTLINED = new URL('../../assets/icons/mmsOutlined.svg', import.met
  */
 export const initMmsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MMSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'mmsOutlinedIcon', url: URL_MMSOUTLINED }, ...properties);
 }
 
 /**

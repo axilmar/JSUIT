@@ -15,7 +15,7 @@ const URL_DUO = new URL('../../assets/icons/duo.svg', import.meta.url).href;
  */
 export const initDuoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DUO }, ...properties);
+    initIcon(element, { additionalClassName: 'duoIcon', url: URL_DUO }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_HVAC = new URL('../../assets/icons/hvac.svg', import.meta.url).href;
  */
 export const initHvacIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HVAC }, ...properties);
+    initIcon(element, { additionalClassName: 'hvacIcon', url: URL_HVAC }, ...properties);
 }
 
 /**

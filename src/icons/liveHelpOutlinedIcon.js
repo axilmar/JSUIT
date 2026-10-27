@@ -15,7 +15,7 @@ const URL_LIVEHELPOUTLINED = new URL('../../assets/icons/liveHelpOutlined.svg', 
  */
 export const initLiveHelpOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIVEHELPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'liveHelpOutlinedIcon', url: URL_LIVEHELPOUTLINED }, ...properties);
 }
 
 /**

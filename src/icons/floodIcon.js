@@ -15,7 +15,7 @@ const URL_FLOOD = new URL('../../assets/icons/flood.svg', import.meta.url).href;
  */
 export const initFloodIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLOOD }, ...properties);
+    initIcon(element, { additionalClassName: 'floodIcon', url: URL_FLOOD }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DESKTOPACCESSDISABLED = new URL('../../assets/icons/desktopAccessDisab
  */
 export const initDesktopAccessDisabledIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DESKTOPACCESSDISABLED }, ...properties);
+    initIcon(element, { additionalClassName: 'desktopAccessDisabledIcon', url: URL_DESKTOPACCESSDISABLED }, ...properties);
 }
 
 /**

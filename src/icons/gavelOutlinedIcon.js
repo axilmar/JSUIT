@@ -15,7 +15,7 @@ const URL_GAVELOUTLINED = new URL('../../assets/icons/gavelOutlined.svg', import
  */
 export const initGavelOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GAVELOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'gavelOutlinedIcon', url: URL_GAVELOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FORMATALIGNRIGHTOUTLINED = new URL('../../assets/icons/formatAlignRigh
  */
 export const initFormatAlignRightOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATALIGNRIGHTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatAlignRightOutlinedIcon', url: URL_FORMATALIGNRIGHTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_VIGNETTE = new URL('../../assets/icons/vignette.svg', import.meta.url)
  */
 export const initVignetteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIGNETTE }, ...properties);
+    initIcon(element, { additionalClassName: 'vignetteIcon', url: URL_VIGNETTE }, ...properties);
 }
 
 /**

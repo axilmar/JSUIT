@@ -15,7 +15,7 @@ const URL_WYSIWYGOUTLINED = new URL('../../assets/icons/wysiwygOutlined.svg', im
  */
 export const initWysiwygOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WYSIWYGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wysiwygOutlinedIcon', url: URL_WYSIWYGOUTLINED }, ...properties);
 }
 
 /**

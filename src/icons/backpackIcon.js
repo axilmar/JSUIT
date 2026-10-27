@@ -15,7 +15,7 @@ const URL_BACKPACK = new URL('../../assets/icons/backpack.svg', import.meta.url)
  */
 export const initBackpackIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BACKPACK }, ...properties);
+    initIcon(element, { additionalClassName: 'backpackIcon', url: URL_BACKPACK }, ...properties);
 }
 
 /**

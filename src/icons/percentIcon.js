@@ -15,7 +15,7 @@ const URL_PERCENT = new URL('../../assets/icons/percent.svg', import.meta.url).h
  */
 export const initPercentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERCENT }, ...properties);
+    initIcon(element, { additionalClassName: 'percentIcon', url: URL_PERCENT }, ...properties);
 }
 
 /**

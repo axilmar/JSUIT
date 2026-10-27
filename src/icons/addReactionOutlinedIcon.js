@@ -15,7 +15,7 @@ const URL_ADDREACTIONOUTLINED = new URL('../../assets/icons/addReactionOutlined.
  */
 export const initAddReactionOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDREACTIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'addReactionOutlinedIcon', url: URL_ADDREACTIONOUTLINED }, ...properties);
 }
 
 /**

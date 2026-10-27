@@ -15,7 +15,7 @@ const URL_WALLETOUTLINED = new URL('../../assets/icons/walletOutlined.svg', impo
  */
 export const initWalletOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WALLETOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'walletOutlinedIcon', url: URL_WALLETOUTLINED }, ...properties);
 }
 
 /**

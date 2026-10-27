@@ -15,7 +15,7 @@ const URL_PERMPHONEMSG = new URL('../../assets/icons/permPhoneMsg.svg', import.m
  */
 export const initPermPhoneMsgIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERMPHONEMSG }, ...properties);
+    initIcon(element, { additionalClassName: 'permPhoneMsgIcon', url: URL_PERMPHONEMSG }, ...properties);
 }
 
 /**

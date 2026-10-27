@@ -15,7 +15,7 @@ const URL_RECEIPTLONG = new URL('../../assets/icons/receiptLong.svg', import.met
  */
 export const initReceiptLongIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RECEIPTLONG }, ...properties);
+    initIcon(element, { additionalClassName: 'receiptLongIcon', url: URL_RECEIPTLONG }, ...properties);
 }
 
 /**

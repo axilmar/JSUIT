@@ -15,7 +15,7 @@ const URL_RMOBILEDATA = new URL('../../assets/icons/rMobiledata.svg', import.met
  */
 export const initRMobiledataIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RMOBILEDATA }, ...properties);
+    initIcon(element, { additionalClassName: 'rMobiledataIcon', url: URL_RMOBILEDATA }, ...properties);
 }
 
 /**

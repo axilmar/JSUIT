@@ -15,7 +15,7 @@ const URL_IMAGESEARCH = new URL('../../assets/icons/imageSearch.svg', import.met
  */
 export const initImageSearchIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_IMAGESEARCH }, ...properties);
+    initIcon(element, { additionalClassName: 'imageSearchIcon', url: URL_IMAGESEARCH }, ...properties);
 }
 
 /**

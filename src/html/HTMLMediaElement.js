@@ -10,5 +10,5 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initHTMLMediaElement = (element, ...properties) => {
     console.assert(element instanceof HTMLMediaElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'HTMLMediaElement' }, ...properties);
 }

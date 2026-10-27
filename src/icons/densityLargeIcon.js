@@ -15,7 +15,7 @@ const URL_DENSITYLARGE = new URL('../../assets/icons/densityLarge.svg', import.m
  */
 export const initDensityLargeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DENSITYLARGE }, ...properties);
+    initIcon(element, { additionalClassName: 'densityLargeIcon', url: URL_DENSITYLARGE }, ...properties);
 }
 
 /**

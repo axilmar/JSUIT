@@ -15,7 +15,7 @@ const URL_RESTARTALT = new URL('../../assets/icons/restartAlt.svg', import.meta.
  */
 export const initRestartAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RESTARTALT }, ...properties);
+    initIcon(element, { additionalClassName: 'restartAltIcon', url: URL_RESTARTALT }, ...properties);
 }
 
 /**

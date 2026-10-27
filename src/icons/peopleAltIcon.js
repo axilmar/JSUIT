@@ -15,7 +15,7 @@ const URL_PEOPLEALT = new URL('../../assets/icons/peopleAlt.svg', import.meta.ur
  */
 export const initPeopleAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PEOPLEALT }, ...properties);
+    initIcon(element, { additionalClassName: 'peopleAltIcon', url: URL_PEOPLEALT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LOCKRESET = new URL('../../assets/icons/lockReset.svg', import.meta.ur
  */
 export const initLockResetIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCKRESET }, ...properties);
+    initIcon(element, { additionalClassName: 'lockResetIcon', url: URL_LOCKRESET }, ...properties);
 }
 
 /**

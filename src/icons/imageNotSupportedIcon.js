@@ -15,7 +15,7 @@ const URL_IMAGENOTSUPPORTED = new URL('../../assets/icons/imageNotSupported.svg'
  */
 export const initImageNotSupportedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_IMAGENOTSUPPORTED }, ...properties);
+    initIcon(element, { additionalClassName: 'imageNotSupportedIcon', url: URL_IMAGENOTSUPPORTED }, ...properties);
 }
 
 /**

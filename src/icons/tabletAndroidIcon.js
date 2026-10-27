@@ -15,7 +15,7 @@ const URL_TABLETANDROID = new URL('../../assets/icons/tabletAndroid.svg', import
  */
 export const initTabletAndroidIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TABLETANDROID }, ...properties);
+    initIcon(element, { additionalClassName: 'tabletAndroidIcon', url: URL_TABLETANDROID }, ...properties);
 }
 
 /**

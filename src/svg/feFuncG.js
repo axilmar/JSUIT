@@ -10,7 +10,7 @@ import { initSVGComponentTransferFunctionElement } from "./SVGComponentTransferF
  */
 export const initFeFuncG = (element, ...properties) => {
     console.assert(element instanceof SVGFEFuncGElement);
-    initSVGComponentTransferFunctionElement(element, ...properties);
+    initSVGComponentTransferFunctionElement(element, { additionalClassName: 'feFuncG' }, ...properties);
 }
 
 /**

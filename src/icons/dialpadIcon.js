@@ -15,7 +15,7 @@ const URL_DIALPAD = new URL('../../assets/icons/dialpad.svg', import.meta.url).h
  */
 export const initDialpadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIALPAD }, ...properties);
+    initIcon(element, { additionalClassName: 'dialpadIcon', url: URL_DIALPAD }, ...properties);
 }
 
 /**

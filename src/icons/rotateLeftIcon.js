@@ -15,7 +15,7 @@ const URL_ROTATELEFT = new URL('../../assets/icons/rotateLeft.svg', import.meta.
  */
 export const initRotateLeftIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROTATELEFT }, ...properties);
+    initIcon(element, { additionalClassName: 'rotateLeftIcon', url: URL_ROTATELEFT }, ...properties);
 }
 
 /**

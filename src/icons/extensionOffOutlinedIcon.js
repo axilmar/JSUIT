@@ -15,7 +15,7 @@ const URL_EXTENSIONOFFOUTLINED = new URL('../../assets/icons/extensionOffOutline
  */
 export const initExtensionOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXTENSIONOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'extensionOffOutlinedIcon', url: URL_EXTENSIONOFFOUTLINED }, ...properties);
 }
 
 /**

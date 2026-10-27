@@ -15,7 +15,7 @@ const URL_CONSTRUCTION = new URL('../../assets/icons/construction.svg', import.m
  */
 export const initConstructionIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONSTRUCTION }, ...properties);
+    initIcon(element, { additionalClassName: 'constructionIcon', url: URL_CONSTRUCTION }, ...properties);
 }
 
 /**

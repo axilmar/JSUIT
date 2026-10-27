@@ -15,7 +15,7 @@ const URL_EDITOFF = new URL('../../assets/icons/editOff.svg', import.meta.url).h
  */
 export const initEditOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EDITOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'editOffIcon', url: URL_EDITOFF }, ...properties);
 }
 
 /**

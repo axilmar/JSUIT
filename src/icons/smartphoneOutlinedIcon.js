@@ -15,7 +15,7 @@ const URL_SMARTPHONEOUTLINED = new URL('../../assets/icons/smartphoneOutlined.sv
  */
 export const initSmartphoneOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SMARTPHONEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'smartphoneOutlinedIcon', url: URL_SMARTPHONEOUTLINED }, ...properties);
 }
 
 /**

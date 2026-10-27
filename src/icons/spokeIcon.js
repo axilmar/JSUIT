@@ -15,7 +15,7 @@ const URL_SPOKE = new URL('../../assets/icons/spoke.svg', import.meta.url).href;
  */
 export const initSpokeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPOKE }, ...properties);
+    initIcon(element, { additionalClassName: 'spokeIcon', url: URL_SPOKE }, ...properties);
 }
 
 /**

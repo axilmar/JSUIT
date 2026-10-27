@@ -15,7 +15,7 @@ const URL_APPREGISTRATIONOUTLINED = new URL('../../assets/icons/appRegistrationO
  */
 export const initAppRegistrationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_APPREGISTRATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'appRegistrationOutlinedIcon', url: URL_APPREGISTRATIONOUTLINED }, ...properties);
 }
 
 /**

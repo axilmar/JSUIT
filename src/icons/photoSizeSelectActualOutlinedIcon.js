@@ -15,7 +15,7 @@ const URL_PHOTOSIZESELECTACTUALOUTLINED = new URL('../../assets/icons/photoSizeS
  */
 export const initPhotoSizeSelectActualOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHOTOSIZESELECTACTUALOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'photoSizeSelectActualOutlinedIcon', url: URL_PHOTOSIZESELECTACTUALOUTLINED }, ...properties);
 }
 
 /**

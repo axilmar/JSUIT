@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initMarker = (element, ...properties) => {
     console.assert(element instanceof SVGMarkerElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'marker' }, ...properties);
 }
 
 /**

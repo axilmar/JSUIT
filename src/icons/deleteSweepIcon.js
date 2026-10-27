@@ -15,7 +15,7 @@ const URL_DELETESWEEP = new URL('../../assets/icons/deleteSweep.svg', import.met
  */
 export const initDeleteSweepIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DELETESWEEP }, ...properties);
+    initIcon(element, { additionalClassName: 'deleteSweepIcon', url: URL_DELETESWEEP }, ...properties);
 }
 
 /**

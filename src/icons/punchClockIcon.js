@@ -15,7 +15,7 @@ const URL_PUNCHCLOCK = new URL('../../assets/icons/punchClock.svg', import.meta.
  */
 export const initPunchClockIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PUNCHCLOCK }, ...properties);
+    initIcon(element, { additionalClassName: 'punchClockIcon', url: URL_PUNCHCLOCK }, ...properties);
 }
 
 /**

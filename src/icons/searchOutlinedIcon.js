@@ -15,7 +15,7 @@ const URL_SEARCHOUTLINED = new URL('../../assets/icons/searchOutlined.svg', impo
  */
 export const initSearchOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SEARCHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'searchOutlinedIcon', url: URL_SEARCHOUTLINED }, ...properties);
 }
 
 /**

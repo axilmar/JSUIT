@@ -15,7 +15,7 @@ const URL_PERMDEVICEINFORMATIONOUTLINED = new URL('../../assets/icons/permDevice
  */
 export const initPermDeviceInformationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERMDEVICEINFORMATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'permDeviceInformationOutlinedIcon', url: URL_PERMDEVICEINFORMATIONOUTLINED }, ...properties);
 }
 
 /**

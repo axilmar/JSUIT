@@ -15,7 +15,7 @@ const URL_CROPDIN = new URL('../../assets/icons/cropDin.svg', import.meta.url).h
  */
 export const initCropDinIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CROPDIN }, ...properties);
+    initIcon(element, { additionalClassName: 'cropDinIcon', url: URL_CROPDIN }, ...properties);
 }
 
 /**

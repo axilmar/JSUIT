@@ -15,7 +15,7 @@ const URL_SATELLITEOUTLINED = new URL('../../assets/icons/satelliteOutlined.svg'
  */
 export const initSatelliteOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SATELLITEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'satelliteOutlinedIcon', url: URL_SATELLITEOUTLINED }, ...properties);
 }
 
 /**

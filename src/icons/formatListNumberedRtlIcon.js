@@ -15,7 +15,7 @@ const URL_FORMATLISTNUMBEREDRTL = new URL('../../assets/icons/formatListNumbered
  */
 export const initFormatListNumberedRtlIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATLISTNUMBEREDRTL }, ...properties);
+    initIcon(element, { additionalClassName: 'formatListNumberedRtlIcon', url: URL_FORMATLISTNUMBEREDRTL }, ...properties);
 }
 
 /**

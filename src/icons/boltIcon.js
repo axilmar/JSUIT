@@ -15,7 +15,7 @@ const URL_BOLT = new URL('../../assets/icons/bolt.svg', import.meta.url).href;
  */
 export const initBoltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BOLT }, ...properties);
+    initIcon(element, { additionalClassName: 'boltIcon', url: URL_BOLT }, ...properties);
 }
 
 /**

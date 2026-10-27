@@ -15,7 +15,7 @@ const URL_ASSISTANT = new URL('../../assets/icons/assistant.svg', import.meta.ur
  */
 export const initAssistantIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ASSISTANT }, ...properties);
+    initIcon(element, { additionalClassName: 'assistantIcon', url: URL_ASSISTANT }, ...properties);
 }
 
 /**

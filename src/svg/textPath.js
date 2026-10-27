@@ -10,7 +10,7 @@ import { initSVGTextContentElement } from "./SVGTextContentElement.js";
  */
 export const initTextPath = (element, ...properties) => {
     console.assert(element instanceof SVGTextPathElement);
-    initSVGTextContentElement(element, ...properties);
+    initSVGTextContentElement(element, { additionalClassName: 'textPath' }, ...properties);
 }
 
 /**

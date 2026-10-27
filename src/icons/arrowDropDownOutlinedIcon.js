@@ -15,7 +15,7 @@ const URL_ARROWDROPDOWNOUTLINED = new URL('../../assets/icons/arrowDropDownOutli
  */
 export const initArrowDropDownOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARROWDROPDOWNOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'arrowDropDownOutlinedIcon', url: URL_ARROWDROPDOWNOUTLINED }, ...properties);
 }
 
 /**

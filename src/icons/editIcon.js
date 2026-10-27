@@ -15,7 +15,7 @@ const URL_EDIT = new URL('../../assets/icons/edit.svg', import.meta.url).href;
  */
 export const initEditIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EDIT }, ...properties);
+    initIcon(element, { additionalClassName: 'editIcon', url: URL_EDIT }, ...properties);
 }
 
 /**

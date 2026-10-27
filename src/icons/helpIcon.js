@@ -15,7 +15,7 @@ const URL_HELP = new URL('../../assets/icons/help.svg', import.meta.url).href;
  */
 export const initHelpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HELP }, ...properties);
+    initIcon(element, { additionalClassName: 'helpIcon', url: URL_HELP }, ...properties);
 }
 
 /**

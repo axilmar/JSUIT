@@ -15,7 +15,7 @@ const URL_ACUNIT = new URL('../../assets/icons/acUnit.svg', import.meta.url).hre
  */
 export const initAcUnitIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACUNIT }, ...properties);
+    initIcon(element, { additionalClassName: 'acUnitIcon', url: URL_ACUNIT }, ...properties);
 }
 
 /**

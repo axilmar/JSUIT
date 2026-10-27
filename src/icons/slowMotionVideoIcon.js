@@ -15,7 +15,7 @@ const URL_SLOWMOTIONVIDEO = new URL('../../assets/icons/slowMotionVideo.svg', im
  */
 export const initSlowMotionVideoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SLOWMOTIONVIDEO }, ...properties);
+    initIcon(element, { additionalClassName: 'slowMotionVideoIcon', url: URL_SLOWMOTIONVIDEO }, ...properties);
 }
 
 /**

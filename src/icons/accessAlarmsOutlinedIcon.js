@@ -15,7 +15,7 @@ const URL_ACCESSALARMSOUTLINED = new URL('../../assets/icons/accessAlarmsOutline
  */
 export const initAccessAlarmsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACCESSALARMSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'accessAlarmsOutlinedIcon', url: URL_ACCESSALARMSOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_KEY = new URL('../../assets/icons/key.svg', import.meta.url).href;
  */
 export const initKeyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEY }, ...properties);
+    initIcon(element, { additionalClassName: 'keyIcon', url: URL_KEY }, ...properties);
 }
 
 /**

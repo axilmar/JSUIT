@@ -6,6 +6,23 @@ import busySpinnerStyleSheet from '../ui/busySpinner.css' with { type: 'css' };
 
 adoptStyleSheet(busySpinnerStyleSheet);
 
+//id counters
+const idCounters = {};
+
+//sets a default id for an element
+const setDefaultId = (element) => {
+    //if element has an id, do nothing else
+    if (element.id) {
+        return;
+    }
+
+    //get the type of the element from the last class it has (the most derived component) or its name or its tag name
+    const type = element.classList.item(element.classList.length - 1) ?? element.name ?? element.tagName;
+
+    //locate the id counter and increment it; set the id from it
+    element.id = idCounters[type] = (idCounters[type] ?? 0) + 1;
+}
+
 //splits a string of space-delimited class names into an array of class names
 const splitClassNames = (classNames) => classNames.split(/\s+/).filter(name => name.length > 0);
 
@@ -200,5 +217,6 @@ export const initElement = (element, ...properties) => {
     defineTooltipProperty(element);
     const spinner = defineSpinner(element);
     defineStateProperty(element, 'busy', 'busyClassName', (busy) => busy ? spinner.show() : spinner.hide());
-    initNode(element, ...properties);
+    initNode(element, { additionalClassName: 'Element' }, ...properties);
+    setDefaultId(element);
 }

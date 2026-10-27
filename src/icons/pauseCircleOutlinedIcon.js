@@ -15,7 +15,7 @@ const URL_PAUSECIRCLEOUTLINED = new URL('../../assets/icons/pauseCircleOutlined.
  */
 export const initPauseCircleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PAUSECIRCLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pauseCircleOutlinedIcon', url: URL_PAUSECIRCLEOUTLINED }, ...properties);
 }
 
 /**

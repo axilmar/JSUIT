@@ -15,7 +15,7 @@ const URL_REQUESTPAGE = new URL('../../assets/icons/requestPage.svg', import.met
  */
 export const initRequestPageIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REQUESTPAGE }, ...properties);
+    initIcon(element, { additionalClassName: 'requestPageIcon', url: URL_REQUESTPAGE }, ...properties);
 }
 
 /**

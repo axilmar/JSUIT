@@ -15,7 +15,7 @@ const URL_PLAYLISTREMOVE = new URL('../../assets/icons/playlistRemove.svg', impo
  */
 export const initPlaylistRemoveIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYLISTREMOVE }, ...properties);
+    initIcon(element, { additionalClassName: 'playlistRemoveIcon', url: URL_PLAYLISTREMOVE }, ...properties);
 }
 
 /**

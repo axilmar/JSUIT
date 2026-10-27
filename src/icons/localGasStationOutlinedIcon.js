@@ -15,7 +15,7 @@ const URL_LOCALGASSTATIONOUTLINED = new URL('../../assets/icons/localGasStationO
  */
 export const initLocalGasStationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALGASSTATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localGasStationOutlinedIcon', url: URL_LOCALGASSTATIONOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CENTERFOCUSWEAK = new URL('../../assets/icons/centerFocusWeak.svg', im
  */
 export const initCenterFocusWeakIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CENTERFOCUSWEAK }, ...properties);
+    initIcon(element, { additionalClassName: 'centerFocusWeakIcon', url: URL_CENTERFOCUSWEAK }, ...properties);
 }
 
 /**

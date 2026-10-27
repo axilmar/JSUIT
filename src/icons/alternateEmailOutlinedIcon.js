@@ -15,7 +15,7 @@ const URL_ALTERNATEEMAILOUTLINED = new URL('../../assets/icons/alternateEmailOut
  */
 export const initAlternateEmailOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALTERNATEEMAILOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'alternateEmailOutlinedIcon', url: URL_ALTERNATEEMAILOUTLINED }, ...properties);
 }
 
 /**

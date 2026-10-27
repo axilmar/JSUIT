@@ -15,7 +15,7 @@ const URL_VIEWCOMFYOUTLINED = new URL('../../assets/icons/viewComfyOutlined.svg'
  */
 export const initViewComfyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWCOMFYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewComfyOutlinedIcon', url: URL_VIEWCOMFYOUTLINED }, ...properties);
 }
 
 /**

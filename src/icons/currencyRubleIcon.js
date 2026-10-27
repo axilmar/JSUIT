@@ -15,7 +15,7 @@ const URL_CURRENCYRUBLE = new URL('../../assets/icons/currencyRuble.svg', import
  */
 export const initCurrencyRubleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CURRENCYRUBLE }, ...properties);
+    initIcon(element, { additionalClassName: 'currencyRubleIcon', url: URL_CURRENCYRUBLE }, ...properties);
 }
 
 /**

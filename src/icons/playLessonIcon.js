@@ -15,7 +15,7 @@ const URL_PLAYLESSON = new URL('../../assets/icons/playLesson.svg', import.meta.
  */
 export const initPlayLessonIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYLESSON }, ...properties);
+    initIcon(element, { additionalClassName: 'playLessonIcon', url: URL_PLAYLESSON }, ...properties);
 }
 
 /**

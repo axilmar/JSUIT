@@ -15,7 +15,7 @@ const URL_ADDICCALL = new URL('../../assets/icons/addIcCall.svg', import.meta.ur
  */
 export const initAddIcCallIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDICCALL }, ...properties);
+    initIcon(element, { additionalClassName: 'addIcCallIcon', url: URL_ADDICCALL }, ...properties);
 }
 
 /**

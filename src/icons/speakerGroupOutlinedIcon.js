@@ -15,7 +15,7 @@ const URL_SPEAKERGROUPOUTLINED = new URL('../../assets/icons/speakerGroupOutline
  */
 export const initSpeakerGroupOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPEAKERGROUPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'speakerGroupOutlinedIcon', url: URL_SPEAKERGROUPOUTLINED }, ...properties);
 }
 
 /**

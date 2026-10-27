@@ -15,7 +15,7 @@ const URL_WRONGLOCATION = new URL('../../assets/icons/wrongLocation.svg', import
  */
 export const initWrongLocationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WRONGLOCATION }, ...properties);
+    initIcon(element, { additionalClassName: 'wrongLocationIcon', url: URL_WRONGLOCATION }, ...properties);
 }
 
 /**

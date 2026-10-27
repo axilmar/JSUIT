@@ -15,7 +15,7 @@ const URL_KEYBOARDOPTIONKEYOUTLINED = new URL('../../assets/icons/keyboardOption
  */
 export const initKeyboardOptionKeyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDOPTIONKEYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardOptionKeyOutlinedIcon', url: URL_KEYBOARDOPTIONKEYOUTLINED }, ...properties);
 }
 
 /**

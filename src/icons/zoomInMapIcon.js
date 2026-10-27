@@ -15,7 +15,7 @@ const URL_ZOOMINMAP = new URL('../../assets/icons/zoomInMap.svg', import.meta.ur
  */
 export const initZoomInMapIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ZOOMINMAP }, ...properties);
+    initIcon(element, { additionalClassName: 'zoomInMapIcon', url: URL_ZOOMINMAP }, ...properties);
 }
 
 /**

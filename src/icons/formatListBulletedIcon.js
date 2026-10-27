@@ -15,7 +15,7 @@ const URL_FORMATLISTBULLETED = new URL('../../assets/icons/formatListBulleted.sv
  */
 export const initFormatListBulletedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATLISTBULLETED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatListBulletedIcon', url: URL_FORMATLISTBULLETED }, ...properties);
 }
 
 /**

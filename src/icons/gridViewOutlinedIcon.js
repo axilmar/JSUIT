@@ -15,7 +15,7 @@ const URL_GRIDVIEWOUTLINED = new URL('../../assets/icons/gridViewOutlined.svg', 
  */
 export const initGridViewOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRIDVIEWOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'gridViewOutlinedIcon', url: URL_GRIDVIEWOUTLINED }, ...properties);
 }
 
 /**

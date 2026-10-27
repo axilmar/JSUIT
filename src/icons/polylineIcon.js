@@ -15,7 +15,7 @@ const URL_POLYLINE = new URL('../../assets/icons/polyline.svg', import.meta.url)
  */
 export const initPolylineIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POLYLINE }, ...properties);
+    initIcon(element, { additionalClassName: 'polylineIcon', url: URL_POLYLINE }, ...properties);
 }
 
 /**

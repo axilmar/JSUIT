@@ -15,7 +15,7 @@ const URL_SPORTSHANDBALL = new URL('../../assets/icons/sportsHandball.svg', impo
  */
 export const initSportsHandballIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPORTSHANDBALL }, ...properties);
+    initIcon(element, { additionalClassName: 'sportsHandballIcon', url: URL_SPORTSHANDBALL }, ...properties);
 }
 
 /**

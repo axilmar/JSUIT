@@ -15,7 +15,7 @@ const URL_FILTERVINTAGEOUTLINED = new URL('../../assets/icons/filterVintageOutli
  */
 export const initFilterVintageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERVINTAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'filterVintageOutlinedIcon', url: URL_FILTERVINTAGEOUTLINED }, ...properties);
 }
 
 /**

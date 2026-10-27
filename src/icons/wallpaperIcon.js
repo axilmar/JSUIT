@@ -15,7 +15,7 @@ const URL_WALLPAPER = new URL('../../assets/icons/wallpaper.svg', import.meta.ur
  */
 export const initWallpaperIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WALLPAPER }, ...properties);
+    initIcon(element, { additionalClassName: 'wallpaperIcon', url: URL_WALLPAPER }, ...properties);
 }
 
 /**

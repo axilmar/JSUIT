@@ -15,7 +15,7 @@ const URL_SUBWAY = new URL('../../assets/icons/subway.svg', import.meta.url).hre
  */
 export const initSubwayIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUBWAY }, ...properties);
+    initIcon(element, { additionalClassName: 'subwayIcon', url: URL_SUBWAY }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DATAOBJECT = new URL('../../assets/icons/dataObject.svg', import.meta.
  */
 export const initDataObjectIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DATAOBJECT }, ...properties);
+    initIcon(element, { additionalClassName: 'dataObjectIcon', url: URL_DATAOBJECT }, ...properties);
 }
 
 /**

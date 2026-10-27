@@ -15,7 +15,7 @@ const URL_STAIRS = new URL('../../assets/icons/stairs.svg', import.meta.url).hre
  */
 export const initStairsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STAIRS }, ...properties);
+    initIcon(element, { additionalClassName: 'stairsIcon', url: URL_STAIRS }, ...properties);
 }
 
 /**

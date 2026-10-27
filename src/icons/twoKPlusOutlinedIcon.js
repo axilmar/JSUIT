@@ -15,7 +15,7 @@ const URL_TWOKPLUSOUTLINED = new URL('../../assets/icons/twoKPlusOutlined.svg', 
  */
 export const initTwoKPlusOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TWOKPLUSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'twoKPlusOutlinedIcon', url: URL_TWOKPLUSOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TWOMP = new URL('../../assets/icons/twoMp.svg', import.meta.url).href;
  */
 export const initTwoMpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TWOMP }, ...properties);
+    initIcon(element, { additionalClassName: 'twoMpIcon', url: URL_TWOMP }, ...properties);
 }
 
 /**

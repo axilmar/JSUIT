@@ -15,7 +15,7 @@ const URL_SHORTCUT = new URL('../../assets/icons/shortcut.svg', import.meta.url)
  */
 export const initShortcutIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHORTCUT }, ...properties);
+    initIcon(element, { additionalClassName: 'shortcutIcon', url: URL_SHORTCUT }, ...properties);
 }
 
 /**

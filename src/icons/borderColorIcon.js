@@ -15,7 +15,7 @@ const URL_BORDERCOLOR = new URL('../../assets/icons/borderColor.svg', import.met
  */
 export const initBorderColorIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BORDERCOLOR }, ...properties);
+    initIcon(element, { additionalClassName: 'borderColorIcon', url: URL_BORDERCOLOR }, ...properties);
 }
 
 /**

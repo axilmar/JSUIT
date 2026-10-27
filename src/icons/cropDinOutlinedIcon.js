@@ -15,7 +15,7 @@ const URL_CROPDINOUTLINED = new URL('../../assets/icons/cropDinOutlined.svg', im
  */
 export const initCropDinOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CROPDINOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cropDinOutlinedIcon', url: URL_CROPDINOUTLINED }, ...properties);
 }
 
 /**

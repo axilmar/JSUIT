@@ -15,7 +15,7 @@ const URL_WHATSHOT = new URL('../../assets/icons/whatshot.svg', import.meta.url)
  */
 export const initWhatshotIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WHATSHOT }, ...properties);
+    initIcon(element, { additionalClassName: 'whatshotIcon', url: URL_WHATSHOT }, ...properties);
 }
 
 /**

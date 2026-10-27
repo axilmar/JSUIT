@@ -15,7 +15,7 @@ const URL_SETTINGSOVERSCANOUTLINED = new URL('../../assets/icons/settingsOversca
  */
 export const initSettingsOverscanOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSOVERSCANOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsOverscanOutlinedIcon', url: URL_SETTINGSOVERSCANOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PERMMEDIAOUTLINED = new URL('../../assets/icons/permMediaOutlined.svg'
  */
 export const initPermMediaOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERMMEDIAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'permMediaOutlinedIcon', url: URL_PERMMEDIAOUTLINED }, ...properties);
 }
 
 /**

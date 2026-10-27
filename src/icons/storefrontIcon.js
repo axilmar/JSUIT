@@ -15,7 +15,7 @@ const URL_STOREFRONT = new URL('../../assets/icons/storefront.svg', import.meta.
  */
 export const initStorefrontIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STOREFRONT }, ...properties);
+    initIcon(element, { additionalClassName: 'storefrontIcon', url: URL_STOREFRONT }, ...properties);
 }
 
 /**

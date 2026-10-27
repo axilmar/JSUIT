@@ -15,7 +15,7 @@ const URL_SIGNALCELLULARNOSIMOUTLINED = new URL('../../assets/icons/signalCellul
  */
 export const initSignalCellularNoSimOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNALCELLULARNOSIMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'signalCellularNoSimOutlinedIcon', url: URL_SIGNALCELLULARNOSIMOUTLINED }, ...properties);
 }
 
 /**

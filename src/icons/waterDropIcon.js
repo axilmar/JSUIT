@@ -15,7 +15,7 @@ const URL_WATERDROP = new URL('../../assets/icons/waterDrop.svg', import.meta.ur
  */
 export const initWaterDropIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WATERDROP }, ...properties);
+    initIcon(element, { additionalClassName: 'waterDropIcon', url: URL_WATERDROP }, ...properties);
 }
 
 /**

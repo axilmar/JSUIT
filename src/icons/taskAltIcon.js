@@ -15,7 +15,7 @@ const URL_TASKALT = new URL('../../assets/icons/taskAlt.svg', import.meta.url).h
  */
 export const initTaskAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TASKALT }, ...properties);
+    initIcon(element, { additionalClassName: 'taskAltIcon', url: URL_TASKALT }, ...properties);
 }
 
 /**

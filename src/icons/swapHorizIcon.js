@@ -15,7 +15,7 @@ const URL_SWAPHORIZ = new URL('../../assets/icons/swapHoriz.svg', import.meta.ur
  */
 export const initSwapHorizIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWAPHORIZ }, ...properties);
+    initIcon(element, { additionalClassName: 'swapHorizIcon', url: URL_SWAPHORIZ }, ...properties);
 }
 
 /**

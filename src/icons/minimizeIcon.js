@@ -15,7 +15,7 @@ const URL_MINIMIZE = new URL('../../assets/icons/minimize.svg', import.meta.url)
  */
 export const initMinimizeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MINIMIZE }, ...properties);
+    initIcon(element, { additionalClassName: 'minimizeIcon', url: URL_MINIMIZE }, ...properties);
 }
 
 /**

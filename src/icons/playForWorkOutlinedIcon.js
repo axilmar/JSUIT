@@ -15,7 +15,7 @@ const URL_PLAYFORWORKOUTLINED = new URL('../../assets/icons/playForWorkOutlined.
  */
 export const initPlayForWorkOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYFORWORKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'playForWorkOutlinedIcon', url: URL_PLAYFORWORKOUTLINED }, ...properties);
 }
 
 /**

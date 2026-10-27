@@ -15,7 +15,7 @@ const URL_FASTFOODOUTLINED = new URL('../../assets/icons/fastfoodOutlined.svg', 
  */
 export const initFastfoodOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FASTFOODOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fastfoodOutlinedIcon', url: URL_FASTFOODOUTLINED }, ...properties);
 }
 
 /**

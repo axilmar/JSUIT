@@ -15,7 +15,7 @@ const URL_EMOBILEDATA = new URL('../../assets/icons/eMobiledata.svg', import.met
  */
 export const initEMobiledataIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EMOBILEDATA }, ...properties);
+    initIcon(element, { additionalClassName: 'eMobiledataIcon', url: URL_EMOBILEDATA }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_OTHERHOUSES = new URL('../../assets/icons/otherHouses.svg', import.met
  */
 export const initOtherHousesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OTHERHOUSES }, ...properties);
+    initIcon(element, { additionalClassName: 'otherHousesIcon', url: URL_OTHERHOUSES }, ...properties);
 }
 
 /**

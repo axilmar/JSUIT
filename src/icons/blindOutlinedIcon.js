@@ -15,7 +15,7 @@ const URL_BLINDOUTLINED = new URL('../../assets/icons/blindOutlined.svg', import
  */
 export const initBlindOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLINDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'blindOutlinedIcon', url: URL_BLINDOUTLINED }, ...properties);
 }
 
 /**

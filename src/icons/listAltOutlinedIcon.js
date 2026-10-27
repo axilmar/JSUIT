@@ -15,7 +15,7 @@ const URL_LISTALTOUTLINED = new URL('../../assets/icons/listAltOutlined.svg', im
  */
 export const initListAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LISTALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'listAltOutlinedIcon', url: URL_LISTALTOUTLINED }, ...properties);
 }
 
 /**

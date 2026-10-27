@@ -15,7 +15,7 @@ const URL_LOCALCAFE = new URL('../../assets/icons/localCafe.svg', import.meta.ur
  */
 export const initLocalCafeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALCAFE }, ...properties);
+    initIcon(element, { additionalClassName: 'localCafeIcon', url: URL_LOCALCAFE }, ...properties);
 }
 
 /**

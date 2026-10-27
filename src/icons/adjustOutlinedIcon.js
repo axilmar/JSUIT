@@ -15,7 +15,7 @@ const URL_ADJUSTOUTLINED = new URL('../../assets/icons/adjustOutlined.svg', impo
  */
 export const initAdjustOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADJUSTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'adjustOutlinedIcon', url: URL_ADJUSTOUTLINED }, ...properties);
 }
 
 /**

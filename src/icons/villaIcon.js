@@ -15,7 +15,7 @@ const URL_VILLA = new URL('../../assets/icons/villa.svg', import.meta.url).href;
  */
 export const initVillaIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VILLA }, ...properties);
+    initIcon(element, { additionalClassName: 'villaIcon', url: URL_VILLA }, ...properties);
 }
 
 /**

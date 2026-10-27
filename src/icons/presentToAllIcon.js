@@ -15,7 +15,7 @@ const URL_PRESENTTOALL = new URL('../../assets/icons/presentToAll.svg', import.m
  */
 export const initPresentToAllIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PRESENTTOALL }, ...properties);
+    initIcon(element, { additionalClassName: 'presentToAllIcon', url: URL_PRESENTTOALL }, ...properties);
 }
 
 /**

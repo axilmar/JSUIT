@@ -15,7 +15,7 @@ const URL_FILEOPEN = new URL('../../assets/icons/fileOpen.svg', import.meta.url)
  */
 export const initFileOpenIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILEOPEN }, ...properties);
+    initIcon(element, { additionalClassName: 'fileOpenIcon', url: URL_FILEOPEN }, ...properties);
 }
 
 /**

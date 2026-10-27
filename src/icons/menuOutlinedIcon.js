@@ -15,7 +15,7 @@ const URL_MENUOUTLINED = new URL('../../assets/icons/menuOutlined.svg', import.m
  */
 export const initMenuOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MENUOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'menuOutlinedIcon', url: URL_MENUOUTLINED }, ...properties);
 }
 
 /**

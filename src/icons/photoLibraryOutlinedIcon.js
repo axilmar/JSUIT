@@ -15,7 +15,7 @@ const URL_PHOTOLIBRARYOUTLINED = new URL('../../assets/icons/photoLibraryOutline
  */
 export const initPhotoLibraryOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHOTOLIBRARYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'photoLibraryOutlinedIcon', url: URL_PHOTOLIBRARYOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_BORDERLEFT = new URL('../../assets/icons/borderLeft.svg', import.meta.
  */
 export const initBorderLeftIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BORDERLEFT }, ...properties);
+    initIcon(element, { additionalClassName: 'borderLeftIcon', url: URL_BORDERLEFT }, ...properties);
 }
 
 /**

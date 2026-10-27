@@ -15,7 +15,7 @@ const URL_FULLSCREENEXITOUTLINED = new URL('../../assets/icons/fullscreenExitOut
  */
 export const initFullscreenExitOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FULLSCREENEXITOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fullscreenExitOutlinedIcon', url: URL_FULLSCREENEXITOUTLINED }, ...properties);
 }
 
 /**

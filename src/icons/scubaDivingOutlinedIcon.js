@@ -15,7 +15,7 @@ const URL_SCUBADIVINGOUTLINED = new URL('../../assets/icons/scubaDivingOutlined.
  */
 export const initScubaDivingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCUBADIVINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'scubaDivingOutlinedIcon', url: URL_SCUBADIVINGOUTLINED }, ...properties);
 }
 
 /**

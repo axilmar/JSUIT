@@ -15,7 +15,7 @@ const URL_GAMEPADOUTLINED = new URL('../../assets/icons/gamepadOutlined.svg', im
  */
 export const initGamepadOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GAMEPADOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'gamepadOutlinedIcon', url: URL_GAMEPADOUTLINED }, ...properties);
 }
 
 /**

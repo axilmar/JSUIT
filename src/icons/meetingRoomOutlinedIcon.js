@@ -15,7 +15,7 @@ const URL_MEETINGROOMOUTLINED = new URL('../../assets/icons/meetingRoomOutlined.
  */
 export const initMeetingRoomOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MEETINGROOMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'meetingRoomOutlinedIcon', url: URL_MEETINGROOMOUTLINED }, ...properties);
 }
 
 /**

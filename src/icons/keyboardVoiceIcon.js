@@ -15,7 +15,7 @@ const URL_KEYBOARDVOICE = new URL('../../assets/icons/keyboardVoice.svg', import
  */
 export const initKeyboardVoiceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDVOICE }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardVoiceIcon', url: URL_KEYBOARDVOICE }, ...properties);
 }
 
 /**

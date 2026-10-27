@@ -15,7 +15,7 @@ const URL_FILTER9PLUSOUTLINED = new URL('../../assets/icons/filter9PlusOutlined.
  */
 export const initFilter9PlusOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTER9PLUSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'filter9PlusOutlinedIcon', url: URL_FILTER9PLUSOUTLINED }, ...properties);
 }
 
 /**

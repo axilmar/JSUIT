@@ -15,7 +15,7 @@ const URL_MODEEDITOUTLINE = new URL('../../assets/icons/modeEditOutline.svg', im
  */
 export const initModeEditOutlineIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MODEEDITOUTLINE }, ...properties);
+    initIcon(element, { additionalClassName: 'modeEditOutlineIcon', url: URL_MODEEDITOUTLINE }, ...properties);
 }
 
 /**

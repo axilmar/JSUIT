@@ -15,7 +15,7 @@ const URL_FORMATSIZEOUTLINED = new URL('../../assets/icons/formatSizeOutlined.sv
  */
 export const initFormatSizeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATSIZEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatSizeOutlinedIcon', url: URL_FORMATSIZEOUTLINED }, ...properties);
 }
 
 /**

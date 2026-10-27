@@ -15,7 +15,7 @@ const URL_BEENHERE = new URL('../../assets/icons/beenhere.svg', import.meta.url)
  */
 export const initBeenhereIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BEENHERE }, ...properties);
+    initIcon(element, { additionalClassName: 'beenhereIcon', url: URL_BEENHERE }, ...properties);
 }
 
 /**

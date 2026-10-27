@@ -15,7 +15,7 @@ const URL_HIDEIMAGE = new URL('../../assets/icons/hideImage.svg', import.meta.ur
  */
 export const initHideImageIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HIDEIMAGE }, ...properties);
+    initIcon(element, { additionalClassName: 'hideImageIcon', url: URL_HIDEIMAGE }, ...properties);
 }
 
 /**

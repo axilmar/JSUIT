@@ -10,5 +10,5 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initSVGAnimationElement = (element, ...properties) => {
     console.assert(element instanceof SVGAnimationElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'SVGAnimationElement' }, ...properties);
 }

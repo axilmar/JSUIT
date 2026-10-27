@@ -15,7 +15,7 @@ const URL_LOGODEV = new URL('../../assets/icons/logoDev.svg', import.meta.url).h
  */
 export const initLogoDevIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOGODEV }, ...properties);
+    initIcon(element, { additionalClassName: 'logoDevIcon', url: URL_LOGODEV }, ...properties);
 }
 
 /**

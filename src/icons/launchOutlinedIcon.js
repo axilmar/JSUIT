@@ -15,7 +15,7 @@ const URL_LAUNCHOUTLINED = new URL('../../assets/icons/launchOutlined.svg', impo
  */
 export const initLaunchOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LAUNCHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'launchOutlinedIcon', url: URL_LAUNCHOUTLINED }, ...properties);
 }
 
 /**

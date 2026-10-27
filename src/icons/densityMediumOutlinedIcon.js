@@ -15,7 +15,7 @@ const URL_DENSITYMEDIUMOUTLINED = new URL('../../assets/icons/densityMediumOutli
  */
 export const initDensityMediumOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DENSITYMEDIUMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'densityMediumOutlinedIcon', url: URL_DENSITYMEDIUMOUTLINED }, ...properties);
 }
 
 /**

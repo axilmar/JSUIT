@@ -15,7 +15,7 @@ const URL_SMARTSCREENOUTLINED = new URL('../../assets/icons/smartScreenOutlined.
  */
 export const initSmartScreenOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SMARTSCREENOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'smartScreenOutlinedIcon', url: URL_SMARTSCREENOUTLINED }, ...properties);
 }
 
 /**

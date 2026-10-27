@@ -15,7 +15,7 @@ const URL_CHECKLIST = new URL('../../assets/icons/checklist.svg', import.meta.ur
  */
 export const initChecklistIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHECKLIST }, ...properties);
+    initIcon(element, { additionalClassName: 'checklistIcon', url: URL_CHECKLIST }, ...properties);
 }
 
 /**

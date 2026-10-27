@@ -15,7 +15,7 @@ const URL_VIDEOSTABLE = new URL('../../assets/icons/videoStable.svg', import.met
  */
 export const initVideoStableIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOSTABLE }, ...properties);
+    initIcon(element, { additionalClassName: 'videoStableIcon', url: URL_VIDEOSTABLE }, ...properties);
 }
 
 /**

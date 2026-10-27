@@ -15,7 +15,7 @@ const URL_GRIDOFFOUTLINED = new URL('../../assets/icons/gridOffOutlined.svg', im
  */
 export const initGridOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRIDOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'gridOffOutlinedIcon', url: URL_GRIDOFFOUTLINED }, ...properties);
 }
 
 /**

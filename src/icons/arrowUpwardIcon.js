@@ -15,7 +15,7 @@ const URL_ARROWUPWARD = new URL('../../assets/icons/arrowUpward.svg', import.met
  */
 export const initArrowUpwardIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARROWUPWARD }, ...properties);
+    initIcon(element, { additionalClassName: 'arrowUpwardIcon', url: URL_ARROWUPWARD }, ...properties);
 }
 
 /**

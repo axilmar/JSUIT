@@ -15,7 +15,7 @@ const URL_FAVORITEOUTLINED = new URL('../../assets/icons/favoriteOutlined.svg', 
  */
 export const initFavoriteOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FAVORITEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'favoriteOutlinedIcon', url: URL_FAVORITEOUTLINED }, ...properties);
 }
 
 /**

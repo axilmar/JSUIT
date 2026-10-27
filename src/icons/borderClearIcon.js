@@ -15,7 +15,7 @@ const URL_BORDERCLEAR = new URL('../../assets/icons/borderClear.svg', import.met
  */
 export const initBorderClearIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BORDERCLEAR }, ...properties);
+    initIcon(element, { additionalClassName: 'borderClearIcon', url: URL_BORDERCLEAR }, ...properties);
 }
 
 /**

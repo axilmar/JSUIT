@@ -15,7 +15,7 @@ const URL_FLIPCAMERAIOSOUTLINED = new URL('../../assets/icons/flipCameraIosOutli
  */
 export const initFlipCameraIosOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLIPCAMERAIOSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'flipCameraIosOutlinedIcon', url: URL_FLIPCAMERAIOSOUTLINED }, ...properties);
 }
 
 /**

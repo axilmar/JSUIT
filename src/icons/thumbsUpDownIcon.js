@@ -15,7 +15,7 @@ const URL_THUMBSUPDOWN = new URL('../../assets/icons/thumbsUpDown.svg', import.m
  */
 export const initThumbsUpDownIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THUMBSUPDOWN }, ...properties);
+    initIcon(element, { additionalClassName: 'thumbsUpDownIcon', url: URL_THUMBSUPDOWN }, ...properties);
 }
 
 /**

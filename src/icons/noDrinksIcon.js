@@ -15,7 +15,7 @@ const URL_NODRINKS = new URL('../../assets/icons/noDrinks.svg', import.meta.url)
  */
 export const initNoDrinksIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NODRINKS }, ...properties);
+    initIcon(element, { additionalClassName: 'noDrinksIcon', url: URL_NODRINKS }, ...properties);
 }
 
 /**

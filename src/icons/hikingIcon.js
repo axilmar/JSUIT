@@ -15,7 +15,7 @@ const URL_HIKING = new URL('../../assets/icons/hiking.svg', import.meta.url).hre
  */
 export const initHikingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HIKING }, ...properties);
+    initIcon(element, { additionalClassName: 'hikingIcon', url: URL_HIKING }, ...properties);
 }
 
 /**

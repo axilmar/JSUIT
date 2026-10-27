@@ -15,7 +15,7 @@ const URL_WBCLOUDYOUTLINED = new URL('../../assets/icons/wbCloudyOutlined.svg', 
  */
 export const initWbCloudyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WBCLOUDYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wbCloudyOutlinedIcon', url: URL_WBCLOUDYOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_MYLOCATIONOUTLINED = new URL('../../assets/icons/myLocationOutlined.sv
  */
 export const initMyLocationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MYLOCATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'myLocationOutlinedIcon', url: URL_MYLOCATIONOUTLINED }, ...properties);
 }
 
 /**

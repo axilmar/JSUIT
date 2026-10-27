@@ -15,7 +15,7 @@ const URL_TEXTFIELDSOUTLINED = new URL('../../assets/icons/textFieldsOutlined.sv
  */
 export const initTextFieldsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTFIELDSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'textFieldsOutlinedIcon', url: URL_TEXTFIELDSOUTLINED }, ...properties);
 }
 
 /**

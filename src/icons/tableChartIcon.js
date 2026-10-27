@@ -15,7 +15,7 @@ const URL_TABLECHART = new URL('../../assets/icons/tableChart.svg', import.meta.
  */
 export const initTableChartIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TABLECHART }, ...properties);
+    initIcon(element, { additionalClassName: 'tableChartIcon', url: URL_TABLECHART }, ...properties);
 }
 
 /**

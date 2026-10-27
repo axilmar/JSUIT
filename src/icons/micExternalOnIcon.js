@@ -15,7 +15,7 @@ const URL_MICEXTERNALON = new URL('../../assets/icons/micExternalOn.svg', import
  */
 export const initMicExternalOnIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MICEXTERNALON }, ...properties);
+    initIcon(element, { additionalClassName: 'micExternalOnIcon', url: URL_MICEXTERNALON }, ...properties);
 }
 
 /**

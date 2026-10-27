@@ -15,7 +15,7 @@ const URL_LOCALACTIVITY = new URL('../../assets/icons/localActivity.svg', import
  */
 export const initLocalActivityIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALACTIVITY }, ...properties);
+    initIcon(element, { additionalClassName: 'localActivityIcon', url: URL_LOCALACTIVITY }, ...properties);
 }
 
 /**

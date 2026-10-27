@@ -15,7 +15,7 @@ const URL_DIRECTIONSBOAT = new URL('../../assets/icons/directionsBoat.svg', impo
  */
 export const initDirectionsBoatIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRECTIONSBOAT }, ...properties);
+    initIcon(element, { additionalClassName: 'directionsBoatIcon', url: URL_DIRECTIONSBOAT }, ...properties);
 }
 
 /**

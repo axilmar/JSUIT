@@ -15,7 +15,7 @@ const URL_PICTUREASPDFOUTLINED = new URL('../../assets/icons/pictureAsPdfOutline
  */
 export const initPictureAsPdfOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PICTUREASPDFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pictureAsPdfOutlinedIcon', url: URL_PICTUREASPDFOUTLINED }, ...properties);
 }
 
 /**

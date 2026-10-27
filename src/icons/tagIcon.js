@@ -15,7 +15,7 @@ const URL_TAG = new URL('../../assets/icons/tag.svg', import.meta.url).href;
  */
 export const initTagIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TAG }, ...properties);
+    initIcon(element, { additionalClassName: 'tagIcon', url: URL_TAG }, ...properties);
 }
 
 /**

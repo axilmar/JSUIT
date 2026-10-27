@@ -15,7 +15,7 @@ const URL_STACKEDLINECHARTOUTLINED = new URL('../../assets/icons/stackedLineChar
  */
 export const initStackedLineChartOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STACKEDLINECHARTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'stackedLineChartOutlinedIcon', url: URL_STACKEDLINECHARTOUTLINED }, ...properties);
 }
 
 /**

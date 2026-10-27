@@ -15,7 +15,7 @@ const URL_HDRAUTOSELECT = new URL('../../assets/icons/hdrAutoSelect.svg', import
  */
 export const initHdrAutoSelectIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HDRAUTOSELECT }, ...properties);
+    initIcon(element, { additionalClassName: 'hdrAutoSelectIcon', url: URL_HDRAUTOSELECT }, ...properties);
 }
 
 /**

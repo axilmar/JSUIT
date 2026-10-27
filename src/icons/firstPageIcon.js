@@ -15,7 +15,7 @@ const URL_FIRSTPAGE = new URL('../../assets/icons/firstPage.svg', import.meta.ur
  */
 export const initFirstPageIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIRSTPAGE }, ...properties);
+    initIcon(element, { additionalClassName: 'firstPageIcon', url: URL_FIRSTPAGE }, ...properties);
 }
 
 /**

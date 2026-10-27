@@ -15,7 +15,7 @@ const URL_SPOKEOUTLINED = new URL('../../assets/icons/spokeOutlined.svg', import
  */
 export const initSpokeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPOKEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'spokeOutlinedIcon', url: URL_SPOKEOUTLINED }, ...properties);
 }
 
 /**

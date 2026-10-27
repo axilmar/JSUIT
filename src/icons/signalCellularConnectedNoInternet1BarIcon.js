@@ -15,7 +15,7 @@ const URL_SIGNALCELLULARCONNECTEDNOINTERNET1BAR = new URL('../../assets/icons/si
  */
 export const initSignalCellularConnectedNoInternet1BarIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNALCELLULARCONNECTEDNOINTERNET1BAR }, ...properties);
+    initIcon(element, { additionalClassName: 'signalCellularConnectedNoInternet1BarIcon', url: URL_SIGNALCELLULARCONNECTEDNOINTERNET1BAR }, ...properties);
 }
 
 /**

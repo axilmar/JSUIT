@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initForm = (element, ...properties) => {
     console.assert(element instanceof HTMLFormElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'form' }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_COPYRIGHTOUTLINED = new URL('../../assets/icons/copyrightOutlined.svg'
  */
 export const initCopyrightOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COPYRIGHTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'copyrightOutlinedIcon', url: URL_COPYRIGHTOUTLINED }, ...properties);
 }
 
 /**

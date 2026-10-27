@@ -15,7 +15,7 @@ const URL_SCHEDULESENDOUTLINED = new URL('../../assets/icons/scheduleSendOutline
  */
 export const initScheduleSendOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCHEDULESENDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'scheduleSendOutlinedIcon', url: URL_SCHEDULESENDOUTLINED }, ...properties);
 }
 
 /**

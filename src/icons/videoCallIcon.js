@@ -15,7 +15,7 @@ const URL_VIDEOCALL = new URL('../../assets/icons/videoCall.svg', import.meta.ur
  */
 export const initVideoCallIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOCALL }, ...properties);
+    initIcon(element, { additionalClassName: 'videoCallIcon', url: URL_VIDEOCALL }, ...properties);
 }
 
 /**

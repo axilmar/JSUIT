@@ -15,7 +15,7 @@ const URL_MODELTRAINING = new URL('../../assets/icons/modelTraining.svg', import
  */
 export const initModelTrainingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MODELTRAINING }, ...properties);
+    initIcon(element, { additionalClassName: 'modelTrainingIcon', url: URL_MODELTRAINING }, ...properties);
 }
 
 /**

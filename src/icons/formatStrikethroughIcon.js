@@ -15,7 +15,7 @@ const URL_FORMATSTRIKETHROUGH = new URL('../../assets/icons/formatStrikethrough.
  */
 export const initFormatStrikethroughIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATSTRIKETHROUGH }, ...properties);
+    initIcon(element, { additionalClassName: 'formatStrikethroughIcon', url: URL_FORMATSTRIKETHROUGH }, ...properties);
 }
 
 /**

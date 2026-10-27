@@ -15,7 +15,7 @@ const URL_PENDINGOUTLINED = new URL('../../assets/icons/pendingOutlined.svg', im
  */
 export const initPendingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PENDINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pendingOutlinedIcon', url: URL_PENDINGOUTLINED }, ...properties);
 }
 
 /**

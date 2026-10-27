@@ -15,7 +15,7 @@ const URL_PHOTOFILTEROUTLINED = new URL('../../assets/icons/photoFilterOutlined.
  */
 export const initPhotoFilterOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHOTOFILTEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'photoFilterOutlinedIcon', url: URL_PHOTOFILTEROUTLINED }, ...properties);
 }
 
 /**

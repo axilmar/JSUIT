@@ -15,7 +15,7 @@ const URL_VOLUNTEERACTIVISMOUTLINED = new URL('../../assets/icons/volunteerActiv
  */
 export const initVolunteerActivismOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VOLUNTEERACTIVISMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'volunteerActivismOutlinedIcon', url: URL_VOLUNTEERACTIVISMOUTLINED }, ...properties);
 }
 
 /**

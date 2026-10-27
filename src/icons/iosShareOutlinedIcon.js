@@ -15,7 +15,7 @@ const URL_IOSSHAREOUTLINED = new URL('../../assets/icons/iosShareOutlined.svg', 
  */
 export const initIosShareOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_IOSSHAREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'iosShareOutlinedIcon', url: URL_IOSSHAREOUTLINED }, ...properties);
 }
 
 /**

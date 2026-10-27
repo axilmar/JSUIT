@@ -15,7 +15,7 @@ const URL_WATCH = new URL('../../assets/icons/watch.svg', import.meta.url).href;
  */
 export const initWatchIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WATCH }, ...properties);
+    initIcon(element, { additionalClassName: 'watchIcon', url: URL_WATCH }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PAID = new URL('../../assets/icons/paid.svg', import.meta.url).href;
  */
 export const initPaidIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PAID }, ...properties);
+    initIcon(element, { additionalClassName: 'paidIcon', url: URL_PAID }, ...properties);
 }
 
 /**

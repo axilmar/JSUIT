@@ -15,7 +15,7 @@ const URL_SPELLCHECKOUTLINED = new URL('../../assets/icons/spellcheckOutlined.sv
  */
 export const initSpellcheckOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPELLCHECKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'spellcheckOutlinedIcon', url: URL_SPELLCHECKOUTLINED }, ...properties);
 }
 
 /**

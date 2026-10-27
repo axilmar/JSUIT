@@ -15,7 +15,7 @@ const URL_ADDALARMOUTLINED = new URL('../../assets/icons/addAlarmOutlined.svg', 
  */
 export const initAddAlarmOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDALARMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'addAlarmOutlinedIcon', url: URL_ADDALARMOUTLINED }, ...properties);
 }
 
 /**

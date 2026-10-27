@@ -15,7 +15,7 @@ const URL_PHPOUTLINED = new URL('../../assets/icons/phpOutlined.svg', import.met
  */
 export const initPhpOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'phpOutlinedIcon', url: URL_PHPOUTLINED }, ...properties);
 }
 
 /**

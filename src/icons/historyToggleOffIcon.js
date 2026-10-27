@@ -15,7 +15,7 @@ const URL_HISTORYTOGGLEOFF = new URL('../../assets/icons/historyToggleOff.svg', 
  */
 export const initHistoryToggleOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HISTORYTOGGLEOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'historyToggleOffIcon', url: URL_HISTORYTOGGLEOFF }, ...properties);
 }
 
 /**

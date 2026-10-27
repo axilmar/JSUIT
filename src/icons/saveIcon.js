@@ -15,7 +15,7 @@ const URL_SAVE = new URL('../../assets/icons/save.svg', import.meta.url).href;
  */
 export const initSaveIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SAVE }, ...properties);
+    initIcon(element, { additionalClassName: 'saveIcon', url: URL_SAVE }, ...properties);
 }
 
 /**

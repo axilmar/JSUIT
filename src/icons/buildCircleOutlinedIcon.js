@@ -15,7 +15,7 @@ const URL_BUILDCIRCLEOUTLINED = new URL('../../assets/icons/buildCircleOutlined.
  */
 export const initBuildCircleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BUILDCIRCLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'buildCircleOutlinedIcon', url: URL_BUILDCIRCLEOUTLINED }, ...properties);
 }
 
 /**

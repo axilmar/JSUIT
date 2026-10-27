@@ -15,7 +15,7 @@ const URL_QRCODE2 = new URL('../../assets/icons/qrCode2.svg', import.meta.url).h
  */
 export const initQrCode2Icon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QRCODE2 }, ...properties);
+    initIcon(element, { additionalClassName: 'qrCode2Icon', url: URL_QRCODE2 }, ...properties);
 }
 
 /**

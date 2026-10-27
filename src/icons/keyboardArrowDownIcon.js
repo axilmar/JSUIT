@@ -15,7 +15,7 @@ const URL_KEYBOARDARROWDOWN = new URL('../../assets/icons/keyboardArrowDown.svg'
  */
 export const initKeyboardArrowDownIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDARROWDOWN }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardArrowDownIcon', url: URL_KEYBOARDARROWDOWN }, ...properties);
 }
 
 /**

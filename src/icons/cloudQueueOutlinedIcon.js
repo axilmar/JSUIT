@@ -15,7 +15,7 @@ const URL_CLOUDQUEUEOUTLINED = new URL('../../assets/icons/cloudQueueOutlined.sv
  */
 export const initCloudQueueOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOUDQUEUEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cloudQueueOutlinedIcon', url: URL_CLOUDQUEUEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_WIDTHNORMAL = new URL('../../assets/icons/widthNormal.svg', import.met
  */
 export const initWidthNormalIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIDTHNORMAL }, ...properties);
+    initIcon(element, { additionalClassName: 'widthNormalIcon', url: URL_WIDTHNORMAL }, ...properties);
 }
 
 /**

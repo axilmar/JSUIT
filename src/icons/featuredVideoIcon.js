@@ -15,7 +15,7 @@ const URL_FEATUREDVIDEO = new URL('../../assets/icons/featuredVideo.svg', import
  */
 export const initFeaturedVideoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FEATUREDVIDEO }, ...properties);
+    initIcon(element, { additionalClassName: 'featuredVideoIcon', url: URL_FEATUREDVIDEO }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FINDREPLACE = new URL('../../assets/icons/findReplace.svg', import.met
  */
 export const initFindReplaceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FINDREPLACE }, ...properties);
+    initIcon(element, { additionalClassName: 'findReplaceIcon', url: URL_FINDREPLACE }, ...properties);
 }
 
 /**

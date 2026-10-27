@@ -15,7 +15,7 @@ const URL_MONEYOFFOUTLINED = new URL('../../assets/icons/moneyOffOutlined.svg', 
  */
 export const initMoneyOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MONEYOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'moneyOffOutlinedIcon', url: URL_MONEYOFFOUTLINED }, ...properties);
 }
 
 /**

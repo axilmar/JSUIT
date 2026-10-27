@@ -15,7 +15,7 @@ const URL_ONLINEPREDICTION = new URL('../../assets/icons/onlinePrediction.svg', 
  */
 export const initOnlinePredictionIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ONLINEPREDICTION }, ...properties);
+    initIcon(element, { additionalClassName: 'onlinePredictionIcon', url: URL_ONLINEPREDICTION }, ...properties);
 }
 
 /**

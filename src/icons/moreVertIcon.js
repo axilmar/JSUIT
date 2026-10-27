@@ -15,7 +15,7 @@ const URL_MOREVERT = new URL('../../assets/icons/moreVert.svg', import.meta.url)
  */
 export const initMoreVertIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOREVERT }, ...properties);
+    initIcon(element, { additionalClassName: 'moreVertIcon', url: URL_MOREVERT }, ...properties);
 }
 
 /**

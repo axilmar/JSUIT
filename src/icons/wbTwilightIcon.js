@@ -15,7 +15,7 @@ const URL_WBTWILIGHT = new URL('../../assets/icons/wbTwilight.svg', import.meta.
  */
 export const initWbTwilightIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WBTWILIGHT }, ...properties);
+    initIcon(element, { additionalClassName: 'wbTwilightIcon', url: URL_WBTWILIGHT }, ...properties);
 }
 
 /**

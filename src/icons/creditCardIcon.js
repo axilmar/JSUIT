@@ -15,7 +15,7 @@ const URL_CREDITCARD = new URL('../../assets/icons/creditCard.svg', import.meta.
  */
 export const initCreditCardIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CREDITCARD }, ...properties);
+    initIcon(element, { additionalClassName: 'creditCardIcon', url: URL_CREDITCARD }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TRANSFORM = new URL('../../assets/icons/transform.svg', import.meta.ur
  */
 export const initTransformIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRANSFORM }, ...properties);
+    initIcon(element, { additionalClassName: 'transformIcon', url: URL_TRANSFORM }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SWIPEDOWN = new URL('../../assets/icons/swipeDown.svg', import.meta.ur
  */
 export const initSwipeDownIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWIPEDOWN }, ...properties);
+    initIcon(element, { additionalClassName: 'swipeDownIcon', url: URL_SWIPEDOWN }, ...properties);
 }
 
 /**

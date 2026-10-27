@@ -15,7 +15,7 @@ const URL_ARROWCIRCLELEFTOUTLINED = new URL('../../assets/icons/arrowCircleLeftO
  */
 export const initArrowCircleLeftOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARROWCIRCLELEFTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'arrowCircleLeftOutlinedIcon', url: URL_ARROWCIRCLELEFTOUTLINED }, ...properties);
 }
 
 /**

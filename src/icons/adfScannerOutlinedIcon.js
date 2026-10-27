@@ -15,7 +15,7 @@ const URL_ADFSCANNEROUTLINED = new URL('../../assets/icons/adfScannerOutlined.sv
  */
 export const initAdfScannerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADFSCANNEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'adfScannerOutlinedIcon', url: URL_ADFSCANNEROUTLINED }, ...properties);
 }
 
 /**

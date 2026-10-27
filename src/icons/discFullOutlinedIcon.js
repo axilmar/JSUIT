@@ -15,7 +15,7 @@ const URL_DISCFULLOUTLINED = new URL('../../assets/icons/discFullOutlined.svg', 
  */
 export const initDiscFullOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DISCFULLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'discFullOutlinedIcon', url: URL_DISCFULLOUTLINED }, ...properties);
 }
 
 /**

@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initTime = (element, ...properties) => {
     console.assert(element instanceof HTMLTimeElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'time' }, ...properties);
 }
 
 /**

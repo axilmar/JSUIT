@@ -15,7 +15,7 @@ const URL_CRIBOUTLINED = new URL('../../assets/icons/cribOutlined.svg', import.m
  */
 export const initCribOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CRIBOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cribOutlinedIcon', url: URL_CRIBOUTLINED }, ...properties);
 }
 
 /**

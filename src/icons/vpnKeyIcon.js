@@ -15,7 +15,7 @@ const URL_VPNKEY = new URL('../../assets/icons/vpnKey.svg', import.meta.url).hre
  */
 export const initVpnKeyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VPNKEY }, ...properties);
+    initIcon(element, { additionalClassName: 'vpnKeyIcon', url: URL_VPNKEY }, ...properties);
 }
 
 /**

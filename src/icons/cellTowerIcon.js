@@ -15,7 +15,7 @@ const URL_CELLTOWER = new URL('../../assets/icons/cellTower.svg', import.meta.ur
  */
 export const initCellTowerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CELLTOWER }, ...properties);
+    initIcon(element, { additionalClassName: 'cellTowerIcon', url: URL_CELLTOWER }, ...properties);
 }
 
 /**

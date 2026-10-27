@@ -15,7 +15,7 @@ const URL_HOTTUB = new URL('../../assets/icons/hotTub.svg', import.meta.url).hre
  */
 export const initHotTubIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOTTUB }, ...properties);
+    initIcon(element, { additionalClassName: 'hotTubIcon', url: URL_HOTTUB }, ...properties);
 }
 
 /**

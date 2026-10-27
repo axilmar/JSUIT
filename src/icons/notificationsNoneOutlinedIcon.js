@@ -15,7 +15,7 @@ const URL_NOTIFICATIONSNONEOUTLINED = new URL('../../assets/icons/notificationsN
  */
 export const initNotificationsNoneOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTIFICATIONSNONEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'notificationsNoneOutlinedIcon', url: URL_NOTIFICATIONSNONEOUTLINED }, ...properties);
 }
 
 /**

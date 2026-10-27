@@ -16,7 +16,7 @@ const STAR_URL = new URL('../../assets/icons/star.svg', import.meta.url).href;
  */
 export const initStarIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: STAR_URL }, ...properties);
+    initIcon(element, { additionalClassName: 'starIcon', url: STAR_URL }, ...properties);
 }
 
 /**

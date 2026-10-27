@@ -15,7 +15,7 @@ const URL_SIGNALWIFI1BARLOCKOUTLINED = new URL('../../assets/icons/signalWifi1Ba
  */
 export const initSignalWifi1BarLockOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNALWIFI1BARLOCKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'signalWifi1BarLockOutlinedIcon', url: URL_SIGNALWIFI1BARLOCKOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ARROWDOWNWARD = new URL('../../assets/icons/arrowDownward.svg', import
  */
 export const initArrowDownwardIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARROWDOWNWARD }, ...properties);
+    initIcon(element, { additionalClassName: 'arrowDownwardIcon', url: URL_ARROWDOWNWARD }, ...properties);
 }
 
 /**

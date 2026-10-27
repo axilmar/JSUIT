@@ -15,7 +15,7 @@ const URL_PHONEMISSEDOUTLINED = new URL('../../assets/icons/phoneMissedOutlined.
  */
 export const initPhoneMissedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONEMISSEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'phoneMissedOutlinedIcon', url: URL_PHONEMISSEDOUTLINED }, ...properties);
 }
 
 /**

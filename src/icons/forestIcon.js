@@ -15,7 +15,7 @@ const URL_FOREST = new URL('../../assets/icons/forest.svg', import.meta.url).hre
  */
 export const initForestIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOREST }, ...properties);
+    initIcon(element, { additionalClassName: 'forestIcon', url: URL_FOREST }, ...properties);
 }
 
 /**

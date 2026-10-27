@@ -15,7 +15,7 @@ const URL_WIFIPROTECTEDSETUPOUTLINED = new URL('../../assets/icons/wifiProtected
  */
 export const initWifiProtectedSetupOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIFIPROTECTEDSETUPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wifiProtectedSetupOutlinedIcon', url: URL_WIFIPROTECTEDSETUPOUTLINED }, ...properties);
 }
 
 /**

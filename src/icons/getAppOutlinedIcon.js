@@ -15,7 +15,7 @@ const URL_GETAPPOUTLINED = new URL('../../assets/icons/getAppOutlined.svg', impo
  */
 export const initGetAppOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GETAPPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'getAppOutlinedIcon', url: URL_GETAPPOUTLINED }, ...properties);
 }
 
 /**

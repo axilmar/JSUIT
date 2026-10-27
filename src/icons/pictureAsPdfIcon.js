@@ -15,7 +15,7 @@ const URL_PICTUREASPDF = new URL('../../assets/icons/pictureAsPdf.svg', import.m
  */
 export const initPictureAsPdfIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PICTUREASPDF }, ...properties);
+    initIcon(element, { additionalClassName: 'pictureAsPdfIcon', url: URL_PICTUREASPDF }, ...properties);
 }
 
 /**

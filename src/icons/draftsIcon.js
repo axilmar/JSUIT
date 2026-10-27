@@ -15,7 +15,7 @@ const URL_DRAFTS = new URL('../../assets/icons/drafts.svg', import.meta.url).hre
  */
 export const initDraftsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRAFTS }, ...properties);
+    initIcon(element, { additionalClassName: 'draftsIcon', url: URL_DRAFTS }, ...properties);
 }
 
 /**

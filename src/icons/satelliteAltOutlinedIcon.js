@@ -15,7 +15,7 @@ const URL_SATELLITEALTOUTLINED = new URL('../../assets/icons/satelliteAltOutline
  */
 export const initSatelliteAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SATELLITEALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'satelliteAltOutlinedIcon', url: URL_SATELLITEALTOUTLINED }, ...properties);
 }
 
 /**

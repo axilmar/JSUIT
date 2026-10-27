@@ -15,7 +15,7 @@ const URL_DESKOUTLINED = new URL('../../assets/icons/deskOutlined.svg', import.m
  */
 export const initDeskOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DESKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'deskOutlinedIcon', url: URL_DESKOUTLINED }, ...properties);
 }
 
 /**

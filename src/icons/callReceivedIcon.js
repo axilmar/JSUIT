@@ -15,7 +15,7 @@ const URL_CALLRECEIVED = new URL('../../assets/icons/callReceived.svg', import.m
  */
 export const initCallReceivedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALLRECEIVED }, ...properties);
+    initIcon(element, { additionalClassName: 'callReceivedIcon', url: URL_CALLRECEIVED }, ...properties);
 }
 
 /**

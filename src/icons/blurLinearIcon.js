@@ -15,7 +15,7 @@ const URL_BLURLINEAR = new URL('../../assets/icons/blurLinear.svg', import.meta.
  */
 export const initBlurLinearIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLURLINEAR }, ...properties);
+    initIcon(element, { additionalClassName: 'blurLinearIcon', url: URL_BLURLINEAR }, ...properties);
 }
 
 /**

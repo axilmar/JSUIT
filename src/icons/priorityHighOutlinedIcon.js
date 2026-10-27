@@ -15,7 +15,7 @@ const URL_PRIORITYHIGHOUTLINED = new URL('../../assets/icons/priorityHighOutline
  */
 export const initPriorityHighOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PRIORITYHIGHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'priorityHighOutlinedIcon', url: URL_PRIORITYHIGHOUTLINED }, ...properties);
 }
 
 /**

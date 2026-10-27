@@ -15,7 +15,7 @@ const URL_CIRCLENOTIFICATIONSOUTLINED = new URL('../../assets/icons/circleNotifi
  */
 export const initCircleNotificationsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CIRCLENOTIFICATIONSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'circleNotificationsOutlinedIcon', url: URL_CIRCLENOTIFICATIONSOUTLINED }, ...properties);
 }
 
 /**

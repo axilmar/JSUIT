@@ -15,7 +15,7 @@ const URL_LOGOUTOUTLINED = new URL('../../assets/icons/logoutOutlined.svg', impo
  */
 export const initLogoutOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOGOUTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'logoutOutlinedIcon', url: URL_LOGOUTOUTLINED }, ...properties);
 }
 
 /**

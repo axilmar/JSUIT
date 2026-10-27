@@ -15,7 +15,7 @@ const URL_QUESTIONMARKOUTLINED = new URL('../../assets/icons/questionMarkOutline
  */
 export const initQuestionMarkOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUESTIONMARKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'questionMarkOutlinedIcon', url: URL_QUESTIONMARKOUTLINED }, ...properties);
 }
 
 /**

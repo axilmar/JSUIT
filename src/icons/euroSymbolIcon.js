@@ -15,7 +15,7 @@ const URL_EUROSYMBOL = new URL('../../assets/icons/euroSymbol.svg', import.meta.
  */
 export const initEuroSymbolIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EUROSYMBOL }, ...properties);
+    initIcon(element, { additionalClassName: 'euroSymbolIcon', url: URL_EUROSYMBOL }, ...properties);
 }
 
 /**

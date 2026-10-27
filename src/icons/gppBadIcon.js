@@ -15,7 +15,7 @@ const URL_GPPBAD = new URL('../../assets/icons/gppBad.svg', import.meta.url).hre
  */
 export const initGppBadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GPPBAD }, ...properties);
+    initIcon(element, { additionalClassName: 'gppBadIcon', url: URL_GPPBAD }, ...properties);
 }
 
 /**

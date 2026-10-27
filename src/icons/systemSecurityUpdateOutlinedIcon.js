@@ -15,7 +15,7 @@ const URL_SYSTEMSECURITYUPDATEOUTLINED = new URL('../../assets/icons/systemSecur
  */
 export const initSystemSecurityUpdateOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SYSTEMSECURITYUPDATEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'systemSecurityUpdateOutlinedIcon', url: URL_SYSTEMSECURITYUPDATEOUTLINED }, ...properties);
 }
 
 /**

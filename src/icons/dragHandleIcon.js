@@ -15,7 +15,7 @@ const URL_DRAGHANDLE = new URL('../../assets/icons/dragHandle.svg', import.meta.
  */
 export const initDragHandleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRAGHANDLE }, ...properties);
+    initIcon(element, { additionalClassName: 'dragHandleIcon', url: URL_DRAGHANDLE }, ...properties);
 }
 
 /**

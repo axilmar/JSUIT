@@ -15,7 +15,7 @@ const URL_PERSONALVIDEO = new URL('../../assets/icons/personalVideo.svg', import
  */
 export const initPersonalVideoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERSONALVIDEO }, ...properties);
+    initIcon(element, { additionalClassName: 'personalVideoIcon', url: URL_PERSONALVIDEO }, ...properties);
 }
 
 /**

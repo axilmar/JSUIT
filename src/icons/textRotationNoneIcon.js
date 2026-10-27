@@ -15,7 +15,7 @@ const URL_TEXTROTATIONNONE = new URL('../../assets/icons/textRotationNone.svg', 
  */
 export const initTextRotationNoneIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTROTATIONNONE }, ...properties);
+    initIcon(element, { additionalClassName: 'textRotationNoneIcon', url: URL_TEXTROTATIONNONE }, ...properties);
 }
 
 /**

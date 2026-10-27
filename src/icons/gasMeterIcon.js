@@ -15,7 +15,7 @@ const URL_GASMETER = new URL('../../assets/icons/gasMeter.svg', import.meta.url)
  */
 export const initGasMeterIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GASMETER }, ...properties);
+    initIcon(element, { additionalClassName: 'gasMeterIcon', url: URL_GASMETER }, ...properties);
 }
 
 /**

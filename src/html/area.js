@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initArea = (element, ...properties) => {
     console.assert(element instanceof HTMLAreaElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'area' }, ...properties);
 }
 
 /**

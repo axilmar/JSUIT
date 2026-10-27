@@ -15,7 +15,7 @@ const URL_SPEAKERNOTESOUTLINED = new URL('../../assets/icons/speakerNotesOutline
  */
 export const initSpeakerNotesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPEAKERNOTESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'speakerNotesOutlinedIcon', url: URL_SPEAKERNOTESOUTLINED }, ...properties);
 }
 
 /**

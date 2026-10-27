@@ -15,7 +15,7 @@ const URL_WCOUTLINED = new URL('../../assets/icons/wcOutlined.svg', import.meta.
  */
 export const initWcOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WCOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wcOutlinedIcon', url: URL_WCOUTLINED }, ...properties);
 }
 
 /**

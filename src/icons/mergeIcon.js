@@ -15,7 +15,7 @@ const URL_MERGE = new URL('../../assets/icons/merge.svg', import.meta.url).href;
  */
 export const initMergeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MERGE }, ...properties);
+    initIcon(element, { additionalClassName: 'mergeIcon', url: URL_MERGE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FILTERFRAMES = new URL('../../assets/icons/filterFrames.svg', import.m
  */
 export const initFilterFramesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERFRAMES }, ...properties);
+    initIcon(element, { additionalClassName: 'filterFramesIcon', url: URL_FILTERFRAMES }, ...properties);
 }
 
 /**

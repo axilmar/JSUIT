@@ -15,7 +15,7 @@ const URL_FESTIVAL = new URL('../../assets/icons/festival.svg', import.meta.url)
  */
 export const initFestivalIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FESTIVAL }, ...properties);
+    initIcon(element, { additionalClassName: 'festivalIcon', url: URL_FESTIVAL }, ...properties);
 }
 
 /**

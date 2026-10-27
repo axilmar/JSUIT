@@ -15,7 +15,7 @@ const URL_SYNCLOCKOUTLINED = new URL('../../assets/icons/syncLockOutlined.svg', 
  */
 export const initSyncLockOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SYNCLOCKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'syncLockOutlinedIcon', url: URL_SYNCLOCKOUTLINED }, ...properties);
 }
 
 /**

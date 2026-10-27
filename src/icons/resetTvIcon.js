@@ -15,7 +15,7 @@ const URL_RESETTV = new URL('../../assets/icons/resetTv.svg', import.meta.url).h
  */
 export const initResetTvIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RESETTV }, ...properties);
+    initIcon(element, { additionalClassName: 'resetTvIcon', url: URL_RESETTV }, ...properties);
 }
 
 /**

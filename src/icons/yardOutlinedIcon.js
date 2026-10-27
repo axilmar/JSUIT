@@ -15,7 +15,7 @@ const URL_YARDOUTLINED = new URL('../../assets/icons/yardOutlined.svg', import.m
  */
 export const initYardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_YARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'yardOutlinedIcon', url: URL_YARDOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_MODECOMMENTOUTLINED = new URL('../../assets/icons/modeCommentOutlined.
  */
 export const initModeCommentOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MODECOMMENTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'modeCommentOutlinedIcon', url: URL_MODECOMMENTOUTLINED }, ...properties);
 }
 
 /**

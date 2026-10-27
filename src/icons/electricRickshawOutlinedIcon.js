@@ -15,7 +15,7 @@ const URL_ELECTRICRICKSHAWOUTLINED = new URL('../../assets/icons/electricRicksha
  */
 export const initElectricRickshawOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ELECTRICRICKSHAWOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'electricRickshawOutlinedIcon', url: URL_ELECTRICRICKSHAWOUTLINED }, ...properties);
 }
 
 /**

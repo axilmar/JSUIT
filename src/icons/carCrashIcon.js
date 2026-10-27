@@ -15,7 +15,7 @@ const URL_CARCRASH = new URL('../../assets/icons/carCrash.svg', import.meta.url)
  */
 export const initCarCrashIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CARCRASH }, ...properties);
+    initIcon(element, { additionalClassName: 'carCrashIcon', url: URL_CARCRASH }, ...properties);
 }
 
 /**

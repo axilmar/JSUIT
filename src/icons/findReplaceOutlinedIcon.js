@@ -15,7 +15,7 @@ const URL_FINDREPLACEOUTLINED = new URL('../../assets/icons/findReplaceOutlined.
  */
 export const initFindReplaceOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FINDREPLACEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'findReplaceOutlinedIcon', url: URL_FINDREPLACEOUTLINED }, ...properties);
 }
 
 /**

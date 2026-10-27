@@ -15,7 +15,7 @@ const URL_VOLUMEOFF = new URL('../../assets/icons/volumeOff.svg', import.meta.ur
  */
 export const initVolumeOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VOLUMEOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'volumeOffIcon', url: URL_VOLUMEOFF }, ...properties);
 }
 
 /**

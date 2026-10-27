@@ -15,7 +15,7 @@ const URL_VPNLOCK = new URL('../../assets/icons/vpnLock.svg', import.meta.url).h
  */
 export const initVpnLockIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VPNLOCK }, ...properties);
+    initIcon(element, { additionalClassName: 'vpnLockIcon', url: URL_VPNLOCK }, ...properties);
 }
 
 /**

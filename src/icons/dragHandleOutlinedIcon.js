@@ -15,7 +15,7 @@ const URL_DRAGHANDLEOUTLINED = new URL('../../assets/icons/dragHandleOutlined.sv
  */
 export const initDragHandleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRAGHANDLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dragHandleOutlinedIcon', url: URL_DRAGHANDLEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_GPPGOOD = new URL('../../assets/icons/gppGood.svg', import.meta.url).h
  */
 export const initGppGoodIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GPPGOOD }, ...properties);
+    initIcon(element, { additionalClassName: 'gppGoodIcon', url: URL_GPPGOOD }, ...properties);
 }
 
 /**

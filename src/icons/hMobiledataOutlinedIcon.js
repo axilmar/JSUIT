@@ -15,7 +15,7 @@ const URL_HMOBILEDATAOUTLINED = new URL('../../assets/icons/hMobiledataOutlined.
  */
 export const initHMobiledataOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HMOBILEDATAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hMobiledataOutlinedIcon', url: URL_HMOBILEDATAOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SWITCHACCOUNTOUTLINED = new URL('../../assets/icons/switchAccountOutli
  */
 export const initSwitchAccountOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWITCHACCOUNTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'switchAccountOutlinedIcon', url: URL_SWITCHACCOUNTOUTLINED }, ...properties);
 }
 
 /**

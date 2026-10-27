@@ -15,7 +15,7 @@ const URL_EVENTREPEATOUTLINED = new URL('../../assets/icons/eventRepeatOutlined.
  */
 export const initEventRepeatOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EVENTREPEATOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'eventRepeatOutlinedIcon', url: URL_EVENTREPEATOUTLINED }, ...properties);
 }
 
 /**

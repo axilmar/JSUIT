@@ -15,7 +15,7 @@ const URL_TEXTFIELDS = new URL('../../assets/icons/textFields.svg', import.meta.
  */
 export const initTextFieldsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTFIELDS }, ...properties);
+    initIcon(element, { additionalClassName: 'textFieldsIcon', url: URL_TEXTFIELDS }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_VOICEMAILOUTLINED = new URL('../../assets/icons/voicemailOutlined.svg'
  */
 export const initVoicemailOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VOICEMAILOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'voicemailOutlinedIcon', url: URL_VOICEMAILOUTLINED }, ...properties);
 }
 
 /**

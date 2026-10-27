@@ -15,7 +15,7 @@ const URL_LIGHTBULBCIRCLE = new URL('../../assets/icons/lightbulbCircle.svg', im
  */
 export const initLightbulbCircleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIGHTBULBCIRCLE }, ...properties);
+    initIcon(element, { additionalClassName: 'lightbulbCircleIcon', url: URL_LIGHTBULBCIRCLE }, ...properties);
 }
 
 /**

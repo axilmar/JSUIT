@@ -15,7 +15,7 @@ const URL_HOWTOREG = new URL('../../assets/icons/howToReg.svg', import.meta.url)
  */
 export const initHowToRegIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOWTOREG }, ...properties);
+    initIcon(element, { additionalClassName: 'howToRegIcon', url: URL_HOWTOREG }, ...properties);
 }
 
 /**

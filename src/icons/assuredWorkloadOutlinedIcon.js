@@ -15,7 +15,7 @@ const URL_ASSUREDWORKLOADOUTLINED = new URL('../../assets/icons/assuredWorkloadO
  */
 export const initAssuredWorkloadOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ASSUREDWORKLOADOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'assuredWorkloadOutlinedIcon', url: URL_ASSUREDWORKLOADOUTLINED }, ...properties);
 }
 
 /**

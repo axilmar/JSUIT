@@ -15,7 +15,7 @@ const URL_TEMPLEBUDDHISTOUTLINED = new URL('../../assets/icons/templeBuddhistOut
  */
 export const initTempleBuddhistOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEMPLEBUDDHISTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'templeBuddhistOutlinedIcon', url: URL_TEMPLEBUDDHISTOUTLINED }, ...properties);
 }
 
 /**

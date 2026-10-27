@@ -15,7 +15,7 @@ const URL_HEARING = new URL('../../assets/icons/hearing.svg', import.meta.url).h
  */
 export const initHearingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEARING }, ...properties);
+    initIcon(element, { additionalClassName: 'hearingIcon', url: URL_HEARING }, ...properties);
 }
 
 /**

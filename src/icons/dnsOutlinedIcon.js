@@ -15,7 +15,7 @@ const URL_DNSOUTLINED = new URL('../../assets/icons/dnsOutlined.svg', import.met
  */
 export const initDnsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DNSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dnsOutlinedIcon', url: URL_DNSOUTLINED }, ...properties);
 }
 
 /**

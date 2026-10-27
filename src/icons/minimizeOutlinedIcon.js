@@ -15,7 +15,7 @@ const URL_MINIMIZEOUTLINED = new URL('../../assets/icons/minimizeOutlined.svg', 
  */
 export const initMinimizeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MINIMIZEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'minimizeOutlinedIcon', url: URL_MINIMIZEOUTLINED }, ...properties);
 }
 
 /**

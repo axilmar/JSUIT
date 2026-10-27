@@ -15,7 +15,7 @@ const URL_APPSOUTAGE = new URL('../../assets/icons/appsOutage.svg', import.meta.
  */
 export const initAppsOutageIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_APPSOUTAGE }, ...properties);
+    initIcon(element, { additionalClassName: 'appsOutageIcon', url: URL_APPSOUTAGE }, ...properties);
 }
 
 /**

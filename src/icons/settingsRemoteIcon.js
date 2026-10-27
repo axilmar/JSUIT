@@ -15,7 +15,7 @@ const URL_SETTINGSREMOTE = new URL('../../assets/icons/settingsRemote.svg', impo
  */
 export const initSettingsRemoteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSREMOTE }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsRemoteIcon', url: URL_SETTINGSREMOTE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_EUROSYMBOLOUTLINED = new URL('../../assets/icons/euroSymbolOutlined.sv
  */
 export const initEuroSymbolOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EUROSYMBOLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'euroSymbolOutlinedIcon', url: URL_EUROSYMBOLOUTLINED }, ...properties);
 }
 
 /**

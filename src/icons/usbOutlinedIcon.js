@@ -15,7 +15,7 @@ const URL_USBOUTLINED = new URL('../../assets/icons/usbOutlined.svg', import.met
  */
 export const initUsbOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_USBOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'usbOutlinedIcon', url: URL_USBOUTLINED }, ...properties);
 }
 
 /**

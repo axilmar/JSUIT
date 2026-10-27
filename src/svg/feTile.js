@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initFeTile = (element, ...properties) => {
     console.assert(element instanceof SVGFETileElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'feTile' }, ...properties);
 }
 
 /**

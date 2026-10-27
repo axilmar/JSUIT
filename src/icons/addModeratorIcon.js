@@ -15,7 +15,7 @@ const URL_ADDMODERATOR = new URL('../../assets/icons/addModerator.svg', import.m
  */
 export const initAddModeratorIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDMODERATOR }, ...properties);
+    initIcon(element, { additionalClassName: 'addModeratorIcon', url: URL_ADDMODERATOR }, ...properties);
 }
 
 /**

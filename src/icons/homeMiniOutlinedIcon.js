@@ -15,7 +15,7 @@ const URL_HOMEMINIOUTLINED = new URL('../../assets/icons/homeMiniOutlined.svg', 
  */
 export const initHomeMiniOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOMEMINIOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'homeMiniOutlinedIcon', url: URL_HOMEMINIOUTLINED }, ...properties);
 }
 
 /**

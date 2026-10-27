@@ -15,7 +15,7 @@ const URL_JAVASCRIPTOUTLINED = new URL('../../assets/icons/javascriptOutlined.sv
  */
 export const initJavascriptOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_JAVASCRIPTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'javascriptOutlinedIcon', url: URL_JAVASCRIPTOUTLINED }, ...properties);
 }
 
 /**

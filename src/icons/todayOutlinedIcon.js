@@ -15,7 +15,7 @@ const URL_TODAYOUTLINED = new URL('../../assets/icons/todayOutlined.svg', import
  */
 export const initTodayOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TODAYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'todayOutlinedIcon', url: URL_TODAYOUTLINED }, ...properties);
 }
 
 /**

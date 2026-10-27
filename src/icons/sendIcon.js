@@ -15,7 +15,7 @@ const URL_SEND = new URL('../../assets/icons/send.svg', import.meta.url).href;
  */
 export const initSendIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SEND }, ...properties);
+    initIcon(element, { additionalClassName: 'sendIcon', url: URL_SEND }, ...properties);
 }
 
 /**

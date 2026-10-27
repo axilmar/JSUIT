@@ -15,7 +15,7 @@ const URL_TEXTURE = new URL('../../assets/icons/texture.svg', import.meta.url).h
  */
 export const initTextureIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTURE }, ...properties);
+    initIcon(element, { additionalClassName: 'textureIcon', url: URL_TEXTURE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DEVELOPERBOARDOUTLINED = new URL('../../assets/icons/developerBoardOut
  */
 export const initDeveloperBoardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEVELOPERBOARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'developerBoardOutlinedIcon', url: URL_DEVELOPERBOARDOUTLINED }, ...properties);
 }
 
 /**

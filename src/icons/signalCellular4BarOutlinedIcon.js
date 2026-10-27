@@ -15,7 +15,7 @@ const URL_SIGNALCELLULAR4BAROUTLINED = new URL('../../assets/icons/signalCellula
  */
 export const initSignalCellular4BarOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNALCELLULAR4BAROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'signalCellular4BarOutlinedIcon', url: URL_SIGNALCELLULAR4BAROUTLINED }, ...properties);
 }
 
 /**

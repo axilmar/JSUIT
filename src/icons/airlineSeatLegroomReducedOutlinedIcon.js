@@ -15,7 +15,7 @@ const URL_AIRLINESEATLEGROOMREDUCEDOUTLINED = new URL('../../assets/icons/airlin
  */
 export const initAirlineSeatLegroomReducedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AIRLINESEATLEGROOMREDUCEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'airlineSeatLegroomReducedOutlinedIcon', url: URL_AIRLINESEATLEGROOMREDUCEDOUTLINED }, ...properties);
 }
 
 /**

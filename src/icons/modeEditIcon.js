@@ -15,7 +15,7 @@ const URL_MODEEDIT = new URL('../../assets/icons/modeEdit.svg', import.meta.url)
  */
 export const initModeEditIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MODEEDIT }, ...properties);
+    initIcon(element, { additionalClassName: 'modeEditIcon', url: URL_MODEEDIT }, ...properties);
 }
 
 /**

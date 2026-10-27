@@ -15,7 +15,7 @@ const URL_FORMATTEXTDIRECTIONLTOR = new URL('../../assets/icons/formatTextdirect
  */
 export const initFormatTextdirectionLToRIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATTEXTDIRECTIONLTOR }, ...properties);
+    initIcon(element, { additionalClassName: 'formatTextdirectionLToRIcon', url: URL_FORMATTEXTDIRECTIONLTOR }, ...properties);
 }
 
 /**

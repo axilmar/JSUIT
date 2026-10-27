@@ -15,7 +15,7 @@ const URL_TRAFFICOUTLINED = new URL('../../assets/icons/trafficOutlined.svg', im
  */
 export const initTrafficOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRAFFICOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'trafficOutlinedIcon', url: URL_TRAFFICOUTLINED }, ...properties);
 }
 
 /**

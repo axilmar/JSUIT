@@ -15,7 +15,7 @@ const URL_SHAPELINE = new URL('../../assets/icons/shapeLine.svg', import.meta.ur
  */
 export const initShapeLineIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHAPELINE }, ...properties);
+    initIcon(element, { additionalClassName: 'shapeLineIcon', url: URL_SHAPELINE }, ...properties);
 }
 
 /**

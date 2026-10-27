@@ -15,7 +15,7 @@ const URL_BLOCKOUTLINED = new URL('../../assets/icons/blockOutlined.svg', import
  */
 export const initBlockOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLOCKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'blockOutlinedIcon', url: URL_BLOCKOUTLINED }, ...properties);
 }
 
 /**

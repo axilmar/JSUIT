@@ -15,7 +15,7 @@ const URL_CANCELPRESENTATIONOUTLINED = new URL('../../assets/icons/cancelPresent
  */
 export const initCancelPresentationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CANCELPRESENTATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cancelPresentationOutlinedIcon', url: URL_CANCELPRESENTATIONOUTLINED }, ...properties);
 }
 
 /**

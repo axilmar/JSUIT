@@ -15,7 +15,7 @@ const URL_CHAT = new URL('../../assets/icons/chat.svg', import.meta.url).href;
  */
 export const initChatIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHAT }, ...properties);
+    initIcon(element, { additionalClassName: 'chatIcon', url: URL_CHAT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TEXTROTATEVERTICAL = new URL('../../assets/icons/textRotateVertical.sv
  */
 export const initTextRotateVerticalIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTROTATEVERTICAL }, ...properties);
+    initIcon(element, { additionalClassName: 'textRotateVerticalIcon', url: URL_TEXTROTATEVERTICAL }, ...properties);
 }
 
 /**

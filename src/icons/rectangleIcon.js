@@ -15,7 +15,7 @@ const URL_RECTANGLE = new URL('../../assets/icons/rectangle.svg', import.meta.ur
  */
 export const initRectangleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RECTANGLE }, ...properties);
+    initIcon(element, { additionalClassName: 'rectangleIcon', url: URL_RECTANGLE }, ...properties);
 }
 
 /**

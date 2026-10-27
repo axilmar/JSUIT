@@ -15,7 +15,7 @@ const URL_COMMITOUTLINED = new URL('../../assets/icons/commitOutlined.svg', impo
  */
 export const initCommitOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMMITOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'commitOutlinedIcon', url: URL_COMMITOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ELEVATOR = new URL('../../assets/icons/elevator.svg', import.meta.url)
  */
 export const initElevatorIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ELEVATOR }, ...properties);
+    initIcon(element, { additionalClassName: 'elevatorIcon', url: URL_ELEVATOR }, ...properties);
 }
 
 /**

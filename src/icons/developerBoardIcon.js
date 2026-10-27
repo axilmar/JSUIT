@@ -15,7 +15,7 @@ const URL_DEVELOPERBOARD = new URL('../../assets/icons/developerBoard.svg', impo
  */
 export const initDeveloperBoardIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEVELOPERBOARD }, ...properties);
+    initIcon(element, { additionalClassName: 'developerBoardIcon', url: URL_DEVELOPERBOARD }, ...properties);
 }
 
 /**

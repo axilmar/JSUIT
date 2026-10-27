@@ -15,7 +15,7 @@ const URL_ACCESSIBLEFORWARD = new URL('../../assets/icons/accessibleForward.svg'
  */
 export const initAccessibleForwardIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACCESSIBLEFORWARD }, ...properties);
+    initIcon(element, { additionalClassName: 'accessibleForwardIcon', url: URL_ACCESSIBLEFORWARD }, ...properties);
 }
 
 /**

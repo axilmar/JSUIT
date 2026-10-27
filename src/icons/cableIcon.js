@@ -15,7 +15,7 @@ const URL_CABLE = new URL('../../assets/icons/cable.svg', import.meta.url).href;
  */
 export const initCableIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CABLE }, ...properties);
+    initIcon(element, { additionalClassName: 'cableIcon', url: URL_CABLE }, ...properties);
 }
 
 /**

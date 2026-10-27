@@ -15,7 +15,7 @@ const URL_MACROOFFOUTLINED = new URL('../../assets/icons/macroOffOutlined.svg', 
  */
 export const initMacroOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MACROOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'macroOffOutlinedIcon', url: URL_MACROOFFOUTLINED }, ...properties);
 }
 
 /**

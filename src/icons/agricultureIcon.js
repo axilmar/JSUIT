@@ -15,7 +15,7 @@ const URL_AGRICULTURE = new URL('../../assets/icons/agriculture.svg', import.met
  */
 export const initAgricultureIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AGRICULTURE }, ...properties);
+    initIcon(element, { additionalClassName: 'agricultureIcon', url: URL_AGRICULTURE }, ...properties);
 }
 
 /**

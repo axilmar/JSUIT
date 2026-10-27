@@ -15,7 +15,7 @@ const URL_FLUTTERDASH = new URL('../../assets/icons/flutterDash.svg', import.met
  */
 export const initFlutterDashIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLUTTERDASH }, ...properties);
+    initIcon(element, { additionalClassName: 'flutterDashIcon', url: URL_FLUTTERDASH }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PHONEOUTLINED = new URL('../../assets/icons/phoneOutlined.svg', import
  */
 export const initPhoneOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'phoneOutlinedIcon', url: URL_PHONEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_RESTOREPAGEOUTLINED = new URL('../../assets/icons/restorePageOutlined.
  */
 export const initRestorePageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RESTOREPAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'restorePageOutlinedIcon', url: URL_RESTOREPAGEOUTLINED }, ...properties);
 }
 
 /**

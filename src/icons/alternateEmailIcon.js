@@ -15,7 +15,7 @@ const URL_ALTERNATEEMAIL = new URL('../../assets/icons/alternateEmail.svg', impo
  */
 export const initAlternateEmailIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALTERNATEEMAIL }, ...properties);
+    initIcon(element, { additionalClassName: 'alternateEmailIcon', url: URL_ALTERNATEEMAIL }, ...properties);
 }
 
 /**

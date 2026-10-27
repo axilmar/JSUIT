@@ -15,7 +15,7 @@ const URL_MEDIABLUETOOTHOFFOUTLINED = new URL('../../assets/icons/mediaBluetooth
  */
 export const initMediaBluetoothOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MEDIABLUETOOTHOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'mediaBluetoothOffOutlinedIcon', url: URL_MEDIABLUETOOTHOFFOUTLINED }, ...properties);
 }
 
 /**

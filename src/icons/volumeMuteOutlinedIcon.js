@@ -15,7 +15,7 @@ const URL_VOLUMEMUTEOUTLINED = new URL('../../assets/icons/volumeMuteOutlined.sv
  */
 export const initVolumeMuteOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VOLUMEMUTEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'volumeMuteOutlinedIcon', url: URL_VOLUMEMUTEOUTLINED }, ...properties);
 }
 
 /**

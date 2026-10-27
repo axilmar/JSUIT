@@ -15,7 +15,7 @@ const URL_FITBITOUTLINED = new URL('../../assets/icons/fitbitOutlined.svg', impo
  */
 export const initFitbitOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FITBITOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fitbitOutlinedIcon', url: URL_FITBITOUTLINED }, ...properties);
 }
 
 /**

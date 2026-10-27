@@ -15,7 +15,7 @@ const URL_DEVICEUNKNOWN = new URL('../../assets/icons/deviceUnknown.svg', import
  */
 export const initDeviceUnknownIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEVICEUNKNOWN }, ...properties);
+    initIcon(element, { additionalClassName: 'deviceUnknownIcon', url: URL_DEVICEUNKNOWN }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SWITCHACCESSSHORTCUTOUTLINED = new URL('../../assets/icons/switchAcces
  */
 export const initSwitchAccessShortcutOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWITCHACCESSSHORTCUTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'switchAccessShortcutOutlinedIcon', url: URL_SWITCHACCESSSHORTCUTOUTLINED }, ...properties);
 }
 
 /**

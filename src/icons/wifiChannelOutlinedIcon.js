@@ -15,7 +15,7 @@ const URL_WIFICHANNELOUTLINED = new URL('../../assets/icons/wifiChannelOutlined.
  */
 export const initWifiChannelOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIFICHANNELOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wifiChannelOutlinedIcon', url: URL_WIFICHANNELOUTLINED }, ...properties);
 }
 
 /**

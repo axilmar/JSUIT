@@ -15,7 +15,7 @@ const URL_LINKEDCAMERAOUTLINED = new URL('../../assets/icons/linkedCameraOutline
  */
 export const initLinkedCameraOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LINKEDCAMERAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'linkedCameraOutlinedIcon', url: URL_LINKEDCAMERAOUTLINED }, ...properties);
 }
 
 /**

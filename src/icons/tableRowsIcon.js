@@ -15,7 +15,7 @@ const URL_TABLEROWS = new URL('../../assets/icons/tableRows.svg', import.meta.ur
  */
 export const initTableRowsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TABLEROWS }, ...properties);
+    initIcon(element, { additionalClassName: 'tableRowsIcon', url: URL_TABLEROWS }, ...properties);
 }
 
 /**

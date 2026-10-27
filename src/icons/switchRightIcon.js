@@ -15,7 +15,7 @@ const URL_SWITCHRIGHT = new URL('../../assets/icons/switchRight.svg', import.met
  */
 export const initSwitchRightIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWITCHRIGHT }, ...properties);
+    initIcon(element, { additionalClassName: 'switchRightIcon', url: URL_SWITCHRIGHT }, ...properties);
 }
 
 /**

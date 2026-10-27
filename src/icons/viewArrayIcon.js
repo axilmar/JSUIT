@@ -15,7 +15,7 @@ const URL_VIEWARRAY = new URL('../../assets/icons/viewArray.svg', import.meta.ur
  */
 export const initViewArrayIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWARRAY }, ...properties);
+    initIcon(element, { additionalClassName: 'viewArrayIcon', url: URL_VIEWARRAY }, ...properties);
 }
 
 /**

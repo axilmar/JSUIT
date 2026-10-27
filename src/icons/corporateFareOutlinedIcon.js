@@ -15,7 +15,7 @@ const URL_CORPORATEFAREOUTLINED = new URL('../../assets/icons/corporateFareOutli
  */
 export const initCorporateFareOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CORPORATEFAREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'corporateFareOutlinedIcon', url: URL_CORPORATEFAREOUTLINED }, ...properties);
 }
 
 /**

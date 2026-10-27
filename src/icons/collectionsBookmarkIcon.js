@@ -15,7 +15,7 @@ const URL_COLLECTIONSBOOKMARK = new URL('../../assets/icons/collectionsBookmark.
  */
 export const initCollectionsBookmarkIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COLLECTIONSBOOKMARK }, ...properties);
+    initIcon(element, { additionalClassName: 'collectionsBookmarkIcon', url: URL_COLLECTIONSBOOKMARK }, ...properties);
 }
 
 /**

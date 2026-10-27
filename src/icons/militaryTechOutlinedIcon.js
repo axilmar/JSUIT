@@ -15,7 +15,7 @@ const URL_MILITARYTECHOUTLINED = new URL('../../assets/icons/militaryTechOutline
  */
 export const initMilitaryTechOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MILITARYTECHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'militaryTechOutlinedIcon', url: URL_MILITARYTECHOUTLINED }, ...properties);
 }
 
 /**

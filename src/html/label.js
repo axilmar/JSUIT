@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initLabel = (element, ...properties) => {
     console.assert(element instanceof HTMLLabelElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'label' }, ...properties);
 }
 
 /**

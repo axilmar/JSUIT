@@ -15,7 +15,7 @@ const URL_WEBASSETOFFOUTLINED = new URL('../../assets/icons/webAssetOffOutlined.
  */
 export const initWebAssetOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WEBASSETOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'webAssetOffOutlinedIcon', url: URL_WEBASSETOFFOUTLINED }, ...properties);
 }
 
 /**

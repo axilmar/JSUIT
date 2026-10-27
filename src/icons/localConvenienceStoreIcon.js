@@ -15,7 +15,7 @@ const URL_LOCALCONVENIENCESTORE = new URL('../../assets/icons/localConvenienceSt
  */
 export const initLocalConvenienceStoreIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALCONVENIENCESTORE }, ...properties);
+    initIcon(element, { additionalClassName: 'localConvenienceStoreIcon', url: URL_LOCALCONVENIENCESTORE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_VIEWCOMFYALTOUTLINED = new URL('../../assets/icons/viewComfyAltOutline
  */
 export const initViewComfyAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWCOMFYALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewComfyAltOutlinedIcon', url: URL_VIEWCOMFYALTOUTLINED }, ...properties);
 }
 
 /**

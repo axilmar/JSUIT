@@ -15,7 +15,7 @@ const URL_AIRPLAY = new URL('../../assets/icons/airplay.svg', import.meta.url).h
  */
 export const initAirplayIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AIRPLAY }, ...properties);
+    initIcon(element, { additionalClassName: 'airplayIcon', url: URL_AIRPLAY }, ...properties);
 }
 
 /**

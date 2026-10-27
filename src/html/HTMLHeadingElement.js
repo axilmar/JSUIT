@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initHTMLHeadingElement = (element, ...properties) => {
     console.assert(element instanceof HTMLHeadingElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'HTMLHeadingElement' }, ...properties);
 }
 
 /**
@@ -22,7 +22,7 @@ export const initHTMLHeadingElement = (element, ...properties) => {
  */
 export const h1 = (...properties) => {
     const element = document.createElement('h1');
-    initHTMLHeadingElement(element, ...properties);
+    initHTMLHeadingElement(element, { additionalClassName: 'h1' }, ...properties);
     return element;
 }
 
@@ -35,7 +35,7 @@ export const h1 = (...properties) => {
  */
 export const h2 = (...properties) => {
     const element = document.createElement('h2');
-    initHTMLHeadingElement(element, ...properties);
+    initHTMLHeadingElement(element, { additionalClassName: 'h2' }, ...properties);
     return element;
 }
 
@@ -48,7 +48,7 @@ export const h2 = (...properties) => {
  */
 export const h3 = (...properties) => {
     const element = document.createElement('h3');
-    initHTMLHeadingElement(element, ...properties);
+    initHTMLHeadingElement(element, { additionalClassName: 'h3' }, ...properties);
     return element;
 }
 
@@ -61,7 +61,7 @@ export const h3 = (...properties) => {
  */
 export const h4 = (...properties) => {
     const element = document.createElement('h4');
-    initHTMLHeadingElement(element, ...properties);
+    initHTMLHeadingElement(element, { additionalClassName: 'h4' }, ...properties);
     return element;
 }
 
@@ -74,7 +74,7 @@ export const h4 = (...properties) => {
  */
 export const h5 = (...properties) => {
     const element = document.createElement('h5');
-    initHTMLHeadingElement(element, ...properties);
+    initHTMLHeadingElement(element, { additionalClassName: 'h5' }, ...properties);
     return element;
 }
 
@@ -87,6 +87,6 @@ export const h5 = (...properties) => {
  */
 export const h6 = (...properties) => {
     const element = document.createElement('h6');
-    initHTMLHeadingElement(element, ...properties);
+    initHTMLHeadingElement(element, { additionalClassName: 'h6' }, ...properties);
     return element;
 }

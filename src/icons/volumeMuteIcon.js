@@ -15,7 +15,7 @@ const URL_VOLUMEMUTE = new URL('../../assets/icons/volumeMute.svg', import.meta.
  */
 export const initVolumeMuteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VOLUMEMUTE }, ...properties);
+    initIcon(element, { additionalClassName: 'volumeMuteIcon', url: URL_VOLUMEMUTE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_BRIGHTNESSAUTO = new URL('../../assets/icons/brightnessAuto.svg', impo
  */
 export const initBrightnessAutoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BRIGHTNESSAUTO }, ...properties);
+    initIcon(element, { additionalClassName: 'brightnessAutoIcon', url: URL_BRIGHTNESSAUTO }, ...properties);
 }
 
 /**

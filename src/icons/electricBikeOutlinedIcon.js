@@ -15,7 +15,7 @@ const URL_ELECTRICBIKEOUTLINED = new URL('../../assets/icons/electricBikeOutline
  */
 export const initElectricBikeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ELECTRICBIKEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'electricBikeOutlinedIcon', url: URL_ELECTRICBIKEOUTLINED }, ...properties);
 }
 
 /**

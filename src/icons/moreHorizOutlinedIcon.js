@@ -15,7 +15,7 @@ const URL_MOREHORIZOUTLINED = new URL('../../assets/icons/moreHorizOutlined.svg'
  */
 export const initMoreHorizOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOREHORIZOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'moreHorizOutlinedIcon', url: URL_MOREHORIZOUTLINED }, ...properties);
 }
 
 /**

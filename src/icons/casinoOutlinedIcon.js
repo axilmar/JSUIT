@@ -15,7 +15,7 @@ const URL_CASINOOUTLINED = new URL('../../assets/icons/casinoOutlined.svg', impo
  */
 export const initCasinoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CASINOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'casinoOutlinedIcon', url: URL_CASINOOUTLINED }, ...properties);
 }
 
 /**

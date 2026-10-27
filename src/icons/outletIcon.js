@@ -15,7 +15,7 @@ const URL_OUTLET = new URL('../../assets/icons/outlet.svg', import.meta.url).hre
  */
 export const initOutletIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OUTLET }, ...properties);
+    initIcon(element, { additionalClassName: 'outletIcon', url: URL_OUTLET }, ...properties);
 }
 
 /**

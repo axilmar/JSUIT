@@ -15,7 +15,7 @@ const URL_VIEWTIMELINEOUTLINED = new URL('../../assets/icons/viewTimelineOutline
  */
 export const initViewTimelineOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWTIMELINEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewTimelineOutlinedIcon', url: URL_VIEWTIMELINEOUTLINED }, ...properties);
 }
 
 /**

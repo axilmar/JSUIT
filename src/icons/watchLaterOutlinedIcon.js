@@ -15,7 +15,7 @@ const URL_WATCHLATEROUTLINED = new URL('../../assets/icons/watchLaterOutlined.sv
  */
 export const initWatchLaterOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WATCHLATEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'watchLaterOutlinedIcon', url: URL_WATCHLATEROUTLINED }, ...properties);
 }
 
 /**

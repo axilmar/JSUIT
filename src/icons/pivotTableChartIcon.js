@@ -15,7 +15,7 @@ const URL_PIVOTTABLECHART = new URL('../../assets/icons/pivotTableChart.svg', im
  */
 export const initPivotTableChartIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PIVOTTABLECHART }, ...properties);
+    initIcon(element, { additionalClassName: 'pivotTableChartIcon', url: URL_PIVOTTABLECHART }, ...properties);
 }
 
 /**

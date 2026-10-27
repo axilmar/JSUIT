@@ -15,7 +15,7 @@ const URL_PUSHPINOUTLINED = new URL('../../assets/icons/pushPinOutlined.svg', im
  */
 export const initPushPinOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PUSHPINOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pushPinOutlinedIcon', url: URL_PUSHPINOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SIXK = new URL('../../assets/icons/sixK.svg', import.meta.url).href;
  */
 export const initSixKIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIXK }, ...properties);
+    initIcon(element, { additionalClassName: 'sixKIcon', url: URL_SIXK }, ...properties);
 }
 
 /**

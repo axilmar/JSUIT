@@ -15,7 +15,7 @@ const URL_CHROMEREADERMODE = new URL('../../assets/icons/chromeReaderMode.svg', 
  */
 export const initChromeReaderModeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHROMEREADERMODE }, ...properties);
+    initIcon(element, { additionalClassName: 'chromeReaderModeIcon', url: URL_CHROMEREADERMODE }, ...properties);
 }
 
 /**

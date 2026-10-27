@@ -15,7 +15,7 @@ const URL_ICESKATING = new URL('../../assets/icons/iceSkating.svg', import.meta.
  */
 export const initIceSkatingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ICESKATING }, ...properties);
+    initIcon(element, { additionalClassName: 'iceSkatingIcon', url: URL_ICESKATING }, ...properties);
 }
 
 /**

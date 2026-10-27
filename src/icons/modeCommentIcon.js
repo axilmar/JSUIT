@@ -15,7 +15,7 @@ const URL_MODECOMMENT = new URL('../../assets/icons/modeComment.svg', import.met
  */
 export const initModeCommentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MODECOMMENT }, ...properties);
+    initIcon(element, { additionalClassName: 'modeCommentIcon', url: URL_MODECOMMENT }, ...properties);
 }
 
 /**

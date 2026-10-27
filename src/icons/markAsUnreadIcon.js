@@ -15,7 +15,7 @@ const URL_MARKASUNREAD = new URL('../../assets/icons/markAsUnread.svg', import.m
  */
 export const initMarkAsUnreadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MARKASUNREAD }, ...properties);
+    initIcon(element, { additionalClassName: 'markAsUnreadIcon', url: URL_MARKASUNREAD }, ...properties);
 }
 
 /**

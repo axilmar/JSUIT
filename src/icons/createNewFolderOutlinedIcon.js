@@ -15,7 +15,7 @@ const URL_CREATENEWFOLDEROUTLINED = new URL('../../assets/icons/createNewFolderO
  */
 export const initCreateNewFolderOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CREATENEWFOLDEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'createNewFolderOutlinedIcon', url: URL_CREATENEWFOLDEROUTLINED }, ...properties);
 }
 
 /**

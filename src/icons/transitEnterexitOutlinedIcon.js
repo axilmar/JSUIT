@@ -15,7 +15,7 @@ const URL_TRANSITENTEREXITOUTLINED = new URL('../../assets/icons/transitEnterexi
  */
 export const initTransitEnterexitOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRANSITENTEREXITOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'transitEnterexitOutlinedIcon', url: URL_TRANSITENTEREXITOUTLINED }, ...properties);
 }
 
 /**

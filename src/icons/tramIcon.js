@@ -15,7 +15,7 @@ const URL_TRAM = new URL('../../assets/icons/tram.svg', import.meta.url).href;
  */
 export const initTramIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRAM }, ...properties);
+    initIcon(element, { additionalClassName: 'tramIcon', url: URL_TRAM }, ...properties);
 }
 
 /**

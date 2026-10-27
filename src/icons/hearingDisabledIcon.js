@@ -15,7 +15,7 @@ const URL_HEARINGDISABLED = new URL('../../assets/icons/hearingDisabled.svg', im
  */
 export const initHearingDisabledIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEARINGDISABLED }, ...properties);
+    initIcon(element, { additionalClassName: 'hearingDisabledIcon', url: URL_HEARINGDISABLED }, ...properties);
 }
 
 /**

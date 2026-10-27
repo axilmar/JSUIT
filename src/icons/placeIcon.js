@@ -15,7 +15,7 @@ const URL_PLACE = new URL('../../assets/icons/place.svg', import.meta.url).href;
  */
 export const initPlaceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLACE }, ...properties);
+    initIcon(element, { additionalClassName: 'placeIcon', url: URL_PLACE }, ...properties);
 }
 
 /**

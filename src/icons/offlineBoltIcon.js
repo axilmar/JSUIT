@@ -15,7 +15,7 @@ const URL_OFFLINEBOLT = new URL('../../assets/icons/offlineBolt.svg', import.met
  */
 export const initOfflineBoltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OFFLINEBOLT }, ...properties);
+    initIcon(element, { additionalClassName: 'offlineBoltIcon', url: URL_OFFLINEBOLT }, ...properties);
 }
 
 /**

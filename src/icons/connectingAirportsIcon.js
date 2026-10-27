@@ -15,7 +15,7 @@ const URL_CONNECTINGAIRPORTS = new URL('../../assets/icons/connectingAirports.sv
  */
 export const initConnectingAirportsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONNECTINGAIRPORTS }, ...properties);
+    initIcon(element, { additionalClassName: 'connectingAirportsIcon', url: URL_CONNECTINGAIRPORTS }, ...properties);
 }
 
 /**

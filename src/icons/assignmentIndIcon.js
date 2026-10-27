@@ -15,7 +15,7 @@ const URL_ASSIGNMENTIND = new URL('../../assets/icons/assignmentInd.svg', import
  */
 export const initAssignmentIndIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ASSIGNMENTIND }, ...properties);
+    initIcon(element, { additionalClassName: 'assignmentIndIcon', url: URL_ASSIGNMENTIND }, ...properties);
 }
 
 /**

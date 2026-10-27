@@ -15,7 +15,7 @@ const URL_LENS = new URL('../../assets/icons/lens.svg', import.meta.url).href;
  */
 export const initLensIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LENS }, ...properties);
+    initIcon(element, { additionalClassName: 'lensIcon', url: URL_LENS }, ...properties);
 }
 
 /**

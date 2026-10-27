@@ -15,7 +15,7 @@ const URL_SETTINGSPHONE = new URL('../../assets/icons/settingsPhone.svg', import
  */
 export const initSettingsPhoneIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSPHONE }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsPhoneIcon', url: URL_SETTINGSPHONE }, ...properties);
 }
 
 /**

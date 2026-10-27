@@ -15,7 +15,7 @@ const URL_UPDATEDISABLEDOUTLINED = new URL('../../assets/icons/updateDisabledOut
  */
 export const initUpdateDisabledOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UPDATEDISABLEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'updateDisabledOutlinedIcon', url: URL_UPDATEDISABLEDOUTLINED }, ...properties);
 }
 
 /**

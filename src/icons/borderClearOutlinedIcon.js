@@ -15,7 +15,7 @@ const URL_BORDERCLEAROUTLINED = new URL('../../assets/icons/borderClearOutlined.
  */
 export const initBorderClearOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BORDERCLEAROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'borderClearOutlinedIcon', url: URL_BORDERCLEAROUTLINED }, ...properties);
 }
 
 /**

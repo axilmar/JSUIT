@@ -15,7 +15,7 @@ const URL_LOOKS4 = new URL('../../assets/icons/looks4.svg', import.meta.url).hre
  */
 export const initLooks4Icon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOOKS4 }, ...properties);
+    initIcon(element, { additionalClassName: 'looks4Icon', url: URL_LOOKS4 }, ...properties);
 }
 
 /**

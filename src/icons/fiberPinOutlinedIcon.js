@@ -15,7 +15,7 @@ const URL_FIBERPINOUTLINED = new URL('../../assets/icons/fiberPinOutlined.svg', 
  */
 export const initFiberPinOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIBERPINOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fiberPinOutlinedIcon', url: URL_FIBERPINOUTLINED }, ...properties);
 }
 
 /**

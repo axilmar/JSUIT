@@ -15,7 +15,7 @@ const URL_CAKEOUTLINED = new URL('../../assets/icons/cakeOutlined.svg', import.m
  */
 export const initCakeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CAKEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cakeOutlinedIcon', url: URL_CAKEOUTLINED }, ...properties);
 }
 
 /**

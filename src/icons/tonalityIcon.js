@@ -15,7 +15,7 @@ const URL_TONALITY = new URL('../../assets/icons/tonality.svg', import.meta.url)
  */
 export const initTonalityIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TONALITY }, ...properties);
+    initIcon(element, { additionalClassName: 'tonalityIcon', url: URL_TONALITY }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CHILDCAREOUTLINED = new URL('../../assets/icons/childCareOutlined.svg'
  */
 export const initChildCareOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHILDCAREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'childCareOutlinedIcon', url: URL_CHILDCAREOUTLINED }, ...properties);
 }
 
 /**

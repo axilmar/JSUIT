@@ -15,7 +15,7 @@ const URL_TIREREPAIROUTLINED = new URL('../../assets/icons/tireRepairOutlined.sv
  */
 export const initTireRepairOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TIREREPAIROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tireRepairOutlinedIcon', url: URL_TIREREPAIROUTLINED }, ...properties);
 }
 
 /**

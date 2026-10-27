@@ -15,7 +15,7 @@ const URL_WEEKEND = new URL('../../assets/icons/weekend.svg', import.meta.url).h
  */
 export const initWeekendIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WEEKEND }, ...properties);
+    initIcon(element, { additionalClassName: 'weekendIcon', url: URL_WEEKEND }, ...properties);
 }
 
 /**

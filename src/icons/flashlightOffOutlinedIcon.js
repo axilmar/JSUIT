@@ -15,7 +15,7 @@ const URL_FLASHLIGHTOFFOUTLINED = new URL('../../assets/icons/flashlightOffOutli
  */
 export const initFlashlightOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLASHLIGHTOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'flashlightOffOutlinedIcon', url: URL_FLASHLIGHTOFFOUTLINED }, ...properties);
 }
 
 /**

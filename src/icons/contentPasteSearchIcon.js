@@ -15,7 +15,7 @@ const URL_CONTENTPASTESEARCH = new URL('../../assets/icons/contentPasteSearch.sv
  */
 export const initContentPasteSearchIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTENTPASTESEARCH }, ...properties);
+    initIcon(element, { additionalClassName: 'contentPasteSearchIcon', url: URL_CONTENTPASTESEARCH }, ...properties);
 }
 
 /**

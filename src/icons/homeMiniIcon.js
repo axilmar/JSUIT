@@ -15,7 +15,7 @@ const URL_HOMEMINI = new URL('../../assets/icons/homeMini.svg', import.meta.url)
  */
 export const initHomeMiniIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOMEMINI }, ...properties);
+    initIcon(element, { additionalClassName: 'homeMiniIcon', url: URL_HOMEMINI }, ...properties);
 }
 
 /**

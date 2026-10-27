@@ -105,7 +105,7 @@ export const initIcon = (element, ...properties) => {
     defineStretchProperty(element);
     defineFillColorProperty(element);
     defineUrlProperty(element);
-    initDiv(element, ...properties);
+    initDiv(element, { additionalClassName: 'icon' }, ...properties);
 }
 
 /**

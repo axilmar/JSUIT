@@ -15,7 +15,7 @@ const URL_HOMEMAXOUTLINED = new URL('../../assets/icons/homeMaxOutlined.svg', im
  */
 export const initHomeMaxOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOMEMAXOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'homeMaxOutlinedIcon', url: URL_HOMEMAXOUTLINED }, ...properties);
 }
 
 /**

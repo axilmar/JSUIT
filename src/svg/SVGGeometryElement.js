@@ -10,5 +10,5 @@ import { initSVGGraphicsElement } from "./SVGGraphicsElement.js";
  */
 export const initSVGGeometryElement = (element, ...properties) => {
     console.assert(element instanceof SVGGeometryElement);
-    initSVGGraphicsElement(element, ...properties);
+    initSVGGraphicsElement(element, { additionalClassName: 'SVGGeometryElement' }, ...properties);
 }

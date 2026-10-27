@@ -15,7 +15,7 @@ const URL_SPLITSCREEN = new URL('../../assets/icons/splitscreen.svg', import.met
  */
 export const initSplitscreenIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPLITSCREEN }, ...properties);
+    initIcon(element, { additionalClassName: 'splitscreenIcon', url: URL_SPLITSCREEN }, ...properties);
 }
 
 /**

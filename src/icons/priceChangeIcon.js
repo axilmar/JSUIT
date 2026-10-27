@@ -15,7 +15,7 @@ const URL_PRICECHANGE = new URL('../../assets/icons/priceChange.svg', import.met
  */
 export const initPriceChangeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PRICECHANGE }, ...properties);
+    initIcon(element, { additionalClassName: 'priceChangeIcon', url: URL_PRICECHANGE }, ...properties);
 }
 
 /**

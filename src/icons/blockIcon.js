@@ -15,7 +15,7 @@ const URL_BLOCK = new URL('../../assets/icons/block.svg', import.meta.url).href;
  */
 export const initBlockIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLOCK }, ...properties);
+    initIcon(element, { additionalClassName: 'blockIcon', url: URL_BLOCK }, ...properties);
 }
 
 /**

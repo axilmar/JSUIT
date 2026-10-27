@@ -15,7 +15,7 @@ const URL_CRIB = new URL('../../assets/icons/crib.svg', import.meta.url).href;
  */
 export const initCribIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CRIB }, ...properties);
+    initIcon(element, { additionalClassName: 'cribIcon', url: URL_CRIB }, ...properties);
 }
 
 /**

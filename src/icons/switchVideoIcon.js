@@ -15,7 +15,7 @@ const URL_SWITCHVIDEO = new URL('../../assets/icons/switchVideo.svg', import.met
  */
 export const initSwitchVideoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWITCHVIDEO }, ...properties);
+    initIcon(element, { additionalClassName: 'switchVideoIcon', url: URL_SWITCHVIDEO }, ...properties);
 }
 
 /**

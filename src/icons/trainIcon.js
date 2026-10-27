@@ -15,7 +15,7 @@ const URL_TRAIN = new URL('../../assets/icons/train.svg', import.meta.url).href;
  */
 export const initTrainIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRAIN }, ...properties);
+    initIcon(element, { additionalClassName: 'trainIcon', url: URL_TRAIN }, ...properties);
 }
 
 /**

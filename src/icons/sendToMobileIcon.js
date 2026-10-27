@@ -15,7 +15,7 @@ const URL_SENDTOMOBILE = new URL('../../assets/icons/sendToMobile.svg', import.m
  */
 export const initSendToMobileIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SENDTOMOBILE }, ...properties);
+    initIcon(element, { additionalClassName: 'sendToMobileIcon', url: URL_SENDTOMOBILE }, ...properties);
 }
 
 /**

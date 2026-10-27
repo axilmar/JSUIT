@@ -15,7 +15,7 @@ const URL_FOLDERSHARED = new URL('../../assets/icons/folderShared.svg', import.m
  */
 export const initFolderSharedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOLDERSHARED }, ...properties);
+    initIcon(element, { additionalClassName: 'folderSharedIcon', url: URL_FOLDERSHARED }, ...properties);
 }
 
 /**

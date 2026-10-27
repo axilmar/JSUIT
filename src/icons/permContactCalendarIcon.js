@@ -15,7 +15,7 @@ const URL_PERMCONTACTCALENDAR = new URL('../../assets/icons/permContactCalendar.
  */
 export const initPermContactCalendarIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERMCONTACTCALENDAR }, ...properties);
+    initIcon(element, { additionalClassName: 'permContactCalendarIcon', url: URL_PERMCONTACTCALENDAR }, ...properties);
 }
 
 /**

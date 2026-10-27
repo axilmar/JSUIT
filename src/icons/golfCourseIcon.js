@@ -15,7 +15,7 @@ const URL_GOLFCOURSE = new URL('../../assets/icons/golfCourse.svg', import.meta.
  */
 export const initGolfCourseIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GOLFCOURSE }, ...properties);
+    initIcon(element, { additionalClassName: 'golfCourseIcon', url: URL_GOLFCOURSE }, ...properties);
 }
 
 /**

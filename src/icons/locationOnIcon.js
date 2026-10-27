@@ -15,7 +15,7 @@ const URL_LOCATIONON = new URL('../../assets/icons/locationOn.svg', import.meta.
  */
 export const initLocationOnIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCATIONON }, ...properties);
+    initIcon(element, { additionalClassName: 'locationOnIcon', url: URL_LOCATIONON }, ...properties);
 }
 
 /**

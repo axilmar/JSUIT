@@ -15,7 +15,7 @@ const URL_REDUCECAPACITY = new URL('../../assets/icons/reduceCapacity.svg', impo
  */
 export const initReduceCapacityIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REDUCECAPACITY }, ...properties);
+    initIcon(element, { additionalClassName: 'reduceCapacityIcon', url: URL_REDUCECAPACITY }, ...properties);
 }
 
 /**

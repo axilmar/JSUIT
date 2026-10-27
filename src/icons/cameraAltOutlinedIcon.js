@@ -15,7 +15,7 @@ const URL_CAMERAALTOUTLINED = new URL('../../assets/icons/cameraAltOutlined.svg'
  */
 export const initCameraAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CAMERAALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cameraAltOutlinedIcon', url: URL_CAMERAALTOUTLINED }, ...properties);
 }
 
 /**

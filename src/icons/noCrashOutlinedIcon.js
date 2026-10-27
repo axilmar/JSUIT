@@ -15,7 +15,7 @@ const URL_NOCRASHOUTLINED = new URL('../../assets/icons/noCrashOutlined.svg', im
  */
 export const initNoCrashOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOCRASHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'noCrashOutlinedIcon', url: URL_NOCRASHOUTLINED }, ...properties);
 }
 
 /**

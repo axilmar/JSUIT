@@ -15,7 +15,7 @@ const URL_DIRTYLENS = new URL('../../assets/icons/dirtyLens.svg', import.meta.ur
  */
 export const initDirtyLensIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRTYLENS }, ...properties);
+    initIcon(element, { additionalClassName: 'dirtyLensIcon', url: URL_DIRTYLENS }, ...properties);
 }
 
 /**

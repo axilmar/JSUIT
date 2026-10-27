@@ -15,7 +15,7 @@ const URL_MICOFF = new URL('../../assets/icons/micOff.svg', import.meta.url).hre
  */
 export const initMicOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MICOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'micOffIcon', url: URL_MICOFF }, ...properties);
 }
 
 /**

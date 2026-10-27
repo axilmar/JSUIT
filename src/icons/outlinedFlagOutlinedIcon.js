@@ -15,7 +15,7 @@ const URL_OUTLINEDFLAGOUTLINED = new URL('../../assets/icons/outlinedFlagOutline
  */
 export const initOutlinedFlagOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OUTLINEDFLAGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'outlinedFlagOutlinedIcon', url: URL_OUTLINEDFLAGOUTLINED }, ...properties);
 }
 
 /**

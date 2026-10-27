@@ -15,7 +15,7 @@ const URL_MARKUNREADCHATALTOUTLINED = new URL('../../assets/icons/markUnreadChat
  */
 export const initMarkUnreadChatAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MARKUNREADCHATALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'markUnreadChatAltOutlinedIcon', url: URL_MARKUNREADCHATALTOUTLINED }, ...properties);
 }
 
 /**

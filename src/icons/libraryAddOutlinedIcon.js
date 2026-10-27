@@ -15,7 +15,7 @@ const URL_LIBRARYADDOUTLINED = new URL('../../assets/icons/libraryAddOutlined.sv
  */
 export const initLibraryAddOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIBRARYADDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'libraryAddOutlinedIcon', url: URL_LIBRARYADDOUTLINED }, ...properties);
 }
 
 /**

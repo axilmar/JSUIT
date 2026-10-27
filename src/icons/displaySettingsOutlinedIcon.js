@@ -15,7 +15,7 @@ const URL_DISPLAYSETTINGSOUTLINED = new URL('../../assets/icons/displaySettingsO
  */
 export const initDisplaySettingsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DISPLAYSETTINGSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'displaySettingsOutlinedIcon', url: URL_DISPLAYSETTINGSOUTLINED }, ...properties);
 }
 
 /**

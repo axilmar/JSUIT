@@ -15,7 +15,7 @@ const URL_CROPFREE = new URL('../../assets/icons/cropFree.svg', import.meta.url)
  */
 export const initCropFreeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CROPFREE }, ...properties);
+    initIcon(element, { additionalClassName: 'cropFreeIcon', url: URL_CROPFREE }, ...properties);
 }
 
 /**

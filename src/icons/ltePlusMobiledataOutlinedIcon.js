@@ -15,7 +15,7 @@ const URL_LTEPLUSMOBILEDATAOUTLINED = new URL('../../assets/icons/ltePlusMobiled
  */
 export const initLtePlusMobiledataOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LTEPLUSMOBILEDATAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'ltePlusMobiledataOutlinedIcon', url: URL_LTEPLUSMOBILEDATAOUTLINED }, ...properties);
 }
 
 /**

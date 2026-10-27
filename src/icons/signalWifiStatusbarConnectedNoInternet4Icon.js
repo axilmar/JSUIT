@@ -15,7 +15,7 @@ const URL_SIGNALWIFISTATUSBARCONNECTEDNOINTERNET4 = new URL('../../assets/icons/
  */
 export const initSignalWifiStatusbarConnectedNoInternet4Icon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNALWIFISTATUSBARCONNECTEDNOINTERNET4 }, ...properties);
+    initIcon(element, { additionalClassName: 'signalWifiStatusbarConnectedNoInternet4Icon', url: URL_SIGNALWIFISTATUSBARCONNECTEDNOINTERNET4 }, ...properties);
 }
 
 /**

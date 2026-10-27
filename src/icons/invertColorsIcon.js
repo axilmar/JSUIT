@@ -15,7 +15,7 @@ const URL_INVERTCOLORS = new URL('../../assets/icons/invertColors.svg', import.m
  */
 export const initInvertColorsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INVERTCOLORS }, ...properties);
+    initIcon(element, { additionalClassName: 'invertColorsIcon', url: URL_INVERTCOLORS }, ...properties);
 }
 
 /**

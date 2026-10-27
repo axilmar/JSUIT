@@ -15,7 +15,7 @@ const URL_MOVIEOUTLINED = new URL('../../assets/icons/movieOutlined.svg', import
  */
 export const initMovieOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOVIEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'movieOutlinedIcon', url: URL_MOVIEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_MARKEMAILREADOUTLINED = new URL('../../assets/icons/markEmailReadOutli
  */
 export const initMarkEmailReadOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MARKEMAILREADOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'markEmailReadOutlinedIcon', url: URL_MARKEMAILREADOUTLINED }, ...properties);
 }
 
 /**

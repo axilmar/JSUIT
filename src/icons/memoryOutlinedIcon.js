@@ -15,7 +15,7 @@ const URL_MEMORYOUTLINED = new URL('../../assets/icons/memoryOutlined.svg', impo
  */
 export const initMemoryOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MEMORYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'memoryOutlinedIcon', url: URL_MEMORYOUTLINED }, ...properties);
 }
 
 /**

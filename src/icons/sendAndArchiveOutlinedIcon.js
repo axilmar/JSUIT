@@ -15,7 +15,7 @@ const URL_SENDANDARCHIVEOUTLINED = new URL('../../assets/icons/sendAndArchiveOut
  */
 export const initSendAndArchiveOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SENDANDARCHIVEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sendAndArchiveOutlinedIcon', url: URL_SENDANDARCHIVEOUTLINED }, ...properties);
 }
 
 /**

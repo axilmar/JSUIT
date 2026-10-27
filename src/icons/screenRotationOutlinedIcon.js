@@ -15,7 +15,7 @@ const URL_SCREENROTATIONOUTLINED = new URL('../../assets/icons/screenRotationOut
  */
 export const initScreenRotationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCREENROTATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'screenRotationOutlinedIcon', url: URL_SCREENROTATIONOUTLINED }, ...properties);
 }
 
 /**

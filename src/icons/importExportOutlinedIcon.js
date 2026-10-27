@@ -15,7 +15,7 @@ const URL_IMPORTEXPORTOUTLINED = new URL('../../assets/icons/importExportOutline
  */
 export const initImportExportOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_IMPORTEXPORTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'importExportOutlinedIcon', url: URL_IMPORTEXPORTOUTLINED }, ...properties);
 }
 
 /**

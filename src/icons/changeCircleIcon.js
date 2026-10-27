@@ -15,7 +15,7 @@ const URL_CHANGECIRCLE = new URL('../../assets/icons/changeCircle.svg', import.m
  */
 export const initChangeCircleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHANGECIRCLE }, ...properties);
+    initIcon(element, { additionalClassName: 'changeCircleIcon', url: URL_CHANGECIRCLE }, ...properties);
 }
 
 /**

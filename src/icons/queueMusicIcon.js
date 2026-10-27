@@ -15,7 +15,7 @@ const URL_QUEUEMUSIC = new URL('../../assets/icons/queueMusic.svg', import.meta.
  */
 export const initQueueMusicIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUEUEMUSIC }, ...properties);
+    initIcon(element, { additionalClassName: 'queueMusicIcon', url: URL_QUEUEMUSIC }, ...properties);
 }
 
 /**

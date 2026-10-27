@@ -15,7 +15,7 @@ const URL_FIBERMANUALRECORD = new URL('../../assets/icons/fiberManualRecord.svg'
  */
 export const initFiberManualRecordIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIBERMANUALRECORD }, ...properties);
+    initIcon(element, { additionalClassName: 'fiberManualRecordIcon', url: URL_FIBERMANUALRECORD }, ...properties);
 }
 
 /**

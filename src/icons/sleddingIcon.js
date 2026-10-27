@@ -15,7 +15,7 @@ const URL_SLEDDING = new URL('../../assets/icons/sledding.svg', import.meta.url)
  */
 export const initSleddingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SLEDDING }, ...properties);
+    initIcon(element, { additionalClassName: 'sleddingIcon', url: URL_SLEDDING }, ...properties);
 }
 
 /**

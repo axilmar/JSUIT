@@ -15,7 +15,7 @@ const URL_MOREVERTOUTLINED = new URL('../../assets/icons/moreVertOutlined.svg', 
  */
 export const initMoreVertOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOREVERTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'moreVertOutlinedIcon', url: URL_MOREVERTOUTLINED }, ...properties);
 }
 
 /**

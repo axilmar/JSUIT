@@ -15,7 +15,7 @@ const URL_SECURITYOUTLINED = new URL('../../assets/icons/securityOutlined.svg', 
  */
 export const initSecurityOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SECURITYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'securityOutlinedIcon', url: URL_SECURITYOUTLINED }, ...properties);
 }
 
 /**

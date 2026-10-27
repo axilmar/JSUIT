@@ -15,7 +15,7 @@ const URL_FOLDERSPECIAL = new URL('../../assets/icons/folderSpecial.svg', import
  */
 export const initFolderSpecialIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOLDERSPECIAL }, ...properties);
+    initIcon(element, { additionalClassName: 'folderSpecialIcon', url: URL_FOLDERSPECIAL }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_BLURCIRCULAR = new URL('../../assets/icons/blurCircular.svg', import.m
  */
 export const initBlurCircularIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLURCIRCULAR }, ...properties);
+    initIcon(element, { additionalClassName: 'blurCircularIcon', url: URL_BLURCIRCULAR }, ...properties);
 }
 
 /**

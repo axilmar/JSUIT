@@ -15,7 +15,7 @@ const URL_NETWORKCHECKOUTLINED = new URL('../../assets/icons/networkCheckOutline
  */
 export const initNetworkCheckOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NETWORKCHECKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'networkCheckOutlinedIcon', url: URL_NETWORKCHECKOUTLINED }, ...properties);
 }
 
 /**

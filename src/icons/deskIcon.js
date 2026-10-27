@@ -15,7 +15,7 @@ const URL_DESK = new URL('../../assets/icons/desk.svg', import.meta.url).href;
  */
 export const initDeskIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DESK }, ...properties);
+    initIcon(element, { additionalClassName: 'deskIcon', url: URL_DESK }, ...properties);
 }
 
 /**

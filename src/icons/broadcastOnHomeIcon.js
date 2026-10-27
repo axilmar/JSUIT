@@ -15,7 +15,7 @@ const URL_BROADCASTONHOME = new URL('../../assets/icons/broadcastOnHome.svg', im
  */
 export const initBroadcastOnHomeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BROADCASTONHOME }, ...properties);
+    initIcon(element, { additionalClassName: 'broadcastOnHomeIcon', url: URL_BROADCASTONHOME }, ...properties);
 }
 
 /**

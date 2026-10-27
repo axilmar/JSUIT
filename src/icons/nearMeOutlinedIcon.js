@@ -15,7 +15,7 @@ const URL_NEARMEOUTLINED = new URL('../../assets/icons/nearMeOutlined.svg', impo
  */
 export const initNearMeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NEARMEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'nearMeOutlinedIcon', url: URL_NEARMEOUTLINED }, ...properties);
 }
 
 /**

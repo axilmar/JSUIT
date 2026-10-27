@@ -15,7 +15,7 @@ const URL_BROKENIMAGE = new URL('../../assets/icons/brokenImage.svg', import.met
  */
 export const initBrokenImageIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BROKENIMAGE }, ...properties);
+    initIcon(element, { additionalClassName: 'brokenImageIcon', url: URL_BROKENIMAGE }, ...properties);
 }
 
 /**

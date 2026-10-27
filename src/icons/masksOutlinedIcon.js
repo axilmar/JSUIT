@@ -15,7 +15,7 @@ const URL_MASKSOUTLINED = new URL('../../assets/icons/masksOutlined.svg', import
  */
 export const initMasksOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MASKSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'masksOutlinedIcon', url: URL_MASKSOUTLINED }, ...properties);
 }
 
 /**

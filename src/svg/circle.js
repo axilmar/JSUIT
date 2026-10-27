@@ -10,7 +10,7 @@ import { initSVGGeometryElement } from "./SVGGeometryElement.js";
  */
 export const initCircle = (element, ...properties) => {
     console.assert(element instanceof SVGCircleElement);
-    initSVGGeometryElement(element, ...properties);
+    initSVGGeometryElement(element, { additionalClassName: 'circle' }, ...properties);
 }
 
 /**

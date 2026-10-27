@@ -15,7 +15,7 @@ const URL_UPDATEOUTLINED = new URL('../../assets/icons/updateOutlined.svg', impo
  */
 export const initUpdateOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UPDATEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'updateOutlinedIcon', url: URL_UPDATEOUTLINED }, ...properties);
 }
 
 /**

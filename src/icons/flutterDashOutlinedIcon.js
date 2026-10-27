@@ -15,7 +15,7 @@ const URL_FLUTTERDASHOUTLINED = new URL('../../assets/icons/flutterDashOutlined.
  */
 export const initFlutterDashOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLUTTERDASHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'flutterDashOutlinedIcon', url: URL_FLUTTERDASHOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FORMATALIGNJUSTIFYOUTLINED = new URL('../../assets/icons/formatAlignJu
  */
 export const initFormatAlignJustifyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATALIGNJUSTIFYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatAlignJustifyOutlinedIcon', url: URL_FORMATALIGNJUSTIFYOUTLINED }, ...properties);
 }
 
 /**

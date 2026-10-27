@@ -15,7 +15,7 @@ const URL_MAILOUTLINEOUTLINED = new URL('../../assets/icons/mailOutlineOutlined.
  */
 export const initMailOutlineOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MAILOUTLINEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'mailOutlineOutlinedIcon', url: URL_MAILOUTLINEOUTLINED }, ...properties);
 }
 
 /**

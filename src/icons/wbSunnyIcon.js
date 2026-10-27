@@ -15,7 +15,7 @@ const URL_WBSUNNY = new URL('../../assets/icons/wbSunny.svg', import.meta.url).h
  */
 export const initWbSunnyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WBSUNNY }, ...properties);
+    initIcon(element, { additionalClassName: 'wbSunnyIcon', url: URL_WBSUNNY }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CLEANHANDS = new URL('../../assets/icons/cleanHands.svg', import.meta.
  */
 export const initCleanHandsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLEANHANDS }, ...properties);
+    initIcon(element, { additionalClassName: 'cleanHandsIcon', url: URL_CLEANHANDS }, ...properties);
 }
 
 /**

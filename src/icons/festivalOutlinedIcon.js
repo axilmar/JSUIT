@@ -15,7 +15,7 @@ const URL_FESTIVALOUTLINED = new URL('../../assets/icons/festivalOutlined.svg', 
  */
 export const initFestivalOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FESTIVALOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'festivalOutlinedIcon', url: URL_FESTIVALOUTLINED }, ...properties);
 }
 
 /**

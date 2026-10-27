@@ -15,7 +15,7 @@ const URL_PHONELOCKED = new URL('../../assets/icons/phoneLocked.svg', import.met
  */
 export const initPhoneLockedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONELOCKED }, ...properties);
+    initIcon(element, { additionalClassName: 'phoneLockedIcon', url: URL_PHONELOCKED }, ...properties);
 }
 
 /**

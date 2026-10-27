@@ -15,7 +15,7 @@ const URL_VIEWCOMFY = new URL('../../assets/icons/viewComfy.svg', import.meta.ur
  */
 export const initViewComfyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWCOMFY }, ...properties);
+    initIcon(element, { additionalClassName: 'viewComfyIcon', url: URL_VIEWCOMFY }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_THEATERCOMEDY = new URL('../../assets/icons/theaterComedy.svg', import
  */
 export const initTheaterComedyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THEATERCOMEDY }, ...properties);
+    initIcon(element, { additionalClassName: 'theaterComedyIcon', url: URL_THEATERCOMEDY }, ...properties);
 }
 
 /**

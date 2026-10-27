@@ -15,7 +15,7 @@ const URL_PENTAGON = new URL('../../assets/icons/pentagon.svg', import.meta.url)
  */
 export const initPentagonIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PENTAGON }, ...properties);
+    initIcon(element, { additionalClassName: 'pentagonIcon', url: URL_PENTAGON }, ...properties);
 }
 
 /**

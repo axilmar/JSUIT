@@ -15,7 +15,7 @@ const URL_TOGGLEON = new URL('../../assets/icons/toggleOn.svg', import.meta.url)
  */
 export const initToggleOnIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TOGGLEON }, ...properties);
+    initIcon(element, { additionalClassName: 'toggleOnIcon', url: URL_TOGGLEON }, ...properties);
 }
 
 /**

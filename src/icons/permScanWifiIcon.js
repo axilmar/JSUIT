@@ -15,7 +15,7 @@ const URL_PERMSCANWIFI = new URL('../../assets/icons/permScanWifi.svg', import.m
  */
 export const initPermScanWifiIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERMSCANWIFI }, ...properties);
+    initIcon(element, { additionalClassName: 'permScanWifiIcon', url: URL_PERMSCANWIFI }, ...properties);
 }
 
 /**

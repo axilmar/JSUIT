@@ -15,7 +15,7 @@ const URL_SIGNALWIFISTATUSBARNULL = new URL('../../assets/icons/signalWifiStatus
  */
 export const initSignalWifiStatusbarNullIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNALWIFISTATUSBARNULL }, ...properties);
+    initIcon(element, { additionalClassName: 'signalWifiStatusbarNullIcon', url: URL_SIGNALWIFISTATUSBARNULL }, ...properties);
 }
 
 /**

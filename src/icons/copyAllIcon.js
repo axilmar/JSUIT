@@ -15,7 +15,7 @@ const URL_COPYALL = new URL('../../assets/icons/copyAll.svg', import.meta.url).h
  */
 export const initCopyAllIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COPYALL }, ...properties);
+    initIcon(element, { additionalClassName: 'copyAllIcon', url: URL_COPYALL }, ...properties);
 }
 
 /**

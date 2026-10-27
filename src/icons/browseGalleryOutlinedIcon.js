@@ -15,7 +15,7 @@ const URL_BROWSEGALLERYOUTLINED = new URL('../../assets/icons/browseGalleryOutli
  */
 export const initBrowseGalleryOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BROWSEGALLERYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'browseGalleryOutlinedIcon', url: URL_BROWSEGALLERYOUTLINED }, ...properties);
 }
 
 /**

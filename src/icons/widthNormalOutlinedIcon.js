@@ -15,7 +15,7 @@ const URL_WIDTHNORMALOUTLINED = new URL('../../assets/icons/widthNormalOutlined.
  */
 export const initWidthNormalOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIDTHNORMALOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'widthNormalOutlinedIcon', url: URL_WIDTHNORMALOUTLINED }, ...properties);
 }
 
 /**

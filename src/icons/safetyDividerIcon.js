@@ -15,7 +15,7 @@ const URL_SAFETYDIVIDER = new URL('../../assets/icons/safetyDivider.svg', import
  */
 export const initSafetyDividerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SAFETYDIVIDER }, ...properties);
+    initIcon(element, { additionalClassName: 'safetyDividerIcon', url: URL_SAFETYDIVIDER }, ...properties);
 }
 
 /**

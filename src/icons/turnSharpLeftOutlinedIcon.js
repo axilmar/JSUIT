@@ -15,7 +15,7 @@ const URL_TURNSHARPLEFTOUTLINED = new URL('../../assets/icons/turnSharpLeftOutli
  */
 export const initTurnSharpLeftOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TURNSHARPLEFTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'turnSharpLeftOutlinedIcon', url: URL_TURNSHARPLEFTOUTLINED }, ...properties);
 }
 
 /**

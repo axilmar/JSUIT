@@ -15,7 +15,7 @@ const URL_DIAMONDOUTLINED = new URL('../../assets/icons/diamondOutlined.svg', im
  */
 export const initDiamondOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIAMONDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'diamondOutlinedIcon', url: URL_DIAMONDOUTLINED }, ...properties);
 }
 
 /**

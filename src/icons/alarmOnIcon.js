@@ -15,7 +15,7 @@ const URL_ALARMON = new URL('../../assets/icons/alarmOn.svg', import.meta.url).h
  */
 export const initAlarmOnIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALARMON }, ...properties);
+    initIcon(element, { additionalClassName: 'alarmOnIcon', url: URL_ALARMON }, ...properties);
 }
 
 /**

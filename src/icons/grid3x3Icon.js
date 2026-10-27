@@ -15,7 +15,7 @@ const URL_GRID3X3 = new URL('../../assets/icons/grid3x3.svg', import.meta.url).h
  */
 export const initGrid3x3Icon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRID3X3 }, ...properties);
+    initIcon(element, { additionalClassName: 'grid3x3Icon', url: URL_GRID3X3 }, ...properties);
 }
 
 /**

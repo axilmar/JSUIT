@@ -15,7 +15,7 @@ const URL_SOAP = new URL('../../assets/icons/soap.svg', import.meta.url).href;
  */
 export const initSoapIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SOAP }, ...properties);
+    initIcon(element, { additionalClassName: 'soapIcon', url: URL_SOAP }, ...properties);
 }
 
 /**

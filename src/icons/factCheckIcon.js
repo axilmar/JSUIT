@@ -15,7 +15,7 @@ const URL_FACTCHECK = new URL('../../assets/icons/factCheck.svg', import.meta.ur
  */
 export const initFactCheckIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FACTCHECK }, ...properties);
+    initIcon(element, { additionalClassName: 'factCheckIcon', url: URL_FACTCHECK }, ...properties);
 }
 
 /**

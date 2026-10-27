@@ -15,7 +15,7 @@ const URL_PERSONALVIDEOOUTLINED = new URL('../../assets/icons/personalVideoOutli
  */
 export const initPersonalVideoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERSONALVIDEOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'personalVideoOutlinedIcon', url: URL_PERSONALVIDEOOUTLINED }, ...properties);
 }
 
 /**

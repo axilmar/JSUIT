@@ -15,7 +15,7 @@ const URL_CANCELSCHEDULESENDOUTLINED = new URL('../../assets/icons/cancelSchedul
  */
 export const initCancelScheduleSendOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CANCELSCHEDULESENDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cancelScheduleSendOutlinedIcon', url: URL_CANCELSCHEDULESENDOUTLINED }, ...properties);
 }
 
 /**

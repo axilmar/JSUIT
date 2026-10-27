@@ -15,7 +15,7 @@ const URL_EMERGENCYSHAREOUTLINED = new URL('../../assets/icons/emergencyShareOut
  */
 export const initEmergencyShareOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EMERGENCYSHAREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'emergencyShareOutlinedIcon', url: URL_EMERGENCYSHAREOUTLINED }, ...properties);
 }
 
 /**

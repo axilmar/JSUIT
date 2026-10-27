@@ -15,7 +15,7 @@ const URL_EDITLOCATIONOUTLINED = new URL('../../assets/icons/editLocationOutline
  */
 export const initEditLocationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EDITLOCATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'editLocationOutlinedIcon', url: URL_EDITLOCATIONOUTLINED }, ...properties);
 }
 
 /**

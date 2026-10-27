@@ -15,7 +15,7 @@ const URL_ANDROIDOUTLINED = new URL('../../assets/icons/androidOutlined.svg', im
  */
 export const initAndroidOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ANDROIDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'androidOutlinedIcon', url: URL_ANDROIDOUTLINED }, ...properties);
 }
 
 /**

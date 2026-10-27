@@ -15,7 +15,7 @@ const URL_LOCALBAR = new URL('../../assets/icons/localBar.svg', import.meta.url)
  */
 export const initLocalBarIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALBAR }, ...properties);
+    initIcon(element, { additionalClassName: 'localBarIcon', url: URL_LOCALBAR }, ...properties);
 }
 
 /**

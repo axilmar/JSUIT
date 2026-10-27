@@ -15,7 +15,7 @@ const URL_ROUNDEDCORNER = new URL('../../assets/icons/roundedCorner.svg', import
  */
 export const initRoundedCornerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROUNDEDCORNER }, ...properties);
+    initIcon(element, { additionalClassName: 'roundedCornerIcon', url: URL_ROUNDEDCORNER }, ...properties);
 }
 
 /**

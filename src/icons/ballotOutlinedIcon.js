@@ -15,7 +15,7 @@ const URL_BALLOTOUTLINED = new URL('../../assets/icons/ballotOutlined.svg', impo
  */
 export const initBallotOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BALLOTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'ballotOutlinedIcon', url: URL_BALLOTOUTLINED }, ...properties);
 }
 
 /**

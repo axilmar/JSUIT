@@ -15,7 +15,7 @@ const URL_PRESENTTOALLOUTLINED = new URL('../../assets/icons/presentToAllOutline
  */
 export const initPresentToAllOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PRESENTTOALLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'presentToAllOutlinedIcon', url: URL_PRESENTTOALLOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_HEVC = new URL('../../assets/icons/hevc.svg', import.meta.url).href;
  */
 export const initHevcIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEVC }, ...properties);
+    initIcon(element, { additionalClassName: 'hevcIcon', url: URL_HEVC }, ...properties);
 }
 
 /**

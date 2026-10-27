@@ -15,7 +15,7 @@ const URL_WATCHOFF = new URL('../../assets/icons/watchOff.svg', import.meta.url)
  */
 export const initWatchOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WATCHOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'watchOffIcon', url: URL_WATCHOFF }, ...properties);
 }
 
 /**

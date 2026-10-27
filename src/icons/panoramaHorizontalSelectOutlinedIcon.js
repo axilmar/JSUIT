@@ -15,7 +15,7 @@ const URL_PANORAMAHORIZONTALSELECTOUTLINED = new URL('../../assets/icons/panoram
  */
 export const initPanoramaHorizontalSelectOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PANORAMAHORIZONTALSELECTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'panoramaHorizontalSelectOutlinedIcon', url: URL_PANORAMAHORIZONTALSELECTOUTLINED }, ...properties);
 }
 
 /**

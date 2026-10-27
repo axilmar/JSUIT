@@ -15,7 +15,7 @@ const URL_HOMEMAX = new URL('../../assets/icons/homeMax.svg', import.meta.url).h
  */
 export const initHomeMaxIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOMEMAX }, ...properties);
+    initIcon(element, { additionalClassName: 'homeMaxIcon', url: URL_HOMEMAX }, ...properties);
 }
 
 /**

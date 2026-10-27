@@ -10,5 +10,5 @@ import { initSVGTextContentElement } from "./SVGTextContentElement.js";
  */
 export const initSVGTextPositioningElement = (element, ...properties) => {
     console.assert(element instanceof SVGTextPositioningElement);
-    initSVGTextContentElement(element, ...properties);
+    initSVGTextContentElement(element, { additionalClassName: 'SVGTextPositioningElement' }, ...properties);
 }

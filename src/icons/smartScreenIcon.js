@@ -15,7 +15,7 @@ const URL_SMARTSCREEN = new URL('../../assets/icons/smartScreen.svg', import.met
  */
 export const initSmartScreenIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SMARTSCREEN }, ...properties);
+    initIcon(element, { additionalClassName: 'smartScreenIcon', url: URL_SMARTSCREEN }, ...properties);
 }
 
 /**

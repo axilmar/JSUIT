@@ -15,7 +15,7 @@ const URL_ADMINPANELSETTINGSOUTLINED = new URL('../../assets/icons/adminPanelSet
  */
 export const initAdminPanelSettingsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADMINPANELSETTINGSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'adminPanelSettingsOutlinedIcon', url: URL_ADMINPANELSETTINGSOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_HOWTOVOTEOUTLINED = new URL('../../assets/icons/howToVoteOutlined.svg'
  */
 export const initHowToVoteOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOWTOVOTEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'howToVoteOutlinedIcon', url: URL_HOWTOVOTEOUTLINED }, ...properties);
 }
 
 /**

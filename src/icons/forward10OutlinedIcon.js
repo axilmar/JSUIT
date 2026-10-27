@@ -15,7 +15,7 @@ const URL_FORWARD10OUTLINED = new URL('../../assets/icons/forward10Outlined.svg'
  */
 export const initForward10OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORWARD10OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'forward10OutlinedIcon', url: URL_FORWARD10OUTLINED }, ...properties);
 }
 
 /**

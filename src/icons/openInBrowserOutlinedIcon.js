@@ -15,7 +15,7 @@ const URL_OPENINBROWSEROUTLINED = new URL('../../assets/icons/openInBrowserOutli
  */
 export const initOpenInBrowserOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OPENINBROWSEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'openInBrowserOutlinedIcon', url: URL_OPENINBROWSEROUTLINED }, ...properties);
 }
 
 /**

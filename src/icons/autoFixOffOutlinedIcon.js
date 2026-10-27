@@ -15,7 +15,7 @@ const URL_AUTOFIXOFFOUTLINED = new URL('../../assets/icons/autoFixOffOutlined.sv
  */
 export const initAutoFixOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOFIXOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'autoFixOffOutlinedIcon', url: URL_AUTOFIXOFFOUTLINED }, ...properties);
 }
 
 /**

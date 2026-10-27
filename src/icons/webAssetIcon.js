@@ -15,7 +15,7 @@ const URL_WEBASSET = new URL('../../assets/icons/webAsset.svg', import.meta.url)
  */
 export const initWebAssetIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WEBASSET }, ...properties);
+    initIcon(element, { additionalClassName: 'webAssetIcon', url: URL_WEBASSET }, ...properties);
 }
 
 /**

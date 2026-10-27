@@ -15,7 +15,7 @@ const URL_SAFETYCHECK = new URL('../../assets/icons/safetyCheck.svg', import.met
  */
 export const initSafetyCheckIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SAFETYCHECK }, ...properties);
+    initIcon(element, { additionalClassName: 'safetyCheckIcon', url: URL_SAFETYCHECK }, ...properties);
 }
 
 /**

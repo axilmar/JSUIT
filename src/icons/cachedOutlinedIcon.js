@@ -15,7 +15,7 @@ const URL_CACHEDOUTLINED = new URL('../../assets/icons/cachedOutlined.svg', impo
  */
 export const initCachedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CACHEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cachedOutlinedIcon', url: URL_CACHEDOUTLINED }, ...properties);
 }
 
 /**

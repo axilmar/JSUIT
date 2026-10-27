@@ -15,7 +15,7 @@ const URL_GAVEL = new URL('../../assets/icons/gavel.svg', import.meta.url).href;
  */
 export const initGavelIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GAVEL }, ...properties);
+    initIcon(element, { additionalClassName: 'gavelIcon', url: URL_GAVEL }, ...properties);
 }
 
 /**

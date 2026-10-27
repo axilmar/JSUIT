@@ -15,7 +15,7 @@ const URL_DELIVERYDINING = new URL('../../assets/icons/deliveryDining.svg', impo
  */
 export const initDeliveryDiningIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DELIVERYDINING }, ...properties);
+    initIcon(element, { additionalClassName: 'deliveryDiningIcon', url: URL_DELIVERYDINING }, ...properties);
 }
 
 /**

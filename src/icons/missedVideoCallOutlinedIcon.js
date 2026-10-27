@@ -15,7 +15,7 @@ const URL_MISSEDVIDEOCALLOUTLINED = new URL('../../assets/icons/missedVideoCallO
  */
 export const initMissedVideoCallOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MISSEDVIDEOCALLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'missedVideoCallOutlinedIcon', url: URL_MISSEDVIDEOCALLOUTLINED }, ...properties);
 }
 
 /**

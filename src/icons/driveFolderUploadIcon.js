@@ -15,7 +15,7 @@ const URL_DRIVEFOLDERUPLOAD = new URL('../../assets/icons/driveFolderUpload.svg'
  */
 export const initDriveFolderUploadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRIVEFOLDERUPLOAD }, ...properties);
+    initIcon(element, { additionalClassName: 'driveFolderUploadIcon', url: URL_DRIVEFOLDERUPLOAD }, ...properties);
 }
 
 /**

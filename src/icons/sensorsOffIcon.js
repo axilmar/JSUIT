@@ -15,7 +15,7 @@ const URL_SENSORSOFF = new URL('../../assets/icons/sensorsOff.svg', import.meta.
  */
 export const initSensorsOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SENSORSOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'sensorsOffIcon', url: URL_SENSORSOFF }, ...properties);
 }
 
 /**

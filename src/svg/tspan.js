@@ -10,7 +10,7 @@ import { initSVGTextPositioningElement } from "./SVGTextPositioningElement.js";
  */
 export const initTspan = (element, ...properties) => {
     console.assert(element instanceof SVGTSpanElement);
-    initSVGTextPositioningElement(element, ...properties);
+    initSVGTextPositioningElement(element, { additionalClassName: 'tspan' }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_HANDSHAKEOUTLINED = new URL('../../assets/icons/handshakeOutlined.svg'
  */
 export const initHandshakeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HANDSHAKEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'handshakeOutlinedIcon', url: URL_HANDSHAKEOUTLINED }, ...properties);
 }
 
 /**

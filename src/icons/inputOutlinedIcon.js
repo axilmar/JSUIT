@@ -15,7 +15,7 @@ const URL_INPUTOUTLINED = new URL('../../assets/icons/inputOutlined.svg', import
  */
 export const initInputOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INPUTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'inputOutlinedIcon', url: URL_INPUTOUTLINED }, ...properties);
 }
 
 /**

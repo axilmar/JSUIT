@@ -15,7 +15,7 @@ const URL_SDCARDALERT = new URL('../../assets/icons/sdCardAlert.svg', import.met
  */
 export const initSdCardAlertIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SDCARDALERT }, ...properties);
+    initIcon(element, { additionalClassName: 'sdCardAlertIcon', url: URL_SDCARDALERT }, ...properties);
 }
 
 /**

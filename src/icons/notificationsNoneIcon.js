@@ -15,7 +15,7 @@ const URL_NOTIFICATIONSNONE = new URL('../../assets/icons/notificationsNone.svg'
  */
 export const initNotificationsNoneIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTIFICATIONSNONE }, ...properties);
+    initIcon(element, { additionalClassName: 'notificationsNoneIcon', url: URL_NOTIFICATIONSNONE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_AUTOGRAPH = new URL('../../assets/icons/autoGraph.svg', import.meta.ur
  */
 export const initAutoGraphIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOGRAPH }, ...properties);
+    initIcon(element, { additionalClassName: 'autoGraphIcon', url: URL_AUTOGRAPH }, ...properties);
 }
 
 /**

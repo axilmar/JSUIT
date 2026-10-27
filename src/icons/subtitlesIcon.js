@@ -15,7 +15,7 @@ const URL_SUBTITLES = new URL('../../assets/icons/subtitles.svg', import.meta.ur
  */
 export const initSubtitlesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUBTITLES }, ...properties);
+    initIcon(element, { additionalClassName: 'subtitlesIcon', url: URL_SUBTITLES }, ...properties);
 }
 
 /**

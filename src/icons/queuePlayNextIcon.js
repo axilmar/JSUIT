@@ -15,7 +15,7 @@ const URL_QUEUEPLAYNEXT = new URL('../../assets/icons/queuePlayNext.svg', import
  */
 export const initQueuePlayNextIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUEUEPLAYNEXT }, ...properties);
+    initIcon(element, { additionalClassName: 'queuePlayNextIcon', url: URL_QUEUEPLAYNEXT }, ...properties);
 }
 
 /**

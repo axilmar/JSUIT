@@ -15,7 +15,7 @@ const URL_HEIGHT = new URL('../../assets/icons/height.svg', import.meta.url).hre
  */
 export const initHeightIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEIGHT }, ...properties);
+    initIcon(element, { additionalClassName: 'heightIcon', url: URL_HEIGHT }, ...properties);
 }
 
 /**

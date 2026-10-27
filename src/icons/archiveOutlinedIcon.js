@@ -15,7 +15,7 @@ const URL_ARCHIVEOUTLINED = new URL('../../assets/icons/archiveOutlined.svg', im
  */
 export const initArchiveOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARCHIVEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'archiveOutlinedIcon', url: URL_ARCHIVEOUTLINED }, ...properties);
 }
 
 /**

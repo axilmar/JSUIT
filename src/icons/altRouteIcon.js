@@ -15,7 +15,7 @@ const URL_ALTROUTE = new URL('../../assets/icons/altRoute.svg', import.meta.url)
  */
 export const initAltRouteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALTROUTE }, ...properties);
+    initIcon(element, { additionalClassName: 'altRouteIcon', url: URL_ALTROUTE }, ...properties);
 }
 
 /**

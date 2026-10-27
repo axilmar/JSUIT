@@ -15,7 +15,7 @@ const URL_FILTERBANDW = new URL('../../assets/icons/filterBAndW.svg', import.met
  */
 export const initFilterBAndWIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERBANDW }, ...properties);
+    initIcon(element, { additionalClassName: 'filterBAndWIcon', url: URL_FILTERBANDW }, ...properties);
 }
 
 /**

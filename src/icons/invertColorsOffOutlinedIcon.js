@@ -15,7 +15,7 @@ const URL_INVERTCOLORSOFFOUTLINED = new URL('../../assets/icons/invertColorsOffO
  */
 export const initInvertColorsOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INVERTCOLORSOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'invertColorsOffOutlinedIcon', url: URL_INVERTCOLORSOFFOUTLINED }, ...properties);
 }
 
 /**

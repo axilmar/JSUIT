@@ -15,7 +15,7 @@ const URL_EDITCALENDAR = new URL('../../assets/icons/editCalendar.svg', import.m
  */
 export const initEditCalendarIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EDITCALENDAR }, ...properties);
+    initIcon(element, { additionalClassName: 'editCalendarIcon', url: URL_EDITCALENDAR }, ...properties);
 }
 
 /**

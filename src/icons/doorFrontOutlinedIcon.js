@@ -15,7 +15,7 @@ const URL_DOORFRONTOUTLINED = new URL('../../assets/icons/doorFrontOutlined.svg'
  */
 export const initDoorFrontOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOORFRONTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'doorFrontOutlinedIcon', url: URL_DOORFRONTOUTLINED }, ...properties);
 }
 
 /**

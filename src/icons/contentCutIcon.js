@@ -15,7 +15,7 @@ const URL_CONTENTCUT = new URL('../../assets/icons/contentCut.svg', import.meta.
  */
 export const initContentCutIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTENTCUT }, ...properties);
+    initIcon(element, { additionalClassName: 'contentCutIcon', url: URL_CONTENTCUT }, ...properties);
 }
 
 /**

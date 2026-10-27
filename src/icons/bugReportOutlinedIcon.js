@@ -15,7 +15,7 @@ const URL_BUGREPORTOUTLINED = new URL('../../assets/icons/bugReportOutlined.svg'
  */
 export const initBugReportOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BUGREPORTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bugReportOutlinedIcon', url: URL_BUGREPORTOUTLINED }, ...properties);
 }
 
 /**

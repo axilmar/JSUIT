@@ -15,7 +15,7 @@ const URL_MASKS = new URL('../../assets/icons/masks.svg', import.meta.url).href;
  */
 export const initMasksIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MASKS }, ...properties);
+    initIcon(element, { additionalClassName: 'masksIcon', url: URL_MASKS }, ...properties);
 }
 
 /**

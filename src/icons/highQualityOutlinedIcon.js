@@ -15,7 +15,7 @@ const URL_HIGHQUALITYOUTLINED = new URL('../../assets/icons/highQualityOutlined.
  */
 export const initHighQualityOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HIGHQUALITYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'highQualityOutlinedIcon', url: URL_HIGHQUALITYOUTLINED }, ...properties);
 }
 
 /**

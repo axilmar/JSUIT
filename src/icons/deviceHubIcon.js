@@ -15,7 +15,7 @@ const URL_DEVICEHUB = new URL('../../assets/icons/deviceHub.svg', import.meta.ur
  */
 export const initDeviceHubIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEVICEHUB }, ...properties);
+    initIcon(element, { additionalClassName: 'deviceHubIcon', url: URL_DEVICEHUB }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_QUERYBUILDEROUTLINED = new URL('../../assets/icons/queryBuilderOutline
  */
 export const initQueryBuilderOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUERYBUILDEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'queryBuilderOutlinedIcon', url: URL_QUERYBUILDEROUTLINED }, ...properties);
 }
 
 /**

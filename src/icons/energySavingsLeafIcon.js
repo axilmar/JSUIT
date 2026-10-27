@@ -15,7 +15,7 @@ const URL_ENERGYSAVINGSLEAF = new URL('../../assets/icons/energySavingsLeaf.svg'
  */
 export const initEnergySavingsLeafIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ENERGYSAVINGSLEAF }, ...properties);
+    initIcon(element, { additionalClassName: 'energySavingsLeafIcon', url: URL_ENERGYSAVINGSLEAF }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CLOSEOUTLINED = new URL('../../assets/icons/closeOutlined.svg', import
  */
 export const initCloseOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOSEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'closeOutlinedIcon', url: URL_CLOSEOUTLINED }, ...properties);
 }
 
 /**

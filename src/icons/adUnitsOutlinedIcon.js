@@ -15,7 +15,7 @@ const URL_ADUNITSOUTLINED = new URL('../../assets/icons/adUnitsOutlined.svg', im
  */
 export const initAdUnitsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADUNITSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'adUnitsOutlinedIcon', url: URL_ADUNITSOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LOCATIONDISABLED = new URL('../../assets/icons/locationDisabled.svg', 
  */
 export const initLocationDisabledIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCATIONDISABLED }, ...properties);
+    initIcon(element, { additionalClassName: 'locationDisabledIcon', url: URL_LOCATIONDISABLED }, ...properties);
 }
 
 /**

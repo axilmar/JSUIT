@@ -15,7 +15,7 @@ const URL_CANCEL = new URL('../../assets/icons/cancel.svg', import.meta.url).hre
  */
 export const initCancelIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CANCEL }, ...properties);
+    initIcon(element, { additionalClassName: 'cancelIcon', url: URL_CANCEL }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PRINT = new URL('../../assets/icons/print.svg', import.meta.url).href;
  */
 export const initPrintIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PRINT }, ...properties);
+    initIcon(element, { additionalClassName: 'printIcon', url: URL_PRINT }, ...properties);
 }
 
 /**

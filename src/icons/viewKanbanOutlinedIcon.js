@@ -15,7 +15,7 @@ const URL_VIEWKANBANOUTLINED = new URL('../../assets/icons/viewKanbanOutlined.sv
  */
 export const initViewKanbanOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWKANBANOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewKanbanOutlinedIcon', url: URL_VIEWKANBANOUTLINED }, ...properties);
 }
 
 /**

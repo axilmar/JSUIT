@@ -15,7 +15,7 @@ const URL_NOTIFICATIONADDOUTLINED = new URL('../../assets/icons/notificationAddO
  */
 export const initNotificationAddOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTIFICATIONADDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'notificationAddOutlinedIcon', url: URL_NOTIFICATIONADDOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_VIBRATIONOUTLINED = new URL('../../assets/icons/vibrationOutlined.svg'
  */
 export const initVibrationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIBRATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'vibrationOutlinedIcon', url: URL_VIBRATIONOUTLINED }, ...properties);
 }
 
 /**

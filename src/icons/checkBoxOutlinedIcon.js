@@ -15,7 +15,7 @@ const URL_CHECKBOXOUTLINED = new URL('../../assets/icons/checkBoxOutlined.svg', 
  */
 export const initCheckBoxOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHECKBOXOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'checkBoxOutlinedIcon', url: URL_CHECKBOXOUTLINED }, ...properties);
 }
 
 /**

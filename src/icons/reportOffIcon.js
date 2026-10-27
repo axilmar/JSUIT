@@ -15,7 +15,7 @@ const URL_REPORTOFF = new URL('../../assets/icons/reportOff.svg', import.meta.ur
  */
 export const initReportOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REPORTOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'reportOffIcon', url: URL_REPORTOFF }, ...properties);
 }
 
 /**

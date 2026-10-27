@@ -15,7 +15,7 @@ const URL_CURRENCYFRANC = new URL('../../assets/icons/currencyFranc.svg', import
  */
 export const initCurrencyFrancIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CURRENCYFRANC }, ...properties);
+    initIcon(element, { additionalClassName: 'currencyFrancIcon', url: URL_CURRENCYFRANC }, ...properties);
 }
 
 /**

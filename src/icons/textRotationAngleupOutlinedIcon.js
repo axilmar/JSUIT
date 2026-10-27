@@ -15,7 +15,7 @@ const URL_TEXTROTATIONANGLEUPOUTLINED = new URL('../../assets/icons/textRotation
  */
 export const initTextRotationAngleupOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTROTATIONANGLEUPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'textRotationAngleupOutlinedIcon', url: URL_TEXTROTATIONANGLEUPOUTLINED }, ...properties);
 }
 
 /**

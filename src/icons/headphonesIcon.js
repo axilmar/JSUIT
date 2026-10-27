@@ -15,7 +15,7 @@ const URL_HEADPHONES = new URL('../../assets/icons/headphones.svg', import.meta.
  */
 export const initHeadphonesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEADPHONES }, ...properties);
+    initIcon(element, { additionalClassName: 'headphonesIcon', url: URL_HEADPHONES }, ...properties);
 }
 
 /**

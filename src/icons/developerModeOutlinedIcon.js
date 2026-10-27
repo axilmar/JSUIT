@@ -15,7 +15,7 @@ const URL_DEVELOPERMODEOUTLINED = new URL('../../assets/icons/developerModeOutli
  */
 export const initDeveloperModeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEVELOPERMODEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'developerModeOutlinedIcon', url: URL_DEVELOPERMODEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_MOREHORIZ = new URL('../../assets/icons/moreHoriz.svg', import.meta.ur
  */
 export const initMoreHorizIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOREHORIZ }, ...properties);
+    initIcon(element, { additionalClassName: 'moreHorizIcon', url: URL_MOREHORIZ }, ...properties);
 }
 
 /**

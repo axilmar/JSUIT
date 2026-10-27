@@ -15,7 +15,7 @@ const URL_BUSALERTOUTLINED = new URL('../../assets/icons/busAlertOutlined.svg', 
  */
 export const initBusAlertOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BUSALERTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'busAlertOutlinedIcon', url: URL_BUSALERTOUTLINED }, ...properties);
 }
 
 /**

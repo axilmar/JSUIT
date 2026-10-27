@@ -15,7 +15,7 @@ const URL_DEPARTUREBOARDOUTLINED = new URL('../../assets/icons/departureBoardOut
  */
 export const initDepartureBoardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEPARTUREBOARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'departureBoardOutlinedIcon', url: URL_DEPARTUREBOARDOUTLINED }, ...properties);
 }
 
 /**

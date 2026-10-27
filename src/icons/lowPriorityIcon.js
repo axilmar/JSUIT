@@ -15,7 +15,7 @@ const URL_LOWPRIORITY = new URL('../../assets/icons/lowPriority.svg', import.met
  */
 export const initLowPriorityIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOWPRIORITY }, ...properties);
+    initIcon(element, { additionalClassName: 'lowPriorityIcon', url: URL_LOWPRIORITY }, ...properties);
 }
 
 /**

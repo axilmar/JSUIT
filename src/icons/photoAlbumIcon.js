@@ -15,7 +15,7 @@ const URL_PHOTOALBUM = new URL('../../assets/icons/photoAlbum.svg', import.meta.
  */
 export const initPhotoAlbumIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHOTOALBUM }, ...properties);
+    initIcon(element, { additionalClassName: 'photoAlbumIcon', url: URL_PHOTOALBUM }, ...properties);
 }
 
 /**

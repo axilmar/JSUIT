@@ -15,7 +15,7 @@ const URL_DIAMOND = new URL('../../assets/icons/diamond.svg', import.meta.url).h
  */
 export const initDiamondIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIAMOND }, ...properties);
+    initIcon(element, { additionalClassName: 'diamondIcon', url: URL_DIAMOND }, ...properties);
 }
 
 /**

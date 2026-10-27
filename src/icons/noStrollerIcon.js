@@ -15,7 +15,7 @@ const URL_NOSTROLLER = new URL('../../assets/icons/noStroller.svg', import.meta.
  */
 export const initNoStrollerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOSTROLLER }, ...properties);
+    initIcon(element, { additionalClassName: 'noStrollerIcon', url: URL_NOSTROLLER }, ...properties);
 }
 
 /**

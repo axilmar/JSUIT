@@ -15,7 +15,7 @@ const URL_THEATERS = new URL('../../assets/icons/theaters.svg', import.meta.url)
  */
 export const initTheatersIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THEATERS }, ...properties);
+    initIcon(element, { additionalClassName: 'theatersIcon', url: URL_THEATERS }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PERMCAMERAMIC = new URL('../../assets/icons/permCameraMic.svg', import
  */
 export const initPermCameraMicIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERMCAMERAMIC }, ...properties);
+    initIcon(element, { additionalClassName: 'permCameraMicIcon', url: URL_PERMCAMERAMIC }, ...properties);
 }
 
 /**

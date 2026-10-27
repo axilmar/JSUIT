@@ -15,7 +15,7 @@ const URL_NOTEALTOUTLINED = new URL('../../assets/icons/noteAltOutlined.svg', im
  */
 export const initNoteAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTEALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'noteAltOutlinedIcon', url: URL_NOTEALTOUTLINED }, ...properties);
 }
 
 /**

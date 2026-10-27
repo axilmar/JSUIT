@@ -15,7 +15,7 @@ const URL_MOTIONPHOTOSAUTO = new URL('../../assets/icons/motionPhotosAuto.svg', 
  */
 export const initMotionPhotosAutoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOTIONPHOTOSAUTO }, ...properties);
+    initIcon(element, { additionalClassName: 'motionPhotosAutoIcon', url: URL_MOTIONPHOTOSAUTO }, ...properties);
 }
 
 /**

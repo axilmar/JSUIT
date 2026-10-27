@@ -15,7 +15,7 @@ const URL_MENUBOOKOUTLINED = new URL('../../assets/icons/menuBookOutlined.svg', 
  */
 export const initMenuBookOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MENUBOOKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'menuBookOutlinedIcon', url: URL_MENUBOOKOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_GROUPREMOVEOUTLINED = new URL('../../assets/icons/groupRemoveOutlined.
  */
 export const initGroupRemoveOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GROUPREMOVEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'groupRemoveOutlinedIcon', url: URL_GROUPREMOVEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DIRECTIONSWALKOUTLINED = new URL('../../assets/icons/directionsWalkOut
  */
 export const initDirectionsWalkOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRECTIONSWALKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'directionsWalkOutlinedIcon', url: URL_DIRECTIONSWALKOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FORMATLISTNUMBEREDOUTLINED = new URL('../../assets/icons/formatListNum
  */
 export const initFormatListNumberedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATLISTNUMBEREDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatListNumberedOutlinedIcon', url: URL_FORMATLISTNUMBEREDOUTLINED }, ...properties);
 }
 
 /**

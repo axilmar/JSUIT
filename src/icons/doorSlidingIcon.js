@@ -15,7 +15,7 @@ const URL_DOORSLIDING = new URL('../../assets/icons/doorSliding.svg', import.met
  */
 export const initDoorSlidingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOORSLIDING }, ...properties);
+    initIcon(element, { additionalClassName: 'doorSlidingIcon', url: URL_DOORSLIDING }, ...properties);
 }
 
 /**

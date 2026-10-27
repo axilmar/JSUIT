@@ -15,7 +15,7 @@ const URL_FAVORITE = new URL('../../assets/icons/favorite.svg', import.meta.url)
  */
 export const initFavoriteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FAVORITE }, ...properties);
+    initIcon(element, { additionalClassName: 'favoriteIcon', url: URL_FAVORITE }, ...properties);
 }
 
 /**

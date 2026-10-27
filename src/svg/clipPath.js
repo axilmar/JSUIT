@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initClipPath = (element, ...properties) => {
     console.assert(element instanceof SVGClipPathElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'clipPath' }, ...properties);
 }
 
 /**

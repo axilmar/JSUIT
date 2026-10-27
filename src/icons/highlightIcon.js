@@ -15,7 +15,7 @@ const URL_HIGHLIGHT = new URL('../../assets/icons/highlight.svg', import.meta.ur
  */
 export const initHighlightIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HIGHLIGHT }, ...properties);
+    initIcon(element, { additionalClassName: 'highlightIcon', url: URL_HIGHLIGHT }, ...properties);
 }
 
 /**

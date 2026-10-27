@@ -15,7 +15,7 @@ const URL_CALLMERGE = new URL('../../assets/icons/callMerge.svg', import.meta.ur
  */
 export const initCallMergeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALLMERGE }, ...properties);
+    initIcon(element, { additionalClassName: 'callMergeIcon', url: URL_CALLMERGE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SENSORDOOR = new URL('../../assets/icons/sensorDoor.svg', import.meta.
  */
 export const initSensorDoorIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SENSORDOOR }, ...properties);
+    initIcon(element, { additionalClassName: 'sensorDoorIcon', url: URL_SENSORDOOR }, ...properties);
 }
 
 /**

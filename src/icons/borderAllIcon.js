@@ -15,7 +15,7 @@ const URL_BORDERALL = new URL('../../assets/icons/borderAll.svg', import.meta.ur
  */
 export const initBorderAllIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BORDERALL }, ...properties);
+    initIcon(element, { additionalClassName: 'borderAllIcon', url: URL_BORDERALL }, ...properties);
 }
 
 /**

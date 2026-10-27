@@ -15,7 +15,7 @@ const URL_SPACEBAROUTLINED = new URL('../../assets/icons/spaceBarOutlined.svg', 
  */
 export const initSpaceBarOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPACEBAROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'spaceBarOutlinedIcon', url: URL_SPACEBAROUTLINED }, ...properties);
 }
 
 /**

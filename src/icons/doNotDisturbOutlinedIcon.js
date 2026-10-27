@@ -15,7 +15,7 @@ const URL_DONOTDISTURBOUTLINED = new URL('../../assets/icons/doNotDisturbOutline
  */
 export const initDoNotDisturbOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DONOTDISTURBOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'doNotDisturbOutlinedIcon', url: URL_DONOTDISTURBOUTLINED }, ...properties);
 }
 
 /**

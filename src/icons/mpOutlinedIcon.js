@@ -15,7 +15,7 @@ const URL_MPOUTLINED = new URL('../../assets/icons/mpOutlined.svg', import.meta.
  */
 export const initMpOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'mpOutlinedIcon', url: URL_MPOUTLINED }, ...properties);
 }
 
 /**

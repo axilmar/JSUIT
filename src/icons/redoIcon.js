@@ -15,7 +15,7 @@ const URL_REDO = new URL('../../assets/icons/redo.svg', import.meta.url).href;
  */
 export const initRedoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REDO }, ...properties);
+    initIcon(element, { additionalClassName: 'redoIcon', url: URL_REDO }, ...properties);
 }
 
 /**

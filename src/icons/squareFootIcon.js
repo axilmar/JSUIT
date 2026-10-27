@@ -15,7 +15,7 @@ const URL_SQUAREFOOT = new URL('../../assets/icons/squareFoot.svg', import.meta.
  */
 export const initSquareFootIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SQUAREFOOT }, ...properties);
+    initIcon(element, { additionalClassName: 'squareFootIcon', url: URL_SQUAREFOOT }, ...properties);
 }
 
 /**

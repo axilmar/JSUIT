@@ -15,7 +15,7 @@ const URL_FLAREOUTLINED = new URL('../../assets/icons/flareOutlined.svg', import
  */
 export const initFlareOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLAREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'flareOutlinedIcon', url: URL_FLAREOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SKIPNEXTOUTLINED = new URL('../../assets/icons/skipNextOutlined.svg', 
  */
 export const initSkipNextOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SKIPNEXTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'skipNextOutlinedIcon', url: URL_SKIPNEXTOUTLINED }, ...properties);
 }
 
 /**

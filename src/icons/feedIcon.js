@@ -15,7 +15,7 @@ const URL_FEED = new URL('../../assets/icons/feed.svg', import.meta.url).href;
  */
 export const initFeedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FEED }, ...properties);
+    initIcon(element, { additionalClassName: 'feedIcon', url: URL_FEED }, ...properties);
 }
 
 /**

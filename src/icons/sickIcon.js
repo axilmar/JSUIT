@@ -15,7 +15,7 @@ const URL_SICK = new URL('../../assets/icons/sick.svg', import.meta.url).href;
  */
 export const initSickIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SICK }, ...properties);
+    initIcon(element, { additionalClassName: 'sickIcon', url: URL_SICK }, ...properties);
 }
 
 /**

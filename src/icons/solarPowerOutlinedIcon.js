@@ -15,7 +15,7 @@ const URL_SOLARPOWEROUTLINED = new URL('../../assets/icons/solarPowerOutlined.sv
  */
 export const initSolarPowerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SOLARPOWEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'solarPowerOutlinedIcon', url: URL_SOLARPOWEROUTLINED }, ...properties);
 }
 
 /**

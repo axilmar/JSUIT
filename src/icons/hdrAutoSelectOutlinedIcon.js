@@ -15,7 +15,7 @@ const URL_HDRAUTOSELECTOUTLINED = new URL('../../assets/icons/hdrAutoSelectOutli
  */
 export const initHdrAutoSelectOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HDRAUTOSELECTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hdrAutoSelectOutlinedIcon', url: URL_HDRAUTOSELECTOUTLINED }, ...properties);
 }
 
 /**

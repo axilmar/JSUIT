@@ -15,7 +15,7 @@ const URL_SETTINGSCELL = new URL('../../assets/icons/settingsCell.svg', import.m
  */
 export const initSettingsCellIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSCELL }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsCellIcon', url: URL_SETTINGSCELL }, ...properties);
 }
 
 /**

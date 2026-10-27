@@ -15,7 +15,7 @@ const URL_RESETTVOUTLINED = new URL('../../assets/icons/resetTvOutlined.svg', im
  */
 export const initResetTvOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RESETTVOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'resetTvOutlinedIcon', url: URL_RESETTVOUTLINED }, ...properties);
 }
 
 /**

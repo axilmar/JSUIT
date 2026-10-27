@@ -15,7 +15,7 @@ const URL_FONTDOWNLOADOUTLINED = new URL('../../assets/icons/fontDownloadOutline
  */
 export const initFontDownloadOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FONTDOWNLOADOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fontDownloadOutlinedIcon', url: URL_FONTDOWNLOADOUTLINED }, ...properties);
 }
 
 /**

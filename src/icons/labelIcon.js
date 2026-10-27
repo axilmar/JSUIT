@@ -15,7 +15,7 @@ const URL_LABEL = new URL('../../assets/icons/label.svg', import.meta.url).href;
  */
 export const initLabelIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LABEL }, ...properties);
+    initIcon(element, { additionalClassName: 'labelIcon', url: URL_LABEL }, ...properties);
 }
 
 /**

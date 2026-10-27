@@ -15,7 +15,7 @@ const URL_VERTICALSHADESCLOSEDOUTLINED = new URL('../../assets/icons/verticalSha
  */
 export const initVerticalShadesClosedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VERTICALSHADESCLOSEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'verticalShadesClosedOutlinedIcon', url: URL_VERTICALSHADESCLOSEDOUTLINED }, ...properties);
 }
 
 /**

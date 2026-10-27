@@ -15,7 +15,7 @@ const URL_ADSCLICK = new URL('../../assets/icons/adsClick.svg', import.meta.url)
  */
 export const initAdsClickIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADSCLICK }, ...properties);
+    initIcon(element, { additionalClassName: 'adsClickIcon', url: URL_ADSCLICK }, ...properties);
 }
 
 /**

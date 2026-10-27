@@ -15,7 +15,7 @@ const URL_SETTINGSINPUTANTENNAOUTLINED = new URL('../../assets/icons/settingsInp
  */
 export const initSettingsInputAntennaOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSINPUTANTENNAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsInputAntennaOutlinedIcon', url: URL_SETTINGSINPUTANTENNAOUTLINED }, ...properties);
 }
 
 /**

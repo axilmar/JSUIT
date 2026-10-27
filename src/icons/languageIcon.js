@@ -15,7 +15,7 @@ const URL_LANGUAGE = new URL('../../assets/icons/language.svg', import.meta.url)
  */
 export const initLanguageIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LANGUAGE }, ...properties);
+    initIcon(element, { additionalClassName: 'languageIcon', url: URL_LANGUAGE }, ...properties);
 }
 
 /**

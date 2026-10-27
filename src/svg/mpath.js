@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initMpath = (element, ...properties) => {
     console.assert(element instanceof SVGMPathElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'mpath' }, ...properties);
 }
 
 /**

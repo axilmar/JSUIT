@@ -15,7 +15,7 @@ const URL_TOLL = new URL('../../assets/icons/toll.svg', import.meta.url).href;
  */
 export const initTollIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TOLL }, ...properties);
+    initIcon(element, { additionalClassName: 'tollIcon', url: URL_TOLL }, ...properties);
 }
 
 /**

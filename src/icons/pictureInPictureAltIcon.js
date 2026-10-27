@@ -15,7 +15,7 @@ const URL_PICTUREINPICTUREALT = new URL('../../assets/icons/pictureInPictureAlt.
  */
 export const initPictureInPictureAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PICTUREINPICTUREALT }, ...properties);
+    initIcon(element, { additionalClassName: 'pictureInPictureAltIcon', url: URL_PICTUREINPICTUREALT }, ...properties);
 }
 
 /**

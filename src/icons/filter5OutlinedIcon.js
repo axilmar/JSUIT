@@ -15,7 +15,7 @@ const URL_FILTER5OUTLINED = new URL('../../assets/icons/filter5Outlined.svg', im
  */
 export const initFilter5OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTER5OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'filter5OutlinedIcon', url: URL_FILTER5OUTLINED }, ...properties);
 }
 
 /**

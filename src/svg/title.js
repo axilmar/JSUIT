@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initTitle = (element, ...properties) => {
     console.assert(element instanceof SVGTitleElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'title' }, ...properties);
 }
 
 /**

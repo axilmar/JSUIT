@@ -15,7 +15,7 @@ const URL_HIGHLIGHTOFF = new URL('../../assets/icons/highlightOff.svg', import.m
  */
 export const initHighlightOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HIGHLIGHTOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'highlightOffIcon', url: URL_HIGHLIGHTOFF }, ...properties);
 }
 
 /**

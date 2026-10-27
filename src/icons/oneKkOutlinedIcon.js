@@ -15,7 +15,7 @@ const URL_ONEKKOUTLINED = new URL('../../assets/icons/oneKkOutlined.svg', import
  */
 export const initOneKkOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ONEKKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'oneKkOutlinedIcon', url: URL_ONEKKOUTLINED }, ...properties);
 }
 
 /**

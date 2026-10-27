@@ -15,7 +15,7 @@ const URL_FORMATINDENTDECREASEOUTLINED = new URL('../../assets/icons/formatInden
  */
 export const initFormatIndentDecreaseOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATINDENTDECREASEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatIndentDecreaseOutlinedIcon', url: URL_FORMATINDENTDECREASEOUTLINED }, ...properties);
 }
 
 /**

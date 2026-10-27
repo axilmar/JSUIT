@@ -15,7 +15,7 @@ const URL_WRAPTEXTOUTLINED = new URL('../../assets/icons/wrapTextOutlined.svg', 
  */
 export const initWrapTextOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WRAPTEXTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wrapTextOutlinedIcon', url: URL_WRAPTEXTOUTLINED }, ...properties);
 }
 
 /**

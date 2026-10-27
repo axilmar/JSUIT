@@ -15,7 +15,7 @@ const URL_MORETIMEOUTLINED = new URL('../../assets/icons/moreTimeOutlined.svg', 
  */
 export const initMoreTimeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MORETIMEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'moreTimeOutlinedIcon', url: URL_MORETIMEOUTLINED }, ...properties);
 }
 
 /**

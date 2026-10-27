@@ -15,7 +15,7 @@ const URL_HIDESOURCEOUTLINED = new URL('../../assets/icons/hideSourceOutlined.sv
  */
 export const initHideSourceOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HIDESOURCEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hideSourceOutlinedIcon', url: URL_HIDESOURCEOUTLINED }, ...properties);
 }
 
 /**

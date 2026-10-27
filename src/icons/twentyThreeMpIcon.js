@@ -15,7 +15,7 @@ const URL_TWENTYTHREEMP = new URL('../../assets/icons/twentyThreeMp.svg', import
  */
 export const initTwentyThreeMpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TWENTYTHREEMP }, ...properties);
+    initIcon(element, { additionalClassName: 'twentyThreeMpIcon', url: URL_TWENTYTHREEMP }, ...properties);
 }
 
 /**

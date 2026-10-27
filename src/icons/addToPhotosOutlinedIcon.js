@@ -15,7 +15,7 @@ const URL_ADDTOPHOTOSOUTLINED = new URL('../../assets/icons/addToPhotosOutlined.
  */
 export const initAddToPhotosOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDTOPHOTOSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'addToPhotosOutlinedIcon', url: URL_ADDTOPHOTOSOUTLINED }, ...properties);
 }
 
 /**

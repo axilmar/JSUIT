@@ -15,7 +15,7 @@ const URL_TRENDINGDOWNOUTLINED = new URL('../../assets/icons/trendingDownOutline
  */
 export const initTrendingDownOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRENDINGDOWNOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'trendingDownOutlinedIcon', url: URL_TRENDINGDOWNOUTLINED }, ...properties);
 }
 
 /**

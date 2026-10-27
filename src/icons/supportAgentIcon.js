@@ -15,7 +15,7 @@ const URL_SUPPORTAGENT = new URL('../../assets/icons/supportAgent.svg', import.m
  */
 export const initSupportAgentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUPPORTAGENT }, ...properties);
+    initIcon(element, { additionalClassName: 'supportAgentIcon', url: URL_SUPPORTAGENT }, ...properties);
 }
 
 /**

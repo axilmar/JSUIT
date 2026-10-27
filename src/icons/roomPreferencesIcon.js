@@ -15,7 +15,7 @@ const URL_ROOMPREFERENCES = new URL('../../assets/icons/roomPreferences.svg', im
  */
 export const initRoomPreferencesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROOMPREFERENCES }, ...properties);
+    initIcon(element, { additionalClassName: 'roomPreferencesIcon', url: URL_ROOMPREFERENCES }, ...properties);
 }
 
 /**

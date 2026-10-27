@@ -15,7 +15,7 @@ const URL_LOGINOUTLINED = new URL('../../assets/icons/loginOutlined.svg', import
  */
 export const initLoginOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOGINOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'loginOutlinedIcon', url: URL_LOGINOUTLINED }, ...properties);
 }
 
 /**

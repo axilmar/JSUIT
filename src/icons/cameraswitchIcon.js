@@ -15,7 +15,7 @@ const URL_CAMERASWITCH = new URL('../../assets/icons/cameraswitch.svg', import.m
  */
 export const initCameraswitchIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CAMERASWITCH }, ...properties);
+    initIcon(element, { additionalClassName: 'cameraswitchIcon', url: URL_CAMERASWITCH }, ...properties);
 }
 
 /**

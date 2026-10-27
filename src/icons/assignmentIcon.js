@@ -15,7 +15,7 @@ const URL_ASSIGNMENT = new URL('../../assets/icons/assignment.svg', import.meta.
  */
 export const initAssignmentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ASSIGNMENT }, ...properties);
+    initIcon(element, { additionalClassName: 'assignmentIcon', url: URL_ASSIGNMENT }, ...properties);
 }
 
 /**

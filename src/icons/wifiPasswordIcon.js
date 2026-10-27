@@ -15,7 +15,7 @@ const URL_WIFIPASSWORD = new URL('../../assets/icons/wifiPassword.svg', import.m
  */
 export const initWifiPasswordIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIFIPASSWORD }, ...properties);
+    initIcon(element, { additionalClassName: 'wifiPasswordIcon', url: URL_WIFIPASSWORD }, ...properties);
 }
 
 /**

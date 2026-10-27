@@ -15,7 +15,7 @@ const URL_ZOOMOUTOUTLINED = new URL('../../assets/icons/zoomOutOutlined.svg', im
  */
 export const initZoomOutOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ZOOMOUTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'zoomOutOutlinedIcon', url: URL_ZOOMOUTOUTLINED }, ...properties);
 }
 
 /**

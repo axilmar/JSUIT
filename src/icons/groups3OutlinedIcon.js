@@ -15,7 +15,7 @@ const URL_GROUPS3OUTLINED = new URL('../../assets/icons/groups3Outlined.svg', im
  */
 export const initGroups3OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GROUPS3OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'groups3OutlinedIcon', url: URL_GROUPS3OUTLINED }, ...properties);
 }
 
 /**

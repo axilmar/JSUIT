@@ -15,7 +15,7 @@ const URL_FAXOUTLINED = new URL('../../assets/icons/faxOutlined.svg', import.met
  */
 export const initFaxOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FAXOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'faxOutlinedIcon', url: URL_FAXOUTLINED }, ...properties);
 }
 
 /**

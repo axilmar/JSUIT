@@ -15,7 +15,7 @@ const URL_FORMATCOLORRESET = new URL('../../assets/icons/formatColorReset.svg', 
  */
 export const initFormatColorResetIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATCOLORRESET }, ...properties);
+    initIcon(element, { additionalClassName: 'formatColorResetIcon', url: URL_FORMATCOLORRESET }, ...properties);
 }
 
 /**

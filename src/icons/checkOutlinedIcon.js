@@ -15,7 +15,7 @@ const URL_CHECKOUTLINED = new URL('../../assets/icons/checkOutlined.svg', import
  */
 export const initCheckOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHECKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'checkOutlinedIcon', url: URL_CHECKOUTLINED }, ...properties);
 }
 
 /**

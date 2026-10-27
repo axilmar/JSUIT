@@ -15,7 +15,7 @@ const URL_BEDROOMPARENT = new URL('../../assets/icons/bedroomParent.svg', import
  */
 export const initBedroomParentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BEDROOMPARENT }, ...properties);
+    initIcon(element, { additionalClassName: 'bedroomParentIcon', url: URL_BEDROOMPARENT }, ...properties);
 }
 
 /**

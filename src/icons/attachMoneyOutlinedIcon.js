@@ -15,7 +15,7 @@ const URL_ATTACHMONEYOUTLINED = new URL('../../assets/icons/attachMoneyOutlined.
  */
 export const initAttachMoneyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ATTACHMONEYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'attachMoneyOutlinedIcon', url: URL_ATTACHMONEYOUTLINED }, ...properties);
 }
 
 /**

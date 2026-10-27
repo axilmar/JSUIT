@@ -15,7 +15,7 @@ const URL_HDRWEAK = new URL('../../assets/icons/hdrWeak.svg', import.meta.url).h
  */
 export const initHdrWeakIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HDRWEAK }, ...properties);
+    initIcon(element, { additionalClassName: 'hdrWeakIcon', url: URL_HDRWEAK }, ...properties);
 }
 
 /**

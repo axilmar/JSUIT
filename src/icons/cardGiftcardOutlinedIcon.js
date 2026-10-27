@@ -15,7 +15,7 @@ const URL_CARDGIFTCARDOUTLINED = new URL('../../assets/icons/cardGiftcardOutline
  */
 export const initCardGiftcardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CARDGIFTCARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cardGiftcardOutlinedIcon', url: URL_CARDGIFTCARDOUTLINED }, ...properties);
 }
 
 /**

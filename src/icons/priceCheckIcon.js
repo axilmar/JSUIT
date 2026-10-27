@@ -15,7 +15,7 @@ const URL_PRICECHECK = new URL('../../assets/icons/priceCheck.svg', import.meta.
  */
 export const initPriceCheckIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PRICECHECK }, ...properties);
+    initIcon(element, { additionalClassName: 'priceCheckIcon', url: URL_PRICECHECK }, ...properties);
 }
 
 /**

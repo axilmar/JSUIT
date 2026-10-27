@@ -15,7 +15,7 @@ const URL_PLUSONE = new URL('../../assets/icons/plusOne.svg', import.meta.url).h
  */
 export const initPlusOneIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLUSONE }, ...properties);
+    initIcon(element, { additionalClassName: 'plusOneIcon', url: URL_PLUSONE }, ...properties);
 }
 
 /**

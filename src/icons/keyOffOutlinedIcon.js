@@ -15,7 +15,7 @@ const URL_KEYOFFOUTLINED = new URL('../../assets/icons/keyOffOutlined.svg', impo
  */
 export const initKeyOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'keyOffOutlinedIcon', url: URL_KEYOFFOUTLINED }, ...properties);
 }
 
 /**

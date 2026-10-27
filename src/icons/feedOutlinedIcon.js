@@ -15,7 +15,7 @@ const URL_FEEDOUTLINED = new URL('../../assets/icons/feedOutlined.svg', import.m
  */
 export const initFeedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FEEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'feedOutlinedIcon', url: URL_FEEDOUTLINED }, ...properties);
 }
 
 /**

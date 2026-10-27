@@ -15,7 +15,7 @@ const URL_ACCESSALARMS = new URL('../../assets/icons/accessAlarms.svg', import.m
  */
 export const initAccessAlarmsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACCESSALARMS }, ...properties);
+    initIcon(element, { additionalClassName: 'accessAlarmsIcon', url: URL_ACCESSALARMS }, ...properties);
 }
 
 /**

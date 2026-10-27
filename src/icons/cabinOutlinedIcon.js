@@ -15,7 +15,7 @@ const URL_CABINOUTLINED = new URL('../../assets/icons/cabinOutlined.svg', import
  */
 export const initCabinOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CABINOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cabinOutlinedIcon', url: URL_CABINOUTLINED }, ...properties);
 }
 
 /**

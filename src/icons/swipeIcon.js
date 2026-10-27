@@ -15,7 +15,7 @@ const URL_SWIPE = new URL('../../assets/icons/swipe.svg', import.meta.url).href;
  */
 export const initSwipeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWIPE }, ...properties);
+    initIcon(element, { additionalClassName: 'swipeIcon', url: URL_SWIPE }, ...properties);
 }
 
 /**

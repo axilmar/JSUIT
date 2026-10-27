@@ -15,7 +15,7 @@ const URL_STAROUTLINEOUTLINED = new URL('../../assets/icons/starOutlineOutlined.
  */
 export const initStarOutlineOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STAROUTLINEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'starOutlineOutlinedIcon', url: URL_STAROUTLINEOUTLINED }, ...properties);
 }
 
 /**

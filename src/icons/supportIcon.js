@@ -15,7 +15,7 @@ const URL_SUPPORT = new URL('../../assets/icons/support.svg', import.meta.url).h
  */
 export const initSupportIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUPPORT }, ...properties);
+    initIcon(element, { additionalClassName: 'supportIcon', url: URL_SUPPORT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CURRENCYPOUNDOUTLINED = new URL('../../assets/icons/currencyPoundOutli
  */
 export const initCurrencyPoundOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CURRENCYPOUNDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'currencyPoundOutlinedIcon', url: URL_CURRENCYPOUNDOUTLINED }, ...properties);
 }
 
 /**

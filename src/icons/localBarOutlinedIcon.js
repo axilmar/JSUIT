@@ -15,7 +15,7 @@ const URL_LOCALBAROUTLINED = new URL('../../assets/icons/localBarOutlined.svg', 
  */
 export const initLocalBarOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALBAROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localBarOutlinedIcon', url: URL_LOCALBAROUTLINED }, ...properties);
 }
 
 /**

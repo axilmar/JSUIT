@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initDialog = (element, ...properties) => {
     console.assert(element instanceof HTMLDialogElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'dialog' }, ...properties);
 }
 
 /**

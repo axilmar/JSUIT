@@ -15,7 +15,7 @@ const URL_BLINDS = new URL('../../assets/icons/blinds.svg', import.meta.url).hre
  */
 export const initBlindsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLINDS }, ...properties);
+    initIcon(element, { additionalClassName: 'blindsIcon', url: URL_BLINDS }, ...properties);
 }
 
 /**

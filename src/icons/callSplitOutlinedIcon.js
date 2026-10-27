@@ -15,7 +15,7 @@ const URL_CALLSPLITOUTLINED = new URL('../../assets/icons/callSplitOutlined.svg'
  */
 export const initCallSplitOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALLSPLITOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'callSplitOutlinedIcon', url: URL_CALLSPLITOUTLINED }, ...properties);
 }
 
 /**

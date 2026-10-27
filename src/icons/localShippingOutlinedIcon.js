@@ -15,7 +15,7 @@ const URL_LOCALSHIPPINGOUTLINED = new URL('../../assets/icons/localShippingOutli
  */
 export const initLocalShippingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALSHIPPINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localShippingOutlinedIcon', url: URL_LOCALSHIPPINGOUTLINED }, ...properties);
 }
 
 /**

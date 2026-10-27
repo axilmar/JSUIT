@@ -15,7 +15,7 @@ const URL_CROPSQUARE = new URL('../../assets/icons/cropSquare.svg', import.meta.
  */
 export const initCropSquareIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CROPSQUARE }, ...properties);
+    initIcon(element, { additionalClassName: 'cropSquareIcon', url: URL_CROPSQUARE }, ...properties);
 }
 
 /**

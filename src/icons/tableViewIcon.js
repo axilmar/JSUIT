@@ -15,7 +15,7 @@ const URL_TABLEVIEW = new URL('../../assets/icons/tableView.svg', import.meta.ur
  */
 export const initTableViewIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TABLEVIEW }, ...properties);
+    initIcon(element, { additionalClassName: 'tableViewIcon', url: URL_TABLEVIEW }, ...properties);
 }
 
 /**

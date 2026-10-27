@@ -15,7 +15,7 @@ const URL_QUEUEOUTLINED = new URL('../../assets/icons/queueOutlined.svg', import
  */
 export const initQueueOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUEUEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'queueOutlinedIcon', url: URL_QUEUEOUTLINED }, ...properties);
 }
 
 /**

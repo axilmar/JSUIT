@@ -15,7 +15,7 @@ const URL_SCALE = new URL('../../assets/icons/scale.svg', import.meta.url).href;
  */
 export const initScaleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCALE }, ...properties);
+    initIcon(element, { additionalClassName: 'scaleIcon', url: URL_SCALE }, ...properties);
 }
 
 /**

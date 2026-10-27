@@ -15,7 +15,7 @@ const URL_VERTICALALIGNTOP = new URL('../../assets/icons/verticalAlignTop.svg', 
  */
 export const initVerticalAlignTopIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VERTICALALIGNTOP }, ...properties);
+    initIcon(element, { additionalClassName: 'verticalAlignTopIcon', url: URL_VERTICALALIGNTOP }, ...properties);
 }
 
 /**

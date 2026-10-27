@@ -15,7 +15,7 @@ const URL_BALANCEOUTLINED = new URL('../../assets/icons/balanceOutlined.svg', im
  */
 export const initBalanceOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BALANCEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'balanceOutlinedIcon', url: URL_BALANCEOUTLINED }, ...properties);
 }
 
 /**

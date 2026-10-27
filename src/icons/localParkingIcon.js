@@ -15,7 +15,7 @@ const URL_LOCALPARKING = new URL('../../assets/icons/localParking.svg', import.m
  */
 export const initLocalParkingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALPARKING }, ...properties);
+    initIcon(element, { additionalClassName: 'localParkingIcon', url: URL_LOCALPARKING }, ...properties);
 }
 
 /**

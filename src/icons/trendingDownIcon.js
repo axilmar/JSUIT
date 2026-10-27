@@ -15,7 +15,7 @@ const URL_TRENDINGDOWN = new URL('../../assets/icons/trendingDown.svg', import.m
  */
 export const initTrendingDownIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRENDINGDOWN }, ...properties);
+    initIcon(element, { additionalClassName: 'trendingDownIcon', url: URL_TRENDINGDOWN }, ...properties);
 }
 
 /**

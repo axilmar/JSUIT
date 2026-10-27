@@ -15,7 +15,7 @@ const URL_SYNCALT = new URL('../../assets/icons/syncAlt.svg', import.meta.url).h
  */
 export const initSyncAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SYNCALT }, ...properties);
+    initIcon(element, { additionalClassName: 'syncAltIcon', url: URL_SYNCALT }, ...properties);
 }
 
 /**

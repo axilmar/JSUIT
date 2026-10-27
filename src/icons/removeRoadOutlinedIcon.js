@@ -15,7 +15,7 @@ const URL_REMOVEROADOUTLINED = new URL('../../assets/icons/removeRoadOutlined.sv
  */
 export const initRemoveRoadOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REMOVEROADOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'removeRoadOutlinedIcon', url: URL_REMOVEROADOUTLINED }, ...properties);
 }
 
 /**

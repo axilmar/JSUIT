@@ -15,7 +15,7 @@ const URL_NOTEALT = new URL('../../assets/icons/noteAlt.svg', import.meta.url).h
  */
 export const initNoteAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTEALT }, ...properties);
+    initIcon(element, { additionalClassName: 'noteAltIcon', url: URL_NOTEALT }, ...properties);
 }
 
 /**

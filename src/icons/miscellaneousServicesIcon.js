@@ -15,7 +15,7 @@ const URL_MISCELLANEOUSSERVICES = new URL('../../assets/icons/miscellaneousServi
  */
 export const initMiscellaneousServicesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MISCELLANEOUSSERVICES }, ...properties);
+    initIcon(element, { additionalClassName: 'miscellaneousServicesIcon', url: URL_MISCELLANEOUSSERVICES }, ...properties);
 }
 
 /**

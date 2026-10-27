@@ -15,7 +15,7 @@ const URL_MEDICATIONOUTLINED = new URL('../../assets/icons/medicationOutlined.sv
  */
 export const initMedicationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MEDICATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'medicationOutlinedIcon', url: URL_MEDICATIONOUTLINED }, ...properties);
 }
 
 /**

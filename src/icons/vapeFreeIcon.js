@@ -15,7 +15,7 @@ const URL_VAPEFREE = new URL('../../assets/icons/vapeFree.svg', import.meta.url)
  */
 export const initVapeFreeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VAPEFREE }, ...properties);
+    initIcon(element, { additionalClassName: 'vapeFreeIcon', url: URL_VAPEFREE }, ...properties);
 }
 
 /**

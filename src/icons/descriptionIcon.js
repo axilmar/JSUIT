@@ -15,7 +15,7 @@ const URL_DESCRIPTION = new URL('../../assets/icons/description.svg', import.met
  */
 export const initDescriptionIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DESCRIPTION }, ...properties);
+    initIcon(element, { additionalClassName: 'descriptionIcon', url: URL_DESCRIPTION }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SCREENSHOT = new URL('../../assets/icons/screenshot.svg', import.meta.
  */
 export const initScreenshotIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCREENSHOT }, ...properties);
+    initIcon(element, { additionalClassName: 'screenshotIcon', url: URL_SCREENSHOT }, ...properties);
 }
 
 /**

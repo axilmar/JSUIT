@@ -15,7 +15,7 @@ const URL_NATUREPEOPLEOUTLINED = new URL('../../assets/icons/naturePeopleOutline
  */
 export const initNaturePeopleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NATUREPEOPLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'naturePeopleOutlinedIcon', url: URL_NATUREPEOPLEOUTLINED }, ...properties);
 }
 
 /**

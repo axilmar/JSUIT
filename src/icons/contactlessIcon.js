@@ -15,7 +15,7 @@ const URL_CONTACTLESS = new URL('../../assets/icons/contactless.svg', import.met
  */
 export const initContactlessIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTACTLESS }, ...properties);
+    initIcon(element, { additionalClassName: 'contactlessIcon', url: URL_CONTACTLESS }, ...properties);
 }
 
 /**

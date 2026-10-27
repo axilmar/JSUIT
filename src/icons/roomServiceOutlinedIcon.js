@@ -15,7 +15,7 @@ const URL_ROOMSERVICEOUTLINED = new URL('../../assets/icons/roomServiceOutlined.
  */
 export const initRoomServiceOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROOMSERVICEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'roomServiceOutlinedIcon', url: URL_ROOMSERVICEOUTLINED }, ...properties);
 }
 
 /**

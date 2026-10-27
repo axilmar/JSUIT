@@ -15,7 +15,7 @@ const URL_LIGHTOUTLINED = new URL('../../assets/icons/lightOutlined.svg', import
  */
 export const initLightOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIGHTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'lightOutlinedIcon', url: URL_LIGHTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_POLL = new URL('../../assets/icons/poll.svg', import.meta.url).href;
  */
 export const initPollIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POLL }, ...properties);
+    initIcon(element, { additionalClassName: 'pollIcon', url: URL_POLL }, ...properties);
 }
 
 /**

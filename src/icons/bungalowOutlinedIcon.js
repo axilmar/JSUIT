@@ -15,7 +15,7 @@ const URL_BUNGALOWOUTLINED = new URL('../../assets/icons/bungalowOutlined.svg', 
  */
 export const initBungalowOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BUNGALOWOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bungalowOutlinedIcon', url: URL_BUNGALOWOUTLINED }, ...properties);
 }
 
 /**

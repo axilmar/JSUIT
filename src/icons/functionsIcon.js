@@ -15,7 +15,7 @@ const URL_FUNCTIONS = new URL('../../assets/icons/functions.svg', import.meta.ur
  */
 export const initFunctionsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FUNCTIONS }, ...properties);
+    initIcon(element, { additionalClassName: 'functionsIcon', url: URL_FUNCTIONS }, ...properties);
 }
 
 /**

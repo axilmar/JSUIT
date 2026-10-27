@@ -15,7 +15,7 @@ const URL_DATASAVEROFF = new URL('../../assets/icons/dataSaverOff.svg', import.m
  */
 export const initDataSaverOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DATASAVEROFF }, ...properties);
+    initIcon(element, { additionalClassName: 'dataSaverOffIcon', url: URL_DATASAVEROFF }, ...properties);
 }
 
 /**

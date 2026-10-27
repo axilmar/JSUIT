@@ -15,7 +15,7 @@ const URL_FILEPRESENT = new URL('../../assets/icons/filePresent.svg', import.met
  */
 export const initFilePresentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILEPRESENT }, ...properties);
+    initIcon(element, { additionalClassName: 'filePresentIcon', url: URL_FILEPRESENT }, ...properties);
 }
 
 /**

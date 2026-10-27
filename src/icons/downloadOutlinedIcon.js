@@ -15,7 +15,7 @@ const URL_DOWNLOADOUTLINED = new URL('../../assets/icons/downloadOutlined.svg', 
  */
 export const initDownloadOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOWNLOADOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'downloadOutlinedIcon', url: URL_DOWNLOADOUTLINED }, ...properties);
 }
 
 /**

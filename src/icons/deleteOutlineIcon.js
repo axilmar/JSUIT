@@ -15,7 +15,7 @@ const URL_DELETEOUTLINE = new URL('../../assets/icons/deleteOutline.svg', import
  */
 export const initDeleteOutlineIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DELETEOUTLINE }, ...properties);
+    initIcon(element, { additionalClassName: 'deleteOutlineIcon', url: URL_DELETEOUTLINE }, ...properties);
 }
 
 /**

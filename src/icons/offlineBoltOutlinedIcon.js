@@ -15,7 +15,7 @@ const URL_OFFLINEBOLTOUTLINED = new URL('../../assets/icons/offlineBoltOutlined.
  */
 export const initOfflineBoltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OFFLINEBOLTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'offlineBoltOutlinedIcon', url: URL_OFFLINEBOLTOUTLINED }, ...properties);
 }
 
 /**

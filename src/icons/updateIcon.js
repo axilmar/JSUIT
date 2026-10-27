@@ -15,7 +15,7 @@ const URL_UPDATE = new URL('../../assets/icons/update.svg', import.meta.url).hre
  */
 export const initUpdateIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UPDATE }, ...properties);
+    initIcon(element, { additionalClassName: 'updateIcon', url: URL_UPDATE }, ...properties);
 }
 
 /**

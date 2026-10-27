@@ -15,7 +15,7 @@ const URL_VRPANO = new URL('../../assets/icons/vrpano.svg', import.meta.url).hre
  */
 export const initVrpanoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VRPANO }, ...properties);
+    initIcon(element, { additionalClassName: 'vrpanoIcon', url: URL_VRPANO }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_WALLET = new URL('../../assets/icons/wallet.svg', import.meta.url).hre
  */
 export const initWalletIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WALLET }, ...properties);
+    initIcon(element, { additionalClassName: 'walletIcon', url: URL_WALLET }, ...properties);
 }
 
 /**

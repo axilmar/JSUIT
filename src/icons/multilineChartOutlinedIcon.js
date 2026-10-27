@@ -15,7 +15,7 @@ const URL_MULTILINECHARTOUTLINED = new URL('../../assets/icons/multilineChartOut
  */
 export const initMultilineChartOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MULTILINECHARTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'multilineChartOutlinedIcon', url: URL_MULTILINECHARTOUTLINED }, ...properties);
 }
 
 /**

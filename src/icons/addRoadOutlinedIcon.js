@@ -15,7 +15,7 @@ const URL_ADDROADOUTLINED = new URL('../../assets/icons/addRoadOutlined.svg', im
  */
 export const initAddRoadOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDROADOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'addRoadOutlinedIcon', url: URL_ADDROADOUTLINED }, ...properties);
 }
 
 /**

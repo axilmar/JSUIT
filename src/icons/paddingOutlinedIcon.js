@@ -15,7 +15,7 @@ const URL_PADDINGOUTLINED = new URL('../../assets/icons/paddingOutlined.svg', im
  */
 export const initPaddingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PADDINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'paddingOutlinedIcon', url: URL_PADDINGOUTLINED }, ...properties);
 }
 
 /**

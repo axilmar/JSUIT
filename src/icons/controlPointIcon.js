@@ -15,7 +15,7 @@ const URL_CONTROLPOINT = new URL('../../assets/icons/controlPoint.svg', import.m
  */
 export const initControlPointIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTROLPOINT }, ...properties);
+    initIcon(element, { additionalClassName: 'controlPointIcon', url: URL_CONTROLPOINT }, ...properties);
 }
 
 /**

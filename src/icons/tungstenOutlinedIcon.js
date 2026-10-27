@@ -15,7 +15,7 @@ const URL_TUNGSTENOUTLINED = new URL('../../assets/icons/tungstenOutlined.svg', 
  */
 export const initTungstenOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TUNGSTENOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tungstenOutlinedIcon', url: URL_TUNGSTENOUTLINED }, ...properties);
 }
 
 /**

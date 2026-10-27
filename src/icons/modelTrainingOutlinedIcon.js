@@ -15,7 +15,7 @@ const URL_MODELTRAININGOUTLINED = new URL('../../assets/icons/modelTrainingOutli
  */
 export const initModelTrainingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MODELTRAININGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'modelTrainingOutlinedIcon', url: URL_MODELTRAININGOUTLINED }, ...properties);
 }
 
 /**

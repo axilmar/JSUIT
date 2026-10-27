@@ -15,7 +15,7 @@ const URL_GPSOFF = new URL('../../assets/icons/gpsOff.svg', import.meta.url).hre
  */
 export const initGpsOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GPSOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'gpsOffIcon', url: URL_GPSOFF }, ...properties);
 }
 
 /**

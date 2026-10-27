@@ -15,7 +15,7 @@ const URL_SIP = new URL('../../assets/icons/sip.svg', import.meta.url).href;
  */
 export const initSipIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIP }, ...properties);
+    initIcon(element, { additionalClassName: 'sipIcon', url: URL_SIP }, ...properties);
 }
 
 /**

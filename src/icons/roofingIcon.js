@@ -15,7 +15,7 @@ const URL_ROOFING = new URL('../../assets/icons/roofing.svg', import.meta.url).h
  */
 export const initRoofingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROOFING }, ...properties);
+    initIcon(element, { additionalClassName: 'roofingIcon', url: URL_ROOFING }, ...properties);
 }
 
 /**

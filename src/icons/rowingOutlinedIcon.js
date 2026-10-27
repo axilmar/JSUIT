@@ -15,7 +15,7 @@ const URL_ROWINGOUTLINED = new URL('../../assets/icons/rowingOutlined.svg', impo
  */
 export const initRowingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROWINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'rowingOutlinedIcon', url: URL_ROWINGOUTLINED }, ...properties);
 }
 
 /**

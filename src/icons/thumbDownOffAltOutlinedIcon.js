@@ -15,7 +15,7 @@ const URL_THUMBDOWNOFFALTOUTLINED = new URL('../../assets/icons/thumbDownOffAltO
  */
 export const initThumbDownOffAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THUMBDOWNOFFALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'thumbDownOffAltOutlinedIcon', url: URL_THUMBDOWNOFFALTOUTLINED }, ...properties);
 }
 
 /**

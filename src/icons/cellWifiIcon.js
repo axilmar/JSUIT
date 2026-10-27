@@ -15,7 +15,7 @@ const URL_CELLWIFI = new URL('../../assets/icons/cellWifi.svg', import.meta.url)
  */
 export const initCellWifiIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CELLWIFI }, ...properties);
+    initIcon(element, { additionalClassName: 'cellWifiIcon', url: URL_CELLWIFI }, ...properties);
 }
 
 /**

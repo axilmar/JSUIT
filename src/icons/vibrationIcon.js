@@ -15,7 +15,7 @@ const URL_VIBRATION = new URL('../../assets/icons/vibration.svg', import.meta.ur
  */
 export const initVibrationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIBRATION }, ...properties);
+    initIcon(element, { additionalClassName: 'vibrationIcon', url: URL_VIBRATION }, ...properties);
 }
 
 /**

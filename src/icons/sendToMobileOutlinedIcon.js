@@ -15,7 +15,7 @@ const URL_SENDTOMOBILEOUTLINED = new URL('../../assets/icons/sendToMobileOutline
  */
 export const initSendToMobileOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SENDTOMOBILEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sendToMobileOutlinedIcon', url: URL_SENDTOMOBILEOUTLINED }, ...properties);
 }
 
 /**

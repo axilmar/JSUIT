@@ -15,7 +15,7 @@ const URL_THREEKPLUS = new URL('../../assets/icons/threeKPlus.svg', import.meta.
  */
 export const initThreeKPlusIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THREEKPLUS }, ...properties);
+    initIcon(element, { additionalClassName: 'threeKPlusIcon', url: URL_THREEKPLUS }, ...properties);
 }
 
 /**

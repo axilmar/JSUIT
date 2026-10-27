@@ -15,7 +15,7 @@ const URL_CONTROLCAMERA = new URL('../../assets/icons/controlCamera.svg', import
  */
 export const initControlCameraIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTROLCAMERA }, ...properties);
+    initIcon(element, { additionalClassName: 'controlCameraIcon', url: URL_CONTROLCAMERA }, ...properties);
 }
 
 /**

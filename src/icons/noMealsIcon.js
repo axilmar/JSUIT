@@ -15,7 +15,7 @@ const URL_NOMEALS = new URL('../../assets/icons/noMeals.svg', import.meta.url).h
  */
 export const initNoMealsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOMEALS }, ...properties);
+    initIcon(element, { additionalClassName: 'noMealsIcon', url: URL_NOMEALS }, ...properties);
 }
 
 /**

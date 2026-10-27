@@ -15,7 +15,7 @@ const URL_HEALTHANDSAFETYOUTLINED = new URL('../../assets/icons/healthAndSafetyO
  */
 export const initHealthAndSafetyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEALTHANDSAFETYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'healthAndSafetyOutlinedIcon', url: URL_HEALTHANDSAFETYOUTLINED }, ...properties);
 }
 
 /**

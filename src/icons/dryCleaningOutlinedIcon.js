@@ -15,7 +15,7 @@ const URL_DRYCLEANINGOUTLINED = new URL('../../assets/icons/dryCleaningOutlined.
  */
 export const initDryCleaningOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRYCLEANINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dryCleaningOutlinedIcon', url: URL_DRYCLEANINGOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SMSFAILEDOUTLINED = new URL('../../assets/icons/smsFailedOutlined.svg'
  */
 export const initSmsFailedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SMSFAILEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'smsFailedOutlinedIcon', url: URL_SMSFAILEDOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SMOKINGROOMS = new URL('../../assets/icons/smokingRooms.svg', import.m
  */
 export const initSmokingRoomsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SMOKINGROOMS }, ...properties);
+    initIcon(element, { additionalClassName: 'smokingRoomsIcon', url: URL_SMOKINGROOMS }, ...properties);
 }
 
 /**

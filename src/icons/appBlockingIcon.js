@@ -15,7 +15,7 @@ const URL_APPBLOCKING = new URL('../../assets/icons/appBlocking.svg', import.met
  */
 export const initAppBlockingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_APPBLOCKING }, ...properties);
+    initIcon(element, { additionalClassName: 'appBlockingIcon', url: URL_APPBLOCKING }, ...properties);
 }
 
 /**

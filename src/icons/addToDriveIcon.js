@@ -15,7 +15,7 @@ const URL_ADDTODRIVE = new URL('../../assets/icons/addToDrive.svg', import.meta.
  */
 export const initAddToDriveIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDTODRIVE }, ...properties);
+    initIcon(element, { additionalClassName: 'addToDriveIcon', url: URL_ADDTODRIVE }, ...properties);
 }
 
 /**

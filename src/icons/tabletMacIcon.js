@@ -15,7 +15,7 @@ const URL_TABLETMAC = new URL('../../assets/icons/tabletMac.svg', import.meta.ur
  */
 export const initTabletMacIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TABLETMAC }, ...properties);
+    initIcon(element, { additionalClassName: 'tabletMacIcon', url: URL_TABLETMAC }, ...properties);
 }
 
 /**

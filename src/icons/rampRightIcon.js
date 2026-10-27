@@ -15,7 +15,7 @@ const URL_RAMPRIGHT = new URL('../../assets/icons/rampRight.svg', import.meta.ur
  */
 export const initRampRightIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RAMPRIGHT }, ...properties);
+    initIcon(element, { additionalClassName: 'rampRightIcon', url: URL_RAMPRIGHT }, ...properties);
 }
 
 /**

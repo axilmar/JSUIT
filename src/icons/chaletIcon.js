@@ -15,7 +15,7 @@ const URL_CHALET = new URL('../../assets/icons/chalet.svg', import.meta.url).hre
  */
 export const initChaletIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHALET }, ...properties);
+    initIcon(element, { additionalClassName: 'chaletIcon', url: URL_CHALET }, ...properties);
 }
 
 /**

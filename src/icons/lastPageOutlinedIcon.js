@@ -15,7 +15,7 @@ const URL_LASTPAGEOUTLINED = new URL('../../assets/icons/lastPageOutlined.svg', 
  */
 export const initLastPageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LASTPAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'lastPageOutlinedIcon', url: URL_LASTPAGEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_NOISEAWARE = new URL('../../assets/icons/noiseAware.svg', import.meta.
  */
 export const initNoiseAwareIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOISEAWARE }, ...properties);
+    initIcon(element, { additionalClassName: 'noiseAwareIcon', url: URL_NOISEAWARE }, ...properties);
 }
 
 /**

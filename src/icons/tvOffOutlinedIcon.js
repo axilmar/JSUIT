@@ -15,7 +15,7 @@ const URL_TVOFFOUTLINED = new URL('../../assets/icons/tvOffOutlined.svg', import
  */
 export const initTvOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TVOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tvOffOutlinedIcon', url: URL_TVOFFOUTLINED }, ...properties);
 }
 
 /**

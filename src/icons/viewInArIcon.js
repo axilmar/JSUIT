@@ -15,7 +15,7 @@ const URL_VIEWINAR = new URL('../../assets/icons/viewInAr.svg', import.meta.url)
  */
 export const initViewInArIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWINAR }, ...properties);
+    initIcon(element, { additionalClassName: 'viewInArIcon', url: URL_VIEWINAR }, ...properties);
 }
 
 /**

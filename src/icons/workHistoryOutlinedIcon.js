@@ -15,7 +15,7 @@ const URL_WORKHISTORYOUTLINED = new URL('../../assets/icons/workHistoryOutlined.
  */
 export const initWorkHistoryOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WORKHISTORYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'workHistoryOutlinedIcon', url: URL_WORKHISTORYOUTLINED }, ...properties);
 }
 
 /**

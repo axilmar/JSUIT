@@ -15,7 +15,7 @@ const URL_VACCINESOUTLINED = new URL('../../assets/icons/vaccinesOutlined.svg', 
  */
 export const initVaccinesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VACCINESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'vaccinesOutlinedIcon', url: URL_VACCINESOUTLINED }, ...properties);
 }
 
 /**

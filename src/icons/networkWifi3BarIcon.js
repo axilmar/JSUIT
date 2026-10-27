@@ -15,7 +15,7 @@ const URL_NETWORKWIFI3BAR = new URL('../../assets/icons/networkWifi3Bar.svg', im
  */
 export const initNetworkWifi3BarIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NETWORKWIFI3BAR }, ...properties);
+    initIcon(element, { additionalClassName: 'networkWifi3BarIcon', url: URL_NETWORKWIFI3BAR }, ...properties);
 }
 
 /**

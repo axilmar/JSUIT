@@ -15,7 +15,7 @@ const URL_COLLECTIONSBOOKMARKOUTLINED = new URL('../../assets/icons/collectionsB
  */
 export const initCollectionsBookmarkOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COLLECTIONSBOOKMARKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'collectionsBookmarkOutlinedIcon', url: URL_COLLECTIONSBOOKMARKOUTLINED }, ...properties);
 }
 
 /**

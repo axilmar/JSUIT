@@ -15,7 +15,7 @@ const URL_TAGFACES = new URL('../../assets/icons/tagFaces.svg', import.meta.url)
  */
 export const initTagFacesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TAGFACES }, ...properties);
+    initIcon(element, { additionalClassName: 'tagFacesIcon', url: URL_TAGFACES }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_NAVIGATION = new URL('../../assets/icons/navigation.svg', import.meta.
  */
 export const initNavigationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NAVIGATION }, ...properties);
+    initIcon(element, { additionalClassName: 'navigationIcon', url: URL_NAVIGATION }, ...properties);
 }
 
 /**

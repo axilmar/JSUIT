@@ -15,7 +15,7 @@ const URL_CALENDARTODAYOUTLINED = new URL('../../assets/icons/calendarTodayOutli
  */
 export const initCalendarTodayOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALENDARTODAYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'calendarTodayOutlinedIcon', url: URL_CALENDARTODAYOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DESKTOPWINDOWS = new URL('../../assets/icons/desktopWindows.svg', impo
  */
 export const initDesktopWindowsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DESKTOPWINDOWS }, ...properties);
+    initIcon(element, { additionalClassName: 'desktopWindowsIcon', url: URL_DESKTOPWINDOWS }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_KEYBOARDARROWDOWNOUTLINED = new URL('../../assets/icons/keyboardArrowD
  */
 export const initKeyboardArrowDownOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDARROWDOWNOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardArrowDownOutlinedIcon', url: URL_KEYBOARDARROWDOWNOUTLINED }, ...properties);
 }
 
 /**

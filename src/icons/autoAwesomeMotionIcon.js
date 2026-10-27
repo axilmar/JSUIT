@@ -15,7 +15,7 @@ const URL_AUTOAWESOMEMOTION = new URL('../../assets/icons/autoAwesomeMotion.svg'
  */
 export const initAutoAwesomeMotionIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOAWESOMEMOTION }, ...properties);
+    initIcon(element, { additionalClassName: 'autoAwesomeMotionIcon', url: URL_AUTOAWESOMEMOTION }, ...properties);
 }
 
 /**

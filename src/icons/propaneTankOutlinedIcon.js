@@ -15,7 +15,7 @@ const URL_PROPANETANKOUTLINED = new URL('../../assets/icons/propaneTankOutlined.
  */
 export const initPropaneTankOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PROPANETANKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'propaneTankOutlinedIcon', url: URL_PROPANETANKOUTLINED }, ...properties);
 }
 
 /**

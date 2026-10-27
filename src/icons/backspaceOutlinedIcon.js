@@ -15,7 +15,7 @@ const URL_BACKSPACEOUTLINED = new URL('../../assets/icons/backspaceOutlined.svg'
  */
 export const initBackspaceOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BACKSPACEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'backspaceOutlinedIcon', url: URL_BACKSPACEOUTLINED }, ...properties);
 }
 
 /**

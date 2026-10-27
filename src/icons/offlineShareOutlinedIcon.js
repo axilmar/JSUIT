@@ -15,7 +15,7 @@ const URL_OFFLINESHAREOUTLINED = new URL('../../assets/icons/offlineShareOutline
  */
 export const initOfflineShareOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OFFLINESHAREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'offlineShareOutlinedIcon', url: URL_OFFLINESHAREOUTLINED }, ...properties);
 }
 
 /**

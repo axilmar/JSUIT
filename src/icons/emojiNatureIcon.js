@@ -15,7 +15,7 @@ const URL_EMOJINATURE = new URL('../../assets/icons/emojiNature.svg', import.met
  */
 export const initEmojiNatureIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EMOJINATURE }, ...properties);
+    initIcon(element, { additionalClassName: 'emojiNatureIcon', url: URL_EMOJINATURE }, ...properties);
 }
 
 /**

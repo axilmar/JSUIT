@@ -15,7 +15,7 @@ const URL_SEGMENTOUTLINED = new URL('../../assets/icons/segmentOutlined.svg', im
  */
 export const initSegmentOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SEGMENTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'segmentOutlinedIcon', url: URL_SEGMENTOUTLINED }, ...properties);
 }
 
 /**

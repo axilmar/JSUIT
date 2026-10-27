@@ -15,7 +15,7 @@ const URL_UNFOLDMOREDOUBLE = new URL('../../assets/icons/unfoldMoreDouble.svg', 
  */
 export const initUnfoldMoreDoubleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UNFOLDMOREDOUBLE }, ...properties);
+    initIcon(element, { additionalClassName: 'unfoldMoreDoubleIcon', url: URL_UNFOLDMOREDOUBLE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ALLOUT = new URL('../../assets/icons/allOut.svg', import.meta.url).hre
  */
 export const initAllOutIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALLOUT }, ...properties);
+    initIcon(element, { additionalClassName: 'allOutIcon', url: URL_ALLOUT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_WIFIOFFOUTLINED = new URL('../../assets/icons/wifiOffOutlined.svg', im
  */
 export const initWifiOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIFIOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wifiOffOutlinedIcon', url: URL_WIFIOFFOUTLINED }, ...properties);
 }
 
 /**

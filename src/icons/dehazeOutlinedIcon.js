@@ -15,7 +15,7 @@ const URL_DEHAZEOUTLINED = new URL('../../assets/icons/dehazeOutlined.svg', impo
  */
 export const initDehazeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEHAZEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dehazeOutlinedIcon', url: URL_DEHAZEOUTLINED }, ...properties);
 }
 
 /**

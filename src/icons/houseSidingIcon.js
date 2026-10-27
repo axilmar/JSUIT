@@ -15,7 +15,7 @@ const URL_HOUSESIDING = new URL('../../assets/icons/houseSiding.svg', import.met
  */
 export const initHouseSidingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOUSESIDING }, ...properties);
+    initIcon(element, { additionalClassName: 'houseSidingIcon', url: URL_HOUSESIDING }, ...properties);
 }
 
 /**

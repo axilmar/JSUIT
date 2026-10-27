@@ -15,7 +15,7 @@ const URL_VIDEOCAMERAFRONT = new URL('../../assets/icons/videoCameraFront.svg', 
  */
 export const initVideoCameraFrontIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOCAMERAFRONT }, ...properties);
+    initIcon(element, { additionalClassName: 'videoCameraFrontIcon', url: URL_VIDEOCAMERAFRONT }, ...properties);
 }
 
 /**

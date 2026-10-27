@@ -15,7 +15,7 @@ const URL_AUTOAWESOMEOUTLINED = new URL('../../assets/icons/autoAwesomeOutlined.
  */
 export const initAutoAwesomeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOAWESOMEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'autoAwesomeOutlinedIcon', url: URL_AUTOAWESOMEOUTLINED }, ...properties);
 }
 
 /**

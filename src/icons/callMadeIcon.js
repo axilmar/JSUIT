@@ -15,7 +15,7 @@ const URL_CALLMADE = new URL('../../assets/icons/callMade.svg', import.meta.url)
  */
 export const initCallMadeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALLMADE }, ...properties);
+    initIcon(element, { additionalClassName: 'callMadeIcon', url: URL_CALLMADE }, ...properties);
 }
 
 /**

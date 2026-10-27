@@ -15,7 +15,7 @@ const URL_FOURMP = new URL('../../assets/icons/fourMp.svg', import.meta.url).hre
  */
 export const initFourMpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOURMP }, ...properties);
+    initIcon(element, { additionalClassName: 'fourMpIcon', url: URL_FOURMP }, ...properties);
 }
 
 /**

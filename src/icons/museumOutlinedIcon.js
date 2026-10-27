@@ -15,7 +15,7 @@ const URL_MUSEUMOUTLINED = new URL('../../assets/icons/museumOutlined.svg', impo
  */
 export const initMuseumOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MUSEUMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'museumOutlinedIcon', url: URL_MUSEUMOUTLINED }, ...properties);
 }
 
 /**

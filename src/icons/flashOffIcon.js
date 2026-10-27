@@ -15,7 +15,7 @@ const URL_FLASHOFF = new URL('../../assets/icons/flashOff.svg', import.meta.url)
  */
 export const initFlashOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLASHOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'flashOffIcon', url: URL_FLASHOFF }, ...properties);
 }
 
 /**

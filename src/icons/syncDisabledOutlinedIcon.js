@@ -15,7 +15,7 @@ const URL_SYNCDISABLEDOUTLINED = new URL('../../assets/icons/syncDisabledOutline
  */
 export const initSyncDisabledOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SYNCDISABLEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'syncDisabledOutlinedIcon', url: URL_SYNCDISABLEDOUTLINED }, ...properties);
 }
 
 /**

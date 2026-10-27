@@ -15,7 +15,7 @@ const URL_WEBSTORIES = new URL('../../assets/icons/webStories.svg', import.meta.
  */
 export const initWebStoriesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WEBSTORIES }, ...properties);
+    initIcon(element, { additionalClassName: 'webStoriesIcon', url: URL_WEBSTORIES }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_GRADING = new URL('../../assets/icons/grading.svg', import.meta.url).h
  */
 export const initGradingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRADING }, ...properties);
+    initIcon(element, { additionalClassName: 'gradingIcon', url: URL_GRADING }, ...properties);
 }
 
 /**

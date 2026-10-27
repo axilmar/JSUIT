@@ -15,7 +15,7 @@ const URL_BOOKMARKSOUTLINED = new URL('../../assets/icons/bookmarksOutlined.svg'
  */
 export const initBookmarksOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BOOKMARKSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bookmarksOutlinedIcon', url: URL_BOOKMARKSOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_OFFLINEPINOUTLINED = new URL('../../assets/icons/offlinePinOutlined.sv
  */
 export const initOfflinePinOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OFFLINEPINOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'offlinePinOutlinedIcon', url: URL_OFFLINEPINOUTLINED }, ...properties);
 }
 
 /**

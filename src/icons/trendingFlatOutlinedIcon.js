@@ -15,7 +15,7 @@ const URL_TRENDINGFLATOUTLINED = new URL('../../assets/icons/trendingFlatOutline
  */
 export const initTrendingFlatOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRENDINGFLATOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'trendingFlatOutlinedIcon', url: URL_TRENDINGFLATOUTLINED }, ...properties);
 }
 
 /**

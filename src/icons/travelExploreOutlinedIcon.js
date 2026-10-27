@@ -15,7 +15,7 @@ const URL_TRAVELEXPLOREOUTLINED = new URL('../../assets/icons/travelExploreOutli
  */
 export const initTravelExploreOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRAVELEXPLOREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'travelExploreOutlinedIcon', url: URL_TRAVELEXPLOREOUTLINED }, ...properties);
 }
 
 /**

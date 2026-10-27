@@ -15,7 +15,7 @@ const URL_COUNTERTOPS = new URL('../../assets/icons/countertops.svg', import.met
  */
 export const initCountertopsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COUNTERTOPS }, ...properties);
+    initIcon(element, { additionalClassName: 'countertopsIcon', url: URL_COUNTERTOPS }, ...properties);
 }
 
 /**

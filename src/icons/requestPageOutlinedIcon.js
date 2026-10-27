@@ -15,7 +15,7 @@ const URL_REQUESTPAGEOUTLINED = new URL('../../assets/icons/requestPageOutlined.
  */
 export const initRequestPageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REQUESTPAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'requestPageOutlinedIcon', url: URL_REQUESTPAGEOUTLINED }, ...properties);
 }
 
 /**

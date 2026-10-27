@@ -15,7 +15,7 @@ const URL_UPCOMING = new URL('../../assets/icons/upcoming.svg', import.meta.url)
  */
 export const initUpcomingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UPCOMING }, ...properties);
+    initIcon(element, { additionalClassName: 'upcomingIcon', url: URL_UPCOMING }, ...properties);
 }
 
 /**

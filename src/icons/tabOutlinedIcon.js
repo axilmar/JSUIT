@@ -15,7 +15,7 @@ const URL_TABOUTLINED = new URL('../../assets/icons/tabOutlined.svg', import.met
  */
 export const initTabOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TABOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tabOutlinedIcon', url: URL_TABOUTLINED }, ...properties);
 }
 
 /**

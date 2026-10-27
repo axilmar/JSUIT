@@ -15,7 +15,7 @@ const URL_COMMENTSDISABLEDOUTLINED = new URL('../../assets/icons/commentsDisable
  */
 export const initCommentsDisabledOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMMENTSDISABLEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'commentsDisabledOutlinedIcon', url: URL_COMMENTSDISABLEDOUTLINED }, ...properties);
 }
 
 /**

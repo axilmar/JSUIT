@@ -15,7 +15,7 @@ const URL_FOLDERZIP = new URL('../../assets/icons/folderZip.svg', import.meta.ur
  */
 export const initFolderZipIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOLDERZIP }, ...properties);
+    initIcon(element, { additionalClassName: 'folderZipIcon', url: URL_FOLDERZIP }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PAYMENTOUTLINED = new URL('../../assets/icons/paymentOutlined.svg', im
  */
 export const initPaymentOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PAYMENTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'paymentOutlinedIcon', url: URL_PAYMENTOUTLINED }, ...properties);
 }
 
 /**

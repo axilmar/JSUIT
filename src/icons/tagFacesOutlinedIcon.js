@@ -15,7 +15,7 @@ const URL_TAGFACESOUTLINED = new URL('../../assets/icons/tagFacesOutlined.svg', 
  */
 export const initTagFacesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TAGFACESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tagFacesOutlinedIcon', url: URL_TAGFACESOUTLINED }, ...properties);
 }
 
 /**

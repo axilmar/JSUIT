@@ -15,7 +15,7 @@ const URL_PLAYLISTPLAYOUTLINED = new URL('../../assets/icons/playlistPlayOutline
  */
 export const initPlaylistPlayOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYLISTPLAYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'playlistPlayOutlinedIcon', url: URL_PLAYLISTPLAYOUTLINED }, ...properties);
 }
 
 /**

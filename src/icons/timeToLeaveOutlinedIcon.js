@@ -15,7 +15,7 @@ const URL_TIMETOLEAVEOUTLINED = new URL('../../assets/icons/timeToLeaveOutlined.
  */
 export const initTimeToLeaveOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TIMETOLEAVEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'timeToLeaveOutlinedIcon', url: URL_TIMETOLEAVEOUTLINED }, ...properties);
 }
 
 /**

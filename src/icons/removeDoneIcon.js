@@ -15,7 +15,7 @@ const URL_REMOVEDONE = new URL('../../assets/icons/removeDone.svg', import.meta.
  */
 export const initRemoveDoneIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REMOVEDONE }, ...properties);
+    initIcon(element, { additionalClassName: 'removeDoneIcon', url: URL_REMOVEDONE }, ...properties);
 }
 
 /**

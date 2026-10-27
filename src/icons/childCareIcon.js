@@ -15,7 +15,7 @@ const URL_CHILDCARE = new URL('../../assets/icons/childCare.svg', import.meta.ur
  */
 export const initChildCareIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHILDCARE }, ...properties);
+    initIcon(element, { additionalClassName: 'childCareIcon', url: URL_CHILDCARE }, ...properties);
 }
 
 /**

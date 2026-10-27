@@ -15,7 +15,7 @@ const URL_VOICEOVEROFF = new URL('../../assets/icons/voiceOverOff.svg', import.m
  */
 export const initVoiceOverOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VOICEOVEROFF }, ...properties);
+    initIcon(element, { additionalClassName: 'voiceOverOffIcon', url: URL_VOICEOVEROFF }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ISO = new URL('../../assets/icons/iso.svg', import.meta.url).href;
  */
 export const initIsoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ISO }, ...properties);
+    initIcon(element, { additionalClassName: 'isoIcon', url: URL_ISO }, ...properties);
 }
 
 /**

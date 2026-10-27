@@ -15,7 +15,7 @@ const URL_SORTOUTLINED = new URL('../../assets/icons/sortOutlined.svg', import.m
  */
 export const initSortOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SORTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sortOutlinedIcon', url: URL_SORTOUTLINED }, ...properties);
 }
 
 /**

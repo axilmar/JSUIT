@@ -15,7 +15,7 @@ const URL_TRANSLATE = new URL('../../assets/icons/translate.svg', import.meta.ur
  */
 export const initTranslateIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRANSLATE }, ...properties);
+    initIcon(element, { additionalClassName: 'translateIcon', url: URL_TRANSLATE }, ...properties);
 }
 
 /**

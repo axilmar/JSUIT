@@ -15,7 +15,7 @@ const URL_CROPLANDSCAPEOUTLINED = new URL('../../assets/icons/cropLandscapeOutli
  */
 export const initCropLandscapeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CROPLANDSCAPEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cropLandscapeOutlinedIcon', url: URL_CROPLANDSCAPEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FORESTOUTLINED = new URL('../../assets/icons/forestOutlined.svg', impo
  */
 export const initForestOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORESTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'forestOutlinedIcon', url: URL_FORESTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_HEARINGOUTLINED = new URL('../../assets/icons/hearingOutlined.svg', im
  */
 export const initHearingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEARINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hearingOutlinedIcon', url: URL_HEARINGOUTLINED }, ...properties);
 }
 
 /**

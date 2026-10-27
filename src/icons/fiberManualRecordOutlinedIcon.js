@@ -15,7 +15,7 @@ const URL_FIBERMANUALRECORDOUTLINED = new URL('../../assets/icons/fiberManualRec
  */
 export const initFiberManualRecordOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIBERMANUALRECORDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fiberManualRecordOutlinedIcon', url: URL_FIBERMANUALRECORDOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_EDITNOTE = new URL('../../assets/icons/editNote.svg', import.meta.url)
  */
 export const initEditNoteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EDITNOTE }, ...properties);
+    initIcon(element, { additionalClassName: 'editNoteIcon', url: URL_EDITNOTE }, ...properties);
 }
 
 /**

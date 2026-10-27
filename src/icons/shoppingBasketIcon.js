@@ -15,7 +15,7 @@ const URL_SHOPPINGBASKET = new URL('../../assets/icons/shoppingBasket.svg', impo
  */
 export const initShoppingBasketIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHOPPINGBASKET }, ...properties);
+    initIcon(element, { additionalClassName: 'shoppingBasketIcon', url: URL_SHOPPINGBASKET }, ...properties);
 }
 
 /**

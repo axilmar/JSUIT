@@ -15,7 +15,7 @@ const URL_REQUESTQUOTEOUTLINED = new URL('../../assets/icons/requestQuoteOutline
  */
 export const initRequestQuoteOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REQUESTQUOTEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'requestQuoteOutlinedIcon', url: URL_REQUESTQUOTEOUTLINED }, ...properties);
 }
 
 /**

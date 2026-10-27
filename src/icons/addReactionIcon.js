@@ -15,7 +15,7 @@ const URL_ADDREACTION = new URL('../../assets/icons/addReaction.svg', import.met
  */
 export const initAddReactionIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDREACTION }, ...properties);
+    initIcon(element, { additionalClassName: 'addReactionIcon', url: URL_ADDREACTION }, ...properties);
 }
 
 /**

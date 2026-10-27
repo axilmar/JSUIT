@@ -15,7 +15,7 @@ const URL_RICEBOWLOUTLINED = new URL('../../assets/icons/riceBowlOutlined.svg', 
  */
 export const initRiceBowlOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RICEBOWLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'riceBowlOutlinedIcon', url: URL_RICEBOWLOUTLINED }, ...properties);
 }
 
 /**

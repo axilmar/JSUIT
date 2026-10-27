@@ -15,7 +15,7 @@ const URL_FILTER9PLUS = new URL('../../assets/icons/filter9Plus.svg', import.met
  */
 export const initFilter9PlusIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTER9PLUS }, ...properties);
+    initIcon(element, { additionalClassName: 'filter9PlusIcon', url: URL_FILTER9PLUS }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DVROUTLINED = new URL('../../assets/icons/dvrOutlined.svg', import.met
  */
 export const initDvrOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DVROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dvrOutlinedIcon', url: URL_DVROUTLINED }, ...properties);
 }
 
 /**

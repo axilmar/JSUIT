@@ -15,7 +15,7 @@ const URL_THIRTYFPSSELECT = new URL('../../assets/icons/thirtyFpsSelect.svg', im
  */
 export const initThirtyFpsSelectIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THIRTYFPSSELECT }, ...properties);
+    initIcon(element, { additionalClassName: 'thirtyFpsSelectIcon', url: URL_THIRTYFPSSELECT }, ...properties);
 }
 
 /**

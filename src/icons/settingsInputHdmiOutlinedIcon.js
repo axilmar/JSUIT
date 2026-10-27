@@ -15,7 +15,7 @@ const URL_SETTINGSINPUTHDMIOUTLINED = new URL('../../assets/icons/settingsInputH
  */
 export const initSettingsInputHdmiOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSINPUTHDMIOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsInputHdmiOutlinedIcon', url: URL_SETTINGSINPUTHDMIOUTLINED }, ...properties);
 }
 
 /**

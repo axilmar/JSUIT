@@ -15,7 +15,7 @@ const URL_SYNAGOGUE = new URL('../../assets/icons/synagogue.svg', import.meta.ur
  */
 export const initSynagogueIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SYNAGOGUE }, ...properties);
+    initIcon(element, { additionalClassName: 'synagogueIcon', url: URL_SYNAGOGUE }, ...properties);
 }
 
 /**

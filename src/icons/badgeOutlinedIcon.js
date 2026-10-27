@@ -15,7 +15,7 @@ const URL_BADGEOUTLINED = new URL('../../assets/icons/badgeOutlined.svg', import
  */
 export const initBadgeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BADGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'badgeOutlinedIcon', url: URL_BADGEOUTLINED }, ...properties);
 }
 
 /**

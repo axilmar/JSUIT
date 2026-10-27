@@ -15,7 +15,7 @@ const URL_BACKUP = new URL('../../assets/icons/backup.svg', import.meta.url).hre
  */
 export const initBackupIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BACKUP }, ...properties);
+    initIcon(element, { additionalClassName: 'backupIcon', url: URL_BACKUP }, ...properties);
 }
 
 /**

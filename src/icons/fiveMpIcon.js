@@ -15,7 +15,7 @@ const URL_FIVEMP = new URL('../../assets/icons/fiveMp.svg', import.meta.url).hre
  */
 export const initFiveMpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIVEMP }, ...properties);
+    initIcon(element, { additionalClassName: 'fiveMpIcon', url: URL_FIVEMP }, ...properties);
 }
 
 /**

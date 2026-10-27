@@ -15,7 +15,7 @@ const URL_CASESOUTLINED = new URL('../../assets/icons/casesOutlined.svg', import
  */
 export const initCasesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CASESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'casesOutlinedIcon', url: URL_CASESOUTLINED }, ...properties);
 }
 
 /**

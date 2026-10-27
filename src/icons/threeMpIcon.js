@@ -15,7 +15,7 @@ const URL_THREEMP = new URL('../../assets/icons/threeMp.svg', import.meta.url).h
  */
 export const initThreeMpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THREEMP }, ...properties);
+    initIcon(element, { additionalClassName: 'threeMpIcon', url: URL_THREEMP }, ...properties);
 }
 
 /**

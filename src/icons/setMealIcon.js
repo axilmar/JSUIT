@@ -15,7 +15,7 @@ const URL_SETMEAL = new URL('../../assets/icons/setMeal.svg', import.meta.url).h
  */
 export const initSetMealIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETMEAL }, ...properties);
+    initIcon(element, { additionalClassName: 'setMealIcon', url: URL_SETMEAL }, ...properties);
 }
 
 /**

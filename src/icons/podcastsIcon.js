@@ -15,7 +15,7 @@ const URL_PODCASTS = new URL('../../assets/icons/podcasts.svg', import.meta.url)
  */
 export const initPodcastsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PODCASTS }, ...properties);
+    initIcon(element, { additionalClassName: 'podcastsIcon', url: URL_PODCASTS }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_INSERTLINK = new URL('../../assets/icons/insertLink.svg', import.meta.
  */
 export const initInsertLinkIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INSERTLINK }, ...properties);
+    initIcon(element, { additionalClassName: 'insertLinkIcon', url: URL_INSERTLINK }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_VISIBILITYOFFOUTLINED = new URL('../../assets/icons/visibilityOffOutli
  */
 export const initVisibilityOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VISIBILITYOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'visibilityOffOutlinedIcon', url: URL_VISIBILITYOFFOUTLINED }, ...properties);
 }
 
 /**

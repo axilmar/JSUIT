@@ -15,7 +15,7 @@ const URL_THREESIXTY = new URL('../../assets/icons/threeSixty.svg', import.meta.
  */
 export const initThreeSixtyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THREESIXTY }, ...properties);
+    initIcon(element, { additionalClassName: 'threeSixtyIcon', url: URL_THREESIXTY }, ...properties);
 }
 
 /**

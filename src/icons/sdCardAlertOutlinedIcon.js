@@ -15,7 +15,7 @@ const URL_SDCARDALERTOUTLINED = new URL('../../assets/icons/sdCardAlertOutlined.
  */
 export const initSdCardAlertOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SDCARDALERTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sdCardAlertOutlinedIcon', url: URL_SDCARDALERTOUTLINED }, ...properties);
 }
 
 /**

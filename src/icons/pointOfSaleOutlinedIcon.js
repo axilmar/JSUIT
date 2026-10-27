@@ -15,7 +15,7 @@ const URL_POINTOFSALEOUTLINED = new URL('../../assets/icons/pointOfSaleOutlined.
  */
 export const initPointOfSaleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POINTOFSALEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pointOfSaleOutlinedIcon', url: URL_POINTOFSALEOUTLINED }, ...properties);
 }
 
 /**

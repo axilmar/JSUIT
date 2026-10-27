@@ -15,7 +15,7 @@ const URL_FAMILYRESTROOM = new URL('../../assets/icons/familyRestroom.svg', impo
  */
 export const initFamilyRestroomIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FAMILYRESTROOM }, ...properties);
+    initIcon(element, { additionalClassName: 'familyRestroomIcon', url: URL_FAMILYRESTROOM }, ...properties);
 }
 
 /**

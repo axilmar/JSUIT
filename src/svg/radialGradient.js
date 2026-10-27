@@ -10,7 +10,7 @@ import { initSVGGradientElement } from "./SVGGradientElement.js";
  */
 export const initRadialGradient = (element, ...properties) => {
     console.assert(element instanceof SVGRadialGradientElement);
-    initSVGGradientElement(element, ...properties);
+    initSVGGradientElement(element, { additionalClassName: 'radialGradient' }, ...properties);
 }
 
 /**

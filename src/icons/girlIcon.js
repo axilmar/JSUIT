@@ -15,7 +15,7 @@ const URL_GIRL = new URL('../../assets/icons/girl.svg', import.meta.url).href;
  */
 export const initGirlIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GIRL }, ...properties);
+    initIcon(element, { additionalClassName: 'girlIcon', url: URL_GIRL }, ...properties);
 }
 
 /**

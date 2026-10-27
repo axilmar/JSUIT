@@ -15,7 +15,7 @@ const URL_SURFINGOUTLINED = new URL('../../assets/icons/surfingOutlined.svg', im
  */
 export const initSurfingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SURFINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'surfingOutlinedIcon', url: URL_SURFINGOUTLINED }, ...properties);
 }
 
 /**

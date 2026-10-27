@@ -15,7 +15,7 @@ const URL_PERSONREMOVE = new URL('../../assets/icons/personRemove.svg', import.m
  */
 export const initPersonRemoveIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERSONREMOVE }, ...properties);
+    initIcon(element, { additionalClassName: 'personRemoveIcon', url: URL_PERSONREMOVE }, ...properties);
 }
 
 /**

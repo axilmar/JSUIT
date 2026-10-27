@@ -15,7 +15,7 @@ const URL_AIRPLANETICKETOUTLINED = new URL('../../assets/icons/airplaneTicketOut
  */
 export const initAirplaneTicketOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AIRPLANETICKETOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'airplaneTicketOutlinedIcon', url: URL_AIRPLANETICKETOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DELETEFOREVER = new URL('../../assets/icons/deleteForever.svg', import
  */
 export const initDeleteForeverIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DELETEFOREVER }, ...properties);
+    initIcon(element, { additionalClassName: 'deleteForeverIcon', url: URL_DELETEFOREVER }, ...properties);
 }
 
 /**

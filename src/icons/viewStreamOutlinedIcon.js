@@ -15,7 +15,7 @@ const URL_VIEWSTREAMOUTLINED = new URL('../../assets/icons/viewStreamOutlined.sv
  */
 export const initViewStreamOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWSTREAMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewStreamOutlinedIcon', url: URL_VIEWSTREAMOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_RVHOOKUPOUTLINED = new URL('../../assets/icons/rvHookupOutlined.svg', 
  */
 export const initRvHookupOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RVHOOKUPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'rvHookupOutlinedIcon', url: URL_RVHOOKUPOUTLINED }, ...properties);
 }
 
 /**

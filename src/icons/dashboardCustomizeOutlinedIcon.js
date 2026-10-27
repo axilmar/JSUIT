@@ -15,7 +15,7 @@ const URL_DASHBOARDCUSTOMIZEOUTLINED = new URL('../../assets/icons/dashboardCust
  */
 export const initDashboardCustomizeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DASHBOARDCUSTOMIZEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dashboardCustomizeOutlinedIcon', url: URL_DASHBOARDCUSTOMIZEOUTLINED }, ...properties);
 }
 
 /**

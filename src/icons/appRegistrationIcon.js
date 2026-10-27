@@ -15,7 +15,7 @@ const URL_APPREGISTRATION = new URL('../../assets/icons/appRegistration.svg', im
  */
 export const initAppRegistrationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_APPREGISTRATION }, ...properties);
+    initIcon(element, { additionalClassName: 'appRegistrationIcon', url: URL_APPREGISTRATION }, ...properties);
 }
 
 /**

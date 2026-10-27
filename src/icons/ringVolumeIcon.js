@@ -15,7 +15,7 @@ const URL_RINGVOLUME = new URL('../../assets/icons/ringVolume.svg', import.meta.
  */
 export const initRingVolumeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RINGVOLUME }, ...properties);
+    initIcon(element, { additionalClassName: 'ringVolumeIcon', url: URL_RINGVOLUME }, ...properties);
 }
 
 /**

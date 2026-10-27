@@ -15,7 +15,7 @@ const URL_BACKHANDOUTLINED = new URL('../../assets/icons/backHandOutlined.svg', 
  */
 export const initBackHandOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BACKHANDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'backHandOutlinedIcon', url: URL_BACKHANDOUTLINED }, ...properties);
 }
 
 /**

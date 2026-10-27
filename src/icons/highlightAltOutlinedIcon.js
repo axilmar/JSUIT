@@ -15,7 +15,7 @@ const URL_HIGHLIGHTALTOUTLINED = new URL('../../assets/icons/highlightAltOutline
  */
 export const initHighlightAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HIGHLIGHTALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'highlightAltOutlinedIcon', url: URL_HIGHLIGHTALTOUTLINED }, ...properties);
 }
 
 /**

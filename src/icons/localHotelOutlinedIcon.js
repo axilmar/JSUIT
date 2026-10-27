@@ -15,7 +15,7 @@ const URL_LOCALHOTELOUTLINED = new URL('../../assets/icons/localHotelOutlined.sv
  */
 export const initLocalHotelOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALHOTELOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localHotelOutlinedIcon', url: URL_LOCALHOTELOUTLINED }, ...properties);
 }
 
 /**

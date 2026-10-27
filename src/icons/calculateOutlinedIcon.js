@@ -15,7 +15,7 @@ const URL_CALCULATEOUTLINED = new URL('../../assets/icons/calculateOutlined.svg'
  */
 export const initCalculateOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALCULATEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'calculateOutlinedIcon', url: URL_CALCULATEOUTLINED }, ...properties);
 }
 
 /**

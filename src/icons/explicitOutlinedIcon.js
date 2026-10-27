@@ -15,7 +15,7 @@ const URL_EXPLICITOUTLINED = new URL('../../assets/icons/explicitOutlined.svg', 
  */
 export const initExplicitOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXPLICITOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'explicitOutlinedIcon', url: URL_EXPLICITOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DEVELOPERMODE = new URL('../../assets/icons/developerMode.svg', import
  */
 export const initDeveloperModeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEVELOPERMODE }, ...properties);
+    initIcon(element, { additionalClassName: 'developerModeIcon', url: URL_DEVELOPERMODE }, ...properties);
 }
 
 /**

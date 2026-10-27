@@ -15,7 +15,7 @@ const URL_RADAROUTLINED = new URL('../../assets/icons/radarOutlined.svg', import
  */
 export const initRadarOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RADAROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'radarOutlinedIcon', url: URL_RADAROUTLINED }, ...properties);
 }
 
 /**

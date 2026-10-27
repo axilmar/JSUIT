@@ -15,7 +15,7 @@ const URL_SETTINGSVOICE = new URL('../../assets/icons/settingsVoice.svg', import
  */
 export const initSettingsVoiceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSVOICE }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsVoiceIcon', url: URL_SETTINGSVOICE }, ...properties);
 }
 
 /**

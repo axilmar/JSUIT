@@ -15,7 +15,7 @@ const URL_WIFILOCK = new URL('../../assets/icons/wifiLock.svg', import.meta.url)
  */
 export const initWifiLockIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIFILOCK }, ...properties);
+    initIcon(element, { additionalClassName: 'wifiLockIcon', url: URL_WIFILOCK }, ...properties);
 }
 
 /**

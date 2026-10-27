@@ -15,7 +15,7 @@ const URL_HDRONSELECT = new URL('../../assets/icons/hdrOnSelect.svg', import.met
  */
 export const initHdrOnSelectIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HDRONSELECT }, ...properties);
+    initIcon(element, { additionalClassName: 'hdrOnSelectIcon', url: URL_HDRONSELECT }, ...properties);
 }
 
 /**

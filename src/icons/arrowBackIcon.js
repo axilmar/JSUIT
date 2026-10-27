@@ -15,7 +15,7 @@ const URL_ARROWBACK = new URL('../../assets/icons/arrowBack.svg', import.meta.ur
  */
 export const initArrowBackIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARROWBACK }, ...properties);
+    initIcon(element, { additionalClassName: 'arrowBackIcon', url: URL_ARROWBACK }, ...properties);
 }
 
 /**

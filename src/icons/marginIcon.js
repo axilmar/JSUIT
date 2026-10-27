@@ -15,7 +15,7 @@ const URL_MARGIN = new URL('../../assets/icons/margin.svg', import.meta.url).hre
  */
 export const initMarginIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MARGIN }, ...properties);
+    initIcon(element, { additionalClassName: 'marginIcon', url: URL_MARGIN }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_BLURCIRCULAROUTLINED = new URL('../../assets/icons/blurCircularOutline
  */
 export const initBlurCircularOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLURCIRCULAROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'blurCircularOutlinedIcon', url: URL_BLURCIRCULAROUTLINED }, ...properties);
 }
 
 /**

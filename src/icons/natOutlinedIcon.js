@@ -15,7 +15,7 @@ const URL_NATOUTLINED = new URL('../../assets/icons/natOutlined.svg', import.met
  */
 export const initNatOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NATOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'natOutlinedIcon', url: URL_NATOUTLINED }, ...properties);
 }
 
 /**

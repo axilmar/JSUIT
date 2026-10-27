@@ -15,7 +15,7 @@ const URL_CORPORATEFARE = new URL('../../assets/icons/corporateFare.svg', import
  */
 export const initCorporateFareIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CORPORATEFARE }, ...properties);
+    initIcon(element, { additionalClassName: 'corporateFareIcon', url: URL_CORPORATEFARE }, ...properties);
 }
 
 /**

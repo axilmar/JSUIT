@@ -15,7 +15,7 @@ const URL_RECENTACTORSOUTLINED = new URL('../../assets/icons/recentActorsOutline
  */
 export const initRecentActorsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RECENTACTORSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'recentActorsOutlinedIcon', url: URL_RECENTACTORSOUTLINED }, ...properties);
 }
 
 /**

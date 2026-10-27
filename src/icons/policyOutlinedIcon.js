@@ -15,7 +15,7 @@ const URL_POLICYOUTLINED = new URL('../../assets/icons/policyOutlined.svg', impo
  */
 export const initPolicyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POLICYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'policyOutlinedIcon', url: URL_POLICYOUTLINED }, ...properties);
 }
 
 /**

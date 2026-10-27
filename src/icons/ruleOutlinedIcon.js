@@ -15,7 +15,7 @@ const URL_RULEOUTLINED = new URL('../../assets/icons/ruleOutlined.svg', import.m
  */
 export const initRuleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RULEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'ruleOutlinedIcon', url: URL_RULEOUTLINED }, ...properties);
 }
 
 /**

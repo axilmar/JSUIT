@@ -15,7 +15,7 @@ const URL_INSERTDRIVEFILE = new URL('../../assets/icons/insertDriveFile.svg', im
  */
 export const initInsertDriveFileIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INSERTDRIVEFILE }, ...properties);
+    initIcon(element, { additionalClassName: 'insertDriveFileIcon', url: URL_INSERTDRIVEFILE }, ...properties);
 }
 
 /**

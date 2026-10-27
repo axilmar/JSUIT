@@ -15,7 +15,7 @@ const URL_MONITORWEIGHTOUTLINED = new URL('../../assets/icons/monitorWeightOutli
  */
 export const initMonitorWeightOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MONITORWEIGHTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'monitorWeightOutlinedIcon', url: URL_MONITORWEIGHTOUTLINED }, ...properties);
 }
 
 /**

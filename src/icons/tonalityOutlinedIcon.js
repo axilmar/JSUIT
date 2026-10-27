@@ -15,7 +15,7 @@ const URL_TONALITYOUTLINED = new URL('../../assets/icons/tonalityOutlined.svg', 
  */
 export const initTonalityOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TONALITYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tonalityOutlinedIcon', url: URL_TONALITYOUTLINED }, ...properties);
 }
 
 /**

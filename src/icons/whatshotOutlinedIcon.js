@@ -15,7 +15,7 @@ const URL_WHATSHOTOUTLINED = new URL('../../assets/icons/whatshotOutlined.svg', 
  */
 export const initWhatshotOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WHATSHOTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'whatshotOutlinedIcon', url: URL_WHATSHOTOUTLINED }, ...properties);
 }
 
 /**

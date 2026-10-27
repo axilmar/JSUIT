@@ -15,7 +15,7 @@ const URL_DOORFRONT = new URL('../../assets/icons/doorFront.svg', import.meta.ur
  */
 export const initDoorFrontIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOORFRONT }, ...properties);
+    initIcon(element, { additionalClassName: 'doorFrontIcon', url: URL_DOORFRONT }, ...properties);
 }
 
 /**

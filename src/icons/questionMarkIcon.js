@@ -15,7 +15,7 @@ const URL_QUESTIONMARK = new URL('../../assets/icons/questionMark.svg', import.m
  */
 export const initQuestionMarkIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUESTIONMARK }, ...properties);
+    initIcon(element, { additionalClassName: 'questionMarkIcon', url: URL_QUESTIONMARK }, ...properties);
 }
 
 /**

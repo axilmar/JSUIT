@@ -15,7 +15,7 @@ const URL_FEATUREDPLAYLISTOUTLINED = new URL('../../assets/icons/featuredPlayLis
  */
 export const initFeaturedPlayListOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FEATUREDPLAYLISTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'featuredPlayListOutlinedIcon', url: URL_FEATUREDPLAYLISTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_WIFITETHERINGERROR = new URL('../../assets/icons/wifiTetheringError.sv
  */
 export const initWifiTetheringErrorIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIFITETHERINGERROR }, ...properties);
+    initIcon(element, { additionalClassName: 'wifiTetheringErrorIcon', url: URL_WIFITETHERINGERROR }, ...properties);
 }
 
 /**

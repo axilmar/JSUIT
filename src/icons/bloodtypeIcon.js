@@ -15,7 +15,7 @@ const URL_BLOODTYPE = new URL('../../assets/icons/bloodtype.svg', import.meta.ur
  */
 export const initBloodtypeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLOODTYPE }, ...properties);
+    initIcon(element, { additionalClassName: 'bloodtypeIcon', url: URL_BLOODTYPE }, ...properties);
 }
 
 /**

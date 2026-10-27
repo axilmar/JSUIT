@@ -15,7 +15,7 @@ const URL_EIGHTEENUPRATING = new URL('../../assets/icons/eighteenUpRating.svg', 
  */
 export const initEighteenUpRatingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EIGHTEENUPRATING }, ...properties);
+    initIcon(element, { additionalClassName: 'eighteenUpRatingIcon', url: URL_EIGHTEENUPRATING }, ...properties);
 }
 
 /**

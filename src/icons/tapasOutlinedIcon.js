@@ -15,7 +15,7 @@ const URL_TAPASOUTLINED = new URL('../../assets/icons/tapasOutlined.svg', import
  */
 export const initTapasOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TAPASOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tapasOutlinedIcon', url: URL_TAPASOUTLINED }, ...properties);
 }
 
 /**

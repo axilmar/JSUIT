@@ -15,7 +15,7 @@ const URL_HEADSETMIC = new URL('../../assets/icons/headsetMic.svg', import.meta.
  */
 export const initHeadsetMicIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEADSETMIC }, ...properties);
+    initIcon(element, { additionalClassName: 'headsetMicIcon', url: URL_HEADSETMIC }, ...properties);
 }
 
 /**

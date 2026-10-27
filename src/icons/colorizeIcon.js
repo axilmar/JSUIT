@@ -15,7 +15,7 @@ const URL_COLORIZE = new URL('../../assets/icons/colorize.svg', import.meta.url)
  */
 export const initColorizeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COLORIZE }, ...properties);
+    initIcon(element, { additionalClassName: 'colorizeIcon', url: URL_COLORIZE }, ...properties);
 }
 
 /**

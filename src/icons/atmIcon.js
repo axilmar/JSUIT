@@ -15,7 +15,7 @@ const URL_ATM = new URL('../../assets/icons/atm.svg', import.meta.url).href;
  */
 export const initAtmIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ATM }, ...properties);
+    initIcon(element, { additionalClassName: 'atmIcon', url: URL_ATM }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_APPSETTINGSALTOUTLINED = new URL('../../assets/icons/appSettingsAltOut
  */
 export const initAppSettingsAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_APPSETTINGSALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'appSettingsAltOutlinedIcon', url: URL_APPSETTINGSALTOUTLINED }, ...properties);
 }
 
 /**

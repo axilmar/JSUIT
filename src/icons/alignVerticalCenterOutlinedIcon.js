@@ -15,7 +15,7 @@ const URL_ALIGNVERTICALCENTEROUTLINED = new URL('../../assets/icons/alignVertica
  */
 export const initAlignVerticalCenterOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALIGNVERTICALCENTEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'alignVerticalCenterOutlinedIcon', url: URL_ALIGNVERTICALCENTEROUTLINED }, ...properties);
 }
 
 /**

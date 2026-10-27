@@ -15,7 +15,7 @@ const URL_SEARCHOFF = new URL('../../assets/icons/searchOff.svg', import.meta.ur
  */
 export const initSearchOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SEARCHOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'searchOffIcon', url: URL_SEARCHOFF }, ...properties);
 }
 
 /**

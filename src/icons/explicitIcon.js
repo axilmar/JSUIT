@@ -15,7 +15,7 @@ const URL_EXPLICIT = new URL('../../assets/icons/explicit.svg', import.meta.url)
  */
 export const initExplicitIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXPLICIT }, ...properties);
+    initIcon(element, { additionalClassName: 'explicitIcon', url: URL_EXPLICIT }, ...properties);
 }
 
 /**

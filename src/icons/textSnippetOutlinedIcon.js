@@ -15,7 +15,7 @@ const URL_TEXTSNIPPETOUTLINED = new URL('../../assets/icons/textSnippetOutlined.
  */
 export const initTextSnippetOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTSNIPPETOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'textSnippetOutlinedIcon', url: URL_TEXTSNIPPETOUTLINED }, ...properties);
 }
 
 /**

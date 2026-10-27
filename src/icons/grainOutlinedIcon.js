@@ -15,7 +15,7 @@ const URL_GRAINOUTLINED = new URL('../../assets/icons/grainOutlined.svg', import
  */
 export const initGrainOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRAINOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'grainOutlinedIcon', url: URL_GRAINOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FILTERALTOFFOUTLINED = new URL('../../assets/icons/filterAltOffOutline
  */
 export const initFilterAltOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERALTOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'filterAltOffOutlinedIcon', url: URL_FILTERALTOFFOUTLINED }, ...properties);
 }
 
 /**

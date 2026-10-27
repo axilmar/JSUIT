@@ -15,7 +15,7 @@ const URL_HIVEOUTLINED = new URL('../../assets/icons/hiveOutlined.svg', import.m
  */
 export const initHiveOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HIVEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hiveOutlinedIcon', url: URL_HIVEOUTLINED }, ...properties);
 }
 
 /**

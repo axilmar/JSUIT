@@ -15,7 +15,7 @@ const URL_NOCELLOUTLINED = new URL('../../assets/icons/noCellOutlined.svg', impo
  */
 export const initNoCellOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOCELLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'noCellOutlinedIcon', url: URL_NOCELLOUTLINED }, ...properties);
 }
 
 /**

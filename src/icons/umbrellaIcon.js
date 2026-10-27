@@ -15,7 +15,7 @@ const URL_UMBRELLA = new URL('../../assets/icons/umbrella.svg', import.meta.url)
  */
 export const initUmbrellaIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UMBRELLA }, ...properties);
+    initIcon(element, { additionalClassName: 'umbrellaIcon', url: URL_UMBRELLA }, ...properties);
 }
 
 /**

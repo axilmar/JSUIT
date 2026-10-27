@@ -15,7 +15,7 @@ const URL_FORMATCLEAR = new URL('../../assets/icons/formatClear.svg', import.met
  */
 export const initFormatClearIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATCLEAR }, ...properties);
+    initIcon(element, { additionalClassName: 'formatClearIcon', url: URL_FORMATCLEAR }, ...properties);
 }
 
 /**

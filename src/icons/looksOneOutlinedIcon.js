@@ -15,7 +15,7 @@ const URL_LOOKSONEOUTLINED = new URL('../../assets/icons/looksOneOutlined.svg', 
  */
 export const initLooksOneOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOOKSONEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'looksOneOutlinedIcon', url: URL_LOOKSONEOUTLINED }, ...properties);
 }
 
 /**

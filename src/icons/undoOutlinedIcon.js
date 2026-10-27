@@ -15,7 +15,7 @@ const URL_UNDOOUTLINED = new URL('../../assets/icons/undoOutlined.svg', import.m
  */
 export const initUndoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UNDOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'undoOutlinedIcon', url: URL_UNDOOUTLINED }, ...properties);
 }
 
 /**

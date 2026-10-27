@@ -15,7 +15,7 @@ const URL_FILTERNONEOUTLINED = new URL('../../assets/icons/filterNoneOutlined.sv
  */
 export const initFilterNoneOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERNONEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'filterNoneOutlinedIcon', url: URL_FILTERNONEOUTLINED }, ...properties);
 }
 
 /**

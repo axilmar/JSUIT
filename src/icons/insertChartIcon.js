@@ -15,7 +15,7 @@ const URL_INSERTCHART = new URL('../../assets/icons/insertChart.svg', import.met
  */
 export const initInsertChartIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INSERTCHART }, ...properties);
+    initIcon(element, { additionalClassName: 'insertChartIcon', url: URL_INSERTCHART }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TABUNSELECTEDOUTLINED = new URL('../../assets/icons/tabUnselectedOutli
  */
 export const initTabUnselectedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TABUNSELECTEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tabUnselectedOutlinedIcon', url: URL_TABUNSELECTEDOUTLINED }, ...properties);
 }
 
 /**

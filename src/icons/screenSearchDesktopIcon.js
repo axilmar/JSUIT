@@ -15,7 +15,7 @@ const URL_SCREENSEARCHDESKTOP = new URL('../../assets/icons/screenSearchDesktop.
  */
 export const initScreenSearchDesktopIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCREENSEARCHDESKTOP }, ...properties);
+    initIcon(element, { additionalClassName: 'screenSearchDesktopIcon', url: URL_SCREENSEARCHDESKTOP }, ...properties);
 }
 
 /**

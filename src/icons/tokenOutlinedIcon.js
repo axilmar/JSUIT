@@ -15,7 +15,7 @@ const URL_TOKENOUTLINED = new URL('../../assets/icons/tokenOutlined.svg', import
  */
 export const initTokenOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TOKENOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tokenOutlinedIcon', url: URL_TOKENOUTLINED }, ...properties);
 }
 
 /**

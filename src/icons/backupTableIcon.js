@@ -15,7 +15,7 @@ const URL_BACKUPTABLE = new URL('../../assets/icons/backupTable.svg', import.met
  */
 export const initBackupTableIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BACKUPTABLE }, ...properties);
+    initIcon(element, { additionalClassName: 'backupTableIcon', url: URL_BACKUPTABLE }, ...properties);
 }
 
 /**

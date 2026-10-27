@@ -15,7 +15,7 @@ const URL_MONEY = new URL('../../assets/icons/money.svg', import.meta.url).href;
  */
 export const initMoneyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MONEY }, ...properties);
+    initIcon(element, { additionalClassName: 'moneyIcon', url: URL_MONEY }, ...properties);
 }
 
 /**

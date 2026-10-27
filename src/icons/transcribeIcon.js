@@ -15,7 +15,7 @@ const URL_TRANSCRIBE = new URL('../../assets/icons/transcribe.svg', import.meta.
  */
 export const initTranscribeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRANSCRIBE }, ...properties);
+    initIcon(element, { additionalClassName: 'transcribeIcon', url: URL_TRANSCRIBE }, ...properties);
 }
 
 /**

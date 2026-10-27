@@ -15,7 +15,7 @@ const URL_ONEKK = new URL('../../assets/icons/oneKk.svg', import.meta.url).href;
  */
 export const initOneKkIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ONEKK }, ...properties);
+    initIcon(element, { additionalClassName: 'oneKkIcon', url: URL_ONEKK }, ...properties);
 }
 
 /**

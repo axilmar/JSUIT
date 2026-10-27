@@ -10,7 +10,7 @@ import { initSVGGeometryElement } from "./SVGGeometryElement.js";
  */
 export const initPolygon = (element, ...properties) => {
     console.assert(element instanceof SVGPolygonElement);
-    initSVGGeometryElement(element, ...properties);
+    initSVGGeometryElement(element, { additionalClassName: 'polygon' }, ...properties);
 }
 
 /**

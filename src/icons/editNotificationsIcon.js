@@ -15,7 +15,7 @@ const URL_EDITNOTIFICATIONS = new URL('../../assets/icons/editNotifications.svg'
  */
 export const initEditNotificationsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EDITNOTIFICATIONS }, ...properties);
+    initIcon(element, { additionalClassName: 'editNotificationsIcon', url: URL_EDITNOTIFICATIONS }, ...properties);
 }
 
 /**

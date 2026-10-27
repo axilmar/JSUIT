@@ -15,7 +15,7 @@ const URL_DRAGINDICATOROUTLINED = new URL('../../assets/icons/dragIndicatorOutli
  */
 export const initDragIndicatorOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRAGINDICATOROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dragIndicatorOutlinedIcon', url: URL_DRAGINDICATOROUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_NODRINKSOUTLINED = new URL('../../assets/icons/noDrinksOutlined.svg', 
  */
 export const initNoDrinksOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NODRINKSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'noDrinksOutlinedIcon', url: URL_NODRINKSOUTLINED }, ...properties);
 }
 
 /**

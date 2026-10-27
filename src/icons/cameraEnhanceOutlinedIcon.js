@@ -15,7 +15,7 @@ const URL_CAMERAENHANCEOUTLINED = new URL('../../assets/icons/cameraEnhanceOutli
  */
 export const initCameraEnhanceOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CAMERAENHANCEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cameraEnhanceOutlinedIcon', url: URL_CAMERAENHANCEOUTLINED }, ...properties);
 }
 
 /**

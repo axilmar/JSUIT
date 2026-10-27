@@ -15,7 +15,7 @@ const URL_FORMATLINESPACINGOUTLINED = new URL('../../assets/icons/formatLineSpac
  */
 export const initFormatLineSpacingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATLINESPACINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatLineSpacingOutlinedIcon', url: URL_FORMATLINESPACINGOUTLINED }, ...properties);
 }
 
 /**

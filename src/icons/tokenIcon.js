@@ -15,7 +15,7 @@ const URL_TOKEN = new URL('../../assets/icons/token.svg', import.meta.url).href;
  */
 export const initTokenIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TOKEN }, ...properties);
+    initIcon(element, { additionalClassName: 'tokenIcon', url: URL_TOKEN }, ...properties);
 }
 
 /**

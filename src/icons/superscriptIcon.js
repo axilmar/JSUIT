@@ -15,7 +15,7 @@ const URL_SUPERSCRIPT = new URL('../../assets/icons/superscript.svg', import.met
  */
 export const initSuperscriptIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUPERSCRIPT }, ...properties);
+    initIcon(element, { additionalClassName: 'superscriptIcon', url: URL_SUPERSCRIPT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SUBSCRIPTIONSOUTLINED = new URL('../../assets/icons/subscriptionsOutli
  */
 export const initSubscriptionsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUBSCRIPTIONSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'subscriptionsOutlinedIcon', url: URL_SUBSCRIPTIONSOUTLINED }, ...properties);
 }
 
 /**

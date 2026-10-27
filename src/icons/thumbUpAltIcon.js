@@ -15,7 +15,7 @@ const URL_THUMBUPALT = new URL('../../assets/icons/thumbUpAlt.svg', import.meta.
  */
 export const initThumbUpAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THUMBUPALT }, ...properties);
+    initIcon(element, { additionalClassName: 'thumbUpAltIcon', url: URL_THUMBUPALT }, ...properties);
 }
 
 /**

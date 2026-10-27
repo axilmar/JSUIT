@@ -15,7 +15,7 @@ const URL_KITCHEN = new URL('../../assets/icons/kitchen.svg', import.meta.url).h
  */
 export const initKitchenIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KITCHEN }, ...properties);
+    initIcon(element, { additionalClassName: 'kitchenIcon', url: URL_KITCHEN }, ...properties);
 }
 
 /**

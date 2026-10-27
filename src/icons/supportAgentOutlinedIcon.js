@@ -15,7 +15,7 @@ const URL_SUPPORTAGENTOUTLINED = new URL('../../assets/icons/supportAgentOutline
  */
 export const initSupportAgentOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUPPORTAGENTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'supportAgentOutlinedIcon', url: URL_SUPPORTAGENTOUTLINED }, ...properties);
 }
 
 /**

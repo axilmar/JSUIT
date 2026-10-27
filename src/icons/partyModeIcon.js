@@ -15,7 +15,7 @@ const URL_PARTYMODE = new URL('../../assets/icons/partyMode.svg', import.meta.ur
  */
 export const initPartyModeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PARTYMODE }, ...properties);
+    initIcon(element, { additionalClassName: 'partyModeIcon', url: URL_PARTYMODE }, ...properties);
 }
 
 /**

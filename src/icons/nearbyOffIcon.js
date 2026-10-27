@@ -15,7 +15,7 @@ const URL_NEARBYOFF = new URL('../../assets/icons/nearbyOff.svg', import.meta.ur
  */
 export const initNearbyOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NEARBYOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'nearbyOffIcon', url: URL_NEARBYOFF }, ...properties);
 }
 
 /**

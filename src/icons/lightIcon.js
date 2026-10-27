@@ -15,7 +15,7 @@ const URL_LIGHT = new URL('../../assets/icons/light.svg', import.meta.url).href;
  */
 export const initLightIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIGHT }, ...properties);
+    initIcon(element, { additionalClassName: 'lightIcon', url: URL_LIGHT }, ...properties);
 }
 
 /**

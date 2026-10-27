@@ -15,7 +15,7 @@ const URL_WHEELCHAIRPICKUP = new URL('../../assets/icons/wheelchairPickup.svg', 
  */
 export const initWheelchairPickupIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WHEELCHAIRPICKUP }, ...properties);
+    initIcon(element, { additionalClassName: 'wheelchairPickupIcon', url: URL_WHEELCHAIRPICKUP }, ...properties);
 }
 
 /**

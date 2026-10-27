@@ -15,7 +15,7 @@ const URL_PEOPLE = new URL('../../assets/icons/people.svg', import.meta.url).hre
  */
 export const initPeopleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PEOPLE }, ...properties);
+    initIcon(element, { additionalClassName: 'peopleIcon', url: URL_PEOPLE }, ...properties);
 }
 
 /**

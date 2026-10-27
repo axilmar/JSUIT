@@ -15,7 +15,7 @@ const URL_VIDEOFILEOUTLINED = new URL('../../assets/icons/videoFileOutlined.svg'
  */
 export const initVideoFileOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOFILEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'videoFileOutlinedIcon', url: URL_VIDEOFILEOUTLINED }, ...properties);
 }
 
 /**

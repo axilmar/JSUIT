@@ -15,7 +15,7 @@ const URL_SNOWSHOEING = new URL('../../assets/icons/snowshoeing.svg', import.met
  */
 export const initSnowshoeingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SNOWSHOEING }, ...properties);
+    initIcon(element, { additionalClassName: 'snowshoeingIcon', url: URL_SNOWSHOEING }, ...properties);
 }
 
 /**

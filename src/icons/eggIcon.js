@@ -15,7 +15,7 @@ const URL_EGG = new URL('../../assets/icons/egg.svg', import.meta.url).href;
  */
 export const initEggIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EGG }, ...properties);
+    initIcon(element, { additionalClassName: 'eggIcon', url: URL_EGG }, ...properties);
 }
 
 /**

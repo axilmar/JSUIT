@@ -15,7 +15,7 @@ const URL_AUTOAWESOMEMOSAICOUTLINED = new URL('../../assets/icons/autoAwesomeMos
  */
 export const initAutoAwesomeMosaicOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOAWESOMEMOSAICOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'autoAwesomeMosaicOutlinedIcon', url: URL_AUTOAWESOMEMOSAICOUTLINED }, ...properties);
 }
 
 /**

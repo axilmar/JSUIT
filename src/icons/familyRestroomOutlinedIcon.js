@@ -15,7 +15,7 @@ const URL_FAMILYRESTROOMOUTLINED = new URL('../../assets/icons/familyRestroomOut
  */
 export const initFamilyRestroomOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FAMILYRESTROOMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'familyRestroomOutlinedIcon', url: URL_FAMILYRESTROOMOUTLINED }, ...properties);
 }
 
 /**

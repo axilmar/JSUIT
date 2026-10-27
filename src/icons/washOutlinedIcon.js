@@ -15,7 +15,7 @@ const URL_WASHOUTLINED = new URL('../../assets/icons/washOutlined.svg', import.m
  */
 export const initWashOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WASHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'washOutlinedIcon', url: URL_WASHOUTLINED }, ...properties);
 }
 
 /**

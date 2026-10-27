@@ -15,7 +15,7 @@ const URL_LUGGAGEOUTLINED = new URL('../../assets/icons/luggageOutlined.svg', im
  */
 export const initLuggageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LUGGAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'luggageOutlinedIcon', url: URL_LUGGAGEOUTLINED }, ...properties);
 }
 
 /**

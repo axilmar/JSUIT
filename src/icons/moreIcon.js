@@ -15,7 +15,7 @@ const URL_MORE = new URL('../../assets/icons/more.svg', import.meta.url).href;
  */
 export const initMoreIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MORE }, ...properties);
+    initIcon(element, { additionalClassName: 'moreIcon', url: URL_MORE }, ...properties);
 }
 
 /**

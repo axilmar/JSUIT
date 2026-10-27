@@ -15,7 +15,7 @@ const URL_QUERYSTATSOUTLINED = new URL('../../assets/icons/queryStatsOutlined.sv
  */
 export const initQueryStatsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUERYSTATSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'queryStatsOutlinedIcon', url: URL_QUERYSTATSOUTLINED }, ...properties);
 }
 
 /**

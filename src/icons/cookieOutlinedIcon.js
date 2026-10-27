@@ -15,7 +15,7 @@ const URL_COOKIEOUTLINED = new URL('../../assets/icons/cookieOutlined.svg', impo
  */
 export const initCookieOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COOKIEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cookieOutlinedIcon', url: URL_COOKIEOUTLINED }, ...properties);
 }
 
 /**

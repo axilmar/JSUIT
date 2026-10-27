@@ -15,7 +15,7 @@ const URL_SYNCLOCK = new URL('../../assets/icons/syncLock.svg', import.meta.url)
  */
 export const initSyncLockIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SYNCLOCK }, ...properties);
+    initIcon(element, { additionalClassName: 'syncLockIcon', url: URL_SYNCLOCK }, ...properties);
 }
 
 /**

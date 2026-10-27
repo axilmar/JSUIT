@@ -15,7 +15,7 @@ const URL_NOSTROLLEROUTLINED = new URL('../../assets/icons/noStrollerOutlined.sv
  */
 export const initNoStrollerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOSTROLLEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'noStrollerOutlinedIcon', url: URL_NOSTROLLEROUTLINED }, ...properties);
 }
 
 /**

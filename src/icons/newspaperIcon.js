@@ -15,7 +15,7 @@ const URL_NEWSPAPER = new URL('../../assets/icons/newspaper.svg', import.meta.ur
  */
 export const initNewspaperIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NEWSPAPER }, ...properties);
+    initIcon(element, { additionalClassName: 'newspaperIcon', url: URL_NEWSPAPER }, ...properties);
 }
 
 /**

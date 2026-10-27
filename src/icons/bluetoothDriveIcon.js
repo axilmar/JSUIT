@@ -15,7 +15,7 @@ const URL_BLUETOOTHDRIVE = new URL('../../assets/icons/bluetoothDrive.svg', impo
  */
 export const initBluetoothDriveIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLUETOOTHDRIVE }, ...properties);
+    initIcon(element, { additionalClassName: 'bluetoothDriveIcon', url: URL_BLUETOOTHDRIVE }, ...properties);
 }
 
 /**

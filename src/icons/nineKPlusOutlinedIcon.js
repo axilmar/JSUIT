@@ -15,7 +15,7 @@ const URL_NINEKPLUSOUTLINED = new URL('../../assets/icons/nineKPlusOutlined.svg'
  */
 export const initNineKPlusOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NINEKPLUSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'nineKPlusOutlinedIcon', url: URL_NINEKPLUSOUTLINED }, ...properties);
 }
 
 /**

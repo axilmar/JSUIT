@@ -15,7 +15,7 @@ const URL_TITLE = new URL('../../assets/icons/title.svg', import.meta.url).href;
  */
 export const initTitleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TITLE }, ...properties);
+    initIcon(element, { additionalClassName: 'titleIcon', url: URL_TITLE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LAPTOPWINDOWS = new URL('../../assets/icons/laptopWindows.svg', import
  */
 export const initLaptopWindowsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LAPTOPWINDOWS }, ...properties);
+    initIcon(element, { additionalClassName: 'laptopWindowsIcon', url: URL_LAPTOPWINDOWS }, ...properties);
 }
 
 /**

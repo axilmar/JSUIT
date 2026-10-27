@@ -15,7 +15,7 @@ const URL_DATAUSAGEOUTLINED = new URL('../../assets/icons/dataUsageOutlined.svg'
  */
 export const initDataUsageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DATAUSAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dataUsageOutlinedIcon', url: URL_DATAUSAGEOUTLINED }, ...properties);
 }
 
 /**

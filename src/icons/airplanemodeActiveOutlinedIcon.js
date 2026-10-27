@@ -15,7 +15,7 @@ const URL_AIRPLANEMODEACTIVEOUTLINED = new URL('../../assets/icons/airplanemodeA
  */
 export const initAirplanemodeActiveOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AIRPLANEMODEACTIVEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'airplanemodeActiveOutlinedIcon', url: URL_AIRPLANEMODEACTIVEOUTLINED }, ...properties);
 }
 
 /**

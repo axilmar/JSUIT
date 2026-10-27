@@ -15,7 +15,7 @@ const URL_DIRECTIONSRUN = new URL('../../assets/icons/directionsRun.svg', import
  */
 export const initDirectionsRunIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRECTIONSRUN }, ...properties);
+    initIcon(element, { additionalClassName: 'directionsRunIcon', url: URL_DIRECTIONSRUN }, ...properties);
 }
 
 /**

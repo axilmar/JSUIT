@@ -15,7 +15,7 @@ const URL_DATASET = new URL('../../assets/icons/dataset.svg', import.meta.url).h
  */
 export const initDatasetIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DATASET }, ...properties);
+    initIcon(element, { additionalClassName: 'datasetIcon', url: URL_DATASET }, ...properties);
 }
 
 /**

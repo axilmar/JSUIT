@@ -15,7 +15,7 @@ const URL_WBCLOUDY = new URL('../../assets/icons/wbCloudy.svg', import.meta.url)
  */
 export const initWbCloudyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WBCLOUDY }, ...properties);
+    initIcon(element, { additionalClassName: 'wbCloudyIcon', url: URL_WBCLOUDY }, ...properties);
 }
 
 /**

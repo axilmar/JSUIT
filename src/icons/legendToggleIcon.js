@@ -15,7 +15,7 @@ const URL_LEGENDTOGGLE = new URL('../../assets/icons/legendToggle.svg', import.m
  */
 export const initLegendToggleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LEGENDTOGGLE }, ...properties);
+    initIcon(element, { additionalClassName: 'legendToggleIcon', url: URL_LEGENDTOGGLE }, ...properties);
 }
 
 /**

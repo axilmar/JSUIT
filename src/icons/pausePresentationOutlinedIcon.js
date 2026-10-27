@@ -15,7 +15,7 @@ const URL_PAUSEPRESENTATIONOUTLINED = new URL('../../assets/icons/pausePresentat
  */
 export const initPausePresentationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PAUSEPRESENTATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pausePresentationOutlinedIcon', url: URL_PAUSEPRESENTATIONOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_BURSTMODE = new URL('../../assets/icons/burstMode.svg', import.meta.ur
  */
 export const initBurstModeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BURSTMODE }, ...properties);
+    initIcon(element, { additionalClassName: 'burstModeIcon', url: URL_BURSTMODE }, ...properties);
 }
 
 /**

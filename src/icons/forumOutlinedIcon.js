@@ -15,7 +15,7 @@ const URL_FORUMOUTLINED = new URL('../../assets/icons/forumOutlined.svg', import
  */
 export const initForumOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORUMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'forumOutlinedIcon', url: URL_FORUMOUTLINED }, ...properties);
 }
 
 /**

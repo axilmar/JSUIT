@@ -15,7 +15,7 @@ const URL_TUNGSTEN = new URL('../../assets/icons/tungsten.svg', import.meta.url)
  */
 export const initTungstenIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TUNGSTEN }, ...properties);
+    initIcon(element, { additionalClassName: 'tungstenIcon', url: URL_TUNGSTEN }, ...properties);
 }
 
 /**

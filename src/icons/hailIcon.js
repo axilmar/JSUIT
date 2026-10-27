@@ -15,7 +15,7 @@ const URL_HAIL = new URL('../../assets/icons/hail.svg', import.meta.url).href;
  */
 export const initHailIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HAIL }, ...properties);
+    initIcon(element, { additionalClassName: 'hailIcon', url: URL_HAIL }, ...properties);
 }
 
 /**

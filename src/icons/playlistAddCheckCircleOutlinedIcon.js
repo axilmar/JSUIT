@@ -15,7 +15,7 @@ const URL_PLAYLISTADDCHECKCIRCLEOUTLINED = new URL('../../assets/icons/playlistA
  */
 export const initPlaylistAddCheckCircleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYLISTADDCHECKCIRCLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'playlistAddCheckCircleOutlinedIcon', url: URL_PLAYLISTADDCHECKCIRCLEOUTLINED }, ...properties);
 }
 
 /**

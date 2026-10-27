@@ -15,7 +15,7 @@ const URL_VIEWMODULE = new URL('../../assets/icons/viewModule.svg', import.meta.
  */
 export const initViewModuleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWMODULE }, ...properties);
+    initIcon(element, { additionalClassName: 'viewModuleIcon', url: URL_VIEWMODULE }, ...properties);
 }
 
 /**

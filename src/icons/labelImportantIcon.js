@@ -15,7 +15,7 @@ const URL_LABELIMPORTANT = new URL('../../assets/icons/labelImportant.svg', impo
  */
 export const initLabelImportantIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LABELIMPORTANT }, ...properties);
+    initIcon(element, { additionalClassName: 'labelImportantIcon', url: URL_LABELIMPORTANT }, ...properties);
 }
 
 /**

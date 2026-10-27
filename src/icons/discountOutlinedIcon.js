@@ -15,7 +15,7 @@ const URL_DISCOUNTOUTLINED = new URL('../../assets/icons/discountOutlined.svg', 
  */
 export const initDiscountOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DISCOUNTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'discountOutlinedIcon', url: URL_DISCOUNTOUTLINED }, ...properties);
 }
 
 /**

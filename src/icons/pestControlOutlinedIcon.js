@@ -15,7 +15,7 @@ const URL_PESTCONTROLOUTLINED = new URL('../../assets/icons/pestControlOutlined.
  */
 export const initPestControlOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PESTCONTROLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pestControlOutlinedIcon', url: URL_PESTCONTROLOUTLINED }, ...properties);
 }
 
 /**

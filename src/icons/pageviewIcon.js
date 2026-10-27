@@ -15,7 +15,7 @@ const URL_PAGEVIEW = new URL('../../assets/icons/pageview.svg', import.meta.url)
  */
 export const initPageviewIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PAGEVIEW }, ...properties);
+    initIcon(element, { additionalClassName: 'pageviewIcon', url: URL_PAGEVIEW }, ...properties);
 }
 
 /**

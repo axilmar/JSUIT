@@ -15,7 +15,7 @@ const URL_DECK = new URL('../../assets/icons/deck.svg', import.meta.url).href;
  */
 export const initDeckIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DECK }, ...properties);
+    initIcon(element, { additionalClassName: 'deckIcon', url: URL_DECK }, ...properties);
 }
 
 /**

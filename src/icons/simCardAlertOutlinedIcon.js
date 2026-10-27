@@ -15,7 +15,7 @@ const URL_SIMCARDALERTOUTLINED = new URL('../../assets/icons/simCardAlertOutline
  */
 export const initSimCardAlertOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIMCARDALERTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'simCardAlertOutlinedIcon', url: URL_SIMCARDALERTOUTLINED }, ...properties);
 }
 
 /**

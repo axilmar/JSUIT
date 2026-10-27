@@ -15,7 +15,7 @@ const URL_MAXIMIZEOUTLINED = new URL('../../assets/icons/maximizeOutlined.svg', 
  */
 export const initMaximizeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MAXIMIZEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'maximizeOutlinedIcon', url: URL_MAXIMIZEOUTLINED }, ...properties);
 }
 
 /**

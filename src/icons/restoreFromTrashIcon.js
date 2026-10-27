@@ -15,7 +15,7 @@ const URL_RESTOREFROMTRASH = new URL('../../assets/icons/restoreFromTrash.svg', 
  */
 export const initRestoreFromTrashIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RESTOREFROMTRASH }, ...properties);
+    initIcon(element, { additionalClassName: 'restoreFromTrashIcon', url: URL_RESTOREFROMTRASH }, ...properties);
 }
 
 /**

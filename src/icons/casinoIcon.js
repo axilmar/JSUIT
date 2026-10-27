@@ -15,7 +15,7 @@ const URL_CASINO = new URL('../../assets/icons/casino.svg', import.meta.url).hre
  */
 export const initCasinoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CASINO }, ...properties);
+    initIcon(element, { additionalClassName: 'casinoIcon', url: URL_CASINO }, ...properties);
 }
 
 /**

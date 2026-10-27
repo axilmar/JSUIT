@@ -15,7 +15,7 @@ const URL_FASTREWINDOUTLINED = new URL('../../assets/icons/fastRewindOutlined.sv
  */
 export const initFastRewindOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FASTREWINDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fastRewindOutlinedIcon', url: URL_FASTREWINDOUTLINED }, ...properties);
 }
 
 /**

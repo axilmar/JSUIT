@@ -15,7 +15,7 @@ const URL_ADDPHOTOALTERNATE = new URL('../../assets/icons/addPhotoAlternate.svg'
  */
 export const initAddPhotoAlternateIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDPHOTOALTERNATE }, ...properties);
+    initIcon(element, { additionalClassName: 'addPhotoAlternateIcon', url: URL_ADDPHOTOALTERNATE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SENTIMENTNEUTRALOUTLINED = new URL('../../assets/icons/sentimentNeutra
  */
 export const initSentimentNeutralOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SENTIMENTNEUTRALOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sentimentNeutralOutlinedIcon', url: URL_SENTIMENTNEUTRALOUTLINED }, ...properties);
 }
 
 /**

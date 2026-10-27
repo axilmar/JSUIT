@@ -15,7 +15,7 @@ const URL_DEVICETHERMOSTAT = new URL('../../assets/icons/deviceThermostat.svg', 
  */
 export const initDeviceThermostatIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEVICETHERMOSTAT }, ...properties);
+    initIcon(element, { additionalClassName: 'deviceThermostatIcon', url: URL_DEVICETHERMOSTAT }, ...properties);
 }
 
 /**

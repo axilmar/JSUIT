@@ -15,7 +15,7 @@ const URL_SIGNALCELLULARNODATA = new URL('../../assets/icons/signalCellularNodat
  */
 export const initSignalCellularNodataIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNALCELLULARNODATA }, ...properties);
+    initIcon(element, { additionalClassName: 'signalCellularNodataIcon', url: URL_SIGNALCELLULARNODATA }, ...properties);
 }
 
 /**

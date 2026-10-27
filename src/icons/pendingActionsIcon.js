@@ -15,7 +15,7 @@ const URL_PENDINGACTIONS = new URL('../../assets/icons/pendingActions.svg', impo
  */
 export const initPendingActionsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PENDINGACTIONS }, ...properties);
+    initIcon(element, { additionalClassName: 'pendingActionsIcon', url: URL_PENDINGACTIONS }, ...properties);
 }
 
 /**

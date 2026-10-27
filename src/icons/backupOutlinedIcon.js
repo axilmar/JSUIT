@@ -15,7 +15,7 @@ const URL_BACKUPOUTLINED = new URL('../../assets/icons/backupOutlined.svg', impo
  */
 export const initBackupOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BACKUPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'backupOutlinedIcon', url: URL_BACKUPOUTLINED }, ...properties);
 }
 
 /**

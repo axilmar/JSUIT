@@ -15,7 +15,7 @@ const URL_ADDTODRIVEOUTLINED = new URL('../../assets/icons/addToDriveOutlined.sv
  */
 export const initAddToDriveOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDTODRIVEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'addToDriveOutlinedIcon', url: URL_ADDTODRIVEOUTLINED }, ...properties);
 }
 
 /**

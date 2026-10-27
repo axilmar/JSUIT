@@ -15,7 +15,7 @@ const URL_ARROWFORWARDIOSOUTLINED = new URL('../../assets/icons/arrowForwardIosO
  */
 export const initArrowForwardIosOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARROWFORWARDIOSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'arrowForwardIosOutlinedIcon', url: URL_ARROWFORWARDIOSOUTLINED }, ...properties);
 }
 
 /**

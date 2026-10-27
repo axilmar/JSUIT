@@ -15,7 +15,7 @@ const URL_EXPANDMOREOUTLINED = new URL('../../assets/icons/expandMoreOutlined.sv
  */
 export const initExpandMoreOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXPANDMOREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'expandMoreOutlinedIcon', url: URL_EXPANDMOREOUTLINED }, ...properties);
 }
 
 /**

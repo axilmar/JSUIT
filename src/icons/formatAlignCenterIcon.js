@@ -15,7 +15,7 @@ const URL_FORMATALIGNCENTER = new URL('../../assets/icons/formatAlignCenter.svg'
  */
 export const initFormatAlignCenterIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATALIGNCENTER }, ...properties);
+    initIcon(element, { additionalClassName: 'formatAlignCenterIcon', url: URL_FORMATALIGNCENTER }, ...properties);
 }
 
 /**

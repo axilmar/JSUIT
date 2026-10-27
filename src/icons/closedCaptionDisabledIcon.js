@@ -15,7 +15,7 @@ const URL_CLOSEDCAPTIONDISABLED = new URL('../../assets/icons/closedCaptionDisab
  */
 export const initClosedCaptionDisabledIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOSEDCAPTIONDISABLED }, ...properties);
+    initIcon(element, { additionalClassName: 'closedCaptionDisabledIcon', url: URL_CLOSEDCAPTIONDISABLED }, ...properties);
 }
 
 /**

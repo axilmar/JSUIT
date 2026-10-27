@@ -15,7 +15,7 @@ const URL_RESTAURANTMENUOUTLINED = new URL('../../assets/icons/restaurantMenuOut
  */
 export const initRestaurantMenuOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RESTAURANTMENUOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'restaurantMenuOutlinedIcon', url: URL_RESTAURANTMENUOUTLINED }, ...properties);
 }
 
 /**

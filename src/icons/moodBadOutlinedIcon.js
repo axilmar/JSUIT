@@ -15,7 +15,7 @@ const URL_MOODBADOUTLINED = new URL('../../assets/icons/moodBadOutlined.svg', im
  */
 export const initMoodBadOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOODBADOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'moodBadOutlinedIcon', url: URL_MOODBADOUTLINED }, ...properties);
 }
 
 /**

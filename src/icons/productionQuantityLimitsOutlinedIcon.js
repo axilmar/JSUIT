@@ -15,7 +15,7 @@ const URL_PRODUCTIONQUANTITYLIMITSOUTLINED = new URL('../../assets/icons/product
  */
 export const initProductionQuantityLimitsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PRODUCTIONQUANTITYLIMITSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'productionQuantityLimitsOutlinedIcon', url: URL_PRODUCTIONQUANTITYLIMITSOUTLINED }, ...properties);
 }
 
 /**

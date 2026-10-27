@@ -15,7 +15,7 @@ const URL_LINESTYLE = new URL('../../assets/icons/lineStyle.svg', import.meta.ur
  */
 export const initLineStyleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LINESTYLE }, ...properties);
+    initIcon(element, { additionalClassName: 'lineStyleIcon', url: URL_LINESTYLE }, ...properties);
 }
 
 /**

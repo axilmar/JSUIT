@@ -15,7 +15,7 @@ const URL_CALLSPLIT = new URL('../../assets/icons/callSplit.svg', import.meta.ur
  */
 export const initCallSplitIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALLSPLIT }, ...properties);
+    initIcon(element, { additionalClassName: 'callSplitIcon', url: URL_CALLSPLIT }, ...properties);
 }
 
 /**

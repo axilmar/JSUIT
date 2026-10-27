@@ -15,7 +15,7 @@ const URL_CROPLANDSCAPE = new URL('../../assets/icons/cropLandscape.svg', import
  */
 export const initCropLandscapeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CROPLANDSCAPE }, ...properties);
+    initIcon(element, { additionalClassName: 'cropLandscapeIcon', url: URL_CROPLANDSCAPE }, ...properties);
 }
 
 /**

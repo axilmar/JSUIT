@@ -15,7 +15,7 @@ const URL_LIGHTMODE = new URL('../../assets/icons/lightMode.svg', import.meta.ur
  */
 export const initLightModeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIGHTMODE }, ...properties);
+    initIcon(element, { additionalClassName: 'lightModeIcon', url: URL_LIGHTMODE }, ...properties);
 }
 
 /**

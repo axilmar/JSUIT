@@ -15,7 +15,7 @@ const URL_WATERDAMAGEOUTLINED = new URL('../../assets/icons/waterDamageOutlined.
  */
 export const initWaterDamageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WATERDAMAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'waterDamageOutlinedIcon', url: URL_WATERDAMAGEOUTLINED }, ...properties);
 }
 
 /**

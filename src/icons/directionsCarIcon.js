@@ -15,7 +15,7 @@ const URL_DIRECTIONSCAR = new URL('../../assets/icons/directionsCar.svg', import
  */
 export const initDirectionsCarIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRECTIONSCAR }, ...properties);
+    initIcon(element, { additionalClassName: 'directionsCarIcon', url: URL_DIRECTIONSCAR }, ...properties);
 }
 
 /**

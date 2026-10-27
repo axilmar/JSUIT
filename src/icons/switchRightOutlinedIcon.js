@@ -15,7 +15,7 @@ const URL_SWITCHRIGHTOUTLINED = new URL('../../assets/icons/switchRightOutlined.
  */
 export const initSwitchRightOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWITCHRIGHTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'switchRightOutlinedIcon', url: URL_SWITCHRIGHTOUTLINED }, ...properties);
 }
 
 /**

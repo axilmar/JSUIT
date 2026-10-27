@@ -15,7 +15,7 @@ const URL_EIGHTKPLUS = new URL('../../assets/icons/eightKPlus.svg', import.meta.
  */
 export const initEightKPlusIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EIGHTKPLUS }, ...properties);
+    initIcon(element, { additionalClassName: 'eightKPlusIcon', url: URL_EIGHTKPLUS }, ...properties);
 }
 
 /**

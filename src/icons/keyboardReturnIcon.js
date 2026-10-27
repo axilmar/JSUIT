@@ -15,7 +15,7 @@ const URL_KEYBOARDRETURN = new URL('../../assets/icons/keyboardReturn.svg', impo
  */
 export const initKeyboardReturnIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDRETURN }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardReturnIcon', url: URL_KEYBOARDRETURN }, ...properties);
 }
 
 /**

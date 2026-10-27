@@ -15,7 +15,7 @@ const URL_FACTORYOUTLINED = new URL('../../assets/icons/factoryOutlined.svg', im
  */
 export const initFactoryOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FACTORYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'factoryOutlinedIcon', url: URL_FACTORYOUTLINED }, ...properties);
 }
 
 /**

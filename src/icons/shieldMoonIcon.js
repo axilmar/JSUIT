@@ -15,7 +15,7 @@ const URL_SHIELDMOON = new URL('../../assets/icons/shieldMoon.svg', import.meta.
  */
 export const initShieldMoonIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHIELDMOON }, ...properties);
+    initIcon(element, { additionalClassName: 'shieldMoonIcon', url: URL_SHIELDMOON }, ...properties);
 }
 
 /**

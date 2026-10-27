@@ -15,7 +15,7 @@ const URL_AUTOSTORIES = new URL('../../assets/icons/autoStories.svg', import.met
  */
 export const initAutoStoriesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOSTORIES }, ...properties);
+    initIcon(element, { additionalClassName: 'autoStoriesIcon', url: URL_AUTOSTORIES }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DONUTLARGE = new URL('../../assets/icons/donutLarge.svg', import.meta.
  */
 export const initDonutLargeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DONUTLARGE }, ...properties);
+    initIcon(element, { additionalClassName: 'donutLargeIcon', url: URL_DONUTLARGE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_OPENINNEWOUTLINED = new URL('../../assets/icons/openInNewOutlined.svg'
  */
 export const initOpenInNewOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OPENINNEWOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'openInNewOutlinedIcon', url: URL_OPENINNEWOUTLINED }, ...properties);
 }
 
 /**

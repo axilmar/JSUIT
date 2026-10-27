@@ -15,7 +15,7 @@ const URL_CONTROLPOINTDUPLICATE = new URL('../../assets/icons/controlPointDuplic
  */
 export const initControlPointDuplicateIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTROLPOINTDUPLICATE }, ...properties);
+    initIcon(element, { additionalClassName: 'controlPointDuplicateIcon', url: URL_CONTROLPOINTDUPLICATE }, ...properties);
 }
 
 /**

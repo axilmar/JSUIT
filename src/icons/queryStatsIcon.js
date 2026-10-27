@@ -15,7 +15,7 @@ const URL_QUERYSTATS = new URL('../../assets/icons/queryStats.svg', import.meta.
  */
 export const initQueryStatsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUERYSTATS }, ...properties);
+    initIcon(element, { additionalClassName: 'queryStatsIcon', url: URL_QUERYSTATS }, ...properties);
 }
 
 /**

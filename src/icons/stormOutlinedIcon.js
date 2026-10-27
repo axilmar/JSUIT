@@ -15,7 +15,7 @@ const URL_STORMOUTLINED = new URL('../../assets/icons/stormOutlined.svg', import
  */
 export const initStormOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STORMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'stormOutlinedIcon', url: URL_STORMOUTLINED }, ...properties);
 }
 
 /**

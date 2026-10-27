@@ -15,7 +15,7 @@ const URL_CATCHINGPOKEMONOUTLINED = new URL('../../assets/icons/catchingPokemonO
  */
 export const initCatchingPokemonOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CATCHINGPOKEMONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'catchingPokemonOutlinedIcon', url: URL_CATCHINGPOKEMONOUTLINED }, ...properties);
 }
 
 /**

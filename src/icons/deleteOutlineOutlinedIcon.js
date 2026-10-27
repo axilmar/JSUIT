@@ -15,7 +15,7 @@ const URL_DELETEOUTLINEOUTLINED = new URL('../../assets/icons/deleteOutlineOutli
  */
 export const initDeleteOutlineOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DELETEOUTLINEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'deleteOutlineOutlinedIcon', url: URL_DELETEOUTLINEOUTLINED }, ...properties);
 }
 
 /**

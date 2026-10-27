@@ -15,7 +15,7 @@ const URL_FENCE = new URL('../../assets/icons/fence.svg', import.meta.url).href;
  */
 export const initFenceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FENCE }, ...properties);
+    initIcon(element, { additionalClassName: 'fenceIcon', url: URL_FENCE }, ...properties);
 }
 
 /**

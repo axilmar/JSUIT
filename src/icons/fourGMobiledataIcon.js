@@ -15,7 +15,7 @@ const URL_FOURGMOBILEDATA = new URL('../../assets/icons/fourGMobiledata.svg', im
  */
 export const initFourGMobiledataIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOURGMOBILEDATA }, ...properties);
+    initIcon(element, { additionalClassName: 'fourGMobiledataIcon', url: URL_FOURGMOBILEDATA }, ...properties);
 }
 
 /**

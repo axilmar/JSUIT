@@ -15,7 +15,7 @@ const URL_FAVORITEBORDER = new URL('../../assets/icons/favoriteBorder.svg', impo
  */
 export const initFavoriteBorderIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FAVORITEBORDER }, ...properties);
+    initIcon(element, { additionalClassName: 'favoriteBorderIcon', url: URL_FAVORITEBORDER }, ...properties);
 }
 
 /**

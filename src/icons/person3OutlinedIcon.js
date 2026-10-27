@@ -15,7 +15,7 @@ const URL_PERSON3OUTLINED = new URL('../../assets/icons/person3Outlined.svg', im
  */
 export const initPerson3OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERSON3OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'person3OutlinedIcon', url: URL_PERSON3OUTLINED }, ...properties);
 }
 
 /**

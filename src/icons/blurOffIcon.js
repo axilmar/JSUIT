@@ -15,7 +15,7 @@ const URL_BLUROFF = new URL('../../assets/icons/blurOff.svg', import.meta.url).h
  */
 export const initBlurOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLUROFF }, ...properties);
+    initIcon(element, { additionalClassName: 'blurOffIcon', url: URL_BLUROFF }, ...properties);
 }
 
 /**

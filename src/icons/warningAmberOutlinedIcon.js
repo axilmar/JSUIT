@@ -15,7 +15,7 @@ const URL_WARNINGAMBEROUTLINED = new URL('../../assets/icons/warningAmberOutline
  */
 export const initWarningAmberOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WARNINGAMBEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'warningAmberOutlinedIcon', url: URL_WARNINGAMBEROUTLINED }, ...properties);
 }
 
 /**

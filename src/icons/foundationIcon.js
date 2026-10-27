@@ -15,7 +15,7 @@ const URL_FOUNDATION = new URL('../../assets/icons/foundation.svg', import.meta.
  */
 export const initFoundationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOUNDATION }, ...properties);
+    initIcon(element, { additionalClassName: 'foundationIcon', url: URL_FOUNDATION }, ...properties);
 }
 
 /**

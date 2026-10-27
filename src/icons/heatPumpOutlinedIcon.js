@@ -15,7 +15,7 @@ const URL_HEATPUMPOUTLINED = new URL('../../assets/icons/heatPumpOutlined.svg', 
  */
 export const initHeatPumpOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEATPUMPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'heatPumpOutlinedIcon', url: URL_HEATPUMPOUTLINED }, ...properties);
 }
 
 /**

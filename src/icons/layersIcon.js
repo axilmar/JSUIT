@@ -15,7 +15,7 @@ const URL_LAYERS = new URL('../../assets/icons/layers.svg', import.meta.url).hre
  */
 export const initLayersIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LAYERS }, ...properties);
+    initIcon(element, { additionalClassName: 'layersIcon', url: URL_LAYERS }, ...properties);
 }
 
 /**

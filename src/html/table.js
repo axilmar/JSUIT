@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initTable = (element, ...properties) => {
     console.assert(element instanceof HTMLTableElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'table' }, ...properties);
 }
 
 /**

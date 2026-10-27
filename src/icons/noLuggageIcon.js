@@ -15,7 +15,7 @@ const URL_NOLUGGAGE = new URL('../../assets/icons/noLuggage.svg', import.meta.ur
  */
 export const initNoLuggageIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOLUGGAGE }, ...properties);
+    initIcon(element, { additionalClassName: 'noLuggageIcon', url: URL_NOLUGGAGE }, ...properties);
 }
 
 /**

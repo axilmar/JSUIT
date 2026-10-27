@@ -15,7 +15,7 @@ const URL_PLAYLISTADDCHECK = new URL('../../assets/icons/playlistAddCheck.svg', 
  */
 export const initPlaylistAddCheckIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYLISTADDCHECK }, ...properties);
+    initIcon(element, { additionalClassName: 'playlistAddCheckIcon', url: URL_PLAYLISTADDCHECK }, ...properties);
 }
 
 /**

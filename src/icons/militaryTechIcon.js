@@ -15,7 +15,7 @@ const URL_MILITARYTECH = new URL('../../assets/icons/militaryTech.svg', import.m
  */
 export const initMilitaryTechIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MILITARYTECH }, ...properties);
+    initIcon(element, { additionalClassName: 'militaryTechIcon', url: URL_MILITARYTECH }, ...properties);
 }
 
 /**

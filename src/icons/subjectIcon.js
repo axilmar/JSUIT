@@ -15,7 +15,7 @@ const URL_SUBJECT = new URL('../../assets/icons/subject.svg', import.meta.url).h
  */
 export const initSubjectIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUBJECT }, ...properties);
+    initIcon(element, { additionalClassName: 'subjectIcon', url: URL_SUBJECT }, ...properties);
 }
 
 /**

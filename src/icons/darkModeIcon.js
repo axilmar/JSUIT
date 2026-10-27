@@ -15,7 +15,7 @@ const URL_DARKMODE = new URL('../../assets/icons/darkMode.svg', import.meta.url)
  */
 export const initDarkModeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DARKMODE }, ...properties);
+    initIcon(element, { additionalClassName: 'darkModeIcon', url: URL_DARKMODE }, ...properties);
 }
 
 /**

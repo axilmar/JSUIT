@@ -15,7 +15,7 @@ const URL_CAMPAIGNOUTLINED = new URL('../../assets/icons/campaignOutlined.svg', 
  */
 export const initCampaignOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CAMPAIGNOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'campaignOutlinedIcon', url: URL_CAMPAIGNOUTLINED }, ...properties);
 }
 
 /**

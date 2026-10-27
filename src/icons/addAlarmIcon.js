@@ -15,7 +15,7 @@ const URL_ADDALARM = new URL('../../assets/icons/addAlarm.svg', import.meta.url)
  */
 export const initAddAlarmIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDALARM }, ...properties);
+    initIcon(element, { additionalClassName: 'addAlarmIcon', url: URL_ADDALARM }, ...properties);
 }
 
 /**

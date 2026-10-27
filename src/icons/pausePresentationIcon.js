@@ -15,7 +15,7 @@ const URL_PAUSEPRESENTATION = new URL('../../assets/icons/pausePresentation.svg'
  */
 export const initPausePresentationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PAUSEPRESENTATION }, ...properties);
+    initIcon(element, { additionalClassName: 'pausePresentationIcon', url: URL_PAUSEPRESENTATION }, ...properties);
 }
 
 /**

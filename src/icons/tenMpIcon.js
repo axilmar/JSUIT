@@ -15,7 +15,7 @@ const URL_TENMP = new URL('../../assets/icons/tenMp.svg', import.meta.url).href;
  */
 export const initTenMpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TENMP }, ...properties);
+    initIcon(element, { additionalClassName: 'tenMpIcon', url: URL_TENMP }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_COFFEE = new URL('../../assets/icons/coffee.svg', import.meta.url).hre
  */
 export const initCoffeeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COFFEE }, ...properties);
+    initIcon(element, { additionalClassName: 'coffeeIcon', url: URL_COFFEE }, ...properties);
 }
 
 /**

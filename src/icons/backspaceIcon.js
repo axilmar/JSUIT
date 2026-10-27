@@ -15,7 +15,7 @@ const URL_BACKSPACE = new URL('../../assets/icons/backspace.svg', import.meta.ur
  */
 export const initBackspaceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BACKSPACE }, ...properties);
+    initIcon(element, { additionalClassName: 'backspaceIcon', url: URL_BACKSPACE }, ...properties);
 }
 
 /**

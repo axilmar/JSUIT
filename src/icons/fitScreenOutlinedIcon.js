@@ -15,7 +15,7 @@ const URL_FITSCREENOUTLINED = new URL('../../assets/icons/fitScreenOutlined.svg'
  */
 export const initFitScreenOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FITSCREENOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fitScreenOutlinedIcon', url: URL_FITSCREENOUTLINED }, ...properties);
 }
 
 /**

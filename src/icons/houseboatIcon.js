@@ -15,7 +15,7 @@ const URL_HOUSEBOAT = new URL('../../assets/icons/houseboat.svg', import.meta.ur
  */
 export const initHouseboatIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOUSEBOAT }, ...properties);
+    initIcon(element, { additionalClassName: 'houseboatIcon', url: URL_HOUSEBOAT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ROOMPREFERENCESOUTLINED = new URL('../../assets/icons/roomPreferencesO
  */
 export const initRoomPreferencesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROOMPREFERENCESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'roomPreferencesOutlinedIcon', url: URL_ROOMPREFERENCESOUTLINED }, ...properties);
 }
 
 /**

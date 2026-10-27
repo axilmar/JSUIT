@@ -15,7 +15,7 @@ const URL_BLUETOOTHCONNECTED = new URL('../../assets/icons/bluetoothConnected.sv
  */
 export const initBluetoothConnectedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLUETOOTHCONNECTED }, ...properties);
+    initIcon(element, { additionalClassName: 'bluetoothConnectedIcon', url: URL_BLUETOOTHCONNECTED }, ...properties);
 }
 
 /**

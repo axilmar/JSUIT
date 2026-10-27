@@ -15,7 +15,7 @@ const URL_HOURGLASSFULL = new URL('../../assets/icons/hourglassFull.svg', import
  */
 export const initHourglassFullIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOURGLASSFULL }, ...properties);
+    initIcon(element, { additionalClassName: 'hourglassFullIcon', url: URL_HOURGLASSFULL }, ...properties);
 }
 
 /**

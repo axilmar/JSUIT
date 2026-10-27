@@ -15,7 +15,7 @@ const URL_SYSTEMUPDATE = new URL('../../assets/icons/systemUpdate.svg', import.m
  */
 export const initSystemUpdateIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SYSTEMUPDATE }, ...properties);
+    initIcon(element, { additionalClassName: 'systemUpdateIcon', url: URL_SYSTEMUPDATE }, ...properties);
 }
 
 /**

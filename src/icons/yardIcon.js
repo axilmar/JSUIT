@@ -15,7 +15,7 @@ const URL_YARD = new URL('../../assets/icons/yard.svg', import.meta.url).href;
  */
 export const initYardIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_YARD }, ...properties);
+    initIcon(element, { additionalClassName: 'yardIcon', url: URL_YARD }, ...properties);
 }
 
 /**

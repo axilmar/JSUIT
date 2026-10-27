@@ -15,7 +15,7 @@ const URL_STOREMALLDIRECTORYOUTLINED = new URL('../../assets/icons/storeMallDire
  */
 export const initStoreMallDirectoryOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STOREMALLDIRECTORYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'storeMallDirectoryOutlinedIcon', url: URL_STOREMALLDIRECTORYOUTLINED }, ...properties);
 }
 
 /**

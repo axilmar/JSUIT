@@ -15,7 +15,7 @@ const URL_DONEALL = new URL('../../assets/icons/doneAll.svg', import.meta.url).h
  */
 export const initDoneAllIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DONEALL }, ...properties);
+    initIcon(element, { additionalClassName: 'doneAllIcon', url: URL_DONEALL }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_AVTIMER = new URL('../../assets/icons/avTimer.svg', import.meta.url).h
  */
 export const initAvTimerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AVTIMER }, ...properties);
+    initIcon(element, { additionalClassName: 'avTimerIcon', url: URL_AVTIMER }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FILEPRESENTOUTLINED = new URL('../../assets/icons/filePresentOutlined.
  */
 export const initFilePresentOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILEPRESENTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'filePresentOutlinedIcon', url: URL_FILEPRESENTOUTLINED }, ...properties);
 }
 
 /**

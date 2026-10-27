@@ -15,7 +15,7 @@ const URL_MOVIEFILTER = new URL('../../assets/icons/movieFilter.svg', import.met
  */
 export const initMovieFilterIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOVIEFILTER }, ...properties);
+    initIcon(element, { additionalClassName: 'movieFilterIcon', url: URL_MOVIEFILTER }, ...properties);
 }
 
 /**

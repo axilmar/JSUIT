@@ -15,7 +15,7 @@ const URL_SWAPVERTICALCIRCLE = new URL('../../assets/icons/swapVerticalCircle.sv
  */
 export const initSwapVerticalCircleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWAPVERTICALCIRCLE }, ...properties);
+    initIcon(element, { additionalClassName: 'swapVerticalCircleIcon', url: URL_SWAPVERTICALCIRCLE }, ...properties);
 }
 
 /**

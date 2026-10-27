@@ -15,7 +15,7 @@ const URL_PRICECHECKOUTLINED = new URL('../../assets/icons/priceCheckOutlined.sv
  */
 export const initPriceCheckOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PRICECHECKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'priceCheckOutlinedIcon', url: URL_PRICECHECKOUTLINED }, ...properties);
 }
 
 /**

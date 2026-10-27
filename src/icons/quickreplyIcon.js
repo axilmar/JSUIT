@@ -15,7 +15,7 @@ const URL_QUICKREPLY = new URL('../../assets/icons/quickreply.svg', import.meta.
  */
 export const initQuickreplyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUICKREPLY }, ...properties);
+    initIcon(element, { additionalClassName: 'quickreplyIcon', url: URL_QUICKREPLY }, ...properties);
 }
 
 /**

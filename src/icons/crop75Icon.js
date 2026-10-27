@@ -15,7 +15,7 @@ const URL_CROP75 = new URL('../../assets/icons/crop75.svg', import.meta.url).hre
  */
 export const initCrop75Icon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CROP75 }, ...properties);
+    initIcon(element, { additionalClassName: 'crop75Icon', url: URL_CROP75 }, ...properties);
 }
 
 /**

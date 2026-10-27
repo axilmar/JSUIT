@@ -15,7 +15,7 @@ const URL_SETTINGSINPUTCOMPOSITE = new URL('../../assets/icons/settingsInputComp
  */
 export const initSettingsInputCompositeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSINPUTCOMPOSITE }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsInputCompositeIcon', url: URL_SETTINGSINPUTCOMPOSITE }, ...properties);
 }
 
 /**

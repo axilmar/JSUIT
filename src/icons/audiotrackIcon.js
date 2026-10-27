@@ -15,7 +15,7 @@ const URL_AUDIOTRACK = new URL('../../assets/icons/audiotrack.svg', import.meta.
  */
 export const initAudiotrackIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUDIOTRACK }, ...properties);
+    initIcon(element, { additionalClassName: 'audiotrackIcon', url: URL_AUDIOTRACK }, ...properties);
 }
 
 /**

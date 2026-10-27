@@ -15,7 +15,7 @@ const URL_WC = new URL('../../assets/icons/wc.svg', import.meta.url).href;
  */
 export const initWcIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WC }, ...properties);
+    initIcon(element, { additionalClassName: 'wcIcon', url: URL_WC }, ...properties);
 }
 
 /**

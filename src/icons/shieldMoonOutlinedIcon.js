@@ -15,7 +15,7 @@ const URL_SHIELDMOONOUTLINED = new URL('../../assets/icons/shieldMoonOutlined.sv
  */
 export const initShieldMoonOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHIELDMOONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'shieldMoonOutlinedIcon', url: URL_SHIELDMOONOUTLINED }, ...properties);
 }
 
 /**

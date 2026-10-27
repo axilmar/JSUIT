@@ -15,7 +15,7 @@ const URL_SPEAKER = new URL('../../assets/icons/speaker.svg', import.meta.url).h
  */
 export const initSpeakerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPEAKER }, ...properties);
+    initIcon(element, { additionalClassName: 'speakerIcon', url: URL_SPEAKER }, ...properties);
 }
 
 /**

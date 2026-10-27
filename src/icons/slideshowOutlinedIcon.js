@@ -15,7 +15,7 @@ const URL_SLIDESHOWOUTLINED = new URL('../../assets/icons/slideshowOutlined.svg'
  */
 export const initSlideshowOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SLIDESHOWOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'slideshowOutlinedIcon', url: URL_SLIDESHOWOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_COFFEEMAKEROUTLINED = new URL('../../assets/icons/coffeeMakerOutlined.
  */
 export const initCoffeeMakerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COFFEEMAKEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'coffeeMakerOutlinedIcon', url: URL_COFFEEMAKEROUTLINED }, ...properties);
 }
 
 /**

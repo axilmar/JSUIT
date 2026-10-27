@@ -15,7 +15,7 @@ const URL_DODISTURBON = new URL('../../assets/icons/doDisturbOn.svg', import.met
  */
 export const initDoDisturbOnIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DODISTURBON }, ...properties);
+    initIcon(element, { additionalClassName: 'doDisturbOnIcon', url: URL_DODISTURBON }, ...properties);
 }
 
 /**

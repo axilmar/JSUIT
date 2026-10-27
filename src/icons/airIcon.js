@@ -15,7 +15,7 @@ const URL_AIR = new URL('../../assets/icons/air.svg', import.meta.url).href;
  */
 export const initAirIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AIR }, ...properties);
+    initIcon(element, { additionalClassName: 'airIcon', url: URL_AIR }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_THUMBUPALTOUTLINED = new URL('../../assets/icons/thumbUpAltOutlined.sv
  */
 export const initThumbUpAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THUMBUPALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'thumbUpAltOutlinedIcon', url: URL_THUMBUPALTOUTLINED }, ...properties);
 }
 
 /**

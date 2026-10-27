@@ -15,7 +15,7 @@ const URL_BLINDSCLOSED = new URL('../../assets/icons/blindsClosed.svg', import.m
  */
 export const initBlindsClosedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLINDSCLOSED }, ...properties);
+    initIcon(element, { additionalClassName: 'blindsClosedIcon', url: URL_BLINDSCLOSED }, ...properties);
 }
 
 /**

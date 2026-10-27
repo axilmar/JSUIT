@@ -15,7 +15,7 @@ const URL_INSERTPAGEBREAKOUTLINED = new URL('../../assets/icons/insertPageBreakO
  */
 export const initInsertPageBreakOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INSERTPAGEBREAKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'insertPageBreakOutlinedIcon', url: URL_INSERTPAGEBREAKOUTLINED }, ...properties);
 }
 
 /**

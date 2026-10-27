@@ -15,7 +15,7 @@ const URL_HANDYMAN = new URL('../../assets/icons/handyman.svg', import.meta.url)
  */
 export const initHandymanIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HANDYMAN }, ...properties);
+    initIcon(element, { additionalClassName: 'handymanIcon', url: URL_HANDYMAN }, ...properties);
 }
 
 /**

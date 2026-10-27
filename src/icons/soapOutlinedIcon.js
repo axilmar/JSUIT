@@ -15,7 +15,7 @@ const URL_SOAPOUTLINED = new URL('../../assets/icons/soapOutlined.svg', import.m
  */
 export const initSoapOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SOAPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'soapOutlinedIcon', url: URL_SOAPOUTLINED }, ...properties);
 }
 
 /**

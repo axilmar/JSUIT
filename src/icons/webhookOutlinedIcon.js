@@ -15,7 +15,7 @@ const URL_WEBHOOKOUTLINED = new URL('../../assets/icons/webhookOutlined.svg', im
  */
 export const initWebhookOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WEBHOOKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'webhookOutlinedIcon', url: URL_WEBHOOKOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_APPSOUTAGEOUTLINED = new URL('../../assets/icons/appsOutageOutlined.sv
  */
 export const initAppsOutageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_APPSOUTAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'appsOutageOutlinedIcon', url: URL_APPSOUTAGEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ADDROAD = new URL('../../assets/icons/addRoad.svg', import.meta.url).h
  */
 export const initAddRoadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDROAD }, ...properties);
+    initIcon(element, { additionalClassName: 'addRoadIcon', url: URL_ADDROAD }, ...properties);
 }
 
 /**

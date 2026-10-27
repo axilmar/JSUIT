@@ -15,7 +15,7 @@ const URL_FIRETRUCKOUTLINED = new URL('../../assets/icons/fireTruckOutlined.svg'
  */
 export const initFireTruckOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIRETRUCKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fireTruckOutlinedIcon', url: URL_FIRETRUCKOUTLINED }, ...properties);
 }
 
 /**

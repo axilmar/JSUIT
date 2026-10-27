@@ -15,7 +15,7 @@ const URL_INTERPRETERMODE = new URL('../../assets/icons/interpreterMode.svg', im
  */
 export const initInterpreterModeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INTERPRETERMODE }, ...properties);
+    initIcon(element, { additionalClassName: 'interpreterModeIcon', url: URL_INTERPRETERMODE }, ...properties);
 }
 
 /**

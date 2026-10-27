@@ -15,7 +15,7 @@ const URL_COLLECTIONSOUTLINED = new URL('../../assets/icons/collectionsOutlined.
  */
 export const initCollectionsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COLLECTIONSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'collectionsOutlinedIcon', url: URL_COLLECTIONSOUTLINED }, ...properties);
 }
 
 /**

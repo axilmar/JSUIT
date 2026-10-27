@@ -15,7 +15,7 @@ const URL_MULTIPLESTOP = new URL('../../assets/icons/multipleStop.svg', import.m
  */
 export const initMultipleStopIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MULTIPLESTOP }, ...properties);
+    initIcon(element, { additionalClassName: 'multipleStopIcon', url: URL_MULTIPLESTOP }, ...properties);
 }
 
 /**

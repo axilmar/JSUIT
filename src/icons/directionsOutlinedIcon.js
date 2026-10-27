@@ -15,7 +15,7 @@ const URL_DIRECTIONSOUTLINED = new URL('../../assets/icons/directionsOutlined.sv
  */
 export const initDirectionsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRECTIONSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'directionsOutlinedIcon', url: URL_DIRECTIONSOUTLINED }, ...properties);
 }
 
 /**

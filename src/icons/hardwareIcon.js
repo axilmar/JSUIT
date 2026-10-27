@@ -15,7 +15,7 @@ const URL_HARDWARE = new URL('../../assets/icons/hardware.svg', import.meta.url)
  */
 export const initHardwareIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HARDWARE }, ...properties);
+    initIcon(element, { additionalClassName: 'hardwareIcon', url: URL_HARDWARE }, ...properties);
 }
 
 /**

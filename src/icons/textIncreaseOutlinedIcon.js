@@ -15,7 +15,7 @@ const URL_TEXTINCREASEOUTLINED = new URL('../../assets/icons/textIncreaseOutline
  */
 export const initTextIncreaseOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTINCREASEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'textIncreaseOutlinedIcon', url: URL_TEXTINCREASEOUTLINED }, ...properties);
 }
 
 /**

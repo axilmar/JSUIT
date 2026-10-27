@@ -15,7 +15,7 @@ const URL_ADDICCALLOUTLINED = new URL('../../assets/icons/addIcCallOutlined.svg'
  */
 export const initAddIcCallOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDICCALLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'addIcCallOutlinedIcon', url: URL_ADDICCALLOUTLINED }, ...properties);
 }
 
 /**

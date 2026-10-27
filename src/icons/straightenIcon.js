@@ -15,7 +15,7 @@ const URL_STRAIGHTEN = new URL('../../assets/icons/straighten.svg', import.meta.
  */
 export const initStraightenIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STRAIGHTEN }, ...properties);
+    initIcon(element, { additionalClassName: 'straightenIcon', url: URL_STRAIGHTEN }, ...properties);
 }
 
 /**

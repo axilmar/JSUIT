@@ -15,7 +15,7 @@ const URL_COFFEEOUTLINED = new URL('../../assets/icons/coffeeOutlined.svg', impo
  */
 export const initCoffeeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COFFEEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'coffeeOutlinedIcon', url: URL_COFFEEOUTLINED }, ...properties);
 }
 
 /**

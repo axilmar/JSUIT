@@ -15,7 +15,7 @@ const URL_FMDBAD = new URL('../../assets/icons/fmdBad.svg', import.meta.url).hre
  */
 export const initFmdBadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FMDBAD }, ...properties);
+    initIcon(element, { additionalClassName: 'fmdBadIcon', url: URL_FMDBAD }, ...properties);
 }
 
 /**

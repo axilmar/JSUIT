@@ -15,7 +15,7 @@ const URL_CHANGEHISTORYOUTLINED = new URL('../../assets/icons/changeHistoryOutli
  */
 export const initChangeHistoryOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHANGEHISTORYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'changeHistoryOutlinedIcon', url: URL_CHANGEHISTORYOUTLINED }, ...properties);
 }
 
 /**

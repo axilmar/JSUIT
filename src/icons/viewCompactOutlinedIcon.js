@@ -15,7 +15,7 @@ const URL_VIEWCOMPACTOUTLINED = new URL('../../assets/icons/viewCompactOutlined.
  */
 export const initViewCompactOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWCOMPACTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewCompactOutlinedIcon', url: URL_VIEWCOMPACTOUTLINED }, ...properties);
 }
 
 /**

@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initFeConvolveMatrix = (element, ...properties) => {
     console.assert(element instanceof SVGFEConvolveMatrixElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'feConvolveMatrix' }, ...properties);
 }
 
 /**

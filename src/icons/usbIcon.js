@@ -15,7 +15,7 @@ const URL_USB = new URL('../../assets/icons/usb.svg', import.meta.url).href;
  */
 export const initUsbIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_USB }, ...properties);
+    initIcon(element, { additionalClassName: 'usbIcon', url: URL_USB }, ...properties);
 }
 
 /**

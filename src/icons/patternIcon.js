@@ -15,7 +15,7 @@ const URL_PATTERN = new URL('../../assets/icons/pattern.svg', import.meta.url).h
  */
 export const initPatternIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PATTERN }, ...properties);
+    initIcon(element, { additionalClassName: 'patternIcon', url: URL_PATTERN }, ...properties);
 }
 
 /**

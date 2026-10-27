@@ -15,7 +15,7 @@ const URL_VIEWHEADLINE = new URL('../../assets/icons/viewHeadline.svg', import.m
  */
 export const initViewHeadlineIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWHEADLINE }, ...properties);
+    initIcon(element, { additionalClassName: 'viewHeadlineIcon', url: URL_VIEWHEADLINE }, ...properties);
 }
 
 /**

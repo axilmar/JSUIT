@@ -15,7 +15,7 @@ const URL_SHAREOUTLINED = new URL('../../assets/icons/shareOutlined.svg', import
  */
 export const initShareOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHAREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'shareOutlinedIcon', url: URL_SHAREOUTLINED }, ...properties);
 }
 
 /**

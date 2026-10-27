@@ -15,7 +15,7 @@ const URL_PHONELINKRING = new URL('../../assets/icons/phonelinkRing.svg', import
  */
 export const initPhonelinkRingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONELINKRING }, ...properties);
+    initIcon(element, { additionalClassName: 'phonelinkRingIcon', url: URL_PHONELINKRING }, ...properties);
 }
 
 /**

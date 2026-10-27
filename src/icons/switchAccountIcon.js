@@ -15,7 +15,7 @@ const URL_SWITCHACCOUNT = new URL('../../assets/icons/switchAccount.svg', import
  */
 export const initSwitchAccountIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWITCHACCOUNT }, ...properties);
+    initIcon(element, { additionalClassName: 'switchAccountIcon', url: URL_SWITCHACCOUNT }, ...properties);
 }
 
 /**

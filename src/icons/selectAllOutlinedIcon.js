@@ -15,7 +15,7 @@ const URL_SELECTALLOUTLINED = new URL('../../assets/icons/selectAllOutlined.svg'
  */
 export const initSelectAllOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SELECTALLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'selectAllOutlinedIcon', url: URL_SELECTALLOUTLINED }, ...properties);
 }
 
 /**

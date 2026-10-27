@@ -15,7 +15,7 @@ const URL_NOTACCESSIBLEOUTLINED = new URL('../../assets/icons/notAccessibleOutli
  */
 export const initNotAccessibleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTACCESSIBLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'notAccessibleOutlinedIcon', url: URL_NOTACCESSIBLEOUTLINED }, ...properties);
 }
 
 /**

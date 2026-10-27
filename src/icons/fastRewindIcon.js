@@ -15,7 +15,7 @@ const URL_FASTREWIND = new URL('../../assets/icons/fastRewind.svg', import.meta.
  */
 export const initFastRewindIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FASTREWIND }, ...properties);
+    initIcon(element, { additionalClassName: 'fastRewindIcon', url: URL_FASTREWIND }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CHATBUBBLEOUTLINED = new URL('../../assets/icons/chatBubbleOutlined.sv
  */
 export const initChatBubbleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHATBUBBLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'chatBubbleOutlinedIcon', url: URL_CHATBUBBLEOUTLINED }, ...properties);
 }
 
 /**

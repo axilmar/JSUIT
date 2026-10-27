@@ -15,7 +15,7 @@ const URL_CROPORIGINAL = new URL('../../assets/icons/cropOriginal.svg', import.m
  */
 export const initCropOriginalIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CROPORIGINAL }, ...properties);
+    initIcon(element, { additionalClassName: 'cropOriginalIcon', url: URL_CROPORIGINAL }, ...properties);
 }
 
 /**

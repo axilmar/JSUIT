@@ -15,7 +15,7 @@ const URL_COMMUTE = new URL('../../assets/icons/commute.svg', import.meta.url).h
  */
 export const initCommuteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMMUTE }, ...properties);
+    initIcon(element, { additionalClassName: 'commuteIcon', url: URL_COMMUTE }, ...properties);
 }
 
 /**

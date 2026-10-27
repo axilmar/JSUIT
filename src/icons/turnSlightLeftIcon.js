@@ -15,7 +15,7 @@ const URL_TURNSLIGHTLEFT = new URL('../../assets/icons/turnSlightLeft.svg', impo
  */
 export const initTurnSlightLeftIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TURNSLIGHTLEFT }, ...properties);
+    initIcon(element, { additionalClassName: 'turnSlightLeftIcon', url: URL_TURNSLIGHTLEFT }, ...properties);
 }
 
 /**

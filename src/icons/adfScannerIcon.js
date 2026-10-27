@@ -15,7 +15,7 @@ const URL_ADFSCANNER = new URL('../../assets/icons/adfScanner.svg', import.meta.
  */
 export const initAdfScannerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADFSCANNER }, ...properties);
+    initIcon(element, { additionalClassName: 'adfScannerIcon', url: URL_ADFSCANNER }, ...properties);
 }
 
 /**

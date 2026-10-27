@@ -15,7 +15,7 @@ const URL_FORMATCOLORTEXT = new URL('../../assets/icons/formatColorText.svg', im
  */
 export const initFormatColorTextIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATCOLORTEXT }, ...properties);
+    initIcon(element, { additionalClassName: 'formatColorTextIcon', url: URL_FORMATCOLORTEXT }, ...properties);
 }
 
 /**

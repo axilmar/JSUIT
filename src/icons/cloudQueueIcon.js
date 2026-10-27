@@ -15,7 +15,7 @@ const URL_CLOUDQUEUE = new URL('../../assets/icons/cloudQueue.svg', import.meta.
  */
 export const initCloudQueueIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOUDQUEUE }, ...properties);
+    initIcon(element, { additionalClassName: 'cloudQueueIcon', url: URL_CLOUDQUEUE }, ...properties);
 }
 
 /**

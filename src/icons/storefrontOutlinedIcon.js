@@ -15,7 +15,7 @@ const URL_STOREFRONTOUTLINED = new URL('../../assets/icons/storefrontOutlined.sv
  */
 export const initStorefrontOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STOREFRONTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'storefrontOutlinedIcon', url: URL_STOREFRONTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_AUTOFIXNORMAL = new URL('../../assets/icons/autoFixNormal.svg', import
  */
 export const initAutoFixNormalIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOFIXNORMAL }, ...properties);
+    initIcon(element, { additionalClassName: 'autoFixNormalIcon', url: URL_AUTOFIXNORMAL }, ...properties);
 }
 
 /**

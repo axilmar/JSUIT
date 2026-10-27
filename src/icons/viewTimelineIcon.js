@@ -15,7 +15,7 @@ const URL_VIEWTIMELINE = new URL('../../assets/icons/viewTimeline.svg', import.m
  */
 export const initViewTimelineIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWTIMELINE }, ...properties);
+    initIcon(element, { additionalClassName: 'viewTimelineIcon', url: URL_VIEWTIMELINE }, ...properties);
 }
 
 /**

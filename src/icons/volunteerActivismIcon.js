@@ -15,7 +15,7 @@ const URL_VOLUNTEERACTIVISM = new URL('../../assets/icons/volunteerActivism.svg'
  */
 export const initVolunteerActivismIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VOLUNTEERACTIVISM }, ...properties);
+    initIcon(element, { additionalClassName: 'volunteerActivismIcon', url: URL_VOLUNTEERACTIVISM }, ...properties);
 }
 
 /**

@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initFeFlood = (element, ...properties) => {
     console.assert(element instanceof SVGFEFloodElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'feFlood' }, ...properties);
 }
 
 /**

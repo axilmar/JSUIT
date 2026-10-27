@@ -15,7 +15,7 @@ const URL_HDRWEAKOUTLINED = new URL('../../assets/icons/hdrWeakOutlined.svg', im
  */
 export const initHdrWeakOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HDRWEAKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hdrWeakOutlinedIcon', url: URL_HDRWEAKOUTLINED }, ...properties);
 }
 
 /**

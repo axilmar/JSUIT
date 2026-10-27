@@ -15,7 +15,7 @@ const URL_ADDTASK = new URL('../../assets/icons/addTask.svg', import.meta.url).h
  */
 export const initAddTaskIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDTASK }, ...properties);
+    initIcon(element, { additionalClassName: 'addTaskIcon', url: URL_ADDTASK }, ...properties);
 }
 
 /**

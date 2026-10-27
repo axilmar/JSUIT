@@ -15,7 +15,7 @@ const URL_RAMPLEFTOUTLINED = new URL('../../assets/icons/rampLeftOutlined.svg', 
  */
 export const initRampLeftOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RAMPLEFTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'rampLeftOutlinedIcon', url: URL_RAMPLEFTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CHATOUTLINED = new URL('../../assets/icons/chatOutlined.svg', import.m
  */
 export const initChatOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHATOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'chatOutlinedIcon', url: URL_CHATOUTLINED }, ...properties);
 }
 
 /**

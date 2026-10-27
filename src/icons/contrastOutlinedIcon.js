@@ -15,7 +15,7 @@ const URL_CONTRASTOUTLINED = new URL('../../assets/icons/contrastOutlined.svg', 
  */
 export const initContrastOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTRASTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'contrastOutlinedIcon', url: URL_CONTRASTOUTLINED }, ...properties);
 }
 
 /**

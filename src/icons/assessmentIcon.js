@@ -15,7 +15,7 @@ const URL_ASSESSMENT = new URL('../../assets/icons/assessment.svg', import.meta.
  */
 export const initAssessmentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ASSESSMENT }, ...properties);
+    initIcon(element, { additionalClassName: 'assessmentIcon', url: URL_ASSESSMENT }, ...properties);
 }
 
 /**

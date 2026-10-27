@@ -15,7 +15,7 @@ const URL_BORDERSTYLE = new URL('../../assets/icons/borderStyle.svg', import.met
  */
 export const initBorderStyleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BORDERSTYLE }, ...properties);
+    initIcon(element, { additionalClassName: 'borderStyleIcon', url: URL_BORDERSTYLE }, ...properties);
 }
 
 /**

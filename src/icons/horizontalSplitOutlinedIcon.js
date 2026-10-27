@@ -15,7 +15,7 @@ const URL_HORIZONTALSPLITOUTLINED = new URL('../../assets/icons/horizontalSplitO
  */
 export const initHorizontalSplitOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HORIZONTALSPLITOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'horizontalSplitOutlinedIcon', url: URL_HORIZONTALSPLITOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_NOSIMOUTLINED = new URL('../../assets/icons/noSimOutlined.svg', import
  */
 export const initNoSimOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOSIMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'noSimOutlinedIcon', url: URL_NOSIMOUTLINED }, ...properties);
 }
 
 /**

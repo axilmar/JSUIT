@@ -15,7 +15,7 @@ const URL_CARPENTER = new URL('../../assets/icons/carpenter.svg', import.meta.ur
  */
 export const initCarpenterIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CARPENTER }, ...properties);
+    initIcon(element, { additionalClassName: 'carpenterIcon', url: URL_CARPENTER }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LABELOFF = new URL('../../assets/icons/labelOff.svg', import.meta.url)
  */
 export const initLabelOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LABELOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'labelOffIcon', url: URL_LABELOFF }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_REPEATONEOUTLINED = new URL('../../assets/icons/repeatOneOutlined.svg'
  */
 export const initRepeatOneOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REPEATONEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'repeatOneOutlinedIcon', url: URL_REPEATONEOUTLINED }, ...properties);
 }
 
 /**

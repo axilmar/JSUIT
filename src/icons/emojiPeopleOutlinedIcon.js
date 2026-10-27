@@ -15,7 +15,7 @@ const URL_EMOJIPEOPLEOUTLINED = new URL('../../assets/icons/emojiPeopleOutlined.
  */
 export const initEmojiPeopleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EMOJIPEOPLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'emojiPeopleOutlinedIcon', url: URL_EMOJIPEOPLEOUTLINED }, ...properties);
 }
 
 /**

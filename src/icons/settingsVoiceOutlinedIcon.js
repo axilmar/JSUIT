@@ -15,7 +15,7 @@ const URL_SETTINGSVOICEOUTLINED = new URL('../../assets/icons/settingsVoiceOutli
  */
 export const initSettingsVoiceOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSVOICEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsVoiceOutlinedIcon', url: URL_SETTINGSVOICEOUTLINED }, ...properties);
 }
 
 /**

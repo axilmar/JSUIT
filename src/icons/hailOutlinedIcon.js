@@ -15,7 +15,7 @@ const URL_HAILOUTLINED = new URL('../../assets/icons/hailOutlined.svg', import.m
  */
 export const initHailOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HAILOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hailOutlinedIcon', url: URL_HAILOUTLINED }, ...properties);
 }
 
 /**

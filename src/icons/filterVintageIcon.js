@@ -15,7 +15,7 @@ const URL_FILTERVINTAGE = new URL('../../assets/icons/filterVintage.svg', import
  */
 export const initFilterVintageIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERVINTAGE }, ...properties);
+    initIcon(element, { additionalClassName: 'filterVintageIcon', url: URL_FILTERVINTAGE }, ...properties);
 }
 
 /**

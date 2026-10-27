@@ -15,7 +15,7 @@ const URL_PLUMBING = new URL('../../assets/icons/plumbing.svg', import.meta.url)
  */
 export const initPlumbingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLUMBING }, ...properties);
+    initIcon(element, { additionalClassName: 'plumbingIcon', url: URL_PLUMBING }, ...properties);
 }
 
 /**

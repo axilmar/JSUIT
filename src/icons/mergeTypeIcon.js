@@ -15,7 +15,7 @@ const URL_MERGETYPE = new URL('../../assets/icons/mergeType.svg', import.meta.ur
  */
 export const initMergeTypeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MERGETYPE }, ...properties);
+    initIcon(element, { additionalClassName: 'mergeTypeIcon', url: URL_MERGETYPE }, ...properties);
 }
 
 /**

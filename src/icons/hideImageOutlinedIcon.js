@@ -15,7 +15,7 @@ const URL_HIDEIMAGEOUTLINED = new URL('../../assets/icons/hideImageOutlined.svg'
  */
 export const initHideImageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HIDEIMAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hideImageOutlinedIcon', url: URL_HIDEIMAGEOUTLINED }, ...properties);
 }
 
 /**

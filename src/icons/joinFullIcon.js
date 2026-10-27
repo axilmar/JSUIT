@@ -15,7 +15,7 @@ const URL_JOINFULL = new URL('../../assets/icons/joinFull.svg', import.meta.url)
  */
 export const initJoinFullIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_JOINFULL }, ...properties);
+    initIcon(element, { additionalClassName: 'joinFullIcon', url: URL_JOINFULL }, ...properties);
 }
 
 /**

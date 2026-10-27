@@ -15,7 +15,7 @@ const URL_REPORT = new URL('../../assets/icons/report.svg', import.meta.url).hre
  */
 export const initReportIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REPORT }, ...properties);
+    initIcon(element, { additionalClassName: 'reportIcon', url: URL_REPORT }, ...properties);
 }
 
 /**

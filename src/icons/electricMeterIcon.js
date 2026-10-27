@@ -15,7 +15,7 @@ const URL_ELECTRICMETER = new URL('../../assets/icons/electricMeter.svg', import
  */
 export const initElectricMeterIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ELECTRICMETER }, ...properties);
+    initIcon(element, { additionalClassName: 'electricMeterIcon', url: URL_ELECTRICMETER }, ...properties);
 }
 
 /**

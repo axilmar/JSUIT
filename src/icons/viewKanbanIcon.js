@@ -15,7 +15,7 @@ const URL_VIEWKANBAN = new URL('../../assets/icons/viewKanban.svg', import.meta.
  */
 export const initViewKanbanIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWKANBAN }, ...properties);
+    initIcon(element, { additionalClassName: 'viewKanbanIcon', url: URL_VIEWKANBAN }, ...properties);
 }
 
 /**

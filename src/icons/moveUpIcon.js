@@ -15,7 +15,7 @@ const URL_MOVEUP = new URL('../../assets/icons/moveUp.svg', import.meta.url).hre
  */
 export const initMoveUpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOVEUP }, ...properties);
+    initIcon(element, { additionalClassName: 'moveUpIcon', url: URL_MOVEUP }, ...properties);
 }
 
 /**

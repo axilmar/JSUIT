@@ -15,7 +15,7 @@ const URL_VIEWSIDEBAROUTLINED = new URL('../../assets/icons/viewSidebarOutlined.
  */
 export const initViewSidebarOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWSIDEBAROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewSidebarOutlinedIcon', url: URL_VIEWSIDEBAROUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PHP = new URL('../../assets/icons/php.svg', import.meta.url).href;
  */
 export const initPhpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHP }, ...properties);
+    initIcon(element, { additionalClassName: 'phpIcon', url: URL_PHP }, ...properties);
 }
 
 /**

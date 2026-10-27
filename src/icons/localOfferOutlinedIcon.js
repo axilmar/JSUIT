@@ -15,7 +15,7 @@ const URL_LOCALOFFEROUTLINED = new URL('../../assets/icons/localOfferOutlined.sv
  */
 export const initLocalOfferOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALOFFEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localOfferOutlinedIcon', url: URL_LOCALOFFEROUTLINED }, ...properties);
 }
 
 /**

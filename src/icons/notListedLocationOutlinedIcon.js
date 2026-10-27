@@ -15,7 +15,7 @@ const URL_NOTLISTEDLOCATIONOUTLINED = new URL('../../assets/icons/notListedLocat
  */
 export const initNotListedLocationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTLISTEDLOCATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'notListedLocationOutlinedIcon', url: URL_NOTLISTEDLOCATIONOUTLINED }, ...properties);
 }
 
 /**

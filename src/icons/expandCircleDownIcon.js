@@ -15,7 +15,7 @@ const URL_EXPANDCIRCLEDOWN = new URL('../../assets/icons/expandCircleDown.svg', 
  */
 export const initExpandCircleDownIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXPANDCIRCLEDOWN }, ...properties);
+    initIcon(element, { additionalClassName: 'expandCircleDownIcon', url: URL_EXPANDCIRCLEDOWN }, ...properties);
 }
 
 /**

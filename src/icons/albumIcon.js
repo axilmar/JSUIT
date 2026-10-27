@@ -15,7 +15,7 @@ const URL_ALBUM = new URL('../../assets/icons/album.svg', import.meta.url).href;
  */
 export const initAlbumIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALBUM }, ...properties);
+    initIcon(element, { additionalClassName: 'albumIcon', url: URL_ALBUM }, ...properties);
 }
 
 /**

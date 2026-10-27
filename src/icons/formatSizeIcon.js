@@ -15,7 +15,7 @@ const URL_FORMATSIZE = new URL('../../assets/icons/formatSize.svg', import.meta.
  */
 export const initFormatSizeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATSIZE }, ...properties);
+    initIcon(element, { additionalClassName: 'formatSizeIcon', url: URL_FORMATSIZE }, ...properties);
 }
 
 /**

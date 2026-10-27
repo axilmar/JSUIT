@@ -15,7 +15,7 @@ const URL_VERIFIED = new URL('../../assets/icons/verified.svg', import.meta.url)
  */
 export const initVerifiedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VERIFIED }, ...properties);
+    initIcon(element, { additionalClassName: 'verifiedIcon', url: URL_VERIFIED }, ...properties);
 }
 
 /**

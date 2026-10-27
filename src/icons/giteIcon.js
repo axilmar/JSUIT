@@ -15,7 +15,7 @@ const URL_GITE = new URL('../../assets/icons/gite.svg', import.meta.url).href;
  */
 export const initGiteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GITE }, ...properties);
+    initIcon(element, { additionalClassName: 'giteIcon', url: URL_GITE }, ...properties);
 }
 
 /**

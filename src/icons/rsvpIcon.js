@@ -15,7 +15,7 @@ const URL_RSVP = new URL('../../assets/icons/rsvp.svg', import.meta.url).href;
  */
 export const initRsvpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RSVP }, ...properties);
+    initIcon(element, { additionalClassName: 'rsvpIcon', url: URL_RSVP }, ...properties);
 }
 
 /**

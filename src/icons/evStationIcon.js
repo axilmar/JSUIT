@@ -15,7 +15,7 @@ const URL_EVSTATION = new URL('../../assets/icons/evStation.svg', import.meta.ur
  */
 export const initEvStationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EVSTATION }, ...properties);
+    initIcon(element, { additionalClassName: 'evStationIcon', url: URL_EVSTATION }, ...properties);
 }
 
 /**

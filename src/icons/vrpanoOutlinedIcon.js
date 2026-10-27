@@ -15,7 +15,7 @@ const URL_VRPANOOUTLINED = new URL('../../assets/icons/vrpanoOutlined.svg', impo
  */
 export const initVrpanoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VRPANOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'vrpanoOutlinedIcon', url: URL_VRPANOOUTLINED }, ...properties);
 }
 
 /**

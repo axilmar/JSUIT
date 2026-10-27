@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initIframe = (element, ...properties) => {
     console.assert(element instanceof HTMLIFrameElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'iframe' }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FLIPTOBACK = new URL('../../assets/icons/flipToBack.svg', import.meta.
  */
 export const initFlipToBackIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLIPTOBACK }, ...properties);
+    initIcon(element, { additionalClassName: 'flipToBackIcon', url: URL_FLIPTOBACK }, ...properties);
 }
 
 /**

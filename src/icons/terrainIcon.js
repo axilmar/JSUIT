@@ -15,7 +15,7 @@ const URL_TERRAIN = new URL('../../assets/icons/terrain.svg', import.meta.url).h
  */
 export const initTerrainIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TERRAIN }, ...properties);
+    initIcon(element, { additionalClassName: 'terrainIcon', url: URL_TERRAIN }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CALENDARMONTHOUTLINED = new URL('../../assets/icons/calendarMonthOutli
  */
 export const initCalendarMonthOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALENDARMONTHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'calendarMonthOutlinedIcon', url: URL_CALENDARMONTHOUTLINED }, ...properties);
 }
 
 /**

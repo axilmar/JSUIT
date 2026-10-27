@@ -15,7 +15,7 @@ const URL_VPNKEYOUTLINED = new URL('../../assets/icons/vpnKeyOutlined.svg', impo
  */
 export const initVpnKeyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VPNKEYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'vpnKeyOutlinedIcon', url: URL_VPNKEYOUTLINED }, ...properties);
 }
 
 /**

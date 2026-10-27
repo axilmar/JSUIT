@@ -15,7 +15,7 @@ const URL_FITNESSCENTEROUTLINED = new URL('../../assets/icons/fitnessCenterOutli
  */
 export const initFitnessCenterOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FITNESSCENTEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fitnessCenterOutlinedIcon', url: URL_FITNESSCENTEROUTLINED }, ...properties);
 }
 
 /**

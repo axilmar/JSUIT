@@ -15,7 +15,7 @@ const URL_PAGESOUTLINED = new URL('../../assets/icons/pagesOutlined.svg', import
  */
 export const initPagesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PAGESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pagesOutlinedIcon', url: URL_PAGESOUTLINED }, ...properties);
 }
 
 /**

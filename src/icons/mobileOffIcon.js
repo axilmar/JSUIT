@@ -15,7 +15,7 @@ const URL_MOBILEOFF = new URL('../../assets/icons/mobileOff.svg', import.meta.ur
  */
 export const initMobileOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOBILEOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'mobileOffIcon', url: URL_MOBILEOFF }, ...properties);
 }
 
 /**

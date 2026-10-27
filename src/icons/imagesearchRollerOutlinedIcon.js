@@ -15,7 +15,7 @@ const URL_IMAGESEARCHROLLEROUTLINED = new URL('../../assets/icons/imagesearchRol
  */
 export const initImagesearchRollerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_IMAGESEARCHROLLEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'imagesearchRollerOutlinedIcon', url: URL_IMAGESEARCHROLLEROUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TWENTYTHREEMPOUTLINED = new URL('../../assets/icons/twentyThreeMpOutli
  */
 export const initTwentyThreeMpOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TWENTYTHREEMPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'twentyThreeMpOutlinedIcon', url: URL_TWENTYTHREEMPOUTLINED }, ...properties);
 }
 
 /**

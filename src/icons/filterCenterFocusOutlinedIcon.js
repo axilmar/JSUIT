@@ -15,7 +15,7 @@ const URL_FILTERCENTERFOCUSOUTLINED = new URL('../../assets/icons/filterCenterFo
  */
 export const initFilterCenterFocusOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERCENTERFOCUSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'filterCenterFocusOutlinedIcon', url: URL_FILTERCENTERFOCUSOUTLINED }, ...properties);
 }
 
 /**

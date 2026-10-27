@@ -15,7 +15,7 @@ const URL_LIBRARYADDCHECKOUTLINED = new URL('../../assets/icons/libraryAddCheckO
  */
 export const initLibraryAddCheckOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIBRARYADDCHECKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'libraryAddCheckOutlinedIcon', url: URL_LIBRARYADDCHECKOUTLINED }, ...properties);
 }
 
 /**

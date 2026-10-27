@@ -15,7 +15,7 @@ const URL_GARAGEOUTLINED = new URL('../../assets/icons/garageOutlined.svg', impo
  */
 export const initGarageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GARAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'garageOutlinedIcon', url: URL_GARAGEOUTLINED }, ...properties);
 }
 
 /**

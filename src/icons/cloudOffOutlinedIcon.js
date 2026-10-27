@@ -15,7 +15,7 @@ const URL_CLOUDOFFOUTLINED = new URL('../../assets/icons/cloudOffOutlined.svg', 
  */
 export const initCloudOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOUDOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cloudOffOutlinedIcon', url: URL_CLOUDOFFOUTLINED }, ...properties);
 }
 
 /**

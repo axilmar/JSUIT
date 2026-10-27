@@ -15,7 +15,7 @@ const URL_DEVICESFOLDOUTLINED = new URL('../../assets/icons/devicesFoldOutlined.
  */
 export const initDevicesFoldOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEVICESFOLDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'devicesFoldOutlinedIcon', url: URL_DEVICESFOLDOUTLINED }, ...properties);
 }
 
 /**

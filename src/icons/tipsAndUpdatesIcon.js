@@ -15,7 +15,7 @@ const URL_TIPSANDUPDATES = new URL('../../assets/icons/tipsAndUpdates.svg', impo
  */
 export const initTipsAndUpdatesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TIPSANDUPDATES }, ...properties);
+    initIcon(element, { additionalClassName: 'tipsAndUpdatesIcon', url: URL_TIPSANDUPDATES }, ...properties);
 }
 
 /**

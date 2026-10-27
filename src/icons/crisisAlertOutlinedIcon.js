@@ -15,7 +15,7 @@ const URL_CRISISALERTOUTLINED = new URL('../../assets/icons/crisisAlertOutlined.
  */
 export const initCrisisAlertOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CRISISALERTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'crisisAlertOutlinedIcon', url: URL_CRISISALERTOUTLINED }, ...properties);
 }
 
 /**

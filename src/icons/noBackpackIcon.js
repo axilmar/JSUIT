@@ -15,7 +15,7 @@ const URL_NOBACKPACK = new URL('../../assets/icons/noBackpack.svg', import.meta.
  */
 export const initNoBackpackIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOBACKPACK }, ...properties);
+    initIcon(element, { additionalClassName: 'noBackpackIcon', url: URL_NOBACKPACK }, ...properties);
 }
 
 /**

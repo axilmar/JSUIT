@@ -15,7 +15,7 @@ const URL_LASTPAGE = new URL('../../assets/icons/lastPage.svg', import.meta.url)
  */
 export const initLastPageIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LASTPAGE }, ...properties);
+    initIcon(element, { additionalClassName: 'lastPageIcon', url: URL_LASTPAGE }, ...properties);
 }
 
 /**

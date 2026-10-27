@@ -15,7 +15,7 @@ const URL_SNIPPETFOLDEROUTLINED = new URL('../../assets/icons/snippetFolderOutli
  */
 export const initSnippetFolderOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SNIPPETFOLDEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'snippetFolderOutlinedIcon', url: URL_SNIPPETFOLDEROUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_AIRLINESEATLEGROOMEXTRA = new URL('../../assets/icons/airlineSeatLegro
  */
 export const initAirlineSeatLegroomExtraIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AIRLINESEATLEGROOMEXTRA }, ...properties);
+    initIcon(element, { additionalClassName: 'airlineSeatLegroomExtraIcon', url: URL_AIRLINESEATLEGROOMEXTRA }, ...properties);
 }
 
 /**

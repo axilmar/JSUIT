@@ -15,7 +15,7 @@ const URL_MICNONE = new URL('../../assets/icons/micNone.svg', import.meta.url).h
  */
 export const initMicNoneIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MICNONE }, ...properties);
+    initIcon(element, { additionalClassName: 'micNoneIcon', url: URL_MICNONE }, ...properties);
 }
 
 /**

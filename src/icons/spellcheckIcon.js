@@ -15,7 +15,7 @@ const URL_SPELLCHECK = new URL('../../assets/icons/spellcheck.svg', import.meta.
  */
 export const initSpellcheckIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPELLCHECK }, ...properties);
+    initIcon(element, { additionalClassName: 'spellcheckIcon', url: URL_SPELLCHECK }, ...properties);
 }
 
 /**

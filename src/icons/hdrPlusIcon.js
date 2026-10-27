@@ -15,7 +15,7 @@ const URL_HDRPLUS = new URL('../../assets/icons/hdrPlus.svg', import.meta.url).h
  */
 export const initHdrPlusIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HDRPLUS }, ...properties);
+    initIcon(element, { additionalClassName: 'hdrPlusIcon', url: URL_HDRPLUS }, ...properties);
 }
 
 /**

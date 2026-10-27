@@ -15,7 +15,7 @@ const URL_SPEAKERPHONEOUTLINED = new URL('../../assets/icons/speakerPhoneOutline
  */
 export const initSpeakerPhoneOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPEAKERPHONEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'speakerPhoneOutlinedIcon', url: URL_SPEAKERPHONEOUTLINED }, ...properties);
 }
 
 /**

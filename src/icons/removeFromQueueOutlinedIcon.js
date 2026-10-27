@@ -15,7 +15,7 @@ const URL_REMOVEFROMQUEUEOUTLINED = new URL('../../assets/icons/removeFromQueueO
  */
 export const initRemoveFromQueueOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REMOVEFROMQUEUEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'removeFromQueueOutlinedIcon', url: URL_REMOVEFROMQUEUEOUTLINED }, ...properties);
 }
 
 /**

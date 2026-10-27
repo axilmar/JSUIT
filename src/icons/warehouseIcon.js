@@ -15,7 +15,7 @@ const URL_WAREHOUSE = new URL('../../assets/icons/warehouse.svg', import.meta.ur
  */
 export const initWarehouseIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WAREHOUSE }, ...properties);
+    initIcon(element, { additionalClassName: 'warehouseIcon', url: URL_WAREHOUSE }, ...properties);
 }
 
 /**

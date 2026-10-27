@@ -15,7 +15,7 @@ const URL_SETTINGSBLUETOOTHOUTLINED = new URL('../../assets/icons/settingsBlueto
  */
 export const initSettingsBluetoothOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSBLUETOOTHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsBluetoothOutlinedIcon', url: URL_SETTINGSBLUETOOTHOUTLINED }, ...properties);
 }
 
 /**

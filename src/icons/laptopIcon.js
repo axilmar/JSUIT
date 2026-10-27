@@ -15,7 +15,7 @@ const URL_LAPTOP = new URL('../../assets/icons/laptop.svg', import.meta.url).hre
  */
 export const initLaptopIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LAPTOP }, ...properties);
+    initIcon(element, { additionalClassName: 'laptopIcon', url: URL_LAPTOP }, ...properties);
 }
 
 /**

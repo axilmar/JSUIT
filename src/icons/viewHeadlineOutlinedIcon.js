@@ -15,7 +15,7 @@ const URL_VIEWHEADLINEOUTLINED = new URL('../../assets/icons/viewHeadlineOutline
  */
 export const initViewHeadlineOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWHEADLINEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewHeadlineOutlinedIcon', url: URL_VIEWHEADLINEOUTLINED }, ...properties);
 }
 
 /**

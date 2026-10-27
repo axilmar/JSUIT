@@ -15,7 +15,7 @@ const URL_FACE5 = new URL('../../assets/icons/face5.svg', import.meta.url).href;
  */
 export const initFace5Icon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FACE5 }, ...properties);
+    initIcon(element, { additionalClassName: 'face5Icon', url: URL_FACE5 }, ...properties);
 }
 
 /**

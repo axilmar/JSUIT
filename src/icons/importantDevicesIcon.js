@@ -15,7 +15,7 @@ const URL_IMPORTANTDEVICES = new URL('../../assets/icons/importantDevices.svg', 
  */
 export const initImportantDevicesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_IMPORTANTDEVICES }, ...properties);
+    initIcon(element, { additionalClassName: 'importantDevicesIcon', url: URL_IMPORTANTDEVICES }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TUNE = new URL('../../assets/icons/tune.svg', import.meta.url).href;
  */
 export const initTuneIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TUNE }, ...properties);
+    initIcon(element, { additionalClassName: 'tuneIcon', url: URL_TUNE }, ...properties);
 }
 
 /**

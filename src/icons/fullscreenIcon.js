@@ -15,7 +15,7 @@ const URL_FULLSCREEN = new URL('../../assets/icons/fullscreen.svg', import.meta.
  */
 export const initFullscreenIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FULLSCREEN }, ...properties);
+    initIcon(element, { additionalClassName: 'fullscreenIcon', url: URL_FULLSCREEN }, ...properties);
 }
 
 /**

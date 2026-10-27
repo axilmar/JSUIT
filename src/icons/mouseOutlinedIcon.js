@@ -15,7 +15,7 @@ const URL_MOUSEOUTLINED = new URL('../../assets/icons/mouseOutlined.svg', import
  */
 export const initMouseOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOUSEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'mouseOutlinedIcon', url: URL_MOUSEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_BLINDSCLOSEDOUTLINED = new URL('../../assets/icons/blindsClosedOutline
  */
 export const initBlindsClosedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLINDSCLOSEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'blindsClosedOutlinedIcon', url: URL_BLINDSCLOSEDOUTLINED }, ...properties);
 }
 
 /**

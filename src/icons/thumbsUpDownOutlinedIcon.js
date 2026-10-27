@@ -15,7 +15,7 @@ const URL_THUMBSUPDOWNOUTLINED = new URL('../../assets/icons/thumbsUpDownOutline
  */
 export const initThumbsUpDownOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THUMBSUPDOWNOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'thumbsUpDownOutlinedIcon', url: URL_THUMBSUPDOWNOUTLINED }, ...properties);
 }
 
 /**

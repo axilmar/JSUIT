@@ -15,7 +15,7 @@ const URL_PREVIEW = new URL('../../assets/icons/preview.svg', import.meta.url).h
  */
 export const initPreviewIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PREVIEW }, ...properties);
+    initIcon(element, { additionalClassName: 'previewIcon', url: URL_PREVIEW }, ...properties);
 }
 
 /**

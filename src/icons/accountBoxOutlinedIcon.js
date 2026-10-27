@@ -15,7 +15,7 @@ const URL_ACCOUNTBOXOUTLINED = new URL('../../assets/icons/accountBoxOutlined.sv
  */
 export const initAccountBoxOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACCOUNTBOXOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'accountBoxOutlinedIcon', url: URL_ACCOUNTBOXOUTLINED }, ...properties);
 }
 
 /**

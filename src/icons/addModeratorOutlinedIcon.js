@@ -15,7 +15,7 @@ const URL_ADDMODERATOROUTLINED = new URL('../../assets/icons/addModeratorOutline
  */
 export const initAddModeratorOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDMODERATOROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'addModeratorOutlinedIcon', url: URL_ADDMODERATOROUTLINED }, ...properties);
 }
 
 /**

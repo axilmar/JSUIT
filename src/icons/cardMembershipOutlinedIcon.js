@@ -15,7 +15,7 @@ const URL_CARDMEMBERSHIPOUTLINED = new URL('../../assets/icons/cardMembershipOut
  */
 export const initCardMembershipOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CARDMEMBERSHIPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cardMembershipOutlinedIcon', url: URL_CARDMEMBERSHIPOUTLINED }, ...properties);
 }
 
 /**

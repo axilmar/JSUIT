@@ -15,7 +15,7 @@ const URL_FIVEMPOUTLINED = new URL('../../assets/icons/fiveMpOutlined.svg', impo
  */
 export const initFiveMpOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIVEMPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fiveMpOutlinedIcon', url: URL_FIVEMPOUTLINED }, ...properties);
 }
 
 /**

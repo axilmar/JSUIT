@@ -15,7 +15,7 @@ const URL_BLURON = new URL('../../assets/icons/blurOn.svg', import.meta.url).hre
  */
 export const initBlurOnIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLURON }, ...properties);
+    initIcon(element, { additionalClassName: 'blurOnIcon', url: URL_BLURON }, ...properties);
 }
 
 /**

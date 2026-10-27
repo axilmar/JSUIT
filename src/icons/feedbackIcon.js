@@ -15,7 +15,7 @@ const URL_FEEDBACK = new URL('../../assets/icons/feedback.svg', import.meta.url)
  */
 export const initFeedbackIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FEEDBACK }, ...properties);
+    initIcon(element, { additionalClassName: 'feedbackIcon', url: URL_FEEDBACK }, ...properties);
 }
 
 /**

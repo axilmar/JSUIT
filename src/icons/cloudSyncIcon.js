@@ -15,7 +15,7 @@ const URL_CLOUDSYNC = new URL('../../assets/icons/cloudSync.svg', import.meta.ur
  */
 export const initCloudSyncIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOUDSYNC }, ...properties);
+    initIcon(element, { additionalClassName: 'cloudSyncIcon', url: URL_CLOUDSYNC }, ...properties);
 }
 
 /**

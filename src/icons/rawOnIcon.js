@@ -15,7 +15,7 @@ const URL_RAWON = new URL('../../assets/icons/rawOn.svg', import.meta.url).href;
  */
 export const initRawOnIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RAWON }, ...properties);
+    initIcon(element, { additionalClassName: 'rawOnIcon', url: URL_RAWON }, ...properties);
 }
 
 /**

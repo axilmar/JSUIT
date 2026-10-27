@@ -15,7 +15,7 @@ const URL_CLEANINGSERVICESOUTLINED = new URL('../../assets/icons/cleaningService
  */
 export const initCleaningServicesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLEANINGSERVICESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cleaningServicesOutlinedIcon', url: URL_CLEANINGSERVICESOUTLINED }, ...properties);
 }
 
 /**

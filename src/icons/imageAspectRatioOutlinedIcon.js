@@ -15,7 +15,7 @@ const URL_IMAGEASPECTRATIOOUTLINED = new URL('../../assets/icons/imageAspectRati
  */
 export const initImageAspectRatioOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_IMAGEASPECTRATIOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'imageAspectRatioOutlinedIcon', url: URL_IMAGEASPECTRATIOOUTLINED }, ...properties);
 }
 
 /**

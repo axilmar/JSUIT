@@ -15,7 +15,7 @@ const URL_SOLARPOWER = new URL('../../assets/icons/solarPower.svg', import.meta.
  */
 export const initSolarPowerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SOLARPOWER }, ...properties);
+    initIcon(element, { additionalClassName: 'solarPowerIcon', url: URL_SOLARPOWER }, ...properties);
 }
 
 /**

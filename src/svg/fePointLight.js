@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initFePointLight = (element, ...properties) => {
     console.assert(element instanceof SVGFEPointLightElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'fePointLight' }, ...properties);
 }
 
 /**

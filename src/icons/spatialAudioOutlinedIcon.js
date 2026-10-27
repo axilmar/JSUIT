@@ -15,7 +15,7 @@ const URL_SPATIALAUDIOOUTLINED = new URL('../../assets/icons/spatialAudioOutline
  */
 export const initSpatialAudioOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPATIALAUDIOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'spatialAudioOutlinedIcon', url: URL_SPATIALAUDIOOUTLINED }, ...properties);
 }
 
 /**

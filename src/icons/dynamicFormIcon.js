@@ -15,7 +15,7 @@ const URL_DYNAMICFORM = new URL('../../assets/icons/dynamicForm.svg', import.met
  */
 export const initDynamicFormIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DYNAMICFORM }, ...properties);
+    initIcon(element, { additionalClassName: 'dynamicFormIcon', url: URL_DYNAMICFORM }, ...properties);
 }
 
 /**

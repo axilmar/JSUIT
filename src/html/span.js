@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initSpan = (element, ...properties) => {
     console.assert(element instanceof HTMLSpanElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'span' }, ...properties);
 }
 
 /**

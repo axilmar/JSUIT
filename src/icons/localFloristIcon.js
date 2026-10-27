@@ -15,7 +15,7 @@ const URL_LOCALFLORIST = new URL('../../assets/icons/localFlorist.svg', import.m
  */
 export const initLocalFloristIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALFLORIST }, ...properties);
+    initIcon(element, { additionalClassName: 'localFloristIcon', url: URL_LOCALFLORIST }, ...properties);
 }
 
 /**

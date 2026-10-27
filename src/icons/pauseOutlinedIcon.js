@@ -15,7 +15,7 @@ const URL_PAUSEOUTLINED = new URL('../../assets/icons/pauseOutlined.svg', import
  */
 export const initPauseOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PAUSEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pauseOutlinedIcon', url: URL_PAUSEOUTLINED }, ...properties);
 }
 
 /**

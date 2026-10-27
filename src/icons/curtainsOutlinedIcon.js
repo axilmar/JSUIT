@@ -15,7 +15,7 @@ const URL_CURTAINSOUTLINED = new URL('../../assets/icons/curtainsOutlined.svg', 
  */
 export const initCurtainsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CURTAINSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'curtainsOutlinedIcon', url: URL_CURTAINSOUTLINED }, ...properties);
 }
 
 /**

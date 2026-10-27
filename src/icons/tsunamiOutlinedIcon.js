@@ -15,7 +15,7 @@ const URL_TSUNAMIOUTLINED = new URL('../../assets/icons/tsunamiOutlined.svg', im
  */
 export const initTsunamiOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TSUNAMIOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tsunamiOutlinedIcon', url: URL_TSUNAMIOUTLINED }, ...properties);
 }
 
 /**

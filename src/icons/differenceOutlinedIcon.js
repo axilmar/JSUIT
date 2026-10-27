@@ -15,7 +15,7 @@ const URL_DIFFERENCEOUTLINED = new URL('../../assets/icons/differenceOutlined.sv
  */
 export const initDifferenceOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIFFERENCEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'differenceOutlinedIcon', url: URL_DIFFERENCEOUTLINED }, ...properties);
 }
 
 /**

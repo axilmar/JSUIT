@@ -15,7 +15,7 @@ const URL_TERMINAL = new URL('../../assets/icons/terminal.svg', import.meta.url)
  */
 export const initTerminalIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TERMINAL }, ...properties);
+    initIcon(element, { additionalClassName: 'terminalIcon', url: URL_TERMINAL }, ...properties);
 }
 
 /**

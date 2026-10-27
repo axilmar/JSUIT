@@ -15,7 +15,7 @@ const URL_UNPUBLISHEDOUTLINED = new URL('../../assets/icons/unpublishedOutlined.
  */
 export const initUnpublishedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UNPUBLISHEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'unpublishedOutlinedIcon', url: URL_UNPUBLISHEDOUTLINED }, ...properties);
 }
 
 /**

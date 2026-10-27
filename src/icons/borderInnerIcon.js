@@ -15,7 +15,7 @@ const URL_BORDERINNER = new URL('../../assets/icons/borderInner.svg', import.met
  */
 export const initBorderInnerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BORDERINNER }, ...properties);
+    initIcon(element, { additionalClassName: 'borderInnerIcon', url: URL_BORDERINNER }, ...properties);
 }
 
 /**

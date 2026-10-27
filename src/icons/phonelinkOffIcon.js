@@ -15,7 +15,7 @@ const URL_PHONELINKOFF = new URL('../../assets/icons/phonelinkOff.svg', import.m
  */
 export const initPhonelinkOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONELINKOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'phonelinkOffIcon', url: URL_PHONELINKOFF }, ...properties);
 }
 
 /**

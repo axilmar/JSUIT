@@ -15,7 +15,7 @@ const URL_MONITORWEIGHT = new URL('../../assets/icons/monitorWeight.svg', import
  */
 export const initMonitorWeightIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MONITORWEIGHT }, ...properties);
+    initIcon(element, { additionalClassName: 'monitorWeightIcon', url: URL_MONITORWEIGHT }, ...properties);
 }
 
 /**

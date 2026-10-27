@@ -15,7 +15,7 @@ const URL_JOINFULLOUTLINED = new URL('../../assets/icons/joinFullOutlined.svg', 
  */
 export const initJoinFullOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_JOINFULLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'joinFullOutlinedIcon', url: URL_JOINFULLOUTLINED }, ...properties);
 }
 
 /**

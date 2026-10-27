@@ -15,7 +15,7 @@ const URL_CHEVRONRIGHTOUTLINED = new URL('../../assets/icons/chevronRightOutline
  */
 export const initChevronRightOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHEVRONRIGHTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'chevronRightOutlinedIcon', url: URL_CHEVRONRIGHTOUTLINED }, ...properties);
 }
 
 /**

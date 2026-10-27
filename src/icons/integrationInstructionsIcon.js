@@ -15,7 +15,7 @@ const URL_INTEGRATIONINSTRUCTIONS = new URL('../../assets/icons/integrationInstr
  */
 export const initIntegrationInstructionsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INTEGRATIONINSTRUCTIONS }, ...properties);
+    initIcon(element, { additionalClassName: 'integrationInstructionsIcon', url: URL_INTEGRATIONINSTRUCTIONS }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_WBINCANDESCENTOUTLINED = new URL('../../assets/icons/wbIncandescentOut
  */
 export const initWbIncandescentOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WBINCANDESCENTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wbIncandescentOutlinedIcon', url: URL_WBINCANDESCENTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FLAKYOUTLINED = new URL('../../assets/icons/flakyOutlined.svg', import
  */
 export const initFlakyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLAKYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'flakyOutlinedIcon', url: URL_FLAKYOUTLINED }, ...properties);
 }
 
 /**

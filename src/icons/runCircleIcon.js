@@ -15,7 +15,7 @@ const URL_RUNCIRCLE = new URL('../../assets/icons/runCircle.svg', import.meta.ur
  */
 export const initRunCircleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RUNCIRCLE }, ...properties);
+    initIcon(element, { additionalClassName: 'runCircleIcon', url: URL_RUNCIRCLE }, ...properties);
 }
 
 /**

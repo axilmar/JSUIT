@@ -15,7 +15,7 @@ const URL_TOUCHAPPOUTLINED = new URL('../../assets/icons/touchAppOutlined.svg', 
  */
 export const initTouchAppOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TOUCHAPPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'touchAppOutlinedIcon', url: URL_TOUCHAPPOUTLINED }, ...properties);
 }
 
 /**

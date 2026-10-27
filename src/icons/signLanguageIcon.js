@@ -15,7 +15,7 @@ const URL_SIGNLANGUAGE = new URL('../../assets/icons/signLanguage.svg', import.m
  */
 export const initSignLanguageIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNLANGUAGE }, ...properties);
+    initIcon(element, { additionalClassName: 'signLanguageIcon', url: URL_SIGNLANGUAGE }, ...properties);
 }
 
 /**

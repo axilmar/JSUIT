@@ -15,7 +15,7 @@ const URL_KEBABDINING = new URL('../../assets/icons/kebabDining.svg', import.met
  */
 export const initKebabDiningIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEBABDINING }, ...properties);
+    initIcon(element, { additionalClassName: 'kebabDiningIcon', url: URL_KEBABDINING }, ...properties);
 }
 
 /**

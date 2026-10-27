@@ -15,7 +15,7 @@ const URL_MP = new URL('../../assets/icons/mp.svg', import.meta.url).href;
  */
 export const initMpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MP }, ...properties);
+    initIcon(element, { additionalClassName: 'mpIcon', url: URL_MP }, ...properties);
 }
 
 /**

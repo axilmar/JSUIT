@@ -15,7 +15,7 @@ const URL_IMAGEASPECTRATIO = new URL('../../assets/icons/imageAspectRatio.svg', 
  */
 export const initImageAspectRatioIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_IMAGEASPECTRATIO }, ...properties);
+    initIcon(element, { additionalClassName: 'imageAspectRatioIcon', url: URL_IMAGEASPECTRATIO }, ...properties);
 }
 
 /**

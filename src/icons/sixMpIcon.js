@@ -15,7 +15,7 @@ const URL_SIXMP = new URL('../../assets/icons/sixMp.svg', import.meta.url).href;
  */
 export const initSixMpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIXMP }, ...properties);
+    initIcon(element, { additionalClassName: 'sixMpIcon', url: URL_SIXMP }, ...properties);
 }
 
 /**

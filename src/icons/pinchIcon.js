@@ -15,7 +15,7 @@ const URL_PINCH = new URL('../../assets/icons/pinch.svg', import.meta.url).href;
  */
 export const initPinchIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PINCH }, ...properties);
+    initIcon(element, { additionalClassName: 'pinchIcon', url: URL_PINCH }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PARAGLIDINGOUTLINED = new URL('../../assets/icons/paraglidingOutlined.
  */
 export const initParaglidingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PARAGLIDINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'paraglidingOutlinedIcon', url: URL_PARAGLIDINGOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_BATTERYALERT = new URL('../../assets/icons/batteryAlert.svg', import.m
  */
 export const initBatteryAlertIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BATTERYALERT }, ...properties);
+    initIcon(element, { additionalClassName: 'batteryAlertIcon', url: URL_BATTERYALERT }, ...properties);
 }
 
 /**

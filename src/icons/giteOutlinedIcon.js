@@ -15,7 +15,7 @@ const URL_GITEOUTLINED = new URL('../../assets/icons/giteOutlined.svg', import.m
  */
 export const initGiteOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GITEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'giteOutlinedIcon', url: URL_GITEOUTLINED }, ...properties);
 }
 
 /**

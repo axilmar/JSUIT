@@ -15,7 +15,7 @@ const URL_VERTICALALIGNBOTTOM = new URL('../../assets/icons/verticalAlignBottom.
  */
 export const initVerticalAlignBottomIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VERTICALALIGNBOTTOM }, ...properties);
+    initIcon(element, { additionalClassName: 'verticalAlignBottomIcon', url: URL_VERTICALALIGNBOTTOM }, ...properties);
 }
 
 /**

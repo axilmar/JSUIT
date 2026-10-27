@@ -15,7 +15,7 @@ const URL_CABIN = new URL('../../assets/icons/cabin.svg', import.meta.url).href;
  */
 export const initCabinIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CABIN }, ...properties);
+    initIcon(element, { additionalClassName: 'cabinIcon', url: URL_CABIN }, ...properties);
 }
 
 /**

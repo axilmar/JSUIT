@@ -15,7 +15,7 @@ const URL_CARRENTAL = new URL('../../assets/icons/carRental.svg', import.meta.ur
  */
 export const initCarRentalIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CARRENTAL }, ...properties);
+    initIcon(element, { additionalClassName: 'carRentalIcon', url: URL_CARRENTAL }, ...properties);
 }
 
 /**

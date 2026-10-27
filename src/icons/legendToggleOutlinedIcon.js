@@ -15,7 +15,7 @@ const URL_LEGENDTOGGLEOUTLINED = new URL('../../assets/icons/legendToggleOutline
  */
 export const initLegendToggleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LEGENDTOGGLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'legendToggleOutlinedIcon', url: URL_LEGENDTOGGLEOUTLINED }, ...properties);
 }
 
 /**

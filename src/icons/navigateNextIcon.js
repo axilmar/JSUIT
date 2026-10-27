@@ -15,7 +15,7 @@ const URL_NAVIGATENEXT = new URL('../../assets/icons/navigateNext.svg', import.m
  */
 export const initNavigateNextIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NAVIGATENEXT }, ...properties);
+    initIcon(element, { additionalClassName: 'navigateNextIcon', url: URL_NAVIGATENEXT }, ...properties);
 }
 
 /**

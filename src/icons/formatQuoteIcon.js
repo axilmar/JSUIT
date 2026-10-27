@@ -15,7 +15,7 @@ const URL_FORMATQUOTE = new URL('../../assets/icons/formatQuote.svg', import.met
  */
 export const initFormatQuoteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATQUOTE }, ...properties);
+    initIcon(element, { additionalClassName: 'formatQuoteIcon', url: URL_FORMATQUOTE }, ...properties);
 }
 
 /**

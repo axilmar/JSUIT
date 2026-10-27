@@ -15,7 +15,7 @@ const URL_SYNCPROBLEMOUTLINED = new URL('../../assets/icons/syncProblemOutlined.
  */
 export const initSyncProblemOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SYNCPROBLEMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'syncProblemOutlinedIcon', url: URL_SYNCPROBLEMOUTLINED }, ...properties);
 }
 
 /**

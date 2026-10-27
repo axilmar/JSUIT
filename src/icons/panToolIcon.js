@@ -15,7 +15,7 @@ const URL_PANTOOL = new URL('../../assets/icons/panTool.svg', import.meta.url).h
  */
 export const initPanToolIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PANTOOL }, ...properties);
+    initIcon(element, { additionalClassName: 'panToolIcon', url: URL_PANTOOL }, ...properties);
 }
 
 /**

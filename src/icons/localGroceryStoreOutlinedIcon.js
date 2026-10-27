@@ -15,7 +15,7 @@ const URL_LOCALGROCERYSTOREOUTLINED = new URL('../../assets/icons/localGrocerySt
  */
 export const initLocalGroceryStoreOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALGROCERYSTOREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localGroceryStoreOutlinedIcon', url: URL_LOCALGROCERYSTOREOUTLINED }, ...properties);
 }
 
 /**

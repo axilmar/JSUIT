@@ -39,7 +39,7 @@ export const initCloseButton = (element, ...properties) => {
     element.type = 'button';
     element.setAttribute('aria-label', 'Close');
     defineVariantProperty(element);
-    initIconButton(element, { icon: closeIcon() }, ...properties);
+    initIconButton(element, { additionalClassName: 'closeButton', icon: closeIcon() }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PERCENTOUTLINED = new URL('../../assets/icons/percentOutlined.svg', im
  */
 export const initPercentOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERCENTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'percentOutlinedIcon', url: URL_PERCENTOUTLINED }, ...properties);
 }
 
 /**

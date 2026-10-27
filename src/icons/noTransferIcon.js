@@ -15,7 +15,7 @@ const URL_NOTRANSFER = new URL('../../assets/icons/noTransfer.svg', import.meta.
  */
 export const initNoTransferIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTRANSFER }, ...properties);
+    initIcon(element, { additionalClassName: 'noTransferIcon', url: URL_NOTRANSFER }, ...properties);
 }
 
 /**

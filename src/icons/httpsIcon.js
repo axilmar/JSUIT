@@ -15,7 +15,7 @@ const URL_HTTPS = new URL('../../assets/icons/https.svg', import.meta.url).href;
  */
 export const initHttpsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HTTPS }, ...properties);
+    initIcon(element, { additionalClassName: 'httpsIcon', url: URL_HTTPS }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_EAST = new URL('../../assets/icons/east.svg', import.meta.url).href;
  */
 export const initEastIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EAST }, ...properties);
+    initIcon(element, { additionalClassName: 'eastIcon', url: URL_EAST }, ...properties);
 }
 
 /**

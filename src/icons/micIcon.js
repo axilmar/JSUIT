@@ -15,7 +15,7 @@ const URL_MIC = new URL('../../assets/icons/mic.svg', import.meta.url).href;
  */
 export const initMicIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MIC }, ...properties);
+    initIcon(element, { additionalClassName: 'micIcon', url: URL_MIC }, ...properties);
 }
 
 /**

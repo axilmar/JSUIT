@@ -15,7 +15,7 @@ const URL_CURTAINSCLOSEDOUTLINED = new URL('../../assets/icons/curtainsClosedOut
  */
 export const initCurtainsClosedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CURTAINSCLOSEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'curtainsClosedOutlinedIcon', url: URL_CURTAINSCLOSEDOUTLINED }, ...properties);
 }
 
 /**

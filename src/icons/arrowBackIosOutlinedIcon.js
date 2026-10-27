@@ -15,7 +15,7 @@ const URL_ARROWBACKIOSOUTLINED = new URL('../../assets/icons/arrowBackIosOutline
  */
 export const initArrowBackIosOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARROWBACKIOSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'arrowBackIosOutlinedIcon', url: URL_ARROWBACKIOSOUTLINED }, ...properties);
 }
 
 /**

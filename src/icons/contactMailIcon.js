@@ -15,7 +15,7 @@ const URL_CONTACTMAIL = new URL('../../assets/icons/contactMail.svg', import.met
  */
 export const initContactMailIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTACTMAIL }, ...properties);
+    initIcon(element, { additionalClassName: 'contactMailIcon', url: URL_CONTACTMAIL }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SWIPEUPALT = new URL('../../assets/icons/swipeUpAlt.svg', import.meta.
  */
 export const initSwipeUpAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWIPEUPALT }, ...properties);
+    initIcon(element, { additionalClassName: 'swipeUpAltIcon', url: URL_SWIPEUPALT }, ...properties);
 }
 
 /**

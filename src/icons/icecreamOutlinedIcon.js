@@ -15,7 +15,7 @@ const URL_ICECREAMOUTLINED = new URL('../../assets/icons/icecreamOutlined.svg', 
  */
 export const initIcecreamOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ICECREAMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'icecreamOutlinedIcon', url: URL_ICECREAMOUTLINED }, ...properties);
 }
 
 /**

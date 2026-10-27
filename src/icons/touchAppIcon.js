@@ -15,7 +15,7 @@ const URL_TOUCHAPP = new URL('../../assets/icons/touchApp.svg', import.meta.url)
  */
 export const initTouchAppIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TOUCHAPP }, ...properties);
+    initIcon(element, { additionalClassName: 'touchAppIcon', url: URL_TOUCHAPP }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_RTT = new URL('../../assets/icons/rtt.svg', import.meta.url).href;
  */
 export const initRttIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RTT }, ...properties);
+    initIcon(element, { additionalClassName: 'rttIcon', url: URL_RTT }, ...properties);
 }
 
 /**

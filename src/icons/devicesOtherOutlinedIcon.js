@@ -15,7 +15,7 @@ const URL_DEVICESOTHEROUTLINED = new URL('../../assets/icons/devicesOtherOutline
  */
 export const initDevicesOtherOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEVICESOTHEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'devicesOtherOutlinedIcon', url: URL_DEVICESOTHEROUTLINED }, ...properties);
 }
 
 /**

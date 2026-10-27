@@ -15,7 +15,7 @@ const URL_REPLYALLOUTLINED = new URL('../../assets/icons/replyAllOutlined.svg', 
  */
 export const initReplyAllOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REPLYALLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'replyAllOutlinedIcon', url: URL_REPLYALLOUTLINED }, ...properties);
 }
 
 /**

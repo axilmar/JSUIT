@@ -15,7 +15,7 @@ const URL_CHAIRALTOUTLINED = new URL('../../assets/icons/chairAltOutlined.svg', 
  */
 export const initChairAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHAIRALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'chairAltOutlinedIcon', url: URL_CHAIRALTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ALARMOFF = new URL('../../assets/icons/alarmOff.svg', import.meta.url)
  */
 export const initAlarmOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALARMOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'alarmOffIcon', url: URL_ALARMOFF }, ...properties);
 }
 
 /**

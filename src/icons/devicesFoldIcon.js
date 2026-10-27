@@ -15,7 +15,7 @@ const URL_DEVICESFOLD = new URL('../../assets/icons/devicesFold.svg', import.met
  */
 export const initDevicesFoldIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEVICESFOLD }, ...properties);
+    initIcon(element, { additionalClassName: 'devicesFoldIcon', url: URL_DEVICESFOLD }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_UPDATEDISABLED = new URL('../../assets/icons/updateDisabled.svg', impo
  */
 export const initUpdateDisabledIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UPDATEDISABLED }, ...properties);
+    initIcon(element, { additionalClassName: 'updateDisabledIcon', url: URL_UPDATEDISABLED }, ...properties);
 }
 
 /**

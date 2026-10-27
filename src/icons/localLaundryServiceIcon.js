@@ -15,7 +15,7 @@ const URL_LOCALLAUNDRYSERVICE = new URL('../../assets/icons/localLaundryService.
  */
 export const initLocalLaundryServiceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALLAUNDRYSERVICE }, ...properties);
+    initIcon(element, { additionalClassName: 'localLaundryServiceIcon', url: URL_LOCALLAUNDRYSERVICE }, ...properties);
 }
 
 /**

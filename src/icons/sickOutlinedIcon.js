@@ -15,7 +15,7 @@ const URL_SICKOUTLINED = new URL('../../assets/icons/sickOutlined.svg', import.m
  */
 export const initSickOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SICKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sickOutlinedIcon', url: URL_SICKOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_STOPOUTLINED = new URL('../../assets/icons/stopOutlined.svg', import.m
  */
 export const initStopOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STOPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'stopOutlinedIcon', url: URL_STOPOUTLINED }, ...properties);
 }
 
 /**

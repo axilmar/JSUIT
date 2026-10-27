@@ -15,7 +15,7 @@ const URL_PAGEVIEWOUTLINED = new URL('../../assets/icons/pageviewOutlined.svg', 
  */
 export const initPageviewOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PAGEVIEWOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pageviewOutlinedIcon', url: URL_PAGEVIEWOUTLINED }, ...properties);
 }
 
 /**

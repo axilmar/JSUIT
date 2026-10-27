@@ -15,7 +15,7 @@ const URL_NOTSTARTEDOUTLINED = new URL('../../assets/icons/notStartedOutlined.sv
  */
 export const initNotStartedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTSTARTEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'notStartedOutlinedIcon', url: URL_NOTSTARTEDOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_VIDEOSTABLEOUTLINED = new URL('../../assets/icons/videoStableOutlined.
  */
 export const initVideoStableOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOSTABLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'videoStableOutlinedIcon', url: URL_VIDEOSTABLEOUTLINED }, ...properties);
 }
 
 /**

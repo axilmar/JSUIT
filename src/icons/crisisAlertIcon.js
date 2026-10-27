@@ -15,7 +15,7 @@ const URL_CRISISALERT = new URL('../../assets/icons/crisisAlert.svg', import.met
  */
 export const initCrisisAlertIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CRISISALERT }, ...properties);
+    initIcon(element, { additionalClassName: 'crisisAlertIcon', url: URL_CRISISALERT }, ...properties);
 }
 
 /**

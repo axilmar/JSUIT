@@ -15,7 +15,7 @@ const URL_STRIKETHROUGHSOUTLINED = new URL('../../assets/icons/strikethroughSOut
  */
 export const initStrikethroughSOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STRIKETHROUGHSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'strikethroughSOutlinedIcon', url: URL_STRIKETHROUGHSOUTLINED }, ...properties);
 }
 
 /**

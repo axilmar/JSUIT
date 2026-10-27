@@ -15,7 +15,7 @@ const URL_STARPURPLE500OUTLINED = new URL('../../assets/icons/starPurple500Outli
  */
 export const initStarPurple500OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STARPURPLE500OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'starPurple500OutlinedIcon', url: URL_STARPURPLE500OUTLINED }, ...properties);
 }
 
 /**

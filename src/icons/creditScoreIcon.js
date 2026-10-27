@@ -15,7 +15,7 @@ const URL_CREDITSCORE = new URL('../../assets/icons/creditScore.svg', import.met
  */
 export const initCreditScoreIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CREDITSCORE }, ...properties);
+    initIcon(element, { additionalClassName: 'creditScoreIcon', url: URL_CREDITSCORE }, ...properties);
 }
 
 /**

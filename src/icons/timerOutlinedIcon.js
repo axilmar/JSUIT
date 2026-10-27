@@ -15,7 +15,7 @@ const URL_TIMEROUTLINED = new URL('../../assets/icons/timerOutlined.svg', import
  */
 export const initTimerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TIMEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'timerOutlinedIcon', url: URL_TIMEROUTLINED }, ...properties);
 }
 
 /**

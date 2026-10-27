@@ -15,7 +15,7 @@ const URL_SWAPVERTOUTLINED = new URL('../../assets/icons/swapVertOutlined.svg', 
  */
 export const initSwapVertOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWAPVERTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'swapVertOutlinedIcon', url: URL_SWAPVERTOUTLINED }, ...properties);
 }
 
 /**

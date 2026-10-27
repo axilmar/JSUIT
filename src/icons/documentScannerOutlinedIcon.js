@@ -15,7 +15,7 @@ const URL_DOCUMENTSCANNEROUTLINED = new URL('../../assets/icons/documentScannerO
  */
 export const initDocumentScannerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOCUMENTSCANNEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'documentScannerOutlinedIcon', url: URL_DOCUMENTSCANNEROUTLINED }, ...properties);
 }
 
 /**

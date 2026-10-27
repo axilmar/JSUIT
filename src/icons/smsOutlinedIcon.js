@@ -15,7 +15,7 @@ const URL_SMSOUTLINED = new URL('../../assets/icons/smsOutlined.svg', import.met
  */
 export const initSmsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SMSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'smsOutlinedIcon', url: URL_SMSOUTLINED }, ...properties);
 }
 
 /**

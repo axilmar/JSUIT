@@ -15,7 +15,7 @@ const URL_MEETINGROOM = new URL('../../assets/icons/meetingRoom.svg', import.met
  */
 export const initMeetingRoomIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MEETINGROOM }, ...properties);
+    initIcon(element, { additionalClassName: 'meetingRoomIcon', url: URL_MEETINGROOM }, ...properties);
 }
 
 /**

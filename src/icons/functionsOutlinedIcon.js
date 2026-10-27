@@ -15,7 +15,7 @@ const URL_FUNCTIONSOUTLINED = new URL('../../assets/icons/functionsOutlined.svg'
  */
 export const initFunctionsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FUNCTIONSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'functionsOutlinedIcon', url: URL_FUNCTIONSOUTLINED }, ...properties);
 }
 
 /**

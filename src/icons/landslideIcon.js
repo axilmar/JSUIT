@@ -15,7 +15,7 @@ const URL_LANDSLIDE = new URL('../../assets/icons/landslide.svg', import.meta.ur
  */
 export const initLandslideIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LANDSLIDE }, ...properties);
+    initIcon(element, { additionalClassName: 'landslideIcon', url: URL_LANDSLIDE }, ...properties);
 }
 
 /**

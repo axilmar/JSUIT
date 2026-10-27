@@ -15,7 +15,7 @@ const URL_NOTINTERESTEDOUTLINED = new URL('../../assets/icons/notInterestedOutli
  */
 export const initNotInterestedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTINTERESTEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'notInterestedOutlinedIcon', url: URL_NOTINTERESTEDOUTLINED }, ...properties);
 }
 
 /**

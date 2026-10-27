@@ -15,7 +15,7 @@ const URL_MERGEOUTLINED = new URL('../../assets/icons/mergeOutlined.svg', import
  */
 export const initMergeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MERGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'mergeOutlinedIcon', url: URL_MERGEOUTLINED }, ...properties);
 }
 
 /**

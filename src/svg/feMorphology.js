@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initFeMorphology = (element, ...properties) => {
     console.assert(element instanceof SVGFEMorphologyElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'feMorphology' }, ...properties);
 }
 
 /**

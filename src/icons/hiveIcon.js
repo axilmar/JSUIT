@@ -15,7 +15,7 @@ const URL_HIVE = new URL('../../assets/icons/hive.svg', import.meta.url).href;
  */
 export const initHiveIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HIVE }, ...properties);
+    initIcon(element, { additionalClassName: 'hiveIcon', url: URL_HIVE }, ...properties);
 }
 
 /**

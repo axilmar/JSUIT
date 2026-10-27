@@ -15,7 +15,7 @@ const URL_ELDERLYWOMANOUTLINED = new URL('../../assets/icons/elderlyWomanOutline
  */
 export const initElderlyWomanOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ELDERLYWOMANOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'elderlyWomanOutlinedIcon', url: URL_ELDERLYWOMANOUTLINED }, ...properties);
 }
 
 /**

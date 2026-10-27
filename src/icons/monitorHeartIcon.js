@@ -15,7 +15,7 @@ const URL_MONITORHEART = new URL('../../assets/icons/monitorHeart.svg', import.m
  */
 export const initMonitorHeartIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MONITORHEART }, ...properties);
+    initIcon(element, { additionalClassName: 'monitorHeartIcon', url: URL_MONITORHEART }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_WBAUTO = new URL('../../assets/icons/wbAuto.svg', import.meta.url).hre
  */
 export const initWbAutoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WBAUTO }, ...properties);
+    initIcon(element, { additionalClassName: 'wbAutoIcon', url: URL_WBAUTO }, ...properties);
 }
 
 /**

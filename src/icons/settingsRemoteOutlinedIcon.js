@@ -15,7 +15,7 @@ const URL_SETTINGSREMOTEOUTLINED = new URL('../../assets/icons/settingsRemoteOut
  */
 export const initSettingsRemoteOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSREMOTEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsRemoteOutlinedIcon', url: URL_SETTINGSREMOTEOUTLINED }, ...properties);
 }
 
 /**

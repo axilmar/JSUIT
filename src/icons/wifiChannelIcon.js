@@ -15,7 +15,7 @@ const URL_WIFICHANNEL = new URL('../../assets/icons/wifiChannel.svg', import.met
  */
 export const initWifiChannelIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIFICHANNEL }, ...properties);
+    initIcon(element, { additionalClassName: 'wifiChannelIcon', url: URL_WIFICHANNEL }, ...properties);
 }
 
 /**

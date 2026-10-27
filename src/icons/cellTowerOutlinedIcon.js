@@ -15,7 +15,7 @@ const URL_CELLTOWEROUTLINED = new URL('../../assets/icons/cellTowerOutlined.svg'
  */
 export const initCellTowerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CELLTOWEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cellTowerOutlinedIcon', url: URL_CELLTOWEROUTLINED }, ...properties);
 }
 
 /**

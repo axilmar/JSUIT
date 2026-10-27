@@ -15,7 +15,7 @@ const URL_HOURGLASSDISABLED = new URL('../../assets/icons/hourglassDisabled.svg'
  */
 export const initHourglassDisabledIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOURGLASSDISABLED }, ...properties);
+    initIcon(element, { additionalClassName: 'hourglassDisabledIcon', url: URL_HOURGLASSDISABLED }, ...properties);
 }
 
 /**

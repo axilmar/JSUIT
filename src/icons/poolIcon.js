@@ -15,7 +15,7 @@ const URL_POOL = new URL('../../assets/icons/pool.svg', import.meta.url).href;
  */
 export const initPoolIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POOL }, ...properties);
+    initIcon(element, { additionalClassName: 'poolIcon', url: URL_POOL }, ...properties);
 }
 
 /**

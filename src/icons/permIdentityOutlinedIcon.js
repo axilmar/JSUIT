@@ -15,7 +15,7 @@ const URL_PERMIDENTITYOUTLINED = new URL('../../assets/icons/permIdentityOutline
  */
 export const initPermIdentityOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERMIDENTITYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'permIdentityOutlinedIcon', url: URL_PERMIDENTITYOUTLINED }, ...properties);
 }
 
 /**

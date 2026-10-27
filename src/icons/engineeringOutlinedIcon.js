@@ -15,7 +15,7 @@ const URL_ENGINEERINGOUTLINED = new URL('../../assets/icons/engineeringOutlined.
  */
 export const initEngineeringOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ENGINEERINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'engineeringOutlinedIcon', url: URL_ENGINEERINGOUTLINED }, ...properties);
 }
 
 /**

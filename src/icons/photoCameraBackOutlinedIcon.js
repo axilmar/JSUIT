@@ -15,7 +15,7 @@ const URL_PHOTOCAMERABACKOUTLINED = new URL('../../assets/icons/photoCameraBackO
  */
 export const initPhotoCameraBackOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHOTOCAMERABACKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'photoCameraBackOutlinedIcon', url: URL_PHOTOCAMERABACKOUTLINED }, ...properties);
 }
 
 /**

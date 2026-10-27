@@ -15,7 +15,7 @@ const URL_MARKCHATREAD = new URL('../../assets/icons/markChatRead.svg', import.m
  */
 export const initMarkChatReadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MARKCHATREAD }, ...properties);
+    initIcon(element, { additionalClassName: 'markChatReadIcon', url: URL_MARKCHATREAD }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_GROUPREMOVE = new URL('../../assets/icons/groupRemove.svg', import.met
  */
 export const initGroupRemoveIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GROUPREMOVE }, ...properties);
+    initIcon(element, { additionalClassName: 'groupRemoveIcon', url: URL_GROUPREMOVE }, ...properties);
 }
 
 /**

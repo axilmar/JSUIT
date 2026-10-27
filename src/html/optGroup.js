@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initOptGroup = (element, ...properties) => {
     console.assert(element instanceof HTMLOptGroupElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'optGroup' }, ...properties);
 }
 
 /**

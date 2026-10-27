@@ -15,7 +15,7 @@ const URL_FILECOPYOUTLINED = new URL('../../assets/icons/fileCopyOutlined.svg', 
  */
 export const initFileCopyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILECOPYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fileCopyOutlinedIcon', url: URL_FILECOPYOUTLINED }, ...properties);
 }
 
 /**

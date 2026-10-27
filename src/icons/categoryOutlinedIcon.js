@@ -15,7 +15,7 @@ const URL_CATEGORYOUTLINED = new URL('../../assets/icons/categoryOutlined.svg', 
  */
 export const initCategoryOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CATEGORYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'categoryOutlinedIcon', url: URL_CATEGORYOUTLINED }, ...properties);
 }
 
 /**

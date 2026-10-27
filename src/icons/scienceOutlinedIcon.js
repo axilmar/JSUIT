@@ -15,7 +15,7 @@ const URL_SCIENCEOUTLINED = new URL('../../assets/icons/scienceOutlined.svg', im
  */
 export const initScienceOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCIENCEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'scienceOutlinedIcon', url: URL_SCIENCEOUTLINED }, ...properties);
 }
 
 /**

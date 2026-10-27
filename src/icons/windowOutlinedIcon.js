@@ -15,7 +15,7 @@ const URL_WINDOWOUTLINED = new URL('../../assets/icons/windowOutlined.svg', impo
  */
 export const initWindowOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WINDOWOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'windowOutlinedIcon', url: URL_WINDOWOUTLINED }, ...properties);
 }
 
 /**

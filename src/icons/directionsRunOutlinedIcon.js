@@ -15,7 +15,7 @@ const URL_DIRECTIONSRUNOUTLINED = new URL('../../assets/icons/directionsRunOutli
  */
 export const initDirectionsRunOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRECTIONSRUNOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'directionsRunOutlinedIcon', url: URL_DIRECTIONSRUNOUTLINED }, ...properties);
 }
 
 /**

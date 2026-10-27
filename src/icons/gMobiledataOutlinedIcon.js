@@ -15,7 +15,7 @@ const URL_GMOBILEDATAOUTLINED = new URL('../../assets/icons/gMobiledataOutlined.
  */
 export const initGMobiledataOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GMOBILEDATAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'gMobiledataOutlinedIcon', url: URL_GMOBILEDATAOUTLINED }, ...properties);
 }
 
 /**

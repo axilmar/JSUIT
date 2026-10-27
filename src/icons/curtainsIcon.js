@@ -15,7 +15,7 @@ const URL_CURTAINS = new URL('../../assets/icons/curtains.svg', import.meta.url)
  */
 export const initCurtainsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CURTAINS }, ...properties);
+    initIcon(element, { additionalClassName: 'curtainsIcon', url: URL_CURTAINS }, ...properties);
 }
 
 /**

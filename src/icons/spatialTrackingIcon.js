@@ -15,7 +15,7 @@ const URL_SPATIALTRACKING = new URL('../../assets/icons/spatialTracking.svg', im
  */
 export const initSpatialTrackingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPATIALTRACKING }, ...properties);
+    initIcon(element, { additionalClassName: 'spatialTrackingIcon', url: URL_SPATIALTRACKING }, ...properties);
 }
 
 /**

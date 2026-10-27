@@ -15,7 +15,7 @@ const URL_PARAGLIDING = new URL('../../assets/icons/paragliding.svg', import.met
  */
 export const initParaglidingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PARAGLIDING }, ...properties);
+    initIcon(element, { additionalClassName: 'paraglidingIcon', url: URL_PARAGLIDING }, ...properties);
 }
 
 /**

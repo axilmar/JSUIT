@@ -15,7 +15,7 @@ const URL_ELEVENMP = new URL('../../assets/icons/elevenMp.svg', import.meta.url)
  */
 export const initElevenMpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ELEVENMP }, ...properties);
+    initIcon(element, { additionalClassName: 'elevenMpIcon', url: URL_ELEVENMP }, ...properties);
 }
 
 /**

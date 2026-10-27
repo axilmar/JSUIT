@@ -15,7 +15,7 @@ const URL_PLAYFORWORK = new URL('../../assets/icons/playForWork.svg', import.met
  */
 export const initPlayForWorkIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYFORWORK }, ...properties);
+    initIcon(element, { additionalClassName: 'playForWorkIcon', url: URL_PLAYFORWORK }, ...properties);
 }
 
 /**

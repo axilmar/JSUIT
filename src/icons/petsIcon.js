@@ -15,7 +15,7 @@ const URL_PETS = new URL('../../assets/icons/pets.svg', import.meta.url).href;
  */
 export const initPetsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PETS }, ...properties);
+    initIcon(element, { additionalClassName: 'petsIcon', url: URL_PETS }, ...properties);
 }
 
 /**

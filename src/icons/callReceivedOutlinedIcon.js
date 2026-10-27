@@ -15,7 +15,7 @@ const URL_CALLRECEIVEDOUTLINED = new URL('../../assets/icons/callReceivedOutline
  */
 export const initCallReceivedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALLRECEIVEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'callReceivedOutlinedIcon', url: URL_CALLRECEIVEDOUTLINED }, ...properties);
 }
 
 /**

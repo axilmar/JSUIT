@@ -15,7 +15,7 @@ const URL_MOUSE = new URL('../../assets/icons/mouse.svg', import.meta.url).href;
  */
 export const initMouseIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOUSE }, ...properties);
+    initIcon(element, { additionalClassName: 'mouseIcon', url: URL_MOUSE }, ...properties);
 }
 
 /**

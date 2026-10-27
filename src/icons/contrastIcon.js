@@ -15,7 +15,7 @@ const URL_CONTRAST = new URL('../../assets/icons/contrast.svg', import.meta.url)
  */
 export const initContrastIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTRAST }, ...properties);
+    initIcon(element, { additionalClassName: 'contrastIcon', url: URL_CONTRAST }, ...properties);
 }
 
 /**

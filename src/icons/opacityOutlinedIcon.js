@@ -15,7 +15,7 @@ const URL_OPACITYOUTLINED = new URL('../../assets/icons/opacityOutlined.svg', im
  */
 export const initOpacityOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OPACITYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'opacityOutlinedIcon', url: URL_OPACITYOUTLINED }, ...properties);
 }
 
 /**

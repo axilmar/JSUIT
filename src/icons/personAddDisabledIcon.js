@@ -15,7 +15,7 @@ const URL_PERSONADDDISABLED = new URL('../../assets/icons/personAddDisabled.svg'
  */
 export const initPersonAddDisabledIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERSONADDDISABLED }, ...properties);
+    initIcon(element, { additionalClassName: 'personAddDisabledIcon', url: URL_PERSONADDDISABLED }, ...properties);
 }
 
 /**

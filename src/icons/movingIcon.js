@@ -15,7 +15,7 @@ const URL_MOVING = new URL('../../assets/icons/moving.svg', import.meta.url).hre
  */
 export const initMovingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOVING }, ...properties);
+    initIcon(element, { additionalClassName: 'movingIcon', url: URL_MOVING }, ...properties);
 }
 
 /**

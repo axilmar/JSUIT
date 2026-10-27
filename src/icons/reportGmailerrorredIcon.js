@@ -15,7 +15,7 @@ const URL_REPORTGMAILERRORRED = new URL('../../assets/icons/reportGmailerrorred.
  */
 export const initReportGmailerrorredIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REPORTGMAILERRORRED }, ...properties);
+    initIcon(element, { additionalClassName: 'reportGmailerrorredIcon', url: URL_REPORTGMAILERRORRED }, ...properties);
 }
 
 /**

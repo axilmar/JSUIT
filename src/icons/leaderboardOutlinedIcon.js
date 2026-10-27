@@ -15,7 +15,7 @@ const URL_LEADERBOARDOUTLINED = new URL('../../assets/icons/leaderboardOutlined.
  */
 export const initLeaderboardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LEADERBOARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'leaderboardOutlinedIcon', url: URL_LEADERBOARDOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SPEEDOUTLINED = new URL('../../assets/icons/speedOutlined.svg', import
  */
 export const initSpeedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPEEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'speedOutlinedIcon', url: URL_SPEEDOUTLINED }, ...properties);
 }
 
 /**

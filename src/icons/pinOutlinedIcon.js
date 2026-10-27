@@ -15,7 +15,7 @@ const URL_PINOUTLINED = new URL('../../assets/icons/pinOutlined.svg', import.met
  */
 export const initPinOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PINOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pinOutlinedIcon', url: URL_PINOUTLINED }, ...properties);
 }
 
 /**

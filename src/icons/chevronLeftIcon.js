@@ -15,7 +15,7 @@ const URL_CHEVRONLEFT = new URL('../../assets/icons/chevronLeft.svg', import.met
  */
 export const initChevronLeftIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHEVRONLEFT }, ...properties);
+    initIcon(element, { additionalClassName: 'chevronLeftIcon', url: URL_CHEVRONLEFT }, ...properties);
 }
 
 /**

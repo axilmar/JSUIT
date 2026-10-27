@@ -15,7 +15,7 @@ const URL_DOWNLOADFOROFFLINE = new URL('../../assets/icons/downloadForOffline.sv
  */
 export const initDownloadForOfflineIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOWNLOADFOROFFLINE }, ...properties);
+    initIcon(element, { additionalClassName: 'downloadForOfflineIcon', url: URL_DOWNLOADFOROFFLINE }, ...properties);
 }
 
 /**

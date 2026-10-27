@@ -15,7 +15,7 @@ const URL_EXTENSIONOFF = new URL('../../assets/icons/extensionOff.svg', import.m
  */
 export const initExtensionOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXTENSIONOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'extensionOffIcon', url: URL_EXTENSIONOFF }, ...properties);
 }
 
 /**

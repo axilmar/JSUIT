@@ -15,7 +15,7 @@ const URL_SWIPEVERTICAL = new URL('../../assets/icons/swipeVertical.svg', import
  */
 export const initSwipeVerticalIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWIPEVERTICAL }, ...properties);
+    initIcon(element, { additionalClassName: 'swipeVerticalIcon', url: URL_SWIPEVERTICAL }, ...properties);
 }
 
 /**

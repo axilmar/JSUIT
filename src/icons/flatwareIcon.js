@@ -15,7 +15,7 @@ const URL_FLATWARE = new URL('../../assets/icons/flatware.svg', import.meta.url)
  */
 export const initFlatwareIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLATWARE }, ...properties);
+    initIcon(element, { additionalClassName: 'flatwareIcon', url: URL_FLATWARE }, ...properties);
 }
 
 /**

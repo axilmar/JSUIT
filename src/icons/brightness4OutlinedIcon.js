@@ -15,7 +15,7 @@ const URL_BRIGHTNESS4OUTLINED = new URL('../../assets/icons/brightness4Outlined.
  */
 export const initBrightness4OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BRIGHTNESS4OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'brightness4OutlinedIcon', url: URL_BRIGHTNESS4OUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PHOTOSIZESELECTSMALL = new URL('../../assets/icons/photoSizeSelectSmal
  */
 export const initPhotoSizeSelectSmallIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHOTOSIZESELECTSMALL }, ...properties);
+    initIcon(element, { additionalClassName: 'photoSizeSelectSmallIcon', url: URL_PHOTOSIZESELECTSMALL }, ...properties);
 }
 
 /**

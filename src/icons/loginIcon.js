@@ -15,7 +15,7 @@ const URL_LOGIN = new URL('../../assets/icons/login.svg', import.meta.url).href;
  */
 export const initLoginIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOGIN }, ...properties);
+    initIcon(element, { additionalClassName: 'loginIcon', url: URL_LOGIN }, ...properties);
 }
 
 /**

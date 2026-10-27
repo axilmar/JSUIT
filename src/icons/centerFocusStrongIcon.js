@@ -15,7 +15,7 @@ const URL_CENTERFOCUSSTRONG = new URL('../../assets/icons/centerFocusStrong.svg'
  */
 export const initCenterFocusStrongIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CENTERFOCUSSTRONG }, ...properties);
+    initIcon(element, { additionalClassName: 'centerFocusStrongIcon', url: URL_CENTERFOCUSSTRONG }, ...properties);
 }
 
 /**

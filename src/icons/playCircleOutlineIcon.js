@@ -15,7 +15,7 @@ const URL_PLAYCIRCLEOUTLINE = new URL('../../assets/icons/playCircleOutline.svg'
  */
 export const initPlayCircleOutlineIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYCIRCLEOUTLINE }, ...properties);
+    initIcon(element, { additionalClassName: 'playCircleOutlineIcon', url: URL_PLAYCIRCLEOUTLINE }, ...properties);
 }
 
 /**

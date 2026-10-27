@@ -15,7 +15,7 @@ const URL_CROPROTATEOUTLINED = new URL('../../assets/icons/cropRotateOutlined.sv
  */
 export const initCropRotateOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CROPROTATEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cropRotateOutlinedIcon', url: URL_CROPROTATEOUTLINED }, ...properties);
 }
 
 /**

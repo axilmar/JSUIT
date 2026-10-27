@@ -15,7 +15,7 @@ const URL_ALIGNHORIZONTALLEFTOUTLINED = new URL('../../assets/icons/alignHorizon
  */
 export const initAlignHorizontalLeftOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALIGNHORIZONTALLEFTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'alignHorizontalLeftOutlinedIcon', url: URL_ALIGNHORIZONTALLEFTOUTLINED }, ...properties);
 }
 
 /**

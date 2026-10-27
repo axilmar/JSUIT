@@ -15,7 +15,7 @@ const URL_MEDICATIONLIQUID = new URL('../../assets/icons/medicationLiquid.svg', 
  */
 export const initMedicationLiquidIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MEDICATIONLIQUID }, ...properties);
+    initIcon(element, { additionalClassName: 'medicationLiquidIcon', url: URL_MEDICATIONLIQUID }, ...properties);
 }
 
 /**

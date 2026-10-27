@@ -15,7 +15,7 @@ const URL_WATCHOFFOUTLINED = new URL('../../assets/icons/watchOffOutlined.svg', 
  */
 export const initWatchOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WATCHOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'watchOffOutlinedIcon', url: URL_WATCHOFFOUTLINED }, ...properties);
 }
 
 /**

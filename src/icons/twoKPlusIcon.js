@@ -15,7 +15,7 @@ const URL_TWOKPLUS = new URL('../../assets/icons/twoKPlus.svg', import.meta.url)
  */
 export const initTwoKPlusIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TWOKPLUS }, ...properties);
+    initIcon(element, { additionalClassName: 'twoKPlusIcon', url: URL_TWOKPLUS }, ...properties);
 }
 
 /**

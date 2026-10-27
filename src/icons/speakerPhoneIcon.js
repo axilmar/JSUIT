@@ -15,7 +15,7 @@ const URL_SPEAKERPHONE = new URL('../../assets/icons/speakerPhone.svg', import.m
  */
 export const initSpeakerPhoneIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPEAKERPHONE }, ...properties);
+    initIcon(element, { additionalClassName: 'speakerPhoneIcon', url: URL_SPEAKERPHONE }, ...properties);
 }
 
 /**

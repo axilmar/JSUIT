@@ -10,5 +10,5 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initSVGGradientElement = (element, ...properties) => {
     console.assert(element instanceof SVGGradientElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'SVGGradientElement' }, ...properties);
 }

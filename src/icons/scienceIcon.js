@@ -15,7 +15,7 @@ const URL_SCIENCE = new URL('../../assets/icons/science.svg', import.meta.url).h
  */
 export const initScienceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCIENCE }, ...properties);
+    initIcon(element, { additionalClassName: 'scienceIcon', url: URL_SCIENCE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_INSERTINVITATION = new URL('../../assets/icons/insertInvitation.svg', 
  */
 export const initInsertInvitationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INSERTINVITATION }, ...properties);
+    initIcon(element, { additionalClassName: 'insertInvitationIcon', url: URL_INSERTINVITATION }, ...properties);
 }
 
 /**

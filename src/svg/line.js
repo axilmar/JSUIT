@@ -10,7 +10,7 @@ import { initSVGGeometryElement } from "./SVGGeometryElement.js";
  */
 export const initLine = (element, ...properties) => {
     console.assert(element instanceof SVGLineElement);
-    initSVGGeometryElement(element, ...properties);
+    initSVGGeometryElement(element, { additionalClassName: 'line' }, ...properties);
 }
 
 /**

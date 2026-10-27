@@ -15,7 +15,7 @@ const URL_HEADSETMICOUTLINED = new URL('../../assets/icons/headsetMicOutlined.sv
  */
 export const initHeadsetMicOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEADSETMICOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'headsetMicOutlinedIcon', url: URL_HEADSETMICOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LENSBLUR = new URL('../../assets/icons/lensBlur.svg', import.meta.url)
  */
 export const initLensBlurIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LENSBLUR }, ...properties);
+    initIcon(element, { additionalClassName: 'lensBlurIcon', url: URL_LENSBLUR }, ...properties);
 }
 
 /**

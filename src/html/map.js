@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initMap = (element, ...properties) => {
     console.assert(element instanceof HTMLMapElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'map' }, ...properties);
 }
 
 /**

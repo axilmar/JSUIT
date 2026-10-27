@@ -15,7 +15,7 @@ const URL_TURNEDINNOT = new URL('../../assets/icons/turnedInNot.svg', import.met
  */
 export const initTurnedInNotIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TURNEDINNOT }, ...properties);
+    initIcon(element, { additionalClassName: 'turnedInNotIcon', url: URL_TURNEDINNOT }, ...properties);
 }
 
 /**

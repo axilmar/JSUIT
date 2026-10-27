@@ -15,7 +15,7 @@ const URL_COMPASSCALIBRATIONOUTLINED = new URL('../../assets/icons/compassCalibr
  */
 export const initCompassCalibrationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMPASSCALIBRATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'compassCalibrationOutlinedIcon', url: URL_COMPASSCALIBRATIONOUTLINED }, ...properties);
 }
 
 /**

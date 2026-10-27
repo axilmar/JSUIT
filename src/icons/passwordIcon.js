@@ -15,7 +15,7 @@ const URL_PASSWORD = new URL('../../assets/icons/password.svg', import.meta.url)
  */
 export const initPasswordIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PASSWORD }, ...properties);
+    initIcon(element, { additionalClassName: 'passwordIcon', url: URL_PASSWORD }, ...properties);
 }
 
 /**

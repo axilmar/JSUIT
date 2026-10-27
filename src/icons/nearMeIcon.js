@@ -15,7 +15,7 @@ const URL_NEARME = new URL('../../assets/icons/nearMe.svg', import.meta.url).hre
  */
 export const initNearMeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NEARME }, ...properties);
+    initIcon(element, { additionalClassName: 'nearMeIcon', url: URL_NEARME }, ...properties);
 }
 
 /**

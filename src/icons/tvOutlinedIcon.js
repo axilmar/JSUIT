@@ -15,7 +15,7 @@ const URL_TVOUTLINED = new URL('../../assets/icons/tvOutlined.svg', import.meta.
  */
 export const initTvOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TVOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tvOutlinedIcon', url: URL_TVOUTLINED }, ...properties);
 }
 
 /**

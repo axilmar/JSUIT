@@ -15,7 +15,7 @@ const URL_DIRECTIONSOFFOUTLINED = new URL('../../assets/icons/directionsOffOutli
  */
 export const initDirectionsOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRECTIONSOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'directionsOffOutlinedIcon', url: URL_DIRECTIONSOFFOUTLINED }, ...properties);
 }
 
 /**

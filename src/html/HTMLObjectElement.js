@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initHTMLObjectElement = (element, ...properties) => {
     console.assert(element instanceof HTMLObjectElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'HTMLObjectElement' }, ...properties);
 }
 
 /**
@@ -22,6 +22,6 @@ export const initHTMLObjectElement = (element, ...properties) => {
  */
 export const object = (...properties) => {
     const element = document.createElement('object');
-    initHTMLObjectElement(element, ...properties);
+    initHTMLObjectElement(element, { additionalClassName: 'object' }, ...properties);
     return element;
 }

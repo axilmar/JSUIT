@@ -15,7 +15,7 @@ const URL_PHONELINKOUTLINED = new URL('../../assets/icons/phonelinkOutlined.svg'
  */
 export const initPhonelinkOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONELINKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'phonelinkOutlinedIcon', url: URL_PHONELINKOUTLINED }, ...properties);
 }
 
 /**

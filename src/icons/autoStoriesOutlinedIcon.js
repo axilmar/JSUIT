@@ -15,7 +15,7 @@ const URL_AUTOSTORIESOUTLINED = new URL('../../assets/icons/autoStoriesOutlined.
  */
 export const initAutoStoriesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOSTORIESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'autoStoriesOutlinedIcon', url: URL_AUTOSTORIESOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FIVEKPLUSOUTLINED = new URL('../../assets/icons/fiveKPlusOutlined.svg'
  */
 export const initFiveKPlusOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIVEKPLUSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fiveKPlusOutlinedIcon', url: URL_FIVEKPLUSOUTLINED }, ...properties);
 }
 
 /**

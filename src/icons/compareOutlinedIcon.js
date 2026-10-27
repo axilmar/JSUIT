@@ -15,7 +15,7 @@ const URL_COMPAREOUTLINED = new URL('../../assets/icons/compareOutlined.svg', im
  */
 export const initCompareOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMPAREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'compareOutlinedIcon', url: URL_COMPAREOUTLINED }, ...properties);
 }
 
 /**

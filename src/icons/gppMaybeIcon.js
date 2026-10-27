@@ -15,7 +15,7 @@ const URL_GPPMAYBE = new URL('../../assets/icons/gppMaybe.svg', import.meta.url)
  */
 export const initGppMaybeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GPPMAYBE }, ...properties);
+    initIcon(element, { additionalClassName: 'gppMaybeIcon', url: URL_GPPMAYBE }, ...properties);
 }
 
 /**

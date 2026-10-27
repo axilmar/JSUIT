@@ -15,7 +15,7 @@ const URL_SAFETYCHECKOUTLINED = new URL('../../assets/icons/safetyCheckOutlined.
  */
 export const initSafetyCheckOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SAFETYCHECKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'safetyCheckOutlinedIcon', url: URL_SAFETYCHECKOUTLINED }, ...properties);
 }
 
 /**

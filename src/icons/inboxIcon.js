@@ -15,7 +15,7 @@ const URL_INBOX = new URL('../../assets/icons/inbox.svg', import.meta.url).href;
  */
 export const initInboxIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INBOX }, ...properties);
+    initIcon(element, { additionalClassName: 'inboxIcon', url: URL_INBOX }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ASSISTANTDIRECTION = new URL('../../assets/icons/assistantDirection.sv
  */
 export const initAssistantDirectionIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ASSISTANTDIRECTION }, ...properties);
+    initIcon(element, { additionalClassName: 'assistantDirectionIcon', url: URL_ASSISTANTDIRECTION }, ...properties);
 }
 
 /**

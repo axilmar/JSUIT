@@ -15,7 +15,7 @@ const URL_FILTERFRAMESOUTLINED = new URL('../../assets/icons/filterFramesOutline
  */
 export const initFilterFramesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERFRAMESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'filterFramesOutlinedIcon', url: URL_FILTERFRAMESOUTLINED }, ...properties);
 }
 
 /**

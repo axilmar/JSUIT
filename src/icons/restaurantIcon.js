@@ -15,7 +15,7 @@ const URL_RESTAURANT = new URL('../../assets/icons/restaurant.svg', import.meta.
  */
 export const initRestaurantIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RESTAURANT }, ...properties);
+    initIcon(element, { additionalClassName: 'restaurantIcon', url: URL_RESTAURANT }, ...properties);
 }
 
 /**

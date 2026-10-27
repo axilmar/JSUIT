@@ -15,7 +15,7 @@ const URL_SENSORSOFFOUTLINED = new URL('../../assets/icons/sensorsOffOutlined.sv
  */
 export const initSensorsOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SENSORSOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sensorsOffOutlinedIcon', url: URL_SENSORSOFFOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LABELIMPORTANTOUTLINED = new URL('../../assets/icons/labelImportantOut
  */
 export const initLabelImportantOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LABELIMPORTANTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'labelImportantOutlinedIcon', url: URL_LABELIMPORTANTOUTLINED }, ...properties);
 }
 
 /**

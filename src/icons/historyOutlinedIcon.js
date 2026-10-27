@@ -15,7 +15,7 @@ const URL_HISTORYOUTLINED = new URL('../../assets/icons/historyOutlined.svg', im
  */
 export const initHistoryOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HISTORYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'historyOutlinedIcon', url: URL_HISTORYOUTLINED }, ...properties);
 }
 
 /**

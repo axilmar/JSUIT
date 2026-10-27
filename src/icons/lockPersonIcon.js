@@ -15,7 +15,7 @@ const URL_LOCKPERSON = new URL('../../assets/icons/lockPerson.svg', import.meta.
  */
 export const initLockPersonIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCKPERSON }, ...properties);
+    initIcon(element, { additionalClassName: 'lockPersonIcon', url: URL_LOCKPERSON }, ...properties);
 }
 
 /**

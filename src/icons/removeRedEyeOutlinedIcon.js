@@ -15,7 +15,7 @@ const URL_REMOVEREDEYEOUTLINED = new URL('../../assets/icons/removeRedEyeOutline
  */
 export const initRemoveRedEyeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REMOVEREDEYEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'removeRedEyeOutlinedIcon', url: URL_REMOVEREDEYEOUTLINED }, ...properties);
 }
 
 /**

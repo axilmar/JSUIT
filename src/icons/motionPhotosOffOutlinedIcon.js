@@ -15,7 +15,7 @@ const URL_MOTIONPHOTOSOFFOUTLINED = new URL('../../assets/icons/motionPhotosOffO
  */
 export const initMotionPhotosOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOTIONPHOTOSOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'motionPhotosOffOutlinedIcon', url: URL_MOTIONPHOTOSOFFOUTLINED }, ...properties);
 }
 
 /**

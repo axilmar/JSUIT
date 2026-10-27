@@ -15,7 +15,7 @@ const URL_SHIELD = new URL('../../assets/icons/shield.svg', import.meta.url).hre
  */
 export const initShieldIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHIELD }, ...properties);
+    initIcon(element, { additionalClassName: 'shieldIcon', url: URL_SHIELD }, ...properties);
 }
 
 /**

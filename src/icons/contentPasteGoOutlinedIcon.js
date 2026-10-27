@@ -15,7 +15,7 @@ const URL_CONTENTPASTEGOOUTLINED = new URL('../../assets/icons/contentPasteGoOut
  */
 export const initContentPasteGoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTENTPASTEGOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'contentPasteGoOutlinedIcon', url: URL_CONTENTPASTEGOOUTLINED }, ...properties);
 }
 
 /**

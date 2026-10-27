@@ -15,7 +15,7 @@ const URL_AIRPLANETICKET = new URL('../../assets/icons/airplaneTicket.svg', impo
  */
 export const initAirplaneTicketIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AIRPLANETICKET }, ...properties);
+    initIcon(element, { additionalClassName: 'airplaneTicketIcon', url: URL_AIRPLANETICKET }, ...properties);
 }
 
 /**

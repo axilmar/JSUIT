@@ -15,7 +15,7 @@ const URL_SIGNALCELLULARNULL = new URL('../../assets/icons/signalCellularNull.sv
  */
 export const initSignalCellularNullIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNALCELLULARNULL }, ...properties);
+    initIcon(element, { additionalClassName: 'signalCellularNullIcon', url: URL_SIGNALCELLULARNULL }, ...properties);
 }
 
 /**

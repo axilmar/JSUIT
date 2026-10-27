@@ -15,7 +15,7 @@ const URL_FLIGHTTAKEOFFOUTLINED = new URL('../../assets/icons/flightTakeoffOutli
  */
 export const initFlightTakeoffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLIGHTTAKEOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'flightTakeoffOutlinedIcon', url: URL_FLIGHTTAKEOFFOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_EXTENSION = new URL('../../assets/icons/extension.svg', import.meta.ur
  */
 export const initExtensionIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXTENSION }, ...properties);
+    initIcon(element, { additionalClassName: 'extensionIcon', url: URL_EXTENSION }, ...properties);
 }
 
 /**

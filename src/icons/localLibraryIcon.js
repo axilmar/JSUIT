@@ -15,7 +15,7 @@ const URL_LOCALLIBRARY = new URL('../../assets/icons/localLibrary.svg', import.m
  */
 export const initLocalLibraryIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALLIBRARY }, ...properties);
+    initIcon(element, { additionalClassName: 'localLibraryIcon', url: URL_LOCALLIBRARY }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_REQUESTQUOTE = new URL('../../assets/icons/requestQuote.svg', import.m
  */
 export const initRequestQuoteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REQUESTQUOTE }, ...properties);
+    initIcon(element, { additionalClassName: 'requestQuoteIcon', url: URL_REQUESTQUOTE }, ...properties);
 }
 
 /**

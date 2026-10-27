@@ -15,7 +15,7 @@ const URL_WATCHLATER = new URL('../../assets/icons/watchLater.svg', import.meta.
  */
 export const initWatchLaterIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WATCHLATER }, ...properties);
+    initIcon(element, { additionalClassName: 'watchLaterIcon', url: URL_WATCHLATER }, ...properties);
 }
 
 /**

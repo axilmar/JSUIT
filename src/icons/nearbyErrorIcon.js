@@ -15,7 +15,7 @@ const URL_NEARBYERROR = new URL('../../assets/icons/nearbyError.svg', import.met
  */
 export const initNearbyErrorIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NEARBYERROR }, ...properties);
+    initIcon(element, { additionalClassName: 'nearbyErrorIcon', url: URL_NEARBYERROR }, ...properties);
 }
 
 /**

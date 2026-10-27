@@ -15,7 +15,7 @@ const URL_ROOMOUTLINED = new URL('../../assets/icons/roomOutlined.svg', import.m
  */
 export const initRoomOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROOMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'roomOutlinedIcon', url: URL_ROOMOUTLINED }, ...properties);
 }
 
 /**

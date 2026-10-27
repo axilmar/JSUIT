@@ -15,7 +15,7 @@ const URL_PALETTE = new URL('../../assets/icons/palette.svg', import.meta.url).h
  */
 export const initPaletteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PALETTE }, ...properties);
+    initIcon(element, { additionalClassName: 'paletteIcon', url: URL_PALETTE }, ...properties);
 }
 
 /**

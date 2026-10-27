@@ -15,7 +15,7 @@ const URL_BUSALERT = new URL('../../assets/icons/busAlert.svg', import.meta.url)
  */
 export const initBusAlertIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BUSALERT }, ...properties);
+    initIcon(element, { additionalClassName: 'busAlertIcon', url: URL_BUSALERT }, ...properties);
 }
 
 /**

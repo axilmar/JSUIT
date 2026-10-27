@@ -15,7 +15,7 @@ const URL_LOCALPOLICE = new URL('../../assets/icons/localPolice.svg', import.met
  */
 export const initLocalPoliceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALPOLICE }, ...properties);
+    initIcon(element, { additionalClassName: 'localPoliceIcon', url: URL_LOCALPOLICE }, ...properties);
 }
 
 /**

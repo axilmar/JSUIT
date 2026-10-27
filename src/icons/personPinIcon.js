@@ -15,7 +15,7 @@ const URL_PERSONPIN = new URL('../../assets/icons/personPin.svg', import.meta.ur
  */
 export const initPersonPinIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERSONPIN }, ...properties);
+    initIcon(element, { additionalClassName: 'personPinIcon', url: URL_PERSONPIN }, ...properties);
 }
 
 /**

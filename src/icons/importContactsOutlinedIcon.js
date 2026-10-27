@@ -15,7 +15,7 @@ const URL_IMPORTCONTACTSOUTLINED = new URL('../../assets/icons/importContactsOut
  */
 export const initImportContactsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_IMPORTCONTACTSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'importContactsOutlinedIcon', url: URL_IMPORTCONTACTSOUTLINED }, ...properties);
 }
 
 /**

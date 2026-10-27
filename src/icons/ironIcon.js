@@ -15,7 +15,7 @@ const URL_IRON = new URL('../../assets/icons/iron.svg', import.meta.url).href;
  */
 export const initIronIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_IRON }, ...properties);
+    initIcon(element, { additionalClassName: 'ironIcon', url: URL_IRON }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TRANSFERWITHINASTATION = new URL('../../assets/icons/transferWithinASt
  */
 export const initTransferWithinAStationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRANSFERWITHINASTATION }, ...properties);
+    initIcon(element, { additionalClassName: 'transferWithinAStationIcon', url: URL_TRANSFERWITHINASTATION }, ...properties);
 }
 
 /**

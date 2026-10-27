@@ -15,7 +15,7 @@ const URL_DRAGINDICATOR = new URL('../../assets/icons/dragIndicator.svg', import
  */
 export const initDragIndicatorIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRAGINDICATOR }, ...properties);
+    initIcon(element, { additionalClassName: 'dragIndicatorIcon', url: URL_DRAGINDICATOR }, ...properties);
 }
 
 /**

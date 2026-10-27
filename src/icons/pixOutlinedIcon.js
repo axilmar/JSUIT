@@ -15,7 +15,7 @@ const URL_PIXOUTLINED = new URL('../../assets/icons/pixOutlined.svg', import.met
  */
 export const initPixOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PIXOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pixOutlinedIcon', url: URL_PIXOUTLINED }, ...properties);
 }
 
 /**

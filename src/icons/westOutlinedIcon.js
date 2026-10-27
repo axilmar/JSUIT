@@ -15,7 +15,7 @@ const URL_WESTOUTLINED = new URL('../../assets/icons/westOutlined.svg', import.m
  */
 export const initWestOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WESTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'westOutlinedIcon', url: URL_WESTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_COMMENTSDISABLED = new URL('../../assets/icons/commentsDisabled.svg', 
  */
 export const initCommentsDisabledIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMMENTSDISABLED }, ...properties);
+    initIcon(element, { additionalClassName: 'commentsDisabledIcon', url: URL_COMMENTSDISABLED }, ...properties);
 }
 
 /**

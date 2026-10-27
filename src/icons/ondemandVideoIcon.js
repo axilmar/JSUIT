@@ -15,7 +15,7 @@ const URL_ONDEMANDVIDEO = new URL('../../assets/icons/ondemandVideo.svg', import
  */
 export const initOndemandVideoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ONDEMANDVIDEO }, ...properties);
+    initIcon(element, { additionalClassName: 'ondemandVideoIcon', url: URL_ONDEMANDVIDEO }, ...properties);
 }
 
 /**

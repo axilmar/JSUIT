@@ -15,7 +15,7 @@ const URL_REPEAT = new URL('../../assets/icons/repeat.svg', import.meta.url).hre
  */
 export const initRepeatIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REPEAT }, ...properties);
+    initIcon(element, { additionalClassName: 'repeatIcon', url: URL_REPEAT }, ...properties);
 }
 
 /**

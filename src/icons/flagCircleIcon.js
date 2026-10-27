@@ -15,7 +15,7 @@ const URL_FLAGCIRCLE = new URL('../../assets/icons/flagCircle.svg', import.meta.
  */
 export const initFlagCircleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLAGCIRCLE }, ...properties);
+    initIcon(element, { additionalClassName: 'flagCircleIcon', url: URL_FLAGCIRCLE }, ...properties);
 }
 
 /**

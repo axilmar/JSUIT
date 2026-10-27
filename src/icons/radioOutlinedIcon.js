@@ -15,7 +15,7 @@ const URL_RADIOOUTLINED = new URL('../../assets/icons/radioOutlined.svg', import
  */
 export const initRadioOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RADIOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'radioOutlinedIcon', url: URL_RADIOOUTLINED }, ...properties);
 }
 
 /**

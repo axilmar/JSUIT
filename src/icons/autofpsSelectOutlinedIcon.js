@@ -15,7 +15,7 @@ const URL_AUTOFPSSELECTOUTLINED = new URL('../../assets/icons/autofpsSelectOutli
  */
 export const initAutofpsSelectOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOFPSSELECTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'autofpsSelectOutlinedIcon', url: URL_AUTOFPSSELECTOUTLINED }, ...properties);
 }
 
 /**

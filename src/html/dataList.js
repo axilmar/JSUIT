@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initDataList = (element, ...properties) => {
     console.assert(element instanceof HTMLDataListElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'dataList' }, ...properties);
 }
 
 /**

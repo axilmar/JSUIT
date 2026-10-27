@@ -15,7 +15,7 @@ const URL_OFFLINESHARE = new URL('../../assets/icons/offlineShare.svg', import.m
  */
 export const initOfflineShareIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OFFLINESHARE }, ...properties);
+    initIcon(element, { additionalClassName: 'offlineShareIcon', url: URL_OFFLINESHARE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SPORTSHANDBALLOUTLINED = new URL('../../assets/icons/sportsHandballOut
  */
 export const initSportsHandballOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPORTSHANDBALLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sportsHandballOutlinedIcon', url: URL_SPORTSHANDBALLOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SQUAREFOOTOUTLINED = new URL('../../assets/icons/squareFootOutlined.sv
  */
 export const initSquareFootOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SQUAREFOOTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'squareFootOutlinedIcon', url: URL_SQUAREFOOTOUTLINED }, ...properties);
 }
 
 /**

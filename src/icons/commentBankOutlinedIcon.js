@@ -15,7 +15,7 @@ const URL_COMMENTBANKOUTLINED = new URL('../../assets/icons/commentBankOutlined.
  */
 export const initCommentBankOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMMENTBANKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'commentBankOutlinedIcon', url: URL_COMMENTBANKOUTLINED }, ...properties);
 }
 
 /**

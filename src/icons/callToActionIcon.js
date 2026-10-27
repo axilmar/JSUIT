@@ -15,7 +15,7 @@ const URL_CALLTOACTION = new URL('../../assets/icons/callToAction.svg', import.m
  */
 export const initCallToActionIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALLTOACTION }, ...properties);
+    initIcon(element, { additionalClassName: 'callToActionIcon', url: URL_CALLTOACTION }, ...properties);
 }
 
 /**

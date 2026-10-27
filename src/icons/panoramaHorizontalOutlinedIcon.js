@@ -15,7 +15,7 @@ const URL_PANORAMAHORIZONTALOUTLINED = new URL('../../assets/icons/panoramaHoriz
  */
 export const initPanoramaHorizontalOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PANORAMAHORIZONTALOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'panoramaHorizontalOutlinedIcon', url: URL_PANORAMAHORIZONTALOUTLINED }, ...properties);
 }
 
 /**

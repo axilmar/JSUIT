@@ -15,7 +15,7 @@ const URL_TEXTROTATIONDOWN = new URL('../../assets/icons/textRotationDown.svg', 
  */
 export const initTextRotationDownIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTROTATIONDOWN }, ...properties);
+    initIcon(element, { additionalClassName: 'textRotationDownIcon', url: URL_TEXTROTATIONDOWN }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PESTCONTROL = new URL('../../assets/icons/pestControl.svg', import.met
  */
 export const initPestControlIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PESTCONTROL }, ...properties);
+    initIcon(element, { additionalClassName: 'pestControlIcon', url: URL_PESTCONTROL }, ...properties);
 }
 
 /**

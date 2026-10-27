@@ -15,7 +15,7 @@ const URL_DIVERSITY2 = new URL('../../assets/icons/diversity2.svg', import.meta.
  */
 export const initDiversity2Icon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIVERSITY2 }, ...properties);
+    initIcon(element, { additionalClassName: 'diversity2Icon', url: URL_DIVERSITY2 }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PUSHPIN = new URL('../../assets/icons/pushPin.svg', import.meta.url).h
  */
 export const initPushPinIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PUSHPIN }, ...properties);
+    initIcon(element, { additionalClassName: 'pushPinIcon', url: URL_PUSHPIN }, ...properties);
 }
 
 /**

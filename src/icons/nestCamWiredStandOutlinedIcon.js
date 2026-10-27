@@ -15,7 +15,7 @@ const URL_NESTCAMWIREDSTANDOUTLINED = new URL('../../assets/icons/nestCamWiredSt
  */
 export const initNestCamWiredStandOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NESTCAMWIREDSTANDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'nestCamWiredStandOutlinedIcon', url: URL_NESTCAMWIREDSTANDOUTLINED }, ...properties);
 }
 
 /**

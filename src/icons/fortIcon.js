@@ -15,7 +15,7 @@ const URL_FORT = new URL('../../assets/icons/fort.svg', import.meta.url).href;
  */
 export const initFortIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORT }, ...properties);
+    initIcon(element, { additionalClassName: 'fortIcon', url: URL_FORT }, ...properties);
 }
 
 /**

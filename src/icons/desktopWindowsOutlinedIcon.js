@@ -15,7 +15,7 @@ const URL_DESKTOPWINDOWSOUTLINED = new URL('../../assets/icons/desktopWindowsOut
  */
 export const initDesktopWindowsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DESKTOPWINDOWSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'desktopWindowsOutlinedIcon', url: URL_DESKTOPWINDOWSOUTLINED }, ...properties);
 }
 
 /**

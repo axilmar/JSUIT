@@ -15,7 +15,7 @@ const URL_IOSSHARE = new URL('../../assets/icons/iosShare.svg', import.meta.url)
  */
 export const initIosShareIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_IOSSHARE }, ...properties);
+    initIcon(element, { additionalClassName: 'iosShareIcon', url: URL_IOSSHARE }, ...properties);
 }
 
 /**

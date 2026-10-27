@@ -15,7 +15,7 @@ const URL_HEALING = new URL('../../assets/icons/healing.svg', import.meta.url).h
  */
 export const initHealingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEALING }, ...properties);
+    initIcon(element, { additionalClassName: 'healingIcon', url: URL_HEALING }, ...properties);
 }
 
 /**

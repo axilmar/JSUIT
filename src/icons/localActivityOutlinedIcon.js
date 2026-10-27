@@ -15,7 +15,7 @@ const URL_LOCALACTIVITYOUTLINED = new URL('../../assets/icons/localActivityOutli
  */
 export const initLocalActivityOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALACTIVITYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localActivityOutlinedIcon', url: URL_LOCALACTIVITYOUTLINED }, ...properties);
 }
 
 /**

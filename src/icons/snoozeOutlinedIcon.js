@@ -15,7 +15,7 @@ const URL_SNOOZEOUTLINED = new URL('../../assets/icons/snoozeOutlined.svg', impo
  */
 export const initSnoozeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SNOOZEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'snoozeOutlinedIcon', url: URL_SNOOZEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_MUSEUM = new URL('../../assets/icons/museum.svg', import.meta.url).hre
  */
 export const initMuseumIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MUSEUM }, ...properties);
+    initIcon(element, { additionalClassName: 'museumIcon', url: URL_MUSEUM }, ...properties);
 }
 
 /**

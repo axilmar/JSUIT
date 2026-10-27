@@ -15,7 +15,7 @@ const URL_LOCALPHONE = new URL('../../assets/icons/localPhone.svg', import.meta.
  */
 export const initLocalPhoneIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALPHONE }, ...properties);
+    initIcon(element, { additionalClassName: 'localPhoneIcon', url: URL_LOCALPHONE }, ...properties);
 }
 
 /**

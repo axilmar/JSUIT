@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initCanvas = (element, ...properties) => {
     console.assert(element instanceof HTMLCanvasElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'canvas' }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TYPESPECIMENOUTLINED = new URL('../../assets/icons/typeSpecimenOutline
  */
 export const initTypeSpecimenOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TYPESPECIMENOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'typeSpecimenOutlinedIcon', url: URL_TYPESPECIMENOUTLINED }, ...properties);
 }
 
 /**

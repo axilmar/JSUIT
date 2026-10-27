@@ -15,7 +15,7 @@ const URL_SETTINGSSUGGEST = new URL('../../assets/icons/settingsSuggest.svg', im
  */
 export const initSettingsSuggestIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSSUGGEST }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsSuggestIcon', url: URL_SETTINGSSUGGEST }, ...properties);
 }
 
 /**

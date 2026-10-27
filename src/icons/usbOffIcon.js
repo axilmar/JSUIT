@@ -15,7 +15,7 @@ const URL_USBOFF = new URL('../../assets/icons/usbOff.svg', import.meta.url).hre
  */
 export const initUsbOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_USBOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'usbOffIcon', url: URL_USBOFF }, ...properties);
 }
 
 /**

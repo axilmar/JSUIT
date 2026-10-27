@@ -15,7 +15,7 @@ const URL_SCORE = new URL('../../assets/icons/score.svg', import.meta.url).href;
  */
 export const initScoreIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCORE }, ...properties);
+    initIcon(element, { additionalClassName: 'scoreIcon', url: URL_SCORE }, ...properties);
 }
 
 /**

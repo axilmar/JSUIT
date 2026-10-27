@@ -15,7 +15,7 @@ const URL_TABLETANDROIDOUTLINED = new URL('../../assets/icons/tabletAndroidOutli
  */
 export const initTabletAndroidOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TABLETANDROIDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tabletAndroidOutlinedIcon', url: URL_TABLETANDROIDOUTLINED }, ...properties);
 }
 
 /**

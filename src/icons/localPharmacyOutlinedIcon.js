@@ -15,7 +15,7 @@ const URL_LOCALPHARMACYOUTLINED = new URL('../../assets/icons/localPharmacyOutli
  */
 export const initLocalPharmacyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALPHARMACYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localPharmacyOutlinedIcon', url: URL_LOCALPHARMACYOUTLINED }, ...properties);
 }
 
 /**

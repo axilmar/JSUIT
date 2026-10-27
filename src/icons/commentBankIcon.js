@@ -15,7 +15,7 @@ const URL_COMMENTBANK = new URL('../../assets/icons/commentBank.svg', import.met
  */
 export const initCommentBankIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMMENTBANK }, ...properties);
+    initIcon(element, { additionalClassName: 'commentBankIcon', url: URL_COMMENTBANK }, ...properties);
 }
 
 /**

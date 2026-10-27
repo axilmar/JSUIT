@@ -15,7 +15,7 @@ const URL_ELDERLYOUTLINED = new URL('../../assets/icons/elderlyOutlined.svg', im
  */
 export const initElderlyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ELDERLYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'elderlyOutlinedIcon', url: URL_ELDERLYOUTLINED }, ...properties);
 }
 
 /**

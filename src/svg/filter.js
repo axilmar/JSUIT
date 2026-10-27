@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initFilter = (element, ...properties) => {
     console.assert(element instanceof SVGFilterElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'filter' }, ...properties);
 }
 
 /**

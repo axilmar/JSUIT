@@ -15,7 +15,7 @@ const URL_WATEROUTLINED = new URL('../../assets/icons/waterOutlined.svg', import
  */
 export const initWaterOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WATEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'waterOutlinedIcon', url: URL_WATEROUTLINED }, ...properties);
 }
 
 /**

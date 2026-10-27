@@ -15,7 +15,7 @@ const URL_CLOUDSYNCOUTLINED = new URL('../../assets/icons/cloudSyncOutlined.svg'
  */
 export const initCloudSyncOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOUDSYNCOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cloudSyncOutlinedIcon', url: URL_CLOUDSYNCOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_HLS = new URL('../../assets/icons/hls.svg', import.meta.url).href;
  */
 export const initHlsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HLS }, ...properties);
+    initIcon(element, { additionalClassName: 'hlsIcon', url: URL_HLS }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_WBSUNNYOUTLINED = new URL('../../assets/icons/wbSunnyOutlined.svg', im
  */
 export const initWbSunnyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WBSUNNYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wbSunnyOutlinedIcon', url: URL_WBSUNNYOUTLINED }, ...properties);
 }
 
 /**

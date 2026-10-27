@@ -15,7 +15,7 @@ const URL_LOCALMALLOUTLINED = new URL('../../assets/icons/localMallOutlined.svg'
  */
 export const initLocalMallOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALMALLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localMallOutlinedIcon', url: URL_LOCALMALLOUTLINED }, ...properties);
 }
 
 /**

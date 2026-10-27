@@ -15,7 +15,7 @@ import { initDividerBase } from "./dividerBase.js";
 export const initDivider = (element, ...properties) => {
     console.assert(element instanceof HTMLHRElement);
     initDividerBase(element);
-    initHr(element, ...properties);
+    initHr(element, { additionalClassName: 'divider' }, ...properties);
 }
 
 /**

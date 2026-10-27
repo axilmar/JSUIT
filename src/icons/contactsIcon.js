@@ -15,7 +15,7 @@ const URL_CONTACTS = new URL('../../assets/icons/contacts.svg', import.meta.url)
  */
 export const initContactsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTACTS }, ...properties);
+    initIcon(element, { additionalClassName: 'contactsIcon', url: URL_CONTACTS }, ...properties);
 }
 
 /**

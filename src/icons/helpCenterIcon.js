@@ -15,7 +15,7 @@ const URL_HELPCENTER = new URL('../../assets/icons/helpCenter.svg', import.meta.
  */
 export const initHelpCenterIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HELPCENTER }, ...properties);
+    initIcon(element, { additionalClassName: 'helpCenterIcon', url: URL_HELPCENTER }, ...properties);
 }
 
 /**

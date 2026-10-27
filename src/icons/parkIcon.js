@@ -15,7 +15,7 @@ const URL_PARK = new URL('../../assets/icons/park.svg', import.meta.url).href;
  */
 export const initParkIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PARK }, ...properties);
+    initIcon(element, { additionalClassName: 'parkIcon', url: URL_PARK }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FLASHOFFOUTLINED = new URL('../../assets/icons/flashOffOutlined.svg', 
  */
 export const initFlashOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLASHOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'flashOffOutlinedIcon', url: URL_FLASHOFFOUTLINED }, ...properties);
 }
 
 /**

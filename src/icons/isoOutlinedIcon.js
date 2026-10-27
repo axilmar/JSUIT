@@ -15,7 +15,7 @@ const URL_ISOOUTLINED = new URL('../../assets/icons/isoOutlined.svg', import.met
  */
 export const initIsoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ISOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'isoOutlinedIcon', url: URL_ISOOUTLINED }, ...properties);
 }
 
 /**

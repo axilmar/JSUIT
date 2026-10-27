@@ -15,7 +15,7 @@ const URL_WIFICALLING3OUTLINED = new URL('../../assets/icons/wifiCalling3Outline
  */
 export const initWifiCalling3OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIFICALLING3OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wifiCalling3OutlinedIcon', url: URL_WIFICALLING3OUTLINED }, ...properties);
 }
 
 /**

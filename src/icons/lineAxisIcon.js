@@ -15,7 +15,7 @@ const URL_LINEAXIS = new URL('../../assets/icons/lineAxis.svg', import.meta.url)
  */
 export const initLineAxisIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LINEAXIS }, ...properties);
+    initIcon(element, { additionalClassName: 'lineAxisIcon', url: URL_LINEAXIS }, ...properties);
 }
 
 /**

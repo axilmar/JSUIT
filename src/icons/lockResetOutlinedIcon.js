@@ -15,7 +15,7 @@ const URL_LOCKRESETOUTLINED = new URL('../../assets/icons/lockResetOutlined.svg'
  */
 export const initLockResetOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCKRESETOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'lockResetOutlinedIcon', url: URL_LOCKRESETOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_MONETIZATIONONOUTLINED = new URL('../../assets/icons/monetizationOnOut
  */
 export const initMonetizationOnOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MONETIZATIONONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'monetizationOnOutlinedIcon', url: URL_MONETIZATIONONOUTLINED }, ...properties);
 }
 
 /**

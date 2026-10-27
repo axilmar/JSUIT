@@ -15,7 +15,7 @@ const URL_DENSITYLARGEOUTLINED = new URL('../../assets/icons/densityLargeOutline
  */
 export const initDensityLargeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DENSITYLARGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'densityLargeOutlinedIcon', url: URL_DENSITYLARGEOUTLINED }, ...properties);
 }
 
 /**

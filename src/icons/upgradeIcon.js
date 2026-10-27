@@ -15,7 +15,7 @@ const URL_UPGRADE = new URL('../../assets/icons/upgrade.svg', import.meta.url).h
  */
 export const initUpgradeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UPGRADE }, ...properties);
+    initIcon(element, { additionalClassName: 'upgradeIcon', url: URL_UPGRADE }, ...properties);
 }
 
 /**

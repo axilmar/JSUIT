@@ -15,7 +15,7 @@ const URL_LINEWEIGHT = new URL('../../assets/icons/lineWeight.svg', import.meta.
  */
 export const initLineWeightIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LINEWEIGHT }, ...properties);
+    initIcon(element, { additionalClassName: 'lineWeightIcon', url: URL_LINEWEIGHT }, ...properties);
 }
 
 /**

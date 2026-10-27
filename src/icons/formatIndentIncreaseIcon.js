@@ -15,7 +15,7 @@ const URL_FORMATINDENTINCREASE = new URL('../../assets/icons/formatIndentIncreas
  */
 export const initFormatIndentIncreaseIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATINDENTINCREASE }, ...properties);
+    initIcon(element, { additionalClassName: 'formatIndentIncreaseIcon', url: URL_FORMATINDENTINCREASE }, ...properties);
 }
 
 /**

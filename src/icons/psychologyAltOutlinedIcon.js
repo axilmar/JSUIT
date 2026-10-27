@@ -15,7 +15,7 @@ const URL_PSYCHOLOGYALTOUTLINED = new URL('../../assets/icons/psychologyAltOutli
  */
 export const initPsychologyAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PSYCHOLOGYALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'psychologyAltOutlinedIcon', url: URL_PSYCHOLOGYALTOUTLINED }, ...properties);
 }
 
 /**

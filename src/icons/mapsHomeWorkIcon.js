@@ -15,7 +15,7 @@ const URL_MAPSHOMEWORK = new URL('../../assets/icons/mapsHomeWork.svg', import.m
  */
 export const initMapsHomeWorkIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MAPSHOMEWORK }, ...properties);
+    initIcon(element, { additionalClassName: 'mapsHomeWorkIcon', url: URL_MAPSHOMEWORK }, ...properties);
 }
 
 /**

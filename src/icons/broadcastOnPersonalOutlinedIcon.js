@@ -15,7 +15,7 @@ const URL_BROADCASTONPERSONALOUTLINED = new URL('../../assets/icons/broadcastOnP
  */
 export const initBroadcastOnPersonalOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BROADCASTONPERSONALOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'broadcastOnPersonalOutlinedIcon', url: URL_BROADCASTONPERSONALOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SIPOUTLINED = new URL('../../assets/icons/sipOutlined.svg', import.met
  */
 export const initSipOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sipOutlinedIcon', url: URL_SIPOUTLINED }, ...properties);
 }
 
 /**

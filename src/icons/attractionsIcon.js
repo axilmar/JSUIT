@@ -15,7 +15,7 @@ const URL_ATTRACTIONS = new URL('../../assets/icons/attractions.svg', import.met
  */
 export const initAttractionsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ATTRACTIONS }, ...properties);
+    initIcon(element, { additionalClassName: 'attractionsIcon', url: URL_ATTRACTIONS }, ...properties);
 }
 
 /**

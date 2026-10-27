@@ -15,7 +15,7 @@ const URL_THREEGMOBILEDATA = new URL('../../assets/icons/threeGMobiledata.svg', 
  */
 export const initThreeGMobiledataIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THREEGMOBILEDATA }, ...properties);
+    initIcon(element, { additionalClassName: 'threeGMobiledataIcon', url: URL_THREEGMOBILEDATA }, ...properties);
 }
 
 /**

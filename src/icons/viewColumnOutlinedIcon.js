@@ -15,7 +15,7 @@ const URL_VIEWCOLUMNOUTLINED = new URL('../../assets/icons/viewColumnOutlined.sv
  */
 export const initViewColumnOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWCOLUMNOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewColumnOutlinedIcon', url: URL_VIEWCOLUMNOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SAFETYDIVIDEROUTLINED = new URL('../../assets/icons/safetyDividerOutli
  */
 export const initSafetyDividerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SAFETYDIVIDEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'safetyDividerOutlinedIcon', url: URL_SAFETYDIVIDEROUTLINED }, ...properties);
 }
 
 /**

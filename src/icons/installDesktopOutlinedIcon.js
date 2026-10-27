@@ -15,7 +15,7 @@ const URL_INSTALLDESKTOPOUTLINED = new URL('../../assets/icons/installDesktopOut
  */
 export const initInstallDesktopOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INSTALLDESKTOPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'installDesktopOutlinedIcon', url: URL_INSTALLDESKTOPOUTLINED }, ...properties);
 }
 
 /**

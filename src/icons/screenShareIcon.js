@@ -15,7 +15,7 @@ const URL_SCREENSHARE = new URL('../../assets/icons/screenShare.svg', import.met
  */
 export const initScreenShareIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCREENSHARE }, ...properties);
+    initIcon(element, { additionalClassName: 'screenShareIcon', url: URL_SCREENSHARE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_KITCHENOUTLINED = new URL('../../assets/icons/kitchenOutlined.svg', im
  */
 export const initKitchenOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KITCHENOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'kitchenOutlinedIcon', url: URL_KITCHENOUTLINED }, ...properties);
 }
 
 /**

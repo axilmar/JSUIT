@@ -15,7 +15,7 @@ const URL_STREAM = new URL('../../assets/icons/stream.svg', import.meta.url).hre
  */
 export const initStreamIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STREAM }, ...properties);
+    initIcon(element, { additionalClassName: 'streamIcon', url: URL_STREAM }, ...properties);
 }
 
 /**

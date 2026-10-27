@@ -15,7 +15,7 @@ const URL_FORWARDTOINBOXOUTLINED = new URL('../../assets/icons/forwardToInboxOut
  */
 export const initForwardToInboxOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORWARDTOINBOXOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'forwardToInboxOutlinedIcon', url: URL_FORWARDTOINBOXOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SINGLEBED = new URL('../../assets/icons/singleBed.svg', import.meta.ur
  */
 export const initSingleBedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SINGLEBED }, ...properties);
+    initIcon(element, { additionalClassName: 'singleBedIcon', url: URL_SINGLEBED }, ...properties);
 }
 
 /**

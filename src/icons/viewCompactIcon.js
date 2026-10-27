@@ -15,7 +15,7 @@ const URL_VIEWCOMPACT = new URL('../../assets/icons/viewCompact.svg', import.met
  */
 export const initViewCompactIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWCOMPACT }, ...properties);
+    initIcon(element, { additionalClassName: 'viewCompactIcon', url: URL_VIEWCOMPACT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_KEYBOARDCAPSLOCK = new URL('../../assets/icons/keyboardCapslock.svg', 
  */
 export const initKeyboardCapslockIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDCAPSLOCK }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardCapslockIcon', url: URL_KEYBOARDCAPSLOCK }, ...properties);
 }
 
 /**

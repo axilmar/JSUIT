@@ -15,7 +15,7 @@ const URL_SUBSCRIPT = new URL('../../assets/icons/subscript.svg', import.meta.ur
  */
 export const initSubscriptIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUBSCRIPT }, ...properties);
+    initIcon(element, { additionalClassName: 'subscriptIcon', url: URL_SUBSCRIPT }, ...properties);
 }
 
 /**

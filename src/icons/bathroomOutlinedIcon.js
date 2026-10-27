@@ -15,7 +15,7 @@ const URL_BATHROOMOUTLINED = new URL('../../assets/icons/bathroomOutlined.svg', 
  */
 export const initBathroomOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BATHROOMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bathroomOutlinedIcon', url: URL_BATHROOMOUTLINED }, ...properties);
 }
 
 /**

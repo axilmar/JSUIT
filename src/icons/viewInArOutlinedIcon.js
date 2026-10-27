@@ -15,7 +15,7 @@ const URL_VIEWINAROUTLINED = new URL('../../assets/icons/viewInArOutlined.svg', 
  */
 export const initViewInArOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWINAROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewInArOutlinedIcon', url: URL_VIEWINAROUTLINED }, ...properties);
 }
 
 /**

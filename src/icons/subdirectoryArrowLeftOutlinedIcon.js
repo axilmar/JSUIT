@@ -15,7 +15,7 @@ const URL_SUBDIRECTORYARROWLEFTOUTLINED = new URL('../../assets/icons/subdirecto
  */
 export const initSubdirectoryArrowLeftOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUBDIRECTORYARROWLEFTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'subdirectoryArrowLeftOutlinedIcon', url: URL_SUBDIRECTORYARROWLEFTOUTLINED }, ...properties);
 }
 
 /**

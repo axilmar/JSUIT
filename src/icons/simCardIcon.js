@@ -15,7 +15,7 @@ const URL_SIMCARD = new URL('../../assets/icons/simCard.svg', import.meta.url).h
  */
 export const initSimCardIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIMCARD }, ...properties);
+    initIcon(element, { additionalClassName: 'simCardIcon', url: URL_SIMCARD }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LOCKPERSONOUTLINED = new URL('../../assets/icons/lockPersonOutlined.sv
  */
 export const initLockPersonOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCKPERSONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'lockPersonOutlinedIcon', url: URL_LOCKPERSONOUTLINED }, ...properties);
 }
 
 /**

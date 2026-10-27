@@ -15,7 +15,7 @@ const URL_WIDGETS = new URL('../../assets/icons/widgets.svg', import.meta.url).h
  */
 export const initWidgetsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIDGETS }, ...properties);
+    initIcon(element, { additionalClassName: 'widgetsIcon', url: URL_WIDGETS }, ...properties);
 }
 
 /**

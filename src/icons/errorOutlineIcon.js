@@ -15,7 +15,7 @@ const URL_ERROROUTLINE = new URL('../../assets/icons/errorOutline.svg', import.m
  */
 export const initErrorOutlineIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ERROROUTLINE }, ...properties);
+    initIcon(element, { additionalClassName: 'errorOutlineIcon', url: URL_ERROROUTLINE }, ...properties);
 }
 
 /**

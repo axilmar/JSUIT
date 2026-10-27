@@ -15,7 +15,7 @@ const URL_RAMENDINING = new URL('../../assets/icons/ramenDining.svg', import.met
  */
 export const initRamenDiningIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RAMENDINING }, ...properties);
+    initIcon(element, { additionalClassName: 'ramenDiningIcon', url: URL_RAMENDINING }, ...properties);
 }
 
 /**

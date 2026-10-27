@@ -15,7 +15,7 @@ const URL_SUBSCRIPTOUTLINED = new URL('../../assets/icons/subscriptOutlined.svg'
  */
 export const initSubscriptOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUBSCRIPTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'subscriptOutlinedIcon', url: URL_SUBSCRIPTOUTLINED }, ...properties);
 }
 
 /**

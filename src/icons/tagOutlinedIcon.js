@@ -15,7 +15,7 @@ const URL_TAGOUTLINED = new URL('../../assets/icons/tagOutlined.svg', import.met
  */
 export const initTagOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TAGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tagOutlinedIcon', url: URL_TAGOUTLINED }, ...properties);
 }
 
 /**

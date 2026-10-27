@@ -15,7 +15,7 @@ const URL_ADDCIRCLEOUTLINEOUTLINED = new URL('../../assets/icons/addCircleOutlin
  */
 export const initAddCircleOutlineOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDCIRCLEOUTLINEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'addCircleOutlineOutlinedIcon', url: URL_ADDCIRCLEOUTLINEOUTLINED }, ...properties);
 }
 
 /**

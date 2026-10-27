@@ -15,7 +15,7 @@ const URL_GIFOUTLINED = new URL('../../assets/icons/gifOutlined.svg', import.met
  */
 export const initGifOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GIFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'gifOutlinedIcon', url: URL_GIFOUTLINED }, ...properties);
 }
 
 /**

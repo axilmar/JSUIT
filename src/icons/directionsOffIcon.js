@@ -15,7 +15,7 @@ const URL_DIRECTIONSOFF = new URL('../../assets/icons/directionsOff.svg', import
  */
 export const initDirectionsOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRECTIONSOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'directionsOffIcon', url: URL_DIRECTIONSOFF }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SCOREBOARD = new URL('../../assets/icons/scoreboard.svg', import.meta.
  */
 export const initScoreboardIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCOREBOARD }, ...properties);
+    initIcon(element, { additionalClassName: 'scoreboardIcon', url: URL_SCOREBOARD }, ...properties);
 }
 
 /**

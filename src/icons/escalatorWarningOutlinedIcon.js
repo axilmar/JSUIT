@@ -15,7 +15,7 @@ const URL_ESCALATORWARNINGOUTLINED = new URL('../../assets/icons/escalatorWarnin
  */
 export const initEscalatorWarningOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ESCALATORWARNINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'escalatorWarningOutlinedIcon', url: URL_ESCALATORWARNINGOUTLINED }, ...properties);
 }
 
 /**

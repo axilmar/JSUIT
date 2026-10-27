@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initHTMLTableColElement = (element, ...properties) => {
     console.assert(element instanceof HTMLTableColElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'HTMLTableColElement' }, ...properties);
 }
 
 /**
@@ -22,7 +22,7 @@ export const initHTMLTableColElement = (element, ...properties) => {
  */
 export const colGroup = (...properties) => {
     const element = document.createElement('colgroup');
-    initHTMLTableColElement(element, ...properties);
+    initHTMLTableColElement(element, { additionalClassName: 'colGroup' }, ...properties);
     return element;
 }
 
@@ -35,6 +35,6 @@ export const colGroup = (...properties) => {
  */
 export const col = (...properties) => {
     const element = document.createElement('col');
-    initHTMLTableColElement(element, ...properties);
+    initHTMLTableColElement(element, { additionalClassName: 'col' }, ...properties);
     return element;
 }

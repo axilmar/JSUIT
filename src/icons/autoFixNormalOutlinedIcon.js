@@ -15,7 +15,7 @@ const URL_AUTOFIXNORMALOUTLINED = new URL('../../assets/icons/autoFixNormalOutli
  */
 export const initAutoFixNormalOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOFIXNORMALOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'autoFixNormalOutlinedIcon', url: URL_AUTOFIXNORMALOUTLINED }, ...properties);
 }
 
 /**

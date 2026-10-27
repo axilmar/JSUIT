@@ -15,7 +15,7 @@ const URL_FLIPTOFRONT = new URL('../../assets/icons/flipToFront.svg', import.met
  */
 export const initFlipToFrontIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLIPTOFRONT }, ...properties);
+    initIcon(element, { additionalClassName: 'flipToFrontIcon', url: URL_FLIPTOFRONT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_HIKINGOUTLINED = new URL('../../assets/icons/hikingOutlined.svg', impo
  */
 export const initHikingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HIKINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hikingOutlinedIcon', url: URL_HIKINGOUTLINED }, ...properties);
 }
 
 /**

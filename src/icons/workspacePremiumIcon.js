@@ -15,7 +15,7 @@ const URL_WORKSPACEPREMIUM = new URL('../../assets/icons/workspacePremium.svg', 
  */
 export const initWorkspacePremiumIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WORKSPACEPREMIUM }, ...properties);
+    initIcon(element, { additionalClassName: 'workspacePremiumIcon', url: URL_WORKSPACEPREMIUM }, ...properties);
 }
 
 /**

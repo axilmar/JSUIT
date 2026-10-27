@@ -15,7 +15,7 @@ const URL_PHOTOFILTER = new URL('../../assets/icons/photoFilter.svg', import.met
  */
 export const initPhotoFilterIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHOTOFILTER }, ...properties);
+    initIcon(element, { additionalClassName: 'photoFilterIcon', url: URL_PHOTOFILTER }, ...properties);
 }
 
 /**

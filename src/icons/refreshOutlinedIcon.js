@@ -15,7 +15,7 @@ const URL_REFRESHOUTLINED = new URL('../../assets/icons/refreshOutlined.svg', im
  */
 export const initRefreshOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REFRESHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'refreshOutlinedIcon', url: URL_REFRESHOUTLINED }, ...properties);
 }
 
 /**

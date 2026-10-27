@@ -15,7 +15,7 @@ const URL_ATTRIBUTIONOUTLINED = new URL('../../assets/icons/attributionOutlined.
  */
 export const initAttributionOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ATTRIBUTIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'attributionOutlinedIcon', url: URL_ATTRIBUTIONOUTLINED }, ...properties);
 }
 
 /**

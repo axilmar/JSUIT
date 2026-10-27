@@ -15,7 +15,7 @@ const URL_CABLEOUTLINED = new URL('../../assets/icons/cableOutlined.svg', import
  */
 export const initCableOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CABLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cableOutlinedIcon', url: URL_CABLEOUTLINED }, ...properties);
 }
 
 /**

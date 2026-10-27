@@ -15,7 +15,7 @@ const URL_WORKOFFOUTLINED = new URL('../../assets/icons/workOffOutlined.svg', im
  */
 export const initWorkOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WORKOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'workOffOutlinedIcon', url: URL_WORKOFFOUTLINED }, ...properties);
 }
 
 /**

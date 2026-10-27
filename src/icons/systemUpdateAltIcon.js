@@ -15,7 +15,7 @@ const URL_SYSTEMUPDATEALT = new URL('../../assets/icons/systemUpdateAlt.svg', im
  */
 export const initSystemUpdateAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SYSTEMUPDATEALT }, ...properties);
+    initIcon(element, { additionalClassName: 'systemUpdateAltIcon', url: URL_SYSTEMUPDATEALT }, ...properties);
 }
 
 /**

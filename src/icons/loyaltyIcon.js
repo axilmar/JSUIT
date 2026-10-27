@@ -15,7 +15,7 @@ const URL_LOYALTY = new URL('../../assets/icons/loyalty.svg', import.meta.url).h
  */
 export const initLoyaltyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOYALTY }, ...properties);
+    initIcon(element, { additionalClassName: 'loyaltyIcon', url: URL_LOYALTY }, ...properties);
 }
 
 /**

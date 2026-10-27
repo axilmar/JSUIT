@@ -15,7 +15,7 @@ const URL_VIEWQUILT = new URL('../../assets/icons/viewQuilt.svg', import.meta.ur
  */
 export const initViewQuiltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWQUILT }, ...properties);
+    initIcon(element, { additionalClassName: 'viewQuiltIcon', url: URL_VIEWQUILT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_INSTALLMOBILE = new URL('../../assets/icons/installMobile.svg', import
  */
 export const initInstallMobileIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INSTALLMOBILE }, ...properties);
+    initIcon(element, { additionalClassName: 'installMobileIcon', url: URL_INSTALLMOBILE }, ...properties);
 }
 
 /**

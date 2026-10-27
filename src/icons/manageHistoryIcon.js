@@ -15,7 +15,7 @@ const URL_MANAGEHISTORY = new URL('../../assets/icons/manageHistory.svg', import
  */
 export const initManageHistoryIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MANAGEHISTORY }, ...properties);
+    initIcon(element, { additionalClassName: 'manageHistoryIcon', url: URL_MANAGEHISTORY }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_UNSUBSCRIBEOUTLINED = new URL('../../assets/icons/unsubscribeOutlined.
  */
 export const initUnsubscribeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UNSUBSCRIBEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'unsubscribeOutlinedIcon', url: URL_UNSUBSCRIBEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_MANAGEACCOUNTSOUTLINED = new URL('../../assets/icons/manageAccountsOut
  */
 export const initManageAccountsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MANAGEACCOUNTSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'manageAccountsOutlinedIcon', url: URL_MANAGEACCOUNTSOUTLINED }, ...properties);
 }
 
 /**

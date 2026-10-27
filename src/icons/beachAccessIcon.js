@@ -15,7 +15,7 @@ const URL_BEACHACCESS = new URL('../../assets/icons/beachAccess.svg', import.met
  */
 export const initBeachAccessIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BEACHACCESS }, ...properties);
+    initIcon(element, { additionalClassName: 'beachAccessIcon', url: URL_BEACHACCESS }, ...properties);
 }
 
 /**

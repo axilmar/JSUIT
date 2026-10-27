@@ -15,7 +15,7 @@ const URL_CONTENTPASTEOFF = new URL('../../assets/icons/contentPasteOff.svg', im
  */
 export const initContentPasteOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTENTPASTEOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'contentPasteOffIcon', url: URL_CONTENTPASTEOFF }, ...properties);
 }
 
 /**

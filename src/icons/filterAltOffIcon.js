@@ -15,7 +15,7 @@ const URL_FILTERALTOFF = new URL('../../assets/icons/filterAltOff.svg', import.m
  */
 export const initFilterAltOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERALTOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'filterAltOffIcon', url: URL_FILTERALTOFF }, ...properties);
 }
 
 /**

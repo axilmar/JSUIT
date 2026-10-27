@@ -15,7 +15,7 @@ const URL_QUIZOUTLINED = new URL('../../assets/icons/quizOutlined.svg', import.m
  */
 export const initQuizOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUIZOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'quizOutlinedIcon', url: URL_QUIZOUTLINED }, ...properties);
 }
 
 /**

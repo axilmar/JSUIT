@@ -15,7 +15,7 @@ const URL_SIMCARDALERT = new URL('../../assets/icons/simCardAlert.svg', import.m
  */
 export const initSimCardAlertIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIMCARDALERT }, ...properties);
+    initIcon(element, { additionalClassName: 'simCardAlertIcon', url: URL_SIMCARDALERT }, ...properties);
 }
 
 /**

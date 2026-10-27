@@ -30,7 +30,7 @@ const defineClassProperty = (element, propertyName, names, defaultName) => {
 /**
  * Initializes an element as a divider, looking like MUI's Divider; the common part of the divider and the listDivider components.
  *
- * The function adds the class 'divider' to the element and defines the following properties:
+ * The function adds the classes 'dividerBase' and 'divider' to the element and defines the following properties:
  *  - `orientation`: 'horizontal' (the default) or 'vertical'; the way the line is drawn. A vertical divider stretches to the height of
  *    its flex container.
  *  - `variant`: 'stretch' (the default, the line spans the whole width or height, as MUI's fullWidth), 'inset' (a horizontal line starts 72px
@@ -43,7 +43,7 @@ const defineClassProperty = (element, propertyName, names, defaultName) => {
  * @param {*} element the element to initialize.
  */
 export const initDividerBase = (element) => {
-    element.classList.add('divider');
+    element.classList.add('dividerBase', 'divider');
     defineClassProperty(element, 'orientation', ORIENTATIONS, 'horizontal');
     defineClassProperty(element, 'variant', VARIANTS, 'stretch');
     defineClassProperty(element, 'contentAlign', CONTENT_ALIGNS, 'center');

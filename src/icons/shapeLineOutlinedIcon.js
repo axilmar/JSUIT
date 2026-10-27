@@ -15,7 +15,7 @@ const URL_SHAPELINEOUTLINED = new URL('../../assets/icons/shapeLineOutlined.svg'
  */
 export const initShapeLineOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHAPELINEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'shapeLineOutlinedIcon', url: URL_SHAPELINEOUTLINED }, ...properties);
 }
 
 /**

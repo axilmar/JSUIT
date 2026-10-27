@@ -15,7 +15,7 @@ const URL_QUEUEPLAYNEXTOUTLINED = new URL('../../assets/icons/queuePlayNextOutli
  */
 export const initQueuePlayNextOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUEUEPLAYNEXTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'queuePlayNextOutlinedIcon', url: URL_QUEUEPLAYNEXTOUTLINED }, ...properties);
 }
 
 /**

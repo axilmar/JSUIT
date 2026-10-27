@@ -15,7 +15,7 @@ const URL_ADDBOX = new URL('../../assets/icons/addBox.svg', import.meta.url).hre
  */
 export const initAddBoxIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDBOX }, ...properties);
+    initIcon(element, { additionalClassName: 'addBoxIcon', url: URL_ADDBOX }, ...properties);
 }
 
 /**

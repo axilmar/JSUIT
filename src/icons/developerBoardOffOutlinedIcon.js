@@ -15,7 +15,7 @@ const URL_DEVELOPERBOARDOFFOUTLINED = new URL('../../assets/icons/developerBoard
  */
 export const initDeveloperBoardOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEVELOPERBOARDOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'developerBoardOffOutlinedIcon', url: URL_DEVELOPERBOARDOFFOUTLINED }, ...properties);
 }
 
 /**

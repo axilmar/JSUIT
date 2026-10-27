@@ -15,7 +15,7 @@ const URL_FORMATSTRIKETHROUGHOUTLINED = new URL('../../assets/icons/formatStrike
  */
 export const initFormatStrikethroughOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATSTRIKETHROUGHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatStrikethroughOutlinedIcon', url: URL_FORMATSTRIKETHROUGHOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_VIDEOLABEL = new URL('../../assets/icons/videoLabel.svg', import.meta.
  */
 export const initVideoLabelIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOLABEL }, ...properties);
+    initIcon(element, { additionalClassName: 'videoLabelIcon', url: URL_VIDEOLABEL }, ...properties);
 }
 
 /**

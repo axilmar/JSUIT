@@ -15,7 +15,7 @@ const URL_SDOUTLINED = new URL('../../assets/icons/sdOutlined.svg', import.meta.
  */
 export const initSdOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sdOutlinedIcon', url: URL_SDOUTLINED }, ...properties);
 }
 
 /**

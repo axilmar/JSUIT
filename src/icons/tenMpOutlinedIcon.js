@@ -15,7 +15,7 @@ const URL_TENMPOUTLINED = new URL('../../assets/icons/tenMpOutlined.svg', import
  */
 export const initTenMpOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TENMPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tenMpOutlinedIcon', url: URL_TENMPOUTLINED }, ...properties);
 }
 
 /**

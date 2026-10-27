@@ -15,7 +15,7 @@ const URL_PLAYLISTREMOVEOUTLINED = new URL('../../assets/icons/playlistRemoveOut
  */
 export const initPlaylistRemoveOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYLISTREMOVEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'playlistRemoveOutlinedIcon', url: URL_PLAYLISTREMOVEOUTLINED }, ...properties);
 }
 
 /**

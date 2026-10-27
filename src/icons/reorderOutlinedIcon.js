@@ -15,7 +15,7 @@ const URL_REORDEROUTLINED = new URL('../../assets/icons/reorderOutlined.svg', im
  */
 export const initReorderOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REORDEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'reorderOutlinedIcon', url: URL_REORDEROUTLINED }, ...properties);
 }
 
 /**

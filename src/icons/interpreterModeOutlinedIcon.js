@@ -15,7 +15,7 @@ const URL_INTERPRETERMODEOUTLINED = new URL('../../assets/icons/interpreterModeO
  */
 export const initInterpreterModeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INTERPRETERMODEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'interpreterModeOutlinedIcon', url: URL_INTERPRETERMODEOUTLINED }, ...properties);
 }
 
 /**

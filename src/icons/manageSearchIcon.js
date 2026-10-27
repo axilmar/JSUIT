@@ -15,7 +15,7 @@ const URL_MANAGESEARCH = new URL('../../assets/icons/manageSearch.svg', import.m
  */
 export const initManageSearchIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MANAGESEARCH }, ...properties);
+    initIcon(element, { additionalClassName: 'manageSearchIcon', url: URL_MANAGESEARCH }, ...properties);
 }
 
 /**

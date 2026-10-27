@@ -15,7 +15,7 @@ const URL_NAVIGATEBEFOREOUTLINED = new URL('../../assets/icons/navigateBeforeOut
  */
 export const initNavigateBeforeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NAVIGATEBEFOREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'navigateBeforeOutlinedIcon', url: URL_NAVIGATEBEFOREOUTLINED }, ...properties);
 }
 
 /**

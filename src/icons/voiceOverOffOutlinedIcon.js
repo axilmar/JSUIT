@@ -15,7 +15,7 @@ const URL_VOICEOVEROFFOUTLINED = new URL('../../assets/icons/voiceOverOffOutline
  */
 export const initVoiceOverOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VOICEOVEROFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'voiceOverOffOutlinedIcon', url: URL_VOICEOVEROFFOUTLINED }, ...properties);
 }
 
 /**

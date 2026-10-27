@@ -15,7 +15,7 @@ const URL_POOLOUTLINED = new URL('../../assets/icons/poolOutlined.svg', import.m
  */
 export const initPoolOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POOLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'poolOutlinedIcon', url: URL_POOLOUTLINED }, ...properties);
 }
 
 /**

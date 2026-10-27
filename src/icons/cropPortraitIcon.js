@@ -15,7 +15,7 @@ const URL_CROPPORTRAIT = new URL('../../assets/icons/cropPortrait.svg', import.m
  */
 export const initCropPortraitIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CROPPORTRAIT }, ...properties);
+    initIcon(element, { additionalClassName: 'cropPortraitIcon', url: URL_CROPPORTRAIT }, ...properties);
 }
 
 /**

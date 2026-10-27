@@ -15,7 +15,7 @@ const URL_BOOKMARKREMOVE = new URL('../../assets/icons/bookmarkRemove.svg', impo
  */
 export const initBookmarkRemoveIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BOOKMARKREMOVE }, ...properties);
+    initIcon(element, { additionalClassName: 'bookmarkRemoveIcon', url: URL_BOOKMARKREMOVE }, ...properties);
 }
 
 /**

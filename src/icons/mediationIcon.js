@@ -15,7 +15,7 @@ const URL_MEDIATION = new URL('../../assets/icons/mediation.svg', import.meta.ur
  */
 export const initMediationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MEDIATION }, ...properties);
+    initIcon(element, { additionalClassName: 'mediationIcon', url: URL_MEDIATION }, ...properties);
 }
 
 /**

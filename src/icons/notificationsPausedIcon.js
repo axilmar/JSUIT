@@ -15,7 +15,7 @@ const URL_NOTIFICATIONSPAUSED = new URL('../../assets/icons/notificationsPaused.
  */
 export const initNotificationsPausedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTIFICATIONSPAUSED }, ...properties);
+    initIcon(element, { additionalClassName: 'notificationsPausedIcon', url: URL_NOTIFICATIONSPAUSED }, ...properties);
 }
 
 /**

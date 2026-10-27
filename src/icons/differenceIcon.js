@@ -15,7 +15,7 @@ const URL_DIFFERENCE = new URL('../../assets/icons/difference.svg', import.meta.
  */
 export const initDifferenceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIFFERENCE }, ...properties);
+    initIcon(element, { additionalClassName: 'differenceIcon', url: URL_DIFFERENCE }, ...properties);
 }
 
 /**

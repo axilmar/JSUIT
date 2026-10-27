@@ -15,7 +15,7 @@ const URL_POWERINPUTOUTLINED = new URL('../../assets/icons/powerInputOutlined.sv
  */
 export const initPowerInputOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POWERINPUTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'powerInputOutlinedIcon', url: URL_POWERINPUTOUTLINED }, ...properties);
 }
 
 /**

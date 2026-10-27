@@ -15,7 +15,7 @@ const URL_SUPERVISEDUSERCIRCLEOUTLINED = new URL('../../assets/icons/supervisedU
  */
 export const initSupervisedUserCircleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUPERVISEDUSERCIRCLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'supervisedUserCircleOutlinedIcon', url: URL_SUPERVISEDUSERCIRCLEOUTLINED }, ...properties);
 }
 
 /**

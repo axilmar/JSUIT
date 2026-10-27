@@ -15,7 +15,7 @@ const URL_NETWORKLOCKED = new URL('../../assets/icons/networkLocked.svg', import
  */
 export const initNetworkLockedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NETWORKLOCKED }, ...properties);
+    initIcon(element, { additionalClassName: 'networkLockedIcon', url: URL_NETWORKLOCKED }, ...properties);
 }
 
 /**

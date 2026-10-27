@@ -15,7 +15,7 @@ const URL_MODENIGHTOUTLINED = new URL('../../assets/icons/modeNightOutlined.svg'
  */
 export const initModeNightOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MODENIGHTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'modeNightOutlinedIcon', url: URL_MODENIGHTOUTLINED }, ...properties);
 }
 
 /**

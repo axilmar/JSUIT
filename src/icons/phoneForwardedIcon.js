@@ -15,7 +15,7 @@ const URL_PHONEFORWARDED = new URL('../../assets/icons/phoneForwarded.svg', impo
  */
 export const initPhoneForwardedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONEFORWARDED }, ...properties);
+    initIcon(element, { additionalClassName: 'phoneForwardedIcon', url: URL_PHONEFORWARDED }, ...properties);
 }
 
 /**

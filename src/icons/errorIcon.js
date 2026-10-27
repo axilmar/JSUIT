@@ -15,7 +15,7 @@ const URL_ERROR = new URL('../../assets/icons/error.svg', import.meta.url).href;
  */
 export const initErrorIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ERROR }, ...properties);
+    initIcon(element, { additionalClassName: 'errorIcon', url: URL_ERROR }, ...properties);
 }
 
 /**

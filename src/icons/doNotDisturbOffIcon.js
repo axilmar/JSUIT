@@ -15,7 +15,7 @@ const URL_DONOTDISTURBOFF = new URL('../../assets/icons/doNotDisturbOff.svg', im
  */
 export const initDoNotDisturbOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DONOTDISTURBOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'doNotDisturbOffIcon', url: URL_DONOTDISTURBOFF }, ...properties);
 }
 
 /**

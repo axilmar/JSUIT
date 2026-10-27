@@ -15,7 +15,7 @@ const URL_ROOMSERVICE = new URL('../../assets/icons/roomService.svg', import.met
  */
 export const initRoomServiceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROOMSERVICE }, ...properties);
+    initIcon(element, { additionalClassName: 'roomServiceIcon', url: URL_ROOMSERVICE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_GRAPHICEQOUTLINED = new URL('../../assets/icons/graphicEqOutlined.svg'
  */
 export const initGraphicEqOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRAPHICEQOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'graphicEqOutlinedIcon', url: URL_GRAPHICEQOUTLINED }, ...properties);
 }
 
 /**

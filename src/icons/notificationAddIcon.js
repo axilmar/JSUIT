@@ -15,7 +15,7 @@ const URL_NOTIFICATIONADD = new URL('../../assets/icons/notificationAdd.svg', im
  */
 export const initNotificationAddIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTIFICATIONADD }, ...properties);
+    initIcon(element, { additionalClassName: 'notificationAddIcon', url: URL_NOTIFICATIONADD }, ...properties);
 }
 
 /**

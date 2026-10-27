@@ -15,7 +15,7 @@ const URL_PHONEANDROIDOUTLINED = new URL('../../assets/icons/phoneAndroidOutline
  */
 export const initPhoneAndroidOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONEANDROIDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'phoneAndroidOutlinedIcon', url: URL_PHONEANDROIDOUTLINED }, ...properties);
 }
 
 /**

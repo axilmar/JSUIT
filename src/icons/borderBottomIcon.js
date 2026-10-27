@@ -15,7 +15,7 @@ const URL_BORDERBOTTOM = new URL('../../assets/icons/borderBottom.svg', import.m
  */
 export const initBorderBottomIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BORDERBOTTOM }, ...properties);
+    initIcon(element, { additionalClassName: 'borderBottomIcon', url: URL_BORDERBOTTOM }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FULLSCREENOUTLINED = new URL('../../assets/icons/fullscreenOutlined.sv
  */
 export const initFullscreenOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FULLSCREENOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fullscreenOutlinedIcon', url: URL_FULLSCREENOUTLINED }, ...properties);
 }
 
 /**

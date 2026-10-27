@@ -15,7 +15,7 @@ const URL_REDEEM = new URL('../../assets/icons/redeem.svg', import.meta.url).hre
  */
 export const initRedeemIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REDEEM }, ...properties);
+    initIcon(element, { additionalClassName: 'redeemIcon', url: URL_REDEEM }, ...properties);
 }
 
 /**

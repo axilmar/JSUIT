@@ -10,7 +10,7 @@ import { initSVGGeometryElement } from "./SVGGeometryElement.js";
  */
 export const initPath = (element, ...properties) => {
     console.assert(element instanceof SVGPathElement);
-    initSVGGeometryElement(element, ...properties);
+    initSVGGeometryElement(element, { additionalClassName: 'path' }, ...properties);
 }
 
 /**

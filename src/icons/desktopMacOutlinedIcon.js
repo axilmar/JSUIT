@@ -15,7 +15,7 @@ const URL_DESKTOPMACOUTLINED = new URL('../../assets/icons/desktopMacOutlined.sv
  */
 export const initDesktopMacOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DESKTOPMACOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'desktopMacOutlinedIcon', url: URL_DESKTOPMACOUTLINED }, ...properties);
 }
 
 /**

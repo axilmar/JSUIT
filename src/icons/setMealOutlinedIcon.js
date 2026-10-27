@@ -15,7 +15,7 @@ const URL_SETMEALOUTLINED = new URL('../../assets/icons/setMealOutlined.svg', im
  */
 export const initSetMealOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETMEALOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'setMealOutlinedIcon', url: URL_SETMEALOUTLINED }, ...properties);
 }
 
 /**

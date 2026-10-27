@@ -15,7 +15,7 @@ const URL_LOCALHOSPITALOUTLINED = new URL('../../assets/icons/localHospitalOutli
  */
 export const initLocalHospitalOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALHOSPITALOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localHospitalOutlinedIcon', url: URL_LOCALHOSPITALOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FLAGOUTLINED = new URL('../../assets/icons/flagOutlined.svg', import.m
  */
 export const initFlagOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLAGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'flagOutlinedIcon', url: URL_FLAGOUTLINED }, ...properties);
 }
 
 /**

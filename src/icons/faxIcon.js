@@ -15,7 +15,7 @@ const URL_FAX = new URL('../../assets/icons/fax.svg', import.meta.url).href;
  */
 export const initFaxIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FAX }, ...properties);
+    initIcon(element, { additionalClassName: 'faxIcon', url: URL_FAX }, ...properties);
 }
 
 /**

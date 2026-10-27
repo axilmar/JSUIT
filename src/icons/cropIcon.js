@@ -15,7 +15,7 @@ const URL_CROP = new URL('../../assets/icons/crop.svg', import.meta.url).href;
  */
 export const initCropIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CROP }, ...properties);
+    initIcon(element, { additionalClassName: 'cropIcon', url: URL_CROP }, ...properties);
 }
 
 /**

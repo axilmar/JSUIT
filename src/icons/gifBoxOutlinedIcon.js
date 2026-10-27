@@ -15,7 +15,7 @@ const URL_GIFBOXOUTLINED = new URL('../../assets/icons/gifBoxOutlined.svg', impo
  */
 export const initGifBoxOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GIFBOXOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'gifBoxOutlinedIcon', url: URL_GIFBOXOUTLINED }, ...properties);
 }
 
 /**

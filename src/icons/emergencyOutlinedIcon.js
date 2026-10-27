@@ -15,7 +15,7 @@ const URL_EMERGENCYOUTLINED = new URL('../../assets/icons/emergencyOutlined.svg'
  */
 export const initEmergencyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EMERGENCYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'emergencyOutlinedIcon', url: URL_EMERGENCYOUTLINED }, ...properties);
 }
 
 /**

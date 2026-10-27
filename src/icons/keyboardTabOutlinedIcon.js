@@ -15,7 +15,7 @@ const URL_KEYBOARDTABOUTLINED = new URL('../../assets/icons/keyboardTabOutlined.
  */
 export const initKeyboardTabOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDTABOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardTabOutlinedIcon', url: URL_KEYBOARDTABOUTLINED }, ...properties);
 }
 
 /**

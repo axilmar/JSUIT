@@ -15,7 +15,7 @@ const URL_BORDERTOP = new URL('../../assets/icons/borderTop.svg', import.meta.ur
  */
 export const initBorderTopIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BORDERTOP }, ...properties);
+    initIcon(element, { additionalClassName: 'borderTopIcon', url: URL_BORDERTOP }, ...properties);
 }
 
 /**

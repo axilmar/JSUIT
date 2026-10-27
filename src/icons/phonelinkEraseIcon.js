@@ -15,7 +15,7 @@ const URL_PHONELINKERASE = new URL('../../assets/icons/phonelinkErase.svg', impo
  */
 export const initPhonelinkEraseIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONELINKERASE }, ...properties);
+    initIcon(element, { additionalClassName: 'phonelinkEraseIcon', url: URL_PHONELINKERASE }, ...properties);
 }
 
 /**

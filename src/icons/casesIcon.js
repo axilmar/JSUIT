@@ -15,7 +15,7 @@ const URL_CASES = new URL('../../assets/icons/cases.svg', import.meta.url).href;
  */
 export const initCasesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CASES }, ...properties);
+    initIcon(element, { additionalClassName: 'casesIcon', url: URL_CASES }, ...properties);
 }
 
 /**

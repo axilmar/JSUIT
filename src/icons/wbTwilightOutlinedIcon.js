@@ -15,7 +15,7 @@ const URL_WBTWILIGHTOUTLINED = new URL('../../assets/icons/wbTwilightOutlined.sv
  */
 export const initWbTwilightOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WBTWILIGHTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wbTwilightOutlinedIcon', url: URL_WBTWILIGHTOUTLINED }, ...properties);
 }
 
 /**

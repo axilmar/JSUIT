@@ -15,7 +15,7 @@ const URL_THREESIXTYOUTLINED = new URL('../../assets/icons/threeSixtyOutlined.sv
  */
 export const initThreeSixtyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THREESIXTYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'threeSixtyOutlinedIcon', url: URL_THREESIXTYOUTLINED }, ...properties);
 }
 
 /**

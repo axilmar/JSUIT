@@ -15,7 +15,7 @@ const URL_GRADIENT = new URL('../../assets/icons/gradient.svg', import.meta.url)
  */
 export const initGradientIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRADIENT }, ...properties);
+    initIcon(element, { additionalClassName: 'gradientIcon', url: URL_GRADIENT }, ...properties);
 }
 
 /**

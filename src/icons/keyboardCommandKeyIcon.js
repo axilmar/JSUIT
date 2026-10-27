@@ -15,7 +15,7 @@ const URL_KEYBOARDCOMMANDKEY = new URL('../../assets/icons/keyboardCommandKey.sv
  */
 export const initKeyboardCommandKeyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDCOMMANDKEY }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardCommandKeyIcon', url: URL_KEYBOARDCOMMANDKEY }, ...properties);
 }
 
 /**

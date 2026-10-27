@@ -15,7 +15,7 @@ const URL_DOUBLEARROWOUTLINED = new URL('../../assets/icons/doubleArrowOutlined.
  */
 export const initDoubleArrowOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOUBLEARROWOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'doubleArrowOutlinedIcon', url: URL_DOUBLEARROWOUTLINED }, ...properties);
 }
 
 /**

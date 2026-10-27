@@ -15,7 +15,7 @@ const URL_LANGUAGEOUTLINED = new URL('../../assets/icons/languageOutlined.svg', 
  */
 export const initLanguageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LANGUAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'languageOutlinedIcon', url: URL_LANGUAGEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_NATUREOUTLINED = new URL('../../assets/icons/natureOutlined.svg', impo
  */
 export const initNatureOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NATUREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'natureOutlinedIcon', url: URL_NATUREOUTLINED }, ...properties);
 }
 
 /**

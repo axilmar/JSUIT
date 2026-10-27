@@ -15,7 +15,7 @@ const URL_THUNDERSTORMOUTLINED = new URL('../../assets/icons/thunderstormOutline
  */
 export const initThunderstormOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THUNDERSTORMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'thunderstormOutlinedIcon', url: URL_THUNDERSTORMOUTLINED }, ...properties);
 }
 
 /**

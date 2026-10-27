@@ -15,7 +15,7 @@ const URL_QRCODE2OUTLINED = new URL('../../assets/icons/qrCode2Outlined.svg', im
  */
 export const initQrCode2OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QRCODE2OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'qrCode2OutlinedIcon', url: URL_QRCODE2OUTLINED }, ...properties);
 }
 
 /**

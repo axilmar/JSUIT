@@ -15,7 +15,7 @@ const URL_PRIVACYTIPOUTLINED = new URL('../../assets/icons/privacyTipOutlined.sv
  */
 export const initPrivacyTipOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PRIVACYTIPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'privacyTipOutlinedIcon', url: URL_PRIVACYTIPOUTLINED }, ...properties);
 }
 
 /**

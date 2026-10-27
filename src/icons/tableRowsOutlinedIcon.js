@@ -15,7 +15,7 @@ const URL_TABLEROWSOUTLINED = new URL('../../assets/icons/tableRowsOutlined.svg'
  */
 export const initTableRowsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TABLEROWSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tableRowsOutlinedIcon', url: URL_TABLEROWSOUTLINED }, ...properties);
 }
 
 /**

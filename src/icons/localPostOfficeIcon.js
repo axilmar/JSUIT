@@ -15,7 +15,7 @@ const URL_LOCALPOSTOFFICE = new URL('../../assets/icons/localPostOffice.svg', im
  */
 export const initLocalPostOfficeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALPOSTOFFICE }, ...properties);
+    initIcon(element, { additionalClassName: 'localPostOfficeIcon', url: URL_LOCALPOSTOFFICE }, ...properties);
 }
 
 /**

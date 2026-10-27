@@ -15,7 +15,7 @@ const URL_BOOKOUTLINED = new URL('../../assets/icons/bookOutlined.svg', import.m
  */
 export const initBookOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BOOKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bookOutlinedIcon', url: URL_BOOKOUTLINED }, ...properties);
 }
 
 /**

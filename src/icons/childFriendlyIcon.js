@@ -15,7 +15,7 @@ const URL_CHILDFRIENDLY = new URL('../../assets/icons/childFriendly.svg', import
  */
 export const initChildFriendlyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHILDFRIENDLY }, ...properties);
+    initIcon(element, { additionalClassName: 'childFriendlyIcon', url: URL_CHILDFRIENDLY }, ...properties);
 }
 
 /**

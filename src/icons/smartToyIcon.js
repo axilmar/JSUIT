@@ -15,7 +15,7 @@ const URL_SMARTTOY = new URL('../../assets/icons/smartToy.svg', import.meta.url)
  */
 export const initSmartToyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SMARTTOY }, ...properties);
+    initIcon(element, { additionalClassName: 'smartToyIcon', url: URL_SMARTTOY }, ...properties);
 }
 
 /**

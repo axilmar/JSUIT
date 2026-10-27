@@ -15,7 +15,7 @@ const URL_TSUNAMI = new URL('../../assets/icons/tsunami.svg', import.meta.url).h
  */
 export const initTsunamiIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TSUNAMI }, ...properties);
+    initIcon(element, { additionalClassName: 'tsunamiIcon', url: URL_TSUNAMI }, ...properties);
 }
 
 /**

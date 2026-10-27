@@ -15,7 +15,7 @@ const URL_HEIGHTOUTLINED = new URL('../../assets/icons/heightOutlined.svg', impo
  */
 export const initHeightOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEIGHTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'heightOutlinedIcon', url: URL_HEIGHTOUTLINED }, ...properties);
 }
 
 /**

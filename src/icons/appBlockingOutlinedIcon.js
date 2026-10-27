@@ -15,7 +15,7 @@ const URL_APPBLOCKINGOUTLINED = new URL('../../assets/icons/appBlockingOutlined.
  */
 export const initAppBlockingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_APPBLOCKINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'appBlockingOutlinedIcon', url: URL_APPBLOCKINGOUTLINED }, ...properties);
 }
 
 /**

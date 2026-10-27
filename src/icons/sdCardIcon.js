@@ -15,7 +15,7 @@ const URL_SDCARD = new URL('../../assets/icons/sdCard.svg', import.meta.url).hre
  */
 export const initSdCardIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SDCARD }, ...properties);
+    initIcon(element, { additionalClassName: 'sdCardIcon', url: URL_SDCARD }, ...properties);
 }
 
 /**

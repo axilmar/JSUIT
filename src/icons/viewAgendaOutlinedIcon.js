@@ -15,7 +15,7 @@ const URL_VIEWAGENDAOUTLINED = new URL('../../assets/icons/viewAgendaOutlined.sv
  */
 export const initViewAgendaOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWAGENDAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewAgendaOutlinedIcon', url: URL_VIEWAGENDAOUTLINED }, ...properties);
 }
 
 /**

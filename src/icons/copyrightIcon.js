@@ -15,7 +15,7 @@ const URL_COPYRIGHT = new URL('../../assets/icons/copyright.svg', import.meta.ur
  */
 export const initCopyrightIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COPYRIGHT }, ...properties);
+    initIcon(element, { additionalClassName: 'copyrightIcon', url: URL_COPYRIGHT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PHOTOCAMERAFRONTOUTLINED = new URL('../../assets/icons/photoCameraFron
  */
 export const initPhotoCameraFrontOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHOTOCAMERAFRONTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'photoCameraFrontOutlinedIcon', url: URL_PHOTOCAMERAFRONTOUTLINED }, ...properties);
 }
 
 /**

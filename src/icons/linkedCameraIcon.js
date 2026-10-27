@@ -15,7 +15,7 @@ const URL_LINKEDCAMERA = new URL('../../assets/icons/linkedCamera.svg', import.m
  */
 export const initLinkedCameraIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LINKEDCAMERA }, ...properties);
+    initIcon(element, { additionalClassName: 'linkedCameraIcon', url: URL_LINKEDCAMERA }, ...properties);
 }
 
 /**

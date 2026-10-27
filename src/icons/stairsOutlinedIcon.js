@@ -15,7 +15,7 @@ const URL_STAIRSOUTLINED = new URL('../../assets/icons/stairsOutlined.svg', impo
  */
 export const initStairsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STAIRSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'stairsOutlinedIcon', url: URL_STAIRSOUTLINED }, ...properties);
 }
 
 /**

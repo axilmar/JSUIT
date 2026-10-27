@@ -15,7 +15,7 @@ const URL_RULE = new URL('../../assets/icons/rule.svg', import.meta.url).href;
  */
 export const initRuleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RULE }, ...properties);
+    initIcon(element, { additionalClassName: 'ruleIcon', url: URL_RULE }, ...properties);
 }
 
 /**

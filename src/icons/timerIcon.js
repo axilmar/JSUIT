@@ -15,7 +15,7 @@ const URL_TIMER = new URL('../../assets/icons/timer.svg', import.meta.url).href;
  */
 export const initTimerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TIMER }, ...properties);
+    initIcon(element, { additionalClassName: 'timerIcon', url: URL_TIMER }, ...properties);
 }
 
 /**

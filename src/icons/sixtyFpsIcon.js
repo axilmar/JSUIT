@@ -15,7 +15,7 @@ const URL_SIXTYFPS = new URL('../../assets/icons/sixtyFps.svg', import.meta.url)
  */
 export const initSixtyFpsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIXTYFPS }, ...properties);
+    initIcon(element, { additionalClassName: 'sixtyFpsIcon', url: URL_SIXTYFPS }, ...properties);
 }
 
 /**

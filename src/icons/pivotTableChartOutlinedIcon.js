@@ -15,7 +15,7 @@ const URL_PIVOTTABLECHARTOUTLINED = new URL('../../assets/icons/pivotTableChartO
  */
 export const initPivotTableChartOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PIVOTTABLECHARTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pivotTableChartOutlinedIcon', url: URL_PIVOTTABLECHARTOUTLINED }, ...properties);
 }
 
 /**

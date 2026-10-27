@@ -15,7 +15,7 @@ const URL_BROWSEGALLERY = new URL('../../assets/icons/browseGallery.svg', import
  */
 export const initBrowseGalleryIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BROWSEGALLERY }, ...properties);
+    initIcon(element, { additionalClassName: 'browseGalleryIcon', url: URL_BROWSEGALLERY }, ...properties);
 }
 
 /**

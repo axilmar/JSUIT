@@ -15,7 +15,7 @@ const URL_FITNESSCENTER = new URL('../../assets/icons/fitnessCenter.svg', import
  */
 export const initFitnessCenterIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FITNESSCENTER }, ...properties);
+    initIcon(element, { additionalClassName: 'fitnessCenterIcon', url: URL_FITNESSCENTER }, ...properties);
 }
 
 /**

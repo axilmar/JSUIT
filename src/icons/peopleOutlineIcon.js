@@ -15,7 +15,7 @@ const URL_PEOPLEOUTLINE = new URL('../../assets/icons/peopleOutline.svg', import
  */
 export const initPeopleOutlineIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PEOPLEOUTLINE }, ...properties);
+    initIcon(element, { additionalClassName: 'peopleOutlineIcon', url: URL_PEOPLEOUTLINE }, ...properties);
 }
 
 /**

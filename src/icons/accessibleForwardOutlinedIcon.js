@@ -15,7 +15,7 @@ const URL_ACCESSIBLEFORWARDOUTLINED = new URL('../../assets/icons/accessibleForw
  */
 export const initAccessibleForwardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACCESSIBLEFORWARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'accessibleForwardOutlinedIcon', url: URL_ACCESSIBLEFORWARDOUTLINED }, ...properties);
 }
 
 /**

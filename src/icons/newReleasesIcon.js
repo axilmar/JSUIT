@@ -15,7 +15,7 @@ const URL_NEWRELEASES = new URL('../../assets/icons/newReleases.svg', import.met
  */
 export const initNewReleasesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NEWRELEASES }, ...properties);
+    initIcon(element, { additionalClassName: 'newReleasesIcon', url: URL_NEWRELEASES }, ...properties);
 }
 
 /**

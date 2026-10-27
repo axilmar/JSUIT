@@ -15,7 +15,7 @@ const URL_HISTORYEDU = new URL('../../assets/icons/historyEdu.svg', import.meta.
  */
 export const initHistoryEduIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HISTORYEDU }, ...properties);
+    initIcon(element, { additionalClassName: 'historyEduIcon', url: URL_HISTORYEDU }, ...properties);
 }
 
 /**

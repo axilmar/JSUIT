@@ -39,7 +39,7 @@ const defineVariantProperty = (element) => {
 export const initCloseIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
     defineVariantProperty(element);
-    initIcon(element, { url: VARIANT_URLS.standard }, ...properties);
+    initIcon(element, { additionalClassName: 'closeIcon', url: VARIANT_URLS.standard }, ...properties);
 }
 
 /**

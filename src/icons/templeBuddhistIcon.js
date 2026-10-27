@@ -15,7 +15,7 @@ const URL_TEMPLEBUDDHIST = new URL('../../assets/icons/templeBuddhist.svg', impo
  */
 export const initTempleBuddhistIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEMPLEBUDDHIST }, ...properties);
+    initIcon(element, { additionalClassName: 'templeBuddhistIcon', url: URL_TEMPLEBUDDHIST }, ...properties);
 }
 
 /**

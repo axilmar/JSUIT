@@ -15,7 +15,7 @@ const URL_QUEUEMUSICOUTLINED = new URL('../../assets/icons/queueMusicOutlined.sv
  */
 export const initQueueMusicOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUEUEMUSICOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'queueMusicOutlinedIcon', url: URL_QUEUEMUSICOUTLINED }, ...properties);
 }
 
 /**

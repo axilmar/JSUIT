@@ -15,7 +15,7 @@ const URL_VIEWMODULEOUTLINED = new URL('../../assets/icons/viewModuleOutlined.sv
  */
 export const initViewModuleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWMODULEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewModuleOutlinedIcon', url: URL_VIEWMODULEOUTLINED }, ...properties);
 }
 
 /**

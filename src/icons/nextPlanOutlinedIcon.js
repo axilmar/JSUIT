@@ -15,7 +15,7 @@ const URL_NEXTPLANOUTLINED = new URL('../../assets/icons/nextPlanOutlined.svg', 
  */
 export const initNextPlanOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NEXTPLANOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'nextPlanOutlinedIcon', url: URL_NEXTPLANOUTLINED }, ...properties);
 }
 
 /**

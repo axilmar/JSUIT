@@ -15,7 +15,7 @@ const URL_RULEFOLDER = new URL('../../assets/icons/ruleFolder.svg', import.meta.
  */
 export const initRuleFolderIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RULEFOLDER }, ...properties);
+    initIcon(element, { additionalClassName: 'ruleFolderIcon', url: URL_RULEFOLDER }, ...properties);
 }
 
 /**

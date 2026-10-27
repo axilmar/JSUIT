@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initMeter = (element, ...properties) => {
     console.assert(element instanceof HTMLMeterElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'meter' }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LAYERSOUTLINED = new URL('../../assets/icons/layersOutlined.svg', impo
  */
 export const initLayersOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LAYERSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'layersOutlinedIcon', url: URL_LAYERSOUTLINED }, ...properties);
 }
 
 /**

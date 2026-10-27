@@ -15,7 +15,7 @@ const URL_HOTEL = new URL('../../assets/icons/hotel.svg', import.meta.url).href;
  */
 export const initHotelIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOTEL }, ...properties);
+    initIcon(element, { additionalClassName: 'hotelIcon', url: URL_HOTEL }, ...properties);
 }
 
 /**

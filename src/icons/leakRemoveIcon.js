@@ -15,7 +15,7 @@ const URL_LEAKREMOVE = new URL('../../assets/icons/leakRemove.svg', import.meta.
  */
 export const initLeakRemoveIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LEAKREMOVE }, ...properties);
+    initIcon(element, { additionalClassName: 'leakRemoveIcon', url: URL_LEAKREMOVE }, ...properties);
 }
 
 /**

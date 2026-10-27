@@ -15,7 +15,7 @@ const URL_ROOFINGOUTLINED = new URL('../../assets/icons/roofingOutlined.svg', im
  */
 export const initRoofingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROOFINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'roofingOutlinedIcon', url: URL_ROOFINGOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_BUSINESS = new URL('../../assets/icons/business.svg', import.meta.url)
  */
 export const initBusinessIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BUSINESS }, ...properties);
+    initIcon(element, { additionalClassName: 'businessIcon', url: URL_BUSINESS }, ...properties);
 }
 
 /**

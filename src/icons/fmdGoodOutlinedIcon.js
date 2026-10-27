@@ -15,7 +15,7 @@ const URL_FMDGOODOUTLINED = new URL('../../assets/icons/fmdGoodOutlined.svg', im
  */
 export const initFmdGoodOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FMDGOODOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fmdGoodOutlinedIcon', url: URL_FMDGOODOUTLINED }, ...properties);
 }
 
 /**

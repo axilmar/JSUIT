@@ -15,7 +15,7 @@ const URL_BLUETOOTHAUDIO = new URL('../../assets/icons/bluetoothAudio.svg', impo
  */
 export const initBluetoothAudioIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLUETOOTHAUDIO }, ...properties);
+    initIcon(element, { additionalClassName: 'bluetoothAudioIcon', url: URL_BLUETOOTHAUDIO }, ...properties);
 }
 
 /**

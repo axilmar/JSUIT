@@ -15,7 +15,7 @@ const URL_MARGINOUTLINED = new URL('../../assets/icons/marginOutlined.svg', impo
  */
 export const initMarginOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MARGINOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'marginOutlinedIcon', url: URL_MARGINOUTLINED }, ...properties);
 }
 
 /**

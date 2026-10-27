@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initButtonBase = (element, ...properties) => {
     console.assert(element instanceof HTMLButtonElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'buttonBase' }, ...properties);
 }
 
 /**

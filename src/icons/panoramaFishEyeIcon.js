@@ -15,7 +15,7 @@ const URL_PANORAMAFISHEYE = new URL('../../assets/icons/panoramaFishEye.svg', im
  */
 export const initPanoramaFishEyeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PANORAMAFISHEYE }, ...properties);
+    initIcon(element, { additionalClassName: 'panoramaFishEyeIcon', url: URL_PANORAMAFISHEYE }, ...properties);
 }
 
 /**

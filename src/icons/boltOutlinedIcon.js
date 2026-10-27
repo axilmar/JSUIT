@@ -15,7 +15,7 @@ const URL_BOLTOUTLINED = new URL('../../assets/icons/boltOutlined.svg', import.m
  */
 export const initBoltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BOLTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'boltOutlinedIcon', url: URL_BOLTOUTLINED }, ...properties);
 }
 
 /**

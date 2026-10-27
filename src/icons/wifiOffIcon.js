@@ -15,7 +15,7 @@ const URL_WIFIOFF = new URL('../../assets/icons/wifiOff.svg', import.meta.url).h
  */
 export const initWifiOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIFIOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'wifiOffIcon', url: URL_WIFIOFF }, ...properties);
 }
 
 /**

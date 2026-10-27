@@ -15,7 +15,7 @@ const URL_SKIPPREVIOUS = new URL('../../assets/icons/skipPrevious.svg', import.m
  */
 export const initSkipPreviousIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SKIPPREVIOUS }, ...properties);
+    initIcon(element, { additionalClassName: 'skipPreviousIcon', url: URL_SKIPPREVIOUS }, ...properties);
 }
 
 /**

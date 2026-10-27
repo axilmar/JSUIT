@@ -15,7 +15,7 @@ const URL_FILTERDRAMAOUTLINED = new URL('../../assets/icons/filterDramaOutlined.
  */
 export const initFilterDramaOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERDRAMAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'filterDramaOutlinedIcon', url: URL_FILTERDRAMAOUTLINED }, ...properties);
 }
 
 /**

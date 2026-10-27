@@ -15,7 +15,7 @@ const URL_PHONECALLBACK = new URL('../../assets/icons/phoneCallback.svg', import
  */
 export const initPhoneCallbackIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONECALLBACK }, ...properties);
+    initIcon(element, { additionalClassName: 'phoneCallbackIcon', url: URL_PHONECALLBACK }, ...properties);
 }
 
 /**

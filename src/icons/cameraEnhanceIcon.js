@@ -15,7 +15,7 @@ const URL_CAMERAENHANCE = new URL('../../assets/icons/cameraEnhance.svg', import
  */
 export const initCameraEnhanceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CAMERAENHANCE }, ...properties);
+    initIcon(element, { additionalClassName: 'cameraEnhanceIcon', url: URL_CAMERAENHANCE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LIBRARYBOOKS = new URL('../../assets/icons/libraryBooks.svg', import.m
  */
 export const initLibraryBooksIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIBRARYBOOKS }, ...properties);
+    initIcon(element, { additionalClassName: 'libraryBooksIcon', url: URL_LIBRARYBOOKS }, ...properties);
 }
 
 /**

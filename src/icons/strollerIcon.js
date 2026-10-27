@@ -15,7 +15,7 @@ const URL_STROLLER = new URL('../../assets/icons/stroller.svg', import.meta.url)
  */
 export const initStrollerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STROLLER }, ...properties);
+    initIcon(element, { additionalClassName: 'strollerIcon', url: URL_STROLLER }, ...properties);
 }
 
 /**

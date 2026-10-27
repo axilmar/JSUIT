@@ -15,7 +15,7 @@ const URL_SHARELOCATIONOUTLINED = new URL('../../assets/icons/shareLocationOutli
  */
 export const initShareLocationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHARELOCATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'shareLocationOutlinedIcon', url: URL_SHARELOCATIONOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_NOADULTCONTENT = new URL('../../assets/icons/noAdultContent.svg', impo
  */
 export const initNoAdultContentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOADULTCONTENT }, ...properties);
+    initIcon(element, { additionalClassName: 'noAdultContentIcon', url: URL_NOADULTCONTENT }, ...properties);
 }
 
 /**

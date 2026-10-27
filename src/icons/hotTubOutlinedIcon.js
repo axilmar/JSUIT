@@ -15,7 +15,7 @@ const URL_HOTTUBOUTLINED = new URL('../../assets/icons/hotTubOutlined.svg', impo
  */
 export const initHotTubOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOTTUBOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hotTubOutlinedIcon', url: URL_HOTTUBOUTLINED }, ...properties);
 }
 
 /**

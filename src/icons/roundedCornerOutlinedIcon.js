@@ -15,7 +15,7 @@ const URL_ROUNDEDCORNEROUTLINED = new URL('../../assets/icons/roundedCornerOutli
  */
 export const initRoundedCornerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROUNDEDCORNEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'roundedCornerOutlinedIcon', url: URL_ROUNDEDCORNEROUTLINED }, ...properties);
 }
 
 /**

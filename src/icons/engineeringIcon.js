@@ -15,7 +15,7 @@ const URL_ENGINEERING = new URL('../../assets/icons/engineering.svg', import.met
  */
 export const initEngineeringIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ENGINEERING }, ...properties);
+    initIcon(element, { additionalClassName: 'engineeringIcon', url: URL_ENGINEERING }, ...properties);
 }
 
 /**

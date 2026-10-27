@@ -15,7 +15,7 @@ const URL_LOCALAIRPORT = new URL('../../assets/icons/localAirport.svg', import.m
  */
 export const initLocalAirportIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALAIRPORT }, ...properties);
+    initIcon(element, { additionalClassName: 'localAirportIcon', url: URL_LOCALAIRPORT }, ...properties);
 }
 
 /**

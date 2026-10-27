@@ -15,7 +15,7 @@ const URL_BEDTIMEOUTLINED = new URL('../../assets/icons/bedtimeOutlined.svg', im
  */
 export const initBedtimeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BEDTIMEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bedtimeOutlinedIcon', url: URL_BEDTIMEOUTLINED }, ...properties);
 }
 
 /**

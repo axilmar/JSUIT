@@ -15,7 +15,7 @@ const URL_MONEYOFFCSRED = new URL('../../assets/icons/moneyOffCsred.svg', import
  */
 export const initMoneyOffCsredIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MONEYOFFCSRED }, ...properties);
+    initIcon(element, { additionalClassName: 'moneyOffCsredIcon', url: URL_MONEYOFFCSRED }, ...properties);
 }
 
 /**

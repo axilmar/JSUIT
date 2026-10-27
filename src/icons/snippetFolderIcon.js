@@ -15,7 +15,7 @@ const URL_SNIPPETFOLDER = new URL('../../assets/icons/snippetFolder.svg', import
  */
 export const initSnippetFolderIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SNIPPETFOLDER }, ...properties);
+    initIcon(element, { additionalClassName: 'snippetFolderIcon', url: URL_SNIPPETFOLDER }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_GPSFIXEDOUTLINED = new URL('../../assets/icons/gpsFixedOutlined.svg', 
  */
 export const initGpsFixedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GPSFIXEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'gpsFixedOutlinedIcon', url: URL_GPSFIXEDOUTLINED }, ...properties);
 }
 
 /**

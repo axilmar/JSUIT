@@ -15,7 +15,7 @@ const URL_NOFLASHOUTLINED = new URL('../../assets/icons/noFlashOutlined.svg', im
  */
 export const initNoFlashOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOFLASHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'noFlashOutlinedIcon', url: URL_NOFLASHOUTLINED }, ...properties);
 }
 
 /**

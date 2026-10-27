@@ -15,7 +15,7 @@ const URL_MMS = new URL('../../assets/icons/mms.svg', import.meta.url).href;
  */
 export const initMmsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MMS }, ...properties);
+    initIcon(element, { additionalClassName: 'mmsIcon', url: URL_MMS }, ...properties);
 }
 
 /**

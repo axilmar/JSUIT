@@ -15,7 +15,7 @@ const URL_QUESTIONANSWER = new URL('../../assets/icons/questionAnswer.svg', impo
  */
 export const initQuestionAnswerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUESTIONANSWER }, ...properties);
+    initIcon(element, { additionalClassName: 'questionAnswerIcon', url: URL_QUESTIONANSWER }, ...properties);
 }
 
 /**

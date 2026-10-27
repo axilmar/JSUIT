@@ -15,7 +15,7 @@ const URL_TROUBLESHOOT = new URL('../../assets/icons/troubleshoot.svg', import.m
  */
 export const initTroubleshootIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TROUBLESHOOT }, ...properties);
+    initIcon(element, { additionalClassName: 'troubleshootIcon', url: URL_TROUBLESHOOT }, ...properties);
 }
 
 /**

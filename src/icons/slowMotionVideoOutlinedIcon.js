@@ -15,7 +15,7 @@ const URL_SLOWMOTIONVIDEOOUTLINED = new URL('../../assets/icons/slowMotionVideoO
  */
 export const initSlowMotionVideoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SLOWMOTIONVIDEOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'slowMotionVideoOutlinedIcon', url: URL_SLOWMOTIONVIDEOOUTLINED }, ...properties);
 }
 
 /**

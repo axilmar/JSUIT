@@ -15,7 +15,7 @@ const URL_CONTACTLESSOUTLINED = new URL('../../assets/icons/contactlessOutlined.
  */
 export const initContactlessOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTACTLESSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'contactlessOutlinedIcon', url: URL_CONTACTLESSOUTLINED }, ...properties);
 }
 
 /**

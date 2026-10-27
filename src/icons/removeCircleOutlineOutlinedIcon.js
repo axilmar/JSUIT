@@ -15,7 +15,7 @@ const URL_REMOVECIRCLEOUTLINEOUTLINED = new URL('../../assets/icons/removeCircle
  */
 export const initRemoveCircleOutlineOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REMOVECIRCLEOUTLINEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'removeCircleOutlineOutlinedIcon', url: URL_REMOVECIRCLEOUTLINEOUTLINED }, ...properties);
 }
 
 /**

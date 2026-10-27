@@ -15,7 +15,7 @@ const URL_FORMATBOLDOUTLINED = new URL('../../assets/icons/formatBoldOutlined.sv
  */
 export const initFormatBoldOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATBOLDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatBoldOutlinedIcon', url: URL_FORMATBOLDOUTLINED }, ...properties);
 }
 
 /**

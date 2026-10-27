@@ -15,7 +15,7 @@ const URL_MANAGEACCOUNTS = new URL('../../assets/icons/manageAccounts.svg', impo
  */
 export const initManageAccountsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MANAGEACCOUNTS }, ...properties);
+    initIcon(element, { additionalClassName: 'manageAccountsIcon', url: URL_MANAGEACCOUNTS }, ...properties);
 }
 
 /**

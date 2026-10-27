@@ -15,7 +15,7 @@ const URL_THUNDERSTORM = new URL('../../assets/icons/thunderstorm.svg', import.m
  */
 export const initThunderstormIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THUNDERSTORM }, ...properties);
+    initIcon(element, { additionalClassName: 'thunderstormIcon', url: URL_THUNDERSTORM }, ...properties);
 }
 
 /**

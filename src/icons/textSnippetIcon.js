@@ -15,7 +15,7 @@ const URL_TEXTSNIPPET = new URL('../../assets/icons/textSnippet.svg', import.met
  */
 export const initTextSnippetIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTSNIPPET }, ...properties);
+    initIcon(element, { additionalClassName: 'textSnippetIcon', url: URL_TEXTSNIPPET }, ...properties);
 }
 
 /**

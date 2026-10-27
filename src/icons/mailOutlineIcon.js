@@ -15,7 +15,7 @@ const URL_MAILOUTLINE = new URL('../../assets/icons/mailOutline.svg', import.met
  */
 export const initMailOutlineIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MAILOUTLINE }, ...properties);
+    initIcon(element, { additionalClassName: 'mailOutlineIcon', url: URL_MAILOUTLINE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_COMPRESSOUTLINED = new URL('../../assets/icons/compressOutlined.svg', 
  */
 export const initCompressOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMPRESSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'compressOutlinedIcon', url: URL_COMPRESSOUTLINED }, ...properties);
 }
 
 /**

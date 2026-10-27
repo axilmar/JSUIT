@@ -15,7 +15,7 @@ const URL_OUTBOUND = new URL('../../assets/icons/outbound.svg', import.meta.url)
  */
 export const initOutboundIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OUTBOUND }, ...properties);
+    initIcon(element, { additionalClassName: 'outboundIcon', url: URL_OUTBOUND }, ...properties);
 }
 
 /**

@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initFeGaussianBlur = (element, ...properties) => {
     console.assert(element instanceof SVGFEGaussianBlurElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'feGaussianBlur' }, ...properties);
 }
 
 /**

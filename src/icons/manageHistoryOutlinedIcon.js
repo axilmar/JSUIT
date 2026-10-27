@@ -15,7 +15,7 @@ const URL_MANAGEHISTORYOUTLINED = new URL('../../assets/icons/manageHistoryOutli
  */
 export const initManageHistoryOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MANAGEHISTORYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'manageHistoryOutlinedIcon', url: URL_MANAGEHISTORYOUTLINED }, ...properties);
 }
 
 /**

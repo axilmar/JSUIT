@@ -15,7 +15,7 @@ const URL_STAYPRIMARYLANDSCAPE = new URL('../../assets/icons/stayPrimaryLandscap
  */
 export const initStayPrimaryLandscapeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STAYPRIMARYLANDSCAPE }, ...properties);
+    initIcon(element, { additionalClassName: 'stayPrimaryLandscapeIcon', url: URL_STAYPRIMARYLANDSCAPE }, ...properties);
 }
 
 /**

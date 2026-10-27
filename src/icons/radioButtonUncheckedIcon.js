@@ -15,7 +15,7 @@ const URL_RADIOBUTTONUNCHECKED = new URL('../../assets/icons/radioButtonUnchecke
  */
 export const initRadioButtonUncheckedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RADIOBUTTONUNCHECKED }, ...properties);
+    initIcon(element, { additionalClassName: 'radioButtonUncheckedIcon', url: URL_RADIOBUTTONUNCHECKED }, ...properties);
 }
 
 /**

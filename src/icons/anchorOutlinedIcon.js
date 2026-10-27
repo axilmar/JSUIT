@@ -15,7 +15,7 @@ const URL_ANCHOROUTLINED = new URL('../../assets/icons/anchorOutlined.svg', impo
  */
 export const initAnchorOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ANCHOROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'anchorOutlinedIcon', url: URL_ANCHOROUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_RECORDVOICEOVER = new URL('../../assets/icons/recordVoiceOver.svg', im
  */
 export const initRecordVoiceOverIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RECORDVOICEOVER }, ...properties);
+    initIcon(element, { additionalClassName: 'recordVoiceOverIcon', url: URL_RECORDVOICEOVER }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CLOUDUPLOAD = new URL('../../assets/icons/cloudUpload.svg', import.met
  */
 export const initCloudUploadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOUDUPLOAD }, ...properties);
+    initIcon(element, { additionalClassName: 'cloudUploadIcon', url: URL_CLOUDUPLOAD }, ...properties);
 }
 
 /**

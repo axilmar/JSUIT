@@ -15,7 +15,7 @@ const URL_WEBOUTLINED = new URL('../../assets/icons/webOutlined.svg', import.met
  */
 export const initWebOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WEBOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'webOutlinedIcon', url: URL_WEBOUTLINED }, ...properties);
 }
 
 /**

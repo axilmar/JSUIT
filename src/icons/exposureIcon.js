@@ -15,7 +15,7 @@ const URL_EXPOSURE = new URL('../../assets/icons/exposure.svg', import.meta.url)
  */
 export const initExposureIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXPOSURE }, ...properties);
+    initIcon(element, { additionalClassName: 'exposureIcon', url: URL_EXPOSURE }, ...properties);
 }
 
 /**

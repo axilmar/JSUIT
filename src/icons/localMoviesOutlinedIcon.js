@@ -15,7 +15,7 @@ const URL_LOCALMOVIESOUTLINED = new URL('../../assets/icons/localMoviesOutlined.
  */
 export const initLocalMoviesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALMOVIESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localMoviesOutlinedIcon', url: URL_LOCALMOVIESOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TODAY = new URL('../../assets/icons/today.svg', import.meta.url).href;
  */
 export const initTodayIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TODAY }, ...properties);
+    initIcon(element, { additionalClassName: 'todayIcon', url: URL_TODAY }, ...properties);
 }
 
 /**

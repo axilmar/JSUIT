@@ -15,7 +15,7 @@ const URL_ARCHITECTURE = new URL('../../assets/icons/architecture.svg', import.m
  */
 export const initArchitectureIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARCHITECTURE }, ...properties);
+    initIcon(element, { additionalClassName: 'architectureIcon', url: URL_ARCHITECTURE }, ...properties);
 }
 
 /**

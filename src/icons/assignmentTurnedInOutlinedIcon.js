@@ -15,7 +15,7 @@ const URL_ASSIGNMENTTURNEDINOUTLINED = new URL('../../assets/icons/assignmentTur
  */
 export const initAssignmentTurnedInOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ASSIGNMENTTURNEDINOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'assignmentTurnedInOutlinedIcon', url: URL_ASSIGNMENTTURNEDINOUTLINED }, ...properties);
 }
 
 /**

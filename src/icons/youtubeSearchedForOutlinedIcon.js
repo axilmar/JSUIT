@@ -15,7 +15,7 @@ const URL_YOUTUBESEARCHEDFOROUTLINED = new URL('../../assets/icons/youtubeSearch
  */
 export const initYoutubeSearchedForOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_YOUTUBESEARCHEDFOROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'youtubeSearchedForOutlinedIcon', url: URL_YOUTUBESEARCHEDFOROUTLINED }, ...properties);
 }
 
 /**

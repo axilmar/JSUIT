@@ -15,7 +15,7 @@ const URL_LYRICSOUTLINED = new URL('../../assets/icons/lyricsOutlined.svg', impo
  */
 export const initLyricsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LYRICSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'lyricsOutlinedIcon', url: URL_LYRICSOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_WRONGLOCATIONOUTLINED = new URL('../../assets/icons/wrongLocationOutli
  */
 export const initWrongLocationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WRONGLOCATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wrongLocationOutlinedIcon', url: URL_WRONGLOCATIONOUTLINED }, ...properties);
 }
 
 /**

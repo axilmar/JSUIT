@@ -15,7 +15,7 @@ const URL_IMAGENOTSUPPORTEDOUTLINED = new URL('../../assets/icons/imageNotSuppor
  */
 export const initImageNotSupportedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_IMAGENOTSUPPORTEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'imageNotSupportedOutlinedIcon', url: URL_IMAGENOTSUPPORTEDOUTLINED }, ...properties);
 }
 
 /**

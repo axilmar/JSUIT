@@ -15,7 +15,7 @@ const URL_BROWSERUPDATEDOUTLINED = new URL('../../assets/icons/browserUpdatedOut
  */
 export const initBrowserUpdatedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BROWSERUPDATEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'browserUpdatedOutlinedIcon', url: URL_BROWSERUPDATEDOUTLINED }, ...properties);
 }
 
 /**

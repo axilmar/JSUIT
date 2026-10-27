@@ -15,7 +15,7 @@ const URL_REPORTOFFOUTLINED = new URL('../../assets/icons/reportOffOutlined.svg'
  */
 export const initReportOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REPORTOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'reportOffOutlinedIcon', url: URL_REPORTOFFOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_OUTBOX = new URL('../../assets/icons/outbox.svg', import.meta.url).hre
  */
 export const initOutboxIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OUTBOX }, ...properties);
+    initIcon(element, { additionalClassName: 'outboxIcon', url: URL_OUTBOX }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LOCALDINING = new URL('../../assets/icons/localDining.svg', import.met
  */
 export const initLocalDiningIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALDINING }, ...properties);
+    initIcon(element, { additionalClassName: 'localDiningIcon', url: URL_LOCALDINING }, ...properties);
 }
 
 /**

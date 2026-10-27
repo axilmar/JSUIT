@@ -15,7 +15,7 @@ const URL_FACE3OUTLINED = new URL('../../assets/icons/face3Outlined.svg', import
  */
 export const initFace3OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FACE3OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'face3OutlinedIcon', url: URL_FACE3OUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_NOTIFICATIONIMPORTANTOUTLINED = new URL('../../assets/icons/notificati
  */
 export const initNotificationImportantOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTIFICATIONIMPORTANTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'notificationImportantOutlinedIcon', url: URL_NOTIFICATIONIMPORTANTOUTLINED }, ...properties);
 }
 
 /**

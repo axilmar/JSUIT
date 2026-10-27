@@ -15,7 +15,7 @@ const URL_PUNCHCLOCKOUTLINED = new URL('../../assets/icons/punchClockOutlined.sv
  */
 export const initPunchClockOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PUNCHCLOCKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'punchClockOutlinedIcon', url: URL_PUNCHCLOCKOUTLINED }, ...properties);
 }
 
 /**

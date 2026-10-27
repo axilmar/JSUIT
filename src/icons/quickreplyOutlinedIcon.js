@@ -15,7 +15,7 @@ const URL_QUICKREPLYOUTLINED = new URL('../../assets/icons/quickreplyOutlined.sv
  */
 export const initQuickreplyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUICKREPLYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'quickreplyOutlinedIcon', url: URL_QUICKREPLYOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ALLINCLUSIVE = new URL('../../assets/icons/allInclusive.svg', import.m
  */
 export const initAllInclusiveIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALLINCLUSIVE }, ...properties);
+    initIcon(element, { additionalClassName: 'allInclusiveIcon', url: URL_ALLINCLUSIVE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_BRIGHTNESSHIGHOUTLINED = new URL('../../assets/icons/brightnessHighOut
  */
 export const initBrightnessHighOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BRIGHTNESSHIGHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'brightnessHighOutlinedIcon', url: URL_BRIGHTNESSHIGHOUTLINED }, ...properties);
 }
 
 /**

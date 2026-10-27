@@ -15,7 +15,7 @@ const URL_CREATE = new URL('../../assets/icons/create.svg', import.meta.url).hre
  */
 export const initCreateIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CREATE }, ...properties);
+    initIcon(element, { additionalClassName: 'createIcon', url: URL_CREATE }, ...properties);
 }
 
 /**

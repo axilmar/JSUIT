@@ -15,7 +15,7 @@ const URL_NEARMEDISABLEDOUTLINED = new URL('../../assets/icons/nearMeDisabledOut
  */
 export const initNearMeDisabledOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NEARMEDISABLEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'nearMeDisabledOutlinedIcon', url: URL_NEARMEDISABLEDOUTLINED }, ...properties);
 }
 
 /**

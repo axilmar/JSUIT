@@ -15,7 +15,7 @@ const URL_TIMER3SELECT = new URL('../../assets/icons/timer3Select.svg', import.m
  */
 export const initTimer3SelectIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TIMER3SELECT }, ...properties);
+    initIcon(element, { additionalClassName: 'timer3SelectIcon', url: URL_TIMER3SELECT }, ...properties);
 }
 
 /**

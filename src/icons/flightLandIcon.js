@@ -15,7 +15,7 @@ const URL_FLIGHTLAND = new URL('../../assets/icons/flightLand.svg', import.meta.
  */
 export const initFlightLandIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLIGHTLAND }, ...properties);
+    initIcon(element, { additionalClassName: 'flightLandIcon', url: URL_FLIGHTLAND }, ...properties);
 }
 
 /**

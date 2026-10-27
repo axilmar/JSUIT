@@ -15,7 +15,7 @@ const URL_VIEWSTREAM = new URL('../../assets/icons/viewStream.svg', import.meta.
  */
 export const initViewStreamIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWSTREAM }, ...properties);
+    initIcon(element, { additionalClassName: 'viewStreamIcon', url: URL_VIEWSTREAM }, ...properties);
 }
 
 /**

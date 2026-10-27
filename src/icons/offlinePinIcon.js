@@ -15,7 +15,7 @@ const URL_OFFLINEPIN = new URL('../../assets/icons/offlinePin.svg', import.meta.
  */
 export const initOfflinePinIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OFFLINEPIN }, ...properties);
+    initIcon(element, { additionalClassName: 'offlinePinIcon', url: URL_OFFLINEPIN }, ...properties);
 }
 
 /**

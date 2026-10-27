@@ -15,7 +15,7 @@ const URL_HLSOFF = new URL('../../assets/icons/hlsOff.svg', import.meta.url).hre
  */
 export const initHlsOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HLSOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'hlsOffIcon', url: URL_HLSOFF }, ...properties);
 }
 
 /**

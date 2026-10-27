@@ -15,7 +15,7 @@ const URL_ROTATE90DEGREESCW = new URL('../../assets/icons/rotate90DegreesCw.svg'
  */
 export const initRotate90DegreesCwIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROTATE90DEGREESCW }, ...properties);
+    initIcon(element, { additionalClassName: 'rotate90DegreesCwIcon', url: URL_ROTATE90DEGREESCW }, ...properties);
 }
 
 /**

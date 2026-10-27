@@ -15,7 +15,7 @@ const URL_CACHED = new URL('../../assets/icons/cached.svg', import.meta.url).hre
  */
 export const initCachedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CACHED }, ...properties);
+    initIcon(element, { additionalClassName: 'cachedIcon', url: URL_CACHED }, ...properties);
 }
 
 /**

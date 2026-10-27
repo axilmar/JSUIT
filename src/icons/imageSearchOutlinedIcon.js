@@ -15,7 +15,7 @@ const URL_IMAGESEARCHOUTLINED = new URL('../../assets/icons/imageSearchOutlined.
  */
 export const initImageSearchOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_IMAGESEARCHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'imageSearchOutlinedIcon', url: URL_IMAGESEARCHOUTLINED }, ...properties);
 }
 
 /**

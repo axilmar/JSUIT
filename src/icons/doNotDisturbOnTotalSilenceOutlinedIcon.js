@@ -15,7 +15,7 @@ const URL_DONOTDISTURBONTOTALSILENCEOUTLINED = new URL('../../assets/icons/doNot
  */
 export const initDoNotDisturbOnTotalSilenceOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DONOTDISTURBONTOTALSILENCEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'doNotDisturbOnTotalSilenceOutlinedIcon', url: URL_DONOTDISTURBONTOTALSILENCEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_POSTADD = new URL('../../assets/icons/postAdd.svg', import.meta.url).h
  */
 export const initPostAddIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POSTADD }, ...properties);
+    initIcon(element, { additionalClassName: 'postAddIcon', url: URL_POSTADD }, ...properties);
 }
 
 /**

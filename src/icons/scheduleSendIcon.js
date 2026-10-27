@@ -15,7 +15,7 @@ const URL_SCHEDULESEND = new URL('../../assets/icons/scheduleSend.svg', import.m
  */
 export const initScheduleSendIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCHEDULESEND }, ...properties);
+    initIcon(element, { additionalClassName: 'scheduleSendIcon', url: URL_SCHEDULESEND }, ...properties);
 }
 
 /**

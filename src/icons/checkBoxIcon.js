@@ -15,7 +15,7 @@ const URL_CHECKBOX = new URL('../../assets/icons/checkBox.svg', import.meta.url)
  */
 export const initCheckBoxIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHECKBOX }, ...properties);
+    initIcon(element, { additionalClassName: 'checkBoxIcon', url: URL_CHECKBOX }, ...properties);
 }
 
 /**

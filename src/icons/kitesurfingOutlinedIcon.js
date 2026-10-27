@@ -15,7 +15,7 @@ const URL_KITESURFINGOUTLINED = new URL('../../assets/icons/kitesurfingOutlined.
  */
 export const initKitesurfingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KITESURFINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'kitesurfingOutlinedIcon', url: URL_KITESURFINGOUTLINED }, ...properties);
 }
 
 /**

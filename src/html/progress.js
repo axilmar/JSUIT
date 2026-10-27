@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initProgress = (element, ...properties) => {
     console.assert(element instanceof HTMLProgressElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'progress' }, ...properties);
 }
 
 /**

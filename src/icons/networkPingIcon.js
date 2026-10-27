@@ -15,7 +15,7 @@ const URL_NETWORKPING = new URL('../../assets/icons/networkPing.svg', import.met
  */
 export const initNetworkPingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NETWORKPING }, ...properties);
+    initIcon(element, { additionalClassName: 'networkPingIcon', url: URL_NETWORKPING }, ...properties);
 }
 
 /**

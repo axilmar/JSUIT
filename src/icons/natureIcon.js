@@ -15,7 +15,7 @@ const URL_NATURE = new URL('../../assets/icons/nature.svg', import.meta.url).hre
  */
 export const initNatureIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NATURE }, ...properties);
+    initIcon(element, { additionalClassName: 'natureIcon', url: URL_NATURE }, ...properties);
 }
 
 /**

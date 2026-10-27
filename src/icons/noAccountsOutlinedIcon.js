@@ -15,7 +15,7 @@ const URL_NOACCOUNTSOUTLINED = new URL('../../assets/icons/noAccountsOutlined.sv
  */
 export const initNoAccountsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOACCOUNTSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'noAccountsOutlinedIcon', url: URL_NOACCOUNTSOUTLINED }, ...properties);
 }
 
 /**

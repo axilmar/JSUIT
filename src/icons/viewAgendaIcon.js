@@ -15,7 +15,7 @@ const URL_VIEWAGENDA = new URL('../../assets/icons/viewAgenda.svg', import.meta.
  */
 export const initViewAgendaIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWAGENDA }, ...properties);
+    initIcon(element, { additionalClassName: 'viewAgendaIcon', url: URL_VIEWAGENDA }, ...properties);
 }
 
 /**

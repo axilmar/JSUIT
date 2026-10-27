@@ -15,7 +15,7 @@ const URL_FORMATSHAPES = new URL('../../assets/icons/formatShapes.svg', import.m
  */
 export const initFormatShapesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATSHAPES }, ...properties);
+    initIcon(element, { additionalClassName: 'formatShapesIcon', url: URL_FORMATSHAPES }, ...properties);
 }
 
 /**

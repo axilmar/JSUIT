@@ -15,7 +15,7 @@ const URL_BORDERTOPOUTLINED = new URL('../../assets/icons/borderTopOutlined.svg'
  */
 export const initBorderTopOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BORDERTOPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'borderTopOutlinedIcon', url: URL_BORDERTOPOUTLINED }, ...properties);
 }
 
 /**

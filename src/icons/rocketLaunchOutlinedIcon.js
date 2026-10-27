@@ -15,7 +15,7 @@ const URL_ROCKETLAUNCHOUTLINED = new URL('../../assets/icons/rocketLaunchOutline
  */
 export const initRocketLaunchOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROCKETLAUNCHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'rocketLaunchOutlinedIcon', url: URL_ROCKETLAUNCHOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TTYOUTLINED = new URL('../../assets/icons/ttyOutlined.svg', import.met
  */
 export const initTtyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TTYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'ttyOutlinedIcon', url: URL_TTYOUTLINED }, ...properties);
 }
 
 /**

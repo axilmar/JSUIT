@@ -15,7 +15,7 @@ const URL_CENTERFOCUSSTRONGOUTLINED = new URL('../../assets/icons/centerFocusStr
  */
 export const initCenterFocusStrongOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CENTERFOCUSSTRONGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'centerFocusStrongOutlinedIcon', url: URL_CENTERFOCUSSTRONGOUTLINED }, ...properties);
 }
 
 /**

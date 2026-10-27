@@ -15,7 +15,7 @@ const URL_MICEXTERNALOFFOUTLINED = new URL('../../assets/icons/micExternalOffOut
  */
 export const initMicExternalOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MICEXTERNALOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'micExternalOffOutlinedIcon', url: URL_MICEXTERNALOFFOUTLINED }, ...properties);
 }
 
 /**

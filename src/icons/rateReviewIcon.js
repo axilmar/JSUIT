@@ -15,7 +15,7 @@ const URL_RATEREVIEW = new URL('../../assets/icons/rateReview.svg', import.meta.
  */
 export const initRateReviewIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RATEREVIEW }, ...properties);
+    initIcon(element, { additionalClassName: 'rateReviewIcon', url: URL_RATEREVIEW }, ...properties);
 }
 
 /**

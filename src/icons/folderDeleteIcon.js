@@ -15,7 +15,7 @@ const URL_FOLDERDELETE = new URL('../../assets/icons/folderDelete.svg', import.m
  */
 export const initFolderDeleteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOLDERDELETE }, ...properties);
+    initIcon(element, { additionalClassName: 'folderDeleteIcon', url: URL_FOLDERDELETE }, ...properties);
 }
 
 /**

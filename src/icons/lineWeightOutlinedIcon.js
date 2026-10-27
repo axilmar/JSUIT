@@ -15,7 +15,7 @@ const URL_LINEWEIGHTOUTLINED = new URL('../../assets/icons/lineWeightOutlined.sv
  */
 export const initLineWeightOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LINEWEIGHTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'lineWeightOutlinedIcon', url: URL_LINEWEIGHTOUTLINED }, ...properties);
 }
 
 /**

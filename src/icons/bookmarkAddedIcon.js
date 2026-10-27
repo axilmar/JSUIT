@@ -15,7 +15,7 @@ const URL_BOOKMARKADDED = new URL('../../assets/icons/bookmarkAdded.svg', import
  */
 export const initBookmarkAddedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BOOKMARKADDED }, ...properties);
+    initIcon(element, { additionalClassName: 'bookmarkAddedIcon', url: URL_BOOKMARKADDED }, ...properties);
 }
 
 /**

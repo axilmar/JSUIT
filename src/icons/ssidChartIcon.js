@@ -15,7 +15,7 @@ const URL_SSIDCHART = new URL('../../assets/icons/ssidChart.svg', import.meta.ur
  */
 export const initSsidChartIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SSIDCHART }, ...properties);
+    initIcon(element, { additionalClassName: 'ssidChartIcon', url: URL_SSIDCHART }, ...properties);
 }
 
 /**

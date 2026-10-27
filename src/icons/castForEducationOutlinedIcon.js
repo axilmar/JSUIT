@@ -15,7 +15,7 @@ const URL_CASTFOREDUCATIONOUTLINED = new URL('../../assets/icons/castForEducatio
  */
 export const initCastForEducationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CASTFOREDUCATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'castForEducationOutlinedIcon', url: URL_CASTFOREDUCATIONOUTLINED }, ...properties);
 }
 
 /**

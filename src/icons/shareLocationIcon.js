@@ -15,7 +15,7 @@ const URL_SHARELOCATION = new URL('../../assets/icons/shareLocation.svg', import
  */
 export const initShareLocationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHARELOCATION }, ...properties);
+    initIcon(element, { additionalClassName: 'shareLocationIcon', url: URL_SHARELOCATION }, ...properties);
 }
 
 /**

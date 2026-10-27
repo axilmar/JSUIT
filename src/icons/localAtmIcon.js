@@ -15,7 +15,7 @@ const URL_LOCALATM = new URL('../../assets/icons/localAtm.svg', import.meta.url)
  */
 export const initLocalAtmIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALATM }, ...properties);
+    initIcon(element, { additionalClassName: 'localAtmIcon', url: URL_LOCALATM }, ...properties);
 }
 
 /**

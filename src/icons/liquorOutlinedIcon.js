@@ -15,7 +15,7 @@ const URL_LIQUOROUTLINED = new URL('../../assets/icons/liquorOutlined.svg', impo
  */
 export const initLiquorOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIQUOROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'liquorOutlinedIcon', url: URL_LIQUOROUTLINED }, ...properties);
 }
 
 /**

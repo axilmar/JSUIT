@@ -15,7 +15,7 @@ const URL_NOSIM = new URL('../../assets/icons/noSim.svg', import.meta.url).href;
  */
 export const initNoSimIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOSIM }, ...properties);
+    initIcon(element, { additionalClassName: 'noSimIcon', url: URL_NOSIM }, ...properties);
 }
 
 /**

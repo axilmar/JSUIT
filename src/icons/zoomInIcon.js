@@ -15,7 +15,7 @@ const URL_ZOOMIN = new URL('../../assets/icons/zoomIn.svg', import.meta.url).hre
  */
 export const initZoomInIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ZOOMIN }, ...properties);
+    initIcon(element, { additionalClassName: 'zoomInIcon', url: URL_ZOOMIN }, ...properties);
 }
 
 /**

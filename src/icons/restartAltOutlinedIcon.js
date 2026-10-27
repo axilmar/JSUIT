@@ -15,7 +15,7 @@ const URL_RESTARTALTOUTLINED = new URL('../../assets/icons/restartAltOutlined.sv
  */
 export const initRestartAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RESTARTALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'restartAltOutlinedIcon', url: URL_RESTARTALTOUTLINED }, ...properties);
 }
 
 /**

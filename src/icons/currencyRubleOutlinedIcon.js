@@ -15,7 +15,7 @@ const URL_CURRENCYRUBLEOUTLINED = new URL('../../assets/icons/currencyRubleOutli
  */
 export const initCurrencyRubleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CURRENCYRUBLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'currencyRubleOutlinedIcon', url: URL_CURRENCYRUBLEOUTLINED }, ...properties);
 }
 
 /**

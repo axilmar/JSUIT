@@ -15,7 +15,7 @@ const URL_TOUR = new URL('../../assets/icons/tour.svg', import.meta.url).href;
  */
 export const initTourIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TOUR }, ...properties);
+    initIcon(element, { additionalClassName: 'tourIcon', url: URL_TOUR }, ...properties);
 }
 
 /**

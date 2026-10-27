@@ -15,7 +15,7 @@ const URL_NOCRASH = new URL('../../assets/icons/noCrash.svg', import.meta.url).h
  */
 export const initNoCrashIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOCRASH }, ...properties);
+    initIcon(element, { additionalClassName: 'noCrashIcon', url: URL_NOCRASH }, ...properties);
 }
 
 /**

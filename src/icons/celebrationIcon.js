@@ -15,7 +15,7 @@ const URL_CELEBRATION = new URL('../../assets/icons/celebration.svg', import.met
  */
 export const initCelebrationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CELEBRATION }, ...properties);
+    initIcon(element, { additionalClassName: 'celebrationIcon', url: URL_CELEBRATION }, ...properties);
 }
 
 /**

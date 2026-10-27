@@ -15,7 +15,7 @@ const URL_ARROWOUTWARD = new URL('../../assets/icons/arrowOutward.svg', import.m
  */
 export const initArrowOutwardIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARROWOUTWARD }, ...properties);
+    initIcon(element, { additionalClassName: 'arrowOutwardIcon', url: URL_ARROWOUTWARD }, ...properties);
 }
 
 /**

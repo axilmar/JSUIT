@@ -15,7 +15,7 @@ const URL_DONEOUTLINEOUTLINED = new URL('../../assets/icons/doneOutlineOutlined.
  */
 export const initDoneOutlineOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DONEOUTLINEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'doneOutlineOutlinedIcon', url: URL_DONEOUTLINEOUTLINED }, ...properties);
 }
 
 /**

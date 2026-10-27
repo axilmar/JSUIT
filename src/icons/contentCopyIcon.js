@@ -15,7 +15,7 @@ const URL_CONTENTCOPY = new URL('../../assets/icons/contentCopy.svg', import.met
  */
 export const initContentCopyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTENTCOPY }, ...properties);
+    initIcon(element, { additionalClassName: 'contentCopyIcon', url: URL_CONTENTCOPY }, ...properties);
 }
 
 /**

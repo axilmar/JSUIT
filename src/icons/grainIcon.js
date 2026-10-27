@@ -15,7 +15,7 @@ const URL_GRAIN = new URL('../../assets/icons/grain.svg', import.meta.url).href;
  */
 export const initGrainIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRAIN }, ...properties);
+    initIcon(element, { additionalClassName: 'grainIcon', url: URL_GRAIN }, ...properties);
 }
 
 /**

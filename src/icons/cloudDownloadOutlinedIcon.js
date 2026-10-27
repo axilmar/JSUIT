@@ -15,7 +15,7 @@ const URL_CLOUDDOWNLOADOUTLINED = new URL('../../assets/icons/cloudDownloadOutli
  */
 export const initCloudDownloadOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOUDDOWNLOADOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cloudDownloadOutlinedIcon', url: URL_CLOUDDOWNLOADOUTLINED }, ...properties);
 }
 
 /**

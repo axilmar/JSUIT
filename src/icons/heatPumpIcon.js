@@ -15,7 +15,7 @@ const URL_HEATPUMP = new URL('../../assets/icons/heatPump.svg', import.meta.url)
  */
 export const initHeatPumpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEATPUMP }, ...properties);
+    initIcon(element, { additionalClassName: 'heatPumpIcon', url: URL_HEATPUMP }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LOCALSEE = new URL('../../assets/icons/localSee.svg', import.meta.url)
  */
 export const initLocalSeeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALSEE }, ...properties);
+    initIcon(element, { additionalClassName: 'localSeeIcon', url: URL_LOCALSEE }, ...properties);
 }
 
 /**

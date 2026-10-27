@@ -15,7 +15,7 @@ const URL_TRANSFORMOUTLINED = new URL('../../assets/icons/transformOutlined.svg'
  */
 export const initTransformOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRANSFORMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'transformOutlinedIcon', url: URL_TRANSFORMOUTLINED }, ...properties);
 }
 
 /**

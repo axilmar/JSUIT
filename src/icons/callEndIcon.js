@@ -15,7 +15,7 @@ const URL_CALLEND = new URL('../../assets/icons/callEnd.svg', import.meta.url).h
  */
 export const initCallEndIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALLEND }, ...properties);
+    initIcon(element, { additionalClassName: 'callEndIcon', url: URL_CALLEND }, ...properties);
 }
 
 /**

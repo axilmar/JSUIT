@@ -15,7 +15,7 @@ const URL_TVOFF = new URL('../../assets/icons/tvOff.svg', import.meta.url).href;
  */
 export const initTvOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TVOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'tvOffIcon', url: URL_TVOFF }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DATASETLINKEDOUTLINED = new URL('../../assets/icons/datasetLinkedOutli
  */
 export const initDatasetLinkedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DATASETLINKEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'datasetLinkedOutlinedIcon', url: URL_DATASETLINKEDOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FIREPLACEOUTLINED = new URL('../../assets/icons/fireplaceOutlined.svg'
  */
 export const initFireplaceOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIREPLACEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fireplaceOutlinedIcon', url: URL_FIREPLACEOUTLINED }, ...properties);
 }
 
 /**

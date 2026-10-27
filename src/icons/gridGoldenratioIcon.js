@@ -15,7 +15,7 @@ const URL_GRIDGOLDENRATIO = new URL('../../assets/icons/gridGoldenratio.svg', im
  */
 export const initGridGoldenratioIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRIDGOLDENRATIO }, ...properties);
+    initIcon(element, { additionalClassName: 'gridGoldenratioIcon', url: URL_GRIDGOLDENRATIO }, ...properties);
 }
 
 /**

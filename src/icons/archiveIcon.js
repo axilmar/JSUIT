@@ -15,7 +15,7 @@ const URL_ARCHIVE = new URL('../../assets/icons/archive.svg', import.meta.url).h
  */
 export const initArchiveIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARCHIVE }, ...properties);
+    initIcon(element, { additionalClassName: 'archiveIcon', url: URL_ARCHIVE }, ...properties);
 }
 
 /**

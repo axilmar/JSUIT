@@ -15,7 +15,7 @@ const URL_BACKUPTABLEOUTLINED = new URL('../../assets/icons/backupTableOutlined.
  */
 export const initBackupTableOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BACKUPTABLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'backupTableOutlinedIcon', url: URL_BACKUPTABLEOUTLINED }, ...properties);
 }
 
 /**

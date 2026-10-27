@@ -15,7 +15,7 @@ const URL_FASTFORWARDOUTLINED = new URL('../../assets/icons/fastForwardOutlined.
  */
 export const initFastForwardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FASTFORWARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fastForwardOutlinedIcon', url: URL_FASTFORWARDOUTLINED }, ...properties);
 }
 
 /**

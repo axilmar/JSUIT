@@ -15,7 +15,7 @@ const URL_HDRPLUSOUTLINED = new URL('../../assets/icons/hdrPlusOutlined.svg', im
  */
 export const initHdrPlusOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HDRPLUSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hdrPlusOutlinedIcon', url: URL_HDRPLUSOUTLINED }, ...properties);
 }
 
 /**

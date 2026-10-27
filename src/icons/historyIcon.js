@@ -15,7 +15,7 @@ const URL_HISTORY = new URL('../../assets/icons/history.svg', import.meta.url).h
  */
 export const initHistoryIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HISTORY }, ...properties);
+    initIcon(element, { additionalClassName: 'historyIcon', url: URL_HISTORY }, ...properties);
 }
 
 /**

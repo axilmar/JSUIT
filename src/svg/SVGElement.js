@@ -10,5 +10,5 @@ import { initElement } from "../core/Element.js";
  */
 export const initSVGElement = (svgElement, ...properties) => {
     console.assert(svgElement instanceof SVGElement);
-    initElement(svgElement, ...properties);
+    initElement(svgElement, { additionalClassName: 'SVGElement' }, ...properties);
 }

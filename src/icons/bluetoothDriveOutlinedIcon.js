@@ -15,7 +15,7 @@ const URL_BLUETOOTHDRIVEOUTLINED = new URL('../../assets/icons/bluetoothDriveOut
  */
 export const initBluetoothDriveOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLUETOOTHDRIVEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bluetoothDriveOutlinedIcon', url: URL_BLUETOOTHDRIVEOUTLINED }, ...properties);
 }
 
 /**

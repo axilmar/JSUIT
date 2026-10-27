@@ -15,7 +15,7 @@ const URL_LAYERSCLEAROUTLINED = new URL('../../assets/icons/layersClearOutlined.
  */
 export const initLayersClearOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LAYERSCLEAROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'layersClearOutlinedIcon', url: URL_LAYERSCLEAROUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TABLECHARTOUTLINED = new URL('../../assets/icons/tableChartOutlined.sv
  */
 export const initTableChartOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TABLECHARTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tableChartOutlinedIcon', url: URL_TABLECHARTOUTLINED }, ...properties);
 }
 
 /**

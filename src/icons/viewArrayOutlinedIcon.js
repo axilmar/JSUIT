@@ -15,7 +15,7 @@ const URL_VIEWARRAYOUTLINED = new URL('../../assets/icons/viewArrayOutlined.svg'
  */
 export const initViewArrayOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWARRAYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewArrayOutlinedIcon', url: URL_VIEWARRAYOUTLINED }, ...properties);
 }
 
 /**

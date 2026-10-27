@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initOutput = (element, ...properties) => {
     console.assert(element instanceof HTMLOutputElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'output' }, ...properties);
 }
 
 /**

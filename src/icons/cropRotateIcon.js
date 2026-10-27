@@ -15,7 +15,7 @@ const URL_CROPROTATE = new URL('../../assets/icons/cropRotate.svg', import.meta.
  */
 export const initCropRotateIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CROPROTATE }, ...properties);
+    initIcon(element, { additionalClassName: 'cropRotateIcon', url: URL_CROPROTATE }, ...properties);
 }
 
 /**

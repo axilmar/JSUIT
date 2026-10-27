@@ -15,7 +15,7 @@ const URL_ARCHITECTUREOUTLINED = new URL('../../assets/icons/architectureOutline
  */
 export const initArchitectureOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARCHITECTUREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'architectureOutlinedIcon', url: URL_ARCHITECTUREOUTLINED }, ...properties);
 }
 
 /**

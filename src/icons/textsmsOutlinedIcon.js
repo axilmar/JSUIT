@@ -15,7 +15,7 @@ const URL_TEXTSMSOUTLINED = new URL('../../assets/icons/textsmsOutlined.svg', im
  */
 export const initTextsmsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTSMSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'textsmsOutlinedIcon', url: URL_TEXTSMSOUTLINED }, ...properties);
 }
 
 /**

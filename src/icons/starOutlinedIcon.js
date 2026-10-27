@@ -15,7 +15,7 @@ const URL_STAROUTLINED = new URL('../../assets/icons/starOutlined.svg', import.m
  */
 export const initStarOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STAROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'starOutlinedIcon', url: URL_STAROUTLINED }, ...properties);
 }
 
 /**

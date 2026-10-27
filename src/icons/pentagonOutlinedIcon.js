@@ -15,7 +15,7 @@ const URL_PENTAGONOUTLINED = new URL('../../assets/icons/pentagonOutlined.svg', 
  */
 export const initPentagonOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PENTAGONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pentagonOutlinedIcon', url: URL_PENTAGONOUTLINED }, ...properties);
 }
 
 /**

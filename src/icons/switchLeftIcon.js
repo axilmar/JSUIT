@@ -15,7 +15,7 @@ const URL_SWITCHLEFT = new URL('../../assets/icons/switchLeft.svg', import.meta.
  */
 export const initSwitchLeftIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWITCHLEFT }, ...properties);
+    initIcon(element, { additionalClassName: 'switchLeftIcon', url: URL_SWITCHLEFT }, ...properties);
 }
 
 /**

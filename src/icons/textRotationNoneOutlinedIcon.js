@@ -15,7 +15,7 @@ const URL_TEXTROTATIONNONEOUTLINED = new URL('../../assets/icons/textRotationNon
  */
 export const initTextRotationNoneOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTROTATIONNONEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'textRotationNoneOutlinedIcon', url: URL_TEXTROTATIONNONEOUTLINED }, ...properties);
 }
 
 /**

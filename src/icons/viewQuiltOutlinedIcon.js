@@ -15,7 +15,7 @@ const URL_VIEWQUILTOUTLINED = new URL('../../assets/icons/viewQuiltOutlined.svg'
  */
 export const initViewQuiltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWQUILTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewQuiltOutlinedIcon', url: URL_VIEWQUILTOUTLINED }, ...properties);
 }
 
 /**

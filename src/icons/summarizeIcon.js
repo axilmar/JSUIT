@@ -15,7 +15,7 @@ const URL_SUMMARIZE = new URL('../../assets/icons/summarize.svg', import.meta.ur
  */
 export const initSummarizeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUMMARIZE }, ...properties);
+    initIcon(element, { additionalClassName: 'summarizeIcon', url: URL_SUMMARIZE }, ...properties);
 }
 
 /**

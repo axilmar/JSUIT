@@ -15,7 +15,7 @@ const URL_WBIRIDESCENTOUTLINED = new URL('../../assets/icons/wbIridescentOutline
  */
 export const initWbIridescentOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WBIRIDESCENTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wbIridescentOutlinedIcon', url: URL_WBIRIDESCENTOUTLINED }, ...properties);
 }
 
 /**

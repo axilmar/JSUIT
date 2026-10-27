@@ -15,7 +15,7 @@ const URL_TEXTINCREASE = new URL('../../assets/icons/textIncrease.svg', import.m
  */
 export const initTextIncreaseIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTINCREASE }, ...properties);
+    initIcon(element, { additionalClassName: 'textIncreaseIcon', url: URL_TEXTINCREASE }, ...properties);
 }
 
 /**

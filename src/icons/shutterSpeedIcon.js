@@ -15,7 +15,7 @@ const URL_SHUTTERSPEED = new URL('../../assets/icons/shutterSpeed.svg', import.m
  */
 export const initShutterSpeedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHUTTERSPEED }, ...properties);
+    initIcon(element, { additionalClassName: 'shutterSpeedIcon', url: URL_SHUTTERSPEED }, ...properties);
 }
 
 /**

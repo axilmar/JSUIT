@@ -15,7 +15,7 @@ const URL_WYSIWYG = new URL('../../assets/icons/wysiwyg.svg', import.meta.url).h
  */
 export const initWysiwygIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WYSIWYG }, ...properties);
+    initIcon(element, { additionalClassName: 'wysiwygIcon', url: URL_WYSIWYG }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ARROWDROPUP = new URL('../../assets/icons/arrowDropUp.svg', import.met
  */
 export const initArrowDropUpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARROWDROPUP }, ...properties);
+    initIcon(element, { additionalClassName: 'arrowDropUpIcon', url: URL_ARROWDROPUP }, ...properties);
 }
 
 /**

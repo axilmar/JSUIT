@@ -15,7 +15,7 @@ const URL_ACCESSTIME = new URL('../../assets/icons/accessTime.svg', import.meta.
  */
 export const initAccessTimeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACCESSTIME }, ...properties);
+    initIcon(element, { additionalClassName: 'accessTimeIcon', url: URL_ACCESSTIME }, ...properties);
 }
 
 /**

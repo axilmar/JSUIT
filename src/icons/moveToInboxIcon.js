@@ -15,7 +15,7 @@ const URL_MOVETOINBOX = new URL('../../assets/icons/moveToInbox.svg', import.met
  */
 export const initMoveToInboxIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOVETOINBOX }, ...properties);
+    initIcon(element, { additionalClassName: 'moveToInboxIcon', url: URL_MOVETOINBOX }, ...properties);
 }
 
 /**

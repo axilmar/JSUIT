@@ -15,7 +15,7 @@ const URL_HDRON = new URL('../../assets/icons/hdrOn.svg', import.meta.url).href;
  */
 export const initHdrOnIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HDRON }, ...properties);
+    initIcon(element, { additionalClassName: 'hdrOnIcon', url: URL_HDRON }, ...properties);
 }
 
 /**

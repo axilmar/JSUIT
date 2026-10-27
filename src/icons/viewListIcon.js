@@ -15,7 +15,7 @@ const URL_VIEWLIST = new URL('../../assets/icons/viewList.svg', import.meta.url)
  */
 export const initViewListIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWLIST }, ...properties);
+    initIcon(element, { additionalClassName: 'viewListIcon', url: URL_VIEWLIST }, ...properties);
 }
 
 /**

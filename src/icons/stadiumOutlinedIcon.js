@@ -15,7 +15,7 @@ const URL_STADIUMOUTLINED = new URL('../../assets/icons/stadiumOutlined.svg', im
  */
 export const initStadiumOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STADIUMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'stadiumOutlinedIcon', url: URL_STADIUMOUTLINED }, ...properties);
 }
 
 /**

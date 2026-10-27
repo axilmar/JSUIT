@@ -15,7 +15,7 @@ const URL_SUBTITLESOFFOUTLINED = new URL('../../assets/icons/subtitlesOffOutline
  */
 export const initSubtitlesOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUBTITLESOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'subtitlesOffOutlinedIcon', url: URL_SUBTITLESOFFOUTLINED }, ...properties);
 }
 
 /**

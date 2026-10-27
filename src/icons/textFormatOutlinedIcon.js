@@ -15,7 +15,7 @@ const URL_TEXTFORMATOUTLINED = new URL('../../assets/icons/textFormatOutlined.sv
  */
 export const initTextFormatOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTFORMATOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'textFormatOutlinedIcon', url: URL_TEXTFORMATOUTLINED }, ...properties);
 }
 
 /**

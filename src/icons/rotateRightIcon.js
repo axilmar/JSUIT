@@ -15,7 +15,7 @@ const URL_ROTATERIGHT = new URL('../../assets/icons/rotateRight.svg', import.met
  */
 export const initRotateRightIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROTATERIGHT }, ...properties);
+    initIcon(element, { additionalClassName: 'rotateRightIcon', url: URL_ROTATERIGHT }, ...properties);
 }
 
 /**

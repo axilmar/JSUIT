@@ -15,7 +15,7 @@ const URL_LOCKCLOCK = new URL('../../assets/icons/lockClock.svg', import.meta.ur
  */
 export const initLockClockIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCKCLOCK }, ...properties);
+    initIcon(element, { additionalClassName: 'lockClockIcon', url: URL_LOCKCLOCK }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_NFC = new URL('../../assets/icons/nfc.svg', import.meta.url).href;
  */
 export const initNfcIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NFC }, ...properties);
+    initIcon(element, { additionalClassName: 'nfcIcon', url: URL_NFC }, ...properties);
 }
 
 /**

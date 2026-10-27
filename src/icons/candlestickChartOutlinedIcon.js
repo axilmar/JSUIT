@@ -15,7 +15,7 @@ const URL_CANDLESTICKCHARTOUTLINED = new URL('../../assets/icons/candlestickChar
  */
 export const initCandlestickChartOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CANDLESTICKCHARTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'candlestickChartOutlinedIcon', url: URL_CANDLESTICKCHARTOUTLINED }, ...properties);
 }
 
 /**

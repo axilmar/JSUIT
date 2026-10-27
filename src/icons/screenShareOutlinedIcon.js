@@ -15,7 +15,7 @@ const URL_SCREENSHAREOUTLINED = new URL('../../assets/icons/screenShareOutlined.
  */
 export const initScreenShareOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCREENSHAREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'screenShareOutlinedIcon', url: URL_SCREENSHAREOUTLINED }, ...properties);
 }
 
 /**

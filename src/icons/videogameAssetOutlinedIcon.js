@@ -15,7 +15,7 @@ const URL_VIDEOGAMEASSETOUTLINED = new URL('../../assets/icons/videogameAssetOut
  */
 export const initVideogameAssetOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOGAMEASSETOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'videogameAssetOutlinedIcon', url: URL_VIDEOGAMEASSETOUTLINED }, ...properties);
 }
 
 /**

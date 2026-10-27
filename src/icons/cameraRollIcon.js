@@ -15,7 +15,7 @@ const URL_CAMERAROLL = new URL('../../assets/icons/cameraRoll.svg', import.meta.
  */
 export const initCameraRollIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CAMERAROLL }, ...properties);
+    initIcon(element, { additionalClassName: 'cameraRollIcon', url: URL_CAMERAROLL }, ...properties);
 }
 
 /**

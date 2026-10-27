@@ -15,7 +15,7 @@ const URL_SENSORDOOROUTLINED = new URL('../../assets/icons/sensorDoorOutlined.sv
  */
 export const initSensorDoorOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SENSORDOOROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sensorDoorOutlinedIcon', url: URL_SENSORDOOROUTLINED }, ...properties);
 }
 
 /**

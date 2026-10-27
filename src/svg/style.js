@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initStyle = (element, ...properties) => {
     console.assert(element instanceof SVGStyleElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'style' }, ...properties);
 }
 
 /**

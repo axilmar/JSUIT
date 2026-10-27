@@ -15,7 +15,7 @@ const URL_OILBARREL = new URL('../../assets/icons/oilBarrel.svg', import.meta.ur
  */
 export const initOilBarrelIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OILBARREL }, ...properties);
+    initIcon(element, { additionalClassName: 'oilBarrelIcon', url: URL_OILBARREL }, ...properties);
 }
 
 /**

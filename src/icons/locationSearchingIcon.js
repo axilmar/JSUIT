@@ -15,7 +15,7 @@ const URL_LOCATIONSEARCHING = new URL('../../assets/icons/locationSearching.svg'
  */
 export const initLocationSearchingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCATIONSEARCHING }, ...properties);
+    initIcon(element, { additionalClassName: 'locationSearchingIcon', url: URL_LOCATIONSEARCHING }, ...properties);
 }
 
 /**

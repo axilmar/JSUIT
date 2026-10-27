@@ -15,7 +15,7 @@ const URL_CHALETOUTLINED = new URL('../../assets/icons/chaletOutlined.svg', impo
  */
 export const initChaletOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHALETOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'chaletOutlinedIcon', url: URL_CHALETOUTLINED }, ...properties);
 }
 
 /**

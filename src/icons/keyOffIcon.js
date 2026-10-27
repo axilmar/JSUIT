@@ -15,7 +15,7 @@ const URL_KEYOFF = new URL('../../assets/icons/keyOff.svg', import.meta.url).hre
  */
 export const initKeyOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'keyOffIcon', url: URL_KEYOFF }, ...properties);
 }
 
 /**

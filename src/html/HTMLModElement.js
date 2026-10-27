@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initHTMLModElement = (element, ...properties) => {
     console.assert(element instanceof HTMLModElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'HTMLModElement' }, ...properties);
 }
 
 /**
@@ -22,7 +22,7 @@ export const initHTMLModElement = (element, ...properties) => {
  */
 export const ins = (...properties) => {
     const element = document.createElement('ins');
-    initHTMLModElement(element, ...properties);
+    initHTMLModElement(element, { additionalClassName: 'ins' }, ...properties);
     return element;
 }
 
@@ -35,6 +35,6 @@ export const ins = (...properties) => {
  */
 export const del = (...properties) => {
     const element = document.createElement('del');
-    initHTMLModElement(element, ...properties);
+    initHTMLModElement(element, { additionalClassName: 'del' }, ...properties);
     return element;
 }

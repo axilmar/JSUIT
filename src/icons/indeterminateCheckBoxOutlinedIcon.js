@@ -15,7 +15,7 @@ const URL_INDETERMINATECHECKBOXOUTLINED = new URL('../../assets/icons/indetermin
  */
 export const initIndeterminateCheckBoxOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INDETERMINATECHECKBOXOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'indeterminateCheckBoxOutlinedIcon', url: URL_INDETERMINATECHECKBOXOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DIRECTIONSWALK = new URL('../../assets/icons/directionsWalk.svg', impo
  */
 export const initDirectionsWalkIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRECTIONSWALK }, ...properties);
+    initIcon(element, { additionalClassName: 'directionsWalkIcon', url: URL_DIRECTIONSWALK }, ...properties);
 }
 
 /**

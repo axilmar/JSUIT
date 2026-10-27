@@ -15,7 +15,7 @@ const URL_FLIP = new URL('../../assets/icons/flip.svg', import.meta.url).href;
  */
 export const initFlipIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLIP }, ...properties);
+    initIcon(element, { additionalClassName: 'flipIcon', url: URL_FLIP }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CAMERAALT = new URL('../../assets/icons/cameraAlt.svg', import.meta.ur
  */
 export const initCameraAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CAMERAALT }, ...properties);
+    initIcon(element, { additionalClassName: 'cameraAltIcon', url: URL_CAMERAALT }, ...properties);
 }
 
 /**

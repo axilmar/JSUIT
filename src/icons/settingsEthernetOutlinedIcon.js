@@ -15,7 +15,7 @@ const URL_SETTINGSETHERNETOUTLINED = new URL('../../assets/icons/settingsEtherne
  */
 export const initSettingsEthernetOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSETHERNETOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsEthernetOutlinedIcon', url: URL_SETTINGSETHERNETOUTLINED }, ...properties);
 }
 
 /**

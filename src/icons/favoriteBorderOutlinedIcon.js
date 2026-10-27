@@ -15,7 +15,7 @@ const URL_FAVORITEBORDEROUTLINED = new URL('../../assets/icons/favoriteBorderOut
  */
 export const initFavoriteBorderOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FAVORITEBORDEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'favoriteBorderOutlinedIcon', url: URL_FAVORITEBORDEROUTLINED }, ...properties);
 }
 
 /**

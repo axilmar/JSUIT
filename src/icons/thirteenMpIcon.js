@@ -15,7 +15,7 @@ const URL_THIRTEENMP = new URL('../../assets/icons/thirteenMp.svg', import.meta.
  */
 export const initThirteenMpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THIRTEENMP }, ...properties);
+    initIcon(element, { additionalClassName: 'thirteenMpIcon', url: URL_THIRTEENMP }, ...properties);
 }
 
 /**

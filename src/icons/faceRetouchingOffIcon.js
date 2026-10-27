@@ -15,7 +15,7 @@ const URL_FACERETOUCHINGOFF = new URL('../../assets/icons/faceRetouchingOff.svg'
  */
 export const initFaceRetouchingOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FACERETOUCHINGOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'faceRetouchingOffIcon', url: URL_FACERETOUCHINGOFF }, ...properties);
 }
 
 /**

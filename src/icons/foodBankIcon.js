@@ -15,7 +15,7 @@ const URL_FOODBANK = new URL('../../assets/icons/foodBank.svg', import.meta.url)
  */
 export const initFoodBankIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOODBANK }, ...properties);
+    initIcon(element, { additionalClassName: 'foodBankIcon', url: URL_FOODBANK }, ...properties);
 }
 
 /**

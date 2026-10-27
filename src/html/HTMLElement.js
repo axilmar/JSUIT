@@ -28,5 +28,5 @@ const addEnabledProperty = (htmlElement) => {
 export const initHTMLElement = (htmlElement, ...properties) => {
     console.assert(htmlElement instanceof HTMLElement);
     addEnabledProperty(htmlElement);
-    initElement(htmlElement, ...properties);
+    initElement(htmlElement, { additionalClassName: 'HTMLElement' }, ...properties);
 }

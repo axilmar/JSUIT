@@ -15,7 +15,7 @@ const URL_PHOTOCAMERA = new URL('../../assets/icons/photoCamera.svg', import.met
  */
 export const initPhotoCameraIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHOTOCAMERA }, ...properties);
+    initIcon(element, { additionalClassName: 'photoCameraIcon', url: URL_PHOTOCAMERA }, ...properties);
 }
 
 /**

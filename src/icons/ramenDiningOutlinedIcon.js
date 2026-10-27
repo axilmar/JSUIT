@@ -15,7 +15,7 @@ const URL_RAMENDININGOUTLINED = new URL('../../assets/icons/ramenDiningOutlined.
  */
 export const initRamenDiningOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RAMENDININGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'ramenDiningOutlinedIcon', url: URL_RAMENDININGOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LOOKS = new URL('../../assets/icons/looks.svg', import.meta.url).href;
  */
 export const initLooksIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOOKS }, ...properties);
+    initIcon(element, { additionalClassName: 'looksIcon', url: URL_LOOKS }, ...properties);
 }
 
 /**

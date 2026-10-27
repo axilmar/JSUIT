@@ -15,7 +15,7 @@ const URL_MANAGESEARCHOUTLINED = new URL('../../assets/icons/manageSearchOutline
  */
 export const initManageSearchOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MANAGESEARCHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'manageSearchOutlinedIcon', url: URL_MANAGESEARCHOUTLINED }, ...properties);
 }
 
 /**

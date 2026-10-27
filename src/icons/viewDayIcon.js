@@ -15,7 +15,7 @@ const URL_VIEWDAY = new URL('../../assets/icons/viewDay.svg', import.meta.url).h
  */
 export const initViewDayIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWDAY }, ...properties);
+    initIcon(element, { additionalClassName: 'viewDayIcon', url: URL_VIEWDAY }, ...properties);
 }
 
 /**

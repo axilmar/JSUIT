@@ -15,7 +15,7 @@ const URL_ATTACHEMAIL = new URL('../../assets/icons/attachEmail.svg', import.met
  */
 export const initAttachEmailIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ATTACHEMAIL }, ...properties);
+    initIcon(element, { additionalClassName: 'attachEmailIcon', url: URL_ATTACHEMAIL }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ALLINBOXOUTLINED = new URL('../../assets/icons/allInboxOutlined.svg', 
  */
 export const initAllInboxOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALLINBOXOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'allInboxOutlinedIcon', url: URL_ALLINBOXOUTLINED }, ...properties);
 }
 
 /**

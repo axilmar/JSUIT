@@ -15,7 +15,7 @@ const URL_DATAOBJECTOUTLINED = new URL('../../assets/icons/dataObjectOutlined.sv
  */
 export const initDataObjectOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DATAOBJECTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dataObjectOutlinedIcon', url: URL_DATAOBJECTOUTLINED }, ...properties);
 }
 
 /**

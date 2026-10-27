@@ -15,7 +15,7 @@ const URL_COLLECTIONS = new URL('../../assets/icons/collections.svg', import.met
  */
 export const initCollectionsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COLLECTIONS }, ...properties);
+    initIcon(element, { additionalClassName: 'collectionsIcon', url: URL_COLLECTIONS }, ...properties);
 }
 
 /**

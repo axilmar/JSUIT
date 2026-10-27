@@ -15,7 +15,7 @@ const URL_STYLE = new URL('../../assets/icons/style.svg', import.meta.url).href;
  */
 export const initStyleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STYLE }, ...properties);
+    initIcon(element, { additionalClassName: 'styleIcon', url: URL_STYLE }, ...properties);
 }
 
 /**

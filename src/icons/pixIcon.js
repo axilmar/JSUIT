@@ -15,7 +15,7 @@ const URL_PIX = new URL('../../assets/icons/pix.svg', import.meta.url).href;
  */
 export const initPixIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PIX }, ...properties);
+    initIcon(element, { additionalClassName: 'pixIcon', url: URL_PIX }, ...properties);
 }
 
 /**

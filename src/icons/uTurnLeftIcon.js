@@ -15,7 +15,7 @@ const URL_UTURNLEFT = new URL('../../assets/icons/uTurnLeft.svg', import.meta.ur
  */
 export const initUTurnLeftIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UTURNLEFT }, ...properties);
+    initIcon(element, { additionalClassName: 'uTurnLeftIcon', url: URL_UTURNLEFT }, ...properties);
 }
 
 /**

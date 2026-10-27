@@ -15,7 +15,7 @@ const URL_NOTACCESSIBLE = new URL('../../assets/icons/notAccessible.svg', import
  */
 export const initNotAccessibleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTACCESSIBLE }, ...properties);
+    initIcon(element, { additionalClassName: 'notAccessibleIcon', url: URL_NOTACCESSIBLE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SETTINGSINPUTHDMI = new URL('../../assets/icons/settingsInputHdmi.svg'
  */
 export const initSettingsInputHdmiIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSINPUTHDMI }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsInputHdmiIcon', url: URL_SETTINGSINPUTHDMI }, ...properties);
 }
 
 /**

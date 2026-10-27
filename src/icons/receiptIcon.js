@@ -15,7 +15,7 @@ const URL_RECEIPT = new URL('../../assets/icons/receipt.svg', import.meta.url).h
  */
 export const initReceiptIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RECEIPT }, ...properties);
+    initIcon(element, { additionalClassName: 'receiptIcon', url: URL_RECEIPT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SETTINGSAPPLICATIONSOUTLINED = new URL('../../assets/icons/settingsApp
  */
 export const initSettingsApplicationsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSAPPLICATIONSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsApplicationsOutlinedIcon', url: URL_SETTINGSAPPLICATIONSOUTLINED }, ...properties);
 }
 
 /**

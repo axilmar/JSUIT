@@ -15,7 +15,7 @@ const URL_HEADSETOFFOUTLINED = new URL('../../assets/icons/headsetOffOutlined.sv
  */
 export const initHeadsetOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEADSETOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'headsetOffOutlinedIcon', url: URL_HEADSETOFFOUTLINED }, ...properties);
 }
 
 /**

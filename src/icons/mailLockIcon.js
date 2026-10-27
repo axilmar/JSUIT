@@ -15,7 +15,7 @@ const URL_MAILLOCK = new URL('../../assets/icons/mailLock.svg', import.meta.url)
  */
 export const initMailLockIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MAILLOCK }, ...properties);
+    initIcon(element, { additionalClassName: 'mailLockIcon', url: URL_MAILLOCK }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FORMATTEXTDIRECTIONLTOROUTLINED = new URL('../../assets/icons/formatTe
  */
 export const initFormatTextdirectionLToROutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATTEXTDIRECTIONLTOROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatTextdirectionLToROutlinedIcon', url: URL_FORMATTEXTDIRECTIONLTOROUTLINED }, ...properties);
 }
 
 /**

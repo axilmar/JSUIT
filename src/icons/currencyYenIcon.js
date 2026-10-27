@@ -15,7 +15,7 @@ const URL_CURRENCYYEN = new URL('../../assets/icons/currencyYen.svg', import.met
  */
 export const initCurrencyYenIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CURRENCYYEN }, ...properties);
+    initIcon(element, { additionalClassName: 'currencyYenIcon', url: URL_CURRENCYYEN }, ...properties);
 }
 
 /**

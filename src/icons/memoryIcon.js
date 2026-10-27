@@ -15,7 +15,7 @@ const URL_MEMORY = new URL('../../assets/icons/memory.svg', import.meta.url).hre
  */
 export const initMemoryIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MEMORY }, ...properties);
+    initIcon(element, { additionalClassName: 'memoryIcon', url: URL_MEMORY }, ...properties);
 }
 
 /**

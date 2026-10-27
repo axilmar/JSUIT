@@ -15,7 +15,7 @@ const URL_STREETVIEW = new URL('../../assets/icons/streetview.svg', import.meta.
  */
 export const initStreetviewIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STREETVIEW }, ...properties);
+    initIcon(element, { additionalClassName: 'streetviewIcon', url: URL_STREETVIEW }, ...properties);
 }
 
 /**

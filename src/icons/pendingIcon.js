@@ -15,7 +15,7 @@ const URL_PENDING = new URL('../../assets/icons/pending.svg', import.meta.url).h
  */
 export const initPendingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PENDING }, ...properties);
+    initIcon(element, { additionalClassName: 'pendingIcon', url: URL_PENDING }, ...properties);
 }
 
 /**

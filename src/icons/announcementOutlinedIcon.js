@@ -15,7 +15,7 @@ const URL_ANNOUNCEMENTOUTLINED = new URL('../../assets/icons/announcementOutline
  */
 export const initAnnouncementOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ANNOUNCEMENTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'announcementOutlinedIcon', url: URL_ANNOUNCEMENTOUTLINED }, ...properties);
 }
 
 /**

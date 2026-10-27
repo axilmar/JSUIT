@@ -15,7 +15,7 @@ const URL_LOCALPIZZAOUTLINED = new URL('../../assets/icons/localPizzaOutlined.sv
  */
 export const initLocalPizzaOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALPIZZAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localPizzaOutlinedIcon', url: URL_LOCALPIZZAOUTLINED }, ...properties);
 }
 
 /**

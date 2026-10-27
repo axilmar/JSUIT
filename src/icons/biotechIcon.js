@@ -15,7 +15,7 @@ const URL_BIOTECH = new URL('../../assets/icons/biotech.svg', import.meta.url).h
  */
 export const initBiotechIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BIOTECH }, ...properties);
+    initIcon(element, { additionalClassName: 'biotechIcon', url: URL_BIOTECH }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_COMPUTER = new URL('../../assets/icons/computer.svg', import.meta.url)
  */
 export const initComputerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMPUTER }, ...properties);
+    initIcon(element, { additionalClassName: 'computerIcon', url: URL_COMPUTER }, ...properties);
 }
 
 /**

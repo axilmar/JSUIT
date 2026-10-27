@@ -15,7 +15,7 @@ const URL_GESTURE = new URL('../../assets/icons/gesture.svg', import.meta.url).h
  */
 export const initGestureIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GESTURE }, ...properties);
+    initIcon(element, { additionalClassName: 'gestureIcon', url: URL_GESTURE }, ...properties);
 }
 
 /**

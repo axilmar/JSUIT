@@ -15,7 +15,7 @@ const URL_BATCHPREDICTION = new URL('../../assets/icons/batchPrediction.svg', im
  */
 export const initBatchPredictionIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BATCHPREDICTION }, ...properties);
+    initIcon(element, { additionalClassName: 'batchPredictionIcon', url: URL_BATCHPREDICTION }, ...properties);
 }
 
 /**

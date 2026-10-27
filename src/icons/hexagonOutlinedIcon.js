@@ -15,7 +15,7 @@ const URL_HEXAGONOUTLINED = new URL('../../assets/icons/hexagonOutlined.svg', im
  */
 export const initHexagonOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEXAGONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hexagonOutlinedIcon', url: URL_HEXAGONOUTLINED }, ...properties);
 }
 
 /**

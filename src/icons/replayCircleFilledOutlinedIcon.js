@@ -15,7 +15,7 @@ const URL_REPLAYCIRCLEFILLEDOUTLINED = new URL('../../assets/icons/replayCircleF
  */
 export const initReplayCircleFilledOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REPLAYCIRCLEFILLEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'replayCircleFilledOutlinedIcon', url: URL_REPLAYCIRCLEFILLEDOUTLINED }, ...properties);
 }
 
 /**

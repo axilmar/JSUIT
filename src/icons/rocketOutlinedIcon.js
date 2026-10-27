@@ -15,7 +15,7 @@ const URL_ROCKETOUTLINED = new URL('../../assets/icons/rocketOutlined.svg', impo
  */
 export const initRocketOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROCKETOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'rocketOutlinedIcon', url: URL_ROCKETOUTLINED }, ...properties);
 }
 
 /**

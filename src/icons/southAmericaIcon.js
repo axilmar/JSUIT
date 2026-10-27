@@ -15,7 +15,7 @@ const URL_SOUTHAMERICA = new URL('../../assets/icons/southAmerica.svg', import.m
  */
 export const initSouthAmericaIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SOUTHAMERICA }, ...properties);
+    initIcon(element, { additionalClassName: 'southAmericaIcon', url: URL_SOUTHAMERICA }, ...properties);
 }
 
 /**

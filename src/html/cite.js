@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initCite = (element, ...properties) => {
     console.assert(element instanceof HTMLElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'cite' }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TURNLEFT = new URL('../../assets/icons/turnLeft.svg', import.meta.url)
  */
 export const initTurnLeftIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TURNLEFT }, ...properties);
+    initIcon(element, { additionalClassName: 'turnLeftIcon', url: URL_TURNLEFT }, ...properties);
 }
 
 /**

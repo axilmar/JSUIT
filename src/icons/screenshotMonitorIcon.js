@@ -15,7 +15,7 @@ const URL_SCREENSHOTMONITOR = new URL('../../assets/icons/screenshotMonitor.svg'
  */
 export const initScreenshotMonitorIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCREENSHOTMONITOR }, ...properties);
+    initIcon(element, { additionalClassName: 'screenshotMonitorIcon', url: URL_SCREENSHOTMONITOR }, ...properties);
 }
 
 /**

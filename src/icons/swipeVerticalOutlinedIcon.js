@@ -15,7 +15,7 @@ const URL_SWIPEVERTICALOUTLINED = new URL('../../assets/icons/swipeVerticalOutli
  */
 export const initSwipeVerticalOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWIPEVERTICALOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'swipeVerticalOutlinedIcon', url: URL_SWIPEVERTICALOUTLINED }, ...properties);
 }
 
 /**

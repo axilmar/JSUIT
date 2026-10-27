@@ -15,7 +15,7 @@ const URL_PREVIEWOUTLINED = new URL('../../assets/icons/previewOutlined.svg', im
  */
 export const initPreviewOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PREVIEWOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'previewOutlinedIcon', url: URL_PREVIEWOUTLINED }, ...properties);
 }
 
 /**

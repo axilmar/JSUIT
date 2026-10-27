@@ -15,7 +15,7 @@ const URL_MAILLOCKOUTLINED = new URL('../../assets/icons/mailLockOutlined.svg', 
  */
 export const initMailLockOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MAILLOCKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'mailLockOutlinedIcon', url: URL_MAILLOCKOUTLINED }, ...properties);
 }
 
 /**

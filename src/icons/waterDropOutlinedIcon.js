@@ -15,7 +15,7 @@ const URL_WATERDROPOUTLINED = new URL('../../assets/icons/waterDropOutlined.svg'
  */
 export const initWaterDropOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WATERDROPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'waterDropOutlinedIcon', url: URL_WATERDROPOUTLINED }, ...properties);
 }
 
 /**

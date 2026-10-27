@@ -15,7 +15,7 @@ const URL_GPSNOTFIXED = new URL('../../assets/icons/gpsNotFixed.svg', import.met
  */
 export const initGpsNotFixedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GPSNOTFIXED }, ...properties);
+    initIcon(element, { additionalClassName: 'gpsNotFixedIcon', url: URL_GPSNOTFIXED }, ...properties);
 }
 
 /**

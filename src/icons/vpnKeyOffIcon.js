@@ -15,7 +15,7 @@ const URL_VPNKEYOFF = new URL('../../assets/icons/vpnKeyOff.svg', import.meta.ur
  */
 export const initVpnKeyOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VPNKEYOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'vpnKeyOffIcon', url: URL_VPNKEYOFF }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_OPENINFULL = new URL('../../assets/icons/openInFull.svg', import.meta.
  */
 export const initOpenInFullIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OPENINFULL }, ...properties);
+    initIcon(element, { additionalClassName: 'openInFullIcon', url: URL_OPENINFULL }, ...properties);
 }
 
 /**

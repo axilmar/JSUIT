@@ -15,7 +15,7 @@ const URL_DONOTTOUCHOUTLINED = new URL('../../assets/icons/doNotTouchOutlined.sv
  */
 export const initDoNotTouchOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DONOTTOUCHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'doNotTouchOutlinedIcon', url: URL_DONOTTOUCHOUTLINED }, ...properties);
 }
 
 /**

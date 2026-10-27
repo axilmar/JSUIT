@@ -15,7 +15,7 @@ const URL_TIMER3SELECTOUTLINED = new URL('../../assets/icons/timer3SelectOutline
  */
 export const initTimer3SelectOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TIMER3SELECTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'timer3SelectOutlinedIcon', url: URL_TIMER3SELECTOUTLINED }, ...properties);
 }
 
 /**

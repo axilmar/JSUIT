@@ -15,7 +15,7 @@ const URL_MODESTANDBYOUTLINED = new URL('../../assets/icons/modeStandbyOutlined.
  */
 export const initModeStandbyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MODESTANDBYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'modeStandbyOutlinedIcon', url: URL_MODESTANDBYOUTLINED }, ...properties);
 }
 
 /**

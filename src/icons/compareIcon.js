@@ -15,7 +15,7 @@ const URL_COMPARE = new URL('../../assets/icons/compare.svg', import.meta.url).h
  */
 export const initCompareIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMPARE }, ...properties);
+    initIcon(element, { additionalClassName: 'compareIcon', url: URL_COMPARE }, ...properties);
 }
 
 /**

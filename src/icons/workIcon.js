@@ -15,7 +15,7 @@ const URL_WORK = new URL('../../assets/icons/work.svg', import.meta.url).href;
  */
 export const initWorkIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WORK }, ...properties);
+    initIcon(element, { additionalClassName: 'workIcon', url: URL_WORK }, ...properties);
 }
 
 /**

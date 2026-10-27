@@ -15,7 +15,7 @@ const URL_DRIVEFILERENAMEOUTLINE = new URL('../../assets/icons/driveFileRenameOu
  */
 export const initDriveFileRenameOutlineIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRIVEFILERENAMEOUTLINE }, ...properties);
+    initIcon(element, { additionalClassName: 'driveFileRenameOutlineIcon', url: URL_DRIVEFILERENAMEOUTLINE }, ...properties);
 }
 
 /**

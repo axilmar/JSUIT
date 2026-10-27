@@ -15,7 +15,7 @@ const URL_CONNECTWITHOUTCONTACTOUTLINED = new URL('../../assets/icons/connectWit
  */
 export const initConnectWithoutContactOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONNECTWITHOUTCONTACTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'connectWithoutContactOutlinedIcon', url: URL_CONNECTWITHOUTCONTACTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TRAVELEXPLORE = new URL('../../assets/icons/travelExplore.svg', import
  */
 export const initTravelExploreIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRAVELEXPLORE }, ...properties);
+    initIcon(element, { additionalClassName: 'travelExploreIcon', url: URL_TRAVELEXPLORE }, ...properties);
 }
 
 /**

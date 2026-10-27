@@ -15,7 +15,7 @@ const URL_ROTATELEFTOUTLINED = new URL('../../assets/icons/rotateLeftOutlined.sv
  */
 export const initRotateLeftOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROTATELEFTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'rotateLeftOutlinedIcon', url: URL_ROTATELEFTOUTLINED }, ...properties);
 }
 
 /**

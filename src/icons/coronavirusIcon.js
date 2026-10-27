@@ -15,7 +15,7 @@ const URL_CORONAVIRUS = new URL('../../assets/icons/coronavirus.svg', import.met
  */
 export const initCoronavirusIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CORONAVIRUS }, ...properties);
+    initIcon(element, { additionalClassName: 'coronavirusIcon', url: URL_CORONAVIRUS }, ...properties);
 }
 
 /**

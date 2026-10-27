@@ -15,7 +15,7 @@ const URL_FLIGHTCLASS = new URL('../../assets/icons/flightClass.svg', import.met
  */
 export const initFlightClassIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLIGHTCLASS }, ...properties);
+    initIcon(element, { additionalClassName: 'flightClassIcon', url: URL_FLIGHTCLASS }, ...properties);
 }
 
 /**

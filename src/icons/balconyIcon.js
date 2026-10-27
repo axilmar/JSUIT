@@ -15,7 +15,7 @@ const URL_BALCONY = new URL('../../assets/icons/balcony.svg', import.meta.url).h
  */
 export const initBalconyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BALCONY }, ...properties);
+    initIcon(element, { additionalClassName: 'balconyIcon', url: URL_BALCONY }, ...properties);
 }
 
 /**

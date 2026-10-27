@@ -15,7 +15,7 @@ const URL_LOCALPLAY = new URL('../../assets/icons/localPlay.svg', import.meta.ur
  */
 export const initLocalPlayIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALPLAY }, ...properties);
+    initIcon(element, { additionalClassName: 'localPlayIcon', url: URL_LOCALPLAY }, ...properties);
 }
 
 /**

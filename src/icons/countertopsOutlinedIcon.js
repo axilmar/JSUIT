@@ -15,7 +15,7 @@ const URL_COUNTERTOPSOUTLINED = new URL('../../assets/icons/countertopsOutlined.
  */
 export const initCountertopsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COUNTERTOPSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'countertopsOutlinedIcon', url: URL_COUNTERTOPSOUTLINED }, ...properties);
 }
 
 /**

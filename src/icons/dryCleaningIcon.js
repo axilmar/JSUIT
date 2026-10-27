@@ -15,7 +15,7 @@ const URL_DRYCLEANING = new URL('../../assets/icons/dryCleaning.svg', import.met
  */
 export const initDryCleaningIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRYCLEANING }, ...properties);
+    initIcon(element, { additionalClassName: 'dryCleaningIcon', url: URL_DRYCLEANING }, ...properties);
 }
 
 /**

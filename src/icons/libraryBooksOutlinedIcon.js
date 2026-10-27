@@ -15,7 +15,7 @@ const URL_LIBRARYBOOKSOUTLINED = new URL('../../assets/icons/libraryBooksOutline
  */
 export const initLibraryBooksOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIBRARYBOOKSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'libraryBooksOutlinedIcon', url: URL_LIBRARYBOOKSOUTLINED }, ...properties);
 }
 
 /**

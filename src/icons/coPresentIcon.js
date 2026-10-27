@@ -15,7 +15,7 @@ const URL_COPRESENT = new URL('../../assets/icons/coPresent.svg', import.meta.ur
  */
 export const initCoPresentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COPRESENT }, ...properties);
+    initIcon(element, { additionalClassName: 'coPresentIcon', url: URL_COPRESENT }, ...properties);
 }
 
 /**

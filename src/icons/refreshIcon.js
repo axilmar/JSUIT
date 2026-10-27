@@ -15,7 +15,7 @@ const URL_REFRESH = new URL('../../assets/icons/refresh.svg', import.meta.url).h
  */
 export const initRefreshIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REFRESH }, ...properties);
+    initIcon(element, { additionalClassName: 'refreshIcon', url: URL_REFRESH }, ...properties);
 }
 
 /**

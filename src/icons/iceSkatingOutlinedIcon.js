@@ -15,7 +15,7 @@ const URL_ICESKATINGOUTLINED = new URL('../../assets/icons/iceSkatingOutlined.sv
  */
 export const initIceSkatingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ICESKATINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'iceSkatingOutlinedIcon', url: URL_ICESKATINGOUTLINED }, ...properties);
 }
 
 /**

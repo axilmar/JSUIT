@@ -15,7 +15,7 @@ const URL_STOPSCREENSHAREOUTLINED = new URL('../../assets/icons/stopScreenShareO
  */
 export const initStopScreenShareOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STOPSCREENSHAREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'stopScreenShareOutlinedIcon', url: URL_STOPSCREENSHAREOUTLINED }, ...properties);
 }
 
 /**

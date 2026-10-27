@@ -15,7 +15,7 @@ const URL_SMARTDISPLAYOUTLINED = new URL('../../assets/icons/smartDisplayOutline
  */
 export const initSmartDisplayOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SMARTDISPLAYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'smartDisplayOutlinedIcon', url: URL_SMARTDISPLAYOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CALL = new URL('../../assets/icons/call.svg', import.meta.url).href;
  */
 export const initCallIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALL }, ...properties);
+    initIcon(element, { additionalClassName: 'callIcon', url: URL_CALL }, ...properties);
 }
 
 /**

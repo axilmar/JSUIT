@@ -15,7 +15,7 @@ const URL_EIGHTKOUTLINED = new URL('../../assets/icons/eightKOutlined.svg', impo
  */
 export const initEightKOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EIGHTKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'eightKOutlinedIcon', url: URL_EIGHTKOUTLINED }, ...properties);
 }
 
 /**

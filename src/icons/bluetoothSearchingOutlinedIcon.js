@@ -15,7 +15,7 @@ const URL_BLUETOOTHSEARCHINGOUTLINED = new URL('../../assets/icons/bluetoothSear
  */
 export const initBluetoothSearchingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLUETOOTHSEARCHINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bluetoothSearchingOutlinedIcon', url: URL_BLUETOOTHSEARCHINGOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_GTRANSLATEOUTLINED = new URL('../../assets/icons/gTranslateOutlined.sv
  */
 export const initGTranslateOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GTRANSLATEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'gTranslateOutlinedIcon', url: URL_GTRANSLATEOUTLINED }, ...properties);
 }
 
 /**

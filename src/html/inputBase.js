@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initInputBase = (element, ...properties) => {
     console.assert(element instanceof HTMLInputElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'inputBase' }, ...properties);
 }
 
 /**
@@ -36,7 +36,7 @@ export const inputBase = (...properties) => {
 export const checkbox = (...properties) => {
     const element = document.createElement('input');
     element.type = 'checkbox';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'checkbox' }, ...properties);
     return element;
 }
 
@@ -50,7 +50,7 @@ export const checkbox = (...properties) => {
 export const color = (...properties) => {
     const element = document.createElement('input');
     element.type = 'color';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'color' }, ...properties);
     return element;
 }
 
@@ -64,7 +64,7 @@ export const color = (...properties) => {
 export const date = (...properties) => {
     const element = document.createElement('input');
     element.type = 'date';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'date' }, ...properties);
     return element;
 }
 
@@ -78,7 +78,7 @@ export const date = (...properties) => {
 export const dateTimeLocal = (...properties) => {
     const element = document.createElement('input');
     element.type = 'datetime-local';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'dateTimeLocal' }, ...properties);
     return element;
 }
 
@@ -92,7 +92,7 @@ export const dateTimeLocal = (...properties) => {
 export const email = (...properties) => {
     const element = document.createElement('input');
     element.type = 'email';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'email' }, ...properties);
     return element;
 }
 
@@ -106,7 +106,7 @@ export const email = (...properties) => {
 export const file = (...properties) => {
     const element = document.createElement('input');
     element.type = 'file';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'file' }, ...properties);
     return element;
 }
 
@@ -120,7 +120,7 @@ export const file = (...properties) => {
 export const hidden = (...properties) => {
     const element = document.createElement('input');
     element.type = 'hidden';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'hidden' }, ...properties);
     return element;
 }
 
@@ -134,7 +134,7 @@ export const hidden = (...properties) => {
 export const image = (...properties) => {
     const element = document.createElement('input');
     element.type = 'image';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'image' }, ...properties);
     return element;
 }
 
@@ -148,7 +148,7 @@ export const image = (...properties) => {
 export const month = (...properties) => {
     const element = document.createElement('input');
     element.type = 'month';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'month' }, ...properties);
     return element;
 }
 
@@ -162,7 +162,7 @@ export const month = (...properties) => {
 export const number = (...properties) => {
     const element = document.createElement('input');
     element.type = 'number';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'number' }, ...properties);
     return element;
 }
 
@@ -176,7 +176,7 @@ export const number = (...properties) => {
 export const password = (...properties) => {
     const element = document.createElement('input');
     element.type = 'password';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'password' }, ...properties);
     return element;
 }
 
@@ -190,7 +190,7 @@ export const password = (...properties) => {
 export const radio = (...properties) => {
     const element = document.createElement('input');
     element.type = 'radio';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'radio' }, ...properties);
     return element;
 }
 
@@ -204,7 +204,7 @@ export const radio = (...properties) => {
 export const range = (...properties) => {
     const element = document.createElement('input');
     element.type = 'range';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'range' }, ...properties);
     return element;
 }
 
@@ -218,7 +218,7 @@ export const range = (...properties) => {
 export const reset = (...properties) => {
     const element = document.createElement('input');
     element.type = 'reset';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'reset' }, ...properties);
     return element;
 }
 
@@ -232,7 +232,7 @@ export const reset = (...properties) => {
 export const search = (...properties) => {
     const element = document.createElement('input');
     element.type = 'search';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'search' }, ...properties);
     return element;
 }
 
@@ -246,7 +246,7 @@ export const search = (...properties) => {
 export const submit = (...properties) => {
     const element = document.createElement('input');
     element.type = 'submit';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'submit' }, ...properties);
     return element;
 }
 
@@ -260,7 +260,7 @@ export const submit = (...properties) => {
 export const tel = (...properties) => {
     const element = document.createElement('input');
     element.type = 'tel';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'tel' }, ...properties);
     return element;
 }
 
@@ -274,7 +274,7 @@ export const tel = (...properties) => {
 export const text = (...properties) => {
     const element = document.createElement('input');
     element.type = 'text';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'text' }, ...properties);
     return element;
 }
 
@@ -288,7 +288,7 @@ export const text = (...properties) => {
 export const url = (...properties) => {
     const element = document.createElement('input');
     element.type = 'url';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'url' }, ...properties);
     return element;
 }
 
@@ -302,6 +302,6 @@ export const url = (...properties) => {
 export const week = (...properties) => {
     const element = document.createElement('input');
     element.type = 'week';
-    initInputBase(element, ...properties);
+    initInputBase(element, { additionalClassName: 'week' }, ...properties);
     return element;
 }

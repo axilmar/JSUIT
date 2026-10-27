@@ -15,7 +15,7 @@ const URL_BATTERYALERTOUTLINED = new URL('../../assets/icons/batteryAlertOutline
  */
 export const initBatteryAlertOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BATTERYALERTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'batteryAlertOutlinedIcon', url: URL_BATTERYALERTOUTLINED }, ...properties);
 }
 
 /**

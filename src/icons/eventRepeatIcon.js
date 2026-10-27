@@ -15,7 +15,7 @@ const URL_EVENTREPEAT = new URL('../../assets/icons/eventRepeat.svg', import.met
  */
 export const initEventRepeatIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EVENTREPEAT }, ...properties);
+    initIcon(element, { additionalClassName: 'eventRepeatIcon', url: URL_EVENTREPEAT }, ...properties);
 }
 
 /**

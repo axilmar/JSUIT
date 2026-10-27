@@ -15,7 +15,7 @@ const URL_HUB = new URL('../../assets/icons/hub.svg', import.meta.url).href;
  */
 export const initHubIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HUB }, ...properties);
+    initIcon(element, { additionalClassName: 'hubIcon', url: URL_HUB }, ...properties);
 }
 
 /**

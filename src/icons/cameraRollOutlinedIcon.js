@@ -15,7 +15,7 @@ const URL_CAMERAROLLOUTLINED = new URL('../../assets/icons/cameraRollOutlined.sv
  */
 export const initCameraRollOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CAMERAROLLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cameraRollOutlinedIcon', url: URL_CAMERAROLLOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SUBTITLESOFF = new URL('../../assets/icons/subtitlesOff.svg', import.m
  */
 export const initSubtitlesOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUBTITLESOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'subtitlesOffIcon', url: URL_SUBTITLESOFF }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_MOPEDOUTLINED = new URL('../../assets/icons/mopedOutlined.svg', import
  */
 export const initMopedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOPEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'mopedOutlinedIcon', url: URL_MOPEDOUTLINED }, ...properties);
 }
 
 /**

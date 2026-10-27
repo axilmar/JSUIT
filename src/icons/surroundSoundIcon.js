@@ -15,7 +15,7 @@ const URL_SURROUNDSOUND = new URL('../../assets/icons/surroundSound.svg', import
  */
 export const initSurroundSoundIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SURROUNDSOUND }, ...properties);
+    initIcon(element, { additionalClassName: 'surroundSoundIcon', url: URL_SURROUNDSOUND }, ...properties);
 }
 
 /**

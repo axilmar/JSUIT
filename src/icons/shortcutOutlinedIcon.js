@@ -15,7 +15,7 @@ const URL_SHORTCUTOUTLINED = new URL('../../assets/icons/shortcutOutlined.svg', 
  */
 export const initShortcutOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHORTCUTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'shortcutOutlinedIcon', url: URL_SHORTCUTOUTLINED }, ...properties);
 }
 
 /**

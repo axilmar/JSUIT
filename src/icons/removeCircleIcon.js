@@ -15,7 +15,7 @@ const URL_REMOVECIRCLE = new URL('../../assets/icons/removeCircle.svg', import.m
  */
 export const initRemoveCircleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REMOVECIRCLE }, ...properties);
+    initIcon(element, { additionalClassName: 'removeCircleIcon', url: URL_REMOVECIRCLE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_WATCHOUTLINED = new URL('../../assets/icons/watchOutlined.svg', import
  */
 export const initWatchOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WATCHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'watchOutlinedIcon', url: URL_WATCHOUTLINED }, ...properties);
 }
 
 /**

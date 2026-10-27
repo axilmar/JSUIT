@@ -15,7 +15,7 @@ const URL_HORIZONTALRULEOUTLINED = new URL('../../assets/icons/horizontalRuleOut
  */
 export const initHorizontalRuleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HORIZONTALRULEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'horizontalRuleOutlinedIcon', url: URL_HORIZONTALRULEOUTLINED }, ...properties);
 }
 
 /**

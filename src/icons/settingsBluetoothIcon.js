@@ -15,7 +15,7 @@ const URL_SETTINGSBLUETOOTH = new URL('../../assets/icons/settingsBluetooth.svg'
  */
 export const initSettingsBluetoothIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSBLUETOOTH }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsBluetoothIcon', url: URL_SETTINGSBLUETOOTH }, ...properties);
 }
 
 /**

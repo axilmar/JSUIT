@@ -15,7 +15,7 @@ const URL_LOCALHOSPITAL = new URL('../../assets/icons/localHospital.svg', import
  */
 export const initLocalHospitalIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALHOSPITAL }, ...properties);
+    initIcon(element, { additionalClassName: 'localHospitalIcon', url: URL_LOCALHOSPITAL }, ...properties);
 }
 
 /**

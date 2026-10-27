@@ -15,7 +15,7 @@ const URL_TWOMPOUTLINED = new URL('../../assets/icons/twoMpOutlined.svg', import
  */
 export const initTwoMpOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TWOMPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'twoMpOutlinedIcon', url: URL_TWOMPOUTLINED }, ...properties);
 }
 
 /**

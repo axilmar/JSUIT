@@ -15,7 +15,7 @@ const URL_CALLMISSEDOUTGOING = new URL('../../assets/icons/callMissedOutgoing.sv
  */
 export const initCallMissedOutgoingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALLMISSEDOUTGOING }, ...properties);
+    initIcon(element, { additionalClassName: 'callMissedOutgoingIcon', url: URL_CALLMISSEDOUTGOING }, ...properties);
 }
 
 /**

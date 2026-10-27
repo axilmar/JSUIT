@@ -15,7 +15,7 @@ const URL_BEDTIME = new URL('../../assets/icons/bedtime.svg', import.meta.url).h
  */
 export const initBedtimeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BEDTIME }, ...properties);
+    initIcon(element, { additionalClassName: 'bedtimeIcon', url: URL_BEDTIME }, ...properties);
 }
 
 /**

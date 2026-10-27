@@ -15,7 +15,7 @@ const URL_DELETEFOREVEROUTLINED = new URL('../../assets/icons/deleteForeverOutli
  */
 export const initDeleteForeverOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DELETEFOREVEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'deleteForeverOutlinedIcon', url: URL_DELETEFOREVEROUTLINED }, ...properties);
 }
 
 /**

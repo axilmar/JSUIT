@@ -15,7 +15,7 @@ const URL_EVENTAVAILABLE = new URL('../../assets/icons/eventAvailable.svg', impo
  */
 export const initEventAvailableIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EVENTAVAILABLE }, ...properties);
+    initIcon(element, { additionalClassName: 'eventAvailableIcon', url: URL_EVENTAVAILABLE }, ...properties);
 }
 
 /**

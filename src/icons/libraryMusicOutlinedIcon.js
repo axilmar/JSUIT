@@ -15,7 +15,7 @@ const URL_LIBRARYMUSICOUTLINED = new URL('../../assets/icons/libraryMusicOutline
  */
 export const initLibraryMusicOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIBRARYMUSICOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'libraryMusicOutlinedIcon', url: URL_LIBRARYMUSICOUTLINED }, ...properties);
 }
 
 /**

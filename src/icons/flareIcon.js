@@ -15,7 +15,7 @@ const URL_FLARE = new URL('../../assets/icons/flare.svg', import.meta.url).href;
  */
 export const initFlareIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLARE }, ...properties);
+    initIcon(element, { additionalClassName: 'flareIcon', url: URL_FLARE }, ...properties);
 }
 
 /**

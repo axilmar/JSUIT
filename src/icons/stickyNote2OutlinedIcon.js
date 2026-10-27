@@ -15,7 +15,7 @@ const URL_STICKYNOTE2OUTLINED = new URL('../../assets/icons/stickyNote2Outlined.
  */
 export const initStickyNote2OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STICKYNOTE2OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'stickyNote2OutlinedIcon', url: URL_STICKYNOTE2OUTLINED }, ...properties);
 }
 
 /**

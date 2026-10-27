@@ -15,7 +15,7 @@ const URL_FORMATPAINTOUTLINED = new URL('../../assets/icons/formatPaintOutlined.
  */
 export const initFormatPaintOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATPAINTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatPaintOutlinedIcon', url: URL_FORMATPAINTOUTLINED }, ...properties);
 }
 
 /**

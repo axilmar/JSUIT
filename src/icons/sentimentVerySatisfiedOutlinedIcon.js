@@ -15,7 +15,7 @@ const URL_SENTIMENTVERYSATISFIEDOUTLINED = new URL('../../assets/icons/sentiment
  */
 export const initSentimentVerySatisfiedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SENTIMENTVERYSATISFIEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sentimentVerySatisfiedOutlinedIcon', url: URL_SENTIMENTVERYSATISFIEDOUTLINED }, ...properties);
 }
 
 /**

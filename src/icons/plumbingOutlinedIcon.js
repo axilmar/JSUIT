@@ -15,7 +15,7 @@ const URL_PLUMBINGOUTLINED = new URL('../../assets/icons/plumbingOutlined.svg', 
  */
 export const initPlumbingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLUMBINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'plumbingOutlinedIcon', url: URL_PLUMBINGOUTLINED }, ...properties);
 }
 
 /**

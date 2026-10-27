@@ -15,7 +15,7 @@ const URL_DOMAINOUTLINED = new URL('../../assets/icons/domainOutlined.svg', impo
  */
 export const initDomainOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOMAINOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'domainOutlinedIcon', url: URL_DOMAINOUTLINED }, ...properties);
 }
 
 /**

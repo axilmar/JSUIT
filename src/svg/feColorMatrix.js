@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initFeColorMatrix = (element, ...properties) => {
     console.assert(element instanceof SVGFEColorMatrixElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'feColorMatrix' }, ...properties);
 }
 
 /**

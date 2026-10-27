@@ -15,7 +15,7 @@ const URL_SOUTHAMERICAOUTLINED = new URL('../../assets/icons/southAmericaOutline
  */
 export const initSouthAmericaOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SOUTHAMERICAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'southAmericaOutlinedIcon', url: URL_SOUTHAMERICAOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_EUROOUTLINED = new URL('../../assets/icons/euroOutlined.svg', import.m
  */
 export const initEuroOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EUROOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'euroOutlinedIcon', url: URL_EUROOUTLINED }, ...properties);
 }
 
 /**

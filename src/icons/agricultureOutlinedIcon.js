@@ -15,7 +15,7 @@ const URL_AGRICULTUREOUTLINED = new URL('../../assets/icons/agricultureOutlined.
  */
 export const initAgricultureOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AGRICULTUREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'agricultureOutlinedIcon', url: URL_AGRICULTUREOUTLINED }, ...properties);
 }
 
 /**

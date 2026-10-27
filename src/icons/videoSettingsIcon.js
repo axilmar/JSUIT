@@ -15,7 +15,7 @@ const URL_VIDEOSETTINGS = new URL('../../assets/icons/videoSettings.svg', import
  */
 export const initVideoSettingsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOSETTINGS }, ...properties);
+    initIcon(element, { additionalClassName: 'videoSettingsIcon', url: URL_VIDEOSETTINGS }, ...properties);
 }
 
 /**

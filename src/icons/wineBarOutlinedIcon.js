@@ -15,7 +15,7 @@ const URL_WINEBAROUTLINED = new URL('../../assets/icons/wineBarOutlined.svg', im
  */
 export const initWineBarOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WINEBAROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wineBarOutlinedIcon', url: URL_WINEBAROUTLINED }, ...properties);
 }
 
 /**

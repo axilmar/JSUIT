@@ -15,7 +15,7 @@ const URL_DRAW = new URL('../../assets/icons/draw.svg', import.meta.url).href;
  */
 export const initDrawIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRAW }, ...properties);
+    initIcon(element, { additionalClassName: 'drawIcon', url: URL_DRAW }, ...properties);
 }
 
 /**

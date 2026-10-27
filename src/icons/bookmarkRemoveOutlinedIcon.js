@@ -15,7 +15,7 @@ const URL_BOOKMARKREMOVEOUTLINED = new URL('../../assets/icons/bookmarkRemoveOut
  */
 export const initBookmarkRemoveOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BOOKMARKREMOVEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bookmarkRemoveOutlinedIcon', url: URL_BOOKMARKREMOVEOUTLINED }, ...properties);
 }
 
 /**

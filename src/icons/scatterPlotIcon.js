@@ -15,7 +15,7 @@ const URL_SCATTERPLOT = new URL('../../assets/icons/scatterPlot.svg', import.met
  */
 export const initScatterPlotIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCATTERPLOT }, ...properties);
+    initIcon(element, { additionalClassName: 'scatterPlotIcon', url: URL_SCATTERPLOT }, ...properties);
 }
 
 /**

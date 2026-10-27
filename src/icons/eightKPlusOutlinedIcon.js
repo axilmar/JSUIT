@@ -15,7 +15,7 @@ const URL_EIGHTKPLUSOUTLINED = new URL('../../assets/icons/eightKPlusOutlined.sv
  */
 export const initEightKPlusOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EIGHTKPLUSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'eightKPlusOutlinedIcon', url: URL_EIGHTKPLUSOUTLINED }, ...properties);
 }
 
 /**

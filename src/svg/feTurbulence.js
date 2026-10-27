@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initFeTurbulence = (element, ...properties) => {
     console.assert(element instanceof SVGFETurbulenceElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'feTurbulence' }, ...properties);
 }
 
 /**

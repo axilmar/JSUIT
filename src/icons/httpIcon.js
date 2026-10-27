@@ -15,7 +15,7 @@ const URL_HTTP = new URL('../../assets/icons/http.svg', import.meta.url).href;
  */
 export const initHttpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HTTP }, ...properties);
+    initIcon(element, { additionalClassName: 'httpIcon', url: URL_HTTP }, ...properties);
 }
 
 /**

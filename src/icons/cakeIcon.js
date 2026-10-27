@@ -15,7 +15,7 @@ const URL_CAKE = new URL('../../assets/icons/cake.svg', import.meta.url).href;
  */
 export const initCakeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CAKE }, ...properties);
+    initIcon(element, { additionalClassName: 'cakeIcon', url: URL_CAKE }, ...properties);
 }
 
 /**

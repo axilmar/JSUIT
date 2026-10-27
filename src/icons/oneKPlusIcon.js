@@ -15,7 +15,7 @@ const URL_ONEKPLUS = new URL('../../assets/icons/oneKPlus.svg', import.meta.url)
  */
 export const initOneKPlusIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ONEKPLUS }, ...properties);
+    initIcon(element, { additionalClassName: 'oneKPlusIcon', url: URL_ONEKPLUS }, ...properties);
 }
 
 /**

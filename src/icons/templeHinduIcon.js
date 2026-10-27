@@ -15,7 +15,7 @@ const URL_TEMPLEHINDU = new URL('../../assets/icons/templeHindu.svg', import.met
  */
 export const initTempleHinduIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEMPLEHINDU }, ...properties);
+    initIcon(element, { additionalClassName: 'templeHinduIcon', url: URL_TEMPLEHINDU }, ...properties);
 }
 
 /**

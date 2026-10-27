@@ -15,7 +15,7 @@ const URL_VOLCANOOUTLINED = new URL('../../assets/icons/volcanoOutlined.svg', im
  */
 export const initVolcanoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VOLCANOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'volcanoOutlinedIcon', url: URL_VOLCANOOUTLINED }, ...properties);
 }
 
 /**

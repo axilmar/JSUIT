@@ -15,7 +15,7 @@ const URL_ADBOUTLINED = new URL('../../assets/icons/adbOutlined.svg', import.met
  */
 export const initAdbOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADBOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'adbOutlinedIcon', url: URL_ADBOUTLINED }, ...properties);
 }
 
 /**

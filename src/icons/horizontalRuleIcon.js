@@ -15,7 +15,7 @@ const URL_HORIZONTALRULE = new URL('../../assets/icons/horizontalRule.svg', impo
  */
 export const initHorizontalRuleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HORIZONTALRULE }, ...properties);
+    initIcon(element, { additionalClassName: 'horizontalRuleIcon', url: URL_HORIZONTALRULE }, ...properties);
 }
 
 /**

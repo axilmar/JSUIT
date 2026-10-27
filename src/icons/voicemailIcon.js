@@ -15,7 +15,7 @@ const URL_VOICEMAIL = new URL('../../assets/icons/voicemail.svg', import.meta.ur
  */
 export const initVoicemailIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VOICEMAIL }, ...properties);
+    initIcon(element, { additionalClassName: 'voicemailIcon', url: URL_VOICEMAIL }, ...properties);
 }
 
 /**

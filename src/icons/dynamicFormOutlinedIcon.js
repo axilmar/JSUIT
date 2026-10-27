@@ -15,7 +15,7 @@ const URL_DYNAMICFORMOUTLINED = new URL('../../assets/icons/dynamicFormOutlined.
  */
 export const initDynamicFormOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DYNAMICFORMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dynamicFormOutlinedIcon', url: URL_DYNAMICFORMOUTLINED }, ...properties);
 }
 
 /**

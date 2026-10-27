@@ -15,7 +15,7 @@ const URL_VOLCANO = new URL('../../assets/icons/volcano.svg', import.meta.url).h
  */
 export const initVolcanoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VOLCANO }, ...properties);
+    initIcon(element, { additionalClassName: 'volcanoIcon', url: URL_VOLCANO }, ...properties);
 }
 
 /**

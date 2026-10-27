@@ -15,7 +15,7 @@ const URL_SPACEBAR = new URL('../../assets/icons/spaceBar.svg', import.meta.url)
  */
 export const initSpaceBarIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPACEBAR }, ...properties);
+    initIcon(element, { additionalClassName: 'spaceBarIcon', url: URL_SPACEBAR }, ...properties);
 }
 
 /**

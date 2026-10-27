@@ -15,7 +15,7 @@ const URL_LUGGAGE = new URL('../../assets/icons/luggage.svg', import.meta.url).h
  */
 export const initLuggageIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LUGGAGE }, ...properties);
+    initIcon(element, { additionalClassName: 'luggageIcon', url: URL_LUGGAGE }, ...properties);
 }
 
 /**

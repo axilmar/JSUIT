@@ -15,7 +15,7 @@ const URL_SCOREOUTLINED = new URL('../../assets/icons/scoreOutlined.svg', import
  */
 export const initScoreOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCOREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'scoreOutlinedIcon', url: URL_SCOREOUTLINED }, ...properties);
 }
 
 /**

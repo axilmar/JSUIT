@@ -15,7 +15,7 @@ const URL_DEVELOPERBOARDOFF = new URL('../../assets/icons/developerBoardOff.svg'
  */
 export const initDeveloperBoardOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEVELOPERBOARDOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'developerBoardOffIcon', url: URL_DEVELOPERBOARDOFF }, ...properties);
 }
 
 /**

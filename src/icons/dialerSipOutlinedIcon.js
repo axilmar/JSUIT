@@ -15,7 +15,7 @@ const URL_DIALERSIPOUTLINED = new URL('../../assets/icons/dialerSipOutlined.svg'
  */
 export const initDialerSipOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIALERSIPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dialerSipOutlinedIcon', url: URL_DIALERSIPOUTLINED }, ...properties);
 }
 
 /**

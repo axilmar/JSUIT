@@ -15,7 +15,7 @@ const URL_DARKMODEOUTLINED = new URL('../../assets/icons/darkModeOutlined.svg', 
  */
 export const initDarkModeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DARKMODEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'darkModeOutlinedIcon', url: URL_DARKMODEOUTLINED }, ...properties);
 }
 
 /**

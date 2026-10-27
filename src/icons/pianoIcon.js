@@ -15,7 +15,7 @@ const URL_PIANO = new URL('../../assets/icons/piano.svg', import.meta.url).href;
  */
 export const initPianoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PIANO }, ...properties);
+    initIcon(element, { additionalClassName: 'pianoIcon', url: URL_PIANO }, ...properties);
 }
 
 /**

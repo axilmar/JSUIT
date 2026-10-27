@@ -15,7 +15,7 @@ const URL_SNOWMOBILEOUTLINED = new URL('../../assets/icons/snowmobileOutlined.sv
  */
 export const initSnowmobileOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SNOWMOBILEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'snowmobileOutlinedIcon', url: URL_SNOWMOBILEOUTLINED }, ...properties);
 }
 
 /**

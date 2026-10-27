@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initMask = (element, ...properties) => {
     console.assert(element instanceof SVGMaskElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'mask' }, ...properties);
 }
 
 /**

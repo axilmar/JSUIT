@@ -15,7 +15,7 @@ const URL_ELECTRICBOLT = new URL('../../assets/icons/electricBolt.svg', import.m
  */
 export const initElectricBoltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ELECTRICBOLT }, ...properties);
+    initIcon(element, { additionalClassName: 'electricBoltIcon', url: URL_ELECTRICBOLT }, ...properties);
 }
 
 /**

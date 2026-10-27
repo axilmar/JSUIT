@@ -15,7 +15,7 @@ const URL_FOURK = new URL('../../assets/icons/fourK.svg', import.meta.url).href;
  */
 export const initFourKIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOURK }, ...properties);
+    initIcon(element, { additionalClassName: 'fourKIcon', url: URL_FOURK }, ...properties);
 }
 
 /**

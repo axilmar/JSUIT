@@ -15,7 +15,7 @@ const URL_BUNGALOW = new URL('../../assets/icons/bungalow.svg', import.meta.url)
  */
 export const initBungalowIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BUNGALOW }, ...properties);
+    initIcon(element, { additionalClassName: 'bungalowIcon', url: URL_BUNGALOW }, ...properties);
 }
 
 /**

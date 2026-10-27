@@ -15,7 +15,7 @@ const CHECK_MARK_URL = new URL('../../assets/icons/check.svg', import.meta.url).
  */
 export const initCheckIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: CHECK_MARK_URL }, ...properties);
+    initIcon(element, { additionalClassName: 'checkIcon', url: CHECK_MARK_URL }, ...properties);
 }
 
 /**

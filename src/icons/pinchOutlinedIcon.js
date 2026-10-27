@@ -15,7 +15,7 @@ const URL_PINCHOUTLINED = new URL('../../assets/icons/pinchOutlined.svg', import
  */
 export const initPinchOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PINCHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pinchOutlinedIcon', url: URL_PINCHOUTLINED }, ...properties);
 }
 
 /**

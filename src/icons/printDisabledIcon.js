@@ -15,7 +15,7 @@ const URL_PRINTDISABLED = new URL('../../assets/icons/printDisabled.svg', import
  */
 export const initPrintDisabledIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PRINTDISABLED }, ...properties);
+    initIcon(element, { additionalClassName: 'printDisabledIcon', url: URL_PRINTDISABLED }, ...properties);
 }
 
 /**

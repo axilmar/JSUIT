@@ -15,7 +15,7 @@ const URL_REPLAY5OUTLINED = new URL('../../assets/icons/replay5Outlined.svg', im
  */
 export const initReplay5OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REPLAY5OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'replay5OutlinedIcon', url: URL_REPLAY5OUTLINED }, ...properties);
 }
 
 /**

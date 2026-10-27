@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initFeOffset = (element, ...properties) => {
     console.assert(element instanceof SVGFEOffsetElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'feOffset' }, ...properties);
 }
 
 /**

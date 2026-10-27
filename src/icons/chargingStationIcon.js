@@ -15,7 +15,7 @@ const URL_CHARGINGSTATION = new URL('../../assets/icons/chargingStation.svg', im
  */
 export const initChargingStationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHARGINGSTATION }, ...properties);
+    initIcon(element, { additionalClassName: 'chargingStationIcon', url: URL_CHARGINGSTATION }, ...properties);
 }
 
 /**

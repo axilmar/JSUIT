@@ -15,7 +15,7 @@ const URL_FIRETRUCK = new URL('../../assets/icons/fireTruck.svg', import.meta.ur
  */
 export const initFireTruckIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIRETRUCK }, ...properties);
+    initIcon(element, { additionalClassName: 'fireTruckIcon', url: URL_FIRETRUCK }, ...properties);
 }
 
 /**

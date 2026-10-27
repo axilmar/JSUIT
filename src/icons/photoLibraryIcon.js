@@ -15,7 +15,7 @@ const URL_PHOTOLIBRARY = new URL('../../assets/icons/photoLibrary.svg', import.m
  */
 export const initPhotoLibraryIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHOTOLIBRARY }, ...properties);
+    initIcon(element, { additionalClassName: 'photoLibraryIcon', url: URL_PHOTOLIBRARY }, ...properties);
 }
 
 /**

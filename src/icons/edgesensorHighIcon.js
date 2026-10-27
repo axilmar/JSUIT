@@ -15,7 +15,7 @@ const URL_EDGESENSORHIGH = new URL('../../assets/icons/edgesensorHigh.svg', impo
  */
 export const initEdgesensorHighIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EDGESENSORHIGH }, ...properties);
+    initIcon(element, { additionalClassName: 'edgesensorHighIcon', url: URL_EDGESENSORHIGH }, ...properties);
 }
 
 /**

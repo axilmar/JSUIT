@@ -15,7 +15,7 @@ const URL_VIEWLISTOUTLINED = new URL('../../assets/icons/viewListOutlined.svg', 
  */
 export const initViewListOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWLISTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewListOutlinedIcon', url: URL_VIEWLISTOUTLINED }, ...properties);
 }
 
 /**

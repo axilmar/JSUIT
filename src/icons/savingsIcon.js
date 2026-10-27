@@ -15,7 +15,7 @@ const URL_SAVINGS = new URL('../../assets/icons/savings.svg', import.meta.url).h
  */
 export const initSavingsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SAVINGS }, ...properties);
+    initIcon(element, { additionalClassName: 'savingsIcon', url: URL_SAVINGS }, ...properties);
 }
 
 /**

@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initFieldSet = (element, ...properties) => {
     console.assert(element instanceof HTMLFieldSetElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'fieldSet' }, ...properties);
 }
 
 /**

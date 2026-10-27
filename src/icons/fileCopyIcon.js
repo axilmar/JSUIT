@@ -15,7 +15,7 @@ const URL_FILECOPY = new URL('../../assets/icons/fileCopy.svg', import.meta.url)
  */
 export const initFileCopyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILECOPY }, ...properties);
+    initIcon(element, { additionalClassName: 'fileCopyIcon', url: URL_FILECOPY }, ...properties);
 }
 
 /**

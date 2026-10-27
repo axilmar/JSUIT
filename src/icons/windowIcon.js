@@ -15,7 +15,7 @@ const URL_WINDOW = new URL('../../assets/icons/window.svg', import.meta.url).hre
  */
 export const initWindowIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WINDOW }, ...properties);
+    initIcon(element, { additionalClassName: 'windowIcon', url: URL_WINDOW }, ...properties);
 }
 
 /**

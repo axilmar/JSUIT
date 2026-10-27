@@ -15,7 +15,7 @@ const URL_BOOKMARKBORDEROUTLINED = new URL('../../assets/icons/bookmarkBorderOut
  */
 export const initBookmarkBorderOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BOOKMARKBORDEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bookmarkBorderOutlinedIcon', url: URL_BOOKMARKBORDEROUTLINED }, ...properties);
 }
 
 /**

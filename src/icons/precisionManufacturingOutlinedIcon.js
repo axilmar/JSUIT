@@ -15,7 +15,7 @@ const URL_PRECISIONMANUFACTURINGOUTLINED = new URL('../../assets/icons/precision
  */
 export const initPrecisionManufacturingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PRECISIONMANUFACTURINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'precisionManufacturingOutlinedIcon', url: URL_PRECISIONMANUFACTURINGOUTLINED }, ...properties);
 }
 
 /**

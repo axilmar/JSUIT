@@ -15,7 +15,7 @@ const URL_MARKASUNREADOUTLINED = new URL('../../assets/icons/markAsUnreadOutline
  */
 export const initMarkAsUnreadOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MARKASUNREADOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'markAsUnreadOutlinedIcon', url: URL_MARKASUNREADOUTLINED }, ...properties);
 }
 
 /**

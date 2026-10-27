@@ -15,7 +15,7 @@ const URL_RINGVOLUMEOUTLINED = new URL('../../assets/icons/ringVolumeOutlined.sv
  */
 export const initRingVolumeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RINGVOLUMEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'ringVolumeOutlinedIcon', url: URL_RINGVOLUMEOUTLINED }, ...properties);
 }
 
 /**

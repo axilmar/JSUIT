@@ -15,7 +15,7 @@ const URL_PADDING = new URL('../../assets/icons/padding.svg', import.meta.url).h
  */
 export const initPaddingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PADDING }, ...properties);
+    initIcon(element, { additionalClassName: 'paddingIcon', url: URL_PADDING }, ...properties);
 }
 
 /**

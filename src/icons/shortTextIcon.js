@@ -15,7 +15,7 @@ const URL_SHORTTEXT = new URL('../../assets/icons/shortText.svg', import.meta.ur
  */
 export const initShortTextIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHORTTEXT }, ...properties);
+    initIcon(element, { additionalClassName: 'shortTextIcon', url: URL_SHORTTEXT }, ...properties);
 }
 
 /**

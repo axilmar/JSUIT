@@ -15,7 +15,7 @@ const URL_NOENCRYPTIONOUTLINED = new URL('../../assets/icons/noEncryptionOutline
  */
 export const initNoEncryptionOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOENCRYPTIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'noEncryptionOutlinedIcon', url: URL_NOENCRYPTIONOUTLINED }, ...properties);
 }
 
 /**

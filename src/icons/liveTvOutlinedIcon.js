@@ -15,7 +15,7 @@ const URL_LIVETVOUTLINED = new URL('../../assets/icons/liveTvOutlined.svg', impo
  */
 export const initLiveTvOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIVETVOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'liveTvOutlinedIcon', url: URL_LIVETVOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_MAXIMIZE = new URL('../../assets/icons/maximize.svg', import.meta.url)
  */
 export const initMaximizeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MAXIMIZE }, ...properties);
+    initIcon(element, { additionalClassName: 'maximizeIcon', url: URL_MAXIMIZE }, ...properties);
 }
 
 /**

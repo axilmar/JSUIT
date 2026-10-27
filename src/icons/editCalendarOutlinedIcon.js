@@ -15,7 +15,7 @@ const URL_EDITCALENDAROUTLINED = new URL('../../assets/icons/editCalendarOutline
  */
 export const initEditCalendarOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EDITCALENDAROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'editCalendarOutlinedIcon', url: URL_EDITCALENDAROUTLINED }, ...properties);
 }
 
 /**

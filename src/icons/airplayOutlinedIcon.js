@@ -15,7 +15,7 @@ const URL_AIRPLAYOUTLINED = new URL('../../assets/icons/airplayOutlined.svg', im
  */
 export const initAirplayOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AIRPLAYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'airplayOutlinedIcon', url: URL_AIRPLAYOUTLINED }, ...properties);
 }
 
 /**

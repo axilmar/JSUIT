@@ -15,7 +15,7 @@ const URL_ARROWRIGHT = new URL('../../assets/icons/arrowRight.svg', import.meta.
  */
 export const initArrowRightIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARROWRIGHT }, ...properties);
+    initIcon(element, { additionalClassName: 'arrowRightIcon', url: URL_ARROWRIGHT }, ...properties);
 }
 
 /**

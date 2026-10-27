@@ -15,7 +15,7 @@ const URL_SWAPHORIZONTALCIRCLEOUTLINED = new URL('../../assets/icons/swapHorizon
  */
 export const initSwapHorizontalCircleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWAPHORIZONTALCIRCLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'swapHorizontalCircleOutlinedIcon', url: URL_SWAPHORIZONTALCIRCLEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_VIEWDAYOUTLINED = new URL('../../assets/icons/viewDayOutlined.svg', im
  */
 export const initViewDayOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWDAYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewDayOutlinedIcon', url: URL_VIEWDAYOUTLINED }, ...properties);
 }
 
 /**

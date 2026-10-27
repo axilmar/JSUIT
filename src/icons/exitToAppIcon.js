@@ -15,7 +15,7 @@ const URL_EXITTOAPP = new URL('../../assets/icons/exitToApp.svg', import.meta.ur
  */
 export const initExitToAppIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXITTOAPP }, ...properties);
+    initIcon(element, { additionalClassName: 'exitToAppIcon', url: URL_EXITTOAPP }, ...properties);
 }
 
 /**

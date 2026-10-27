@@ -15,7 +15,7 @@ const URL_VIDEOLIBRARYOUTLINED = new URL('../../assets/icons/videoLibraryOutline
  */
 export const initVideoLibraryOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOLIBRARYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'videoLibraryOutlinedIcon', url: URL_VIDEOLIBRARYOUTLINED }, ...properties);
 }
 
 /**

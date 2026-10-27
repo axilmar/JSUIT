@@ -15,7 +15,7 @@ const URL_KEYBOARDBACKSPACE = new URL('../../assets/icons/keyboardBackspace.svg'
  */
 export const initKeyboardBackspaceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDBACKSPACE }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardBackspaceIcon', url: URL_KEYBOARDBACKSPACE }, ...properties);
 }
 
 /**

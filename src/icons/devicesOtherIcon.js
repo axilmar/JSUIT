@@ -15,7 +15,7 @@ const URL_DEVICESOTHER = new URL('../../assets/icons/devicesOther.svg', import.m
  */
 export const initDevicesOtherIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEVICESOTHER }, ...properties);
+    initIcon(element, { additionalClassName: 'devicesOtherIcon', url: URL_DEVICESOTHER }, ...properties);
 }
 
 /**

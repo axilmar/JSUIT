@@ -15,7 +15,7 @@ const URL_MAPSUGCOUTLINED = new URL('../../assets/icons/mapsUgcOutlined.svg', im
  */
 export const initMapsUgcOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MAPSUGCOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'mapsUgcOutlinedIcon', url: URL_MAPSUGCOUTLINED }, ...properties);
 }
 
 /**

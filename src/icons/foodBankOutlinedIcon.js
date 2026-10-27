@@ -15,7 +15,7 @@ const URL_FOODBANKOUTLINED = new URL('../../assets/icons/foodBankOutlined.svg', 
  */
 export const initFoodBankOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOODBANKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'foodBankOutlinedIcon', url: URL_FOODBANKOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SANITIZEROUTLINED = new URL('../../assets/icons/sanitizerOutlined.svg'
  */
 export const initSanitizerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SANITIZEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sanitizerOutlinedIcon', url: URL_SANITIZEROUTLINED }, ...properties);
 }
 
 /**

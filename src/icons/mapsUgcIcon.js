@@ -15,7 +15,7 @@ const URL_MAPSUGC = new URL('../../assets/icons/mapsUgc.svg', import.meta.url).h
  */
 export const initMapsUgcIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MAPSUGC }, ...properties);
+    initIcon(element, { additionalClassName: 'mapsUgcIcon', url: URL_MAPSUGC }, ...properties);
 }
 
 /**

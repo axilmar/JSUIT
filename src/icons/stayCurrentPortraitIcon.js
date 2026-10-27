@@ -15,7 +15,7 @@ const URL_STAYCURRENTPORTRAIT = new URL('../../assets/icons/stayCurrentPortrait.
  */
 export const initStayCurrentPortraitIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STAYCURRENTPORTRAIT }, ...properties);
+    initIcon(element, { additionalClassName: 'stayCurrentPortraitIcon', url: URL_STAYCURRENTPORTRAIT }, ...properties);
 }
 
 /**

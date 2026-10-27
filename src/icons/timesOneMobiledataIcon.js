@@ -15,7 +15,7 @@ const URL_TIMESONEMOBILEDATA = new URL('../../assets/icons/timesOneMobiledata.sv
  */
 export const initTimesOneMobiledataIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TIMESONEMOBILEDATA }, ...properties);
+    initIcon(element, { additionalClassName: 'timesOneMobiledataIcon', url: URL_TIMESONEMOBILEDATA }, ...properties);
 }
 
 /**

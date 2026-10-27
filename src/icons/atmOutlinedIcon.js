@@ -15,7 +15,7 @@ const URL_ATMOUTLINED = new URL('../../assets/icons/atmOutlined.svg', import.met
  */
 export const initAtmOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ATMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'atmOutlinedIcon', url: URL_ATMOUTLINED }, ...properties);
 }
 
 /**

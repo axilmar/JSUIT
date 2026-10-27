@@ -15,7 +15,7 @@ const URL_DOMAINDISABLED = new URL('../../assets/icons/domainDisabled.svg', impo
  */
 export const initDomainDisabledIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOMAINDISABLED }, ...properties);
+    initIcon(element, { additionalClassName: 'domainDisabledIcon', url: URL_DOMAINDISABLED }, ...properties);
 }
 
 /**

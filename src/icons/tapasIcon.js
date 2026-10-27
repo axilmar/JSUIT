@@ -15,7 +15,7 @@ const URL_TAPAS = new URL('../../assets/icons/tapas.svg', import.meta.url).href;
  */
 export const initTapasIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TAPAS }, ...properties);
+    initIcon(element, { additionalClassName: 'tapasIcon', url: URL_TAPAS }, ...properties);
 }
 
 /**

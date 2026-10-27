@@ -15,7 +15,7 @@ const URL_INSERTCHARTOUTLINED = new URL('../../assets/icons/insertChartOutlined.
  */
 export const initInsertChartOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INSERTCHARTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'insertChartOutlinedIcon', url: URL_INSERTCHARTOUTLINED }, ...properties);
 }
 
 /**

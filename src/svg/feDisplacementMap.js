@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initFeDisplacementMap = (element, ...properties) => {
     console.assert(element instanceof SVGFEDisplacementMapElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'feDisplacementMap' }, ...properties);
 }
 
 /**

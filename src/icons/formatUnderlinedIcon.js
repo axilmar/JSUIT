@@ -15,7 +15,7 @@ const URL_FORMATUNDERLINED = new URL('../../assets/icons/formatUnderlined.svg', 
  */
 export const initFormatUnderlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATUNDERLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatUnderlinedIcon', url: URL_FORMATUNDERLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_EURO = new URL('../../assets/icons/euro.svg', import.meta.url).href;
  */
 export const initEuroIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EURO }, ...properties);
+    initIcon(element, { additionalClassName: 'euroIcon', url: URL_EURO }, ...properties);
 }
 
 /**

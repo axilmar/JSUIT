@@ -15,7 +15,7 @@ const URL_PANTOOLALTOUTLINED = new URL('../../assets/icons/panToolAltOutlined.sv
  */
 export const initPanToolAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PANTOOLALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'panToolAltOutlinedIcon', url: URL_PANTOOLALTOUTLINED }, ...properties);
 }
 
 /**

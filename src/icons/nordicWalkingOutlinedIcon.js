@@ -15,7 +15,7 @@ const URL_NORDICWALKINGOUTLINED = new URL('../../assets/icons/nordicWalkingOutli
  */
 export const initNordicWalkingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NORDICWALKINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'nordicWalkingOutlinedIcon', url: URL_NORDICWALKINGOUTLINED }, ...properties);
 }
 
 /**

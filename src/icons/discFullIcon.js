@@ -15,7 +15,7 @@ const URL_DISCFULL = new URL('../../assets/icons/discFull.svg', import.meta.url)
  */
 export const initDiscFullIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DISCFULL }, ...properties);
+    initIcon(element, { additionalClassName: 'discFullIcon', url: URL_DISCFULL }, ...properties);
 }
 
 /**

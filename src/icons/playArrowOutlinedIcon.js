@@ -15,7 +15,7 @@ const URL_PLAYARROWOUTLINED = new URL('../../assets/icons/playArrowOutlined.svg'
  */
 export const initPlayArrowOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYARROWOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'playArrowOutlinedIcon', url: URL_PLAYARROWOUTLINED }, ...properties);
 }
 
 /**

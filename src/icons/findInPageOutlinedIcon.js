@@ -15,7 +15,7 @@ const URL_FINDINPAGEOUTLINED = new URL('../../assets/icons/findInPageOutlined.sv
  */
 export const initFindInPageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FINDINPAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'findInPageOutlinedIcon', url: URL_FINDINPAGEOUTLINED }, ...properties);
 }
 
 /**

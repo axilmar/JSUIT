@@ -15,7 +15,7 @@ const URL_CHECKLISTRTL = new URL('../../assets/icons/checklistRtl.svg', import.m
  */
 export const initChecklistRtlIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHECKLISTRTL }, ...properties);
+    initIcon(element, { additionalClassName: 'checklistRtlIcon', url: URL_CHECKLISTRTL }, ...properties);
 }
 
 /**

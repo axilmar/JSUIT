@@ -15,7 +15,7 @@ const URL_GROUPS = new URL('../../assets/icons/groups.svg', import.meta.url).hre
  */
 export const initGroupsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GROUPS }, ...properties);
+    initIcon(element, { additionalClassName: 'groupsIcon', url: URL_GROUPS }, ...properties);
 }
 
 /**

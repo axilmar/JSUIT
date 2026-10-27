@@ -15,7 +15,7 @@ const URL_APPSETTINGSALT = new URL('../../assets/icons/appSettingsAlt.svg', impo
  */
 export const initAppSettingsAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_APPSETTINGSALT }, ...properties);
+    initIcon(element, { additionalClassName: 'appSettingsAltIcon', url: URL_APPSETTINGSALT }, ...properties);
 }
 
 /**

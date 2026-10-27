@@ -15,7 +15,7 @@ const URL_KINGBEDOUTLINED = new URL('../../assets/icons/kingBedOutlined.svg', im
  */
 export const initKingBedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KINGBEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'kingBedOutlinedIcon', url: URL_KINGBEDOUTLINED }, ...properties);
 }
 
 /**

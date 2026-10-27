@@ -15,7 +15,7 @@ const URL_NEARBYOFFOUTLINED = new URL('../../assets/icons/nearbyOffOutlined.svg'
  */
 export const initNearbyOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NEARBYOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'nearbyOffOutlinedIcon', url: URL_NEARBYOFFOUTLINED }, ...properties);
 }
 
 /**

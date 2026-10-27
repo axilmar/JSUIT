@@ -15,7 +15,7 @@ const URL_PINDROP = new URL('../../assets/icons/pinDrop.svg', import.meta.url).h
  */
 export const initPinDropIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PINDROP }, ...properties);
+    initIcon(element, { additionalClassName: 'pinDropIcon', url: URL_PINDROP }, ...properties);
 }
 
 /**

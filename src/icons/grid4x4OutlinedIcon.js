@@ -15,7 +15,7 @@ const URL_GRID4X4OUTLINED = new URL('../../assets/icons/grid4x4Outlined.svg', im
  */
 export const initGrid4x4OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRID4X4OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'grid4x4OutlinedIcon', url: URL_GRID4X4OUTLINED }, ...properties);
 }
 
 /**

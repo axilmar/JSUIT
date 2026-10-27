@@ -15,7 +15,7 @@ const URL_WORKOFF = new URL('../../assets/icons/workOff.svg', import.meta.url).h
  */
 export const initWorkOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WORKOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'workOffIcon', url: URL_WORKOFF }, ...properties);
 }
 
 /**

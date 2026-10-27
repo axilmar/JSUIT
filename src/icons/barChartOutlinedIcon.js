@@ -15,7 +15,7 @@ const URL_BARCHARTOUTLINED = new URL('../../assets/icons/barChartOutlined.svg', 
  */
 export const initBarChartOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BARCHARTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'barChartOutlinedIcon', url: URL_BARCHARTOUTLINED }, ...properties);
 }
 
 /**

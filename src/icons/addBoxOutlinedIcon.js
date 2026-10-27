@@ -15,7 +15,7 @@ const URL_ADDBOXOUTLINED = new URL('../../assets/icons/addBoxOutlined.svg', impo
  */
 export const initAddBoxOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDBOXOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'addBoxOutlinedIcon', url: URL_ADDBOXOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SWITCHACCESSSHORTCUT = new URL('../../assets/icons/switchAccessShortcu
  */
 export const initSwitchAccessShortcutIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWITCHACCESSSHORTCUT }, ...properties);
+    initIcon(element, { additionalClassName: 'switchAccessShortcutIcon', url: URL_SWITCHACCESSSHORTCUT }, ...properties);
 }
 
 /**

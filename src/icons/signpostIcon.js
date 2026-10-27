@@ -15,7 +15,7 @@ const URL_SIGNPOST = new URL('../../assets/icons/signpost.svg', import.meta.url)
  */
 export const initSignpostIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNPOST }, ...properties);
+    initIcon(element, { additionalClassName: 'signpostIcon', url: URL_SIGNPOST }, ...properties);
 }
 
 /**

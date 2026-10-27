@@ -15,7 +15,7 @@ const URL_MUSICOFF = new URL('../../assets/icons/musicOff.svg', import.meta.url)
  */
 export const initMusicOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MUSICOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'musicOffIcon', url: URL_MUSICOFF }, ...properties);
 }
 
 /**

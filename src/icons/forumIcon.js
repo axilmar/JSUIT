@@ -15,7 +15,7 @@ const URL_FORUM = new URL('../../assets/icons/forum.svg', import.meta.url).href;
  */
 export const initForumIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORUM }, ...properties);
+    initIcon(element, { additionalClassName: 'forumIcon', url: URL_FORUM }, ...properties);
 }
 
 /**

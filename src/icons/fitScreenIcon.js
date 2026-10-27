@@ -15,7 +15,7 @@ const URL_FITSCREEN = new URL('../../assets/icons/fitScreen.svg', import.meta.ur
  */
 export const initFitScreenIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FITSCREEN }, ...properties);
+    initIcon(element, { additionalClassName: 'fitScreenIcon', url: URL_FITSCREEN }, ...properties);
 }
 
 /**

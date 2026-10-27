@@ -15,7 +15,7 @@ const URL_SURROUNDSOUNDOUTLINED = new URL('../../assets/icons/surroundSoundOutli
  */
 export const initSurroundSoundOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SURROUNDSOUNDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'surroundSoundOutlinedIcon', url: URL_SURROUNDSOUNDOUTLINED }, ...properties);
 }
 
 /**

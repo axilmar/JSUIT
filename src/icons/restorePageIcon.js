@@ -15,7 +15,7 @@ const URL_RESTOREPAGE = new URL('../../assets/icons/restorePage.svg', import.met
  */
 export const initRestorePageIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RESTOREPAGE }, ...properties);
+    initIcon(element, { additionalClassName: 'restorePageIcon', url: URL_RESTOREPAGE }, ...properties);
 }
 
 /**

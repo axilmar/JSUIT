@@ -15,7 +15,7 @@ const URL_ACCOUNTTREEOUTLINED = new URL('../../assets/icons/accountTreeOutlined.
  */
 export const initAccountTreeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACCOUNTTREEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'accountTreeOutlinedIcon', url: URL_ACCOUNTTREEOUTLINED }, ...properties);
 }
 
 /**

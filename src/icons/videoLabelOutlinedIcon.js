@@ -15,7 +15,7 @@ const URL_VIDEOLABELOUTLINED = new URL('../../assets/icons/videoLabelOutlined.sv
  */
 export const initVideoLabelOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOLABELOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'videoLabelOutlinedIcon', url: URL_VIDEOLABELOUTLINED }, ...properties);
 }
 
 /**

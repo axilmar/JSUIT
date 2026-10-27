@@ -15,7 +15,7 @@ const URL_STREETVIEWOUTLINED = new URL('../../assets/icons/streetviewOutlined.sv
  */
 export const initStreetviewOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STREETVIEWOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'streetviewOutlinedIcon', url: URL_STREETVIEWOUTLINED }, ...properties);
 }
 
 /**

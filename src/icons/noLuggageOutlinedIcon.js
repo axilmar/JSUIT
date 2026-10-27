@@ -15,7 +15,7 @@ const URL_NOLUGGAGEOUTLINED = new URL('../../assets/icons/noLuggageOutlined.svg'
  */
 export const initNoLuggageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOLUGGAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'noLuggageOutlinedIcon', url: URL_NOLUGGAGEOUTLINED }, ...properties);
 }
 
 /**

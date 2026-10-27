@@ -15,7 +15,7 @@ const URL_LOGOUT = new URL('../../assets/icons/logout.svg', import.meta.url).hre
  */
 export const initLogoutIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOGOUT }, ...properties);
+    initIcon(element, { additionalClassName: 'logoutIcon', url: URL_LOGOUT }, ...properties);
 }
 
 /**

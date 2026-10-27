@@ -15,7 +15,7 @@ const URL_FILTERDRAMA = new URL('../../assets/icons/filterDrama.svg', import.met
  */
 export const initFilterDramaIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERDRAMA }, ...properties);
+    initIcon(element, { additionalClassName: 'filterDramaIcon', url: URL_FILTERDRAMA }, ...properties);
 }
 
 /**

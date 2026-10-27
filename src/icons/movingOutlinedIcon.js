@@ -15,7 +15,7 @@ const URL_MOVINGOUTLINED = new URL('../../assets/icons/movingOutlined.svg', impo
  */
 export const initMovingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOVINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'movingOutlinedIcon', url: URL_MOVINGOUTLINED }, ...properties);
 }
 
 /**

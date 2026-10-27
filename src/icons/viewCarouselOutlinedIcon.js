@@ -15,7 +15,7 @@ const URL_VIEWCAROUSELOUTLINED = new URL('../../assets/icons/viewCarouselOutline
  */
 export const initViewCarouselOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWCAROUSELOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewCarouselOutlinedIcon', url: URL_VIEWCAROUSELOUTLINED }, ...properties);
 }
 
 /**

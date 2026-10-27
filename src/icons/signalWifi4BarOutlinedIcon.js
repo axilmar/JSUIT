@@ -15,7 +15,7 @@ const URL_SIGNALWIFI4BAROUTLINED = new URL('../../assets/icons/signalWifi4BarOut
  */
 export const initSignalWifi4BarOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNALWIFI4BAROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'signalWifi4BarOutlinedIcon', url: URL_SIGNALWIFI4BAROUTLINED }, ...properties);
 }
 
 /**

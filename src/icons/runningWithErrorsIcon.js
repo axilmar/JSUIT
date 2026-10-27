@@ -15,7 +15,7 @@ const URL_RUNNINGWITHERRORS = new URL('../../assets/icons/runningWithErrors.svg'
  */
 export const initRunningWithErrorsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RUNNINGWITHERRORS }, ...properties);
+    initIcon(element, { additionalClassName: 'runningWithErrorsIcon', url: URL_RUNNINGWITHERRORS }, ...properties);
 }
 
 /**

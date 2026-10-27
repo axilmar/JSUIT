@@ -15,7 +15,7 @@ const URL_NOMEETINGROOM = new URL('../../assets/icons/noMeetingRoom.svg', import
  */
 export const initNoMeetingRoomIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOMEETINGROOM }, ...properties);
+    initIcon(element, { additionalClassName: 'noMeetingRoomIcon', url: URL_NOMEETINGROOM }, ...properties);
 }
 
 /**

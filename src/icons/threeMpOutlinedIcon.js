@@ -15,7 +15,7 @@ const URL_THREEMPOUTLINED = new URL('../../assets/icons/threeMpOutlined.svg', im
  */
 export const initThreeMpOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THREEMPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'threeMpOutlinedIcon', url: URL_THREEMPOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CATEGORY = new URL('../../assets/icons/category.svg', import.meta.url)
  */
 export const initCategoryIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CATEGORY }, ...properties);
+    initIcon(element, { additionalClassName: 'categoryIcon', url: URL_CATEGORY }, ...properties);
 }
 
 /**

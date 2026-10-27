@@ -15,7 +15,7 @@ const URL_MINORCRASH = new URL('../../assets/icons/minorCrash.svg', import.meta.
  */
 export const initMinorCrashIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MINORCRASH }, ...properties);
+    initIcon(element, { additionalClassName: 'minorCrashIcon', url: URL_MINORCRASH }, ...properties);
 }
 
 /**

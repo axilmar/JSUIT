@@ -15,7 +15,7 @@ const URL_FORMATOVERLINEOUTLINED = new URL('../../assets/icons/formatOverlineOut
  */
 export const initFormatOverlineOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATOVERLINEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatOverlineOutlinedIcon', url: URL_FORMATOVERLINEOUTLINED }, ...properties);
 }
 
 /**

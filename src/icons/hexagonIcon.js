@@ -15,7 +15,7 @@ const URL_HEXAGON = new URL('../../assets/icons/hexagon.svg', import.meta.url).h
  */
 export const initHexagonIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEXAGON }, ...properties);
+    initIcon(element, { additionalClassName: 'hexagonIcon', url: URL_HEXAGON }, ...properties);
 }
 
 /**

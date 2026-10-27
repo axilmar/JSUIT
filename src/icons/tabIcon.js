@@ -15,7 +15,7 @@ const URL_TAB = new URL('../../assets/icons/tab.svg', import.meta.url).href;
  */
 export const initTabIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TAB }, ...properties);
+    initIcon(element, { additionalClassName: 'tabIcon', url: URL_TAB }, ...properties);
 }
 
 /**

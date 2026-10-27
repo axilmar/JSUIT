@@ -15,7 +15,7 @@ const URL_FOLDEROFF = new URL('../../assets/icons/folderOff.svg', import.meta.ur
  */
 export const initFolderOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOLDEROFF }, ...properties);
+    initIcon(element, { additionalClassName: 'folderOffIcon', url: URL_FOLDEROFF }, ...properties);
 }
 
 /**

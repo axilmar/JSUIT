@@ -15,7 +15,7 @@ const URL_CLOUDOUTLINED = new URL('../../assets/icons/cloudOutlined.svg', import
  */
 export const initCloudOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOUDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cloudOutlinedIcon', url: URL_CLOUDOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ANIMATION = new URL('../../assets/icons/animation.svg', import.meta.ur
  */
 export const initAnimationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ANIMATION }, ...properties);
+    initIcon(element, { additionalClassName: 'animationIcon', url: URL_ANIMATION }, ...properties);
 }
 
 /**

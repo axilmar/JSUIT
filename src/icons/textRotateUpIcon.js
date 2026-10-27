@@ -15,7 +15,7 @@ const URL_TEXTROTATEUP = new URL('../../assets/icons/textRotateUp.svg', import.m
  */
 export const initTextRotateUpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTROTATEUP }, ...properties);
+    initIcon(element, { additionalClassName: 'textRotateUpIcon', url: URL_TEXTROTATEUP }, ...properties);
 }
 
 /**

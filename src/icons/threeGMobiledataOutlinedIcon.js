@@ -15,7 +15,7 @@ const URL_THREEGMOBILEDATAOUTLINED = new URL('../../assets/icons/threeGMobiledat
  */
 export const initThreeGMobiledataOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THREEGMOBILEDATAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'threeGMobiledataOutlinedIcon', url: URL_THREEGMOBILEDATAOUTLINED }, ...properties);
 }
 
 /**

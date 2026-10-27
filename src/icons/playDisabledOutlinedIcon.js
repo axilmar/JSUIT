@@ -15,7 +15,7 @@ const URL_PLAYDISABLEDOUTLINED = new URL('../../assets/icons/playDisabledOutline
  */
 export const initPlayDisabledOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYDISABLEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'playDisabledOutlinedIcon', url: URL_PLAYDISABLEDOUTLINED }, ...properties);
 }
 
 /**

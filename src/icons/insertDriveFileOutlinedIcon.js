@@ -15,7 +15,7 @@ const URL_INSERTDRIVEFILEOUTLINED = new URL('../../assets/icons/insertDriveFileO
  */
 export const initInsertDriveFileOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INSERTDRIVEFILEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'insertDriveFileOutlinedIcon', url: URL_INSERTDRIVEFILEOUTLINED }, ...properties);
 }
 
 /**

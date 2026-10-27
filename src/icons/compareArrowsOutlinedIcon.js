@@ -15,7 +15,7 @@ const URL_COMPAREARROWSOUTLINED = new URL('../../assets/icons/compareArrowsOutli
  */
 export const initCompareArrowsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMPAREARROWSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'compareArrowsOutlinedIcon', url: URL_COMPAREARROWSOUTLINED }, ...properties);
 }
 
 /**

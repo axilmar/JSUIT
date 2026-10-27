@@ -15,7 +15,7 @@ const URL_BATHROOM = new URL('../../assets/icons/bathroom.svg', import.meta.url)
  */
 export const initBathroomIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BATHROOM }, ...properties);
+    initIcon(element, { additionalClassName: 'bathroomIcon', url: URL_BATHROOM }, ...properties);
 }
 
 /**

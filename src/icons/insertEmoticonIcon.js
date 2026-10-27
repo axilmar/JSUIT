@@ -15,7 +15,7 @@ const URL_INSERTEMOTICON = new URL('../../assets/icons/insertEmoticon.svg', impo
  */
 export const initInsertEmoticonIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INSERTEMOTICON }, ...properties);
+    initIcon(element, { additionalClassName: 'insertEmoticonIcon', url: URL_INSERTEMOTICON }, ...properties);
 }
 
 /**

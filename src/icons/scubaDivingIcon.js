@@ -15,7 +15,7 @@ const URL_SCUBADIVING = new URL('../../assets/icons/scubaDiving.svg', import.met
  */
 export const initScubaDivingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCUBADIVING }, ...properties);
+    initIcon(element, { additionalClassName: 'scubaDivingIcon', url: URL_SCUBADIVING }, ...properties);
 }
 
 /**

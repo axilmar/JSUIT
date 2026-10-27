@@ -15,7 +15,7 @@ const URL_DEBLUR = new URL('../../assets/icons/deblur.svg', import.meta.url).hre
  */
 export const initDeblurIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEBLUR }, ...properties);
+    initIcon(element, { additionalClassName: 'deblurIcon', url: URL_DEBLUR }, ...properties);
 }
 
 /**

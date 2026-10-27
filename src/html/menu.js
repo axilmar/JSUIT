@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initMenu = (element, ...properties) => {
     console.assert(element instanceof HTMLMenuElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'menu' }, ...properties);
 }
 
 /**

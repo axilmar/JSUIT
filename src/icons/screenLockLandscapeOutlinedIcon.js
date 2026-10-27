@@ -15,7 +15,7 @@ const URL_SCREENLOCKLANDSCAPEOUTLINED = new URL('../../assets/icons/screenLockLa
  */
 export const initScreenLockLandscapeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCREENLOCKLANDSCAPEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'screenLockLandscapeOutlinedIcon', url: URL_SCREENLOCKLANDSCAPEOUTLINED }, ...properties);
 }
 
 /**

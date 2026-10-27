@@ -15,7 +15,7 @@ const URL_TABUNSELECTED = new URL('../../assets/icons/tabUnselected.svg', import
  */
 export const initTabUnselectedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TABUNSELECTED }, ...properties);
+    initIcon(element, { additionalClassName: 'tabUnselectedIcon', url: URL_TABUNSELECTED }, ...properties);
 }
 
 /**

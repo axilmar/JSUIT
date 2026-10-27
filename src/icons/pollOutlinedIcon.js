@@ -15,7 +15,7 @@ const URL_POLLOUTLINED = new URL('../../assets/icons/pollOutlined.svg', import.m
  */
 export const initPollOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POLLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pollOutlinedIcon', url: URL_POLLOUTLINED }, ...properties);
 }
 
 /**

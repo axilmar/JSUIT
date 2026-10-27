@@ -15,7 +15,7 @@ const URL_TAKEOUTDINING = new URL('../../assets/icons/takeoutDining.svg', import
  */
 export const initTakeoutDiningIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TAKEOUTDINING }, ...properties);
+    initIcon(element, { additionalClassName: 'takeoutDiningIcon', url: URL_TAKEOUTDINING }, ...properties);
 }
 
 /**

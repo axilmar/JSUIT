@@ -15,7 +15,7 @@ const URL_FEEDBACKOUTLINED = new URL('../../assets/icons/feedbackOutlined.svg', 
  */
 export const initFeedbackOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FEEDBACKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'feedbackOutlinedIcon', url: URL_FEEDBACKOUTLINED }, ...properties);
 }
 
 /**

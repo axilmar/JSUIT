@@ -15,7 +15,7 @@ const URL_SATELLITEALT = new URL('../../assets/icons/satelliteAlt.svg', import.m
  */
 export const initSatelliteAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SATELLITEALT }, ...properties);
+    initIcon(element, { additionalClassName: 'satelliteAltIcon', url: URL_SATELLITEALT }, ...properties);
 }
 
 /**

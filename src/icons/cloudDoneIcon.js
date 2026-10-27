@@ -15,7 +15,7 @@ const URL_CLOUDDONE = new URL('../../assets/icons/cloudDone.svg', import.meta.ur
  */
 export const initCloudDoneIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOUDDONE }, ...properties);
+    initIcon(element, { additionalClassName: 'cloudDoneIcon', url: URL_CLOUDDONE }, ...properties);
 }
 
 /**

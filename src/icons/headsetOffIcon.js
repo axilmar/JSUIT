@@ -15,7 +15,7 @@ const URL_HEADSETOFF = new URL('../../assets/icons/headsetOff.svg', import.meta.
  */
 export const initHeadsetOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEADSETOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'headsetOffIcon', url: URL_HEADSETOFF }, ...properties);
 }
 
 /**

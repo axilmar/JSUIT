@@ -15,7 +15,7 @@ const URL_LOOPOUTLINED = new URL('../../assets/icons/loopOutlined.svg', import.m
  */
 export const initLoopOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOOPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'loopOutlinedIcon', url: URL_LOOPOUTLINED }, ...properties);
 }
 
 /**

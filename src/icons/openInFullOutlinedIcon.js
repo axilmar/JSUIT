@@ -15,7 +15,7 @@ const URL_OPENINFULLOUTLINED = new URL('../../assets/icons/openInFullOutlined.sv
  */
 export const initOpenInFullOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OPENINFULLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'openInFullOutlinedIcon', url: URL_OPENINFULLOUTLINED }, ...properties);
 }
 
 /**

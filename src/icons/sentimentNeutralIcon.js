@@ -15,7 +15,7 @@ const URL_SENTIMENTNEUTRAL = new URL('../../assets/icons/sentimentNeutral.svg', 
  */
 export const initSentimentNeutralIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SENTIMENTNEUTRAL }, ...properties);
+    initIcon(element, { additionalClassName: 'sentimentNeutralIcon', url: URL_SENTIMENTNEUTRAL }, ...properties);
 }
 
 /**

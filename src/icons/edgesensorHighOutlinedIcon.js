@@ -15,7 +15,7 @@ const URL_EDGESENSORHIGHOUTLINED = new URL('../../assets/icons/edgesensorHighOut
  */
 export const initEdgesensorHighOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EDGESENSORHIGHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'edgesensorHighOutlinedIcon', url: URL_EDGESENSORHIGHOUTLINED }, ...properties);
 }
 
 /**

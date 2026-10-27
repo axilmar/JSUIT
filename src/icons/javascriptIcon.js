@@ -15,7 +15,7 @@ const URL_JAVASCRIPT = new URL('../../assets/icons/javascript.svg', import.meta.
  */
 export const initJavascriptIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_JAVASCRIPT }, ...properties);
+    initIcon(element, { additionalClassName: 'javascriptIcon', url: URL_JAVASCRIPT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SELL = new URL('../../assets/icons/sell.svg', import.meta.url).href;
  */
 export const initSellIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SELL }, ...properties);
+    initIcon(element, { additionalClassName: 'sellIcon', url: URL_SELL }, ...properties);
 }
 
 /**

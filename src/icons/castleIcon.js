@@ -15,7 +15,7 @@ const URL_CASTLE = new URL('../../assets/icons/castle.svg', import.meta.url).hre
  */
 export const initCastleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CASTLE }, ...properties);
+    initIcon(element, { additionalClassName: 'castleIcon', url: URL_CASTLE }, ...properties);
 }
 
 /**

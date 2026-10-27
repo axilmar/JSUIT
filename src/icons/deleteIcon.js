@@ -15,7 +15,7 @@ const URL_DELETE = new URL('../../assets/icons/delete.svg', import.meta.url).hre
  */
 export const initDeleteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DELETE }, ...properties);
+    initIcon(element, { additionalClassName: 'deleteIcon', url: URL_DELETE }, ...properties);
 }
 
 /**

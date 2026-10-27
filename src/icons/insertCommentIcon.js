@@ -15,7 +15,7 @@ const URL_INSERTCOMMENT = new URL('../../assets/icons/insertComment.svg', import
  */
 export const initInsertCommentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INSERTCOMMENT }, ...properties);
+    initIcon(element, { additionalClassName: 'insertCommentIcon', url: URL_INSERTCOMMENT }, ...properties);
 }
 
 /**

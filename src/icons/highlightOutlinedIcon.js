@@ -15,7 +15,7 @@ const URL_HIGHLIGHTOUTLINED = new URL('../../assets/icons/highlightOutlined.svg'
  */
 export const initHighlightOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HIGHLIGHTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'highlightOutlinedIcon', url: URL_HIGHLIGHTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DOCK = new URL('../../assets/icons/dock.svg', import.meta.url).href;
  */
 export const initDockIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOCK }, ...properties);
+    initIcon(element, { additionalClassName: 'dockIcon', url: URL_DOCK }, ...properties);
 }
 
 /**

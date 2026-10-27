@@ -15,7 +15,7 @@ const URL_CELEBRATIONOUTLINED = new URL('../../assets/icons/celebrationOutlined.
  */
 export const initCelebrationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CELEBRATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'celebrationOutlinedIcon', url: URL_CELEBRATIONOUTLINED }, ...properties);
 }
 
 /**

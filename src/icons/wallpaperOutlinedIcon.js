@@ -15,7 +15,7 @@ const URL_WALLPAPEROUTLINED = new URL('../../assets/icons/wallpaperOutlined.svg'
  */
 export const initWallpaperOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WALLPAPEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wallpaperOutlinedIcon', url: URL_WALLPAPEROUTLINED }, ...properties);
 }
 
 /**

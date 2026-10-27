@@ -15,7 +15,7 @@ const URL_SMSFAILED = new URL('../../assets/icons/smsFailed.svg', import.meta.ur
  */
 export const initSmsFailedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SMSFAILED }, ...properties);
+    initIcon(element, { additionalClassName: 'smsFailedIcon', url: URL_SMSFAILED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FORMATSHAPESOUTLINED = new URL('../../assets/icons/formatShapesOutline
  */
 export const initFormatShapesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATSHAPESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatShapesOutlinedIcon', url: URL_FORMATSHAPESOUTLINED }, ...properties);
 }
 
 /**

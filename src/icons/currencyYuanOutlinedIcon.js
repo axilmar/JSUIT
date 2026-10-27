@@ -15,7 +15,7 @@ const URL_CURRENCYYUANOUTLINED = new URL('../../assets/icons/currencyYuanOutline
  */
 export const initCurrencyYuanOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CURRENCYYUANOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'currencyYuanOutlinedIcon', url: URL_CURRENCYYUANOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_STORM = new URL('../../assets/icons/storm.svg', import.meta.url).href;
  */
 export const initStormIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STORM }, ...properties);
+    initIcon(element, { additionalClassName: 'stormIcon', url: URL_STORM }, ...properties);
 }
 
 /**

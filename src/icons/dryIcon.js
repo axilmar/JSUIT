@@ -15,7 +15,7 @@ const URL_DRY = new URL('../../assets/icons/dry.svg', import.meta.url).href;
  */
 export const initDryIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRY }, ...properties);
+    initIcon(element, { additionalClassName: 'dryIcon', url: URL_DRY }, ...properties);
 }
 
 /**

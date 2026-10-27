@@ -15,7 +15,7 @@ const URL_JOINLEFTOUTLINED = new URL('../../assets/icons/joinLeftOutlined.svg', 
  */
 export const initJoinLeftOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_JOINLEFTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'joinLeftOutlinedIcon', url: URL_JOINLEFTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_AUTORENEWOUTLINED = new URL('../../assets/icons/autorenewOutlined.svg'
  */
 export const initAutorenewOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTORENEWOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'autorenewOutlinedIcon', url: URL_AUTORENEWOUTLINED }, ...properties);
 }
 
 /**

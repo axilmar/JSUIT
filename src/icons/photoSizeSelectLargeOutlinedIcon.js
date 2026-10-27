@@ -15,7 +15,7 @@ const URL_PHOTOSIZESELECTLARGEOUTLINED = new URL('../../assets/icons/photoSizeSe
  */
 export const initPhotoSizeSelectLargeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHOTOSIZESELECTLARGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'photoSizeSelectLargeOutlinedIcon', url: URL_PHOTOSIZESELECTLARGEOUTLINED }, ...properties);
 }
 
 /**

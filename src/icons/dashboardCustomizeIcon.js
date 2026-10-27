@@ -15,7 +15,7 @@ const URL_DASHBOARDCUSTOMIZE = new URL('../../assets/icons/dashboardCustomize.sv
  */
 export const initDashboardCustomizeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DASHBOARDCUSTOMIZE }, ...properties);
+    initIcon(element, { additionalClassName: 'dashboardCustomizeIcon', url: URL_DASHBOARDCUSTOMIZE }, ...properties);
 }
 
 /**

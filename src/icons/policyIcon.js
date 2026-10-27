@@ -15,7 +15,7 @@ const URL_POLICY = new URL('../../assets/icons/policy.svg', import.meta.url).hre
  */
 export const initPolicyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POLICY }, ...properties);
+    initIcon(element, { additionalClassName: 'policyIcon', url: URL_POLICY }, ...properties);
 }
 
 /**

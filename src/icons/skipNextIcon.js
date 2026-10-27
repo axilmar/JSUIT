@@ -15,7 +15,7 @@ const URL_SKIPNEXT = new URL('../../assets/icons/skipNext.svg', import.meta.url)
  */
 export const initSkipNextIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SKIPNEXT }, ...properties);
+    initIcon(element, { additionalClassName: 'skipNextIcon', url: URL_SKIPNEXT }, ...properties);
 }
 
 /**

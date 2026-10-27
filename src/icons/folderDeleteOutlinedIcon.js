@@ -15,7 +15,7 @@ const URL_FOLDERDELETEOUTLINED = new URL('../../assets/icons/folderDeleteOutline
  */
 export const initFolderDeleteOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOLDERDELETEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'folderDeleteOutlinedIcon', url: URL_FOLDERDELETEOUTLINED }, ...properties);
 }
 
 /**

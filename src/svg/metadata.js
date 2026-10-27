@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initMetadata = (element, ...properties) => {
     console.assert(element instanceof SVGMetadataElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'metadata' }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TEMPLEHINDUOUTLINED = new URL('../../assets/icons/templeHinduOutlined.
  */
 export const initTempleHinduOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEMPLEHINDUOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'templeHinduOutlinedIcon', url: URL_TEMPLEHINDUOUTLINED }, ...properties);
 }
 
 /**

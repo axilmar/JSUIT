@@ -15,7 +15,7 @@ const URL_CAMERAINDOOR = new URL('../../assets/icons/cameraIndoor.svg', import.m
  */
 export const initCameraIndoorIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CAMERAINDOOR }, ...properties);
+    initIcon(element, { additionalClassName: 'cameraIndoorIcon', url: URL_CAMERAINDOOR }, ...properties);
 }
 
 /**

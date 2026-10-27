@@ -15,7 +15,7 @@ const URL_SSIDCHARTOUTLINED = new URL('../../assets/icons/ssidChartOutlined.svg'
  */
 export const initSsidChartOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SSIDCHARTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'ssidChartOutlinedIcon', url: URL_SSIDCHARTOUTLINED }, ...properties);
 }
 
 /**

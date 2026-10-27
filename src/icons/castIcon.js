@@ -15,7 +15,7 @@ const URL_CAST = new URL('../../assets/icons/cast.svg', import.meta.url).href;
  */
 export const initCastIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CAST }, ...properties);
+    initIcon(element, { additionalClassName: 'castIcon', url: URL_CAST }, ...properties);
 }
 
 /**

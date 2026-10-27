@@ -15,7 +15,7 @@ const URL_EVENTSEAT = new URL('../../assets/icons/eventSeat.svg', import.meta.ur
  */
 export const initEventSeatIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EVENTSEAT }, ...properties);
+    initIcon(element, { additionalClassName: 'eventSeatIcon', url: URL_EVENTSEAT }, ...properties);
 }
 
 /**

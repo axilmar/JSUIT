@@ -15,7 +15,7 @@ const URL_WEBASSETOUTLINED = new URL('../../assets/icons/webAssetOutlined.svg', 
  */
 export const initWebAssetOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WEBASSETOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'webAssetOutlinedIcon', url: URL_WEBASSETOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_POWEROFFOUTLINED = new URL('../../assets/icons/powerOffOutlined.svg', 
  */
 export const initPowerOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POWEROFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'powerOffOutlinedIcon', url: URL_POWEROFFOUTLINED }, ...properties);
 }
 
 /**

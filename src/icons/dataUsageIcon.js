@@ -15,7 +15,7 @@ const URL_DATAUSAGE = new URL('../../assets/icons/dataUsage.svg', import.meta.ur
  */
 export const initDataUsageIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DATAUSAGE }, ...properties);
+    initIcon(element, { additionalClassName: 'dataUsageIcon', url: URL_DATAUSAGE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ESCALATOROUTLINED = new URL('../../assets/icons/escalatorOutlined.svg'
  */
 export const initEscalatorOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ESCALATOROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'escalatorOutlinedIcon', url: URL_ESCALATOROUTLINED }, ...properties);
 }
 
 /**

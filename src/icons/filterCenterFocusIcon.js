@@ -15,7 +15,7 @@ const URL_FILTERCENTERFOCUS = new URL('../../assets/icons/filterCenterFocus.svg'
  */
 export const initFilterCenterFocusIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERCENTERFOCUS }, ...properties);
+    initIcon(element, { additionalClassName: 'filterCenterFocusIcon', url: URL_FILTERCENTERFOCUS }, ...properties);
 }
 
 /**

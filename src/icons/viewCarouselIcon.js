@@ -15,7 +15,7 @@ const URL_VIEWCAROUSEL = new URL('../../assets/icons/viewCarousel.svg', import.m
  */
 export const initViewCarouselIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWCAROUSEL }, ...properties);
+    initIcon(element, { additionalClassName: 'viewCarouselIcon', url: URL_VIEWCAROUSEL }, ...properties);
 }
 
 /**

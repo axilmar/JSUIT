@@ -15,7 +15,7 @@ const URL_BADGE = new URL('../../assets/icons/badge.svg', import.meta.url).href;
  */
 export const initBadgeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BADGE }, ...properties);
+    initIcon(element, { additionalClassName: 'badgeIcon', url: URL_BADGE }, ...properties);
 }
 
 /**

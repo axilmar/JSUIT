@@ -15,7 +15,7 @@ const URL_BORDERHORIZONTALOUTLINED = new URL('../../assets/icons/borderHorizonta
  */
 export const initBorderHorizontalOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BORDERHORIZONTALOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'borderHorizontalOutlinedIcon', url: URL_BORDERHORIZONTALOUTLINED }, ...properties);
 }
 
 /**

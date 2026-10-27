@@ -15,7 +15,7 @@ const URL_MOBILEDATAOFFOUTLINED = new URL('../../assets/icons/mobiledataOffOutli
  */
 export const initMobiledataOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOBILEDATAOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'mobiledataOffOutlinedIcon', url: URL_MOBILEDATAOFFOUTLINED }, ...properties);
 }
 
 /**

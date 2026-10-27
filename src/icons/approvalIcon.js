@@ -15,7 +15,7 @@ const URL_APPROVAL = new URL('../../assets/icons/approval.svg', import.meta.url)
  */
 export const initApprovalIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_APPROVAL }, ...properties);
+    initIcon(element, { additionalClassName: 'approvalIcon', url: URL_APPROVAL }, ...properties);
 }
 
 /**

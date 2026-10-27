@@ -15,7 +15,7 @@ const URL_QUESTIONANSWEROUTLINED = new URL('../../assets/icons/questionAnswerOut
  */
 export const initQuestionAnswerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUESTIONANSWEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'questionAnswerOutlinedIcon', url: URL_QUESTIONANSWEROUTLINED }, ...properties);
 }
 
 /**

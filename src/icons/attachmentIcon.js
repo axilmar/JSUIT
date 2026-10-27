@@ -15,7 +15,7 @@ const URL_ATTACHMENT = new URL('../../assets/icons/attachment.svg', import.meta.
  */
 export const initAttachmentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ATTACHMENT }, ...properties);
+    initIcon(element, { additionalClassName: 'attachmentIcon', url: URL_ATTACHMENT }, ...properties);
 }
 
 /**

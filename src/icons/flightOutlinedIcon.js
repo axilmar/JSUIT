@@ -15,7 +15,7 @@ const URL_FLIGHTOUTLINED = new URL('../../assets/icons/flightOutlined.svg', impo
  */
 export const initFlightOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLIGHTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'flightOutlinedIcon', url: URL_FLIGHTOUTLINED }, ...properties);
 }
 
 /**

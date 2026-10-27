@@ -15,7 +15,7 @@ const URL_BROWSERNOTSUPPORTEDOUTLINED = new URL('../../assets/icons/browserNotSu
  */
 export const initBrowserNotSupportedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BROWSERNOTSUPPORTEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'browserNotSupportedOutlinedIcon', url: URL_BROWSERNOTSUPPORTEDOUTLINED }, ...properties);
 }
 
 /**

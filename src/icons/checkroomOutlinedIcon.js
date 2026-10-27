@@ -15,7 +15,7 @@ const URL_CHECKROOMOUTLINED = new URL('../../assets/icons/checkroomOutlined.svg'
  */
 export const initCheckroomOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHECKROOMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'checkroomOutlinedIcon', url: URL_CHECKROOMOUTLINED }, ...properties);
 }
 
 /**

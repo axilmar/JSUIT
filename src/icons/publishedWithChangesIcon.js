@@ -15,7 +15,7 @@ const URL_PUBLISHEDWITHCHANGES = new URL('../../assets/icons/publishedWithChange
  */
 export const initPublishedWithChangesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PUBLISHEDWITHCHANGES }, ...properties);
+    initIcon(element, { additionalClassName: 'publishedWithChangesIcon', url: URL_PUBLISHEDWITHCHANGES }, ...properties);
 }
 
 /**

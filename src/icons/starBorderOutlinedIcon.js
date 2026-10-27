@@ -15,7 +15,7 @@ const URL_STARBORDEROUTLINED = new URL('../../assets/icons/starBorderOutlined.sv
  */
 export const initStarBorderOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STARBORDEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'starBorderOutlinedIcon', url: URL_STARBORDEROUTLINED }, ...properties);
 }
 
 /**

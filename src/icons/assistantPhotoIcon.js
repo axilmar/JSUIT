@@ -15,7 +15,7 @@ const URL_ASSISTANTPHOTO = new URL('../../assets/icons/assistantPhoto.svg', impo
  */
 export const initAssistantPhotoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ASSISTANTPHOTO }, ...properties);
+    initIcon(element, { additionalClassName: 'assistantPhotoIcon', url: URL_ASSISTANTPHOTO }, ...properties);
 }
 
 /**

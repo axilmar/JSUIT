@@ -15,7 +15,7 @@ const URL_FILTERTILTSHIFT = new URL('../../assets/icons/filterTiltShift.svg', im
  */
 export const initFilterTiltShiftIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERTILTSHIFT }, ...properties);
+    initIcon(element, { additionalClassName: 'filterTiltShiftIcon', url: URL_FILTERTILTSHIFT }, ...properties);
 }
 
 /**

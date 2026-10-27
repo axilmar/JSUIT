@@ -15,7 +15,7 @@ const URL_EXPLOREOFF = new URL('../../assets/icons/exploreOff.svg', import.meta.
  */
 export const initExploreOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXPLOREOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'exploreOffIcon', url: URL_EXPLOREOFF }, ...properties);
 }
 
 /**

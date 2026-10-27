@@ -15,7 +15,7 @@ const URL_NOTSTARTED = new URL('../../assets/icons/notStarted.svg', import.meta.
  */
 export const initNotStartedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTSTARTED }, ...properties);
+    initIcon(element, { additionalClassName: 'notStartedIcon', url: URL_NOTSTARTED }, ...properties);
 }
 
 /**

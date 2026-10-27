@@ -15,7 +15,7 @@ const URL_SORT = new URL('../../assets/icons/sort.svg', import.meta.url).href;
  */
 export const initSortIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SORT }, ...properties);
+    initIcon(element, { additionalClassName: 'sortIcon', url: URL_SORT }, ...properties);
 }
 
 /**

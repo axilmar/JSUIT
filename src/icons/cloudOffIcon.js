@@ -15,7 +15,7 @@ const URL_CLOUDOFF = new URL('../../assets/icons/cloudOff.svg', import.meta.url)
  */
 export const initCloudOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOUDOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'cloudOffIcon', url: URL_CLOUDOFF }, ...properties);
 }
 
 /**

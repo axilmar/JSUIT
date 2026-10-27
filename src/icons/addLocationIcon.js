@@ -15,7 +15,7 @@ const URL_ADDLOCATION = new URL('../../assets/icons/addLocation.svg', import.met
  */
 export const initAddLocationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDLOCATION }, ...properties);
+    initIcon(element, { additionalClassName: 'addLocationIcon', url: URL_ADDLOCATION }, ...properties);
 }
 
 /**

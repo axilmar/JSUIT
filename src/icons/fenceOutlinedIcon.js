@@ -15,7 +15,7 @@ const URL_FENCEOUTLINED = new URL('../../assets/icons/fenceOutlined.svg', import
  */
 export const initFenceOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FENCEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fenceOutlinedIcon', url: URL_FENCEOUTLINED }, ...properties);
 }
 
 /**

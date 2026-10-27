@@ -15,7 +15,7 @@ const URL_UNFOLDLESSDOUBLEOUTLINED = new URL('../../assets/icons/unfoldLessDoubl
  */
 export const initUnfoldLessDoubleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UNFOLDLESSDOUBLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'unfoldLessDoubleOutlinedIcon', url: URL_UNFOLDLESSDOUBLEOUTLINED }, ...properties);
 }
 
 /**

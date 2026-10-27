@@ -15,7 +15,7 @@ const URL_ADDTOHOMESCREENOUTLINED = new URL('../../assets/icons/addToHomeScreenO
  */
 export const initAddToHomeScreenOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDTOHOMESCREENOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'addToHomeScreenOutlinedIcon', url: URL_ADDTOHOMESCREENOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_UNSUBSCRIBE = new URL('../../assets/icons/unsubscribe.svg', import.met
  */
 export const initUnsubscribeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UNSUBSCRIBE }, ...properties);
+    initIcon(element, { additionalClassName: 'unsubscribeIcon', url: URL_UNSUBSCRIBE }, ...properties);
 }
 
 /**

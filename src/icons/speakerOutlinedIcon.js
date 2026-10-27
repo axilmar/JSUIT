@@ -15,7 +15,7 @@ const URL_SPEAKEROUTLINED = new URL('../../assets/icons/speakerOutlined.svg', im
  */
 export const initSpeakerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPEAKEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'speakerOutlinedIcon', url: URL_SPEAKEROUTLINED }, ...properties);
 }
 
 /**

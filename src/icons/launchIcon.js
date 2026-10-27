@@ -15,7 +15,7 @@ const URL_LAUNCH = new URL('../../assets/icons/launch.svg', import.meta.url).hre
  */
 export const initLaunchIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LAUNCH }, ...properties);
+    initIcon(element, { additionalClassName: 'launchIcon', url: URL_LAUNCH }, ...properties);
 }
 
 /**

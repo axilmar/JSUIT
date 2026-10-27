@@ -15,7 +15,7 @@ const URL_MOSQUEOUTLINED = new URL('../../assets/icons/mosqueOutlined.svg', impo
  */
 export const initMosqueOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOSQUEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'mosqueOutlinedIcon', url: URL_MOSQUEOUTLINED }, ...properties);
 }
 
 /**

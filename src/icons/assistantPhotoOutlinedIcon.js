@@ -15,7 +15,7 @@ const URL_ASSISTANTPHOTOOUTLINED = new URL('../../assets/icons/assistantPhotoOut
  */
 export const initAssistantPhotoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ASSISTANTPHOTOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'assistantPhotoOutlinedIcon', url: URL_ASSISTANTPHOTOOUTLINED }, ...properties);
 }
 
 /**

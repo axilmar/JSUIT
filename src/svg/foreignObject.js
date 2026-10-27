@@ -10,7 +10,7 @@ import { initSVGGraphicsElement } from "./SVGGraphicsElement.js";
  */
 export const initForeignObject = (element, ...properties) => {
     console.assert(element instanceof SVGForeignObjectElement);
-    initSVGGraphicsElement(element, ...properties);
+    initSVGGraphicsElement(element, { additionalClassName: 'foreignObject' }, ...properties);
 }
 
 /**

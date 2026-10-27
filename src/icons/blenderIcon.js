@@ -15,7 +15,7 @@ const URL_BLENDER = new URL('../../assets/icons/blender.svg', import.meta.url).h
  */
 export const initBlenderIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLENDER }, ...properties);
+    initIcon(element, { additionalClassName: 'blenderIcon', url: URL_BLENDER }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_BURSTMODEOUTLINED = new URL('../../assets/icons/burstModeOutlined.svg'
  */
 export const initBurstModeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BURSTMODEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'burstModeOutlinedIcon', url: URL_BURSTMODEOUTLINED }, ...properties);
 }
 
 /**

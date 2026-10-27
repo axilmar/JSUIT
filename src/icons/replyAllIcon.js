@@ -15,7 +15,7 @@ const URL_REPLYALL = new URL('../../assets/icons/replyAll.svg', import.meta.url)
  */
 export const initReplyAllIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REPLYALL }, ...properties);
+    initIcon(element, { additionalClassName: 'replyAllIcon', url: URL_REPLYALL }, ...properties);
 }
 
 /**

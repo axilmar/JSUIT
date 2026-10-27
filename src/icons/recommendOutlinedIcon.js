@@ -15,7 +15,7 @@ const URL_RECOMMENDOUTLINED = new URL('../../assets/icons/recommendOutlined.svg'
  */
 export const initRecommendOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RECOMMENDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'recommendOutlinedIcon', url: URL_RECOMMENDOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_UPLOAD = new URL('../../assets/icons/upload.svg', import.meta.url).hre
  */
 export const initUploadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UPLOAD }, ...properties);
+    initIcon(element, { additionalClassName: 'uploadIcon', url: URL_UPLOAD }, ...properties);
 }
 
 /**

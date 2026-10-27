@@ -15,7 +15,7 @@ const URL_TWOWHEELER = new URL('../../assets/icons/twoWheeler.svg', import.meta.
  */
 export const initTwoWheelerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TWOWHEELER }, ...properties);
+    initIcon(element, { additionalClassName: 'twoWheelerIcon', url: URL_TWOWHEELER }, ...properties);
 }
 
 /**

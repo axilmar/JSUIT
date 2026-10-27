@@ -15,7 +15,7 @@ const URL_LOWPRIORITYOUTLINED = new URL('../../assets/icons/lowPriorityOutlined.
  */
 export const initLowPriorityOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOWPRIORITYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'lowPriorityOutlinedIcon', url: URL_LOWPRIORITYOUTLINED }, ...properties);
 }
 
 /**

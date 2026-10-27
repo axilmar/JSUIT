@@ -15,7 +15,7 @@ const URL_LIGHTBULBCIRCLEOUTLINED = new URL('../../assets/icons/lightbulbCircleO
  */
 export const initLightbulbCircleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIGHTBULBCIRCLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'lightbulbCircleOutlinedIcon', url: URL_LIGHTBULBCIRCLEOUTLINED }, ...properties);
 }
 
 /**

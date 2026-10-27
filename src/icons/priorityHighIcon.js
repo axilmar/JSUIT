@@ -15,7 +15,7 @@ const URL_PRIORITYHIGH = new URL('../../assets/icons/priorityHigh.svg', import.m
  */
 export const initPriorityHighIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PRIORITYHIGH }, ...properties);
+    initIcon(element, { additionalClassName: 'priorityHighIcon', url: URL_PRIORITYHIGH }, ...properties);
 }
 
 /**

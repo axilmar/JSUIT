@@ -15,7 +15,7 @@ const URL_ALBUMOUTLINED = new URL('../../assets/icons/albumOutlined.svg', import
  */
 export const initAlbumOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALBUMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'albumOutlinedIcon', url: URL_ALBUMOUTLINED }, ...properties);
 }
 
 /**

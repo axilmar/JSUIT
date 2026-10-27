@@ -15,7 +15,7 @@ const URL_HDOUTLINED = new URL('../../assets/icons/hdOutlined.svg', import.meta.
  */
 export const initHdOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hdOutlinedIcon', url: URL_HDOUTLINED }, ...properties);
 }
 
 /**

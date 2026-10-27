@@ -15,7 +15,7 @@ const URL_DOWNHILLSKIING = new URL('../../assets/icons/downhillSkiing.svg', impo
  */
 export const initDownhillSkiingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOWNHILLSKIING }, ...properties);
+    initIcon(element, { additionalClassName: 'downhillSkiingIcon', url: URL_DOWNHILLSKIING }, ...properties);
 }
 
 /**

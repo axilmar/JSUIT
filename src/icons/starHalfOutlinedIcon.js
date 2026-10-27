@@ -15,7 +15,7 @@ const URL_STARHALFOUTLINED = new URL('../../assets/icons/starHalfOutlined.svg', 
  */
 export const initStarHalfOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STARHALFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'starHalfOutlinedIcon', url: URL_STARHALFOUTLINED }, ...properties);
 }
 
 /**

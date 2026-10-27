@@ -15,7 +15,7 @@ const URL_SPATIALTRACKINGOUTLINED = new URL('../../assets/icons/spatialTrackingO
  */
 export const initSpatialTrackingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPATIALTRACKINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'spatialTrackingOutlinedIcon', url: URL_SPATIALTRACKINGOUTLINED }, ...properties);
 }
 
 /**

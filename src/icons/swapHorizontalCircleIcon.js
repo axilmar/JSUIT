@@ -15,7 +15,7 @@ const URL_SWAPHORIZONTALCIRCLE = new URL('../../assets/icons/swapHorizontalCircl
  */
 export const initSwapHorizontalCircleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWAPHORIZONTALCIRCLE }, ...properties);
+    initIcon(element, { additionalClassName: 'swapHorizontalCircleIcon', url: URL_SWAPHORIZONTALCIRCLE }, ...properties);
 }
 
 /**

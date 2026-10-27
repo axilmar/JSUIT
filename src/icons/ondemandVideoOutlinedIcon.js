@@ -15,7 +15,7 @@ const URL_ONDEMANDVIDEOOUTLINED = new URL('../../assets/icons/ondemandVideoOutli
  */
 export const initOndemandVideoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ONDEMANDVIDEOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'ondemandVideoOutlinedIcon', url: URL_ONDEMANDVIDEOOUTLINED }, ...properties);
 }
 
 /**

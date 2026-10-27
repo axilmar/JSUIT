@@ -15,7 +15,7 @@ const URL_CHANGEHISTORY = new URL('../../assets/icons/changeHistory.svg', import
  */
 export const initChangeHistoryIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHANGEHISTORY }, ...properties);
+    initIcon(element, { additionalClassName: 'changeHistoryIcon', url: URL_CHANGEHISTORY }, ...properties);
 }
 
 /**

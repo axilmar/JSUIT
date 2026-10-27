@@ -15,7 +15,7 @@ const URL_NOENCRYPTIONGMAILERRORRED = new URL('../../assets/icons/noEncryptionGm
  */
 export const initNoEncryptionGmailerrorredIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOENCRYPTIONGMAILERRORRED }, ...properties);
+    initIcon(element, { additionalClassName: 'noEncryptionGmailerrorredIcon', url: URL_NOENCRYPTIONGMAILERRORRED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_RAILWAYALERTOUTLINED = new URL('../../assets/icons/railwayAlertOutline
  */
 export const initRailwayAlertOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RAILWAYALERTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'railwayAlertOutlinedIcon', url: URL_RAILWAYALERTOUTLINED }, ...properties);
 }
 
 /**

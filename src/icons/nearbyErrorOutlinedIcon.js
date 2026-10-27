@@ -15,7 +15,7 @@ const URL_NEARBYERROROUTLINED = new URL('../../assets/icons/nearbyErrorOutlined.
  */
 export const initNearbyErrorOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NEARBYERROROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'nearbyErrorOutlinedIcon', url: URL_NEARBYERROROUTLINED }, ...properties);
 }
 
 /**

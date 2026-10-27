@@ -15,7 +15,7 @@ const URL_FIBERDVR = new URL('../../assets/icons/fiberDvr.svg', import.meta.url)
  */
 export const initFiberDvrIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIBERDVR }, ...properties);
+    initIcon(element, { additionalClassName: 'fiberDvrIcon', url: URL_FIBERDVR }, ...properties);
 }
 
 /**

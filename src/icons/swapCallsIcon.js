@@ -15,7 +15,7 @@ const URL_SWAPCALLS = new URL('../../assets/icons/swapCalls.svg', import.meta.ur
  */
 export const initSwapCallsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWAPCALLS }, ...properties);
+    initIcon(element, { additionalClassName: 'swapCallsIcon', url: URL_SWAPCALLS }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ADDHOMEWORKOUTLINED = new URL('../../assets/icons/addHomeWorkOutlined.
  */
 export const initAddHomeWorkOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDHOMEWORKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'addHomeWorkOutlinedIcon', url: URL_ADDHOMEWORKOUTLINED }, ...properties);
 }
 
 /**

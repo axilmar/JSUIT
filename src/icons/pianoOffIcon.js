@@ -15,7 +15,7 @@ const URL_PIANOOFF = new URL('../../assets/icons/pianoOff.svg', import.meta.url)
  */
 export const initPianoOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PIANOOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'pianoOffIcon', url: URL_PIANOOFF }, ...properties);
 }
 
 /**

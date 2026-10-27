@@ -15,7 +15,7 @@ const URL_ROCKET = new URL('../../assets/icons/rocket.svg', import.meta.url).hre
  */
 export const initRocketIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROCKET }, ...properties);
+    initIcon(element, { additionalClassName: 'rocketIcon', url: URL_ROCKET }, ...properties);
 }
 
 /**

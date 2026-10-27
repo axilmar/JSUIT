@@ -15,7 +15,7 @@ const URL_FIBERSMARTRECORDOUTLINED = new URL('../../assets/icons/fiberSmartRecor
  */
 export const initFiberSmartRecordOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIBERSMARTRECORDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fiberSmartRecordOutlinedIcon', url: URL_FIBERSMARTRECORDOUTLINED }, ...properties);
 }
 
 /**

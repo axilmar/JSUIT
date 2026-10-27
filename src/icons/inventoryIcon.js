@@ -15,7 +15,7 @@ const URL_INVENTORY = new URL('../../assets/icons/inventory.svg', import.meta.ur
  */
 export const initInventoryIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INVENTORY }, ...properties);
+    initIcon(element, { additionalClassName: 'inventoryIcon', url: URL_INVENTORY }, ...properties);
 }
 
 /**

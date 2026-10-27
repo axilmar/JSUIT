@@ -15,7 +15,7 @@ const URL_RECEIPTLONGOUTLINED = new URL('../../assets/icons/receiptLongOutlined.
  */
 export const initReceiptLongOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RECEIPTLONGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'receiptLongOutlinedIcon', url: URL_RECEIPTLONGOUTLINED }, ...properties);
 }
 
 /**

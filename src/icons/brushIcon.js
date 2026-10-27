@@ -15,7 +15,7 @@ const URL_BRUSH = new URL('../../assets/icons/brush.svg', import.meta.url).href;
  */
 export const initBrushIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BRUSH }, ...properties);
+    initIcon(element, { additionalClassName: 'brushIcon', url: URL_BRUSH }, ...properties);
 }
 
 /**

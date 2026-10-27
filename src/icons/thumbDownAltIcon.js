@@ -15,7 +15,7 @@ const URL_THUMBDOWNALT = new URL('../../assets/icons/thumbDownAlt.svg', import.m
  */
 export const initThumbDownAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THUMBDOWNALT }, ...properties);
+    initIcon(element, { additionalClassName: 'thumbDownAltIcon', url: URL_THUMBDOWNALT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_POWERINPUT = new URL('../../assets/icons/powerInput.svg', import.meta.
  */
 export const initPowerInputIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POWERINPUT }, ...properties);
+    initIcon(element, { additionalClassName: 'powerInputIcon', url: URL_POWERINPUT }, ...properties);
 }
 
 /**

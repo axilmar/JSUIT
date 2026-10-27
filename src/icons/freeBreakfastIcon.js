@@ -15,7 +15,7 @@ const URL_FREEBREAKFAST = new URL('../../assets/icons/freeBreakfast.svg', import
  */
 export const initFreeBreakfastIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FREEBREAKFAST }, ...properties);
+    initIcon(element, { additionalClassName: 'freeBreakfastIcon', url: URL_FREEBREAKFAST }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PAUSECIRCLEFILLED = new URL('../../assets/icons/pauseCircleFilled.svg'
  */
 export const initPauseCircleFilledIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PAUSECIRCLEFILLED }, ...properties);
+    initIcon(element, { additionalClassName: 'pauseCircleFilledIcon', url: URL_PAUSECIRCLEFILLED }, ...properties);
 }
 
 /**

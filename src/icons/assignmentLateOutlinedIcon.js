@@ -15,7 +15,7 @@ const URL_ASSIGNMENTLATEOUTLINED = new URL('../../assets/icons/assignmentLateOut
  */
 export const initAssignmentLateOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ASSIGNMENTLATEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'assignmentLateOutlinedIcon', url: URL_ASSIGNMENTLATEOUTLINED }, ...properties);
 }
 
 /**

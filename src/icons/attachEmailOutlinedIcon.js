@@ -15,7 +15,7 @@ const URL_ATTACHEMAILOUTLINED = new URL('../../assets/icons/attachEmailOutlined.
  */
 export const initAttachEmailOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ATTACHEMAILOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'attachEmailOutlinedIcon', url: URL_ATTACHEMAILOUTLINED }, ...properties);
 }
 
 /**

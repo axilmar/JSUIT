@@ -15,7 +15,7 @@ const URL_MOBILEFRIENDLY = new URL('../../assets/icons/mobileFriendly.svg', impo
  */
 export const initMobileFriendlyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOBILEFRIENDLY }, ...properties);
+    initIcon(element, { additionalClassName: 'mobileFriendlyIcon', url: URL_MOBILEFRIENDLY }, ...properties);
 }
 
 /**

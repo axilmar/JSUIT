@@ -15,7 +15,7 @@ const URL_BATTERYSAVER = new URL('../../assets/icons/batterySaver.svg', import.m
  */
 export const initBatterySaverIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BATTERYSAVER }, ...properties);
+    initIcon(element, { additionalClassName: 'batterySaverIcon', url: URL_BATTERYSAVER }, ...properties);
 }
 
 /**

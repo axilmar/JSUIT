@@ -15,7 +15,7 @@ const URL_ASSIGNMENTLATE = new URL('../../assets/icons/assignmentLate.svg', impo
  */
 export const initAssignmentLateIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ASSIGNMENTLATE }, ...properties);
+    initIcon(element, { additionalClassName: 'assignmentLateIcon', url: URL_ASSIGNMENTLATE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LOCALPARKINGOUTLINED = new URL('../../assets/icons/localParkingOutline
  */
 export const initLocalParkingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALPARKINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localParkingOutlinedIcon', url: URL_LOCALPARKINGOUTLINED }, ...properties);
 }
 
 /**

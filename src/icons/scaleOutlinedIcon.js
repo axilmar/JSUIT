@@ -15,7 +15,7 @@ const URL_SCALEOUTLINED = new URL('../../assets/icons/scaleOutlined.svg', import
  */
 export const initScaleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCALEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'scaleOutlinedIcon', url: URL_SCALEOUTLINED }, ...properties);
 }
 
 /**

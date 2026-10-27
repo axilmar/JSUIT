@@ -15,7 +15,7 @@ const URL_LOCALSEEOUTLINED = new URL('../../assets/icons/localSeeOutlined.svg', 
  */
 export const initLocalSeeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALSEEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localSeeOutlinedIcon', url: URL_LOCALSEEOUTLINED }, ...properties);
 }
 
 /**

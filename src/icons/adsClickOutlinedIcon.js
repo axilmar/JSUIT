@@ -15,7 +15,7 @@ const URL_ADSCLICKOUTLINED = new URL('../../assets/icons/adsClickOutlined.svg', 
  */
 export const initAdsClickOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADSCLICKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'adsClickOutlinedIcon', url: URL_ADSCLICKOUTLINED }, ...properties);
 }
 
 /**

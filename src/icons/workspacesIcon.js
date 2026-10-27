@@ -15,7 +15,7 @@ const URL_WORKSPACES = new URL('../../assets/icons/workspaces.svg', import.meta.
  */
 export const initWorkspacesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WORKSPACES }, ...properties);
+    initIcon(element, { additionalClassName: 'workspacesIcon', url: URL_WORKSPACES }, ...properties);
 }
 
 /**

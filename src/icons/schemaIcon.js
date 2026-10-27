@@ -15,7 +15,7 @@ const URL_SCHEMA = new URL('../../assets/icons/schema.svg', import.meta.url).hre
  */
 export const initSchemaIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCHEMA }, ...properties);
+    initIcon(element, { additionalClassName: 'schemaIcon', url: URL_SCHEMA }, ...properties);
 }
 
 /**

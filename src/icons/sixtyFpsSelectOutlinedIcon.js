@@ -15,7 +15,7 @@ const URL_SIXTYFPSSELECTOUTLINED = new URL('../../assets/icons/sixtyFpsSelectOut
  */
 export const initSixtyFpsSelectOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIXTYFPSSELECTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sixtyFpsSelectOutlinedIcon', url: URL_SIXTYFPSSELECTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_RAILWAYALERT = new URL('../../assets/icons/railwayAlert.svg', import.m
  */
 export const initRailwayAlertIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RAILWAYALERT }, ...properties);
+    initIcon(element, { additionalClassName: 'railwayAlertIcon', url: URL_RAILWAYALERT }, ...properties);
 }
 
 /**

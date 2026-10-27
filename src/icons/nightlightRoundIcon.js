@@ -15,7 +15,7 @@ const URL_NIGHTLIGHTROUND = new URL('../../assets/icons/nightlightRound.svg', im
  */
 export const initNightlightRoundIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NIGHTLIGHTROUND }, ...properties);
+    initIcon(element, { additionalClassName: 'nightlightRoundIcon', url: URL_NIGHTLIGHTROUND }, ...properties);
 }
 
 /**

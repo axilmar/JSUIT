@@ -15,7 +15,7 @@ const URL_PANORAMAOUTLINED = new URL('../../assets/icons/panoramaOutlined.svg', 
  */
 export const initPanoramaOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PANORAMAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'panoramaOutlinedIcon', url: URL_PANORAMAOUTLINED }, ...properties);
 }
 
 /**

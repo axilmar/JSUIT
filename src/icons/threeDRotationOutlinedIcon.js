@@ -15,7 +15,7 @@ const URL_THREEDROTATIONOUTLINED = new URL('../../assets/icons/threeDRotationOut
  */
 export const initThreeDRotationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THREEDROTATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'threeDRotationOutlinedIcon', url: URL_THREEDROTATIONOUTLINED }, ...properties);
 }
 
 /**

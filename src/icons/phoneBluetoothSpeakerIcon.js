@@ -15,7 +15,7 @@ const URL_PHONEBLUETOOTHSPEAKER = new URL('../../assets/icons/phoneBluetoothSpea
  */
 export const initPhoneBluetoothSpeakerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONEBLUETOOTHSPEAKER }, ...properties);
+    initIcon(element, { additionalClassName: 'phoneBluetoothSpeakerIcon', url: URL_PHONEBLUETOOTHSPEAKER }, ...properties);
 }
 
 /**

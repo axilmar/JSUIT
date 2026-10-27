@@ -15,7 +15,7 @@ const URL_KEYBOARDVOICEOUTLINED = new URL('../../assets/icons/keyboardVoiceOutli
  */
 export const initKeyboardVoiceOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDVOICEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardVoiceOutlinedIcon', url: URL_KEYBOARDVOICEOUTLINED }, ...properties);
 }
 
 /**

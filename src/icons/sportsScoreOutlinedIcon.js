@@ -15,7 +15,7 @@ const URL_SPORTSSCOREOUTLINED = new URL('../../assets/icons/sportsScoreOutlined.
  */
 export const initSportsScoreOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPORTSSCOREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sportsScoreOutlinedIcon', url: URL_SPORTSSCOREOUTLINED }, ...properties);
 }
 
 /**

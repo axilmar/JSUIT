@@ -15,7 +15,7 @@ const URL_SIGNALCELLULARALT2BAR = new URL('../../assets/icons/signalCellularAlt2
  */
 export const initSignalCellularAlt2BarIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNALCELLULARALT2BAR }, ...properties);
+    initIcon(element, { additionalClassName: 'signalCellularAlt2BarIcon', url: URL_SIGNALCELLULARALT2BAR }, ...properties);
 }
 
 /**

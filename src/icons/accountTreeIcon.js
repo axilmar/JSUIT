@@ -15,7 +15,7 @@ const URL_ACCOUNTTREE = new URL('../../assets/icons/accountTree.svg', import.met
  */
 export const initAccountTreeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACCOUNTTREE }, ...properties);
+    initIcon(element, { additionalClassName: 'accountTreeIcon', url: URL_ACCOUNTTREE }, ...properties);
 }
 
 /**

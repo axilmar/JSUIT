@@ -15,7 +15,7 @@ const URL_LOCALDRINKOUTLINED = new URL('../../assets/icons/localDrinkOutlined.sv
  */
 export const initLocalDrinkOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALDRINKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localDrinkOutlinedIcon', url: URL_LOCALDRINKOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PINDROPOUTLINED = new URL('../../assets/icons/pinDropOutlined.svg', im
  */
 export const initPinDropOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PINDROPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pinDropOutlinedIcon', url: URL_PINDROPOUTLINED }, ...properties);
 }
 
 /**

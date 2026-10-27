@@ -15,7 +15,7 @@ const URL_FORWARDOUTLINED = new URL('../../assets/icons/forwardOutlined.svg', im
  */
 export const initForwardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORWARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'forwardOutlinedIcon', url: URL_FORWARDOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_VIEWCOMFYALT = new URL('../../assets/icons/viewComfyAlt.svg', import.m
  */
 export const initViewComfyAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWCOMFYALT }, ...properties);
+    initIcon(element, { additionalClassName: 'viewComfyAltIcon', url: URL_VIEWCOMFYALT }, ...properties);
 }
 
 /**

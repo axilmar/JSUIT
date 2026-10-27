@@ -15,7 +15,7 @@ const URL_OPENINNEWOFF = new URL('../../assets/icons/openInNewOff.svg', import.m
  */
 export const initOpenInNewOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OPENINNEWOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'openInNewOffIcon', url: URL_OPENINNEWOFF }, ...properties);
 }
 
 /**

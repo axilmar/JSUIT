@@ -15,7 +15,7 @@ const URL_WBSHADE = new URL('../../assets/icons/wbShade.svg', import.meta.url).h
  */
 export const initWbShadeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WBSHADE }, ...properties);
+    initIcon(element, { additionalClassName: 'wbShadeIcon', url: URL_WBSHADE }, ...properties);
 }
 
 /**

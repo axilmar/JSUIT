@@ -15,7 +15,7 @@ const URL_ROUTER = new URL('../../assets/icons/router.svg', import.meta.url).hre
  */
 export const initRouterIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROUTER }, ...properties);
+    initIcon(element, { additionalClassName: 'routerIcon', url: URL_ROUTER }, ...properties);
 }
 
 /**

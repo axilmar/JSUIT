@@ -15,7 +15,7 @@ const URL_MONOCHROMEPHOTOS = new URL('../../assets/icons/monochromePhotos.svg', 
  */
 export const initMonochromePhotosIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MONOCHROMEPHOTOS }, ...properties);
+    initIcon(element, { additionalClassName: 'monochromePhotosIcon', url: URL_MONOCHROMEPHOTOS }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_RTTOUTLINED = new URL('../../assets/icons/rttOutlined.svg', import.met
  */
 export const initRttOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RTTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'rttOutlinedIcon', url: URL_RTTOUTLINED }, ...properties);
 }
 
 /**

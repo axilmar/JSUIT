@@ -15,7 +15,7 @@ const URL_PERMMEDIA = new URL('../../assets/icons/permMedia.svg', import.meta.ur
  */
 export const initPermMediaIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERMMEDIA }, ...properties);
+    initIcon(element, { additionalClassName: 'permMediaIcon', url: URL_PERMMEDIA }, ...properties);
 }
 
 /**

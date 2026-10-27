@@ -15,7 +15,7 @@ const URL_GROUPWORK = new URL('../../assets/icons/groupWork.svg', import.meta.ur
  */
 export const initGroupWorkIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GROUPWORK }, ...properties);
+    initIcon(element, { additionalClassName: 'groupWorkIcon', url: URL_GROUPWORK }, ...properties);
 }
 
 /**

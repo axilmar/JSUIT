@@ -15,7 +15,7 @@ const URL_SAVEDSEARCHOUTLINED = new URL('../../assets/icons/savedSearchOutlined.
  */
 export const initSavedSearchOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SAVEDSEARCHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'savedSearchOutlinedIcon', url: URL_SAVEDSEARCHOUTLINED }, ...properties);
 }
 
 /**

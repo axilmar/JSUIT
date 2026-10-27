@@ -15,7 +15,7 @@ const URL_CREATENEWFOLDER = new URL('../../assets/icons/createNewFolder.svg', im
  */
 export const initCreateNewFolderIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CREATENEWFOLDER }, ...properties);
+    initIcon(element, { additionalClassName: 'createNewFolderIcon', url: URL_CREATENEWFOLDER }, ...properties);
 }
 
 /**

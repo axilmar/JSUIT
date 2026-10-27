@@ -15,7 +15,7 @@ const URL_MENU = new URL('../../assets/icons/menu.svg', import.meta.url).href;
  */
 export const initMenuIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MENU }, ...properties);
+    initIcon(element, { additionalClassName: 'menuIcon', url: URL_MENU }, ...properties);
 }
 
 /**

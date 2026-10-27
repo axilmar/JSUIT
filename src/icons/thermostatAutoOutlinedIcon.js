@@ -15,7 +15,7 @@ const URL_THERMOSTATAUTOOUTLINED = new URL('../../assets/icons/thermostatAutoOut
  */
 export const initThermostatAutoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THERMOSTATAUTOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'thermostatAutoOutlinedIcon', url: URL_THERMOSTATAUTOOUTLINED }, ...properties);
 }
 
 /**

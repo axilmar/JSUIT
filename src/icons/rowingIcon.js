@@ -15,7 +15,7 @@ const URL_ROWING = new URL('../../assets/icons/rowing.svg', import.meta.url).hre
  */
 export const initRowingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROWING }, ...properties);
+    initIcon(element, { additionalClassName: 'rowingIcon', url: URL_ROWING }, ...properties);
 }
 
 /**

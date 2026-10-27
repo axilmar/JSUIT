@@ -15,7 +15,7 @@ const URL_WEBHOOK = new URL('../../assets/icons/webhook.svg', import.meta.url).h
  */
 export const initWebhookIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WEBHOOK }, ...properties);
+    initIcon(element, { additionalClassName: 'webhookIcon', url: URL_WEBHOOK }, ...properties);
 }
 
 /**

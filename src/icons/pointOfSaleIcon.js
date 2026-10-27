@@ -15,7 +15,7 @@ const URL_POINTOFSALE = new URL('../../assets/icons/pointOfSale.svg', import.met
  */
 export const initPointOfSaleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POINTOFSALE }, ...properties);
+    initIcon(element, { additionalClassName: 'pointOfSaleIcon', url: URL_POINTOFSALE }, ...properties);
 }
 
 /**

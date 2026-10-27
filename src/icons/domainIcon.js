@@ -15,7 +15,7 @@ const URL_DOMAIN = new URL('../../assets/icons/domain.svg', import.meta.url).hre
  */
 export const initDomainIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOMAIN }, ...properties);
+    initIcon(element, { additionalClassName: 'domainIcon', url: URL_DOMAIN }, ...properties);
 }
 
 /**

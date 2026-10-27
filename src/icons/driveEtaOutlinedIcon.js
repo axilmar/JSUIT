@@ -15,7 +15,7 @@ const URL_DRIVEETAOUTLINED = new URL('../../assets/icons/driveEtaOutlined.svg', 
  */
 export const initDriveEtaOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRIVEETAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'driveEtaOutlinedIcon', url: URL_DRIVEETAOUTLINED }, ...properties);
 }
 
 /**

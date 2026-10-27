@@ -15,7 +15,7 @@ const URL_FOURKOUTLINED = new URL('../../assets/icons/fourKOutlined.svg', import
  */
 export const initFourKOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOURKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fourKOutlinedIcon', url: URL_FOURKOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SMS = new URL('../../assets/icons/sms.svg', import.meta.url).href;
  */
 export const initSmsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SMS }, ...properties);
+    initIcon(element, { additionalClassName: 'smsIcon', url: URL_SMS }, ...properties);
 }
 
 /**

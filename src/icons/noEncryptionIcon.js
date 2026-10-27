@@ -15,7 +15,7 @@ const URL_NOENCRYPTION = new URL('../../assets/icons/noEncryption.svg', import.m
  */
 export const initNoEncryptionIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOENCRYPTION }, ...properties);
+    initIcon(element, { additionalClassName: 'noEncryptionIcon', url: URL_NOENCRYPTION }, ...properties);
 }
 
 /**

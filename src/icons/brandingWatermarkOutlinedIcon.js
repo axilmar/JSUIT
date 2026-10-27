@@ -15,7 +15,7 @@ const URL_BRANDINGWATERMARKOUTLINED = new URL('../../assets/icons/brandingWaterm
  */
 export const initBrandingWatermarkOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BRANDINGWATERMARKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'brandingWatermarkOutlinedIcon', url: URL_BRANDINGWATERMARKOUTLINED }, ...properties);
 }
 
 /**

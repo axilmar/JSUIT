@@ -15,7 +15,7 @@ const URL_ENHANCEDENCRYPTION = new URL('../../assets/icons/enhancedEncryption.sv
  */
 export const initEnhancedEncryptionIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ENHANCEDENCRYPTION }, ...properties);
+    initIcon(element, { additionalClassName: 'enhancedEncryptionIcon', url: URL_ENHANCEDENCRYPTION }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TABLEBAROUTLINED = new URL('../../assets/icons/tableBarOutlined.svg', 
  */
 export const initTableBarOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TABLEBAROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tableBarOutlinedIcon', url: URL_TABLEBAROUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LAPTOPCHROMEBOOKOUTLINED = new URL('../../assets/icons/laptopChromeboo
  */
 export const initLaptopChromebookOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LAPTOPCHROMEBOOKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'laptopChromebookOutlinedIcon', url: URL_LAPTOPCHROMEBOOKOUTLINED }, ...properties);
 }
 
 /**

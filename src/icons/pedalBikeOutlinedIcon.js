@@ -15,7 +15,7 @@ const URL_PEDALBIKEOUTLINED = new URL('../../assets/icons/pedalBikeOutlined.svg'
  */
 export const initPedalBikeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PEDALBIKEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pedalBikeOutlinedIcon', url: URL_PEDALBIKEOUTLINED }, ...properties);
 }
 
 /**

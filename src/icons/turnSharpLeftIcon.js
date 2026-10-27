@@ -15,7 +15,7 @@ const URL_TURNSHARPLEFT = new URL('../../assets/icons/turnSharpLeft.svg', import
  */
 export const initTurnSharpLeftIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TURNSHARPLEFT }, ...properties);
+    initIcon(element, { additionalClassName: 'turnSharpLeftIcon', url: URL_TURNSHARPLEFT }, ...properties);
 }
 
 /**

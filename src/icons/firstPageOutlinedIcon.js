@@ -15,7 +15,7 @@ const URL_FIRSTPAGEOUTLINED = new URL('../../assets/icons/firstPageOutlined.svg'
  */
 export const initFirstPageOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIRSTPAGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'firstPageOutlinedIcon', url: URL_FIRSTPAGEOUTLINED }, ...properties);
 }
 
 /**

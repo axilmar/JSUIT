@@ -15,7 +15,7 @@ const URL_GROUPWORKOUTLINED = new URL('../../assets/icons/groupWorkOutlined.svg'
  */
 export const initGroupWorkOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GROUPWORKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'groupWorkOutlinedIcon', url: URL_GROUPWORKOUTLINED }, ...properties);
 }
 
 /**

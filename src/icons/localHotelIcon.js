@@ -15,7 +15,7 @@ const URL_LOCALHOTEL = new URL('../../assets/icons/localHotel.svg', import.meta.
  */
 export const initLocalHotelIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALHOTEL }, ...properties);
+    initIcon(element, { additionalClassName: 'localHotelIcon', url: URL_LOCALHOTEL }, ...properties);
 }
 
 /**

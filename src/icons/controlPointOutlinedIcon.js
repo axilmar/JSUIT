@@ -15,7 +15,7 @@ const URL_CONTROLPOINTOUTLINED = new URL('../../assets/icons/controlPointOutline
  */
 export const initControlPointOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTROLPOINTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'controlPointOutlinedIcon', url: URL_CONTROLPOINTOUTLINED }, ...properties);
 }
 
 /**

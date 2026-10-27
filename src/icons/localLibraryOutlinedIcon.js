@@ -15,7 +15,7 @@ const URL_LOCALLIBRARYOUTLINED = new URL('../../assets/icons/localLibraryOutline
  */
 export const initLocalLibraryOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALLIBRARYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localLibraryOutlinedIcon', url: URL_LOCALLIBRARYOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_NOACCOUNTS = new URL('../../assets/icons/noAccounts.svg', import.meta.
  */
 export const initNoAccountsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOACCOUNTS }, ...properties);
+    initIcon(element, { additionalClassName: 'noAccountsIcon', url: URL_NOACCOUNTS }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_POWER = new URL('../../assets/icons/power.svg', import.meta.url).href;
  */
 export const initPowerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POWER }, ...properties);
+    initIcon(element, { additionalClassName: 'powerIcon', url: URL_POWER }, ...properties);
 }
 
 /**

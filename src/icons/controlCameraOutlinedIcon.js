@@ -15,7 +15,7 @@ const URL_CONTROLCAMERAOUTLINED = new URL('../../assets/icons/controlCameraOutli
  */
 export const initControlCameraOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTROLCAMERAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'controlCameraOutlinedIcon', url: URL_CONTROLCAMERAOUTLINED }, ...properties);
 }
 
 /**

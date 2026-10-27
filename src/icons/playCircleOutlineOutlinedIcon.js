@@ -15,7 +15,7 @@ const URL_PLAYCIRCLEOUTLINEOUTLINED = new URL('../../assets/icons/playCircleOutl
  */
 export const initPlayCircleOutlineOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYCIRCLEOUTLINEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'playCircleOutlineOutlinedIcon', url: URL_PLAYCIRCLEOUTLINEOUTLINED }, ...properties);
 }
 
 /**

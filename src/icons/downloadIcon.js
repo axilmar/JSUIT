@@ -15,7 +15,7 @@ const URL_DOWNLOAD = new URL('../../assets/icons/download.svg', import.meta.url)
  */
 export const initDownloadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOWNLOAD }, ...properties);
+    initIcon(element, { additionalClassName: 'downloadIcon', url: URL_DOWNLOAD }, ...properties);
 }
 
 /**

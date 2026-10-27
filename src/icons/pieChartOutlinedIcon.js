@@ -15,7 +15,7 @@ const URL_PIECHARTOUTLINED = new URL('../../assets/icons/pieChartOutlined.svg', 
  */
 export const initPieChartOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PIECHARTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pieChartOutlinedIcon', url: URL_PIECHARTOUTLINED }, ...properties);
 }
 
 /**

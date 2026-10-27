@@ -15,7 +15,7 @@ const URL_SPEED = new URL('../../assets/icons/speed.svg', import.meta.url).href;
  */
 export const initSpeedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPEED }, ...properties);
+    initIcon(element, { additionalClassName: 'speedIcon', url: URL_SPEED }, ...properties);
 }
 
 /**

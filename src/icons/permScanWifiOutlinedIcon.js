@@ -15,7 +15,7 @@ const URL_PERMSCANWIFIOUTLINED = new URL('../../assets/icons/permScanWifiOutline
  */
 export const initPermScanWifiOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERMSCANWIFIOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'permScanWifiOutlinedIcon', url: URL_PERMSCANWIFIOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SHOWEROUTLINED = new URL('../../assets/icons/showerOutlined.svg', impo
  */
 export const initShowerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHOWEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'showerOutlinedIcon', url: URL_SHOWEROUTLINED }, ...properties);
 }
 
 /**

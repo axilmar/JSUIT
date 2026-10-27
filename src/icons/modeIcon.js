@@ -15,7 +15,7 @@ const URL_MODE = new URL('../../assets/icons/mode.svg', import.meta.url).href;
  */
 export const initModeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MODE }, ...properties);
+    initIcon(element, { additionalClassName: 'modeIcon', url: URL_MODE }, ...properties);
 }
 
 /**

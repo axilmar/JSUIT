@@ -15,7 +15,7 @@ const URL_FORMATCOLORTEXTOUTLINED = new URL('../../assets/icons/formatColorTextO
  */
 export const initFormatColorTextOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATCOLORTEXTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatColorTextOutlinedIcon', url: URL_FORMATCOLORTEXTOUTLINED }, ...properties);
 }
 
 /**

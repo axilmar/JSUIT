@@ -15,7 +15,7 @@ const URL_HEADPHONESOUTLINED = new URL('../../assets/icons/headphonesOutlined.sv
  */
 export const initHeadphonesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEADPHONESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'headphonesOutlinedIcon', url: URL_HEADPHONESOUTLINED }, ...properties);
 }
 
 /**

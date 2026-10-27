@@ -15,7 +15,7 @@ const URL_DISABLEDBYDEFAULTOUTLINED = new URL('../../assets/icons/disabledByDefa
  */
 export const initDisabledByDefaultOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DISABLEDBYDEFAULTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'disabledByDefaultOutlinedIcon', url: URL_DISABLEDBYDEFAULTOUTLINED }, ...properties);
 }
 
 /**

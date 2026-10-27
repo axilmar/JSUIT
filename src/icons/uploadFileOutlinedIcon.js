@@ -15,7 +15,7 @@ const URL_UPLOADFILEOUTLINED = new URL('../../assets/icons/uploadFileOutlined.sv
  */
 export const initUploadFileOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UPLOADFILEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'uploadFileOutlinedIcon', url: URL_UPLOADFILEOUTLINED }, ...properties);
 }
 
 /**

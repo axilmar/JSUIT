@@ -15,7 +15,7 @@ const URL_TRIPORIGINOUTLINED = new URL('../../assets/icons/tripOriginOutlined.sv
  */
 export const initTripOriginOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRIPORIGINOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tripOriginOutlinedIcon', url: URL_TRIPORIGINOUTLINED }, ...properties);
 }
 
 /**

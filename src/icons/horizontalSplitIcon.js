@@ -15,7 +15,7 @@ const URL_HORIZONTALSPLIT = new URL('../../assets/icons/horizontalSplit.svg', im
  */
 export const initHorizontalSplitIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HORIZONTALSPLIT }, ...properties);
+    initIcon(element, { additionalClassName: 'horizontalSplitIcon', url: URL_HORIZONTALSPLIT }, ...properties);
 }
 
 /**

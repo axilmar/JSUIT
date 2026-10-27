@@ -15,7 +15,7 @@ const URL_DIALPADOUTLINED = new URL('../../assets/icons/dialpadOutlined.svg', im
  */
 export const initDialpadOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIALPADOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dialpadOutlinedIcon', url: URL_DIALPADOUTLINED }, ...properties);
 }
 
 /**

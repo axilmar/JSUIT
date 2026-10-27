@@ -15,7 +15,7 @@ const URL_FOLDER = new URL('../../assets/icons/folder.svg', import.meta.url).hre
  */
 export const initFolderIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOLDER }, ...properties);
+    initIcon(element, { additionalClassName: 'folderIcon', url: URL_FOLDER }, ...properties);
 }
 
 /**

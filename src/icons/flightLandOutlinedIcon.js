@@ -15,7 +15,7 @@ const URL_FLIGHTLANDOUTLINED = new URL('../../assets/icons/flightLandOutlined.sv
  */
 export const initFlightLandOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLIGHTLANDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'flightLandOutlinedIcon', url: URL_FLIGHTLANDOUTLINED }, ...properties);
 }
 
 /**

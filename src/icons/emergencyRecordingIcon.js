@@ -15,7 +15,7 @@ const URL_EMERGENCYRECORDING = new URL('../../assets/icons/emergencyRecording.sv
  */
 export const initEmergencyRecordingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EMERGENCYRECORDING }, ...properties);
+    initIcon(element, { additionalClassName: 'emergencyRecordingIcon', url: URL_EMERGENCYRECORDING }, ...properties);
 }
 
 /**

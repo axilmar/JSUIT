@@ -15,7 +15,7 @@ const URL_FOLDERZIPOUTLINED = new URL('../../assets/icons/folderZipOutlined.svg'
  */
 export const initFolderZipOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOLDERZIPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'folderZipOutlinedIcon', url: URL_FOLDERZIPOUTLINED }, ...properties);
 }
 
 /**

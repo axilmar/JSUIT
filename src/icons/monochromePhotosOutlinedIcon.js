@@ -15,7 +15,7 @@ const URL_MONOCHROMEPHOTOSOUTLINED = new URL('../../assets/icons/monochromePhoto
  */
 export const initMonochromePhotosOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MONOCHROMEPHOTOSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'monochromePhotosOutlinedIcon', url: URL_MONOCHROMEPHOTOSOUTLINED }, ...properties);
 }
 
 /**

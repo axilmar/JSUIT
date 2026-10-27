@@ -15,7 +15,7 @@ const URL_PANORAMA = new URL('../../assets/icons/panorama.svg', import.meta.url)
  */
 export const initPanoramaIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PANORAMA }, ...properties);
+    initIcon(element, { additionalClassName: 'panoramaIcon', url: URL_PANORAMA }, ...properties);
 }
 
 /**

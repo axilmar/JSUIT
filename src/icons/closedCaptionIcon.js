@@ -15,7 +15,7 @@ const URL_CLOSEDCAPTION = new URL('../../assets/icons/closedCaption.svg', import
  */
 export const initClosedCaptionIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOSEDCAPTION }, ...properties);
+    initIcon(element, { additionalClassName: 'closedCaptionIcon', url: URL_CLOSEDCAPTION }, ...properties);
 }
 
 /**

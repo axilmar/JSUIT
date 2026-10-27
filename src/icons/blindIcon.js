@@ -15,7 +15,7 @@ const URL_BLIND = new URL('../../assets/icons/blind.svg', import.meta.url).href;
  */
 export const initBlindIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLIND }, ...properties);
+    initIcon(element, { additionalClassName: 'blindIcon', url: URL_BLIND }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ALIGNVERTICALCENTER = new URL('../../assets/icons/alignVerticalCenter.
  */
 export const initAlignVerticalCenterIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALIGNVERTICALCENTER }, ...properties);
+    initIcon(element, { additionalClassName: 'alignVerticalCenterIcon', url: URL_ALIGNVERTICALCENTER }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FILTERHDR = new URL('../../assets/icons/filterHdr.svg', import.meta.ur
  */
 export const initFilterHdrIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERHDR }, ...properties);
+    initIcon(element, { additionalClassName: 'filterHdrIcon', url: URL_FILTERHDR }, ...properties);
 }
 
 /**

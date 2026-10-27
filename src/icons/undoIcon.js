@@ -15,7 +15,7 @@ const URL_UNDO = new URL('../../assets/icons/undo.svg', import.meta.url).href;
  */
 export const initUndoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UNDO }, ...properties);
+    initIcon(element, { additionalClassName: 'undoIcon', url: URL_UNDO }, ...properties);
 }
 
 /**

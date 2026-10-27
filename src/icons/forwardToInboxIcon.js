@@ -15,7 +15,7 @@ const URL_FORWARDTOINBOX = new URL('../../assets/icons/forwardToInbox.svg', impo
  */
 export const initForwardToInboxIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORWARDTOINBOX }, ...properties);
+    initIcon(element, { additionalClassName: 'forwardToInboxIcon', url: URL_FORWARDTOINBOX }, ...properties);
 }
 
 /**

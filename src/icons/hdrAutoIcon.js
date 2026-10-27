@@ -15,7 +15,7 @@ const URL_HDRAUTO = new URL('../../assets/icons/hdrAuto.svg', import.meta.url).h
  */
 export const initHdrAutoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HDRAUTO }, ...properties);
+    initIcon(element, { additionalClassName: 'hdrAutoIcon', url: URL_HDRAUTO }, ...properties);
 }
 
 /**

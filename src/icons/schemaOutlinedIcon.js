@@ -15,7 +15,7 @@ const URL_SCHEMAOUTLINED = new URL('../../assets/icons/schemaOutlined.svg', impo
  */
 export const initSchemaOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCHEMAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'schemaOutlinedIcon', url: URL_SCHEMAOUTLINED }, ...properties);
 }
 
 /**

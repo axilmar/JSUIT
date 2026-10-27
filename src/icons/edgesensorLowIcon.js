@@ -15,7 +15,7 @@ const URL_EDGESENSORLOW = new URL('../../assets/icons/edgesensorLow.svg', import
  */
 export const initEdgesensorLowIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EDGESENSORLOW }, ...properties);
+    initIcon(element, { additionalClassName: 'edgesensorLowIcon', url: URL_EDGESENSORLOW }, ...properties);
 }
 
 /**

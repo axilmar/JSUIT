@@ -15,7 +15,7 @@ const URL_LIVETV = new URL('../../assets/icons/liveTv.svg', import.meta.url).hre
  */
 export const initLiveTvIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIVETV }, ...properties);
+    initIcon(element, { additionalClassName: 'liveTvIcon', url: URL_LIVETV }, ...properties);
 }
 
 /**

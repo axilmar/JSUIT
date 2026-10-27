@@ -15,7 +15,7 @@ const URL_UTURNLEFTOUTLINED = new URL('../../assets/icons/uTurnLeftOutlined.svg'
  */
 export const initUTurnLeftOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UTURNLEFTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'uTurnLeftOutlinedIcon', url: URL_UTURNLEFTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TEXTDECREASE = new URL('../../assets/icons/textDecrease.svg', import.m
  */
 export const initTextDecreaseIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTDECREASE }, ...properties);
+    initIcon(element, { additionalClassName: 'textDecreaseIcon', url: URL_TEXTDECREASE }, ...properties);
 }
 
 /**

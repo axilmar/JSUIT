@@ -15,7 +15,7 @@ const URL_ROLLERSHADES = new URL('../../assets/icons/rollerShades.svg', import.m
  */
 export const initRollerShadesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROLLERSHADES }, ...properties);
+    initIcon(element, { additionalClassName: 'rollerShadesIcon', url: URL_ROLLERSHADES }, ...properties);
 }
 
 /**

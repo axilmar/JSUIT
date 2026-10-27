@@ -15,7 +15,7 @@ const URL_DASHBOARD = new URL('../../assets/icons/dashboard.svg', import.meta.ur
  */
 export const initDashboardIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DASHBOARD }, ...properties);
+    initIcon(element, { additionalClassName: 'dashboardIcon', url: URL_DASHBOARD }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SDCARDOUTLINED = new URL('../../assets/icons/sdCardOutlined.svg', impo
  */
 export const initSdCardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SDCARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sdCardOutlinedIcon', url: URL_SDCARDOUTLINED }, ...properties);
 }
 
 /**

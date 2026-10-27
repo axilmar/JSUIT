@@ -15,7 +15,7 @@ const URL_PERMDATASETTINGOUTLINED = new URL('../../assets/icons/permDataSettingO
  */
 export const initPermDataSettingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERMDATASETTINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'permDataSettingOutlinedIcon', url: URL_PERMDATASETTINGOUTLINED }, ...properties);
 }
 
 /**

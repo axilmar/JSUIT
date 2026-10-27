@@ -852,7 +852,7 @@ const attachMask = (element, state) => {
  */
 export const initMaskedInput = (element, ...properties) => {
     console.assert(element instanceof HTMLInputElement);
-    initInput(element, ...properties);
+    initInput(element, { additionalClassName: 'maskedInput' }, ...properties);
 
     //the mask that was set while the element was initialized is the initial one
     attachMask(element, { mask: element.mask ?? [] });

@@ -15,7 +15,7 @@ const URL_NEXTWEEK = new URL('../../assets/icons/nextWeek.svg', import.meta.url)
  */
 export const initNextWeekIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NEXTWEEK }, ...properties);
+    initIcon(element, { additionalClassName: 'nextWeekIcon', url: URL_NEXTWEEK }, ...properties);
 }
 
 /**

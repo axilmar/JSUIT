@@ -15,7 +15,7 @@ const URL_STACKEDBARCHART = new URL('../../assets/icons/stackedBarChart.svg', im
  */
 export const initStackedBarChartIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STACKEDBARCHART }, ...properties);
+    initIcon(element, { additionalClassName: 'stackedBarChartIcon', url: URL_STACKEDBARCHART }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CASTCONNECTED = new URL('../../assets/icons/castConnected.svg', import
  */
 export const initCastConnectedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CASTCONNECTED }, ...properties);
+    initIcon(element, { additionalClassName: 'castConnectedIcon', url: URL_CASTCONNECTED }, ...properties);
 }
 
 /**

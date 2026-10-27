@@ -15,7 +15,7 @@ const URL_NIGHTLIGHTROUNDOUTLINED = new URL('../../assets/icons/nightlightRoundO
  */
 export const initNightlightRoundOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NIGHTLIGHTROUNDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'nightlightRoundOutlinedIcon', url: URL_NIGHTLIGHTROUNDOUTLINED }, ...properties);
 }
 
 /**

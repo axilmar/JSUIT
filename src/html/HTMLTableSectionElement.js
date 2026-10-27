@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initHTMLTableSectionElement = (element, ...properties) => {
     console.assert(element instanceof HTMLTableSectionElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'HTMLTableSectionElement' }, ...properties);
 }
 
 /**
@@ -22,7 +22,7 @@ export const initHTMLTableSectionElement = (element, ...properties) => {
  */
 export const thead = (...properties) => {
     const element = document.createElement('thead');
-    initHTMLTableSectionElement(element, ...properties);
+    initHTMLTableSectionElement(element, { additionalClassName: 'thead' }, ...properties);
     return element;
 }
 
@@ -35,7 +35,7 @@ export const thead = (...properties) => {
  */
 export const tbody = (...properties) => {
     const element = document.createElement('tbody');
-    initHTMLTableSectionElement(element, ...properties);
+    initHTMLTableSectionElement(element, { additionalClassName: 'tbody' }, ...properties);
     return element;
 }
 
@@ -48,6 +48,6 @@ export const tbody = (...properties) => {
  */
 export const tfoot = (...properties) => {
     const element = document.createElement('tfoot');
-    initHTMLTableSectionElement(element, ...properties);
+    initHTMLTableSectionElement(element, { additionalClassName: 'tfoot' }, ...properties);
     return element;
 }

@@ -15,7 +15,7 @@ const URL_FOURGMOBILEDATAOUTLINED = new URL('../../assets/icons/fourGMobiledataO
  */
 export const initFourGMobiledataOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOURGMOBILEDATAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fourGMobiledataOutlinedIcon', url: URL_FOURGMOBILEDATAOUTLINED }, ...properties);
 }
 
 /**

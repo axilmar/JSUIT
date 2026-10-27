@@ -15,7 +15,7 @@ const URL_BUILD = new URL('../../assets/icons/build.svg', import.meta.url).href;
  */
 export const initBuildIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BUILD }, ...properties);
+    initIcon(element, { additionalClassName: 'buildIcon', url: URL_BUILD }, ...properties);
 }
 
 /**

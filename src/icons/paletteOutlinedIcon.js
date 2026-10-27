@@ -15,7 +15,7 @@ const URL_PALETTEOUTLINED = new URL('../../assets/icons/paletteOutlined.svg', im
  */
 export const initPaletteOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PALETTEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'paletteOutlinedIcon', url: URL_PALETTEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ROUNDABOUTLEFTOUTLINED = new URL('../../assets/icons/roundaboutLeftOut
  */
 export const initRoundaboutLeftOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROUNDABOUTLEFTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'roundaboutLeftOutlinedIcon', url: URL_ROUNDABOUTLEFTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_HLSOUTLINED = new URL('../../assets/icons/hlsOutlined.svg', import.met
  */
 export const initHlsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HLSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hlsOutlinedIcon', url: URL_HLSOUTLINED }, ...properties);
 }
 
 /**

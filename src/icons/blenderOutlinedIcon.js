@@ -15,7 +15,7 @@ const URL_BLENDEROUTLINED = new URL('../../assets/icons/blenderOutlined.svg', im
  */
 export const initBlenderOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLENDEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'blenderOutlinedIcon', url: URL_BLENDEROUTLINED }, ...properties);
 }
 
 /**

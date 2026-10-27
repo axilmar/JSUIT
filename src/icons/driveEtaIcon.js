@@ -15,7 +15,7 @@ const URL_DRIVEETA = new URL('../../assets/icons/driveEta.svg', import.meta.url)
  */
 export const initDriveEtaIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRIVEETA }, ...properties);
+    initIcon(element, { additionalClassName: 'driveEtaIcon', url: URL_DRIVEETA }, ...properties);
 }
 
 /**

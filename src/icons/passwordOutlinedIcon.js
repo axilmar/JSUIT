@@ -15,7 +15,7 @@ const URL_PASSWORDOUTLINED = new URL('../../assets/icons/passwordOutlined.svg', 
  */
 export const initPasswordOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PASSWORDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'passwordOutlinedIcon', url: URL_PASSWORDOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DONUTLARGEOUTLINED = new URL('../../assets/icons/donutLargeOutlined.sv
  */
 export const initDonutLargeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DONUTLARGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'donutLargeOutlinedIcon', url: URL_DONUTLARGEOUTLINED }, ...properties);
 }
 
 /**

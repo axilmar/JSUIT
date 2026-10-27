@@ -15,7 +15,7 @@ const URL_DANGEROUSOUTLINED = new URL('../../assets/icons/dangerousOutlined.svg'
  */
 export const initDangerousOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DANGEROUSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dangerousOutlinedIcon', url: URL_DANGEROUSOUTLINED }, ...properties);
 }
 
 /**

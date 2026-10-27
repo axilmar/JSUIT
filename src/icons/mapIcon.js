@@ -15,7 +15,7 @@ const URL_MAP = new URL('../../assets/icons/map.svg', import.meta.url).href;
  */
 export const initMapIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MAP }, ...properties);
+    initIcon(element, { additionalClassName: 'mapIcon', url: URL_MAP }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DATERANGE = new URL('../../assets/icons/dateRange.svg', import.meta.ur
  */
 export const initDateRangeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DATERANGE }, ...properties);
+    initIcon(element, { additionalClassName: 'dateRangeIcon', url: URL_DATERANGE }, ...properties);
 }
 
 /**

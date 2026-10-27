@@ -15,7 +15,7 @@ const URL_COLORLENS = new URL('../../assets/icons/colorLens.svg', import.meta.ur
  */
 export const initColorLensIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COLORLENS }, ...properties);
+    initIcon(element, { additionalClassName: 'colorLensIcon', url: URL_COLORLENS }, ...properties);
 }
 
 /**

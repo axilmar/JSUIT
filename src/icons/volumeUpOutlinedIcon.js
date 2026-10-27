@@ -15,7 +15,7 @@ const URL_VOLUMEUPOUTLINED = new URL('../../assets/icons/volumeUpOutlined.svg', 
  */
 export const initVolumeUpOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VOLUMEUPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'volumeUpOutlinedIcon', url: URL_VOLUMEUPOUTLINED }, ...properties);
 }
 
 /**

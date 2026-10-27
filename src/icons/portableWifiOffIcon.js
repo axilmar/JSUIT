@@ -15,7 +15,7 @@ const URL_PORTABLEWIFIOFF = new URL('../../assets/icons/portableWifiOff.svg', im
  */
 export const initPortableWifiOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PORTABLEWIFIOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'portableWifiOffIcon', url: URL_PORTABLEWIFIOFF }, ...properties);
 }
 
 /**

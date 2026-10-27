@@ -15,7 +15,7 @@ const URL_ADDTOHOMESCREEN = new URL('../../assets/icons/addToHomeScreen.svg', im
  */
 export const initAddToHomeScreenIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDTOHOMESCREEN }, ...properties);
+    initIcon(element, { additionalClassName: 'addToHomeScreenIcon', url: URL_ADDTOHOMESCREEN }, ...properties);
 }
 
 /**

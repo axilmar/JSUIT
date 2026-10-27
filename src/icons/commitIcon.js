@@ -15,7 +15,7 @@ const URL_COMMIT = new URL('../../assets/icons/commit.svg', import.meta.url).hre
  */
 export const initCommitIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMMIT }, ...properties);
+    initIcon(element, { additionalClassName: 'commitIcon', url: URL_COMMIT }, ...properties);
 }
 
 /**

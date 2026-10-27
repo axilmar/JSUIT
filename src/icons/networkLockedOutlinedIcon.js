@@ -15,7 +15,7 @@ const URL_NETWORKLOCKEDOUTLINED = new URL('../../assets/icons/networkLockedOutli
  */
 export const initNetworkLockedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NETWORKLOCKEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'networkLockedOutlinedIcon', url: URL_NETWORKLOCKEDOUTLINED }, ...properties);
 }
 
 /**

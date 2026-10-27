@@ -15,7 +15,7 @@ const URL_SPA = new URL('../../assets/icons/spa.svg', import.meta.url).href;
  */
 export const initSpaIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPA }, ...properties);
+    initIcon(element, { additionalClassName: 'spaIcon', url: URL_SPA }, ...properties);
 }
 
 /**

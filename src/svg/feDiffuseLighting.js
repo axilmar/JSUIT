@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initFeDiffuseLighting = (element, ...properties) => {
     console.assert(element instanceof SVGFEDiffuseLightingElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'feDiffuseLighting' }, ...properties);
 }
 
 /**

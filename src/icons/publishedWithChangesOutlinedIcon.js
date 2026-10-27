@@ -15,7 +15,7 @@ const URL_PUBLISHEDWITHCHANGESOUTLINED = new URL('../../assets/icons/publishedWi
  */
 export const initPublishedWithChangesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PUBLISHEDWITHCHANGESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'publishedWithChangesOutlinedIcon', url: URL_PUBLISHEDWITHCHANGESOUTLINED }, ...properties);
 }
 
 /**

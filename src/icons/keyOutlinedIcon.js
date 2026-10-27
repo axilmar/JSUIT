@@ -15,7 +15,7 @@ const URL_KEYOUTLINED = new URL('../../assets/icons/keyOutlined.svg', import.met
  */
 export const initKeyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'keyOutlinedIcon', url: URL_KEYOUTLINED }, ...properties);
 }
 
 /**

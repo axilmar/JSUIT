@@ -15,7 +15,7 @@ const URL_ADJUST = new URL('../../assets/icons/adjust.svg', import.meta.url).hre
  */
 export const initAdjustIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADJUST }, ...properties);
+    initIcon(element, { additionalClassName: 'adjustIcon', url: URL_ADJUST }, ...properties);
 }
 
 /**

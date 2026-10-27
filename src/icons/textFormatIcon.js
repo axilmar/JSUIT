@@ -15,7 +15,7 @@ const URL_TEXTFORMAT = new URL('../../assets/icons/textFormat.svg', import.meta.
  */
 export const initTextFormatIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTFORMAT }, ...properties);
+    initIcon(element, { additionalClassName: 'textFormatIcon', url: URL_TEXTFORMAT }, ...properties);
 }
 
 /**

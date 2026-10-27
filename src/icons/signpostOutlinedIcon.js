@@ -15,7 +15,7 @@ const URL_SIGNPOSTOUTLINED = new URL('../../assets/icons/signpostOutlined.svg', 
  */
 export const initSignpostOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNPOSTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'signpostOutlinedIcon', url: URL_SIGNPOSTOUTLINED }, ...properties);
 }
 
 /**

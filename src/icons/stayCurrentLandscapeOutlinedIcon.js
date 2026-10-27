@@ -15,7 +15,7 @@ const URL_STAYCURRENTLANDSCAPEOUTLINED = new URL('../../assets/icons/stayCurrent
  */
 export const initStayCurrentLandscapeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STAYCURRENTLANDSCAPEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'stayCurrentLandscapeOutlinedIcon', url: URL_STAYCURRENTLANDSCAPEOUTLINED }, ...properties);
 }
 
 /**

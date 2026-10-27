@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initFeDropShadow = (element, ...properties) => {
     console.assert(element instanceof SVGFEDropShadowElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'feDropShadow' }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_MONETIZATIONON = new URL('../../assets/icons/monetizationOn.svg', impo
  */
 export const initMonetizationOnIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MONETIZATIONON }, ...properties);
+    initIcon(element, { additionalClassName: 'monetizationOnIcon', url: URL_MONETIZATIONON }, ...properties);
 }
 
 /**

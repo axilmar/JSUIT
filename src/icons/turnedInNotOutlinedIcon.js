@@ -15,7 +15,7 @@ const URL_TURNEDINNOTOUTLINED = new URL('../../assets/icons/turnedInNotOutlined.
  */
 export const initTurnedInNotOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TURNEDINNOTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'turnedInNotOutlinedIcon', url: URL_TURNEDINNOTOUTLINED }, ...properties);
 }
 
 /**

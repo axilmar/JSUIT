@@ -15,7 +15,7 @@ const URL_ADDLINK = new URL('../../assets/icons/addLink.svg', import.meta.url).h
  */
 export const initAddLinkIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDLINK }, ...properties);
+    initIcon(element, { additionalClassName: 'addLinkIcon', url: URL_ADDLINK }, ...properties);
 }
 
 /**

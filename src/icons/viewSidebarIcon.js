@@ -15,7 +15,7 @@ const URL_VIEWSIDEBAR = new URL('../../assets/icons/viewSidebar.svg', import.met
  */
 export const initViewSidebarIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWSIDEBAR }, ...properties);
+    initIcon(element, { additionalClassName: 'viewSidebarIcon', url: URL_VIEWSIDEBAR }, ...properties);
 }
 
 /**

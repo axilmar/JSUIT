@@ -10,7 +10,7 @@ import { initHTMLMediaElement } from "./HTMLMediaElement.js";
  */
 export const initVideo = (element, ...properties) => {
     console.assert(element instanceof HTMLVideoElement);
-    initHTMLMediaElement(element, ...properties);
+    initHTMLMediaElement(element, { additionalClassName: 'video' }, ...properties);
 }
 
 /**

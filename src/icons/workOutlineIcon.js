@@ -15,7 +15,7 @@ const URL_WORKOUTLINE = new URL('../../assets/icons/workOutline.svg', import.met
  */
 export const initWorkOutlineIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WORKOUTLINE }, ...properties);
+    initIcon(element, { additionalClassName: 'workOutlineIcon', url: URL_WORKOUTLINE }, ...properties);
 }
 
 /**

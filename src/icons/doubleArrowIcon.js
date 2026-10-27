@@ -15,7 +15,7 @@ const URL_DOUBLEARROW = new URL('../../assets/icons/doubleArrow.svg', import.met
  */
 export const initDoubleArrowIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOUBLEARROW }, ...properties);
+    initIcon(element, { additionalClassName: 'doubleArrowIcon', url: URL_DOUBLEARROW }, ...properties);
 }
 
 /**

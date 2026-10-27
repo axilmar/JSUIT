@@ -15,7 +15,7 @@ const URL_SCHOOL = new URL('../../assets/icons/school.svg', import.meta.url).hre
  */
 export const initSchoolIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCHOOL }, ...properties);
+    initIcon(element, { additionalClassName: 'schoolIcon', url: URL_SCHOOL }, ...properties);
 }
 
 /**

@@ -10,7 +10,7 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initDesc = (element, ...properties) => {
     console.assert(element instanceof SVGDescElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'desc' }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CALCULATE = new URL('../../assets/icons/calculate.svg', import.meta.ur
  */
 export const initCalculateIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALCULATE }, ...properties);
+    initIcon(element, { additionalClassName: 'calculateIcon', url: URL_CALCULATE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CHECKBOXOUTLINEBLANK = new URL('../../assets/icons/checkBoxOutlineBlan
  */
 export const initCheckBoxOutlineBlankIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHECKBOXOUTLINEBLANK }, ...properties);
+    initIcon(element, { additionalClassName: 'checkBoxOutlineBlankIcon', url: URL_CHECKBOXOUTLINEBLANK }, ...properties);
 }
 
 /**

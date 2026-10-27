@@ -15,7 +15,7 @@ const URL_FORMATITALICOUTLINED = new URL('../../assets/icons/formatItalicOutline
  */
 export const initFormatItalicOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATITALICOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatItalicOutlinedIcon', url: URL_FORMATITALICOUTLINED }, ...properties);
 }
 
 /**

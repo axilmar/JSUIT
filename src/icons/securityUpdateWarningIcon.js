@@ -15,7 +15,7 @@ const URL_SECURITYUPDATEWARNING = new URL('../../assets/icons/securityUpdateWarn
  */
 export const initSecurityUpdateWarningIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SECURITYUPDATEWARNING }, ...properties);
+    initIcon(element, { additionalClassName: 'securityUpdateWarningIcon', url: URL_SECURITYUPDATEWARNING }, ...properties);
 }
 
 /**

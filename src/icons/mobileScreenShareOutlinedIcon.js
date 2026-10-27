@@ -15,7 +15,7 @@ const URL_MOBILESCREENSHAREOUTLINED = new URL('../../assets/icons/mobileScreenSh
  */
 export const initMobileScreenShareOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOBILESCREENSHAREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'mobileScreenShareOutlinedIcon', url: URL_MOBILESCREENSHAREOUTLINED }, ...properties);
 }
 
 /**

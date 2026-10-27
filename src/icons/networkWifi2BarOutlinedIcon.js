@@ -15,7 +15,7 @@ const URL_NETWORKWIFI2BAROUTLINED = new URL('../../assets/icons/networkWifi2BarO
  */
 export const initNetworkWifi2BarOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NETWORKWIFI2BAROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'networkWifi2BarOutlinedIcon', url: URL_NETWORKWIFI2BAROUTLINED }, ...properties);
 }
 
 /**

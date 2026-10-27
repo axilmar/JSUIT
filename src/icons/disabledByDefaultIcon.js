@@ -15,7 +15,7 @@ const URL_DISABLEDBYDEFAULT = new URL('../../assets/icons/disabledByDefault.svg'
  */
 export const initDisabledByDefaultIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DISABLEDBYDEFAULT }, ...properties);
+    initIcon(element, { additionalClassName: 'disabledByDefaultIcon', url: URL_DISABLEDBYDEFAULT }, ...properties);
 }
 
 /**

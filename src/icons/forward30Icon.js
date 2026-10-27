@@ -15,7 +15,7 @@ const URL_FORWARD30 = new URL('../../assets/icons/forward30.svg', import.meta.ur
  */
 export const initForward30Icon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORWARD30 }, ...properties);
+    initIcon(element, { additionalClassName: 'forward30Icon', url: URL_FORWARD30 }, ...properties);
 }
 
 /**

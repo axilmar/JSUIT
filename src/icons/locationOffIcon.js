@@ -15,7 +15,7 @@ const URL_LOCATIONOFF = new URL('../../assets/icons/locationOff.svg', import.met
  */
 export const initLocationOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCATIONOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'locationOffIcon', url: URL_LOCATIONOFF }, ...properties);
 }
 
 /**

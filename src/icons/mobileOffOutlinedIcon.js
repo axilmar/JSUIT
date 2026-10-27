@@ -15,7 +15,7 @@ const URL_MOBILEOFFOUTLINED = new URL('../../assets/icons/mobileOffOutlined.svg'
  */
 export const initMobileOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOBILEOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'mobileOffOutlinedIcon', url: URL_MOBILEOFFOUTLINED }, ...properties);
 }
 
 /**

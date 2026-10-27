@@ -15,7 +15,7 @@ const URL_BACKHAND = new URL('../../assets/icons/backHand.svg', import.meta.url)
  */
 export const initBackHandIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BACKHAND }, ...properties);
+    initIcon(element, { additionalClassName: 'backHandIcon', url: URL_BACKHAND }, ...properties);
 }
 
 /**

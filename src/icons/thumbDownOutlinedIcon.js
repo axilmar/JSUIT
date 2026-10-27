@@ -15,7 +15,7 @@ const URL_THUMBDOWNOUTLINED = new URL('../../assets/icons/thumbDownOutlined.svg'
  */
 export const initThumbDownOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THUMBDOWNOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'thumbDownOutlinedIcon', url: URL_THUMBDOWNOUTLINED }, ...properties);
 }
 
 /**

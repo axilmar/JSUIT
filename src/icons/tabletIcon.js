@@ -15,7 +15,7 @@ const URL_TABLET = new URL('../../assets/icons/tablet.svg', import.meta.url).hre
  */
 export const initTabletIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TABLET }, ...properties);
+    initIcon(element, { additionalClassName: 'tabletIcon', url: URL_TABLET }, ...properties);
 }
 
 /**

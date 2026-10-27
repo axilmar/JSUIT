@@ -15,7 +15,7 @@ const URL_FLIPOUTLINED = new URL('../../assets/icons/flipOutlined.svg', import.m
  */
 export const initFlipOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLIPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'flipOutlinedIcon', url: URL_FLIPOUTLINED }, ...properties);
 }
 
 /**

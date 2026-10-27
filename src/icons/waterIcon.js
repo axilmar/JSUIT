@@ -15,7 +15,7 @@ const URL_WATER = new URL('../../assets/icons/water.svg', import.meta.url).href;
  */
 export const initWaterIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WATER }, ...properties);
+    initIcon(element, { additionalClassName: 'waterIcon', url: URL_WATER }, ...properties);
 }
 
 /**

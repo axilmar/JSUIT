@@ -15,7 +15,7 @@ const URL_TRENDINGFLAT = new URL('../../assets/icons/trendingFlat.svg', import.m
  */
 export const initTrendingFlatIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRENDINGFLAT }, ...properties);
+    initIcon(element, { additionalClassName: 'trendingFlatIcon', url: URL_TRENDINGFLAT }, ...properties);
 }
 
 /**

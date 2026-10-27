@@ -15,7 +15,7 @@ const URL_THUMBUP = new URL('../../assets/icons/thumbUp.svg', import.meta.url).h
  */
 export const initThumbUpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THUMBUP }, ...properties);
+    initIcon(element, { additionalClassName: 'thumbUpIcon', url: URL_THUMBUP }, ...properties);
 }
 
 /**

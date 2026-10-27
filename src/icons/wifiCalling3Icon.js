@@ -15,7 +15,7 @@ const URL_WIFICALLING3 = new URL('../../assets/icons/wifiCalling3.svg', import.m
  */
 export const initWifiCalling3Icon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIFICALLING3 }, ...properties);
+    initIcon(element, { additionalClassName: 'wifiCalling3Icon', url: URL_WIFICALLING3 }, ...properties);
 }
 
 /**

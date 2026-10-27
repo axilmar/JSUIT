@@ -15,7 +15,7 @@ const URL_WINDPOWER = new URL('../../assets/icons/windPower.svg', import.meta.ur
  */
 export const initWindPowerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WINDPOWER }, ...properties);
+    initIcon(element, { additionalClassName: 'windPowerIcon', url: URL_WINDPOWER }, ...properties);
 }
 
 /**

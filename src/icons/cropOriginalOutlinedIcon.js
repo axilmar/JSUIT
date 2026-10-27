@@ -15,7 +15,7 @@ const URL_CROPORIGINALOUTLINED = new URL('../../assets/icons/cropOriginalOutline
  */
 export const initCropOriginalOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CROPORIGINALOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cropOriginalOutlinedIcon', url: URL_CROPORIGINALOUTLINED }, ...properties);
 }
 
 /**

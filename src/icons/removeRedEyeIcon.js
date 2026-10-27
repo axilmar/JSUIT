@@ -15,7 +15,7 @@ const URL_REMOVEREDEYE = new URL('../../assets/icons/removeRedEye.svg', import.m
  */
 export const initRemoveRedEyeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REMOVEREDEYE }, ...properties);
+    initIcon(element, { additionalClassName: 'removeRedEyeIcon', url: URL_REMOVEREDEYE }, ...properties);
 }
 
 /**

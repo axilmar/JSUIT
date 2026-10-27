@@ -15,7 +15,7 @@ const URL_BATTERY60OUTLINED = new URL('../../assets/icons/battery60Outlined.svg'
  */
 export const initBattery60OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BATTERY60OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'battery60OutlinedIcon', url: URL_BATTERY60OUTLINED }, ...properties);
 }
 
 /**

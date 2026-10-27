@@ -15,7 +15,7 @@ const URL_WAVES = new URL('../../assets/icons/waves.svg', import.meta.url).href;
  */
 export const initWavesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WAVES }, ...properties);
+    initIcon(element, { additionalClassName: 'wavesIcon', url: URL_WAVES }, ...properties);
 }
 
 /**

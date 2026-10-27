@@ -15,7 +15,7 @@ const URL_ARROWOUTWARDOUTLINED = new URL('../../assets/icons/arrowOutwardOutline
  */
 export const initArrowOutwardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARROWOUTWARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'arrowOutwardOutlinedIcon', url: URL_ARROWOUTWARDOUTLINED }, ...properties);
 }
 
 /**

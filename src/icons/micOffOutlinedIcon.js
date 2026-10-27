@@ -15,7 +15,7 @@ const URL_MICOFFOUTLINED = new URL('../../assets/icons/micOffOutlined.svg', impo
  */
 export const initMicOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MICOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'micOffOutlinedIcon', url: URL_MICOFFOUTLINED }, ...properties);
 }
 
 /**

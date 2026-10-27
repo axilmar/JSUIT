@@ -15,7 +15,7 @@ const URL_AUTOFPSSELECT = new URL('../../assets/icons/autofpsSelect.svg', import
  */
 export const initAutofpsSelectIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOFPSSELECT }, ...properties);
+    initIcon(element, { additionalClassName: 'autofpsSelectIcon', url: URL_AUTOFPSSELECT }, ...properties);
 }
 
 /**

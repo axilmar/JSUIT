@@ -15,7 +15,7 @@ const URL_SETTINGSCELLOUTLINED = new URL('../../assets/icons/settingsCellOutline
  */
 export const initSettingsCellOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSCELLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsCellOutlinedIcon', url: URL_SETTINGSCELLOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ACCOUNTBOX = new URL('../../assets/icons/accountBox.svg', import.meta.
  */
 export const initAccountBoxIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACCOUNTBOX }, ...properties);
+    initIcon(element, { additionalClassName: 'accountBoxIcon', url: URL_ACCOUNTBOX }, ...properties);
 }
 
 /**

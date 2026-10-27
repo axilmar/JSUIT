@@ -15,7 +15,7 @@ const URL_TRAMOUTLINED = new URL('../../assets/icons/tramOutlined.svg', import.m
  */
 export const initTramOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRAMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tramOutlinedIcon', url: URL_TRAMOUTLINED }, ...properties);
 }
 
 /**

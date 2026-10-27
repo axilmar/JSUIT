@@ -15,7 +15,7 @@ const URL_SOS = new URL('../../assets/icons/sos.svg', import.meta.url).href;
  */
 export const initSosIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SOS }, ...properties);
+    initIcon(element, { additionalClassName: 'sosIcon', url: URL_SOS }, ...properties);
 }
 
 /**

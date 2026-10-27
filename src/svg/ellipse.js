@@ -10,7 +10,7 @@ import { initSVGGeometryElement } from "./SVGGeometryElement.js";
  */
 export const initEllipse = (element, ...properties) => {
     console.assert(element instanceof SVGEllipseElement);
-    initSVGGeometryElement(element, ...properties);
+    initSVGGeometryElement(element, { additionalClassName: 'ellipse' }, ...properties);
 }
 
 /**

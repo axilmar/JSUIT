@@ -15,7 +15,7 @@ const URL_HELPOUTLINE = new URL('../../assets/icons/helpOutline.svg', import.met
  */
 export const initHelpOutlineIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HELPOUTLINE }, ...properties);
+    initIcon(element, { additionalClassName: 'helpOutlineIcon', url: URL_HELPOUTLINE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TIMETOLEAVE = new URL('../../assets/icons/timeToLeave.svg', import.met
  */
 export const initTimeToLeaveIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TIMETOLEAVE }, ...properties);
+    initIcon(element, { additionalClassName: 'timeToLeaveIcon', url: URL_TIMETOLEAVE }, ...properties);
 }
 
 /**

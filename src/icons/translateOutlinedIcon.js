@@ -15,7 +15,7 @@ const URL_TRANSLATEOUTLINED = new URL('../../assets/icons/translateOutlined.svg'
  */
 export const initTranslateOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRANSLATEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'translateOutlinedIcon', url: URL_TRANSLATEOUTLINED }, ...properties);
 }
 
 /**

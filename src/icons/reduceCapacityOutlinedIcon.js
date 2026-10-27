@@ -15,7 +15,7 @@ const URL_REDUCECAPACITYOUTLINED = new URL('../../assets/icons/reduceCapacityOut
  */
 export const initReduceCapacityOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REDUCECAPACITYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'reduceCapacityOutlinedIcon', url: URL_REDUCECAPACITYOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ONDEVICETRAINING = new URL('../../assets/icons/onDeviceTraining.svg', 
  */
 export const initOnDeviceTrainingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ONDEVICETRAINING }, ...properties);
+    initIcon(element, { additionalClassName: 'onDeviceTrainingIcon', url: URL_ONDEVICETRAINING }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_RADIO = new URL('../../assets/icons/radio.svg', import.meta.url).href;
  */
 export const initRadioIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RADIO }, ...properties);
+    initIcon(element, { additionalClassName: 'radioIcon', url: URL_RADIO }, ...properties);
 }
 
 /**

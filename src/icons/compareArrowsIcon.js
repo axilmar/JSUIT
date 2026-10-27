@@ -15,7 +15,7 @@ const URL_COMPAREARROWS = new URL('../../assets/icons/compareArrows.svg', import
  */
 export const initCompareArrowsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMPAREARROWS }, ...properties);
+    initIcon(element, { additionalClassName: 'compareArrowsIcon', url: URL_COMPAREARROWS }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_BUBBLECHART = new URL('../../assets/icons/bubbleChart.svg', import.met
  */
 export const initBubbleChartIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BUBBLECHART }, ...properties);
+    initIcon(element, { additionalClassName: 'bubbleChartIcon', url: URL_BUBBLECHART }, ...properties);
 }
 
 /**

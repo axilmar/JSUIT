@@ -15,7 +15,7 @@ const URL_TIMEROFF = new URL('../../assets/icons/timerOff.svg', import.meta.url)
  */
 export const initTimerOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TIMEROFF }, ...properties);
+    initIcon(element, { additionalClassName: 'timerOffIcon', url: URL_TIMEROFF }, ...properties);
 }
 
 /**

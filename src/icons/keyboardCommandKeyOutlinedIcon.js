@@ -15,7 +15,7 @@ const URL_KEYBOARDCOMMANDKEYOUTLINED = new URL('../../assets/icons/keyboardComma
  */
 export const initKeyboardCommandKeyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDCOMMANDKEYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardCommandKeyOutlinedIcon', url: URL_KEYBOARDCOMMANDKEYOUTLINED }, ...properties);
 }
 
 /**

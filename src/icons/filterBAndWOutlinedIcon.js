@@ -15,7 +15,7 @@ const URL_FILTERBANDWOUTLINED = new URL('../../assets/icons/filterBAndWOutlined.
  */
 export const initFilterBAndWOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERBANDWOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'filterBAndWOutlinedIcon', url: URL_FILTERBANDWOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FLIPCAMERAIOS = new URL('../../assets/icons/flipCameraIos.svg', import
  */
 export const initFlipCameraIosIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLIPCAMERAIOS }, ...properties);
+    initIcon(element, { additionalClassName: 'flipCameraIosIcon', url: URL_FLIPCAMERAIOS }, ...properties);
 }
 
 /**

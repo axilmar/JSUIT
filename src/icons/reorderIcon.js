@@ -15,7 +15,7 @@ const URL_REORDER = new URL('../../assets/icons/reorder.svg', import.meta.url).h
  */
 export const initReorderIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REORDER }, ...properties);
+    initIcon(element, { additionalClassName: 'reorderIcon', url: URL_REORDER }, ...properties);
 }
 
 /**

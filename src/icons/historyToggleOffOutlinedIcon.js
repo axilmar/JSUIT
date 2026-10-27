@@ -15,7 +15,7 @@ const URL_HISTORYTOGGLEOFFOUTLINED = new URL('../../assets/icons/historyToggleOf
  */
 export const initHistoryToggleOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HISTORYTOGGLEOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'historyToggleOffOutlinedIcon', url: URL_HISTORYTOGGLEOFFOUTLINED }, ...properties);
 }
 
 /**

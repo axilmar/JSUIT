@@ -15,7 +15,7 @@ const URL_CHECKLISTRTLOUTLINED = new URL('../../assets/icons/checklistRtlOutline
  */
 export const initChecklistRtlOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHECKLISTRTLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'checklistRtlOutlinedIcon', url: URL_CHECKLISTRTLOUTLINED }, ...properties);
 }
 
 /**

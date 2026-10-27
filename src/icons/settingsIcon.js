@@ -15,7 +15,7 @@ const URL_SETTINGS = new URL('../../assets/icons/settings.svg', import.meta.url)
  */
 export const initSettingsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGS }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsIcon', url: URL_SETTINGS }, ...properties);
 }
 
 /**

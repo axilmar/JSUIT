@@ -15,7 +15,7 @@ const URL_REMOVEROAD = new URL('../../assets/icons/removeRoad.svg', import.meta.
  */
 export const initRemoveRoadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REMOVEROAD }, ...properties);
+    initIcon(element, { additionalClassName: 'removeRoadIcon', url: URL_REMOVEROAD }, ...properties);
 }
 
 /**

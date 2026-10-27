@@ -15,7 +15,7 @@ const URL_ANDROID = new URL('../../assets/icons/android.svg', import.meta.url).h
  */
 export const initAndroidIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ANDROID }, ...properties);
+    initIcon(element, { additionalClassName: 'androidIcon', url: URL_ANDROID }, ...properties);
 }
 
 /**

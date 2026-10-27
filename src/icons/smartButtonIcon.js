@@ -15,7 +15,7 @@ const URL_SMARTBUTTON = new URL('../../assets/icons/smartButton.svg', import.met
  */
 export const initSmartButtonIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SMARTBUTTON }, ...properties);
+    initIcon(element, { additionalClassName: 'smartButtonIcon', url: URL_SMARTBUTTON }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DASHBOARDOUTLINED = new URL('../../assets/icons/dashboardOutlined.svg'
  */
 export const initDashboardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DASHBOARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dashboardOutlinedIcon', url: URL_DASHBOARDOUTLINED }, ...properties);
 }
 
 /**

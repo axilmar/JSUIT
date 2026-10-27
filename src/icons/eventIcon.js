@@ -15,7 +15,7 @@ const URL_EVENT = new URL('../../assets/icons/event.svg', import.meta.url).href;
  */
 export const initEventIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EVENT }, ...properties);
+    initIcon(element, { additionalClassName: 'eventIcon', url: URL_EVENT }, ...properties);
 }
 
 /**

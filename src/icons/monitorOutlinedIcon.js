@@ -15,7 +15,7 @@ const URL_MONITOROUTLINED = new URL('../../assets/icons/monitorOutlined.svg', im
  */
 export const initMonitorOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MONITOROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'monitorOutlinedIcon', url: URL_MONITOROUTLINED }, ...properties);
 }
 
 /**

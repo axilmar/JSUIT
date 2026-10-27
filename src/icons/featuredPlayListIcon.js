@@ -15,7 +15,7 @@ const URL_FEATUREDPLAYLIST = new URL('../../assets/icons/featuredPlayList.svg', 
  */
 export const initFeaturedPlayListIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FEATUREDPLAYLIST }, ...properties);
+    initIcon(element, { additionalClassName: 'featuredPlayListIcon', url: URL_FEATUREDPLAYLIST }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DYNAMICFEED = new URL('../../assets/icons/dynamicFeed.svg', import.met
  */
 export const initDynamicFeedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DYNAMICFEED }, ...properties);
+    initIcon(element, { additionalClassName: 'dynamicFeedIcon', url: URL_DYNAMICFEED }, ...properties);
 }
 
 /**

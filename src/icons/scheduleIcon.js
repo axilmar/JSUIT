@@ -15,7 +15,7 @@ const URL_SCHEDULE = new URL('../../assets/icons/schedule.svg', import.meta.url)
  */
 export const initScheduleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCHEDULE }, ...properties);
+    initIcon(element, { additionalClassName: 'scheduleIcon', url: URL_SCHEDULE }, ...properties);
 }
 
 /**

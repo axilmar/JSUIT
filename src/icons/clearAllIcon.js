@@ -15,7 +15,7 @@ const URL_CLEARALL = new URL('../../assets/icons/clearAll.svg', import.meta.url)
  */
 export const initClearAllIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLEARALL }, ...properties);
+    initIcon(element, { additionalClassName: 'clearAllIcon', url: URL_CLEARALL }, ...properties);
 }
 
 /**

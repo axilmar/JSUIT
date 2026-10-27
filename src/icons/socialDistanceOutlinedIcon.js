@@ -15,7 +15,7 @@ const URL_SOCIALDISTANCEOUTLINED = new URL('../../assets/icons/socialDistanceOut
  */
 export const initSocialDistanceOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SOCIALDISTANCEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'socialDistanceOutlinedIcon', url: URL_SOCIALDISTANCEOUTLINED }, ...properties);
 }
 
 /**

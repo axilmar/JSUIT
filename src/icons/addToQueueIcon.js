@@ -15,7 +15,7 @@ const URL_ADDTOQUEUE = new URL('../../assets/icons/addToQueue.svg', import.meta.
  */
 export const initAddToQueueIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDTOQUEUE }, ...properties);
+    initIcon(element, { additionalClassName: 'addToQueueIcon', url: URL_ADDTOQUEUE }, ...properties);
 }
 
 /**

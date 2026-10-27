@@ -15,7 +15,7 @@ const URL_ADDCARD = new URL('../../assets/icons/addCard.svg', import.meta.url).h
  */
 export const initAddCardIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDCARD }, ...properties);
+    initIcon(element, { additionalClassName: 'addCardIcon', url: URL_ADDCARD }, ...properties);
 }
 
 /**

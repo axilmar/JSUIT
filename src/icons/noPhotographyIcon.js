@@ -15,7 +15,7 @@ const URL_NOPHOTOGRAPHY = new URL('../../assets/icons/noPhotography.svg', import
  */
 export const initNoPhotographyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOPHOTOGRAPHY }, ...properties);
+    initIcon(element, { additionalClassName: 'noPhotographyIcon', url: URL_NOPHOTOGRAPHY }, ...properties);
 }
 
 /**

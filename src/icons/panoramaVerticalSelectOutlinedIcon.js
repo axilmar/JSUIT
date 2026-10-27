@@ -15,7 +15,7 @@ const URL_PANORAMAVERTICALSELECTOUTLINED = new URL('../../assets/icons/panoramaV
  */
 export const initPanoramaVerticalSelectOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PANORAMAVERTICALSELECTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'panoramaVerticalSelectOutlinedIcon', url: URL_PANORAMAVERTICALSELECTOUTLINED }, ...properties);
 }
 
 /**

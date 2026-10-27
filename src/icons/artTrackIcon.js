@@ -15,7 +15,7 @@ const URL_ARTTRACK = new URL('../../assets/icons/artTrack.svg', import.meta.url)
  */
 export const initArtTrackIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARTTRACK }, ...properties);
+    initIcon(element, { additionalClassName: 'artTrackIcon', url: URL_ARTTRACK }, ...properties);
 }
 
 /**

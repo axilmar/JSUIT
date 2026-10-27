@@ -15,7 +15,7 @@ const URL_MOVIEFILTEROUTLINED = new URL('../../assets/icons/movieFilterOutlined.
  */
 export const initMovieFilterOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOVIEFILTEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'movieFilterOutlinedIcon', url: URL_MOVIEFILTEROUTLINED }, ...properties);
 }
 
 /**

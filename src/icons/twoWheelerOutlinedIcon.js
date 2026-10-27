@@ -15,7 +15,7 @@ const URL_TWOWHEELEROUTLINED = new URL('../../assets/icons/twoWheelerOutlined.sv
  */
 export const initTwoWheelerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TWOWHEELEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'twoWheelerOutlinedIcon', url: URL_TWOWHEELEROUTLINED }, ...properties);
 }
 
 /**

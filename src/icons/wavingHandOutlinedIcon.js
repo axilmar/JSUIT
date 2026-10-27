@@ -15,7 +15,7 @@ const URL_WAVINGHANDOUTLINED = new URL('../../assets/icons/wavingHandOutlined.sv
  */
 export const initWavingHandOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WAVINGHANDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wavingHandOutlinedIcon', url: URL_WAVINGHANDOUTLINED }, ...properties);
 }
 
 /**

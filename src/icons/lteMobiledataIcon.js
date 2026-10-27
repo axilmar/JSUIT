@@ -15,7 +15,7 @@ const URL_LTEMOBILEDATA = new URL('../../assets/icons/lteMobiledata.svg', import
  */
 export const initLteMobiledataIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LTEMOBILEDATA }, ...properties);
+    initIcon(element, { additionalClassName: 'lteMobiledataIcon', url: URL_LTEMOBILEDATA }, ...properties);
 }
 
 /**

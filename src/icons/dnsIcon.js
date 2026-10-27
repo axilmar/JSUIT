@@ -15,7 +15,7 @@ const URL_DNS = new URL('../../assets/icons/dns.svg', import.meta.url).href;
  */
 export const initDnsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DNS }, ...properties);
+    initIcon(element, { additionalClassName: 'dnsIcon', url: URL_DNS }, ...properties);
 }
 
 /**

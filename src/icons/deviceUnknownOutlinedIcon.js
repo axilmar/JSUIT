@@ -15,7 +15,7 @@ const URL_DEVICEUNKNOWNOUTLINED = new URL('../../assets/icons/deviceUnknownOutli
  */
 export const initDeviceUnknownOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEVICEUNKNOWNOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'deviceUnknownOutlinedIcon', url: URL_DEVICEUNKNOWNOUTLINED }, ...properties);
 }
 
 /**

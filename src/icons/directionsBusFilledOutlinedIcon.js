@@ -15,7 +15,7 @@ const URL_DIRECTIONSBUSFILLEDOUTLINED = new URL('../../assets/icons/directionsBu
  */
 export const initDirectionsBusFilledOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRECTIONSBUSFILLEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'directionsBusFilledOutlinedIcon', url: URL_DIRECTIONSBUSFILLEDOUTLINED }, ...properties);
 }
 
 /**

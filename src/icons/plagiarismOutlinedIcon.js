@@ -15,7 +15,7 @@ const URL_PLAGIARISMOUTLINED = new URL('../../assets/icons/plagiarismOutlined.sv
  */
 export const initPlagiarismOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAGIARISMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'plagiarismOutlinedIcon', url: URL_PLAGIARISMOUTLINED }, ...properties);
 }
 
 /**

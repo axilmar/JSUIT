@@ -15,7 +15,7 @@ const URL_SOUPKITCHENOUTLINED = new URL('../../assets/icons/soupKitchenOutlined.
  */
 export const initSoupKitchenOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SOUPKITCHENOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'soupKitchenOutlinedIcon', url: URL_SOUPKITCHENOUTLINED }, ...properties);
 }
 
 /**

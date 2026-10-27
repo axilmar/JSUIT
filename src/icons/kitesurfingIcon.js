@@ -15,7 +15,7 @@ const URL_KITESURFING = new URL('../../assets/icons/kitesurfing.svg', import.met
  */
 export const initKitesurfingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KITESURFING }, ...properties);
+    initIcon(element, { additionalClassName: 'kitesurfingIcon', url: URL_KITESURFING }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_WBINCANDESCENT = new URL('../../assets/icons/wbIncandescent.svg', impo
  */
 export const initWbIncandescentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WBINCANDESCENT }, ...properties);
+    initIcon(element, { additionalClassName: 'wbIncandescentIcon', url: URL_WBINCANDESCENT }, ...properties);
 }
 
 /**

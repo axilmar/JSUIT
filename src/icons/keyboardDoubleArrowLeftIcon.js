@@ -15,7 +15,7 @@ const URL_KEYBOARDDOUBLEARROWLEFT = new URL('../../assets/icons/keyboardDoubleAr
  */
 export const initKeyboardDoubleArrowLeftIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDDOUBLEARROWLEFT }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardDoubleArrowLeftIcon', url: URL_KEYBOARDDOUBLEARROWLEFT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TRAFFIC = new URL('../../assets/icons/traffic.svg', import.meta.url).h
  */
 export const initTrafficIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRAFFIC }, ...properties);
+    initIcon(element, { additionalClassName: 'trafficIcon', url: URL_TRAFFIC }, ...properties);
 }
 
 /**

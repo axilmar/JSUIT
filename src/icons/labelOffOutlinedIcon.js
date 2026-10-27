@@ -15,7 +15,7 @@ const URL_LABELOFFOUTLINED = new URL('../../assets/icons/labelOffOutlined.svg', 
  */
 export const initLabelOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LABELOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'labelOffOutlinedIcon', url: URL_LABELOFFOUTLINED }, ...properties);
 }
 
 /**

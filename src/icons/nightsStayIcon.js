@@ -15,7 +15,7 @@ const URL_NIGHTSSTAY = new URL('../../assets/icons/nightsStay.svg', import.meta.
  */
 export const initNightsStayIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NIGHTSSTAY }, ...properties);
+    initIcon(element, { additionalClassName: 'nightsStayIcon', url: URL_NIGHTSSTAY }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_OPENINBROWSER = new URL('../../assets/icons/openInBrowser.svg', import
  */
 export const initOpenInBrowserIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OPENINBROWSER }, ...properties);
+    initIcon(element, { additionalClassName: 'openInBrowserIcon', url: URL_OPENINBROWSER }, ...properties);
 }
 
 /**

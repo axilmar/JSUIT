@@ -15,7 +15,7 @@ const URL_TRIPORIGIN = new URL('../../assets/icons/tripOrigin.svg', import.meta.
  */
 export const initTripOriginIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRIPORIGIN }, ...properties);
+    initIcon(element, { additionalClassName: 'tripOriginIcon', url: URL_TRIPORIGIN }, ...properties);
 }
 
 /**

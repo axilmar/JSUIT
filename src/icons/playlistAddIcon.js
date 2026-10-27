@@ -15,7 +15,7 @@ const URL_PLAYLISTADD = new URL('../../assets/icons/playlistAdd.svg', import.met
  */
 export const initPlaylistAddIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYLISTADD }, ...properties);
+    initIcon(element, { additionalClassName: 'playlistAddIcon', url: URL_PLAYLISTADD }, ...properties);
 }
 
 /**

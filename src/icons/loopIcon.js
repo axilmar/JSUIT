@@ -15,7 +15,7 @@ const URL_LOOP = new URL('../../assets/icons/loop.svg', import.meta.url).href;
  */
 export const initLoopIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOOP }, ...properties);
+    initIcon(element, { additionalClassName: 'loopIcon', url: URL_LOOP }, ...properties);
 }
 
 /**

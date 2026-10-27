@@ -15,7 +15,7 @@ const URL_MOPED = new URL('../../assets/icons/moped.svg', import.meta.url).href;
  */
 export const initMopedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOPED }, ...properties);
+    initIcon(element, { additionalClassName: 'mopedIcon', url: URL_MOPED }, ...properties);
 }
 
 /**

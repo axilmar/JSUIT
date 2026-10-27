@@ -10,5 +10,5 @@ import { initSVGElement } from "./SVGElement.js";
  */
 export const initSVGComponentTransferFunctionElement = (element, ...properties) => {
     console.assert(element instanceof SVGComponentTransferFunctionElement);
-    initSVGElement(element, ...properties);
+    initSVGElement(element, { additionalClassName: 'SVGComponentTransferFunctionElement' }, ...properties);
 }

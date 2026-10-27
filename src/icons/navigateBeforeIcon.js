@@ -15,7 +15,7 @@ const URL_NAVIGATEBEFORE = new URL('../../assets/icons/navigateBefore.svg', impo
  */
 export const initNavigateBeforeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NAVIGATEBEFORE }, ...properties);
+    initIcon(element, { additionalClassName: 'navigateBeforeIcon', url: URL_NAVIGATEBEFORE }, ...properties);
 }
 
 /**

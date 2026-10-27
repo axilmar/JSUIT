@@ -15,7 +15,7 @@ const URL_EVENTAVAILABLEOUTLINED = new URL('../../assets/icons/eventAvailableOut
  */
 export const initEventAvailableOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EVENTAVAILABLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'eventAvailableOutlinedIcon', url: URL_EVENTAVAILABLEOUTLINED }, ...properties);
 }
 
 /**

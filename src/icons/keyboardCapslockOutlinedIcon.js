@@ -15,7 +15,7 @@ const URL_KEYBOARDCAPSLOCKOUTLINED = new URL('../../assets/icons/keyboardCapsloc
  */
 export const initKeyboardCapslockOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDCAPSLOCKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardCapslockOutlinedIcon', url: URL_KEYBOARDCAPSLOCKOUTLINED }, ...properties);
 }
 
 /**

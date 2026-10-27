@@ -15,7 +15,7 @@ const URL_DESIGNSERVICES = new URL('../../assets/icons/designServices.svg', impo
  */
 export const initDesignServicesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DESIGNSERVICES }, ...properties);
+    initIcon(element, { additionalClassName: 'designServicesIcon', url: URL_DESIGNSERVICES }, ...properties);
 }
 
 /**

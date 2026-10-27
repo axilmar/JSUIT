@@ -15,7 +15,7 @@ const URL_CONSTRUCTIONOUTLINED = new URL('../../assets/icons/constructionOutline
  */
 export const initConstructionOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONSTRUCTIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'constructionOutlinedIcon', url: URL_CONSTRUCTIONOUTLINED }, ...properties);
 }
 
 /**

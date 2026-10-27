@@ -15,7 +15,7 @@ const URL_SYNCDISABLED = new URL('../../assets/icons/syncDisabled.svg', import.m
  */
 export const initSyncDisabledIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SYNCDISABLED }, ...properties);
+    initIcon(element, { additionalClassName: 'syncDisabledIcon', url: URL_SYNCDISABLED }, ...properties);
 }
 
 /**

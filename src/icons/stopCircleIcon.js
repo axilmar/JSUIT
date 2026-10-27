@@ -15,7 +15,7 @@ const URL_STOPCIRCLE = new URL('../../assets/icons/stopCircle.svg', import.meta.
  */
 export const initStopCircleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STOPCIRCLE }, ...properties);
+    initIcon(element, { additionalClassName: 'stopCircleIcon', url: URL_STOPCIRCLE }, ...properties);
 }
 
 /**

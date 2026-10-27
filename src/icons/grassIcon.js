@@ -15,7 +15,7 @@ const URL_GRASS = new URL('../../assets/icons/grass.svg', import.meta.url).href;
  */
 export const initGrassIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRASS }, ...properties);
+    initIcon(element, { additionalClassName: 'grassIcon', url: URL_GRASS }, ...properties);
 }
 
 /**

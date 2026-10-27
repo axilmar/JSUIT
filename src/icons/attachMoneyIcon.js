@@ -15,7 +15,7 @@ const URL_ATTACHMONEY = new URL('../../assets/icons/attachMoney.svg', import.met
  */
 export const initAttachMoneyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ATTACHMONEY }, ...properties);
+    initIcon(element, { additionalClassName: 'attachMoneyIcon', url: URL_ATTACHMONEY }, ...properties);
 }
 
 /**

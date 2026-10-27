@@ -15,7 +15,7 @@ const URL_BATHTUBOUTLINED = new URL('../../assets/icons/bathtubOutlined.svg', im
  */
 export const initBathtubOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BATHTUBOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bathtubOutlinedIcon', url: URL_BATHTUBOUTLINED }, ...properties);
 }
 
 /**

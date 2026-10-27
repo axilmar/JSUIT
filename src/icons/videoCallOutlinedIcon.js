@@ -15,7 +15,7 @@ const URL_VIDEOCALLOUTLINED = new URL('../../assets/icons/videoCallOutlined.svg'
  */
 export const initVideoCallOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOCALLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'videoCallOutlinedIcon', url: URL_VIDEOCALLOUTLINED }, ...properties);
 }
 
 /**

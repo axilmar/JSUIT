@@ -15,7 +15,7 @@ const URL_MODEFANOFF = new URL('../../assets/icons/modeFanOff.svg', import.meta.
  */
 export const initModeFanOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MODEFANOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'modeFanOffIcon', url: URL_MODEFANOFF }, ...properties);
 }
 
 /**

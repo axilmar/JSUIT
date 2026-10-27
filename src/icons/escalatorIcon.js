@@ -15,7 +15,7 @@ const URL_ESCALATOR = new URL('../../assets/icons/escalator.svg', import.meta.ur
  */
 export const initEscalatorIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ESCALATOR }, ...properties);
+    initIcon(element, { additionalClassName: 'escalatorIcon', url: URL_ESCALATOR }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TWENTYZEROMP = new URL('../../assets/icons/twentyZeroMp.svg', import.m
  */
 export const initTwentyZeroMpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TWENTYZEROMP }, ...properties);
+    initIcon(element, { additionalClassName: 'twentyZeroMpIcon', url: URL_TWENTYZEROMP }, ...properties);
 }
 
 /**

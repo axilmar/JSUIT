@@ -15,7 +15,7 @@ const URL_THREEP = new URL('../../assets/icons/threeP.svg', import.meta.url).hre
  */
 export const initThreePIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THREEP }, ...properties);
+    initIcon(element, { additionalClassName: 'threePIcon', url: URL_THREEP }, ...properties);
 }
 
 /**

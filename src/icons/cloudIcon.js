@@ -15,7 +15,7 @@ const URL_CLOUD = new URL('../../assets/icons/cloud.svg', import.meta.url).href;
  */
 export const initCloudIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOUD }, ...properties);
+    initIcon(element, { additionalClassName: 'cloudIcon', url: URL_CLOUD }, ...properties);
 }
 
 /**

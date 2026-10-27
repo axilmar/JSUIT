@@ -15,7 +15,7 @@ const URL_CALLTOACTIONOUTLINED = new URL('../../assets/icons/callToActionOutline
  */
 export const initCallToActionOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALLTOACTIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'callToActionOutlinedIcon', url: URL_CALLTOACTIONOUTLINED }, ...properties);
 }
 
 /**

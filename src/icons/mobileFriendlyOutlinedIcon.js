@@ -15,7 +15,7 @@ const URL_MOBILEFRIENDLYOUTLINED = new URL('../../assets/icons/mobileFriendlyOut
  */
 export const initMobileFriendlyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOBILEFRIENDLYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'mobileFriendlyOutlinedIcon', url: URL_MOBILEFRIENDLYOUTLINED }, ...properties);
 }
 
 /**

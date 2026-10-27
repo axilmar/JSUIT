@@ -15,7 +15,7 @@ const URL_KEYBOARDHIDE = new URL('../../assets/icons/keyboardHide.svg', import.m
  */
 export const initKeyboardHideIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDHIDE }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardHideIcon', url: URL_KEYBOARDHIDE }, ...properties);
 }
 
 /**

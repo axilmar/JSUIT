@@ -15,7 +15,7 @@ const URL_SCHEDULEOUTLINED = new URL('../../assets/icons/scheduleOutlined.svg', 
  */
 export const initScheduleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCHEDULEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'scheduleOutlinedIcon', url: URL_SCHEDULEOUTLINED }, ...properties);
 }
 
 /**

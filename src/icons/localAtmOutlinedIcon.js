@@ -15,7 +15,7 @@ const URL_LOCALATMOUTLINED = new URL('../../assets/icons/localAtmOutlined.svg', 
  */
 export const initLocalAtmOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALATMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localAtmOutlinedIcon', url: URL_LOCALATMOUTLINED }, ...properties);
 }
 
 /**

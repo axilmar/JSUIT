@@ -15,7 +15,7 @@ const URL_SETTINGSBACKUPRESTORE = new URL('../../assets/icons/settingsBackupRest
  */
 export const initSettingsBackupRestoreIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSBACKUPRESTORE }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsBackupRestoreIcon', url: URL_SETTINGSBACKUPRESTORE }, ...properties);
 }
 
 /**

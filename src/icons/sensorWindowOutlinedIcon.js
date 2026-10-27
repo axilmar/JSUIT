@@ -15,7 +15,7 @@ const URL_SENSORWINDOWOUTLINED = new URL('../../assets/icons/sensorWindowOutline
  */
 export const initSensorWindowOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SENSORWINDOWOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sensorWindowOutlinedIcon', url: URL_SENSORWINDOWOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DRIVEFILEMOVE = new URL('../../assets/icons/driveFileMove.svg', import
  */
 export const initDriveFileMoveIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRIVEFILEMOVE }, ...properties);
+    initIcon(element, { additionalClassName: 'driveFileMoveIcon', url: URL_DRIVEFILEMOVE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CALLMISSED = new URL('../../assets/icons/callMissed.svg', import.meta.
  */
 export const initCallMissedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALLMISSED }, ...properties);
+    initIcon(element, { additionalClassName: 'callMissedIcon', url: URL_CALLMISSED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_MOVETOINBOXOUTLINED = new URL('../../assets/icons/moveToInboxOutlined.
  */
 export const initMoveToInboxOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOVETOINBOXOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'moveToInboxOutlinedIcon', url: URL_MOVETOINBOXOUTLINED }, ...properties);
 }
 
 /**

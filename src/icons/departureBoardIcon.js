@@ -15,7 +15,7 @@ const URL_DEPARTUREBOARD = new URL('../../assets/icons/departureBoard.svg', impo
  */
 export const initDepartureBoardIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEPARTUREBOARD }, ...properties);
+    initIcon(element, { additionalClassName: 'departureBoardIcon', url: URL_DEPARTUREBOARD }, ...properties);
 }
 
 /**

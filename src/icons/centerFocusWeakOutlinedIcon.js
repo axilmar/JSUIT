@@ -15,7 +15,7 @@ const URL_CENTERFOCUSWEAKOUTLINED = new URL('../../assets/icons/centerFocusWeakO
  */
 export const initCenterFocusWeakOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CENTERFOCUSWEAKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'centerFocusWeakOutlinedIcon', url: URL_CENTERFOCUSWEAKOUTLINED }, ...properties);
 }
 
 /**

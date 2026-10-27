@@ -15,7 +15,7 @@ const URL_ROOM = new URL('../../assets/icons/room.svg', import.meta.url).href;
  */
 export const initRoomIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROOM }, ...properties);
+    initIcon(element, { additionalClassName: 'roomIcon', url: URL_ROOM }, ...properties);
 }
 
 /**

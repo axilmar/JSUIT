@@ -15,7 +15,7 @@ const URL_SHORTTEXTOUTLINED = new URL('../../assets/icons/shortTextOutlined.svg'
  */
 export const initShortTextOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHORTTEXTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'shortTextOutlinedIcon', url: URL_SHORTTEXTOUTLINED }, ...properties);
 }
 
 /**

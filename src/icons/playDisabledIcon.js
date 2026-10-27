@@ -15,7 +15,7 @@ const URL_PLAYDISABLED = new URL('../../assets/icons/playDisabled.svg', import.m
  */
 export const initPlayDisabledIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYDISABLED }, ...properties);
+    initIcon(element, { additionalClassName: 'playDisabledIcon', url: URL_PLAYDISABLED }, ...properties);
 }
 
 /**

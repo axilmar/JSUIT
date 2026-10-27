@@ -15,7 +15,7 @@ const URL_FOLDERSPECIALOUTLINED = new URL('../../assets/icons/folderSpecialOutli
  */
 export const initFolderSpecialOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOLDERSPECIALOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'folderSpecialOutlinedIcon', url: URL_FOLDERSPECIALOUTLINED }, ...properties);
 }
 
 /**

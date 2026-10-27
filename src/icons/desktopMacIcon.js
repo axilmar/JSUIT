@@ -15,7 +15,7 @@ const URL_DESKTOPMAC = new URL('../../assets/icons/desktopMac.svg', import.meta.
  */
 export const initDesktopMacIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DESKTOPMAC }, ...properties);
+    initIcon(element, { additionalClassName: 'desktopMacIcon', url: URL_DESKTOPMAC }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SUBTITLESOUTLINED = new URL('../../assets/icons/subtitlesOutlined.svg'
  */
 export const initSubtitlesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUBTITLESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'subtitlesOutlinedIcon', url: URL_SUBTITLESOUTLINED }, ...properties);
 }
 
 /**

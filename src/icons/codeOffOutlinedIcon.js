@@ -15,7 +15,7 @@ const URL_CODEOFFOUTLINED = new URL('../../assets/icons/codeOffOutlined.svg', im
  */
 export const initCodeOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CODEOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'codeOffOutlinedIcon', url: URL_CODEOFFOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_EQUALIZEROUTLINED = new URL('../../assets/icons/equalizerOutlined.svg'
  */
 export const initEqualizerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EQUALIZEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'equalizerOutlinedIcon', url: URL_EQUALIZEROUTLINED }, ...properties);
 }
 
 /**

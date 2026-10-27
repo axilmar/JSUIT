@@ -15,7 +15,7 @@ const URL_SIGNALCELLULARALT = new URL('../../assets/icons/signalCellularAlt.svg'
  */
 export const initSignalCellularAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNALCELLULARALT }, ...properties);
+    initIcon(element, { additionalClassName: 'signalCellularAltIcon', url: URL_SIGNALCELLULARALT }, ...properties);
 }
 
 /**

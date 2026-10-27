@@ -15,7 +15,7 @@ const URL_LIBRARYADD = new URL('../../assets/icons/libraryAdd.svg', import.meta.
  */
 export const initLibraryAddIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIBRARYADD }, ...properties);
+    initIcon(element, { additionalClassName: 'libraryAddIcon', url: URL_LIBRARYADD }, ...properties);
 }
 
 /**

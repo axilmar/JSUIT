@@ -15,7 +15,7 @@ const URL_ALLINBOX = new URL('../../assets/icons/allInbox.svg', import.meta.url)
  */
 export const initAllInboxIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALLINBOX }, ...properties);
+    initIcon(element, { additionalClassName: 'allInboxIcon', url: URL_ALLINBOX }, ...properties);
 }
 
 /**

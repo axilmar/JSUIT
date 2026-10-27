@@ -15,7 +15,7 @@ const URL_AIROUTLINED = new URL('../../assets/icons/airOutlined.svg', import.met
  */
 export const initAirOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AIROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'airOutlinedIcon', url: URL_AIROUTLINED }, ...properties);
 }
 
 /**

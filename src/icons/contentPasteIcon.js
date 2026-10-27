@@ -15,7 +15,7 @@ const URL_CONTENTPASTE = new URL('../../assets/icons/contentPaste.svg', import.m
  */
 export const initContentPasteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTENTPASTE }, ...properties);
+    initIcon(element, { additionalClassName: 'contentPasteIcon', url: URL_CONTENTPASTE }, ...properties);
 }
 
 /**

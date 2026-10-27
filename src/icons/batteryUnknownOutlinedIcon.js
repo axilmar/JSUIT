@@ -15,7 +15,7 @@ const URL_BATTERYUNKNOWNOUTLINED = new URL('../../assets/icons/batteryUnknownOut
  */
 export const initBatteryUnknownOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BATTERYUNKNOWNOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'batteryUnknownOutlinedIcon', url: URL_BATTERYUNKNOWNOUTLINED }, ...properties);
 }
 
 /**

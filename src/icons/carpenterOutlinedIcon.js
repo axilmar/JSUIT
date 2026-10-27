@@ -15,7 +15,7 @@ const URL_CARPENTEROUTLINED = new URL('../../assets/icons/carpenterOutlined.svg'
  */
 export const initCarpenterOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CARPENTEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'carpenterOutlinedIcon', url: URL_CARPENTEROUTLINED }, ...properties);
 }
 
 /**

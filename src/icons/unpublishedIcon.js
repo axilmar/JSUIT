@@ -15,7 +15,7 @@ const URL_UNPUBLISHED = new URL('../../assets/icons/unpublished.svg', import.met
  */
 export const initUnpublishedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UNPUBLISHED }, ...properties);
+    initIcon(element, { additionalClassName: 'unpublishedIcon', url: URL_UNPUBLISHED }, ...properties);
 }
 
 /**

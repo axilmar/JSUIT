@@ -15,7 +15,7 @@ const URL_PHONEMISSED = new URL('../../assets/icons/phoneMissed.svg', import.met
  */
 export const initPhoneMissedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONEMISSED }, ...properties);
+    initIcon(element, { additionalClassName: 'phoneMissedIcon', url: URL_PHONEMISSED }, ...properties);
 }
 
 /**

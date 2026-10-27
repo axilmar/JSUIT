@@ -15,7 +15,7 @@ const URL_DINING = new URL('../../assets/icons/dining.svg', import.meta.url).hre
  */
 export const initDiningIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DINING }, ...properties);
+    initIcon(element, { additionalClassName: 'diningIcon', url: URL_DINING }, ...properties);
 }
 
 /**

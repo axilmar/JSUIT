@@ -15,7 +15,7 @@ const URL_VIEWCOMPACTALTOUTLINED = new URL('../../assets/icons/viewCompactAltOut
  */
 export const initViewCompactAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWCOMPACTALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewCompactAltOutlinedIcon', url: URL_VIEWCOMPACTALTOUTLINED }, ...properties);
 }
 
 /**

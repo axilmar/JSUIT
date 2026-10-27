@@ -15,7 +15,7 @@ const URL_PROPANEOUTLINED = new URL('../../assets/icons/propaneOutlined.svg', im
  */
 export const initPropaneOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PROPANEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'propaneOutlinedIcon', url: URL_PROPANEOUTLINED }, ...properties);
 }
 
 /**

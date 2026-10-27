@@ -15,7 +15,7 @@ const URL_SYNC = new URL('../../assets/icons/sync.svg', import.meta.url).href;
  */
 export const initSyncIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SYNC }, ...properties);
+    initIcon(element, { additionalClassName: 'syncIcon', url: URL_SYNC }, ...properties);
 }
 
 /**

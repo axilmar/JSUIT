@@ -15,7 +15,7 @@ const URL_LAN = new URL('../../assets/icons/lan.svg', import.meta.url).href;
  */
 export const initLanIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LAN }, ...properties);
+    initIcon(element, { additionalClassName: 'lanIcon', url: URL_LAN }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DIVERSITY3OUTLINED = new URL('../../assets/icons/diversity3Outlined.sv
  */
 export const initDiversity3OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIVERSITY3OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'diversity3OutlinedIcon', url: URL_DIVERSITY3OUTLINED }, ...properties);
 }
 
 /**

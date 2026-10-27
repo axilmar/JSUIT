@@ -15,7 +15,7 @@ const URL_REMOVEMODERATOR = new URL('../../assets/icons/removeModerator.svg', im
  */
 export const initRemoveModeratorIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REMOVEMODERATOR }, ...properties);
+    initIcon(element, { additionalClassName: 'removeModeratorIcon', url: URL_REMOVEMODERATOR }, ...properties);
 }
 
 /**

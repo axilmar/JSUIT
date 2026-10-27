@@ -15,7 +15,7 @@ const URL_DOORBELLOUTLINED = new URL('../../assets/icons/doorbellOutlined.svg', 
  */
 export const initDoorbellOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOORBELLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'doorbellOutlinedIcon', url: URL_DOORBELLOUTLINED }, ...properties);
 }
 
 /**

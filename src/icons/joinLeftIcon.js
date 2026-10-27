@@ -15,7 +15,7 @@ const URL_JOINLEFT = new URL('../../assets/icons/joinLeft.svg', import.meta.url)
  */
 export const initJoinLeftIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_JOINLEFT }, ...properties);
+    initIcon(element, { additionalClassName: 'joinLeftIcon', url: URL_JOINLEFT }, ...properties);
 }
 
 /**

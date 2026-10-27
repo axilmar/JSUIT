@@ -15,7 +15,7 @@ const URL_SORTBYALPHA = new URL('../../assets/icons/sortByAlpha.svg', import.met
  */
 export const initSortByAlphaIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SORTBYALPHA }, ...properties);
+    initIcon(element, { additionalClassName: 'sortByAlphaIcon', url: URL_SORTBYALPHA }, ...properties);
 }
 
 /**

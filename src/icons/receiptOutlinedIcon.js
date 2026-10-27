@@ -15,7 +15,7 @@ const URL_RECEIPTOUTLINED = new URL('../../assets/icons/receiptOutlined.svg', im
  */
 export const initReceiptOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RECEIPTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'receiptOutlinedIcon', url: URL_RECEIPTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_BRUSHOUTLINED = new URL('../../assets/icons/brushOutlined.svg', import
  */
 export const initBrushOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BRUSHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'brushOutlinedIcon', url: URL_BRUSHOUTLINED }, ...properties);
 }
 
 /**

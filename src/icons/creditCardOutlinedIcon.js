@@ -15,7 +15,7 @@ const URL_CREDITCARDOUTLINED = new URL('../../assets/icons/creditCardOutlined.sv
  */
 export const initCreditCardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CREDITCARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'creditCardOutlinedIcon', url: URL_CREDITCARDOUTLINED }, ...properties);
 }
 
 /**

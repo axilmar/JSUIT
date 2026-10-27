@@ -15,7 +15,7 @@ const URL_WIFIFIND = new URL('../../assets/icons/wifiFind.svg', import.meta.url)
  */
 export const initWifiFindIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIFIFIND }, ...properties);
+    initIcon(element, { additionalClassName: 'wifiFindIcon', url: URL_WIFIFIND }, ...properties);
 }
 
 /**

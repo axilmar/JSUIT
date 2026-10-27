@@ -15,7 +15,7 @@ const URL_AUTODELETE = new URL('../../assets/icons/autoDelete.svg', import.meta.
  */
 export const initAutoDeleteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTODELETE }, ...properties);
+    initIcon(element, { additionalClassName: 'autoDeleteIcon', url: URL_AUTODELETE }, ...properties);
 }
 
 /**

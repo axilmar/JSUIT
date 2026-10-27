@@ -15,7 +15,7 @@ const URL_CARCRASHOUTLINED = new URL('../../assets/icons/carCrashOutlined.svg', 
  */
 export const initCarCrashOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CARCRASHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'carCrashOutlinedIcon', url: URL_CARCRASHOUTLINED }, ...properties);
 }
 
 /**

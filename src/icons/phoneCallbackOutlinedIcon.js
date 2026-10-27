@@ -15,7 +15,7 @@ const URL_PHONECALLBACKOUTLINED = new URL('../../assets/icons/phoneCallbackOutli
  */
 export const initPhoneCallbackOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONECALLBACKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'phoneCallbackOutlinedIcon', url: URL_PHONECALLBACKOUTLINED }, ...properties);
 }
 
 /**

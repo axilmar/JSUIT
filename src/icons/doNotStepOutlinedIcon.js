@@ -15,7 +15,7 @@ const URL_DONOTSTEPOUTLINED = new URL('../../assets/icons/doNotStepOutlined.svg'
  */
 export const initDoNotStepOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DONOTSTEPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'doNotStepOutlinedIcon', url: URL_DONOTSTEPOUTLINED }, ...properties);
 }
 
 /**

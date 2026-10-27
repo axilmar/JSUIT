@@ -15,7 +15,7 @@ const URL_CLEARALLOUTLINED = new URL('../../assets/icons/clearAllOutlined.svg', 
  */
 export const initClearAllOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLEARALLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'clearAllOutlinedIcon', url: URL_CLEARALLOUTLINED }, ...properties);
 }
 
 /**

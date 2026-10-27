@@ -15,7 +15,7 @@ const URL_RSSFEED = new URL('../../assets/icons/rssFeed.svg', import.meta.url).h
  */
 export const initRssFeedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RSSFEED }, ...properties);
+    initIcon(element, { additionalClassName: 'rssFeedIcon', url: URL_RSSFEED }, ...properties);
 }
 
 /**

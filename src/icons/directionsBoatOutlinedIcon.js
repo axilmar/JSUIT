@@ -15,7 +15,7 @@ const URL_DIRECTIONSBOATOUTLINED = new URL('../../assets/icons/directionsBoatOut
  */
 export const initDirectionsBoatOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRECTIONSBOATOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'directionsBoatOutlinedIcon', url: URL_DIRECTIONSBOATOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LOCALCARWASHOUTLINED = new URL('../../assets/icons/localCarWashOutline
  */
 export const initLocalCarWashOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALCARWASHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localCarWashOutlinedIcon', url: URL_LOCALCARWASHOUTLINED }, ...properties);
 }
 
 /**

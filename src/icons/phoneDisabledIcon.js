@@ -15,7 +15,7 @@ const URL_PHONEDISABLED = new URL('../../assets/icons/phoneDisabled.svg', import
  */
 export const initPhoneDisabledIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONEDISABLED }, ...properties);
+    initIcon(element, { additionalClassName: 'phoneDisabledIcon', url: URL_PHONEDISABLED }, ...properties);
 }
 
 /**

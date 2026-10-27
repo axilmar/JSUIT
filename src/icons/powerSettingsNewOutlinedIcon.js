@@ -15,7 +15,7 @@ const URL_POWERSETTINGSNEWOUTLINED = new URL('../../assets/icons/powerSettingsNe
  */
 export const initPowerSettingsNewOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POWERSETTINGSNEWOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'powerSettingsNewOutlinedIcon', url: URL_POWERSETTINGSNEWOUTLINED }, ...properties);
 }
 
 /**

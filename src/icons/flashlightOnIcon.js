@@ -15,7 +15,7 @@ const URL_FLASHLIGHTON = new URL('../../assets/icons/flashlightOn.svg', import.m
  */
 export const initFlashlightOnIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLASHLIGHTON }, ...properties);
+    initIcon(element, { additionalClassName: 'flashlightOnIcon', url: URL_FLASHLIGHTON }, ...properties);
 }
 
 /**

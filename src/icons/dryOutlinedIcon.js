@@ -15,7 +15,7 @@ const URL_DRYOUTLINED = new URL('../../assets/icons/dryOutlined.svg', import.met
  */
 export const initDryOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dryOutlinedIcon', url: URL_DRYOUTLINED }, ...properties);
 }
 
 /**

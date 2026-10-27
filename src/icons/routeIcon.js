@@ -15,7 +15,7 @@ const URL_ROUTE = new URL('../../assets/icons/route.svg', import.meta.url).href;
  */
 export const initRouteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROUTE }, ...properties);
+    initIcon(element, { additionalClassName: 'routeIcon', url: URL_ROUTE }, ...properties);
 }
 
 /**

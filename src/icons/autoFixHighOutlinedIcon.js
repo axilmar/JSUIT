@@ -15,7 +15,7 @@ const URL_AUTOFIXHIGHOUTLINED = new URL('../../assets/icons/autoFixHighOutlined.
  */
 export const initAutoFixHighOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOFIXHIGHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'autoFixHighOutlinedIcon', url: URL_AUTOFIXHIGHOUTLINED }, ...properties);
 }
 
 /**

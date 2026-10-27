@@ -15,7 +15,7 @@ const URL_ELECTRICBOLTOUTLINED = new URL('../../assets/icons/electricBoltOutline
  */
 export const initElectricBoltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ELECTRICBOLTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'electricBoltOutlinedIcon', url: URL_ELECTRICBOLTOUTLINED }, ...properties);
 }
 
 /**

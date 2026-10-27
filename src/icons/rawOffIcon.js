@@ -15,7 +15,7 @@ const URL_RAWOFF = new URL('../../assets/icons/rawOff.svg', import.meta.url).hre
  */
 export const initRawOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RAWOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'rawOffIcon', url: URL_RAWOFF }, ...properties);
 }
 
 /**

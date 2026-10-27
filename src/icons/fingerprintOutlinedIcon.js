@@ -15,7 +15,7 @@ const URL_FINGERPRINTOUTLINED = new URL('../../assets/icons/fingerprintOutlined.
  */
 export const initFingerprintOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FINGERPRINTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fingerprintOutlinedIcon', url: URL_FINGERPRINTOUTLINED }, ...properties);
 }
 
 /**

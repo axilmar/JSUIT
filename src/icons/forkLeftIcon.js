@@ -15,7 +15,7 @@ const URL_FORKLEFT = new URL('../../assets/icons/forkLeft.svg', import.meta.url)
  */
 export const initForkLeftIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORKLEFT }, ...properties);
+    initIcon(element, { additionalClassName: 'forkLeftIcon', url: URL_FORKLEFT }, ...properties);
 }
 
 /**

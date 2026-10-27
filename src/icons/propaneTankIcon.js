@@ -15,7 +15,7 @@ const URL_PROPANETANK = new URL('../../assets/icons/propaneTank.svg', import.met
  */
 export const initPropaneTankIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PROPANETANK }, ...properties);
+    initIcon(element, { additionalClassName: 'propaneTankIcon', url: URL_PROPANETANK }, ...properties);
 }
 
 /**

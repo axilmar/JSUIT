@@ -15,7 +15,7 @@ const URL_BOOK = new URL('../../assets/icons/book.svg', import.meta.url).href;
  */
 export const initBookIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BOOK }, ...properties);
+    initIcon(element, { additionalClassName: 'bookIcon', url: URL_BOOK }, ...properties);
 }
 
 /**

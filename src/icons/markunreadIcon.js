@@ -15,7 +15,7 @@ const URL_MARKUNREAD = new URL('../../assets/icons/markunread.svg', import.meta.
  */
 export const initMarkunreadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MARKUNREAD }, ...properties);
+    initIcon(element, { additionalClassName: 'markunreadIcon', url: URL_MARKUNREAD }, ...properties);
 }
 
 /**

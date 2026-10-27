@@ -15,7 +15,7 @@ const URL_MAPSHOMEWORKOUTLINED = new URL('../../assets/icons/mapsHomeWorkOutline
  */
 export const initMapsHomeWorkOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MAPSHOMEWORKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'mapsHomeWorkOutlinedIcon', url: URL_MAPSHOMEWORKOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SOURCE = new URL('../../assets/icons/source.svg', import.meta.url).hre
  */
 export const initSourceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SOURCE }, ...properties);
+    initIcon(element, { additionalClassName: 'sourceIcon', url: URL_SOURCE }, ...properties);
 }
 
 /**

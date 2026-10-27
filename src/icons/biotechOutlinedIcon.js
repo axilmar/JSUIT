@@ -15,7 +15,7 @@ const URL_BIOTECHOUTLINED = new URL('../../assets/icons/biotechOutlined.svg', im
  */
 export const initBiotechOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BIOTECHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'biotechOutlinedIcon', url: URL_BIOTECHOUTLINED }, ...properties);
 }
 
 /**

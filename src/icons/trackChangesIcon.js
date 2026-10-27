@@ -15,7 +15,7 @@ const URL_TRACKCHANGES = new URL('../../assets/icons/trackChanges.svg', import.m
  */
 export const initTrackChangesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRACKCHANGES }, ...properties);
+    initIcon(element, { additionalClassName: 'trackChangesIcon', url: URL_TRACKCHANGES }, ...properties);
 }
 
 /**

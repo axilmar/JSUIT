@@ -15,7 +15,7 @@ const BULLET_URL = new URL('../../assets/icons/bullet.svg', import.meta.url).hre
  */
 export const initBulletIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: BULLET_URL }, ...properties);
+    initIcon(element, { additionalClassName: 'bulletIcon', url: BULLET_URL }, ...properties);
 }
 
 /**

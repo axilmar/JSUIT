@@ -15,7 +15,7 @@ const URL_PICTUREINPICTUREALTOUTLINED = new URL('../../assets/icons/pictureInPic
  */
 export const initPictureInPictureAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PICTUREINPICTUREALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pictureInPictureAltOutlinedIcon', url: URL_PICTUREINPICTUREALTOUTLINED }, ...properties);
 }
 
 /**

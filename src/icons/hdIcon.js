@@ -15,7 +15,7 @@ const URL_HD = new URL('../../assets/icons/hd.svg', import.meta.url).href;
  */
 export const initHdIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HD }, ...properties);
+    initIcon(element, { additionalClassName: 'hdIcon', url: URL_HD }, ...properties);
 }
 
 /**

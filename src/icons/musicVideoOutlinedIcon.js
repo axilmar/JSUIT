@@ -15,7 +15,7 @@ const URL_MUSICVIDEOOUTLINED = new URL('../../assets/icons/musicVideoOutlined.sv
  */
 export const initMusicVideoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MUSICVIDEOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'musicVideoOutlinedIcon', url: URL_MUSICVIDEOOUTLINED }, ...properties);
 }
 
 /**

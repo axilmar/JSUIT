@@ -15,7 +15,7 @@ const URL_SAILING = new URL('../../assets/icons/sailing.svg', import.meta.url).h
  */
 export const initSailingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SAILING }, ...properties);
+    initIcon(element, { additionalClassName: 'sailingIcon', url: URL_SAILING }, ...properties);
 }
 
 /**

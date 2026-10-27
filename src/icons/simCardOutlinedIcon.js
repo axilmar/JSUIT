@@ -15,7 +15,7 @@ const URL_SIMCARDOUTLINED = new URL('../../assets/icons/simCardOutlined.svg', im
  */
 export const initSimCardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIMCARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'simCardOutlinedIcon', url: URL_SIMCARDOUTLINED }, ...properties);
 }
 
 /**

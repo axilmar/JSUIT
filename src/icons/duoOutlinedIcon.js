@@ -15,7 +15,7 @@ const URL_DUOOUTLINED = new URL('../../assets/icons/duoOutlined.svg', import.met
  */
 export const initDuoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DUOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'duoOutlinedIcon', url: URL_DUOOUTLINED }, ...properties);
 }
 
 /**

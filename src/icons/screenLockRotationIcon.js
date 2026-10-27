@@ -15,7 +15,7 @@ const URL_SCREENLOCKROTATION = new URL('../../assets/icons/screenLockRotation.sv
  */
 export const initScreenLockRotationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCREENLOCKROTATION }, ...properties);
+    initIcon(element, { additionalClassName: 'screenLockRotationIcon', url: URL_SCREENLOCKROTATION }, ...properties);
 }
 
 /**

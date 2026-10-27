@@ -15,7 +15,7 @@ const URL_TERMINALOUTLINED = new URL('../../assets/icons/terminalOutlined.svg', 
  */
 export const initTerminalOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TERMINALOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'terminalOutlinedIcon', url: URL_TERMINALOUTLINED }, ...properties);
 }
 
 /**

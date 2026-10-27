@@ -15,7 +15,7 @@ const URL_SETTINGSINPUTANTENNA = new URL('../../assets/icons/settingsInputAntenn
  */
 export const initSettingsInputAntennaIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSINPUTANTENNA }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsInputAntennaIcon', url: URL_SETTINGSINPUTANTENNA }, ...properties);
 }
 
 /**

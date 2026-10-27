@@ -15,7 +15,7 @@ const URL_TRANSITENTEREXIT = new URL('../../assets/icons/transitEnterexit.svg', 
  */
 export const initTransitEnterexitIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRANSITENTEREXIT }, ...properties);
+    initIcon(element, { additionalClassName: 'transitEnterexitIcon', url: URL_TRANSITENTEREXIT }, ...properties);
 }
 
 /**

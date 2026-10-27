@@ -15,7 +15,7 @@ const URL_EVENTBUSYOUTLINED = new URL('../../assets/icons/eventBusyOutlined.svg'
  */
 export const initEventBusyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EVENTBUSYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'eventBusyOutlinedIcon', url: URL_EVENTBUSYOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SURFING = new URL('../../assets/icons/surfing.svg', import.meta.url).h
  */
 export const initSurfingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SURFING }, ...properties);
+    initIcon(element, { additionalClassName: 'surfingIcon', url: URL_SURFING }, ...properties);
 }
 
 /**

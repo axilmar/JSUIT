@@ -15,7 +15,7 @@ const URL_VIDEOCHAT = new URL('../../assets/icons/videoChat.svg', import.meta.ur
  */
 export const initVideoChatIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOCHAT }, ...properties);
+    initIcon(element, { additionalClassName: 'videoChatIcon', url: URL_VIDEOCHAT }, ...properties);
 }
 
 /**

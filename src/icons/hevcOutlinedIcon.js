@@ -15,7 +15,7 @@ const URL_HEVCOUTLINED = new URL('../../assets/icons/hevcOutlined.svg', import.m
  */
 export const initHevcOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEVCOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hevcOutlinedIcon', url: URL_HEVCOUTLINED }, ...properties);
 }
 
 /**

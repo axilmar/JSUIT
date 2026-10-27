@@ -15,7 +15,7 @@ const URL_VERTICALSHADES = new URL('../../assets/icons/verticalShades.svg', impo
  */
 export const initVerticalShadesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VERTICALSHADES }, ...properties);
+    initIcon(element, { additionalClassName: 'verticalShadesIcon', url: URL_VERTICALSHADES }, ...properties);
 }
 
 /**

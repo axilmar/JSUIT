@@ -15,7 +15,7 @@ const URL_LIVINGOUTLINED = new URL('../../assets/icons/livingOutlined.svg', impo
  */
 export const initLivingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIVINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'livingOutlinedIcon', url: URL_LIVINGOUTLINED }, ...properties);
 }
 
 /**

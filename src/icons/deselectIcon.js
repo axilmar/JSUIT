@@ -15,7 +15,7 @@ const URL_DESELECT = new URL('../../assets/icons/deselect.svg', import.meta.url)
  */
 export const initDeselectIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DESELECT }, ...properties);
+    initIcon(element, { additionalClassName: 'deselectIcon', url: URL_DESELECT }, ...properties);
 }
 
 /**

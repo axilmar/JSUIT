@@ -15,7 +15,7 @@ const URL_RECYCLINGOUTLINED = new URL('../../assets/icons/recyclingOutlined.svg'
  */
 export const initRecyclingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RECYCLINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'recyclingOutlinedIcon', url: URL_RECYCLINGOUTLINED }, ...properties);
 }
 
 /**

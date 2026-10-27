@@ -15,7 +15,7 @@ const URL_DOCUMENTSCANNER = new URL('../../assets/icons/documentScanner.svg', im
  */
 export const initDocumentScannerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOCUMENTSCANNER }, ...properties);
+    initIcon(element, { additionalClassName: 'documentScannerIcon', url: URL_DOCUMENTSCANNER }, ...properties);
 }
 
 /**

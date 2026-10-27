@@ -15,7 +15,7 @@ const URL_VIEWCOZY = new URL('../../assets/icons/viewCozy.svg', import.meta.url)
  */
 export const initViewCozyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWCOZY }, ...properties);
+    initIcon(element, { additionalClassName: 'viewCozyIcon', url: URL_VIEWCOZY }, ...properties);
 }
 
 /**

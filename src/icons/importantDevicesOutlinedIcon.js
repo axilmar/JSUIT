@@ -15,7 +15,7 @@ const URL_IMPORTANTDEVICESOUTLINED = new URL('../../assets/icons/importantDevice
  */
 export const initImportantDevicesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_IMPORTANTDEVICESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'importantDevicesOutlinedIcon', url: URL_IMPORTANTDEVICESOUTLINED }, ...properties);
 }
 
 /**

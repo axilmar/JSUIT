@@ -15,7 +15,7 @@ const URL_FORMATALIGNJUSTIFY = new URL('../../assets/icons/formatAlignJustify.sv
  */
 export const initFormatAlignJustifyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATALIGNJUSTIFY }, ...properties);
+    initIcon(element, { additionalClassName: 'formatAlignJustifyIcon', url: URL_FORMATALIGNJUSTIFY }, ...properties);
 }
 
 /**

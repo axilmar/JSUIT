@@ -15,7 +15,7 @@ const URL_CONTENTPASTEGO = new URL('../../assets/icons/contentPasteGo.svg', impo
  */
 export const initContentPasteGoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTENTPASTEGO }, ...properties);
+    initIcon(element, { additionalClassName: 'contentPasteGoIcon', url: URL_CONTENTPASTEGO }, ...properties);
 }
 
 /**

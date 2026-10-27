@@ -15,7 +15,7 @@ const URL_INPUT = new URL('../../assets/icons/input.svg', import.meta.url).href;
  */
 export const initInputIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INPUT }, ...properties);
+    initIcon(element, { additionalClassName: 'inputIcon', url: URL_INPUT }, ...properties);
 }
 
 /**

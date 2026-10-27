@@ -15,7 +15,7 @@ const URL_VIEWWEEK = new URL('../../assets/icons/viewWeek.svg', import.meta.url)
  */
 export const initViewWeekIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWWEEK }, ...properties);
+    initIcon(element, { additionalClassName: 'viewWeekIcon', url: URL_VIEWWEEK }, ...properties);
 }
 
 /**

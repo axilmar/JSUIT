@@ -15,7 +15,7 @@ const URL_COLORLENSOUTLINED = new URL('../../assets/icons/colorLensOutlined.svg'
  */
 export const initColorLensOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COLORLENSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'colorLensOutlinedIcon', url: URL_COLORLENSOUTLINED }, ...properties);
 }
 
 /**

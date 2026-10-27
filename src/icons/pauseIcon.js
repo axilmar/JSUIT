@@ -15,7 +15,7 @@ const URL_PAUSE = new URL('../../assets/icons/pause.svg', import.meta.url).href;
  */
 export const initPauseIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PAUSE }, ...properties);
+    initIcon(element, { additionalClassName: 'pauseIcon', url: URL_PAUSE }, ...properties);
 }
 
 /**

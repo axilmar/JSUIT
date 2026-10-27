@@ -15,7 +15,7 @@ const URL_FACERETOUCHINGNATURALOUTLINED = new URL('../../assets/icons/faceRetouc
  */
 export const initFaceRetouchingNaturalOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FACERETOUCHINGNATURALOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'faceRetouchingNaturalOutlinedIcon', url: URL_FACERETOUCHINGNATURALOUTLINED }, ...properties);
 }
 
 /**

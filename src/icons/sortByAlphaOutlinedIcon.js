@@ -15,7 +15,7 @@ const URL_SORTBYALPHAOUTLINED = new URL('../../assets/icons/sortByAlphaOutlined.
  */
 export const initSortByAlphaOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SORTBYALPHAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sortByAlphaOutlinedIcon', url: URL_SORTBYALPHAOUTLINED }, ...properties);
 }
 
 /**

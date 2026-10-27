@@ -15,7 +15,7 @@ const URL_BATHTUB = new URL('../../assets/icons/bathtub.svg', import.meta.url).h
  */
 export const initBathtubIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BATHTUB }, ...properties);
+    initIcon(element, { additionalClassName: 'bathtubIcon', url: URL_BATHTUB }, ...properties);
 }
 
 /**

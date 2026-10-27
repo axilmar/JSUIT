@@ -15,7 +15,7 @@ const URL_VIEWWEEKOUTLINED = new URL('../../assets/icons/viewWeekOutlined.svg', 
  */
 export const initViewWeekOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWWEEKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'viewWeekOutlinedIcon', url: URL_VIEWWEEKOUTLINED }, ...properties);
 }
 
 /**

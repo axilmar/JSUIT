@@ -15,7 +15,7 @@ const URL_JOININNER = new URL('../../assets/icons/joinInner.svg', import.meta.ur
  */
 export const initJoinInnerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_JOININNER }, ...properties);
+    initIcon(element, { additionalClassName: 'joinInnerIcon', url: URL_JOININNER }, ...properties);
 }
 
 /**

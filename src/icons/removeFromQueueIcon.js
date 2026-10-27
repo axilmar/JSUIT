@@ -15,7 +15,7 @@ const URL_REMOVEFROMQUEUE = new URL('../../assets/icons/removeFromQueue.svg', im
  */
 export const initRemoveFromQueueIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REMOVEFROMQUEUE }, ...properties);
+    initIcon(element, { additionalClassName: 'removeFromQueueIcon', url: URL_REMOVEFROMQUEUE }, ...properties);
 }
 
 /**

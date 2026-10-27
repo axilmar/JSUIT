@@ -15,7 +15,7 @@ const URL_NETWORKCELLOUTLINED = new URL('../../assets/icons/networkCellOutlined.
  */
 export const initNetworkCellOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NETWORKCELLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'networkCellOutlinedIcon', url: URL_NETWORKCELLOUTLINED }, ...properties);
 }
 
 /**

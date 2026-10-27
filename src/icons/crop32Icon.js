@@ -15,7 +15,7 @@ const URL_CROP32 = new URL('../../assets/icons/crop32.svg', import.meta.url).hre
  */
 export const initCrop32Icon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CROP32 }, ...properties);
+    initIcon(element, { additionalClassName: 'crop32Icon', url: URL_CROP32 }, ...properties);
 }
 
 /**

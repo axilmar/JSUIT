@@ -15,7 +15,7 @@ const URL_FORMATCLEAROUTLINED = new URL('../../assets/icons/formatClearOutlined.
  */
 export const initFormatClearOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATCLEAROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatClearOutlinedIcon', url: URL_FORMATCLEAROUTLINED }, ...properties);
 }
 
 /**

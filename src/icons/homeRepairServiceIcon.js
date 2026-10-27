@@ -15,7 +15,7 @@ const URL_HOMEREPAIRSERVICE = new URL('../../assets/icons/homeRepairService.svg'
  */
 export const initHomeRepairServiceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOMEREPAIRSERVICE }, ...properties);
+    initIcon(element, { additionalClassName: 'homeRepairServiceIcon', url: URL_HOMEREPAIRSERVICE }, ...properties);
 }
 
 /**

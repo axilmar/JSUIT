@@ -15,7 +15,7 @@ const URL_EXPANDLESS = new URL('../../assets/icons/expandLess.svg', import.meta.
  */
 export const initExpandLessIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXPANDLESS }, ...properties);
+    initIcon(element, { additionalClassName: 'expandLessIcon', url: URL_EXPANDLESS }, ...properties);
 }
 
 /**

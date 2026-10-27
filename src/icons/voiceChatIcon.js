@@ -15,7 +15,7 @@ const URL_VOICECHAT = new URL('../../assets/icons/voiceChat.svg', import.meta.ur
  */
 export const initVoiceChatIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VOICECHAT }, ...properties);
+    initIcon(element, { additionalClassName: 'voiceChatIcon', url: URL_VOICECHAT }, ...properties);
 }
 
 /**

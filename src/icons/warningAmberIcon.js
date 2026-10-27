@@ -15,7 +15,7 @@ const URL_WARNINGAMBER = new URL('../../assets/icons/warningAmber.svg', import.m
  */
 export const initWarningAmberIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WARNINGAMBER }, ...properties);
+    initIcon(element, { additionalClassName: 'warningAmberIcon', url: URL_WARNINGAMBER }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_MODEOFTRAVEL = new URL('../../assets/icons/modeOfTravel.svg', import.m
  */
 export const initModeOfTravelIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MODEOFTRAVEL }, ...properties);
+    initIcon(element, { additionalClassName: 'modeOfTravelIcon', url: URL_MODEOFTRAVEL }, ...properties);
 }
 
 /**

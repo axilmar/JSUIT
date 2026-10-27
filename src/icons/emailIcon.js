@@ -15,7 +15,7 @@ const URL_EMAIL = new URL('../../assets/icons/email.svg', import.meta.url).href;
  */
 export const initEmailIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EMAIL }, ...properties);
+    initIcon(element, { additionalClassName: 'emailIcon', url: URL_EMAIL }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ARROWDROPDOWN = new URL('../../assets/icons/arrowDropDown.svg', import
  */
 export const initArrowDropDownIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARROWDROPDOWN }, ...properties);
+    initIcon(element, { additionalClassName: 'arrowDropDownIcon', url: URL_ARROWDROPDOWN }, ...properties);
 }
 
 /**

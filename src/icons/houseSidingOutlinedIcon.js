@@ -15,7 +15,7 @@ const URL_HOUSESIDINGOUTLINED = new URL('../../assets/icons/houseSidingOutlined.
  */
 export const initHouseSidingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOUSESIDINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'houseSidingOutlinedIcon', url: URL_HOUSESIDINGOUTLINED }, ...properties);
 }
 
 /**

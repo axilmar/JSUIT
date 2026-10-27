@@ -15,7 +15,7 @@ const URL_CONTACTMAILOUTLINED = new URL('../../assets/icons/contactMailOutlined.
  */
 export const initContactMailOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTACTMAILOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'contactMailOutlinedIcon', url: URL_CONTACTMAILOUTLINED }, ...properties);
 }
 
 /**

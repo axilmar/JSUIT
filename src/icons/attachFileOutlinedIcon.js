@@ -15,7 +15,7 @@ const URL_ATTACHFILEOUTLINED = new URL('../../assets/icons/attachFileOutlined.sv
  */
 export const initAttachFileOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ATTACHFILEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'attachFileOutlinedIcon', url: URL_ATTACHFILEOUTLINED }, ...properties);
 }
 
 /**

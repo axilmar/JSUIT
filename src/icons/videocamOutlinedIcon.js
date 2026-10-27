@@ -15,7 +15,7 @@ const URL_VIDEOCAMOUTLINED = new URL('../../assets/icons/videocamOutlined.svg', 
  */
 export const initVideocamOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOCAMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'videocamOutlinedIcon', url: URL_VIDEOCAMOUTLINED }, ...properties);
 }
 
 /**

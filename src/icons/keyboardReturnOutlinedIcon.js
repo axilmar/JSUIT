@@ -15,7 +15,7 @@ const URL_KEYBOARDRETURNOUTLINED = new URL('../../assets/icons/keyboardReturnOut
  */
 export const initKeyboardReturnOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDRETURNOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardReturnOutlinedIcon', url: URL_KEYBOARDRETURNOUTLINED }, ...properties);
 }
 
 /**

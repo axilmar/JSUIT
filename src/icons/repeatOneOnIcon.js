@@ -15,7 +15,7 @@ const URL_REPEATONEON = new URL('../../assets/icons/repeatOneOn.svg', import.met
  */
 export const initRepeatOneOnIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REPEATONEON }, ...properties);
+    initIcon(element, { additionalClassName: 'repeatOneOnIcon', url: URL_REPEATONEON }, ...properties);
 }
 
 /**

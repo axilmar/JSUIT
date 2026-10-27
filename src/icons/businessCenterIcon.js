@@ -15,7 +15,7 @@ const URL_BUSINESSCENTER = new URL('../../assets/icons/businessCenter.svg', impo
  */
 export const initBusinessCenterIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BUSINESSCENTER }, ...properties);
+    initIcon(element, { additionalClassName: 'businessCenterIcon', url: URL_BUSINESSCENTER }, ...properties);
 }
 
 /**

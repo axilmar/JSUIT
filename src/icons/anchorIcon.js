@@ -15,7 +15,7 @@ const URL_ANCHOR = new URL('../../assets/icons/anchor.svg', import.meta.url).hre
  */
 export const initAnchorIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ANCHOR }, ...properties);
+    initIcon(element, { additionalClassName: 'anchorIcon', url: URL_ANCHOR }, ...properties);
 }
 
 /**

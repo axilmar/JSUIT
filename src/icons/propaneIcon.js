@@ -15,7 +15,7 @@ const URL_PROPANE = new URL('../../assets/icons/propane.svg', import.meta.url).h
  */
 export const initPropaneIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PROPANE }, ...properties);
+    initIcon(element, { additionalClassName: 'propaneIcon', url: URL_PROPANE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LOCALMALL = new URL('../../assets/icons/localMall.svg', import.meta.ur
  */
 export const initLocalMallIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALMALL }, ...properties);
+    initIcon(element, { additionalClassName: 'localMallIcon', url: URL_LOCALMALL }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ACCOUNTBALANCE = new URL('../../assets/icons/accountBalance.svg', impo
  */
 export const initAccountBalanceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACCOUNTBALANCE }, ...properties);
+    initIcon(element, { additionalClassName: 'accountBalanceIcon', url: URL_ACCOUNTBALANCE }, ...properties);
 }
 
 /**

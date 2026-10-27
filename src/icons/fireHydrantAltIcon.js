@@ -15,7 +15,7 @@ const URL_FIREHYDRANTALT = new URL('../../assets/icons/fireHydrantAlt.svg', impo
  */
 export const initFireHydrantAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIREHYDRANTALT }, ...properties);
+    initIcon(element, { additionalClassName: 'fireHydrantAltIcon', url: URL_FIREHYDRANTALT }, ...properties);
 }
 
 /**

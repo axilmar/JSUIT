@@ -15,7 +15,7 @@ const URL_DENSITYSMALL = new URL('../../assets/icons/densitySmall.svg', import.m
  */
 export const initDensitySmallIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DENSITYSMALL }, ...properties);
+    initIcon(element, { additionalClassName: 'densitySmallIcon', url: URL_DENSITYSMALL }, ...properties);
 }
 
 /**

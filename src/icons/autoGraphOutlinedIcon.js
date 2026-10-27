@@ -15,7 +15,7 @@ const URL_AUTOGRAPHOUTLINED = new URL('../../assets/icons/autoGraphOutlined.svg'
  */
 export const initAutoGraphOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOGRAPHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'autoGraphOutlinedIcon', url: URL_AUTOGRAPHOUTLINED }, ...properties);
 }
 
 /**

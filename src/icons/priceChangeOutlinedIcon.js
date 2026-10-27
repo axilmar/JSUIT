@@ -15,7 +15,7 @@ const URL_PRICECHANGEOUTLINED = new URL('../../assets/icons/priceChangeOutlined.
  */
 export const initPriceChangeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PRICECHANGEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'priceChangeOutlinedIcon', url: URL_PRICECHANGEOUTLINED }, ...properties);
 }
 
 /**

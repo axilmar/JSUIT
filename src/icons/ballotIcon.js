@@ -15,7 +15,7 @@ const URL_BALLOT = new URL('../../assets/icons/ballot.svg', import.meta.url).hre
  */
 export const initBallotIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BALLOT }, ...properties);
+    initIcon(element, { additionalClassName: 'ballotIcon', url: URL_BALLOT }, ...properties);
 }
 
 /**

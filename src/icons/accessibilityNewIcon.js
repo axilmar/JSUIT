@@ -15,7 +15,7 @@ const URL_ACCESSIBILITYNEW = new URL('../../assets/icons/accessibilityNew.svg', 
  */
 export const initAccessibilityNewIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACCESSIBILITYNEW }, ...properties);
+    initIcon(element, { additionalClassName: 'accessibilityNewIcon', url: URL_ACCESSIBILITYNEW }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_MACROOFF = new URL('../../assets/icons/macroOff.svg', import.meta.url)
  */
 export const initMacroOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MACROOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'macroOffIcon', url: URL_MACROOFF }, ...properties);
 }
 
 /**

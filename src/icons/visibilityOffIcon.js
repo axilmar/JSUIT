@@ -15,7 +15,7 @@ const URL_VISIBILITYOFF = new URL('../../assets/icons/visibilityOff.svg', import
  */
 export const initVisibilityOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VISIBILITYOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'visibilityOffIcon', url: URL_VISIBILITYOFF }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_IMPORTEXPORT = new URL('../../assets/icons/importExport.svg', import.m
  */
 export const initImportExportIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_IMPORTEXPORT }, ...properties);
+    initIcon(element, { additionalClassName: 'importExportIcon', url: URL_IMPORTEXPORT }, ...properties);
 }
 
 /**

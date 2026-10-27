@@ -15,7 +15,7 @@ const URL_SEVENK = new URL('../../assets/icons/sevenK.svg', import.meta.url).hre
  */
 export const initSevenKIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SEVENK }, ...properties);
+    initIcon(element, { additionalClassName: 'sevenKIcon', url: URL_SEVENK }, ...properties);
 }
 
 /**

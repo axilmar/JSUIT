@@ -15,7 +15,7 @@ const URL_HTTPSOUTLINED = new URL('../../assets/icons/httpsOutlined.svg', import
  */
 export const initHttpsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HTTPSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'httpsOutlinedIcon', url: URL_HTTPSOUTLINED }, ...properties);
 }
 
 /**

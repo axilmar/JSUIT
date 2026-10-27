@@ -15,7 +15,7 @@ const URL_RECENTACTORS = new URL('../../assets/icons/recentActors.svg', import.m
  */
 export const initRecentActorsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RECENTACTORS }, ...properties);
+    initIcon(element, { additionalClassName: 'recentActorsIcon', url: URL_RECENTACTORS }, ...properties);
 }
 
 /**

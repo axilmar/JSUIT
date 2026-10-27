@@ -15,7 +15,7 @@ const URL_PRINTDISABLEDOUTLINED = new URL('../../assets/icons/printDisabledOutli
  */
 export const initPrintDisabledOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PRINTDISABLEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'printDisabledOutlinedIcon', url: URL_PRINTDISABLEDOUTLINED }, ...properties);
 }
 
 /**

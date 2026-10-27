@@ -15,7 +15,7 @@ const URL_ATTACHMENTOUTLINED = new URL('../../assets/icons/attachmentOutlined.sv
  */
 export const initAttachmentOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ATTACHMENTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'attachmentOutlinedIcon', url: URL_ATTACHMENTOUTLINED }, ...properties);
 }
 
 /**

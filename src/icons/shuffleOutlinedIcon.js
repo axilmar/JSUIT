@@ -15,7 +15,7 @@ const URL_SHUFFLEOUTLINED = new URL('../../assets/icons/shuffleOutlined.svg', im
  */
 export const initShuffleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHUFFLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'shuffleOutlinedIcon', url: URL_SHUFFLEOUTLINED }, ...properties);
 }
 
 /**

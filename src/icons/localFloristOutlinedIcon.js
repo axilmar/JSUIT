@@ -15,7 +15,7 @@ const URL_LOCALFLORISTOUTLINED = new URL('../../assets/icons/localFloristOutline
  */
 export const initLocalFloristOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALFLORISTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localFloristOutlinedIcon', url: URL_LOCALFLORISTOUTLINED }, ...properties);
 }
 
 /**

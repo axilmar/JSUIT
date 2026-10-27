@@ -15,7 +15,7 @@ const URL_COLORIZEOUTLINED = new URL('../../assets/icons/colorizeOutlined.svg', 
  */
 export const initColorizeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COLORIZEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'colorizeOutlinedIcon', url: URL_COLORIZEOUTLINED }, ...properties);
 }
 
 /**

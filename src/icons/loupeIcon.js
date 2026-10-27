@@ -15,7 +15,7 @@ const URL_LOUPE = new URL('../../assets/icons/loupe.svg', import.meta.url).href;
  */
 export const initLoupeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOUPE }, ...properties);
+    initIcon(element, { additionalClassName: 'loupeIcon', url: URL_LOUPE }, ...properties);
 }
 
 /**

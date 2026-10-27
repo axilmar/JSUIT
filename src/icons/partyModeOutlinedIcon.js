@@ -15,7 +15,7 @@ const URL_PARTYMODEOUTLINED = new URL('../../assets/icons/partyModeOutlined.svg'
  */
 export const initPartyModeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PARTYMODEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'partyModeOutlinedIcon', url: URL_PARTYMODEOUTLINED }, ...properties);
 }
 
 /**

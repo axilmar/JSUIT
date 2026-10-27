@@ -15,7 +15,7 @@ const URL_PERMCAMERAMICOUTLINED = new URL('../../assets/icons/permCameraMicOutli
  */
 export const initPermCameraMicOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERMCAMERAMICOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'permCameraMicOutlinedIcon', url: URL_PERMCAMERAMICOUTLINED }, ...properties);
 }
 
 /**

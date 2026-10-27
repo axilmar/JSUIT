@@ -15,7 +15,7 @@ const URL_WIFILOCKOUTLINED = new URL('../../assets/icons/wifiLockOutlined.svg', 
  */
 export const initWifiLockOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIFILOCKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wifiLockOutlinedIcon', url: URL_WIFILOCKOUTLINED }, ...properties);
 }
 
 /**

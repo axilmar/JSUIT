@@ -15,7 +15,7 @@ const URL_PARKOUTLINED = new URL('../../assets/icons/parkOutlined.svg', import.m
  */
 export const initParkOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PARKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'parkOutlinedIcon', url: URL_PARKOUTLINED }, ...properties);
 }
 
 /**

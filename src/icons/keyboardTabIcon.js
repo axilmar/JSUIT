@@ -15,7 +15,7 @@ const URL_KEYBOARDTAB = new URL('../../assets/icons/keyboardTab.svg', import.met
  */
 export const initKeyboardTabIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDTAB }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardTabIcon', url: URL_KEYBOARDTAB }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_RULEFOLDEROUTLINED = new URL('../../assets/icons/ruleFolderOutlined.sv
  */
 export const initRuleFolderOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RULEFOLDEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'ruleFolderOutlinedIcon', url: URL_RULEFOLDEROUTLINED }, ...properties);
 }
 
 /**

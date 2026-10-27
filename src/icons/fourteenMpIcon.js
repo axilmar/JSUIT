@@ -15,7 +15,7 @@ const URL_FOURTEENMP = new URL('../../assets/icons/fourteenMp.svg', import.meta.
  */
 export const initFourteenMpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOURTEENMP }, ...properties);
+    initIcon(element, { additionalClassName: 'fourteenMpIcon', url: URL_FOURTEENMP }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SCANNEROUTLINED = new URL('../../assets/icons/scannerOutlined.svg', im
  */
 export const initScannerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCANNEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'scannerOutlinedIcon', url: URL_SCANNEROUTLINED }, ...properties);
 }
 
 /**

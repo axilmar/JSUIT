@@ -15,7 +15,7 @@ const URL_FLAKY = new URL('../../assets/icons/flaky.svg', import.meta.url).href;
  */
 export const initFlakyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLAKY }, ...properties);
+    initIcon(element, { additionalClassName: 'flakyIcon', url: URL_FLAKY }, ...properties);
 }
 
 /**

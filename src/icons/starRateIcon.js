@@ -15,7 +15,7 @@ const URL_STARRATE = new URL('../../assets/icons/starRate.svg', import.meta.url)
  */
 export const initStarRateIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STARRATE }, ...properties);
+    initIcon(element, { additionalClassName: 'starRateIcon', url: URL_STARRATE }, ...properties);
 }
 
 /**

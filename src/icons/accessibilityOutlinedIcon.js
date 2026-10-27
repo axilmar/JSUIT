@@ -15,7 +15,7 @@ const URL_ACCESSIBILITYOUTLINED = new URL('../../assets/icons/accessibilityOutli
  */
 export const initAccessibilityOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACCESSIBILITYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'accessibilityOutlinedIcon', url: URL_ACCESSIBILITYOUTLINED }, ...properties);
 }
 
 /**

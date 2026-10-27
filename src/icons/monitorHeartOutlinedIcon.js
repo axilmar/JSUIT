@@ -15,7 +15,7 @@ const URL_MONITORHEARTOUTLINED = new URL('../../assets/icons/monitorHeartOutline
  */
 export const initMonitorHeartOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MONITORHEARTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'monitorHeartOutlinedIcon', url: URL_MONITORHEARTOUTLINED }, ...properties);
 }
 
 /**

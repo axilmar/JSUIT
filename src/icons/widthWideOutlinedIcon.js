@@ -15,7 +15,7 @@ const URL_WIDTHWIDEOUTLINED = new URL('../../assets/icons/widthWideOutlined.svg'
  */
 export const initWidthWideOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIDTHWIDEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'widthWideOutlinedIcon', url: URL_WIDTHWIDEOUTLINED }, ...properties);
 }
 
 /**

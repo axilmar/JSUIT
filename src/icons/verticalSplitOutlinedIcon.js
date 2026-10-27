@@ -15,7 +15,7 @@ const URL_VERTICALSPLITOUTLINED = new URL('../../assets/icons/verticalSplitOutli
  */
 export const initVerticalSplitOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VERTICALSPLITOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'verticalSplitOutlinedIcon', url: URL_VERTICALSPLITOUTLINED }, ...properties);
 }
 
 /**

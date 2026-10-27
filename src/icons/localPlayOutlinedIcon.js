@@ -15,7 +15,7 @@ const URL_LOCALPLAYOUTLINED = new URL('../../assets/icons/localPlayOutlined.svg'
  */
 export const initLocalPlayOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALPLAYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localPlayOutlinedIcon', url: URL_LOCALPLAYOUTLINED }, ...properties);
 }
 
 /**

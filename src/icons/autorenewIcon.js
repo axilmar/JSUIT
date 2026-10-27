@@ -15,7 +15,7 @@ const URL_AUTORENEW = new URL('../../assets/icons/autorenew.svg', import.meta.ur
  */
 export const initAutorenewIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTORENEW }, ...properties);
+    initIcon(element, { additionalClassName: 'autorenewIcon', url: URL_AUTORENEW }, ...properties);
 }
 
 /**

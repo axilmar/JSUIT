@@ -15,7 +15,7 @@ const URL_FIBERSMARTRECORD = new URL('../../assets/icons/fiberSmartRecord.svg', 
  */
 export const initFiberSmartRecordIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIBERSMARTRECORD }, ...properties);
+    initIcon(element, { additionalClassName: 'fiberSmartRecordIcon', url: URL_FIBERSMARTRECORD }, ...properties);
 }
 
 /**

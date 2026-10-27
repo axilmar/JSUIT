@@ -15,7 +15,7 @@ const URL_AIRLINESEATINDIVIDUALSUITE = new URL('../../assets/icons/airlineSeatIn
  */
 export const initAirlineSeatIndividualSuiteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AIRLINESEATINDIVIDUALSUITE }, ...properties);
+    initIcon(element, { additionalClassName: 'airlineSeatIndividualSuiteIcon', url: URL_AIRLINESEATINDIVIDUALSUITE }, ...properties);
 }
 
 /**

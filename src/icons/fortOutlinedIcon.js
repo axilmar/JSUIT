@@ -15,7 +15,7 @@ const URL_FORTOUTLINED = new URL('../../assets/icons/fortOutlined.svg', import.m
  */
 export const initFortOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fortOutlinedIcon', url: URL_FORTOUTLINED }, ...properties);
 }
 
 /**

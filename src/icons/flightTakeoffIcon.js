@@ -15,7 +15,7 @@ const URL_FLIGHTTAKEOFF = new URL('../../assets/icons/flightTakeoff.svg', import
  */
 export const initFlightTakeoffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLIGHTTAKEOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'flightTakeoffIcon', url: URL_FLIGHTTAKEOFF }, ...properties);
 }
 
 /**

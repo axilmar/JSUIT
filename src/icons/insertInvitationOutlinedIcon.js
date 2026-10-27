@@ -15,7 +15,7 @@ const URL_INSERTINVITATIONOUTLINED = new URL('../../assets/icons/insertInvitatio
  */
 export const initInsertInvitationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INSERTINVITATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'insertInvitationOutlinedIcon', url: URL_INSERTINVITATIONOUTLINED }, ...properties);
 }
 
 /**

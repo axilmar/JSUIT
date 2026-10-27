@@ -15,7 +15,7 @@ const URL_MODEOFTRAVELOUTLINED = new URL('../../assets/icons/modeOfTravelOutline
  */
 export const initModeOfTravelOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MODEOFTRAVELOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'modeOfTravelOutlinedIcon', url: URL_MODEOFTRAVELOUTLINED }, ...properties);
 }
 
 /**

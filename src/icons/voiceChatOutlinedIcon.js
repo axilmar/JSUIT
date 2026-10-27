@@ -15,7 +15,7 @@ const URL_VOICECHATOUTLINED = new URL('../../assets/icons/voiceChatOutlined.svg'
  */
 export const initVoiceChatOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VOICECHATOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'voiceChatOutlinedIcon', url: URL_VOICECHATOUTLINED }, ...properties);
 }
 
 /**

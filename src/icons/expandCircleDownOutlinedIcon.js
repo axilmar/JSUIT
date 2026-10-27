@@ -15,7 +15,7 @@ const URL_EXPANDCIRCLEDOWNOUTLINED = new URL('../../assets/icons/expandCircleDow
  */
 export const initExpandCircleDownOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXPANDCIRCLEDOWNOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'expandCircleDownOutlinedIcon', url: URL_EXPANDCIRCLEDOWNOUTLINED }, ...properties);
 }
 
 /**

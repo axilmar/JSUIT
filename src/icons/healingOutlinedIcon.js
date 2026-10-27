@@ -15,7 +15,7 @@ const URL_HEALINGOUTLINED = new URL('../../assets/icons/healingOutlined.svg', im
  */
 export const initHealingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEALINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'healingOutlinedIcon', url: URL_HEALINGOUTLINED }, ...properties);
 }
 
 /**

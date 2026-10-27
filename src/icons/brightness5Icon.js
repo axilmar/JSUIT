@@ -15,7 +15,7 @@ const URL_BRIGHTNESS5 = new URL('../../assets/icons/brightness5.svg', import.met
  */
 export const initBrightness5Icon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BRIGHTNESS5 }, ...properties);
+    initIcon(element, { additionalClassName: 'brightness5Icon', url: URL_BRIGHTNESS5 }, ...properties);
 }
 
 /**

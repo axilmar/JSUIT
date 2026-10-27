@@ -15,7 +15,7 @@ const URL_RECYCLING = new URL('../../assets/icons/recycling.svg', import.meta.ur
  */
 export const initRecyclingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RECYCLING }, ...properties);
+    initIcon(element, { additionalClassName: 'recyclingIcon', url: URL_RECYCLING }, ...properties);
 }
 
 /**

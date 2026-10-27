@@ -15,7 +15,7 @@ const URL_MAN2 = new URL('../../assets/icons/man2.svg', import.meta.url).href;
  */
 export const initMan2Icon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MAN2 }, ...properties);
+    initIcon(element, { additionalClassName: 'man2Icon', url: URL_MAN2 }, ...properties);
 }
 
 /**

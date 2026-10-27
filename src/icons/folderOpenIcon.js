@@ -15,7 +15,7 @@ const URL_FOLDEROPEN = new URL('../../assets/icons/folderOpen.svg', import.meta.
  */
 export const initFolderOpenIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOLDEROPEN }, ...properties);
+    initIcon(element, { additionalClassName: 'folderOpenIcon', url: URL_FOLDEROPEN }, ...properties);
 }
 
 /**

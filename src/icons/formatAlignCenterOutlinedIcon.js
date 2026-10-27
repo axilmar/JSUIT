@@ -15,7 +15,7 @@ const URL_FORMATALIGNCENTEROUTLINED = new URL('../../assets/icons/formatAlignCen
  */
 export const initFormatAlignCenterOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATALIGNCENTEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatAlignCenterOutlinedIcon', url: URL_FORMATALIGNCENTEROUTLINED }, ...properties);
 }
 
 /**

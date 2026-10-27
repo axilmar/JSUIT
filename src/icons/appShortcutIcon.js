@@ -15,7 +15,7 @@ const URL_APPSHORTCUT = new URL('../../assets/icons/appShortcut.svg', import.met
  */
 export const initAppShortcutIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_APPSHORTCUT }, ...properties);
+    initIcon(element, { additionalClassName: 'appShortcutIcon', url: URL_APPSHORTCUT }, ...properties);
 }
 
 /**

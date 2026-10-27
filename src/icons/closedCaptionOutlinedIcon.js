@@ -15,7 +15,7 @@ const URL_CLOSEDCAPTIONOUTLINED = new URL('../../assets/icons/closedCaptionOutli
  */
 export const initClosedCaptionOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOSEDCAPTIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'closedCaptionOutlinedIcon', url: URL_CLOSEDCAPTIONOUTLINED }, ...properties);
 }
 
 /**

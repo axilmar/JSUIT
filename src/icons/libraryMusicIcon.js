@@ -15,7 +15,7 @@ const URL_LIBRARYMUSIC = new URL('../../assets/icons/libraryMusic.svg', import.m
  */
 export const initLibraryMusicIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIBRARYMUSIC }, ...properties);
+    initIcon(element, { additionalClassName: 'libraryMusicIcon', url: URL_LIBRARYMUSIC }, ...properties);
 }
 
 /**

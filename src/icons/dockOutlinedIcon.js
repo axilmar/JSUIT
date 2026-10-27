@@ -15,7 +15,7 @@ const URL_DOCKOUTLINED = new URL('../../assets/icons/dockOutlined.svg', import.m
  */
 export const initDockOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOCKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dockOutlinedIcon', url: URL_DOCKOUTLINED }, ...properties);
 }
 
 /**

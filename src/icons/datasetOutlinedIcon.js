@@ -15,7 +15,7 @@ const URL_DATASETOUTLINED = new URL('../../assets/icons/datasetOutlined.svg', im
  */
 export const initDatasetOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DATASETOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'datasetOutlinedIcon', url: URL_DATASETOUTLINED }, ...properties);
 }
 
 /**

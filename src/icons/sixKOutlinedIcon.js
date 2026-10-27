@@ -15,7 +15,7 @@ const URL_SIXKOUTLINED = new URL('../../assets/icons/sixKOutlined.svg', import.m
  */
 export const initSixKOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIXKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sixKOutlinedIcon', url: URL_SIXKOUTLINED }, ...properties);
 }
 
 /**

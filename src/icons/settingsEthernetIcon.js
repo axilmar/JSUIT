@@ -15,7 +15,7 @@ const URL_SETTINGSETHERNET = new URL('../../assets/icons/settingsEthernet.svg', 
  */
 export const initSettingsEthernetIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSETHERNET }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsEthernetIcon', url: URL_SETTINGSETHERNET }, ...properties);
 }
 
 /**

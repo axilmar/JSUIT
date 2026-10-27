@@ -15,7 +15,7 @@ const URL_FILTERLISTOFFOUTLINED = new URL('../../assets/icons/filterListOffOutli
  */
 export const initFilterListOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERLISTOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'filterListOffOutlinedIcon', url: URL_FILTERLISTOFFOUTLINED }, ...properties);
 }
 
 /**

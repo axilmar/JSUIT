@@ -15,7 +15,7 @@ const URL_AIRLINESEATRECLINEEXTRA = new URL('../../assets/icons/airlineSeatRecli
  */
 export const initAirlineSeatReclineExtraIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AIRLINESEATRECLINEEXTRA }, ...properties);
+    initIcon(element, { additionalClassName: 'airlineSeatReclineExtraIcon', url: URL_AIRLINESEATRECLINEEXTRA }, ...properties);
 }
 
 /**

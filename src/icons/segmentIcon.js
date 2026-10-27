@@ -15,7 +15,7 @@ const URL_SEGMENT = new URL('../../assets/icons/segment.svg', import.meta.url).h
  */
 export const initSegmentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SEGMENT }, ...properties);
+    initIcon(element, { additionalClassName: 'segmentIcon', url: URL_SEGMENT }, ...properties);
 }
 
 /**

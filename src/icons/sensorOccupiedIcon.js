@@ -15,7 +15,7 @@ const URL_SENSOROCCUPIED = new URL('../../assets/icons/sensorOccupied.svg', impo
  */
 export const initSensorOccupiedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SENSOROCCUPIED }, ...properties);
+    initIcon(element, { additionalClassName: 'sensorOccupiedIcon', url: URL_SENSOROCCUPIED }, ...properties);
 }
 
 /**

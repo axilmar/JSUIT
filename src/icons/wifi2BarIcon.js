@@ -15,7 +15,7 @@ const URL_WIFI2BAR = new URL('../../assets/icons/wifi2Bar.svg', import.meta.url)
  */
 export const initWifi2BarIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIFI2BAR }, ...properties);
+    initIcon(element, { additionalClassName: 'wifi2BarIcon', url: URL_WIFI2BAR }, ...properties);
 }
 
 /**

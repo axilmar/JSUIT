@@ -15,7 +15,7 @@ const URL_GTRANSLATE = new URL('../../assets/icons/gTranslate.svg', import.meta.
  */
 export const initGTranslateIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GTRANSLATE }, ...properties);
+    initIcon(element, { additionalClassName: 'gTranslateIcon', url: URL_GTRANSLATE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_NOISECONTROLOFFOUTLINED = new URL('../../assets/icons/noiseControlOffO
  */
 export const initNoiseControlOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOISECONTROLOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'noiseControlOffOutlinedIcon', url: URL_NOISECONTROLOFFOUTLINED }, ...properties);
 }
 
 /**

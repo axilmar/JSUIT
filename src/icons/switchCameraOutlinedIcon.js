@@ -15,7 +15,7 @@ const URL_SWITCHCAMERAOUTLINED = new URL('../../assets/icons/switchCameraOutline
  */
 export const initSwitchCameraOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWITCHCAMERAOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'switchCameraOutlinedIcon', url: URL_SWITCHCAMERAOUTLINED }, ...properties);
 }
 
 /**

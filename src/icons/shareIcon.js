@@ -15,7 +15,7 @@ const URL_SHARE = new URL('../../assets/icons/share.svg', import.meta.url).href;
  */
 export const initShareIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHARE }, ...properties);
+    initIcon(element, { additionalClassName: 'shareIcon', url: URL_SHARE }, ...properties);
 }
 
 /**

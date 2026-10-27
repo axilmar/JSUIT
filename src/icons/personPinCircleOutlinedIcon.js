@@ -15,7 +15,7 @@ const URL_PERSONPINCIRCLEOUTLINED = new URL('../../assets/icons/personPinCircleO
  */
 export const initPersonPinCircleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERSONPINCIRCLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'personPinCircleOutlinedIcon', url: URL_PERSONPINCIRCLEOUTLINED }, ...properties);
 }
 
 /**

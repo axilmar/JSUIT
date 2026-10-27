@@ -15,7 +15,7 @@ const URL_LOCALOFFER = new URL('../../assets/icons/localOffer.svg', import.meta.
  */
 export const initLocalOfferIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALOFFER }, ...properties);
+    initIcon(element, { additionalClassName: 'localOfferIcon', url: URL_LOCALOFFER }, ...properties);
 }
 
 /**

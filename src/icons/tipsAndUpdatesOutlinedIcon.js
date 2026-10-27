@@ -15,7 +15,7 @@ const URL_TIPSANDUPDATESOUTLINED = new URL('../../assets/icons/tipsAndUpdatesOut
  */
 export const initTipsAndUpdatesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TIPSANDUPDATESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tipsAndUpdatesOutlinedIcon', url: URL_TIPSANDUPDATESOUTLINED }, ...properties);
 }
 
 /**

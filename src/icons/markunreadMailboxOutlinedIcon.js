@@ -15,7 +15,7 @@ const URL_MARKUNREADMAILBOXOUTLINED = new URL('../../assets/icons/markunreadMail
  */
 export const initMarkunreadMailboxOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MARKUNREADMAILBOXOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'markunreadMailboxOutlinedIcon', url: URL_MARKUNREADMAILBOXOUTLINED }, ...properties);
 }
 
 /**

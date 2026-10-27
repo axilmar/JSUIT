@@ -15,7 +15,7 @@ const URL_TROUBLESHOOTOUTLINED = new URL('../../assets/icons/troubleshootOutline
  */
 export const initTroubleshootOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TROUBLESHOOTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'troubleshootOutlinedIcon', url: URL_TROUBLESHOOTOUTLINED }, ...properties);
 }
 
 /**

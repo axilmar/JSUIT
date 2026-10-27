@@ -15,7 +15,7 @@ const URL_SUPERSCRIPTOUTLINED = new URL('../../assets/icons/superscriptOutlined.
  */
 export const initSuperscriptOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUPERSCRIPTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'superscriptOutlinedIcon', url: URL_SUPERSCRIPTOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_DONE = new URL('../../assets/icons/done.svg', import.meta.url).href;
  */
 export const initDoneIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DONE }, ...properties);
+    initIcon(element, { additionalClassName: 'doneIcon', url: URL_DONE }, ...properties);
 }
 
 /**

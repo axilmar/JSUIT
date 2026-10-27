@@ -15,7 +15,7 @@ const URL_REPLAY = new URL('../../assets/icons/replay.svg', import.meta.url).hre
  */
 export const initReplayIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REPLAY }, ...properties);
+    initIcon(element, { additionalClassName: 'replayIcon', url: URL_REPLAY }, ...properties);
 }
 
 /**

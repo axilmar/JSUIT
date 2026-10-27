@@ -15,7 +15,7 @@ const URL_CARDTRAVEL = new URL('../../assets/icons/cardTravel.svg', import.meta.
  */
 export const initCardTravelIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CARDTRAVEL }, ...properties);
+    initIcon(element, { additionalClassName: 'cardTravelIcon', url: URL_CARDTRAVEL }, ...properties);
 }
 
 /**

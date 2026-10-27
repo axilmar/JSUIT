@@ -16,7 +16,7 @@ export const initListDivider = (element, ...properties) => {
     console.assert(element instanceof HTMLLIElement);
     element.setAttribute('role', 'separator');
     initDividerBase(element);
-    initLi(element, ...properties);
+    initLi(element, { additionalClassName: 'listDivider' }, ...properties);
 }
 
 /**

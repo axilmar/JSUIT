@@ -15,7 +15,7 @@ const URL_TOPIC = new URL('../../assets/icons/topic.svg', import.meta.url).href;
  */
 export const initTopicIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TOPIC }, ...properties);
+    initIcon(element, { additionalClassName: 'topicIcon', url: URL_TOPIC }, ...properties);
 }
 
 /**

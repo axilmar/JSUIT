@@ -15,7 +15,7 @@ const URL_PIANOOFFOUTLINED = new URL('../../assets/icons/pianoOffOutlined.svg', 
  */
 export const initPianoOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PIANOOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'pianoOffOutlinedIcon', url: URL_PIANOOFFOUTLINED }, ...properties);
 }
 
 /**

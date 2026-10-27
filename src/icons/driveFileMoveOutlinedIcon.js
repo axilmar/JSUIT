@@ -15,7 +15,7 @@ const URL_DRIVEFILEMOVEOUTLINED = new URL('../../assets/icons/driveFileMoveOutli
  */
 export const initDriveFileMoveOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRIVEFILEMOVEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'driveFileMoveOutlinedIcon', url: URL_DRIVEFILEMOVEOUTLINED }, ...properties);
 }
 
 /**

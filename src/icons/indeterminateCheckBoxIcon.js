@@ -15,7 +15,7 @@ const URL_INDETERMINATECHECKBOX = new URL('../../assets/icons/indeterminateCheck
  */
 export const initIndeterminateCheckBoxIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INDETERMINATECHECKBOX }, ...properties);
+    initIcon(element, { additionalClassName: 'indeterminateCheckBoxIcon', url: URL_INDETERMINATECHECKBOX }, ...properties);
 }
 
 /**

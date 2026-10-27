@@ -15,7 +15,7 @@ const URL_GRAPHICEQ = new URL('../../assets/icons/graphicEq.svg', import.meta.ur
  */
 export const initGraphicEqIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRAPHICEQ }, ...properties);
+    initIcon(element, { additionalClassName: 'graphicEqIcon', url: URL_GRAPHICEQ }, ...properties);
 }
 
 /**

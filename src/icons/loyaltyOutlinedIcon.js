@@ -15,7 +15,7 @@ const URL_LOYALTYOUTLINED = new URL('../../assets/icons/loyaltyOutlined.svg', im
  */
 export const initLoyaltyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOYALTYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'loyaltyOutlinedIcon', url: URL_LOYALTYOUTLINED }, ...properties);
 }
 
 /**

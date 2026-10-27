@@ -15,7 +15,7 @@ const URL_ASSISTWALKEROUTLINED = new URL('../../assets/icons/assistWalkerOutline
  */
 export const initAssistWalkerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ASSISTWALKEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'assistWalkerOutlinedIcon', url: URL_ASSISTWALKEROUTLINED }, ...properties);
 }
 
 /**

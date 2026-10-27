@@ -15,7 +15,7 @@ const URL_MODEFANOFFOUTLINED = new URL('../../assets/icons/modeFanOffOutlined.sv
  */
 export const initModeFanOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MODEFANOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'modeFanOffOutlinedIcon', url: URL_MODEFANOFFOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TAPANDPLAYOUTLINED = new URL('../../assets/icons/tapAndPlayOutlined.sv
  */
 export const initTapAndPlayOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TAPANDPLAYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tapAndPlayOutlinedIcon', url: URL_TAPANDPLAYOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SWAPVERT = new URL('../../assets/icons/swapVert.svg', import.meta.url)
  */
 export const initSwapVertIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWAPVERT }, ...properties);
+    initIcon(element, { additionalClassName: 'swapVertIcon', url: URL_SWAPVERT }, ...properties);
 }
 
 /**

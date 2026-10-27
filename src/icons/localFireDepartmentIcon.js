@@ -15,7 +15,7 @@ const URL_LOCALFIREDEPARTMENT = new URL('../../assets/icons/localFireDepartment.
  */
 export const initLocalFireDepartmentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALFIREDEPARTMENT }, ...properties);
+    initIcon(element, { additionalClassName: 'localFireDepartmentIcon', url: URL_LOCALFIREDEPARTMENT }, ...properties);
 }
 
 /**

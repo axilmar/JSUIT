@@ -15,7 +15,7 @@ const URL_COMMENT = new URL('../../assets/icons/comment.svg', import.meta.url).h
  */
 export const initCommentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMMENT }, ...properties);
+    initIcon(element, { additionalClassName: 'commentIcon', url: URL_COMMENT }, ...properties);
 }
 
 /**

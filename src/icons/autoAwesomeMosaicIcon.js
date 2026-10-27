@@ -15,7 +15,7 @@ const URL_AUTOAWESOMEMOSAIC = new URL('../../assets/icons/autoAwesomeMosaic.svg'
  */
 export const initAutoAwesomeMosaicIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOAWESOMEMOSAIC }, ...properties);
+    initIcon(element, { additionalClassName: 'autoAwesomeMosaicIcon', url: URL_AUTOAWESOMEMOSAIC }, ...properties);
 }
 
 /**

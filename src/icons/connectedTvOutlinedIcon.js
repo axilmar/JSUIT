@@ -15,7 +15,7 @@ const URL_CONNECTEDTVOUTLINED = new URL('../../assets/icons/connectedTvOutlined.
  */
 export const initConnectedTvOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONNECTEDTVOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'connectedTvOutlinedIcon', url: URL_CONNECTEDTVOUTLINED }, ...properties);
 }
 
 /**

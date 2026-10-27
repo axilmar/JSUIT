@@ -15,7 +15,7 @@ const URL_DATATHRESHOLDING = new URL('../../assets/icons/dataThresholding.svg', 
  */
 export const initDataThresholdingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DATATHRESHOLDING }, ...properties);
+    initIcon(element, { additionalClassName: 'dataThresholdingIcon', url: URL_DATATHRESHOLDING }, ...properties);
 }
 
 /**

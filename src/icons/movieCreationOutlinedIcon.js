@@ -15,7 +15,7 @@ const URL_MOVIECREATIONOUTLINED = new URL('../../assets/icons/movieCreationOutli
  */
 export const initMovieCreationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOVIECREATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'movieCreationOutlinedIcon', url: URL_MOVIECREATIONOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_RVHOOKUP = new URL('../../assets/icons/rvHookup.svg', import.meta.url)
  */
 export const initRvHookupIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RVHOOKUP }, ...properties);
+    initIcon(element, { additionalClassName: 'rvHookupIcon', url: URL_RVHOOKUP }, ...properties);
 }
 
 /**

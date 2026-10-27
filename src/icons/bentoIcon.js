@@ -15,7 +15,7 @@ const URL_BENTO = new URL('../../assets/icons/bento.svg', import.meta.url).href;
  */
 export const initBentoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BENTO }, ...properties);
+    initIcon(element, { additionalClassName: 'bentoIcon', url: URL_BENTO }, ...properties);
 }
 
 /**

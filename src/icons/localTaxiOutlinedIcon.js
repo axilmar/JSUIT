@@ -15,7 +15,7 @@ const URL_LOCALTAXIOUTLINED = new URL('../../assets/icons/localTaxiOutlined.svg'
  */
 export const initLocalTaxiOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALTAXIOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localTaxiOutlinedIcon', url: URL_LOCALTAXIOUTLINED }, ...properties);
 }
 
 /**

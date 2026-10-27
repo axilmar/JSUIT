@@ -15,7 +15,7 @@ const URL_SYNCPROBLEM = new URL('../../assets/icons/syncProblem.svg', import.met
  */
 export const initSyncProblemIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SYNCPROBLEM }, ...properties);
+    initIcon(element, { additionalClassName: 'syncProblemIcon', url: URL_SYNCPROBLEM }, ...properties);
 }
 
 /**

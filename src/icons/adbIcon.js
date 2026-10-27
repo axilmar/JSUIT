@@ -15,7 +15,7 @@ const URL_ADB = new URL('../../assets/icons/adb.svg', import.meta.url).href;
  */
 export const initAdbIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADB }, ...properties);
+    initIcon(element, { additionalClassName: 'adbIcon', url: URL_ADB }, ...properties);
 }
 
 /**

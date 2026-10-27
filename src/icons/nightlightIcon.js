@@ -15,7 +15,7 @@ const URL_NIGHTLIGHT = new URL('../../assets/icons/nightlight.svg', import.meta.
  */
 export const initNightlightIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NIGHTLIGHT }, ...properties);
+    initIcon(element, { additionalClassName: 'nightlightIcon', url: URL_NIGHTLIGHT }, ...properties);
 }
 
 /**

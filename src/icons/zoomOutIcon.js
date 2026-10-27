@@ -15,7 +15,7 @@ const URL_ZOOMOUT = new URL('../../assets/icons/zoomOut.svg', import.meta.url).h
  */
 export const initZoomOutIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ZOOMOUT }, ...properties);
+    initIcon(element, { additionalClassName: 'zoomOutIcon', url: URL_ZOOMOUT }, ...properties);
 }
 
 /**

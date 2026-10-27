@@ -15,7 +15,7 @@ const URL_SMARTPHONE = new URL('../../assets/icons/smartphone.svg', import.meta.
  */
 export const initSmartphoneIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SMARTPHONE }, ...properties);
+    initIcon(element, { additionalClassName: 'smartphoneIcon', url: URL_SMARTPHONE }, ...properties);
 }
 
 /**

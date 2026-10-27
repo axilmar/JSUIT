@@ -15,7 +15,7 @@ const URL_EDITROADOUTLINED = new URL('../../assets/icons/editRoadOutlined.svg', 
  */
 export const initEditRoadOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EDITROADOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'editRoadOutlinedIcon', url: URL_EDITROADOUTLINED }, ...properties);
 }
 
 /**

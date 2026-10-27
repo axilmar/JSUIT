@@ -15,7 +15,7 @@ const URL_CONFIRMATIONNUMBER = new URL('../../assets/icons/confirmationNumber.sv
  */
 export const initConfirmationNumberIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONFIRMATIONNUMBER }, ...properties);
+    initIcon(element, { additionalClassName: 'confirmationNumberIcon', url: URL_CONFIRMATIONNUMBER }, ...properties);
 }
 
 /**

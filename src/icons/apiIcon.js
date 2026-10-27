@@ -15,7 +15,7 @@ const URL_API = new URL('../../assets/icons/api.svg', import.meta.url).href;
  */
 export const initApiIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_API }, ...properties);
+    initIcon(element, { additionalClassName: 'apiIcon', url: URL_API }, ...properties);
 }
 
 /**

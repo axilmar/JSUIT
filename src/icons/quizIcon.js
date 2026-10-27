@@ -15,7 +15,7 @@ const URL_QUIZ = new URL('../../assets/icons/quiz.svg', import.meta.url).href;
  */
 export const initQuizIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUIZ }, ...properties);
+    initIcon(element, { additionalClassName: 'quizIcon', url: URL_QUIZ }, ...properties);
 }
 
 /**

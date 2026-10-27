@@ -15,7 +15,7 @@ const URL_DIRECTIONSBIKEOUTLINED = new URL('../../assets/icons/directionsBikeOut
  */
 export const initDirectionsBikeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRECTIONSBIKEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'directionsBikeOutlinedIcon', url: URL_DIRECTIONSBIKEOUTLINED }, ...properties);
 }
 
 /**

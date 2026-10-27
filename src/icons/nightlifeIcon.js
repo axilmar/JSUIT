@@ -15,7 +15,7 @@ const URL_NIGHTLIFE = new URL('../../assets/icons/nightlife.svg', import.meta.ur
  */
 export const initNightlifeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NIGHTLIFE }, ...properties);
+    initIcon(element, { additionalClassName: 'nightlifeIcon', url: URL_NIGHTLIFE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SETTINGSSUGGESTOUTLINED = new URL('../../assets/icons/settingsSuggestO
  */
 export const initSettingsSuggestOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSSUGGESTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsSuggestOutlinedIcon', url: URL_SETTINGSSUGGESTOUTLINED }, ...properties);
 }
 
 /**

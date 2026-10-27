@@ -15,7 +15,7 @@ const URL_CYCLONEOUTLINED = new URL('../../assets/icons/cycloneOutlined.svg', im
  */
 export const initCycloneOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CYCLONEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cycloneOutlinedIcon', url: URL_CYCLONEOUTLINED }, ...properties);
 }
 
 /**

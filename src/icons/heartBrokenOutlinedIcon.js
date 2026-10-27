@@ -15,7 +15,7 @@ const URL_HEARTBROKENOUTLINED = new URL('../../assets/icons/heartBrokenOutlined.
  */
 export const initHeartBrokenOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEARTBROKENOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'heartBrokenOutlinedIcon', url: URL_HEARTBROKENOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_EJECT = new URL('../../assets/icons/eject.svg', import.meta.url).href;
  */
 export const initEjectIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EJECT }, ...properties);
+    initIcon(element, { additionalClassName: 'ejectIcon', url: URL_EJECT }, ...properties);
 }
 
 /**

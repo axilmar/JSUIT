@@ -15,7 +15,7 @@ const URL_PANORAMAPHOTOSPHERESELECT = new URL('../../assets/icons/panoramaPhotos
  */
 export const initPanoramaPhotosphereSelectIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PANORAMAPHOTOSPHERESELECT }, ...properties);
+    initIcon(element, { additionalClassName: 'panoramaPhotosphereSelectIcon', url: URL_PANORAMAPHOTOSPHERESELECT }, ...properties);
 }
 
 /**

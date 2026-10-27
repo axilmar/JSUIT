@@ -15,7 +15,7 @@ const URL_BORDERVERTICALOUTLINED = new URL('../../assets/icons/borderVerticalOut
  */
 export const initBorderVerticalOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BORDERVERTICALOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'borderVerticalOutlinedIcon', url: URL_BORDERVERTICALOUTLINED }, ...properties);
 }
 
 /**

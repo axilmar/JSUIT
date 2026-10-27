@@ -15,7 +15,7 @@ const URL_SELECTALL = new URL('../../assets/icons/selectAll.svg', import.meta.ur
  */
 export const initSelectAllIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SELECTALL }, ...properties);
+    initIcon(element, { additionalClassName: 'selectAllIcon', url: URL_SELECTALL }, ...properties);
 }
 
 /**

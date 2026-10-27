@@ -15,7 +15,7 @@ const URL_GARAGE = new URL('../../assets/icons/garage.svg', import.meta.url).hre
  */
 export const initGarageIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GARAGE }, ...properties);
+    initIcon(element, { additionalClassName: 'garageIcon', url: URL_GARAGE }, ...properties);
 }
 
 /**

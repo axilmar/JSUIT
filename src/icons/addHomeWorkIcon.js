@@ -15,7 +15,7 @@ const URL_ADDHOMEWORK = new URL('../../assets/icons/addHomeWork.svg', import.met
  */
 export const initAddHomeWorkIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDHOMEWORK }, ...properties);
+    initIcon(element, { additionalClassName: 'addHomeWorkIcon', url: URL_ADDHOMEWORK }, ...properties);
 }
 
 /**

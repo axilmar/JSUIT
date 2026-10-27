@@ -15,7 +15,7 @@ const URL_NOPHOTOGRAPHYOUTLINED = new URL('../../assets/icons/noPhotographyOutli
  */
 export const initNoPhotographyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOPHOTOGRAPHYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'noPhotographyOutlinedIcon', url: URL_NOPHOTOGRAPHYOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_BLOODTYPEOUTLINED = new URL('../../assets/icons/bloodtypeOutlined.svg'
  */
 export const initBloodtypeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLOODTYPEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bloodtypeOutlinedIcon', url: URL_BLOODTYPEOUTLINED }, ...properties);
 }
 
 /**

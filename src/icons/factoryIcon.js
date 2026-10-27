@@ -15,7 +15,7 @@ const URL_FACTORY = new URL('../../assets/icons/factory.svg', import.meta.url).h
  */
 export const initFactoryIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FACTORY }, ...properties);
+    initIcon(element, { additionalClassName: 'factoryIcon', url: URL_FACTORY }, ...properties);
 }
 
 /**

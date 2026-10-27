@@ -15,7 +15,7 @@ const URL_NINEMP = new URL('../../assets/icons/nineMp.svg', import.meta.url).hre
  */
 export const initNineMpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NINEMP }, ...properties);
+    initIcon(element, { additionalClassName: 'nineMpIcon', url: URL_NINEMP }, ...properties);
 }
 
 /**

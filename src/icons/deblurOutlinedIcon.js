@@ -15,7 +15,7 @@ const URL_DEBLUROUTLINED = new URL('../../assets/icons/deblurOutlined.svg', impo
  */
 export const initDeblurOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DEBLUROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'deblurOutlinedIcon', url: URL_DEBLUROUTLINED }, ...properties);
 }
 
 /**

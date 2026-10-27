@@ -15,7 +15,7 @@ const URL_HEALTHANDSAFETY = new URL('../../assets/icons/healthAndSafety.svg', im
  */
 export const initHealthAndSafetyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEALTHANDSAFETY }, ...properties);
+    initIcon(element, { additionalClassName: 'healthAndSafetyIcon', url: URL_HEALTHANDSAFETY }, ...properties);
 }
 
 /**

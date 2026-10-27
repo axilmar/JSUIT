@@ -15,7 +15,7 @@ const URL_PSYCHOLOGY = new URL('../../assets/icons/psychology.svg', import.meta.
  */
 export const initPsychologyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PSYCHOLOGY }, ...properties);
+    initIcon(element, { additionalClassName: 'psychologyIcon', url: URL_PSYCHOLOGY }, ...properties);
 }
 
 /**

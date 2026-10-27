@@ -15,7 +15,7 @@ const URL_PHISHING = new URL('../../assets/icons/phishing.svg', import.meta.url)
  */
 export const initPhishingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHISHING }, ...properties);
+    initIcon(element, { additionalClassName: 'phishingIcon', url: URL_PHISHING }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FLIPTOBACKOUTLINED = new URL('../../assets/icons/flipToBackOutlined.sv
  */
 export const initFlipToBackOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLIPTOBACKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'flipToBackOutlinedIcon', url: URL_FLIPTOBACKOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ADDTOPHOTOS = new URL('../../assets/icons/addToPhotos.svg', import.met
  */
 export const initAddToPhotosIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDTOPHOTOS }, ...properties);
+    initIcon(element, { additionalClassName: 'addToPhotosIcon', url: URL_ADDTOPHOTOS }, ...properties);
 }
 
 /**

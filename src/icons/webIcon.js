@@ -15,7 +15,7 @@ const URL_WEB = new URL('../../assets/icons/web.svg', import.meta.url).href;
  */
 export const initWebIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WEB }, ...properties);
+    initIcon(element, { additionalClassName: 'webIcon', url: URL_WEB }, ...properties);
 }
 
 /**

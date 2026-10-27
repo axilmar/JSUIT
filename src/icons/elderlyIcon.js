@@ -15,7 +15,7 @@ const URL_ELDERLY = new URL('../../assets/icons/elderly.svg', import.meta.url).h
  */
 export const initElderlyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ELDERLY }, ...properties);
+    initIcon(element, { additionalClassName: 'elderlyIcon', url: URL_ELDERLY }, ...properties);
 }
 
 /**

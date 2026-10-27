@@ -15,7 +15,7 @@ const URL_TOLLOUTLINED = new URL('../../assets/icons/tollOutlined.svg', import.m
  */
 export const initTollOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TOLLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tollOutlinedIcon', url: URL_TOLLOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PHONELINK = new URL('../../assets/icons/phonelink.svg', import.meta.ur
  */
 export const initPhonelinkIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONELINK }, ...properties);
+    initIcon(element, { additionalClassName: 'phonelinkIcon', url: URL_PHONELINK }, ...properties);
 }
 
 /**

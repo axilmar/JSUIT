@@ -15,7 +15,7 @@ const URL_SHOWER = new URL('../../assets/icons/shower.svg', import.meta.url).hre
  */
 export const initShowerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHOWER }, ...properties);
+    initIcon(element, { additionalClassName: 'showerIcon', url: URL_SHOWER }, ...properties);
 }
 
 /**

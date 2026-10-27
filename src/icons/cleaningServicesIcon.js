@@ -15,7 +15,7 @@ const URL_CLEANINGSERVICES = new URL('../../assets/icons/cleaningServices.svg', 
  */
 export const initCleaningServicesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLEANINGSERVICES }, ...properties);
+    initIcon(element, { additionalClassName: 'cleaningServicesIcon', url: URL_CLEANINGSERVICES }, ...properties);
 }
 
 /**

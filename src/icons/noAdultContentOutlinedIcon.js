@@ -15,7 +15,7 @@ const URL_NOADULTCONTENTOUTLINED = new URL('../../assets/icons/noAdultContentOut
  */
 export const initNoAdultContentOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOADULTCONTENTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'noAdultContentOutlinedIcon', url: URL_NOADULTCONTENTOUTLINED }, ...properties);
 }
 
 /**

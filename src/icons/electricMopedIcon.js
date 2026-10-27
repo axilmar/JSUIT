@@ -15,7 +15,7 @@ const URL_ELECTRICMOPED = new URL('../../assets/icons/electricMoped.svg', import
  */
 export const initElectricMopedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ELECTRICMOPED }, ...properties);
+    initIcon(element, { additionalClassName: 'electricMopedIcon', url: URL_ELECTRICMOPED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ARROWCIRCLELEFT = new URL('../../assets/icons/arrowCircleLeft.svg', im
  */
 export const initArrowCircleLeftIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ARROWCIRCLELEFT }, ...properties);
+    initIcon(element, { additionalClassName: 'arrowCircleLeftIcon', url: URL_ARROWCIRCLELEFT }, ...properties);
 }
 
 /**

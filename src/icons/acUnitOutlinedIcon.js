@@ -15,7 +15,7 @@ const URL_ACUNITOUTLINED = new URL('../../assets/icons/acUnitOutlined.svg', impo
  */
 export const initAcUnitOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACUNITOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'acUnitOutlinedIcon', url: URL_ACUNITOUTLINED }, ...properties);
 }
 
 /**

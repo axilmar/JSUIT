@@ -15,7 +15,7 @@ const URL_DATASETLINKED = new URL('../../assets/icons/datasetLinked.svg', import
  */
 export const initDatasetLinkedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DATASETLINKED }, ...properties);
+    initIcon(element, { additionalClassName: 'datasetLinkedIcon', url: URL_DATASETLINKED }, ...properties);
 }
 
 /**

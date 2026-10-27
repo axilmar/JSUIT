@@ -15,7 +15,7 @@ const URL_APPSHORTCUTOUTLINED = new URL('../../assets/icons/appShortcutOutlined.
  */
 export const initAppShortcutOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_APPSHORTCUTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'appShortcutOutlinedIcon', url: URL_APPSHORTCUTOUTLINED }, ...properties);
 }
 
 /**

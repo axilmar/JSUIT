@@ -15,7 +15,7 @@ const URL_HLSOFFOUTLINED = new URL('../../assets/icons/hlsOffOutlined.svg', impo
  */
 export const initHlsOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HLSOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hlsOffOutlinedIcon', url: URL_HLSOFFOUTLINED }, ...properties);
 }
 
 /**

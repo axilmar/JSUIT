@@ -15,7 +15,7 @@ const URL_FILEOPENOUTLINED = new URL('../../assets/icons/fileOpenOutlined.svg', 
  */
 export const initFileOpenOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILEOPENOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fileOpenOutlinedIcon', url: URL_FILEOPENOUTLINED }, ...properties);
 }
 
 /**

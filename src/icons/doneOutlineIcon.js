@@ -15,7 +15,7 @@ const URL_DONEOUTLINE = new URL('../../assets/icons/doneOutline.svg', import.met
  */
 export const initDoneOutlineIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DONEOUTLINE }, ...properties);
+    initIcon(element, { additionalClassName: 'doneOutlineIcon', url: URL_DONEOUTLINE }, ...properties);
 }
 
 /**

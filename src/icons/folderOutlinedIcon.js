@@ -15,7 +15,7 @@ const URL_FOLDEROUTLINED = new URL('../../assets/icons/folderOutlined.svg', impo
  */
 export const initFolderOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOLDEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'folderOutlinedIcon', url: URL_FOLDEROUTLINED }, ...properties);
 }
 
 /**

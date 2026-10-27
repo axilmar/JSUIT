@@ -15,7 +15,7 @@ const URL_DIRECTIONS = new URL('../../assets/icons/directions.svg', import.meta.
  */
 export const initDirectionsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRECTIONS }, ...properties);
+    initIcon(element, { additionalClassName: 'directionsIcon', url: URL_DIRECTIONS }, ...properties);
 }
 
 /**

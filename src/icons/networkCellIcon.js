@@ -15,7 +15,7 @@ const URL_NETWORKCELL = new URL('../../assets/icons/networkCell.svg', import.met
  */
 export const initNetworkCellIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NETWORKCELL }, ...properties);
+    initIcon(element, { additionalClassName: 'networkCellIcon', url: URL_NETWORKCELL }, ...properties);
 }
 
 /**

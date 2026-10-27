@@ -15,7 +15,7 @@ const URL_MICROWAVEOUTLINED = new URL('../../assets/icons/microwaveOutlined.svg'
  */
 export const initMicrowaveOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MICROWAVEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'microwaveOutlinedIcon', url: URL_MICROWAVEOUTLINED }, ...properties);
 }
 
 /**

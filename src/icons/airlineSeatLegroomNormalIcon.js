@@ -15,7 +15,7 @@ const URL_AIRLINESEATLEGROOMNORMAL = new URL('../../assets/icons/airlineSeatLegr
  */
 export const initAirlineSeatLegroomNormalIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AIRLINESEATLEGROOMNORMAL }, ...properties);
+    initIcon(element, { additionalClassName: 'airlineSeatLegroomNormalIcon', url: URL_AIRLINESEATLEGROOMNORMAL }, ...properties);
 }
 
 /**

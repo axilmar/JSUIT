@@ -15,7 +15,7 @@ const URL_ELECTRICMETEROUTLINED = new URL('../../assets/icons/electricMeterOutli
  */
 export const initElectricMeterOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ELECTRICMETEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'electricMeterOutlinedIcon', url: URL_ELECTRICMETEROUTLINED }, ...properties);
 }
 
 /**

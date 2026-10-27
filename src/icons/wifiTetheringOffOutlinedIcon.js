@@ -15,7 +15,7 @@ const URL_WIFITETHERINGOFFOUTLINED = new URL('../../assets/icons/wifiTetheringOf
  */
 export const initWifiTetheringOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIFITETHERINGOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wifiTetheringOffOutlinedIcon', url: URL_WIFITETHERINGOFFOUTLINED }, ...properties);
 }
 
 /**

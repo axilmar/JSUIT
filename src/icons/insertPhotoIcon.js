@@ -15,7 +15,7 @@ const URL_INSERTPHOTO = new URL('../../assets/icons/insertPhoto.svg', import.met
  */
 export const initInsertPhotoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INSERTPHOTO }, ...properties);
+    initIcon(element, { additionalClassName: 'insertPhotoIcon', url: URL_INSERTPHOTO }, ...properties);
 }
 
 /**

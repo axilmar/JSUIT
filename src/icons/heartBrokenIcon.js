@@ -15,7 +15,7 @@ const URL_HEARTBROKEN = new URL('../../assets/icons/heartBroken.svg', import.met
  */
 export const initHeartBrokenIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HEARTBROKEN }, ...properties);
+    initIcon(element, { additionalClassName: 'heartBrokenIcon', url: URL_HEARTBROKEN }, ...properties);
 }
 
 /**

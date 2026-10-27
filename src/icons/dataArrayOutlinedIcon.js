@@ -15,7 +15,7 @@ const URL_DATAARRAYOUTLINED = new URL('../../assets/icons/dataArrayOutlined.svg'
  */
 export const initDataArrayOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DATAARRAYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dataArrayOutlinedIcon', url: URL_DATAARRAYOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ASSISTWALKER = new URL('../../assets/icons/assistWalker.svg', import.m
  */
 export const initAssistWalkerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ASSISTWALKER }, ...properties);
+    initIcon(element, { additionalClassName: 'assistWalkerIcon', url: URL_ASSISTWALKER }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LIVEHELP = new URL('../../assets/icons/liveHelp.svg', import.meta.url)
  */
 export const initLiveHelpIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIVEHELP }, ...properties);
+    initIcon(element, { additionalClassName: 'liveHelpIcon', url: URL_LIVEHELP }, ...properties);
 }
 
 /**

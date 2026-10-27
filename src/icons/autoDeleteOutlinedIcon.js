@@ -15,7 +15,7 @@ const URL_AUTODELETEOUTLINED = new URL('../../assets/icons/autoDeleteOutlined.sv
  */
 export const initAutoDeleteOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTODELETEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'autoDeleteOutlinedIcon', url: URL_AUTODELETEOUTLINED }, ...properties);
 }
 
 /**

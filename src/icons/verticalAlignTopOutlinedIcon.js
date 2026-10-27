@@ -15,7 +15,7 @@ const URL_VERTICALALIGNTOPOUTLINED = new URL('../../assets/icons/verticalAlignTo
  */
 export const initVerticalAlignTopOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VERTICALALIGNTOPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'verticalAlignTopOutlinedIcon', url: URL_VERTICALALIGNTOPOUTLINED }, ...properties);
 }
 
 /**

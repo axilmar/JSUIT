@@ -15,7 +15,7 @@ const URL_LOOKS3OUTLINED = new URL('../../assets/icons/looks3Outlined.svg', impo
  */
 export const initLooks3OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOOKS3OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'looks3OutlinedIcon', url: URL_LOOKS3OUTLINED }, ...properties);
 }
 
 /**

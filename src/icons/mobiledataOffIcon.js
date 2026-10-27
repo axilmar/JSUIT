@@ -15,7 +15,7 @@ const URL_MOBILEDATAOFF = new URL('../../assets/icons/mobiledataOff.svg', import
  */
 export const initMobiledataOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOBILEDATAOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'mobiledataOffIcon', url: URL_MOBILEDATAOFF }, ...properties);
 }
 
 /**

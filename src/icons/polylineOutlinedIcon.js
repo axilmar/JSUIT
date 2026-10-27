@@ -15,7 +15,7 @@ const URL_POLYLINEOUTLINED = new URL('../../assets/icons/polylineOutlined.svg', 
  */
 export const initPolylineOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POLYLINEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'polylineOutlinedIcon', url: URL_POLYLINEOUTLINED }, ...properties);
 }
 
 /**

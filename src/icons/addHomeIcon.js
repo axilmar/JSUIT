@@ -15,7 +15,7 @@ const URL_ADDHOME = new URL('../../assets/icons/addHome.svg', import.meta.url).h
  */
 export const initAddHomeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDHOME }, ...properties);
+    initIcon(element, { additionalClassName: 'addHomeIcon', url: URL_ADDHOME }, ...properties);
 }
 
 /**

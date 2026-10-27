@@ -15,7 +15,7 @@ const URL_ASSIGNMENTRETURNOUTLINED = new URL('../../assets/icons/assignmentRetur
  */
 export const initAssignmentReturnOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ASSIGNMENTRETURNOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'assignmentReturnOutlinedIcon', url: URL_ASSIGNMENTRETURNOUTLINED }, ...properties);
 }
 
 /**

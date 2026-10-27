@@ -15,7 +15,7 @@ const URL_GAMEPAD = new URL('../../assets/icons/gamepad.svg', import.meta.url).h
  */
 export const initGamepadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GAMEPAD }, ...properties);
+    initIcon(element, { additionalClassName: 'gamepadIcon', url: URL_GAMEPAD }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SNOOZE = new URL('../../assets/icons/snooze.svg', import.meta.url).hre
  */
 export const initSnoozeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SNOOZE }, ...properties);
+    initIcon(element, { additionalClassName: 'snoozeIcon', url: URL_SNOOZE }, ...properties);
 }
 
 /**

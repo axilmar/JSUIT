@@ -15,7 +15,7 @@ const URL_FIVEK = new URL('../../assets/icons/fiveK.svg', import.meta.url).href;
  */
 export const initFiveKIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIVEK }, ...properties);
+    initIcon(element, { additionalClassName: 'fiveKIcon', url: URL_FIVEK }, ...properties);
 }
 
 /**

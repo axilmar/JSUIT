@@ -15,7 +15,7 @@ const URL_MODESTANDBY = new URL('../../assets/icons/modeStandby.svg', import.met
  */
 export const initModeStandbyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MODESTANDBY }, ...properties);
+    initIcon(element, { additionalClassName: 'modeStandbyIcon', url: URL_MODESTANDBY }, ...properties);
 }
 
 /**

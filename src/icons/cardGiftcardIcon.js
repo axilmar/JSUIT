@@ -15,7 +15,7 @@ const URL_CARDGIFTCARD = new URL('../../assets/icons/cardGiftcard.svg', import.m
  */
 export const initCardGiftcardIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CARDGIFTCARD }, ...properties);
+    initIcon(element, { additionalClassName: 'cardGiftcardIcon', url: URL_CARDGIFTCARD }, ...properties);
 }
 
 /**

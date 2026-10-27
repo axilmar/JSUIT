@@ -15,7 +15,7 @@ const URL_FLAGCIRCLEOUTLINED = new URL('../../assets/icons/flagCircleOutlined.sv
  */
 export const initFlagCircleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLAGCIRCLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'flagCircleOutlinedIcon', url: URL_FLAGCIRCLEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_VIDEOCAMERABACKOUTLINED = new URL('../../assets/icons/videoCameraBackO
  */
 export const initVideoCameraBackOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOCAMERABACKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'videoCameraBackOutlinedIcon', url: URL_VIDEOCAMERABACKOUTLINED }, ...properties);
 }
 
 /**

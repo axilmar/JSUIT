@@ -15,7 +15,7 @@ const URL_CAMERAOUTDOOROUTLINED = new URL('../../assets/icons/cameraOutdoorOutli
  */
 export const initCameraOutdoorOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CAMERAOUTDOOROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cameraOutdoorOutlinedIcon', url: URL_CAMERAOUTDOOROUTLINED }, ...properties);
 }
 
 /**

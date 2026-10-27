@@ -15,7 +15,7 @@ const URL_SWAPCALLSOUTLINED = new URL('../../assets/icons/swapCallsOutlined.svg'
  */
 export const initSwapCallsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWAPCALLSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'swapCallsOutlinedIcon', url: URL_SWAPCALLSOUTLINED }, ...properties);
 }
 
 /**

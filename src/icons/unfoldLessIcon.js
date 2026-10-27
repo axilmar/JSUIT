@@ -15,7 +15,7 @@ const URL_UNFOLDLESS = new URL('../../assets/icons/unfoldLess.svg', import.meta.
  */
 export const initUnfoldLessIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UNFOLDLESS }, ...properties);
+    initIcon(element, { additionalClassName: 'unfoldLessIcon', url: URL_UNFOLDLESS }, ...properties);
 }
 
 /**

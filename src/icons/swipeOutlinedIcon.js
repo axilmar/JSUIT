@@ -15,7 +15,7 @@ const URL_SWIPEOUTLINED = new URL('../../assets/icons/swipeOutlined.svg', import
  */
 export const initSwipeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWIPEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'swipeOutlinedIcon', url: URL_SWIPEOUTLINED }, ...properties);
 }
 
 /**

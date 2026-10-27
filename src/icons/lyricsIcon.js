@@ -15,7 +15,7 @@ const URL_LYRICS = new URL('../../assets/icons/lyrics.svg', import.meta.url).hre
  */
 export const initLyricsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LYRICS }, ...properties);
+    initIcon(element, { additionalClassName: 'lyricsIcon', url: URL_LYRICS }, ...properties);
 }
 
 /**

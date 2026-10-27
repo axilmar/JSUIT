@@ -15,7 +15,7 @@ const URL_MULTIPLESTOPOUTLINED = new URL('../../assets/icons/multipleStopOutline
  */
 export const initMultipleStopOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MULTIPLESTOPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'multipleStopOutlinedIcon', url: URL_MULTIPLESTOPOUTLINED }, ...properties);
 }
 
 /**

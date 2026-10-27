@@ -15,7 +15,7 @@ const URL_POWEROFF = new URL('../../assets/icons/powerOff.svg', import.meta.url)
  */
 export const initPowerOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POWEROFF }, ...properties);
+    initIcon(element, { additionalClassName: 'powerOffIcon', url: URL_POWEROFF }, ...properties);
 }
 
 /**

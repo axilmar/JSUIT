@@ -15,7 +15,7 @@ const URL_SIMCARDDOWNLOAD = new URL('../../assets/icons/simCardDownload.svg', im
  */
 export const initSimCardDownloadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIMCARDDOWNLOAD }, ...properties);
+    initIcon(element, { additionalClassName: 'simCardDownloadIcon', url: URL_SIMCARDDOWNLOAD }, ...properties);
 }
 
 /**

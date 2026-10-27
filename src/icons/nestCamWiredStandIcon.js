@@ -15,7 +15,7 @@ const URL_NESTCAMWIREDSTAND = new URL('../../assets/icons/nestCamWiredStand.svg'
  */
 export const initNestCamWiredStandIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NESTCAMWIREDSTAND }, ...properties);
+    initIcon(element, { additionalClassName: 'nestCamWiredStandIcon', url: URL_NESTCAMWIREDSTAND }, ...properties);
 }
 
 /**

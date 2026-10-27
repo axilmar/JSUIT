@@ -15,7 +15,7 @@ const URL_TEXTUREOUTLINED = new URL('../../assets/icons/textureOutlined.svg', im
  */
 export const initTextureOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTUREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'textureOutlinedIcon', url: URL_TEXTUREOUTLINED }, ...properties);
 }
 
 /**

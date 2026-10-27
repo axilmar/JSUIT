@@ -15,7 +15,7 @@ const URL_ASSESSMENTOUTLINED = new URL('../../assets/icons/assessmentOutlined.sv
  */
 export const initAssessmentOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ASSESSMENTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'assessmentOutlinedIcon', url: URL_ASSESSMENTOUTLINED }, ...properties);
 }
 
 /**

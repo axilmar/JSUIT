@@ -15,7 +15,7 @@ const URL_NOFLASH = new URL('../../assets/icons/noFlash.svg', import.meta.url).h
  */
 export const initNoFlashIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOFLASH }, ...properties);
+    initIcon(element, { additionalClassName: 'noFlashIcon', url: URL_NOFLASH }, ...properties);
 }
 
 /**

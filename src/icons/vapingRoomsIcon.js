@@ -15,7 +15,7 @@ const URL_VAPINGROOMS = new URL('../../assets/icons/vapingRooms.svg', import.met
  */
 export const initVapingRoomsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VAPINGROOMS }, ...properties);
+    initIcon(element, { additionalClassName: 'vapingRoomsIcon', url: URL_VAPINGROOMS }, ...properties);
 }
 
 /**

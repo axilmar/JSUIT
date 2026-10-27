@@ -15,7 +15,7 @@ const URL_EGGALT = new URL('../../assets/icons/eggAlt.svg', import.meta.url).hre
  */
 export const initEggAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EGGALT }, ...properties);
+    initIcon(element, { additionalClassName: 'eggAltIcon', url: URL_EGGALT }, ...properties);
 }
 
 /**

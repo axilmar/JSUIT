@@ -15,7 +15,7 @@ const URL_SCREENROTATION = new URL('../../assets/icons/screenRotation.svg', impo
  */
 export const initScreenRotationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCREENROTATION }, ...properties);
+    initIcon(element, { additionalClassName: 'screenRotationIcon', url: URL_SCREENROTATION }, ...properties);
 }
 
 /**

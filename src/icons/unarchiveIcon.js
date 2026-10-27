@@ -15,7 +15,7 @@ const URL_UNARCHIVE = new URL('../../assets/icons/unarchive.svg', import.meta.ur
  */
 export const initUnarchiveIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UNARCHIVE }, ...properties);
+    initIcon(element, { additionalClassName: 'unarchiveIcon', url: URL_UNARCHIVE }, ...properties);
 }
 
 /**

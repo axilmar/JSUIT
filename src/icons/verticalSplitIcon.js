@@ -15,7 +15,7 @@ const URL_VERTICALSPLIT = new URL('../../assets/icons/verticalSplit.svg', import
  */
 export const initVerticalSplitIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VERTICALSPLIT }, ...properties);
+    initIcon(element, { additionalClassName: 'verticalSplitIcon', url: URL_VERTICALSPLIT }, ...properties);
 }
 
 /**

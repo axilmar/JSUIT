@@ -15,7 +15,7 @@ const URL_INSTALLDESKTOP = new URL('../../assets/icons/installDesktop.svg', impo
  */
 export const initInstallDesktopIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INSTALLDESKTOP }, ...properties);
+    initIcon(element, { additionalClassName: 'installDesktopIcon', url: URL_INSTALLDESKTOP }, ...properties);
 }
 
 /**

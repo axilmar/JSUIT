@@ -15,7 +15,7 @@ const URL_TORNADOOUTLINED = new URL('../../assets/icons/tornadoOutlined.svg', im
  */
 export const initTornadoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TORNADOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tornadoOutlinedIcon', url: URL_TORNADOOUTLINED }, ...properties);
 }
 
 /**

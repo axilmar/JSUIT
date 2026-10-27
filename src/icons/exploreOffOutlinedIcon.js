@@ -15,7 +15,7 @@ const URL_EXPLOREOFFOUTLINED = new URL('../../assets/icons/exploreOffOutlined.sv
  */
 export const initExploreOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXPLOREOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'exploreOffOutlinedIcon', url: URL_EXPLOREOFFOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_GMOBILEDATA = new URL('../../assets/icons/gMobiledata.svg', import.met
  */
 export const initGMobiledataIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GMOBILEDATA }, ...properties);
+    initIcon(element, { additionalClassName: 'gMobiledataIcon', url: URL_GMOBILEDATA }, ...properties);
 }
 
 /**

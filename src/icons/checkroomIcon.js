@@ -15,7 +15,7 @@ const URL_CHECKROOM = new URL('../../assets/icons/checkroom.svg', import.meta.ur
  */
 export const initCheckroomIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHECKROOM }, ...properties);
+    initIcon(element, { additionalClassName: 'checkroomIcon', url: URL_CHECKROOM }, ...properties);
 }
 
 /**

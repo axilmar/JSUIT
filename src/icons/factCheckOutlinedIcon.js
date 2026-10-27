@@ -15,7 +15,7 @@ const URL_FACTCHECKOUTLINED = new URL('../../assets/icons/factCheckOutlined.svg'
  */
 export const initFactCheckOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FACTCHECKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'factCheckOutlinedIcon', url: URL_FACTCHECKOUTLINED }, ...properties);
 }
 
 /**

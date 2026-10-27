@@ -15,7 +15,7 @@ const URL_WASH = new URL('../../assets/icons/wash.svg', import.meta.url).href;
  */
 export const initWashIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WASH }, ...properties);
+    initIcon(element, { additionalClassName: 'washIcon', url: URL_WASH }, ...properties);
 }
 
 /**

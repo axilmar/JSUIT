@@ -15,7 +15,7 @@ const URL_DATAARRAY = new URL('../../assets/icons/dataArray.svg', import.meta.ur
  */
 export const initDataArrayIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DATAARRAY }, ...properties);
+    initIcon(element, { additionalClassName: 'dataArrayIcon', url: URL_DATAARRAY }, ...properties);
 }
 
 /**

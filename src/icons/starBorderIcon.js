@@ -15,7 +15,7 @@ const URL_STARBORDER = new URL('../../assets/icons/starBorder.svg', import.meta.
  */
 export const initStarBorderIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STARBORDER }, ...properties);
+    initIcon(element, { additionalClassName: 'starBorderIcon', url: URL_STARBORDER }, ...properties);
 }
 
 /**

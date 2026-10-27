@@ -15,7 +15,7 @@ const URL_FASTFORWARD = new URL('../../assets/icons/fastForward.svg', import.met
  */
 export const initFastForwardIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FASTFORWARD }, ...properties);
+    initIcon(element, { additionalClassName: 'fastForwardIcon', url: URL_FASTFORWARD }, ...properties);
 }
 
 /**

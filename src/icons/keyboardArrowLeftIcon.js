@@ -15,7 +15,7 @@ const URL_KEYBOARDARROWLEFT = new URL('../../assets/icons/keyboardArrowLeft.svg'
  */
 export const initKeyboardArrowLeftIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDARROWLEFT }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardArrowLeftIcon', url: URL_KEYBOARDARROWLEFT }, ...properties);
 }
 
 /**

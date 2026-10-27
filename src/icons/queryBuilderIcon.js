@@ -15,7 +15,7 @@ const URL_QUERYBUILDER = new URL('../../assets/icons/queryBuilder.svg', import.m
  */
 export const initQueryBuilderIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QUERYBUILDER }, ...properties);
+    initIcon(element, { additionalClassName: 'queryBuilderIcon', url: URL_QUERYBUILDER }, ...properties);
 }
 
 /**

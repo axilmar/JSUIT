@@ -15,7 +15,7 @@ const URL_OUTDOORGRILLOUTLINED = new URL('../../assets/icons/outdoorGrillOutline
  */
 export const initOutdoorGrillOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OUTDOORGRILLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'outdoorGrillOutlinedIcon', url: URL_OUTDOORGRILLOUTLINED }, ...properties);
 }
 
 /**

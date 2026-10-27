@@ -15,7 +15,7 @@ const URL_BEACHACCESSOUTLINED = new URL('../../assets/icons/beachAccessOutlined.
  */
 export const initBeachAccessOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BEACHACCESSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'beachAccessOutlinedIcon', url: URL_BEACHACCESSOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CLOUDDOWNLOAD = new URL('../../assets/icons/cloudDownload.svg', import
  */
 export const initCloudDownloadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOUDDOWNLOAD }, ...properties);
+    initIcon(element, { additionalClassName: 'cloudDownloadIcon', url: URL_CLOUDDOWNLOAD }, ...properties);
 }
 
 /**

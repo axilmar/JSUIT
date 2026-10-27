@@ -15,7 +15,7 @@ const URL_SAVEDSEARCH = new URL('../../assets/icons/savedSearch.svg', import.met
  */
 export const initSavedSearchIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SAVEDSEARCH }, ...properties);
+    initIcon(element, { additionalClassName: 'savedSearchIcon', url: URL_SAVEDSEARCH }, ...properties);
 }
 
 /**

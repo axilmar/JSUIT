@@ -15,7 +15,7 @@ const URL_LIQUOR = new URL('../../assets/icons/liquor.svg', import.meta.url).hre
  */
 export const initLiquorIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIQUOR }, ...properties);
+    initIcon(element, { additionalClassName: 'liquorIcon', url: URL_LIQUOR }, ...properties);
 }
 
 /**

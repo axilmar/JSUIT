@@ -15,7 +15,7 @@ const URL_EDITOFFOUTLINED = new URL('../../assets/icons/editOffOutlined.svg', im
  */
 export const initEditOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EDITOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'editOffOutlinedIcon', url: URL_EDITOFFOUTLINED }, ...properties);
 }
 
 /**

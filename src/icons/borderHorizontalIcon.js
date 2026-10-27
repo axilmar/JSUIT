@@ -15,7 +15,7 @@ const URL_BORDERHORIZONTAL = new URL('../../assets/icons/borderHorizontal.svg', 
  */
 export const initBorderHorizontalIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BORDERHORIZONTAL }, ...properties);
+    initIcon(element, { additionalClassName: 'borderHorizontalIcon', url: URL_BORDERHORIZONTAL }, ...properties);
 }
 
 /**

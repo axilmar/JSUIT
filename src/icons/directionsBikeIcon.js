@@ -15,7 +15,7 @@ const URL_DIRECTIONSBIKE = new URL('../../assets/icons/directionsBike.svg', impo
  */
 export const initDirectionsBikeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRECTIONSBIKE }, ...properties);
+    initIcon(element, { additionalClassName: 'directionsBikeIcon', url: URL_DIRECTIONSBIKE }, ...properties);
 }
 
 /**

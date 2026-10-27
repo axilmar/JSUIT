@@ -15,7 +15,7 @@ const URL_AIRPLANEMODEINACTIVE = new URL('../../assets/icons/airplanemodeInactiv
  */
 export const initAirplanemodeInactiveIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AIRPLANEMODEINACTIVE }, ...properties);
+    initIcon(element, { additionalClassName: 'airplanemodeInactiveIcon', url: URL_AIRPLANEMODEINACTIVE }, ...properties);
 }
 
 /**

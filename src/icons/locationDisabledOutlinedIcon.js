@@ -15,7 +15,7 @@ const URL_LOCATIONDISABLEDOUTLINED = new URL('../../assets/icons/locationDisable
  */
 export const initLocationDisabledOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCATIONDISABLEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'locationDisabledOutlinedIcon', url: URL_LOCATIONDISABLEDOUTLINED }, ...properties);
 }
 
 /**

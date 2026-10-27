@@ -15,7 +15,7 @@ const URL_PERMDATASETTING = new URL('../../assets/icons/permDataSetting.svg', im
  */
 export const initPermDataSettingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERMDATASETTING }, ...properties);
+    initIcon(element, { additionalClassName: 'permDataSettingIcon', url: URL_PERMDATASETTING }, ...properties);
 }
 
 /**

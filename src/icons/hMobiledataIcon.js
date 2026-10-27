@@ -15,7 +15,7 @@ const URL_HMOBILEDATA = new URL('../../assets/icons/hMobiledata.svg', import.met
  */
 export const initHMobiledataIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HMOBILEDATA }, ...properties);
+    initIcon(element, { additionalClassName: 'hMobiledataIcon', url: URL_HMOBILEDATA }, ...properties);
 }
 
 /**

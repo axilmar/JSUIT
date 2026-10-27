@@ -15,7 +15,7 @@ const URL_SHUFFLEON = new URL('../../assets/icons/shuffleOn.svg', import.meta.ur
  */
 export const initShuffleOnIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHUFFLEON }, ...properties);
+    initIcon(element, { additionalClassName: 'shuffleOnIcon', url: URL_SHUFFLEON }, ...properties);
 }
 
 /**

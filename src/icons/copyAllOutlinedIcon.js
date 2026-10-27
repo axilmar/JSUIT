@@ -15,7 +15,7 @@ const URL_COPYALLOUTLINED = new URL('../../assets/icons/copyAllOutlined.svg', im
  */
 export const initCopyAllOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COPYALLOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'copyAllOutlinedIcon', url: URL_COPYALLOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_MOOD = new URL('../../assets/icons/mood.svg', import.meta.url).href;
  */
 export const initMoodIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOOD }, ...properties);
+    initIcon(element, { additionalClassName: 'moodIcon', url: URL_MOOD }, ...properties);
 }
 
 /**

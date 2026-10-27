@@ -15,7 +15,7 @@ const URL_SQUARE = new URL('../../assets/icons/square.svg', import.meta.url).hre
  */
 export const initSquareIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SQUARE }, ...properties);
+    initIcon(element, { additionalClassName: 'squareIcon', url: URL_SQUARE }, ...properties);
 }
 
 /**

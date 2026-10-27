@@ -15,7 +15,7 @@ const URL_GRIDON = new URL('../../assets/icons/gridOn.svg', import.meta.url).hre
  */
 export const initGridOnIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRIDON }, ...properties);
+    initIcon(element, { additionalClassName: 'gridOnIcon', url: URL_GRIDON }, ...properties);
 }
 
 /**

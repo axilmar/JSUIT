@@ -15,7 +15,7 @@ const URL_BORDERSTYLEOUTLINED = new URL('../../assets/icons/borderStyleOutlined.
  */
 export const initBorderStyleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BORDERSTYLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'borderStyleOutlinedIcon', url: URL_BORDERSTYLEOUTLINED }, ...properties);
 }
 
 /**

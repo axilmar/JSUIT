@@ -15,7 +15,7 @@ const URL_SCANNER = new URL('../../assets/icons/scanner.svg', import.meta.url).h
  */
 export const initScannerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCANNER }, ...properties);
+    initIcon(element, { additionalClassName: 'scannerIcon', url: URL_SCANNER }, ...properties);
 }
 
 /**

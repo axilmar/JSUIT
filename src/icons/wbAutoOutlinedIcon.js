@@ -15,7 +15,7 @@ const URL_WBAUTOOUTLINED = new URL('../../assets/icons/wbAutoOutlined.svg', impo
  */
 export const initWbAutoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WBAUTOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wbAutoOutlinedIcon', url: URL_WBAUTOOUTLINED }, ...properties);
 }
 
 /**

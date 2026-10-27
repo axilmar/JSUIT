@@ -15,7 +15,7 @@ const URL_LINEARSCALEOUTLINED = new URL('../../assets/icons/linearScaleOutlined.
  */
 export const initLinearScaleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LINEARSCALEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'linearScaleOutlinedIcon', url: URL_LINEARSCALEOUTLINED }, ...properties);
 }
 
 /**

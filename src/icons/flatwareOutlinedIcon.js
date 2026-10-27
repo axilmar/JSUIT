@@ -15,7 +15,7 @@ const URL_FLATWAREOUTLINED = new URL('../../assets/icons/flatwareOutlined.svg', 
  */
 export const initFlatwareOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLATWAREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'flatwareOutlinedIcon', url: URL_FLATWAREOUTLINED }, ...properties);
 }
 
 /**

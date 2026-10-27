@@ -15,7 +15,7 @@ const URL_LIBRARYADDCHECK = new URL('../../assets/icons/libraryAddCheck.svg', im
  */
 export const initLibraryAddCheckIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIBRARYADDCHECK }, ...properties);
+    initIcon(element, { additionalClassName: 'libraryAddCheckIcon', url: URL_LIBRARYADDCHECK }, ...properties);
 }
 
 /**

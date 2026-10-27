@@ -15,7 +15,7 @@ const URL_SECURITYUPDATEOUTLINED = new URL('../../assets/icons/securityUpdateOut
  */
 export const initSecurityUpdateOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SECURITYUPDATEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'securityUpdateOutlinedIcon', url: URL_SECURITYUPDATEOUTLINED }, ...properties);
 }
 
 /**

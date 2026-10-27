@@ -14,7 +14,7 @@ import { validateOnInput } from "./validateOnInput.js";
 export const initEmailInput = (element, ...properties) => {
     console.assert(element instanceof HTMLInputElement);
     element.type = 'email';
-    initInput(element, ...properties);
+    initInput(element, { additionalClassName: 'emailInput' }, ...properties);
     validateOnInput(element, true);
 }
 

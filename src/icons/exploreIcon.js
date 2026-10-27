@@ -15,7 +15,7 @@ const URL_EXPLORE = new URL('../../assets/icons/explore.svg', import.meta.url).h
  */
 export const initExploreIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXPLORE }, ...properties);
+    initIcon(element, { additionalClassName: 'exploreIcon', url: URL_EXPLORE }, ...properties);
 }
 
 /**

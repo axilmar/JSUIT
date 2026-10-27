@@ -15,7 +15,7 @@ const URL_TASKALTOUTLINED = new URL('../../assets/icons/taskAltOutlined.svg', im
  */
 export const initTaskAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TASKALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'taskAltOutlinedIcon', url: URL_TASKALTOUTLINED }, ...properties);
 }
 
 /**

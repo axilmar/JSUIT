@@ -15,7 +15,7 @@ const URL_SIXTYFPSOUTLINED = new URL('../../assets/icons/sixtyFpsOutlined.svg', 
  */
 export const initSixtyFpsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIXTYFPSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sixtyFpsOutlinedIcon', url: URL_SIXTYFPSOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TOC = new URL('../../assets/icons/toc.svg', import.meta.url).href;
  */
 export const initTocIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TOC }, ...properties);
+    initIcon(element, { additionalClassName: 'tocIcon', url: URL_TOC }, ...properties);
 }
 
 /**

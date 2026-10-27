@@ -15,7 +15,7 @@ const URL_PLAYLISTADDCHECKOUTLINED = new URL('../../assets/icons/playlistAddChec
  */
 export const initPlaylistAddCheckOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYLISTADDCHECKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'playlistAddCheckOutlinedIcon', url: URL_PLAYLISTADDCHECKOUTLINED }, ...properties);
 }
 
 /**

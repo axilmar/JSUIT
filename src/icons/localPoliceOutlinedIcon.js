@@ -15,7 +15,7 @@ const URL_LOCALPOLICEOUTLINED = new URL('../../assets/icons/localPoliceOutlined.
  */
 export const initLocalPoliceOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALPOLICEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localPoliceOutlinedIcon', url: URL_LOCALPOLICEOUTLINED }, ...properties);
 }
 
 /**

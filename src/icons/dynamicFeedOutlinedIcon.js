@@ -15,7 +15,7 @@ const URL_DYNAMICFEEDOUTLINED = new URL('../../assets/icons/dynamicFeedOutlined.
  */
 export const initDynamicFeedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DYNAMICFEEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'dynamicFeedOutlinedIcon', url: URL_DYNAMICFEEDOUTLINED }, ...properties);
 }
 
 /**

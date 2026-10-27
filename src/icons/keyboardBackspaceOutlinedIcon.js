@@ -15,7 +15,7 @@ const URL_KEYBOARDBACKSPACEOUTLINED = new URL('../../assets/icons/keyboardBacksp
  */
 export const initKeyboardBackspaceOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDBACKSPACEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardBackspaceOutlinedIcon', url: URL_KEYBOARDBACKSPACEOUTLINED }, ...properties);
 }
 
 /**

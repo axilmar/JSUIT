@@ -15,7 +15,7 @@ const URL_EGGOUTLINED = new URL('../../assets/icons/eggOutlined.svg', import.met
  */
 export const initEggOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EGGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'eggOutlinedIcon', url: URL_EGGOUTLINED }, ...properties);
 }
 
 /**

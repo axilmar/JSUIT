@@ -15,7 +15,7 @@ const URL_HDRSTRONG = new URL('../../assets/icons/hdrStrong.svg', import.meta.ur
  */
 export const initHdrStrongIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HDRSTRONG }, ...properties);
+    initIcon(element, { additionalClassName: 'hdrStrongIcon', url: URL_HDRSTRONG }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LOUPEOUTLINED = new URL('../../assets/icons/loupeOutlined.svg', import
  */
 export const initLoupeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOUPEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'loupeOutlinedIcon', url: URL_LOUPEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_KEYBOARDOUTLINED = new URL('../../assets/icons/keyboardOutlined.svg', 
  */
 export const initKeyboardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KEYBOARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'keyboardOutlinedIcon', url: URL_KEYBOARDOUTLINED }, ...properties);
 }
 
 /**

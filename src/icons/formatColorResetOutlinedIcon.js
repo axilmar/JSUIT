@@ -15,7 +15,7 @@ const URL_FORMATCOLORRESETOUTLINED = new URL('../../assets/icons/formatColorRese
  */
 export const initFormatColorResetOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATCOLORRESETOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatColorResetOutlinedIcon', url: URL_FORMATCOLORRESETOUTLINED }, ...properties);
 }
 
 /**

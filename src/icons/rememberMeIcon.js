@@ -15,7 +15,7 @@ const URL_REMEMBERME = new URL('../../assets/icons/rememberMe.svg', import.meta.
  */
 export const initRememberMeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REMEMBERME }, ...properties);
+    initIcon(element, { additionalClassName: 'rememberMeIcon', url: URL_REMEMBERME }, ...properties);
 }
 
 /**

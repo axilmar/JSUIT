@@ -15,7 +15,7 @@ const URL_TIMELAPSE = new URL('../../assets/icons/timelapse.svg', import.meta.ur
  */
 export const initTimelapseIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TIMELAPSE }, ...properties);
+    initIcon(element, { additionalClassName: 'timelapseIcon', url: URL_TIMELAPSE }, ...properties);
 }
 
 /**

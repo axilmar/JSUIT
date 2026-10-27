@@ -15,7 +15,7 @@ const URL_PORTABLEWIFIOFFOUTLINED = new URL('../../assets/icons/portableWifiOffO
  */
 export const initPortableWifiOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PORTABLEWIFIOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'portableWifiOffOutlinedIcon', url: URL_PORTABLEWIFIOFFOUTLINED }, ...properties);
 }
 
 /**

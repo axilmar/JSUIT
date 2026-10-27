@@ -15,7 +15,7 @@ const URL_CO2OUTLINED = new URL('../../assets/icons/co2Outlined.svg', import.met
  */
 export const initCo2OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CO2OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'co2OutlinedIcon', url: URL_CO2OUTLINED }, ...properties);
 }
 
 /**

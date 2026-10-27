@@ -15,7 +15,7 @@ const URL_FLIGHTCLASSOUTLINED = new URL('../../assets/icons/flightClassOutlined.
  */
 export const initFlightClassOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLIGHTCLASSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'flightClassOutlinedIcon', url: URL_FLIGHTCLASSOUTLINED }, ...properties);
 }
 
 /**

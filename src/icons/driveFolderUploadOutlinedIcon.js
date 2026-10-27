@@ -15,7 +15,7 @@ const URL_DRIVEFOLDERUPLOADOUTLINED = new URL('../../assets/icons/driveFolderUpl
  */
 export const initDriveFolderUploadOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DRIVEFOLDERUPLOADOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'driveFolderUploadOutlinedIcon', url: URL_DRIVEFOLDERUPLOADOUTLINED }, ...properties);
 }
 
 /**

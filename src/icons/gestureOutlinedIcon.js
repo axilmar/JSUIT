@@ -15,7 +15,7 @@ const URL_GESTUREOUTLINED = new URL('../../assets/icons/gestureOutlined.svg', im
  */
 export const initGestureOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GESTUREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'gestureOutlinedIcon', url: URL_GESTUREOUTLINED }, ...properties);
 }
 
 /**

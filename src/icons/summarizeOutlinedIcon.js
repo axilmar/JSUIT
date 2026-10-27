@@ -15,7 +15,7 @@ const URL_SUMMARIZEOUTLINED = new URL('../../assets/icons/summarizeOutlined.svg'
  */
 export const initSummarizeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUMMARIZEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'summarizeOutlinedIcon', url: URL_SUMMARIZEOUTLINED }, ...properties);
 }
 
 /**

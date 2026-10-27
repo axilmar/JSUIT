@@ -15,7 +15,7 @@ const URL_FORKLEFTOUTLINED = new URL('../../assets/icons/forkLeftOutlined.svg', 
  */
 export const initForkLeftOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORKLEFTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'forkLeftOutlinedIcon', url: URL_FORKLEFTOUTLINED }, ...properties);
 }
 
 /**

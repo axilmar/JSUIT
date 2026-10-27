@@ -15,7 +15,7 @@ const URL_GPSOFFOUTLINED = new URL('../../assets/icons/gpsOffOutlined.svg', impo
  */
 export const initGpsOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GPSOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'gpsOffOutlinedIcon', url: URL_GPSOFFOUTLINED }, ...properties);
 }
 
 /**

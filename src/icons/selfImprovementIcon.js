@@ -15,7 +15,7 @@ const URL_SELFIMPROVEMENT = new URL('../../assets/icons/selfImprovement.svg', im
  */
 export const initSelfImprovementIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SELFIMPROVEMENT }, ...properties);
+    initIcon(element, { additionalClassName: 'selfImprovementIcon', url: URL_SELFIMPROVEMENT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_AUTOFIXHIGH = new URL('../../assets/icons/autoFixHigh.svg', import.met
  */
 export const initAutoFixHighIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOFIXHIGH }, ...properties);
+    initIcon(element, { additionalClassName: 'autoFixHighIcon', url: URL_AUTOFIXHIGH }, ...properties);
 }
 
 /**

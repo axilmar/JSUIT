@@ -15,7 +15,7 @@ const URL_SLEDDINGOUTLINED = new URL('../../assets/icons/sleddingOutlined.svg', 
  */
 export const initSleddingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SLEDDINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'sleddingOutlinedIcon', url: URL_SLEDDINGOUTLINED }, ...properties);
 }
 
 /**

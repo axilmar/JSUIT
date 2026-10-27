@@ -15,7 +15,7 @@ const URL_CLEAR = new URL('../../assets/icons/clear.svg', import.meta.url).href;
  */
 export const initClearIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLEAR }, ...properties);
+    initIcon(element, { additionalClassName: 'clearIcon', url: URL_CLEAR }, ...properties);
 }
 
 /**

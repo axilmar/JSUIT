@@ -15,7 +15,7 @@ const URL_FILTERNONE = new URL('../../assets/icons/filterNone.svg', import.meta.
  */
 export const initFilterNoneIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERNONE }, ...properties);
+    initIcon(element, { additionalClassName: 'filterNoneIcon', url: URL_FILTERNONE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_HDRENHANCEDSELECT = new URL('../../assets/icons/hdrEnhancedSelect.svg'
  */
 export const initHdrEnhancedSelectIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HDRENHANCEDSELECT }, ...properties);
+    initIcon(element, { additionalClassName: 'hdrEnhancedSelectIcon', url: URL_HDRENHANCEDSELECT }, ...properties);
 }
 
 /**

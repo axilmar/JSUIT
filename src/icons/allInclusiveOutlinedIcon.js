@@ -15,7 +15,7 @@ const URL_ALLINCLUSIVEOUTLINED = new URL('../../assets/icons/allInclusiveOutline
  */
 export const initAllInclusiveOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ALLINCLUSIVEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'allInclusiveOutlinedIcon', url: URL_ALLINCLUSIVEOUTLINED }, ...properties);
 }
 
 /**

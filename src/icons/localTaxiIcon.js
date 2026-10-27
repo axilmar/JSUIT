@@ -15,7 +15,7 @@ const URL_LOCALTAXI = new URL('../../assets/icons/localTaxi.svg', import.meta.ur
  */
 export const initLocalTaxiIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALTAXI }, ...properties);
+    initIcon(element, { additionalClassName: 'localTaxiIcon', url: URL_LOCALTAXI }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FLUORESCENTOUTLINED = new URL('../../assets/icons/fluorescentOutlined.
  */
 export const initFluorescentOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLUORESCENTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fluorescentOutlinedIcon', url: URL_FLUORESCENTOUTLINED }, ...properties);
 }
 
 /**

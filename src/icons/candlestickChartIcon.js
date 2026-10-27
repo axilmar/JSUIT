@@ -15,7 +15,7 @@ const URL_CANDLESTICKCHART = new URL('../../assets/icons/candlestickChart.svg', 
  */
 export const initCandlestickChartIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CANDLESTICKCHART }, ...properties);
+    initIcon(element, { additionalClassName: 'candlestickChartIcon', url: URL_CANDLESTICKCHART }, ...properties);
 }
 
 /**

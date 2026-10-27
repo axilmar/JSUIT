@@ -15,7 +15,7 @@ const URL_SCOREBOARDOUTLINED = new URL('../../assets/icons/scoreboardOutlined.sv
  */
 export const initScoreboardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCOREBOARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'scoreboardOutlinedIcon', url: URL_SCOREBOARDOUTLINED }, ...properties);
 }
 
 /**

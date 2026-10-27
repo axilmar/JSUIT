@@ -15,7 +15,7 @@ const URL_CLEANHANDSOUTLINED = new URL('../../assets/icons/cleanHandsOutlined.sv
  */
 export const initCleanHandsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLEANHANDSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cleanHandsOutlinedIcon', url: URL_CLEANHANDSOUTLINED }, ...properties);
 }
 
 /**

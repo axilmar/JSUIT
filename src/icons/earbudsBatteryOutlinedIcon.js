@@ -15,7 +15,7 @@ const URL_EARBUDSBATTERYOUTLINED = new URL('../../assets/icons/earbudsBatteryOut
  */
 export const initEarbudsBatteryOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EARBUDSBATTERYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'earbudsBatteryOutlinedIcon', url: URL_EARBUDSBATTERYOUTLINED }, ...properties);
 }
 
 /**

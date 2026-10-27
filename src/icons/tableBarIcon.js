@@ -15,7 +15,7 @@ const URL_TABLEBAR = new URL('../../assets/icons/tableBar.svg', import.meta.url)
  */
 export const initTableBarIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TABLEBAR }, ...properties);
+    initIcon(element, { additionalClassName: 'tableBarIcon', url: URL_TABLEBAR }, ...properties);
 }
 
 /**

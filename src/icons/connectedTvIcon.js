@@ -15,7 +15,7 @@ const URL_CONNECTEDTV = new URL('../../assets/icons/connectedTv.svg', import.met
  */
 export const initConnectedTvIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONNECTEDTV }, ...properties);
+    initIcon(element, { additionalClassName: 'connectedTvIcon', url: URL_CONNECTEDTV }, ...properties);
 }
 
 /**

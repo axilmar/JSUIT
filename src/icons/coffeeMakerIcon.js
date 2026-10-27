@@ -15,7 +15,7 @@ const URL_COFFEEMAKER = new URL('../../assets/icons/coffeeMaker.svg', import.met
  */
 export const initCoffeeMakerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COFFEEMAKER }, ...properties);
+    initIcon(element, { additionalClassName: 'coffeeMakerIcon', url: URL_COFFEEMAKER }, ...properties);
 }
 
 /**

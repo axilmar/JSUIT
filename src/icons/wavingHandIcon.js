@@ -15,7 +15,7 @@ const URL_WAVINGHAND = new URL('../../assets/icons/wavingHand.svg', import.meta.
  */
 export const initWavingHandIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WAVINGHAND }, ...properties);
+    initIcon(element, { additionalClassName: 'wavingHandIcon', url: URL_WAVINGHAND }, ...properties);
 }
 
 /**

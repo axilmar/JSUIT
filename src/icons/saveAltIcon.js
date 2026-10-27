@@ -15,7 +15,7 @@ const URL_SAVEALT = new URL('../../assets/icons/saveAlt.svg', import.meta.url).h
  */
 export const initSaveAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SAVEALT }, ...properties);
+    initIcon(element, { additionalClassName: 'saveAltIcon', url: URL_SAVEALT }, ...properties);
 }
 
 /**

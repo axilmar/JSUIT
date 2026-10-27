@@ -15,7 +15,7 @@ const URL_SINGLEBEDOUTLINED = new URL('../../assets/icons/singleBedOutlined.svg'
  */
 export const initSingleBedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SINGLEBEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'singleBedOutlinedIcon', url: URL_SINGLEBEDOUTLINED }, ...properties);
 }
 
 /**

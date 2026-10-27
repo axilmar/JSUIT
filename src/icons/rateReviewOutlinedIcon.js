@@ -15,7 +15,7 @@ const URL_RATEREVIEWOUTLINED = new URL('../../assets/icons/rateReviewOutlined.sv
  */
 export const initRateReviewOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RATEREVIEWOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'rateReviewOutlinedIcon', url: URL_RATEREVIEWOUTLINED }, ...properties);
 }
 
 /**

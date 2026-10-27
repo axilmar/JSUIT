@@ -15,7 +15,7 @@ const URL_BREAKFASTDINING = new URL('../../assets/icons/breakfastDining.svg', im
  */
 export const initBreakfastDiningIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BREAKFASTDINING }, ...properties);
+    initIcon(element, { additionalClassName: 'breakfastDiningIcon', url: URL_BREAKFASTDINING }, ...properties);
 }
 
 /**

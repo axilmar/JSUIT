@@ -15,7 +15,7 @@ const URL_SCREENLOCKPORTRAIT = new URL('../../assets/icons/screenLockPortrait.sv
  */
 export const initScreenLockPortraitIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCREENLOCKPORTRAIT }, ...properties);
+    initIcon(element, { additionalClassName: 'screenLockPortraitIcon', url: URL_SCREENLOCKPORTRAIT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TEXTSMS = new URL('../../assets/icons/textsms.svg', import.meta.url).h
  */
 export const initTextsmsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTSMS }, ...properties);
+    initIcon(element, { additionalClassName: 'textsmsIcon', url: URL_TEXTSMS }, ...properties);
 }
 
 /**

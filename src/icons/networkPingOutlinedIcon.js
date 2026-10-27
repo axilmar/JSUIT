@@ -15,7 +15,7 @@ const URL_NETWORKPINGOUTLINED = new URL('../../assets/icons/networkPingOutlined.
  */
 export const initNetworkPingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NETWORKPINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'networkPingOutlinedIcon', url: URL_NETWORKPINGOUTLINED }, ...properties);
 }
 
 /**

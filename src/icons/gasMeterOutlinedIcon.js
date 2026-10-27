@@ -15,7 +15,7 @@ const URL_GASMETEROUTLINED = new URL('../../assets/icons/gasMeterOutlined.svg', 
  */
 export const initGasMeterOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GASMETEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'gasMeterOutlinedIcon', url: URL_GASMETEROUTLINED }, ...properties);
 }
 
 /**

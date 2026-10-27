@@ -15,7 +15,7 @@ const URL_PERMPHONEMSGOUTLINED = new URL('../../assets/icons/permPhoneMsgOutline
  */
 export const initPermPhoneMsgOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERMPHONEMSGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'permPhoneMsgOutlinedIcon', url: URL_PERMPHONEMSGOUTLINED }, ...properties);
 }
 
 /**

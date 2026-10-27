@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initHTMLQuoteElement = (element, ...properties) => {
     console.assert(element instanceof HTMLQuoteElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'HTMLQuoteElement' }, ...properties);
 }
 
 /**
@@ -22,7 +22,7 @@ export const initHTMLQuoteElement = (element, ...properties) => {
  */
 export const blockquote = (...properties) => {
     const element = document.createElement('blockquote');
-    initHTMLQuoteElement(element, ...properties);
+    initHTMLQuoteElement(element, { additionalClassName: 'blockquote' }, ...properties);
     return element;
 }
 
@@ -35,6 +35,6 @@ export const blockquote = (...properties) => {
  */
 export const q = (...properties) => {
     const element = document.createElement('q');
-    initHTMLQuoteElement(element, ...properties);
+    initHTMLQuoteElement(element, { additionalClassName: 'q' }, ...properties);
     return element;
 }

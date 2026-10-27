@@ -15,7 +15,7 @@ const URL_PERSONPINCIRCLE = new URL('../../assets/icons/personPinCircle.svg', im
  */
 export const initPersonPinCircleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERSONPINCIRCLE }, ...properties);
+    initIcon(element, { additionalClassName: 'personPinCircleIcon', url: URL_PERSONPINCIRCLE }, ...properties);
 }
 
 /**

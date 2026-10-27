@@ -15,7 +15,7 @@ const URL_CURTAINSCLOSED = new URL('../../assets/icons/curtainsClosed.svg', impo
  */
 export const initCurtainsClosedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CURTAINSCLOSED }, ...properties);
+    initIcon(element, { additionalClassName: 'curtainsClosedIcon', url: URL_CURTAINSCLOSED }, ...properties);
 }
 
 /**

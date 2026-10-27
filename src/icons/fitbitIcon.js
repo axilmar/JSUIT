@@ -15,7 +15,7 @@ const URL_FITBIT = new URL('../../assets/icons/fitbit.svg', import.meta.url).hre
  */
 export const initFitbitIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FITBIT }, ...properties);
+    initIcon(element, { additionalClassName: 'fitbitIcon', url: URL_FITBIT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_COPRESENTOUTLINED = new URL('../../assets/icons/coPresentOutlined.svg'
  */
 export const initCoPresentOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COPRESENTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'coPresentOutlinedIcon', url: URL_COPRESENTOUTLINED }, ...properties);
 }
 
 /**

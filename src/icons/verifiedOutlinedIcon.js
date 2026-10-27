@@ -15,7 +15,7 @@ const URL_VERIFIEDOUTLINED = new URL('../../assets/icons/verifiedOutlined.svg', 
  */
 export const initVerifiedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VERIFIEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'verifiedOutlinedIcon', url: URL_VERIFIEDOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_HVACOUTLINED = new URL('../../assets/icons/hvacOutlined.svg', import.m
  */
 export const initHvacOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HVACOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hvacOutlinedIcon', url: URL_HVACOUTLINED }, ...properties);
 }
 
 /**

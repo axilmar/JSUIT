@@ -15,7 +15,7 @@ const URL_BUSINESSCENTEROUTLINED = new URL('../../assets/icons/businessCenterOut
  */
 export const initBusinessCenterOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BUSINESSCENTEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'businessCenterOutlinedIcon', url: URL_BUSINESSCENTEROUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_GPPMAYBEOUTLINED = new URL('../../assets/icons/gppMaybeOutlined.svg', 
  */
 export const initGppMaybeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GPPMAYBEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'gppMaybeOutlinedIcon', url: URL_GPPMAYBEOUTLINED }, ...properties);
 }
 
 /**

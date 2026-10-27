@@ -15,7 +15,7 @@ const URL_BALCONYOUTLINED = new URL('../../assets/icons/balconyOutlined.svg', im
  */
 export const initBalconyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BALCONYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'balconyOutlinedIcon', url: URL_BALCONYOUTLINED }, ...properties);
 }
 
 /**

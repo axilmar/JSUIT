@@ -15,7 +15,7 @@ const URL_CO2 = new URL('../../assets/icons/co2.svg', import.meta.url).href;
  */
 export const initCo2Icon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CO2 }, ...properties);
+    initIcon(element, { additionalClassName: 'co2Icon', url: URL_CO2 }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_EDITROAD = new URL('../../assets/icons/editRoad.svg', import.meta.url)
  */
 export const initEditRoadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EDITROAD }, ...properties);
+    initIcon(element, { additionalClassName: 'editRoadIcon', url: URL_EDITROAD }, ...properties);
 }
 
 /**

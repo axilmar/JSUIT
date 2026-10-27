@@ -15,7 +15,7 @@ const URL_LOCALCAFEOUTLINED = new URL('../../assets/icons/localCafeOutlined.svg'
  */
 export const initLocalCafeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALCAFEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localCafeOutlinedIcon', url: URL_LOCALCAFEOUTLINED }, ...properties);
 }
 
 /**

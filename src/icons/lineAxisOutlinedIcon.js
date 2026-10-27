@@ -15,7 +15,7 @@ const URL_LINEAXISOUTLINED = new URL('../../assets/icons/lineAxisOutlined.svg', 
  */
 export const initLineAxisOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LINEAXISOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'lineAxisOutlinedIcon', url: URL_LINEAXISOUTLINED }, ...properties);
 }
 
 /**

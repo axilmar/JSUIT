@@ -15,7 +15,7 @@ const URL_CONTENTCUTOUTLINED = new URL('../../assets/icons/contentCutOutlined.sv
  */
 export const initContentCutOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTENTCUTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'contentCutOutlinedIcon', url: URL_CONTENTCUTOUTLINED }, ...properties);
 }
 
 /**

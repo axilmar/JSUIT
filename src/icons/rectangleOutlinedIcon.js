@@ -15,7 +15,7 @@ const URL_RECTANGLEOUTLINED = new URL('../../assets/icons/rectangleOutlined.svg'
  */
 export const initRectangleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RECTANGLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'rectangleOutlinedIcon', url: URL_RECTANGLEOUTLINED }, ...properties);
 }
 
 /**

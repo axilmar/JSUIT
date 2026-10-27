@@ -15,7 +15,7 @@ const URL_CLOSEFULLSCREEN = new URL('../../assets/icons/closeFullscreen.svg', im
  */
 export const initCloseFullscreenIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOSEFULLSCREEN }, ...properties);
+    initIcon(element, { additionalClassName: 'closeFullscreenIcon', url: URL_CLOSEFULLSCREEN }, ...properties);
 }
 
 /**

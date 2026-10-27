@@ -15,7 +15,7 @@ const URL_HOWTOREGOUTLINED = new URL('../../assets/icons/howToRegOutlined.svg', 
  */
 export const initHowToRegOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOWTOREGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'howToRegOutlinedIcon', url: URL_HOWTOREGOUTLINED }, ...properties);
 }
 
 /**

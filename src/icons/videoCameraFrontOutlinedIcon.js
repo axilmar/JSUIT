@@ -15,7 +15,7 @@ const URL_VIDEOCAMERAFRONTOUTLINED = new URL('../../assets/icons/videoCameraFron
  */
 export const initVideoCameraFrontOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOCAMERAFRONTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'videoCameraFrontOutlinedIcon', url: URL_VIDEOCAMERAFRONTOUTLINED }, ...properties);
 }
 
 /**

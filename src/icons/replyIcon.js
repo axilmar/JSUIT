@@ -15,7 +15,7 @@ const URL_REPLY = new URL('../../assets/icons/reply.svg', import.meta.url).href;
  */
 export const initReplyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REPLY }, ...properties);
+    initIcon(element, { additionalClassName: 'replyIcon', url: URL_REPLY }, ...properties);
 }
 
 /**

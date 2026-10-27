@@ -15,7 +15,7 @@ const URL_NUMBERSOUTLINED = new URL('../../assets/icons/numbersOutlined.svg', im
  */
 export const initNumbersOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NUMBERSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'numbersOutlinedIcon', url: URL_NUMBERSOUTLINED }, ...properties);
 }
 
 /**

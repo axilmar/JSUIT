@@ -15,7 +15,7 @@ const URL_SENDTIMEEXTENSION = new URL('../../assets/icons/sendTimeExtension.svg'
  */
 export const initSendTimeExtensionIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SENDTIMEEXTENSION }, ...properties);
+    initIcon(element, { additionalClassName: 'sendTimeExtensionIcon', url: URL_SENDTIMEEXTENSION }, ...properties);
 }
 
 /**

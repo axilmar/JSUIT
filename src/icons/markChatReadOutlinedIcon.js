@@ -15,7 +15,7 @@ const URL_MARKCHATREADOUTLINED = new URL('../../assets/icons/markChatReadOutline
  */
 export const initMarkChatReadOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MARKCHATREADOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'markChatReadOutlinedIcon', url: URL_MARKCHATREADOUTLINED }, ...properties);
 }
 
 /**

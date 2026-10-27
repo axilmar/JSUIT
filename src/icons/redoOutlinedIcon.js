@@ -15,7 +15,7 @@ const URL_REDOOUTLINED = new URL('../../assets/icons/redoOutlined.svg', import.m
  */
 export const initRedoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REDOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'redoOutlinedIcon', url: URL_REDOOUTLINED }, ...properties);
 }
 
 /**

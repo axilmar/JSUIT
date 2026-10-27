@@ -15,7 +15,7 @@ const URL_INSTALLMOBILEOUTLINED = new URL('../../assets/icons/installMobileOutli
  */
 export const initInstallMobileOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_INSTALLMOBILEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'installMobileOutlinedIcon', url: URL_INSTALLMOBILEOUTLINED }, ...properties);
 }
 
 /**

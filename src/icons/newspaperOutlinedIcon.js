@@ -15,7 +15,7 @@ const URL_NEWSPAPEROUTLINED = new URL('../../assets/icons/newspaperOutlined.svg'
  */
 export const initNewspaperOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NEWSPAPEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'newspaperOutlinedIcon', url: URL_NEWSPAPEROUTLINED }, ...properties);
 }
 
 /**

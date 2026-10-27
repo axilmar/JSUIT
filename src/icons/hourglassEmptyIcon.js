@@ -15,7 +15,7 @@ const URL_HOURGLASSEMPTY = new URL('../../assets/icons/hourglassEmpty.svg', impo
  */
 export const initHourglassEmptyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HOURGLASSEMPTY }, ...properties);
+    initIcon(element, { additionalClassName: 'hourglassEmptyIcon', url: URL_HOURGLASSEMPTY }, ...properties);
 }
 
 /**

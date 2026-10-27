@@ -15,7 +15,7 @@ const URL_SKIPPREVIOUSOUTLINED = new URL('../../assets/icons/skipPreviousOutline
  */
 export const initSkipPreviousOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SKIPPREVIOUSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'skipPreviousOutlinedIcon', url: URL_SKIPPREVIOUSOUTLINED }, ...properties);
 }
 
 /**

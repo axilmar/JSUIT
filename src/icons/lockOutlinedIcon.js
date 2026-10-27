@@ -15,7 +15,7 @@ const URL_LOCKOUTLINED = new URL('../../assets/icons/lockOutlined.svg', import.m
  */
 export const initLockOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'lockOutlinedIcon', url: URL_LOCKOUTLINED }, ...properties);
 }
 
 /**

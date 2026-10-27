@@ -15,7 +15,7 @@ const URL_DONOTSTEP = new URL('../../assets/icons/doNotStep.svg', import.meta.ur
  */
 export const initDoNotStepIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DONOTSTEP }, ...properties);
+    initIcon(element, { additionalClassName: 'doNotStepIcon', url: URL_DONOTSTEP }, ...properties);
 }
 
 /**

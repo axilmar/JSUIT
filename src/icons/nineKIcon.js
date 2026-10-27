@@ -15,7 +15,7 @@ const URL_NINEK = new URL('../../assets/icons/nineK.svg', import.meta.url).href;
  */
 export const initNineKIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NINEK }, ...properties);
+    initIcon(element, { additionalClassName: 'nineKIcon', url: URL_NINEK }, ...properties);
 }
 
 /**

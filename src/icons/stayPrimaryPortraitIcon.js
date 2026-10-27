@@ -15,7 +15,7 @@ const URL_STAYPRIMARYPORTRAIT = new URL('../../assets/icons/stayPrimaryPortrait.
  */
 export const initStayPrimaryPortraitIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STAYPRIMARYPORTRAIT }, ...properties);
+    initIcon(element, { additionalClassName: 'stayPrimaryPortraitIcon', url: URL_STAYPRIMARYPORTRAIT }, ...properties);
 }
 
 /**

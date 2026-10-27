@@ -15,7 +15,7 @@ const URL_TUNEOUTLINED = new URL('../../assets/icons/tuneOutlined.svg', import.m
  */
 export const initTuneOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TUNEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'tuneOutlinedIcon', url: URL_TUNEOUTLINED }, ...properties);
 }
 
 /**

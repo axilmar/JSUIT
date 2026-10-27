@@ -15,7 +15,7 @@ const URL_ROLLERSKATING = new URL('../../assets/icons/rollerSkating.svg', import
  */
 export const initRollerSkatingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROLLERSKATING }, ...properties);
+    initIcon(element, { additionalClassName: 'rollerSkatingIcon', url: URL_ROLLERSKATING }, ...properties);
 }
 
 /**

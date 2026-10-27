@@ -15,7 +15,7 @@ const URL_LAYERSCLEAR = new URL('../../assets/icons/layersClear.svg', import.met
  */
 export const initLayersClearIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LAYERSCLEAR }, ...properties);
+    initIcon(element, { additionalClassName: 'layersClearIcon', url: URL_LAYERSCLEAR }, ...properties);
 }
 
 /**

@@ -23,7 +23,7 @@ import { attachDateTimePicker, attachSegmentedInput } from "./dateTimeUtil.js";
  */
 export const initMonthInput = (element, ...properties) => {
     console.assert(element instanceof HTMLInputElement);
-    initInput(element, ...properties);
+    initInput(element, { additionalClassName: 'monthInput' }, ...properties);
     validateOnInput(element, true);
     attachSegmentedInput(element, 'month');
     attachDateTimePicker(element);

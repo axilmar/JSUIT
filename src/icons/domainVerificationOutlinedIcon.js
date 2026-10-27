@@ -15,7 +15,7 @@ const URL_DOMAINVERIFICATIONOUTLINED = new URL('../../assets/icons/domainVerific
  */
 export const initDomainVerificationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOMAINVERIFICATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'domainVerificationOutlinedIcon', url: URL_DOMAINVERIFICATIONOUTLINED }, ...properties);
 }
 
 /**

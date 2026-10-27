@@ -15,7 +15,7 @@ const URL_MONITOR = new URL('../../assets/icons/monitor.svg', import.meta.url).h
  */
 export const initMonitorIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MONITOR }, ...properties);
+    initIcon(element, { additionalClassName: 'monitorIcon', url: URL_MONITOR }, ...properties);
 }
 
 /**

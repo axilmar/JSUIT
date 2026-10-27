@@ -15,7 +15,7 @@ const URL_SPACEDASHBOARDOUTLINED = new URL('../../assets/icons/spaceDashboardOut
  */
 export const initSpaceDashboardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPACEDASHBOARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'spaceDashboardOutlinedIcon', url: URL_SPACEDASHBOARDOUTLINED }, ...properties);
 }
 
 /**

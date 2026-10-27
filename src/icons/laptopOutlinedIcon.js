@@ -15,7 +15,7 @@ const URL_LAPTOPOUTLINED = new URL('../../assets/icons/laptopOutlined.svg', impo
  */
 export const initLaptopOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LAPTOPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'laptopOutlinedIcon', url: URL_LAPTOPOUTLINED }, ...properties);
 }
 
 /**

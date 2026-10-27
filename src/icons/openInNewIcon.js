@@ -15,7 +15,7 @@ const URL_OPENINNEW = new URL('../../assets/icons/openInNew.svg', import.meta.ur
  */
 export const initOpenInNewIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OPENINNEW }, ...properties);
+    initIcon(element, { additionalClassName: 'openInNewIcon', url: URL_OPENINNEW }, ...properties);
 }
 
 /**

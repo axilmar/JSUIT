@@ -15,7 +15,7 @@ const URL_LANOUTLINED = new URL('../../assets/icons/lanOutlined.svg', import.met
  */
 export const initLanOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LANOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'lanOutlinedIcon', url: URL_LANOUTLINED }, ...properties);
 }
 
 /**

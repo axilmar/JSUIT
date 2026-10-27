@@ -15,7 +15,7 @@ const URL_NFCOUTLINED = new URL('../../assets/icons/nfcOutlined.svg', import.met
  */
 export const initNfcOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NFCOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'nfcOutlinedIcon', url: URL_NFCOUTLINED }, ...properties);
 }
 
 /**

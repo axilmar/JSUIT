@@ -14,7 +14,7 @@ import { validateOnInput } from "./validateOnInput.js";
 export const initTelInput = (element, ...properties) => {
     console.assert(element instanceof HTMLInputElement);
     element.type = 'tel';
-    initInput(element, ...properties);
+    initInput(element, { additionalClassName: 'telInput' }, ...properties);
     validateOnInput(element, true);
 }
 

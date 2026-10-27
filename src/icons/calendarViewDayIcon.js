@@ -15,7 +15,7 @@ const URL_CALENDARVIEWDAY = new URL('../../assets/icons/calendarViewDay.svg', im
  */
 export const initCalendarViewDayIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALENDARVIEWDAY }, ...properties);
+    initIcon(element, { additionalClassName: 'calendarViewDayIcon', url: URL_CALENDARVIEWDAY }, ...properties);
 }
 
 /**

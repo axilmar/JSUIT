@@ -15,7 +15,7 @@ const URL_DOORBELL = new URL('../../assets/icons/doorbell.svg', import.meta.url)
  */
 export const initDoorbellIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOORBELL }, ...properties);
+    initIcon(element, { additionalClassName: 'doorbellIcon', url: URL_DOORBELL }, ...properties);
 }
 
 /**

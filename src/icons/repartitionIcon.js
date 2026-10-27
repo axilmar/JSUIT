@@ -15,7 +15,7 @@ const URL_REPARTITION = new URL('../../assets/icons/repartition.svg', import.met
  */
 export const initRepartitionIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REPARTITION }, ...properties);
+    initIcon(element, { additionalClassName: 'repartitionIcon', url: URL_REPARTITION }, ...properties);
 }
 
 /**

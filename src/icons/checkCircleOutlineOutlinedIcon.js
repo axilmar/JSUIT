@@ -15,7 +15,7 @@ const URL_CHECKCIRCLEOUTLINEOUTLINED = new URL('../../assets/icons/checkCircleOu
  */
 export const initCheckCircleOutlineOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHECKCIRCLEOUTLINEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'checkCircleOutlineOutlinedIcon', url: URL_CHECKCIRCLEOUTLINEOUTLINED }, ...properties);
 }
 
 /**

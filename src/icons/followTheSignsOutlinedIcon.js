@@ -15,7 +15,7 @@ const URL_FOLLOWTHESIGNSOUTLINED = new URL('../../assets/icons/followTheSignsOut
  */
 export const initFollowTheSignsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOLLOWTHESIGNSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'followTheSignsOutlinedIcon', url: URL_FOLLOWTHESIGNSOUTLINED }, ...properties);
 }
 
 /**

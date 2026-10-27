@@ -15,7 +15,7 @@ const URL_STADIUM = new URL('../../assets/icons/stadium.svg', import.meta.url).h
  */
 export const initStadiumIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STADIUM }, ...properties);
+    initIcon(element, { additionalClassName: 'stadiumIcon', url: URL_STADIUM }, ...properties);
 }
 
 /**

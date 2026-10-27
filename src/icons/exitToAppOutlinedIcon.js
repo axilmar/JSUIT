@@ -15,7 +15,7 @@ const URL_EXITTOAPPOUTLINED = new URL('../../assets/icons/exitToAppOutlined.svg'
  */
 export const initExitToAppOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXITTOAPPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'exitToAppOutlinedIcon', url: URL_EXITTOAPPOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_ACCOUNTBALANCEWALLETOUTLINED = new URL('../../assets/icons/accountBala
  */
 export const initAccountBalanceWalletOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACCOUNTBALANCEWALLETOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'accountBalanceWalletOutlinedIcon', url: URL_ACCOUNTBALANCEWALLETOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PLAYCIRCLE = new URL('../../assets/icons/playCircle.svg', import.meta.
  */
 export const initPlayCircleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYCIRCLE }, ...properties);
+    initIcon(element, { additionalClassName: 'playCircleIcon', url: URL_PLAYCIRCLE }, ...properties);
 }
 
 /**

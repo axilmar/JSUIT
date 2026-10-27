@@ -15,7 +15,7 @@ const URL_ASSIGNMENTTURNEDIN = new URL('../../assets/icons/assignmentTurnedIn.sv
  */
 export const initAssignmentTurnedInIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ASSIGNMENTTURNEDIN }, ...properties);
+    initIcon(element, { additionalClassName: 'assignmentTurnedInIcon', url: URL_ASSIGNMENTTURNEDIN }, ...properties);
 }
 
 /**

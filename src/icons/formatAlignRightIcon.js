@@ -15,7 +15,7 @@ const URL_FORMATALIGNRIGHT = new URL('../../assets/icons/formatAlignRight.svg', 
  */
 export const initFormatAlignRightIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATALIGNRIGHT }, ...properties);
+    initIcon(element, { additionalClassName: 'formatAlignRightIcon', url: URL_FORMATALIGNRIGHT }, ...properties);
 }
 
 /**

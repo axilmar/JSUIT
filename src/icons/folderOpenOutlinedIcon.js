@@ -15,7 +15,7 @@ const URL_FOLDEROPENOUTLINED = new URL('../../assets/icons/folderOpenOutlined.sv
  */
 export const initFolderOpenOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOLDEROPENOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'folderOpenOutlinedIcon', url: URL_FOLDEROPENOUTLINED }, ...properties);
 }
 
 /**

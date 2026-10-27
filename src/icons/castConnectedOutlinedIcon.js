@@ -15,7 +15,7 @@ const URL_CASTCONNECTEDOUTLINED = new URL('../../assets/icons/castConnectedOutli
  */
 export const initCastConnectedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CASTCONNECTEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'castConnectedOutlinedIcon', url: URL_CASTCONNECTEDOUTLINED }, ...properties);
 }
 
 /**

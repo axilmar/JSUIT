@@ -15,7 +15,7 @@ const URL_BROWSERUPDATED = new URL('../../assets/icons/browserUpdated.svg', impo
  */
 export const initBrowserUpdatedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BROWSERUPDATED }, ...properties);
+    initIcon(element, { additionalClassName: 'browserUpdatedIcon', url: URL_BROWSERUPDATED }, ...properties);
 }
 
 /**

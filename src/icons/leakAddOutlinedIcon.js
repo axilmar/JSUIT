@@ -15,7 +15,7 @@ const URL_LEAKADDOUTLINED = new URL('../../assets/icons/leakAddOutlined.svg', im
  */
 export const initLeakAddOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LEAKADDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'leakAddOutlinedIcon', url: URL_LEAKADDOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FORMATQUOTEOUTLINED = new URL('../../assets/icons/formatQuoteOutlined.
  */
 export const initFormatQuoteOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATQUOTEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'formatQuoteOutlinedIcon', url: URL_FORMATQUOTEOUTLINED }, ...properties);
 }
 
 /**

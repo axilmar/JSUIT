@@ -15,7 +15,7 @@ const URL_WBIRIDESCENT = new URL('../../assets/icons/wbIridescent.svg', import.m
  */
 export const initWbIridescentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WBIRIDESCENT }, ...properties);
+    initIcon(element, { additionalClassName: 'wbIridescentIcon', url: URL_WBIRIDESCENT }, ...properties);
 }
 
 /**

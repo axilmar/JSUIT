@@ -15,7 +15,7 @@ const URL_LINEARSCALE = new URL('../../assets/icons/linearScale.svg', import.met
  */
 export const initLinearScaleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LINEARSCALE }, ...properties);
+    initIcon(element, { additionalClassName: 'linearScaleIcon', url: URL_LINEARSCALE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FIREEXTINGUISHEROUTLINED = new URL('../../assets/icons/fireExtinguishe
  */
 export const initFireExtinguisherOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIREEXTINGUISHEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fireExtinguisherOutlinedIcon', url: URL_FIREEXTINGUISHEROUTLINED }, ...properties);
 }
 
 /**

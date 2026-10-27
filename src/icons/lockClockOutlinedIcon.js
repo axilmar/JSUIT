@@ -15,7 +15,7 @@ const URL_LOCKCLOCKOUTLINED = new URL('../../assets/icons/lockClockOutlined.svg'
  */
 export const initLockClockOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCKCLOCKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'lockClockOutlinedIcon', url: URL_LOCKCLOCKOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_WINDPOWEROUTLINED = new URL('../../assets/icons/windPowerOutlined.svg'
  */
 export const initWindPowerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WINDPOWEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'windPowerOutlinedIcon', url: URL_WINDPOWEROUTLINED }, ...properties);
 }
 
 /**

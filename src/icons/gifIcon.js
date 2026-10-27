@@ -15,7 +15,7 @@ const URL_GIF = new URL('../../assets/icons/gif.svg', import.meta.url).href;
  */
 export const initGifIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GIF }, ...properties);
+    initIcon(element, { additionalClassName: 'gifIcon', url: URL_GIF }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SPLITSCREENOUTLINED = new URL('../../assets/icons/splitscreenOutlined.
  */
 export const initSplitscreenOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPLITSCREENOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'splitscreenOutlinedIcon', url: URL_SPLITSCREENOUTLINED }, ...properties);
 }
 
 /**

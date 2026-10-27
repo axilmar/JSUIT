@@ -15,7 +15,7 @@ const URL_TAXIALERTOUTLINED = new URL('../../assets/icons/taxiAlertOutlined.svg'
  */
 export const initTaxiAlertOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TAXIALERTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'taxiAlertOutlinedIcon', url: URL_TAXIALERTOUTLINED }, ...properties);
 }
 
 /**

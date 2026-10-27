@@ -15,7 +15,7 @@ const URL_ACCESSTIMEOUTLINED = new URL('../../assets/icons/accessTimeOutlined.sv
  */
 export const initAccessTimeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACCESSTIMEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'accessTimeOutlinedIcon', url: URL_ACCESSTIMEOUTLINED }, ...properties);
 }
 
 /**

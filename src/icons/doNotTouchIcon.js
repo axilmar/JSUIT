@@ -15,7 +15,7 @@ const URL_DONOTTOUCH = new URL('../../assets/icons/doNotTouch.svg', import.meta.
  */
 export const initDoNotTouchIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DONOTTOUCH }, ...properties);
+    initIcon(element, { additionalClassName: 'doNotTouchIcon', url: URL_DONOTTOUCH }, ...properties);
 }
 
 /**

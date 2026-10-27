@@ -15,7 +15,7 @@ const URL_VIDEOFILE = new URL('../../assets/icons/videoFile.svg', import.meta.ur
  */
 export const initVideoFileIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIDEOFILE }, ...properties);
+    initIcon(element, { additionalClassName: 'videoFileIcon', url: URL_VIDEOFILE }, ...properties);
 }
 
 /**

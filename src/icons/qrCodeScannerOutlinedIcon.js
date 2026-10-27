@@ -15,7 +15,7 @@ const URL_QRCODESCANNEROUTLINED = new URL('../../assets/icons/qrCodeScannerOutli
  */
 export const initQrCodeScannerOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_QRCODESCANNEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'qrCodeScannerOutlinedIcon', url: URL_QRCODESCANNEROUTLINED }, ...properties);
 }
 
 /**

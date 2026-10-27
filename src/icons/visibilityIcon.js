@@ -15,7 +15,7 @@ const URL_VISIBILITY = new URL('../../assets/icons/visibility.svg', import.meta.
  */
 export const initVisibilityIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VISIBILITY }, ...properties);
+    initIcon(element, { additionalClassName: 'visibilityIcon', url: URL_VISIBILITY }, ...properties);
 }
 
 /**

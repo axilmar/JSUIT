@@ -15,7 +15,7 @@ const URL_AUTOMODE = new URL('../../assets/icons/autoMode.svg', import.meta.url)
  */
 export const initAutoModeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOMODE }, ...properties);
+    initIcon(element, { additionalClassName: 'autoModeIcon', url: URL_AUTOMODE }, ...properties);
 }
 
 /**

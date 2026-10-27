@@ -15,7 +15,7 @@ const URL_STACKEDLINECHART = new URL('../../assets/icons/stackedLineChart.svg', 
  */
 export const initStackedLineChartIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STACKEDLINECHART }, ...properties);
+    initIcon(element, { additionalClassName: 'stackedLineChartIcon', url: URL_STACKEDLINECHART }, ...properties);
 }
 
 /**

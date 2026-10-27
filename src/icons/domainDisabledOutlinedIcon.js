@@ -15,7 +15,7 @@ const URL_DOMAINDISABLEDOUTLINED = new URL('../../assets/icons/domainDisabledOut
  */
 export const initDomainDisabledOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DOMAINDISABLEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'domainDisabledOutlinedIcon', url: URL_DOMAINDISABLEDOUTLINED }, ...properties);
 }
 
 /**

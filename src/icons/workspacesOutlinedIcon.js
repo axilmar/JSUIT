@@ -15,7 +15,7 @@ const URL_WORKSPACESOUTLINED = new URL('../../assets/icons/workspacesOutlined.sv
  */
 export const initWorkspacesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WORKSPACESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'workspacesOutlinedIcon', url: URL_WORKSPACESOUTLINED }, ...properties);
 }
 
 /**

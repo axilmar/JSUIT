@@ -15,7 +15,7 @@ const URL_LOCATIONOFFOUTLINED = new URL('../../assets/icons/locationOffOutlined.
  */
 export const initLocationOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCATIONOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'locationOffOutlinedIcon', url: URL_LOCATIONOFFOUTLINED }, ...properties);
 }
 
 /**

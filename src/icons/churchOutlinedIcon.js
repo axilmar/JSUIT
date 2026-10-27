@@ -15,7 +15,7 @@ const URL_CHURCHOUTLINED = new URL('../../assets/icons/churchOutlined.svg', impo
  */
 export const initChurchOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHURCHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'churchOutlinedIcon', url: URL_CHURCHOUTLINED }, ...properties);
 }
 
 /**

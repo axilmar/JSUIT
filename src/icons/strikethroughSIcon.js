@@ -15,7 +15,7 @@ const URL_STRIKETHROUGHS = new URL('../../assets/icons/strikethroughS.svg', impo
  */
 export const initStrikethroughSIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STRIKETHROUGHS }, ...properties);
+    initIcon(element, { additionalClassName: 'strikethroughSIcon', url: URL_STRIKETHROUGHS }, ...properties);
 }
 
 /**

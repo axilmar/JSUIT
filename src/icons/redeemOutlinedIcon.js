@@ -15,7 +15,7 @@ const URL_REDEEMOUTLINED = new URL('../../assets/icons/redeemOutlined.svg', impo
  */
 export const initRedeemOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REDEEMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'redeemOutlinedIcon', url: URL_REDEEMOUTLINED }, ...properties);
 }
 
 /**

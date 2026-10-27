@@ -15,7 +15,7 @@ const URL_WAVESOUTLINED = new URL('../../assets/icons/wavesOutlined.svg', import
  */
 export const initWavesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WAVESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'wavesOutlinedIcon', url: URL_WAVESOUTLINED }, ...properties);
 }
 
 /**

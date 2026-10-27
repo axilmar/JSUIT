@@ -15,7 +15,7 @@ const URL_BIKESCOOTER = new URL('../../assets/icons/bikeScooter.svg', import.met
  */
 export const initBikeScooterIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BIKESCOOTER }, ...properties);
+    initIcon(element, { additionalClassName: 'bikeScooterIcon', url: URL_BIKESCOOTER }, ...properties);
 }
 
 /**

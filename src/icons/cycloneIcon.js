@@ -15,7 +15,7 @@ const URL_CYCLONE = new URL('../../assets/icons/cyclone.svg', import.meta.url).h
  */
 export const initCycloneIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CYCLONE }, ...properties);
+    initIcon(element, { additionalClassName: 'cycloneIcon', url: URL_CYCLONE }, ...properties);
 }
 
 /**

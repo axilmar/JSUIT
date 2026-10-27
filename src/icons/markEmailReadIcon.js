@@ -15,7 +15,7 @@ const URL_MARKEMAILREAD = new URL('../../assets/icons/markEmailRead.svg', import
  */
 export const initMarkEmailReadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MARKEMAILREAD }, ...properties);
+    initIcon(element, { additionalClassName: 'markEmailReadIcon', url: URL_MARKEMAILREAD }, ...properties);
 }
 
 /**

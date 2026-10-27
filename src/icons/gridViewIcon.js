@@ -15,7 +15,7 @@ const URL_GRIDVIEW = new URL('../../assets/icons/gridView.svg', import.meta.url)
  */
 export const initGridViewIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRIDVIEW }, ...properties);
+    initIcon(element, { additionalClassName: 'gridViewIcon', url: URL_GRIDVIEW }, ...properties);
 }
 
 /**

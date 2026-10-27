@@ -15,7 +15,7 @@ const URL_TRANSCRIBEOUTLINED = new URL('../../assets/icons/transcribeOutlined.sv
  */
 export const initTranscribeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRANSCRIBEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'transcribeOutlinedIcon', url: URL_TRANSCRIBEOUTLINED }, ...properties);
 }
 
 /**

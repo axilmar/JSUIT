@@ -15,7 +15,7 @@ const URL_BORDEROUTER = new URL('../../assets/icons/borderOuter.svg', import.met
  */
 export const initBorderOuterIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BORDEROUTER }, ...properties);
+    initIcon(element, { additionalClassName: 'borderOuterIcon', url: URL_BORDEROUTER }, ...properties);
 }
 
 /**

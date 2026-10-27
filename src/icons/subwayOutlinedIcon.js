@@ -15,7 +15,7 @@ const URL_SUBWAYOUTLINED = new URL('../../assets/icons/subwayOutlined.svg', impo
  */
 export const initSubwayOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUBWAYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'subwayOutlinedIcon', url: URL_SUBWAYOUTLINED }, ...properties);
 }
 
 /**

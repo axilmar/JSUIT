@@ -15,7 +15,7 @@ const URL_PERSONREMOVEALT1OUTLINED = new URL('../../assets/icons/personRemoveAlt
  */
 export const initPersonRemoveAlt1OutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERSONREMOVEALT1OUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'personRemoveAlt1OutlinedIcon', url: URL_PERSONREMOVEALT1OUTLINED }, ...properties);
 }
 
 /**

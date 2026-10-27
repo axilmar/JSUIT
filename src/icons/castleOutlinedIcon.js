@@ -15,7 +15,7 @@ const URL_CASTLEOUTLINED = new URL('../../assets/icons/castleOutlined.svg', impo
  */
 export const initCastleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CASTLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'castleOutlinedIcon', url: URL_CASTLEOUTLINED }, ...properties);
 }
 
 /**

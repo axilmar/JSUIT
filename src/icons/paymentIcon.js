@@ -15,7 +15,7 @@ const URL_PAYMENT = new URL('../../assets/icons/payment.svg', import.meta.url).h
  */
 export const initPaymentIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PAYMENT }, ...properties);
+    initIcon(element, { additionalClassName: 'paymentIcon', url: URL_PAYMENT }, ...properties);
 }
 
 /**

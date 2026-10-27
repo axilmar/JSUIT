@@ -15,7 +15,7 @@ const URL_REMEMBERMEOUTLINED = new URL('../../assets/icons/rememberMeOutlined.sv
  */
 export const initRememberMeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REMEMBERMEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'rememberMeOutlinedIcon', url: URL_REMEMBERMEOUTLINED }, ...properties);
 }
 
 /**

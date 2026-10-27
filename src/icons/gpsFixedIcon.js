@@ -15,7 +15,7 @@ const URL_GPSFIXED = new URL('../../assets/icons/gpsFixed.svg', import.meta.url)
  */
 export const initGpsFixedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GPSFIXED }, ...properties);
+    initIcon(element, { additionalClassName: 'gpsFixedIcon', url: URL_GPSFIXED }, ...properties);
 }
 
 /**

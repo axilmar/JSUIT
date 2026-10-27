@@ -15,7 +15,7 @@ const URL_AODOUTLINED = new URL('../../assets/icons/aodOutlined.svg', import.met
  */
 export const initAodOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AODOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'aodOutlinedIcon', url: URL_AODOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_EQUALIZER = new URL('../../assets/icons/equalizer.svg', import.meta.ur
  */
 export const initEqualizerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EQUALIZER }, ...properties);
+    initIcon(element, { additionalClassName: 'equalizerIcon', url: URL_EQUALIZER }, ...properties);
 }
 
 /**

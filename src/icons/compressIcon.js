@@ -15,7 +15,7 @@ const URL_COMPRESS = new URL('../../assets/icons/compress.svg', import.meta.url)
  */
 export const initCompressIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMPRESS }, ...properties);
+    initIcon(element, { additionalClassName: 'compressIcon', url: URL_COMPRESS }, ...properties);
 }
 
 /**

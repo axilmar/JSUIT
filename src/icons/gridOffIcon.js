@@ -15,7 +15,7 @@ const URL_GRIDOFF = new URL('../../assets/icons/gridOff.svg', import.meta.url).h
  */
 export const initGridOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRIDOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'gridOffIcon', url: URL_GRIDOFF }, ...properties);
 }
 
 /**

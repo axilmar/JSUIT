@@ -15,7 +15,7 @@ const URL_SIGNALWIFIBAD = new URL('../../assets/icons/signalWifiBad.svg', import
  */
 export const initSignalWifiBadIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIGNALWIFIBAD }, ...properties);
+    initIcon(element, { additionalClassName: 'signalWifiBadIcon', url: URL_SIGNALWIFIBAD }, ...properties);
 }
 
 /**

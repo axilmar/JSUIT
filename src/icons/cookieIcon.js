@@ -15,7 +15,7 @@ const URL_COOKIE = new URL('../../assets/icons/cookie.svg', import.meta.url).hre
  */
 export const initCookieIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COOKIE }, ...properties);
+    initIcon(element, { additionalClassName: 'cookieIcon', url: URL_COOKIE }, ...properties);
 }
 
 /**

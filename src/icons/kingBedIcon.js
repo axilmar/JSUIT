@@ -15,7 +15,7 @@ const URL_KINGBED = new URL('../../assets/icons/kingBed.svg', import.meta.url).h
  */
 export const initKingBedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_KINGBED }, ...properties);
+    initIcon(element, { additionalClassName: 'kingBedIcon', url: URL_KINGBED }, ...properties);
 }
 
 /**

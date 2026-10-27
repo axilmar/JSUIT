@@ -15,7 +15,7 @@ const URL_CHROMEREADERMODEOUTLINED = new URL('../../assets/icons/chromeReaderMod
  */
 export const initChromeReaderModeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHROMEREADERMODEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'chromeReaderModeOutlinedIcon', url: URL_CHROMEREADERMODEOUTLINED }, ...properties);
 }
 
 /**

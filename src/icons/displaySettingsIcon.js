@@ -15,7 +15,7 @@ const URL_DISPLAYSETTINGS = new URL('../../assets/icons/displaySettings.svg', im
  */
 export const initDisplaySettingsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DISPLAYSETTINGS }, ...properties);
+    initIcon(element, { additionalClassName: 'displaySettingsIcon', url: URL_DISPLAYSETTINGS }, ...properties);
 }
 
 /**

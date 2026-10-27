@@ -15,7 +15,7 @@ const URL_WIDTHFULL = new URL('../../assets/icons/widthFull.svg', import.meta.ur
  */
 export const initWidthFullIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WIDTHFULL }, ...properties);
+    initIcon(element, { additionalClassName: 'widthFullIcon', url: URL_WIDTHFULL }, ...properties);
 }
 
 /**

@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initDl = (element, ...properties) => {
     console.assert(element instanceof HTMLDListElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'dl' }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_CELLWIFIOUTLINED = new URL('../../assets/icons/cellWifiOutlined.svg', 
  */
 export const initCellWifiOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CELLWIFIOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'cellWifiOutlinedIcon', url: URL_CELLWIFIOUTLINED }, ...properties);
 }
 
 /**

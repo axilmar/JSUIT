@@ -15,7 +15,7 @@ const URL_MICOUTLINED = new URL('../../assets/icons/micOutlined.svg', import.met
  */
 export const initMicOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MICOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'micOutlinedIcon', url: URL_MICOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PERSONSEARCH = new URL('../../assets/icons/personSearch.svg', import.m
  */
 export const initPersonSearchIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PERSONSEARCH }, ...properties);
+    initIcon(element, { additionalClassName: 'personSearchIcon', url: URL_PERSONSEARCH }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_MOVEDOWNOUTLINED = new URL('../../assets/icons/moveDownOutlined.svg', 
  */
 export const initMoveDownOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOVEDOWNOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'moveDownOutlinedIcon', url: URL_MOVEDOWNOUTLINED }, ...properties);
 }
 
 /**

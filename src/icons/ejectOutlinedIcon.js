@@ -15,7 +15,7 @@ const URL_EJECTOUTLINED = new URL('../../assets/icons/ejectOutlined.svg', import
  */
 export const initEjectOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EJECTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'ejectOutlinedIcon', url: URL_EJECTOUTLINED }, ...properties);
 }
 
 /**

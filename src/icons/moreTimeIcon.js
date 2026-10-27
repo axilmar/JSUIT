@@ -15,7 +15,7 @@ const URL_MORETIME = new URL('../../assets/icons/moreTime.svg', import.meta.url)
  */
 export const initMoreTimeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MORETIME }, ...properties);
+    initIcon(element, { additionalClassName: 'moreTimeIcon', url: URL_MORETIME }, ...properties);
 }
 
 /**

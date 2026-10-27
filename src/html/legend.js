@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initLegend = (element, ...properties) => {
     console.assert(element instanceof HTMLLegendElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'legend' }, ...properties);
 }
 
 /**

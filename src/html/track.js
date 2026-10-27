@@ -10,7 +10,7 @@ import { initHTMLElement } from "./HTMLElement.js";
  */
 export const initTrack = (element, ...properties) => {
     console.assert(element instanceof HTMLTrackElement);
-    initHTMLElement(element, ...properties);
+    initHTMLElement(element, { additionalClassName: 'track' }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LEAKADD = new URL('../../assets/icons/leakAdd.svg', import.meta.url).h
  */
 export const initLeakAddIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LEAKADD }, ...properties);
+    initIcon(element, { additionalClassName: 'leakAddIcon', url: URL_LEAKADD }, ...properties);
 }
 
 /**

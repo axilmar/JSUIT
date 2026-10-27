@@ -15,7 +15,7 @@ const URL_SHUTTERSPEEDOUTLINED = new URL('../../assets/icons/shutterSpeedOutline
  */
 export const initShutterSpeedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHUTTERSPEEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'shutterSpeedOutlinedIcon', url: URL_SHUTTERSPEEDOUTLINED }, ...properties);
 }
 
 /**

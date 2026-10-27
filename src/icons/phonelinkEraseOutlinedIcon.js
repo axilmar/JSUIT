@@ -15,7 +15,7 @@ const URL_PHONELINKERASEOUTLINED = new URL('../../assets/icons/phonelinkEraseOut
  */
 export const initPhonelinkEraseOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONELINKERASEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'phonelinkEraseOutlinedIcon', url: URL_PHONELINKERASEOUTLINED }, ...properties);
 }
 
 /**

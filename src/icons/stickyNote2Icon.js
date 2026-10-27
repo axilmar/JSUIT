@@ -15,7 +15,7 @@ const URL_STICKYNOTE2 = new URL('../../assets/icons/stickyNote2.svg', import.met
  */
 export const initStickyNote2Icon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STICKYNOTE2 }, ...properties);
+    initIcon(element, { additionalClassName: 'stickyNote2Icon', url: URL_STICKYNOTE2 }, ...properties);
 }
 
 /**

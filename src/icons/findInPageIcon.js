@@ -15,7 +15,7 @@ const URL_FINDINPAGE = new URL('../../assets/icons/findInPage.svg', import.meta.
  */
 export const initFindInPageIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FINDINPAGE }, ...properties);
+    initIcon(element, { additionalClassName: 'findInPageIcon', url: URL_FINDINPAGE }, ...properties);
 }
 
 /**

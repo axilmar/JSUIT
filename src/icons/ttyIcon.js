@@ -15,7 +15,7 @@ const URL_TTY = new URL('../../assets/icons/tty.svg', import.meta.url).href;
  */
 export const initTtyIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TTY }, ...properties);
+    initIcon(element, { additionalClassName: 'ttyIcon', url: URL_TTY }, ...properties);
 }
 
 /**

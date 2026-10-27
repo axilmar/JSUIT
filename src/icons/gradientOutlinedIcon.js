@@ -15,7 +15,7 @@ const URL_GRADIENTOUTLINED = new URL('../../assets/icons/gradientOutlined.svg', 
  */
 export const initGradientOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_GRADIENTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'gradientOutlinedIcon', url: URL_GRADIENTOUTLINED }, ...properties);
 }
 
 /**

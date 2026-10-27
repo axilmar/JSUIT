@@ -15,7 +15,7 @@ const URL_BEDOUTLINED = new URL('../../assets/icons/bedOutlined.svg', import.met
  */
 export const initBedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bedOutlinedIcon', url: URL_BEDOUTLINED }, ...properties);
 }
 
 /**

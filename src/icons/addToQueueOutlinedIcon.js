@@ -15,7 +15,7 @@ const URL_ADDTOQUEUEOUTLINED = new URL('../../assets/icons/addToQueueOutlined.sv
  */
 export const initAddToQueueOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDTOQUEUEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'addToQueueOutlinedIcon', url: URL_ADDTOQUEUEOUTLINED }, ...properties);
 }
 
 /**

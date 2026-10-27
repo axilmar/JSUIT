@@ -10,7 +10,7 @@ import { initSVGAnimationElement } from "./SVGAnimationElement.js";
  */
 export const initAnimate = (element, ...properties) => {
     console.assert(element instanceof SVGAnimateElement);
-    initSVGAnimationElement(element, ...properties);
+    initSVGAnimationElement(element, { additionalClassName: 'animate' }, ...properties);
 }
 
 /**

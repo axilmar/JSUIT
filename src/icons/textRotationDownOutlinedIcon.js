@@ -15,7 +15,7 @@ const URL_TEXTROTATIONDOWNOUTLINED = new URL('../../assets/icons/textRotationDow
  */
 export const initTextRotationDownOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TEXTROTATIONDOWNOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'textRotationDownOutlinedIcon', url: URL_TEXTROTATIONDOWNOUTLINED }, ...properties);
 }
 
 /**

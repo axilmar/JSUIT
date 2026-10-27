@@ -15,7 +15,7 @@ const URL_SETTINGSSYSTEMDAYDREAM = new URL('../../assets/icons/settingsSystemDay
  */
 export const initSettingsSystemDaydreamIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSSYSTEMDAYDREAM }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsSystemDaydreamIcon', url: URL_SETTINGSSYSTEMDAYDREAM }, ...properties);
 }
 
 /**

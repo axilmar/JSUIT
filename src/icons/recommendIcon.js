@@ -15,7 +15,7 @@ const URL_RECOMMEND = new URL('../../assets/icons/recommend.svg', import.meta.ur
  */
 export const initRecommendIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RECOMMEND }, ...properties);
+    initIcon(element, { additionalClassName: 'recommendIcon', url: URL_RECOMMEND }, ...properties);
 }
 
 /**

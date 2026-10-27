@@ -15,7 +15,7 @@ const URL_NORTH = new URL('../../assets/icons/north.svg', import.meta.url).href;
  */
 export const initNorthIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NORTH }, ...properties);
+    initIcon(element, { additionalClassName: 'northIcon', url: URL_NORTH }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_NOTRANSFEROUTLINED = new URL('../../assets/icons/noTransferOutlined.sv
  */
 export const initNoTransferOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTRANSFEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'noTransferOutlinedIcon', url: URL_NOTRANSFEROUTLINED }, ...properties);
 }
 
 /**

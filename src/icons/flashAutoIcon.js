@@ -15,7 +15,7 @@ const URL_FLASHAUTO = new URL('../../assets/icons/flashAuto.svg', import.meta.ur
  */
 export const initFlashAutoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLASHAUTO }, ...properties);
+    initIcon(element, { additionalClassName: 'flashAutoIcon', url: URL_FLASHAUTO }, ...properties);
 }
 
 /**

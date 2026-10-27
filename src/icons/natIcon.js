@@ -15,7 +15,7 @@ const URL_NAT = new URL('../../assets/icons/nat.svg', import.meta.url).href;
  */
 export const initNatIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NAT }, ...properties);
+    initIcon(element, { additionalClassName: 'natIcon', url: URL_NAT }, ...properties);
 }
 
 /**

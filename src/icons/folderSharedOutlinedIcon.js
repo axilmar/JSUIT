@@ -15,7 +15,7 @@ const URL_FOLDERSHAREDOUTLINED = new URL('../../assets/icons/folderSharedOutline
  */
 export const initFolderSharedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOLDERSHAREDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'folderSharedOutlinedIcon', url: URL_FOLDERSHAREDOUTLINED }, ...properties);
 }
 
 /**

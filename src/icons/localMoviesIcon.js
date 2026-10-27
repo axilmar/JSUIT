@@ -15,7 +15,7 @@ const URL_LOCALMOVIES = new URL('../../assets/icons/localMovies.svg', import.met
  */
 export const initLocalMoviesIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALMOVIES }, ...properties);
+    initIcon(element, { additionalClassName: 'localMoviesIcon', url: URL_LOCALMOVIES }, ...properties);
 }
 
 /**

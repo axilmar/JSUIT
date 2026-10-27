@@ -15,7 +15,7 @@ const URL_BEDROOMPARENTOUTLINED = new URL('../../assets/icons/bedroomParentOutli
  */
 export const initBedroomParentOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BEDROOMPARENTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bedroomParentOutlinedIcon', url: URL_BEDROOMPARENTOUTLINED }, ...properties);
 }
 
 /**

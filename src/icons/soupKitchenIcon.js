@@ -15,7 +15,7 @@ const URL_SOUPKITCHEN = new URL('../../assets/icons/soupKitchen.svg', import.met
  */
 export const initSoupKitchenIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SOUPKITCHEN }, ...properties);
+    initIcon(element, { additionalClassName: 'soupKitchenIcon', url: URL_SOUPKITCHEN }, ...properties);
 }
 
 /**

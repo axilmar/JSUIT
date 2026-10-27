@@ -15,7 +15,7 @@ const URL_REMOVEMODERATOROUTLINED = new URL('../../assets/icons/removeModeratorO
  */
 export const initRemoveModeratorOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REMOVEMODERATOROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'removeModeratorOutlinedIcon', url: URL_REMOVEMODERATOROUTLINED }, ...properties);
 }
 
 /**

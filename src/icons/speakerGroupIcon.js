@@ -15,7 +15,7 @@ const URL_SPEAKERGROUP = new URL('../../assets/icons/speakerGroup.svg', import.m
  */
 export const initSpeakerGroupIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPEAKERGROUP }, ...properties);
+    initIcon(element, { additionalClassName: 'speakerGroupIcon', url: URL_SPEAKERGROUP }, ...properties);
 }
 
 /**

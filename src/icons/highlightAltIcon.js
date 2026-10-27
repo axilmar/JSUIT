@@ -15,7 +15,7 @@ const URL_HIGHLIGHTALT = new URL('../../assets/icons/highlightAlt.svg', import.m
  */
 export const initHighlightAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HIGHLIGHTALT }, ...properties);
+    initIcon(element, { additionalClassName: 'highlightAltIcon', url: URL_HIGHLIGHTALT }, ...properties);
 }
 
 /**

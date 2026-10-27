@@ -15,7 +15,7 @@ const URL_CONTENTCOPYOUTLINED = new URL('../../assets/icons/contentCopyOutlined.
  */
 export const initContentCopyOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTENTCOPYOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'contentCopyOutlinedIcon', url: URL_CONTENTCOPYOUTLINED }, ...properties);
 }
 
 /**

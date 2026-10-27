@@ -15,7 +15,7 @@ const URL_TIMELAPSEOUTLINED = new URL('../../assets/icons/timelapseOutlined.svg'
  */
 export const initTimelapseOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TIMELAPSEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'timelapseOutlinedIcon', url: URL_TIMELAPSEOUTLINED }, ...properties);
 }
 
 /**

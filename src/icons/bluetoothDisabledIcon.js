@@ -15,7 +15,7 @@ const URL_BLUETOOTHDISABLED = new URL('../../assets/icons/bluetoothDisabled.svg'
  */
 export const initBluetoothDisabledIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BLUETOOTHDISABLED }, ...properties);
+    initIcon(element, { additionalClassName: 'bluetoothDisabledIcon', url: URL_BLUETOOTHDISABLED }, ...properties);
 }
 
 /**

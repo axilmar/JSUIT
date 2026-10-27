@@ -15,7 +15,7 @@ const URL_TOGGLEOFFOUTLINED = new URL('../../assets/icons/toggleOffOutlined.svg'
  */
 export const initToggleOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TOGGLEOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'toggleOffOutlinedIcon', url: URL_TOGGLEOFFOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_VIGNETTEOUTLINED = new URL('../../assets/icons/vignetteOutlined.svg', 
  */
 export const initVignetteOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIGNETTEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'vignetteOutlinedIcon', url: URL_VIGNETTEOUTLINED }, ...properties);
 }
 
 /**

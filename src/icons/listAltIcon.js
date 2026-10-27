@@ -15,7 +15,7 @@ const URL_LISTALT = new URL('../../assets/icons/listAlt.svg', import.meta.url).h
  */
 export const initListAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LISTALT }, ...properties);
+    initIcon(element, { additionalClassName: 'listAltIcon', url: URL_LISTALT }, ...properties);
 }
 
 /**

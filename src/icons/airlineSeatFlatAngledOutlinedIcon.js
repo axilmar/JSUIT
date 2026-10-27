@@ -15,7 +15,7 @@ const URL_AIRLINESEATFLATANGLEDOUTLINED = new URL('../../assets/icons/airlineSea
  */
 export const initAirlineSeatFlatAngledOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AIRLINESEATFLATANGLEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'airlineSeatFlatAngledOutlinedIcon', url: URL_AIRLINESEATFLATANGLEDOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_TAXIALERT = new URL('../../assets/icons/taxiAlert.svg', import.meta.ur
  */
 export const initTaxiAlertIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TAXIALERT }, ...properties);
+    initIcon(element, { additionalClassName: 'taxiAlertIcon', url: URL_TAXIALERT }, ...properties);
 }
 
 /**

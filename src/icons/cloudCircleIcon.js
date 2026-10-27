@@ -15,7 +15,7 @@ const URL_CLOUDCIRCLE = new URL('../../assets/icons/cloudCircle.svg', import.met
  */
 export const initCloudCircleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOUDCIRCLE }, ...properties);
+    initIcon(element, { additionalClassName: 'cloudCircleIcon', url: URL_CLOUDCIRCLE }, ...properties);
 }
 
 /**

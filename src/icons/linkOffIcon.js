@@ -15,7 +15,7 @@ const URL_LINKOFF = new URL('../../assets/icons/linkOff.svg', import.meta.url).h
  */
 export const initLinkOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LINKOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'linkOffIcon', url: URL_LINKOFF }, ...properties);
 }
 
 /**

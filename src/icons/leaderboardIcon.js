@@ -15,7 +15,7 @@ const URL_LEADERBOARD = new URL('../../assets/icons/leaderboard.svg', import.met
  */
 export const initLeaderboardIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LEADERBOARD }, ...properties);
+    initIcon(element, { additionalClassName: 'leaderboardIcon', url: URL_LEADERBOARD }, ...properties);
 }
 
 /**

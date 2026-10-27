@@ -15,7 +15,7 @@ const URL_SIXTYFPSSELECT = new URL('../../assets/icons/sixtyFpsSelect.svg', impo
  */
 export const initSixtyFpsSelectIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SIXTYFPSSELECT }, ...properties);
+    initIcon(element, { additionalClassName: 'sixtyFpsSelectIcon', url: URL_SIXTYFPSSELECT }, ...properties);
 }
 
 /**

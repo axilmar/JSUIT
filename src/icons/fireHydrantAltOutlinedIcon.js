@@ -15,7 +15,7 @@ const URL_FIREHYDRANTALTOUTLINED = new URL('../../assets/icons/fireHydrantAltOut
  */
 export const initFireHydrantAltOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FIREHYDRANTALTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'fireHydrantAltOutlinedIcon', url: URL_FIREHYDRANTALTOUTLINED }, ...properties);
 }
 
 /**

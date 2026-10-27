@@ -15,7 +15,7 @@ const URL_BED = new URL('../../assets/icons/bed.svg', import.meta.url).href;
  */
 export const initBedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BED }, ...properties);
+    initIcon(element, { additionalClassName: 'bedIcon', url: URL_BED }, ...properties);
 }
 
 /**

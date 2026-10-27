@@ -15,7 +15,7 @@ const URL_POWERSETTINGSNEW = new URL('../../assets/icons/powerSettingsNew.svg', 
  */
 export const initPowerSettingsNewIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_POWERSETTINGSNEW }, ...properties);
+    initIcon(element, { additionalClassName: 'powerSettingsNewIcon', url: URL_POWERSETTINGSNEW }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SETTINGSPOWER = new URL('../../assets/icons/settingsPower.svg', import
  */
 export const initSettingsPowerIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSPOWER }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsPowerIcon', url: URL_SETTINGSPOWER }, ...properties);
 }
 
 /**

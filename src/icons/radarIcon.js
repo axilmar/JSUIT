@@ -15,7 +15,7 @@ const URL_RADAR = new URL('../../assets/icons/radar.svg', import.meta.url).href;
  */
 export const initRadarIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RADAR }, ...properties);
+    initIcon(element, { additionalClassName: 'radarIcon', url: URL_RADAR }, ...properties);
 }
 
 /**

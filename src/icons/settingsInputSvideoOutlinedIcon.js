@@ -15,7 +15,7 @@ const URL_SETTINGSINPUTSVIDEOOUTLINED = new URL('../../assets/icons/settingsInpu
  */
 export const initSettingsInputSvideoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSINPUTSVIDEOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsInputSvideoOutlinedIcon', url: URL_SETTINGSINPUTSVIDEOOUTLINED }, ...properties);
 }
 
 /**

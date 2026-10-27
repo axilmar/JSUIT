@@ -15,7 +15,7 @@ const URL_ZOOMOUTMAPOUTLINED = new URL('../../assets/icons/zoomOutMapOutlined.sv
  */
 export const initZoomOutMapOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ZOOMOUTMAPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'zoomOutMapOutlinedIcon', url: URL_ZOOMOUTMAPOUTLINED }, ...properties);
 }
 
 /**

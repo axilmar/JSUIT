@@ -15,7 +15,7 @@ const URL_SMARTBUTTONOUTLINED = new URL('../../assets/icons/smartButtonOutlined.
  */
 export const initSmartButtonOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SMARTBUTTONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'smartButtonOutlinedIcon', url: URL_SMARTBUTTONOUTLINED }, ...properties);
 }
 
 /**

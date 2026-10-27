@@ -15,7 +15,7 @@ const URL_ROLLERSHADESCLOSED = new URL('../../assets/icons/rollerShadesClosed.sv
  */
 export const initRollerShadesClosedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROLLERSHADESCLOSED }, ...properties);
+    initIcon(element, { additionalClassName: 'rollerShadesClosedIcon', url: URL_ROLLERSHADESCLOSED }, ...properties);
 }
 
 /**

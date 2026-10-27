@@ -15,7 +15,7 @@ const URL_TORNADO = new URL('../../assets/icons/tornado.svg', import.meta.url).h
  */
 export const initTornadoIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TORNADO }, ...properties);
+    initIcon(element, { additionalClassName: 'tornadoIcon', url: URL_TORNADO }, ...properties);
 }
 
 /**

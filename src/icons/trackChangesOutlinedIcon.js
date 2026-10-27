@@ -15,7 +15,7 @@ const URL_TRACKCHANGESOUTLINED = new URL('../../assets/icons/trackChangesOutline
  */
 export const initTrackChangesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRACKCHANGESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'trackChangesOutlinedIcon', url: URL_TRACKCHANGESOUTLINED }, ...properties);
 }
 
 /**

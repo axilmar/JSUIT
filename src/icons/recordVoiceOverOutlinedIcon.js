@@ -15,7 +15,7 @@ const URL_RECORDVOICEOVEROUTLINED = new URL('../../assets/icons/recordVoiceOverO
  */
 export const initRecordVoiceOverOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RECORDVOICEOVEROUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'recordVoiceOverOutlinedIcon', url: URL_RECORDVOICEOVEROUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SEVERECOLD = new URL('../../assets/icons/severeCold.svg', import.meta.
  */
 export const initSevereColdIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SEVERECOLD }, ...properties);
+    initIcon(element, { additionalClassName: 'severeColdIcon', url: URL_SEVERECOLD }, ...properties);
 }
 
 /**

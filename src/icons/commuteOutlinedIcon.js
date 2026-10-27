@@ -15,7 +15,7 @@ const URL_COMMUTEOUTLINED = new URL('../../assets/icons/commuteOutlined.svg', im
  */
 export const initCommuteOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_COMMUTEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'commuteOutlinedIcon', url: URL_COMMUTEOUTLINED }, ...properties);
 }
 
 /**

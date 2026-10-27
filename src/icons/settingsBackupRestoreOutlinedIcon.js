@@ -15,7 +15,7 @@ const URL_SETTINGSBACKUPRESTOREOUTLINED = new URL('../../assets/icons/settingsBa
  */
 export const initSettingsBackupRestoreOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SETTINGSBACKUPRESTOREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'settingsBackupRestoreOutlinedIcon', url: URL_SETTINGSBACKUPRESTOREOUTLINED }, ...properties);
 }
 
 /**

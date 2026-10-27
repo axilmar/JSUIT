@@ -15,7 +15,7 @@ const URL_CHECKCIRCLE = new URL('../../assets/icons/checkCircle.svg', import.met
  */
 export const initCheckCircleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHECKCIRCLE }, ...properties);
+    initIcon(element, { additionalClassName: 'checkCircleIcon', url: URL_CHECKCIRCLE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FORMATBOLD = new URL('../../assets/icons/formatBold.svg', import.meta.
  */
 export const initFormatBoldIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATBOLD }, ...properties);
+    initIcon(element, { additionalClassName: 'formatBoldIcon', url: URL_FORMATBOLD }, ...properties);
 }
 
 /**

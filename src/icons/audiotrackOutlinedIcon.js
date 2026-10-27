@@ -15,7 +15,7 @@ const URL_AUDIOTRACKOUTLINED = new URL('../../assets/icons/audiotrackOutlined.sv
  */
 export const initAudiotrackOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUDIOTRACKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'audiotrackOutlinedIcon', url: URL_AUDIOTRACKOUTLINED }, ...properties);
 }
 
 /**

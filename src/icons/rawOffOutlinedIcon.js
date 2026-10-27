@@ -15,7 +15,7 @@ const URL_RAWOFFOUTLINED = new URL('../../assets/icons/rawOffOutlined.svg', impo
  */
 export const initRawOffOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RAWOFFOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'rawOffOutlinedIcon', url: URL_RAWOFFOUTLINED }, ...properties);
 }
 
 /**

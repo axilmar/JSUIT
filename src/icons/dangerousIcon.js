@@ -15,7 +15,7 @@ const URL_DANGEROUS = new URL('../../assets/icons/dangerous.svg', import.meta.ur
  */
 export const initDangerousIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DANGEROUS }, ...properties);
+    initIcon(element, { additionalClassName: 'dangerousIcon', url: URL_DANGEROUS }, ...properties);
 }
 
 /**

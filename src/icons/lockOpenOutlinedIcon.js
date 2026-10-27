@@ -15,7 +15,7 @@ const URL_LOCKOPENOUTLINED = new URL('../../assets/icons/lockOpenOutlined.svg', 
  */
 export const initLockOpenOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCKOPENOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'lockOpenOutlinedIcon', url: URL_LOCKOPENOUTLINED }, ...properties);
 }
 
 /**

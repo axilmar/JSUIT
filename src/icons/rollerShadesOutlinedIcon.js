@@ -15,7 +15,7 @@ const URL_ROLLERSHADESOUTLINED = new URL('../../assets/icons/rollerShadesOutline
  */
 export const initRollerShadesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ROLLERSHADESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'rollerShadesOutlinedIcon', url: URL_ROLLERSHADESOUTLINED }, ...properties);
 }
 
 /**

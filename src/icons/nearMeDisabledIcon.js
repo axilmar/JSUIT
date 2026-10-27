@@ -15,7 +15,7 @@ const URL_NEARMEDISABLED = new URL('../../assets/icons/nearMeDisabled.svg', impo
  */
 export const initNearMeDisabledIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NEARMEDISABLED }, ...properties);
+    initIcon(element, { additionalClassName: 'nearMeDisabledIcon', url: URL_NEARMEDISABLED }, ...properties);
 }
 
 /**

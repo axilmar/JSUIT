@@ -15,7 +15,7 @@ const URL_PANORAMAWIDEANGLEOUTLINED = new URL('../../assets/icons/panoramaWideAn
  */
 export const initPanoramaWideAngleOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PANORAMAWIDEANGLEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'panoramaWideAngleOutlinedIcon', url: URL_PANORAMAWIDEANGLEOUTLINED }, ...properties);
 }
 
 /**

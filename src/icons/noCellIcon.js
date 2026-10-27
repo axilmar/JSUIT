@@ -15,7 +15,7 @@ const URL_NOCELL = new URL('../../assets/icons/noCell.svg', import.meta.url).hre
  */
 export const initNoCellIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOCELL }, ...properties);
+    initIcon(element, { additionalClassName: 'noCellIcon', url: URL_NOCELL }, ...properties);
 }
 
 /**

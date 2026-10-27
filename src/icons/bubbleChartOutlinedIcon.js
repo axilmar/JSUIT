@@ -15,7 +15,7 @@ const URL_BUBBLECHARTOUTLINED = new URL('../../assets/icons/bubbleChartOutlined.
  */
 export const initBubbleChartOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BUBBLECHARTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bubbleChartOutlinedIcon', url: URL_BUBBLECHARTOUTLINED }, ...properties);
 }
 
 /**

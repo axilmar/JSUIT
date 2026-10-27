@@ -15,7 +15,7 @@ const URL_CLOSEFULLSCREENOUTLINED = new URL('../../assets/icons/closeFullscreenO
  */
 export const initCloseFullscreenOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CLOSEFULLSCREENOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'closeFullscreenOutlinedIcon', url: URL_CLOSEFULLSCREENOUTLINED }, ...properties);
 }
 
 /**

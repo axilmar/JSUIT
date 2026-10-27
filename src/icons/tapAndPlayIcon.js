@@ -15,7 +15,7 @@ const URL_TAPANDPLAY = new URL('../../assets/icons/tapAndPlay.svg', import.meta.
  */
 export const initTapAndPlayIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TAPANDPLAY }, ...properties);
+    initIcon(element, { additionalClassName: 'tapAndPlayIcon', url: URL_TAPANDPLAY }, ...properties);
 }
 
 /**

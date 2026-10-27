@@ -15,7 +15,7 @@ const URL_FONTDOWNLOADOFF = new URL('../../assets/icons/fontDownloadOff.svg', im
  */
 export const initFontDownloadOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FONTDOWNLOADOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'fontDownloadOffIcon', url: URL_FONTDOWNLOADOFF }, ...properties);
 }
 
 /**

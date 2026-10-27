@@ -15,7 +15,7 @@ const URL_SKATEBOARDING = new URL('../../assets/icons/skateboarding.svg', import
  */
 export const initSkateboardingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SKATEBOARDING }, ...properties);
+    initIcon(element, { additionalClassName: 'skateboardingIcon', url: URL_SKATEBOARDING }, ...properties);
 }
 
 /**

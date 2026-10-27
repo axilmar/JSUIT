@@ -15,7 +15,7 @@ const URL_PREGNANTWOMAN = new URL('../../assets/icons/pregnantWoman.svg', import
  */
 export const initPregnantWomanIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PREGNANTWOMAN }, ...properties);
+    initIcon(element, { additionalClassName: 'pregnantWomanIcon', url: URL_PREGNANTWOMAN }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FOUNDATIONOUTLINED = new URL('../../assets/icons/foundationOutlined.sv
  */
 export const initFoundationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FOUNDATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'foundationOutlinedIcon', url: URL_FOUNDATIONOUTLINED }, ...properties);
 }
 
 /**

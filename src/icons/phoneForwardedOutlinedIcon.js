@@ -15,7 +15,7 @@ const URL_PHONEFORWARDEDOUTLINED = new URL('../../assets/icons/phoneForwardedOut
  */
 export const initPhoneForwardedOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONEFORWARDEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'phoneForwardedOutlinedIcon', url: URL_PHONEFORWARDEDOUTLINED }, ...properties);
 }
 
 /**

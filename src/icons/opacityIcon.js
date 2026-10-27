@@ -15,7 +15,7 @@ const URL_OPACITY = new URL('../../assets/icons/opacity.svg', import.meta.url).h
  */
 export const initOpacityIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_OPACITY }, ...properties);
+    initIcon(element, { additionalClassName: 'opacityIcon', url: URL_OPACITY }, ...properties);
 }
 
 /**

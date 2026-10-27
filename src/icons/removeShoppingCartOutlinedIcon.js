@@ -15,7 +15,7 @@ const URL_REMOVESHOPPINGCARTOUTLINED = new URL('../../assets/icons/removeShoppin
  */
 export const initRemoveShoppingCartOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REMOVESHOPPINGCARTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'removeShoppingCartOutlinedIcon', url: URL_REMOVESHOPPINGCARTOUTLINED }, ...properties);
 }
 
 /**

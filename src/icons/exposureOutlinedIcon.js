@@ -15,7 +15,7 @@ const URL_EXPOSUREOUTLINED = new URL('../../assets/icons/exposureOutlined.svg', 
  */
 export const initExposureOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXPOSUREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'exposureOutlinedIcon', url: URL_EXPOSUREOUTLINED }, ...properties);
 }
 
 /**

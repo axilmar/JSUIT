@@ -15,7 +15,7 @@ const URL_SWITCHVIDEOOUTLINED = new URL('../../assets/icons/switchVideoOutlined.
  */
 export const initSwitchVideoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SWITCHVIDEOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'switchVideoOutlinedIcon', url: URL_SWITCHVIDEOOUTLINED }, ...properties);
 }
 
 /**

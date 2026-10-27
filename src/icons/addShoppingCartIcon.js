@@ -15,7 +15,7 @@ const URL_ADDSHOPPINGCART = new URL('../../assets/icons/addShoppingCart.svg', im
  */
 export const initAddShoppingCartIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDSHOPPINGCART }, ...properties);
+    initIcon(element, { additionalClassName: 'addShoppingCartIcon', url: URL_ADDSHOPPINGCART }, ...properties);
 }
 
 /**

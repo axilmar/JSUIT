@@ -15,7 +15,7 @@ const URL_FORMATTEXTDIRECTIONRTOL = new URL('../../assets/icons/formatTextdirect
  */
 export const initFormatTextdirectionRToLIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATTEXTDIRECTIONRTOL }, ...properties);
+    initIcon(element, { additionalClassName: 'formatTextdirectionRToLIcon', url: URL_FORMATTEXTDIRECTIONRTOL }, ...properties);
 }
 
 /**

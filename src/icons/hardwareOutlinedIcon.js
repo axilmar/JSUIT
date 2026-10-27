@@ -15,7 +15,7 @@ const URL_HARDWAREOUTLINED = new URL('../../assets/icons/hardwareOutlined.svg', 
  */
 export const initHardwareOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HARDWAREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'hardwareOutlinedIcon', url: URL_HARDWAREOUTLINED }, ...properties);
 }
 
 /**

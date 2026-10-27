@@ -15,7 +15,7 @@ const URL_BOOKMARKBORDER = new URL('../../assets/icons/bookmarkBorder.svg', impo
  */
 export const initBookmarkBorderIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BOOKMARKBORDER }, ...properties);
+    initIcon(element, { additionalClassName: 'bookmarkBorderIcon', url: URL_BOOKMARKBORDER }, ...properties);
 }
 
 /**

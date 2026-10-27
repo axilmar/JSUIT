@@ -15,7 +15,7 @@ const URL_READMORE = new URL('../../assets/icons/readMore.svg', import.meta.url)
  */
 export const initReadMoreIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_READMORE }, ...properties);
+    initIcon(element, { additionalClassName: 'readMoreIcon', url: URL_READMORE }, ...properties);
 }
 
 /**

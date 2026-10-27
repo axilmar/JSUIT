@@ -15,7 +15,7 @@ const URL_BARCHART = new URL('../../assets/icons/barChart.svg', import.meta.url)
  */
 export const initBarChartIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BARCHART }, ...properties);
+    initIcon(element, { additionalClassName: 'barChartIcon', url: URL_BARCHART }, ...properties);
 }
 
 /**

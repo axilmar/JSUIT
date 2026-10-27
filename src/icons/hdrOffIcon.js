@@ -15,7 +15,7 @@ const URL_HDROFF = new URL('../../assets/icons/hdrOff.svg', import.meta.url).hre
  */
 export const initHdrOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HDROFF }, ...properties);
+    initIcon(element, { additionalClassName: 'hdrOffIcon', url: URL_HDROFF }, ...properties);
 }
 
 /**

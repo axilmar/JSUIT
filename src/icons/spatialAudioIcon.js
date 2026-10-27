@@ -15,7 +15,7 @@ const URL_SPATIALAUDIO = new URL('../../assets/icons/spatialAudio.svg', import.m
  */
 export const initSpatialAudioIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SPATIALAUDIO }, ...properties);
+    initIcon(element, { additionalClassName: 'spatialAudioIcon', url: URL_SPATIALAUDIO }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_UPCOMINGOUTLINED = new URL('../../assets/icons/upcomingOutlined.svg', 
  */
 export const initUpcomingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_UPCOMINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'upcomingOutlinedIcon', url: URL_UPCOMINGOUTLINED }, ...properties);
 }
 
 /**

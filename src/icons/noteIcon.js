@@ -15,7 +15,7 @@ const URL_NOTE = new URL('../../assets/icons/note.svg', import.meta.url).href;
  */
 export const initNoteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTE }, ...properties);
+    initIcon(element, { additionalClassName: 'noteIcon', url: URL_NOTE }, ...properties);
 }
 
 /**

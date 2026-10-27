@@ -15,7 +15,7 @@ const URL_SMOKEFREEOUTLINED = new URL('../../assets/icons/smokeFreeOutlined.svg'
  */
 export const initSmokeFreeOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SMOKEFREEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'smokeFreeOutlinedIcon', url: URL_SMOKEFREEOUTLINED }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_PHONELINKRINGOUTLINED = new URL('../../assets/icons/phonelinkRingOutli
  */
 export const initPhonelinkRingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PHONELINKRINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'phonelinkRingOutlinedIcon', url: URL_PHONELINKRINGOUTLINED }, ...properties);
 }
 
 /**

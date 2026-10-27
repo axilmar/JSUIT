@@ -15,7 +15,7 @@ const URL_SCREENSHOTOUTLINED = new URL('../../assets/icons/screenshotOutlined.sv
  */
 export const initScreenshotOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCREENSHOTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'screenshotOutlinedIcon', url: URL_SCREENSHOTOUTLINED }, ...properties);
 }
 
 /**

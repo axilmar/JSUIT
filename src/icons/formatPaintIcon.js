@@ -15,7 +15,7 @@ const URL_FORMATPAINT = new URL('../../assets/icons/formatPaint.svg', import.met
  */
 export const initFormatPaintIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATPAINT }, ...properties);
+    initIcon(element, { additionalClassName: 'formatPaintIcon', url: URL_FORMATPAINT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_EMOJIFOODBEVERAGE = new URL('../../assets/icons/emojiFoodBeverage.svg'
  */
 export const initEmojiFoodBeverageIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EMOJIFOODBEVERAGE }, ...properties);
+    initIcon(element, { additionalClassName: 'emojiFoodBeverageIcon', url: URL_EMOJIFOODBEVERAGE }, ...properties);
 }
 
 /**

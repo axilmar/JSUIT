@@ -15,7 +15,7 @@ const URL_EDITATTRIBUTESOUTLINED = new URL('../../assets/icons/editAttributesOut
  */
 export const initEditAttributesOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EDITATTRIBUTESOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'editAttributesOutlinedIcon', url: URL_EDITATTRIBUTESOUTLINED }, ...properties);
 }
 
 /**

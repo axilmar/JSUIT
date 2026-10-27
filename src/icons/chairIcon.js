@@ -15,7 +15,7 @@ const URL_CHAIR = new URL('../../assets/icons/chair.svg', import.meta.url).href;
  */
 export const initChairIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHAIR }, ...properties);
+    initIcon(element, { additionalClassName: 'chairIcon', url: URL_CHAIR }, ...properties);
 }
 
 /**

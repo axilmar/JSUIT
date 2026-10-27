@@ -15,7 +15,7 @@ const URL_BORDERVERTICAL = new URL('../../assets/icons/borderVertical.svg', impo
  */
 export const initBorderVerticalIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BORDERVERTICAL }, ...properties);
+    initIcon(element, { additionalClassName: 'borderVerticalIcon', url: URL_BORDERVERTICAL }, ...properties);
 }
 
 /**

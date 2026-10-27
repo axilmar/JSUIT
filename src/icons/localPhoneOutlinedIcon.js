@@ -15,7 +15,7 @@ const URL_LOCALPHONEOUTLINED = new URL('../../assets/icons/localPhoneOutlined.sv
  */
 export const initLocalPhoneOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALPHONEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localPhoneOutlinedIcon', url: URL_LOCALPHONEOUTLINED }, ...properties);
 }
 
 /**

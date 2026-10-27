@@ -15,7 +15,7 @@ const URL_PLAYLISTADDCIRCLE = new URL('../../assets/icons/playlistAddCircle.svg'
  */
 export const initPlaylistAddCircleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PLAYLISTADDCIRCLE }, ...properties);
+    initIcon(element, { additionalClassName: 'playlistAddCircleIcon', url: URL_PLAYLISTADDCIRCLE }, ...properties);
 }
 
 /**

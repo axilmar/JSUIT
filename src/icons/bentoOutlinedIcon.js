@@ -15,7 +15,7 @@ const URL_BENTOOUTLINED = new URL('../../assets/icons/bentoOutlined.svg', import
  */
 export const initBentoOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BENTOOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bentoOutlinedIcon', url: URL_BENTOOUTLINED }, ...properties);
 }
 
 /**

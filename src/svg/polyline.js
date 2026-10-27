@@ -10,7 +10,7 @@ import { initSVGGeometryElement } from "./SVGGeometryElement.js";
  */
 export const initPolyline = (element, ...properties) => {
     console.assert(element instanceof SVGPolylineElement);
-    initSVGGeometryElement(element, ...properties);
+    initSVGGeometryElement(element, { additionalClassName: 'polyline' }, ...properties);
 }
 
 /**

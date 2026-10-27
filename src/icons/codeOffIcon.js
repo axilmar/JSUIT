@@ -15,7 +15,7 @@ const URL_CODEOFF = new URL('../../assets/icons/codeOff.svg', import.meta.url).h
  */
 export const initCodeOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CODEOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'codeOffIcon', url: URL_CODEOFF }, ...properties);
 }
 
 /**

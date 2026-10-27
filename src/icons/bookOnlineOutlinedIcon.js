@@ -15,7 +15,7 @@ const URL_BOOKONLINEOUTLINED = new URL('../../assets/icons/bookOnlineOutlined.sv
  */
 export const initBookOnlineOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BOOKONLINEOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'bookOnlineOutlinedIcon', url: URL_BOOKONLINEOUTLINED }, ...properties);
 }
 
 /**

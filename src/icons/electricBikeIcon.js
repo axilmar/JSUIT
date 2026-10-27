@@ -15,7 +15,7 @@ const URL_ELECTRICBIKE = new URL('../../assets/icons/electricBike.svg', import.m
  */
 export const initElectricBikeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ELECTRICBIKE }, ...properties);
+    initIcon(element, { additionalClassName: 'electricBikeIcon', url: URL_ELECTRICBIKE }, ...properties);
 }
 
 /**

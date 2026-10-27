@@ -15,7 +15,7 @@ const URL_TOGGLEOFF = new URL('../../assets/icons/toggleOff.svg', import.meta.ur
  */
 export const initToggleOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TOGGLEOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'toggleOffIcon', url: URL_TOGGLEOFF }, ...properties);
 }
 
 /**

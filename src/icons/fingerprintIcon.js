@@ -15,7 +15,7 @@ const URL_FINGERPRINT = new URL('../../assets/icons/fingerprint.svg', import.met
  */
 export const initFingerprintIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FINGERPRINT }, ...properties);
+    initIcon(element, { additionalClassName: 'fingerprintIcon', url: URL_FINGERPRINT }, ...properties);
 }
 
 /**

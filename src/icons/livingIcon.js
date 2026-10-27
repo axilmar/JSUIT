@@ -15,7 +15,7 @@ const URL_LIVING = new URL('../../assets/icons/living.svg', import.meta.url).hre
  */
 export const initLivingIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LIVING }, ...properties);
+    initIcon(element, { additionalClassName: 'livingIcon', url: URL_LIVING }, ...properties);
 }
 
 /**

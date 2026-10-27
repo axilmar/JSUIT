@@ -15,7 +15,7 @@ const URL_ACCOUNTCIRCLE = new URL('../../assets/icons/accountCircle.svg', import
  */
 export const initAccountCircleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ACCOUNTCIRCLE }, ...properties);
+    initIcon(element, { additionalClassName: 'accountCircleIcon', url: URL_ACCOUNTCIRCLE }, ...properties);
 }
 
 /**

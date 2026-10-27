@@ -15,7 +15,7 @@ const URL_REPORTPROBLEMOUTLINED = new URL('../../assets/icons/reportProblemOutli
  */
 export const initReportProblemOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_REPORTPROBLEMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'reportProblemOutlinedIcon', url: URL_REPORTPROBLEMOUTLINED }, ...properties);
 }
 
 /**

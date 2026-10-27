@@ -15,7 +15,7 @@ const URL_NOTINTERESTED = new URL('../../assets/icons/notInterested.svg', import
  */
 export const initNotInterestedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_NOTINTERESTED }, ...properties);
+    initIcon(element, { additionalClassName: 'notInterestedIcon', url: URL_NOTINTERESTED }, ...properties);
 }
 
 /**

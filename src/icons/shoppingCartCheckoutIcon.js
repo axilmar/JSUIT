@@ -15,7 +15,7 @@ const URL_SHOPPINGCARTCHECKOUT = new URL('../../assets/icons/shoppingCartCheckou
  */
 export const initShoppingCartCheckoutIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SHOPPINGCARTCHECKOUT }, ...properties);
+    initIcon(element, { additionalClassName: 'shoppingCartCheckoutIcon', url: URL_SHOPPINGCARTCHECKOUT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_STOP = new URL('../../assets/icons/stop.svg', import.meta.url).href;
  */
 export const initStopIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STOP }, ...properties);
+    initIcon(element, { additionalClassName: 'stopIcon', url: URL_STOP }, ...properties);
 }
 
 /**

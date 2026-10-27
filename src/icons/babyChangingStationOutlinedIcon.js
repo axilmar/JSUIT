@@ -15,7 +15,7 @@ const URL_BABYCHANGINGSTATIONOUTLINED = new URL('../../assets/icons/babyChanging
  */
 export const initBabyChangingStationOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BABYCHANGINGSTATIONOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'babyChangingStationOutlinedIcon', url: URL_BABYCHANGINGSTATIONOUTLINED }, ...properties);
 }
 
 /**

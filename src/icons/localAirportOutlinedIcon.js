@@ -15,7 +15,7 @@ const URL_LOCALAIRPORTOUTLINED = new URL('../../assets/icons/localAirportOutline
  */
 export const initLocalAirportOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALAIRPORTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localAirportOutlinedIcon', url: URL_LOCALAIRPORTOUTLINED }, ...properties);
 }
 
 /**

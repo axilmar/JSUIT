@@ -15,7 +15,7 @@ const URL_WATERFALLCHARTOUTLINED = new URL('../../assets/icons/waterfallChartOut
  */
 export const initWaterfallChartOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_WATERFALLCHARTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'waterfallChartOutlinedIcon', url: URL_WATERFALLCHARTOUTLINED }, ...properties);
 }
 
 /**

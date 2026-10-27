@@ -15,7 +15,7 @@ const URL_MOVEDOWN = new URL('../../assets/icons/moveDown.svg', import.meta.url)
  */
 export const initMoveDownIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MOVEDOWN }, ...properties);
+    initIcon(element, { additionalClassName: 'moveDownIcon', url: URL_MOVEDOWN }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_RSVPOUTLINED = new URL('../../assets/icons/rsvpOutlined.svg', import.m
  */
 export const initRsvpOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_RSVPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'rsvpOutlinedIcon', url: URL_RSVPOUTLINED }, ...properties);
 }
 
 /**

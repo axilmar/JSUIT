@@ -15,7 +15,7 @@ const URL_ADDCARDOUTLINED = new URL('../../assets/icons/addCardOutlined.svg', im
  */
 export const initAddCardOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDCARDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'addCardOutlinedIcon', url: URL_ADDCARDOUTLINED }, ...properties);
 }
 
 /**

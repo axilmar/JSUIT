@@ -15,7 +15,7 @@ const URL_CONTACTSOUTLINED = new URL('../../assets/icons/contactsOutlined.svg', 
  */
 export const initContactsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CONTACTSOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'contactsOutlinedIcon', url: URL_CONTACTSOUTLINED }, ...properties);
 }
 
 /**

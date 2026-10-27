@@ -15,7 +15,7 @@ const URL_LOCATIONSEARCHINGOUTLINED = new URL('../../assets/icons/locationSearch
  */
 export const initLocationSearchingOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCATIONSEARCHINGOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'locationSearchingOutlinedIcon', url: URL_LOCATIONSEARCHINGOUTLINED }, ...properties);
 }
 
 /**

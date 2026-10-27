@@ -15,7 +15,7 @@ const URL_SMOKEFREE = new URL('../../assets/icons/smokeFree.svg', import.meta.ur
  */
 export const initSmokeFreeIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SMOKEFREE }, ...properties);
+    initIcon(element, { additionalClassName: 'smokeFreeIcon', url: URL_SMOKEFREE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_FLASHON = new URL('../../assets/icons/flashOn.svg', import.meta.url).h
  */
 export const initFlashOnIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLASHON }, ...properties);
+    initIcon(element, { additionalClassName: 'flashOnIcon', url: URL_FLASHON }, ...properties);
 }
 
 /**

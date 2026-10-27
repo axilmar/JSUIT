@@ -15,7 +15,7 @@ const URL_FLAG = new URL('../../assets/icons/flag.svg', import.meta.url).href;
  */
 export const initFlagIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FLAG }, ...properties);
+    initIcon(element, { additionalClassName: 'flagIcon', url: URL_FLAG }, ...properties);
 }
 
 /**

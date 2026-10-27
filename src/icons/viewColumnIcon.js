@@ -15,7 +15,7 @@ const URL_VIEWCOLUMN = new URL('../../assets/icons/viewColumn.svg', import.meta.
  */
 export const initViewColumnIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_VIEWCOLUMN }, ...properties);
+    initIcon(element, { additionalClassName: 'viewColumnIcon', url: URL_VIEWCOLUMN }, ...properties);
 }
 
 /**

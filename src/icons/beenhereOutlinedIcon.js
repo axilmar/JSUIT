@@ -15,7 +15,7 @@ const URL_BEENHEREOUTLINED = new URL('../../assets/icons/beenhereOutlined.svg', 
  */
 export const initBeenhereOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_BEENHEREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'beenhereOutlinedIcon', url: URL_BEENHEREOUTLINED }, ...properties);
 }
 
 /**

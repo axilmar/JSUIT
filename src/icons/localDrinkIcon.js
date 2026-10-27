@@ -15,7 +15,7 @@ const URL_LOCALDRINK = new URL('../../assets/icons/localDrink.svg', import.meta.
  */
 export const initLocalDrinkIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALDRINK }, ...properties);
+    initIcon(element, { additionalClassName: 'localDrinkIcon', url: URL_LOCALDRINK }, ...properties);
 }
 
 /**

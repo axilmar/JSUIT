@@ -10,5 +10,5 @@ import { initSVGGraphicsElement } from "./SVGGraphicsElement.js";
  */
 export const initSVGTextContentElement = (element, ...properties) => {
     console.assert(element instanceof SVGTextContentElement);
-    initSVGGraphicsElement(element, ...properties);
+    initSVGGraphicsElement(element, { additionalClassName: 'SVGTextContentElement' }, ...properties);
 }

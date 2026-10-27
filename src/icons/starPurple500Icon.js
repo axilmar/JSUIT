@@ -15,7 +15,7 @@ const URL_STARPURPLE500 = new URL('../../assets/icons/starPurple500.svg', import
  */
 export const initStarPurple500Icon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STARPURPLE500 }, ...properties);
+    initIcon(element, { additionalClassName: 'starPurple500Icon', url: URL_STARPURPLE500 }, ...properties);
 }
 
 /**

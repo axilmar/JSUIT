@@ -15,7 +15,7 @@ const URL_PANORAMAWIDEANGLE = new URL('../../assets/icons/panoramaWideAngle.svg'
  */
 export const initPanoramaWideAngleIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PANORAMAWIDEANGLE }, ...properties);
+    initIcon(element, { additionalClassName: 'panoramaWideAngleIcon', url: URL_PANORAMAWIDEANGLE }, ...properties);
 }
 
 /**

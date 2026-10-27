@@ -15,7 +15,7 @@ const URL_HIDESOURCE = new URL('../../assets/icons/hideSource.svg', import.meta.
  */
 export const initHideSourceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_HIDESOURCE }, ...properties);
+    initIcon(element, { additionalClassName: 'hideSourceIcon', url: URL_HIDESOURCE }, ...properties);
 }
 
 /**

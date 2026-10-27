@@ -15,7 +15,7 @@ const URL_TRANSGENDER = new URL('../../assets/icons/transgender.svg', import.met
  */
 export const initTransgenderIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_TRANSGENDER }, ...properties);
+    initIcon(element, { additionalClassName: 'transgenderIcon', url: URL_TRANSGENDER }, ...properties);
 }
 
 /**

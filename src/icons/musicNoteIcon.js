@@ -15,7 +15,7 @@ const URL_MUSICNOTE = new URL('../../assets/icons/musicNote.svg', import.meta.ur
  */
 export const initMusicNoteIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MUSICNOTE }, ...properties);
+    initIcon(element, { additionalClassName: 'musicNoteIcon', url: URL_MUSICNOTE }, ...properties);
 }
 
 /**

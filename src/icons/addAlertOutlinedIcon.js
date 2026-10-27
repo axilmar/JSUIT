@@ -15,7 +15,7 @@ const URL_ADDALERTOUTLINED = new URL('../../assets/icons/addAlertOutlined.svg', 
  */
 export const initAddAlertOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDALERTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'addAlertOutlinedIcon', url: URL_ADDALERTOUTLINED }, ...properties);
 }
 
 /**

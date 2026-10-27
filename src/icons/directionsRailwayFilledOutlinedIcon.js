@@ -15,7 +15,7 @@ const URL_DIRECTIONSRAILWAYFILLEDOUTLINED = new URL('../../assets/icons/directio
  */
 export const initDirectionsRailwayFilledOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DIRECTIONSRAILWAYFILLEDOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'directionsRailwayFilledOutlinedIcon', url: URL_DIRECTIONSRAILWAYFILLEDOUTLINED }, ...properties);
 }
 
 /**

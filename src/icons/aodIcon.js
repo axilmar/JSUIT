@@ -15,7 +15,7 @@ const URL_AOD = new URL('../../assets/icons/aod.svg', import.meta.url).href;
  */
 export const initAodIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AOD }, ...properties);
+    initIcon(element, { additionalClassName: 'aodIcon', url: URL_AOD }, ...properties);
 }
 
 /**

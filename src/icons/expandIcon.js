@@ -15,7 +15,7 @@ const URL_EXPAND = new URL('../../assets/icons/expand.svg', import.meta.url).hre
  */
 export const initExpandIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EXPAND }, ...properties);
+    initIcon(element, { additionalClassName: 'expandIcon', url: URL_EXPAND }, ...properties);
 }
 
 /**

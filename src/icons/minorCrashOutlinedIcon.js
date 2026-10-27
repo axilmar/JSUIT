@@ -15,7 +15,7 @@ const URL_MINORCRASHOUTLINED = new URL('../../assets/icons/minorCrashOutlined.sv
  */
 export const initMinorCrashOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MINORCRASHOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'minorCrashOutlinedIcon', url: URL_MINORCRASHOUTLINED }, ...properties);
 }
 
 /**

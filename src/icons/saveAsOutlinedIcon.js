@@ -15,7 +15,7 @@ const URL_SAVEASOUTLINED = new URL('../../assets/icons/saveAsOutlined.svg', impo
  */
 export const initSaveAsOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SAVEASOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'saveAsOutlinedIcon', url: URL_SAVEASOUTLINED }, ...properties);
 }
 
 /**

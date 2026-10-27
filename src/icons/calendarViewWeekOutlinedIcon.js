@@ -15,7 +15,7 @@ const URL_CALENDARVIEWWEEKOUTLINED = new URL('../../assets/icons/calendarViewWee
  */
 export const initCalendarViewWeekOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CALENDARVIEWWEEKOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'calendarViewWeekOutlinedIcon', url: URL_CALENDARVIEWWEEKOUTLINED }, ...properties);
 }
 
 /**

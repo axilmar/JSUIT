@@ -15,7 +15,7 @@ const URL_AUTOFIXOFF = new URL('../../assets/icons/autoFixOff.svg', import.meta.
  */
 export const initAutoFixOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_AUTOFIXOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'autoFixOffIcon', url: URL_AUTOFIXOFF }, ...properties);
 }
 
 /**

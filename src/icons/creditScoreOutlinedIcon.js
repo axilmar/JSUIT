@@ -15,7 +15,7 @@ const URL_CREDITSCOREOUTLINED = new URL('../../assets/icons/creditScoreOutlined.
  */
 export const initCreditScoreOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CREDITSCOREOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'creditScoreOutlinedIcon', url: URL_CREDITSCOREOUTLINED }, ...properties);
 }
 
 /**

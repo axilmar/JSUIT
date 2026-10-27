@@ -15,7 +15,7 @@ const URL_EDITLOCATIONALT = new URL('../../assets/icons/editLocationAlt.svg', im
  */
 export const initEditLocationAltIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_EDITLOCATIONALT }, ...properties);
+    initIcon(element, { additionalClassName: 'editLocationAltIcon', url: URL_EDITLOCATIONALT }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_THREEDROTATION = new URL('../../assets/icons/threeDRotation.svg', impo
  */
 export const initThreeDRotationIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_THREEDROTATION }, ...properties);
+    initIcon(element, { additionalClassName: 'threeDRotationIcon', url: URL_THREEDROTATION }, ...properties);
 }
 
 /**

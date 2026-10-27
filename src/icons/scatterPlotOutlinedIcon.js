@@ -15,7 +15,7 @@ const URL_SCATTERPLOTOUTLINED = new URL('../../assets/icons/scatterPlotOutlined.
  */
 export const initScatterPlotOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SCATTERPLOTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'scatterPlotOutlinedIcon', url: URL_SCATTERPLOTOUTLINED }, ...properties);
 }
 
 /**

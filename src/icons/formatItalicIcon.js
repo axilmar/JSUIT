@@ -15,7 +15,7 @@ const URL_FORMATITALIC = new URL('../../assets/icons/formatItalic.svg', import.m
  */
 export const initFormatItalicIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FORMATITALIC }, ...properties);
+    initIcon(element, { additionalClassName: 'formatItalicIcon', url: URL_FORMATITALIC }, ...properties);
 }
 
 /**

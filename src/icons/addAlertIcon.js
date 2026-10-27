@@ -15,7 +15,7 @@ const URL_ADDALERT = new URL('../../assets/icons/addAlert.svg', import.meta.url)
  */
 export const initAddAlertIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_ADDALERT }, ...properties);
+    initIcon(element, { additionalClassName: 'addAlertIcon', url: URL_ADDALERT }, ...properties);
 }
 
 /**

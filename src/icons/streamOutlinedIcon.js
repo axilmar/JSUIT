@@ -15,7 +15,7 @@ const URL_STREAMOUTLINED = new URL('../../assets/icons/streamOutlined.svg', impo
  */
 export const initStreamOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_STREAMOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'streamOutlinedIcon', url: URL_STREAMOUTLINED }, ...properties);
 }
 
 /**

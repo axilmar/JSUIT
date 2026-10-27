@@ -15,7 +15,7 @@ const URL_DONOTDISTURBONTOTALSILENCE = new URL('../../assets/icons/doNotDisturbO
  */
 export const initDoNotDisturbOnTotalSilenceIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_DONOTDISTURBONTOTALSILENCE }, ...properties);
+    initIcon(element, { additionalClassName: 'doNotDisturbOnTotalSilenceIcon', url: URL_DONOTDISTURBONTOTALSILENCE }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_LOCALPRINTSHOPOUTLINED = new URL('../../assets/icons/localPrintshopOut
  */
 export const initLocalPrintshopOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_LOCALPRINTSHOPOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'localPrintshopOutlinedIcon', url: URL_LOCALPRINTSHOPOUTLINED }, ...properties);
 }
 
 /**

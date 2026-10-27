@@ -15,7 +15,7 @@ const URL_SUBSCRIPTIONS = new URL('../../assets/icons/subscriptions.svg', import
  */
 export const initSubscriptionsIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SUBSCRIPTIONS }, ...properties);
+    initIcon(element, { additionalClassName: 'subscriptionsIcon', url: URL_SUBSCRIPTIONS }, ...properties);
 }
 
 /**

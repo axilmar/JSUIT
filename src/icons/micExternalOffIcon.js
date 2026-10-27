@@ -15,7 +15,7 @@ const URL_MICEXTERNALOFF = new URL('../../assets/icons/micExternalOff.svg', impo
  */
 export const initMicExternalOffIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_MICEXTERNALOFF }, ...properties);
+    initIcon(element, { additionalClassName: 'micExternalOffIcon', url: URL_MICEXTERNALOFF }, ...properties);
 }
 
 /**

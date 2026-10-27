@@ -15,7 +15,7 @@ const URL_PUBLIC = new URL('../../assets/icons/public.svg', import.meta.url).hre
  */
 export const initPublicIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_PUBLIC }, ...properties);
+    initIcon(element, { additionalClassName: 'publicIcon', url: URL_PUBLIC }, ...properties);
 }
 
 /**

@@ -15,7 +15,7 @@ const URL_SENDANDARCHIVE = new URL('../../assets/icons/sendAndArchive.svg', impo
  */
 export const initSendAndArchiveIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_SENDANDARCHIVE }, ...properties);
+    initIcon(element, { additionalClassName: 'sendAndArchiveIcon', url: URL_SENDANDARCHIVE }, ...properties);
 }
 
 /**

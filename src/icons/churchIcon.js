@@ -15,7 +15,7 @@ const URL_CHURCH = new URL('../../assets/icons/church.svg', import.meta.url).hre
  */
 export const initChurchIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_CHURCH }, ...properties);
+    initIcon(element, { additionalClassName: 'churchIcon', url: URL_CHURCH }, ...properties);
 }
 
 /**

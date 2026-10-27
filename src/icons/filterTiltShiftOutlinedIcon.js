@@ -15,7 +15,7 @@ const URL_FILTERTILTSHIFTOUTLINED = new URL('../../assets/icons/filterTiltShiftO
  */
 export const initFilterTiltShiftOutlinedIcon = (element, ...properties) => {
     console.assert(element instanceof HTMLDivElement);
-    initIcon(element, { url: URL_FILTERTILTSHIFTOUTLINED }, ...properties);
+    initIcon(element, { additionalClassName: 'filterTiltShiftOutlinedIcon', url: URL_FILTERTILTSHIFTOUTLINED }, ...properties);
 }
 
 /**
