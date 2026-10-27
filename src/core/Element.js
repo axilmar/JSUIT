@@ -20,7 +20,7 @@ const setDefaultId = (element) => {
     const type = element.classList.item(element.classList.length - 1) ?? element.name ?? element.tagName;
 
     //locate the id counter and increment it; set the id from it
-    element.id = idCounters[type] = (idCounters[type] ?? 0) + 1;
+    element.id = `${type}${idCounters[type] = (idCounters[type] ?? 0) + 1}`;
 }
 
 //splits a string of space-delimited class names into an array of class names

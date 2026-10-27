@@ -33,6 +33,7 @@ import { listItem } from './src/ui/listItem.js';
 import { listDivider } from './src/ui/listDivider.js';
 import { orderedListBox } from './src/ui/orderedListBox.js';
 import { expandButton } from './src/ui/expandButton.js';
+import { expandableElement } from './src/ui/expandableElement.js';
 
 const ipv4mask =
 [
@@ -101,6 +102,8 @@ const createApp = () => {
         )
     );
 }
+
+let expandableElementRef = [];
 
 router([
     {
@@ -188,7 +191,8 @@ router([
                         listDivider(),
                         ...Array.from(Array(5000).keys()).map((item, index) => listItem(`item${index}`))
                     ),
-                    expandButton()
+                    expandButton({onchange: (event) => { console.log("expand button change", event.target.open); expandableElementRef[0].open = event.target.open; }}),
+                    expandableElementRef[0] = expandableElement({style: "background-color: red"}, "Label1")
                 )
             }
         ]
