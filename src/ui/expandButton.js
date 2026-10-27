@@ -28,16 +28,25 @@ const defineExpandButtonProperties = (element) => {
     let collapsedIcon = DEFAULT_ICONS[orientation].collapsed();
     let customExpandedIcon = false;     //an icon that was set by the user is not replaced when the orientation changes
     let customCollapsedIcon = false;
+    let animation = null;               //the rotation of the icon, while it is in effect; the button is locked meanwhile
 
     //shows the icon of the current state; if the state changed, the new icon turns half way, as MUI's expand arrow does
     const refresh = (animate = false) => {
         element.icon = expanded ? expandedIcon : collapsedIcon;
         element.setAttribute('aria-expanded', String(expanded));
         if (animate && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            element.icon.animate(
+            const current = element.icon.animate(
                 [{ transform: 'rotate(180deg)' }, { transform: 'rotate(0deg)' }],
                 { duration: ROTATION_DURATION, easing: ROTATION_EASING }
             );
+            const unlock = () => {
+                if (animation === current) {
+                    animation = null;
+                }
+            };
+            current.addEventListener('finish', unlock);
+            current.addEventListener('cancel', unlock);
+            animation = current;
         }
     };
 
@@ -60,7 +69,7 @@ const defineExpandButtonProperties = (element) => {
         get: () => expanded,
         set: (value) => {
             value = !!value;
-            if (value === expanded) {
+            if (animation?.playState === 'running' || value === expanded) {      //while the icon turns, the button ignores clicks and changes of the property
                 return;
             }
             expanded = value;
@@ -200,6 +209,9 @@ const defineRipple = (element) => {
  *
  * It looks like the IconButton that MUI uses for expanding a card (the hover effect is the one of `iconButton`; the box is `content-box` with 8px of padding around the icon): when `open`
  * changes, the new icon turns half way in 150ms, as the arrow of MUI's expand button does (not if the user prefers reduced motion).
+ *
+ * While the icon turns, the button is locked: a click, or a change of `open` by the code, is ignored (there is no visual indication of it). The
+ * lock lasts as long as the rotation, 150ms, and there is none if the user prefers reduced motion.
  *
  * It has MUI's touch ripple: pressing the button (with the pointer, or the space key) starts a ripple from the center of the button, which grows for
  * 550ms however briefly the button is pressed, and fades out when it is released; a button focused with the keyboard has a pulsating ripple.
