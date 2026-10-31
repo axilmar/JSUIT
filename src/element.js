@@ -22,7 +22,9 @@ import { isFunction } from './utility.js';
  * The `style` and `dataset` keys accept a property bag too, which sets their individual properties;
  * keys of `style` starting with `--` set CSS custom properties.
  * The same applies to any property that holds an element (e.g. `nextElementSibling`): a property bag
- * sets the properties of that element, instead of replacing it.
+ * sets the properties of that element, instead of replacing it; an array sets the element from the
+ * array's props, as if passed to this function (so children are appended to the existing ones);
+ * any other value, e.g. another element, is assigned to the property.
  *
  * @param {string} tag the tag name of the element to create.
  * @param {...*} props the props to set on the element.
@@ -112,9 +114,12 @@ const setPropsFromPropertyBag = (object, props) => {
     }
 }
 
-//sets a property value; if the value is a property bag and the property holds a host object
-//(style, dataset) or an element, then it sets the properties of that object from the properties of the bag,
-//otherwise it sets the object's property.
+//sets a property value:
+//- if the value is a property bag and the property holds a host object (style, dataset) or an element,
+//  then it sets the properties of that object from the properties of the bag;
+//- if the value is an array and the property holds an element, then it sets the element from the array,
+//  as in createElement (children are appended to the existing ones, not replaced);
+//- otherwise it sets the object's property.
 const setValue = (object, key, value) => {
     //set host object or element; the value is checked first, so that the property is read only when needed,
     //since reading some properties (e.g. scrollTop) is costly.
@@ -126,6 +131,13 @@ const setValue = (object, key, value) => {
     //set style custom property
     if (key.startsWith('--') && object instanceof CSSStyleDeclaration) {
         object.setProperty(key, value);
+        return;
+    }
+
+    //if object[key] is an element, and value is an array, then set the element from the array;
+    //the value is checked first, for the same reason as above.
+    if (Array.isArray(value) && object[key] instanceof Element) {
+        setPropsFromArray(object[key], value);
         return;
     }
 
