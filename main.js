@@ -1,2 +1,1 @@
-import '/src/init.js';
-
+document.body.append("Yo");
