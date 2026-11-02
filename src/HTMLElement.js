@@ -15,7 +15,9 @@ import { assert, isFunction } from './utility.js';
  * Before the components are processed, the element gets a `visible` property,
  * which is the opposite of the `hidden` property (`visible = true` is the same as `hidden = false`),
  * unless the element already has a property with that name.
- * Since the property is defined first, `visible` can be used in a property bag.
+ * Elements that have a `disabled` property (buttons, inputs, selects etc) also get an `enabled` property,
+ * which is the opposite of `disabled`, under the same condition.
+ * Since the properties are defined first, `visible` and `enabled` can be used in a property bag.
  *
  * @param {HTMLElement} element the element to set up.
  * @param {...*} components the components to set the element up from.
@@ -24,6 +26,7 @@ import { assert, isFunction } from './utility.js';
 export const initHTMLElement = (element, ...components) => {
     assert(element instanceof HTMLElement, "Value in 'element' argument is not an instance of HTMLElement.");
     defineVisibleProperty(element);
+    defineEnabledProperty(element);
     setHTMLElementFromComponentArray(element, components);
 }
 
@@ -160,22 +163,35 @@ export function HTMLElement_setProperty(key, value) {
     PRIVATE
  ******************************************************************************/
 
-//defines the visible property of an element, which is the opposite of the hidden property;
+//defines a boolean property on an element, which is the opposite of another boolean property of the element;
 //an existing property with the same name (e.g. defined by a derived class) is left alone.
-const defineVisibleProperty = (element) => {
-    if ('visible' in element) {
+const defineOppositeProperty = (element, name, oppositeName) => {
+    if (name in element) {
         return;
     }
 
-    Object.defineProperty(element, 'visible', {
+    Object.defineProperty(element, name, {
         configurable: true,
         get() {
-            return !this.hidden;
+            return !this[oppositeName];
         },
         set(value) {
-            this.hidden = !value;
+            this[oppositeName] = !value;
         }
     });
+}
+
+//defines the visible property of an element, which is the opposite of the hidden property.
+const defineVisibleProperty = (element) => {
+    defineOppositeProperty(element, 'visible', 'hidden');
+}
+
+//defines the enabled property of an element, which is the opposite of the disabled property;
+//it is defined only for elements that have a disabled property.
+const defineEnabledProperty = (element) => {
+    if ('disabled' in element) {
+        defineOppositeProperty(element, 'enabled', 'disabled');
+    }
 }
 
 //sets the properties of an element from a property bag;
