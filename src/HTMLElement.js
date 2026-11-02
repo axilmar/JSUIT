@@ -17,7 +17,24 @@ import { assert, isFunction } from './utility.js';
  * unless the element already has a property with that name.
  * Elements that have a `disabled` property (buttons, inputs, selects etc) also get an `enabled` property,
  * which is the opposite of `disabled`, under the same condition.
- * Since the properties are defined first, `visible` and `enabled` can be used in a property bag.
+ * The element also gets two tooltip properties, both initially null:
+ * - `tooltipElement`: the element used for the tooltip.
+ * - `tooltip`: the value to display as the tooltip. Setting it updates the tooltip element:
+ *   a non-empty value (anything other than null, undefined and '') replaces the children of the tooltip element;
+ *   if there is no tooltip element, a default one is created, with a bottom arrow and MUI style.
+ *   An empty value removes the children of the tooltip element and removes the element from the screen.
+ *
+ * While the mouse is over the element, its tooltip element, if it exists and has content, is shown:
+ * it is added to the body, centered horizontally over the mouse position and above it,
+ * and it follows the mouse until the mouse leaves the element, at which point it is removed from the screen.
+ * If it does not fit above the mouse position, it is shown below it, and it is always kept inside the window;
+ * the arrow of the default tooltip element moves to the top when the tooltip is below the mouse position,
+ * and keeps pointing at the mouse position when the tooltip is shifted to fit in the window.
+ * While shown, the tooltip element is given `position: fixed`, a z-index, `pointer-events: none`
+ * and a `transform` that moves it; any transform it had is replaced.
+ *
+ * Since the properties are defined first, `visible`, `enabled`, `tooltip` and `tooltipElement`
+ * can be used in a property bag.
  *
  * @param {HTMLElement} element the element to set up.
  * @param {...*} components the components to set the element up from.
@@ -27,6 +44,7 @@ export const initHTMLElement = (element, ...components) => {
     assert(element instanceof HTMLElement, "Value in 'element' argument is not an instance of HTMLElement.");
     defineVisibleProperty(element);
     defineEnabledProperty(element);
+    defineTooltipProperties(element);
     setHTMLElementFromComponentArray(element, components);
 }
 
@@ -192,6 +210,273 @@ const defineEnabledProperty = (element) => {
     if ('disabled' in element) {
         defineOppositeProperty(element, 'enabled', 'disabled');
     }
+}
+
+//the background color of the default tooltip element and of its arrow.
+const tooltipBackgroundColor = 'rgba(97, 97, 97, 0.92)';
+
+//defines the tooltipElement and tooltip properties of an element, both initially null;
+//existing properties with the same names (e.g. defined by a derived class) are left alone.
+const defineTooltipProperties = (element) => {
+    if ('tooltipElement' in element || 'tooltip' in element) {
+        return;
+    }
+
+    Object.defineProperty(element, 'tooltipElement', {
+        configurable: true,
+        writable: true,
+        value: null
+    });
+
+    //the value of the tooltip property
+    let tooltip = null;
+
+    //the default tooltip element and its arrow, created the first time they are needed
+    let defaultTooltipElement = null;
+    let defaultArrowElement = null;
+
+    Object.defineProperty(element, 'tooltip', {
+        configurable: true,
+
+        get() {
+            return tooltip;
+        },
+
+        set(value) {
+            //set the property value
+            tooltip = value;
+
+            //update the tooltip element
+            const tooltipElement = this.tooltipElement;
+            assert(tooltipElement === null || tooltipElement instanceof HTMLElement,
+                "Value of 'tooltipElement' is neither null nor an instance of HTMLElement.");
+
+            //empty value: clear the tooltip element and remove it from the screen
+            if (isEmptyTooltip(value)) {
+                if (tooltipElement) {
+                    tooltipElement.replaceChildren();
+                    if (tooltipElement.isConnected) {
+                        tooltipElement.remove();
+                    }
+                }
+                return;
+            }
+
+            //existing tooltip element: replace its children with the value;
+            //the default tooltip element keeps its arrow
+            if (tooltipElement) {
+                if (tooltipElement === defaultTooltipElement) {
+                    tooltipElement.replaceChildren(value, defaultArrowElement);
+                }
+                else {
+                    tooltipElement.replaceChildren(value);
+                }
+                return;
+            }
+
+            //no tooltip element: create the default one
+            ({ tooltipElement: defaultTooltipElement, arrowElement: defaultArrowElement } = createDefaultTooltipElement());
+            defaultTooltipElement.replaceChildren(value, defaultArrowElement);
+            tooltipArrows.set(defaultTooltipElement, defaultArrowElement);
+            this.tooltipElement = defaultTooltipElement;
+        }
+    });
+
+    //show the tooltip element while the element is hovered
+    addTooltipHover(element);
+}
+
+//the distance, in pixels, between the mouse position and the edge of the tooltip element that is closest to it;
+//it leaves room for the arrow of the default tooltip element.
+const tooltipOffset = 12;
+
+//the height, in pixels, of the mouse cursor below its position;
+//it is added to the offset when the tooltip element is shown below the mouse position.
+const tooltipCursorHeight = 16;
+
+//the minimum distance, in pixels, between a tooltip element and the edges of the window.
+const tooltipViewportMargin = 4;
+
+//the minimum distance, in pixels, between the center of the arrow and the sides of the default tooltip element.
+const tooltipArrowMargin = 8;
+
+//the arrows of the default tooltip elements, by tooltip element.
+const tooltipArrows = new WeakMap();
+
+//the z-index of the tooltip element while it is shown; it is the same as the one of MUI tooltips.
+const tooltipZIndex = '1500';
+
+//makes the tooltip element of an element appear while the element is hovered,
+//centered horizontally over the mouse position and above it;
+//the tooltip element follows the mouse until the mouse leaves the element.
+const addTooltipHover = (element) => {
+    //moves the tooltip element, if it is shown
+    const onMouseMove = (event) => {
+        positionTooltipElement(element.tooltipElement, event);
+    }
+
+    //the mouse enters the element: show the tooltip element
+    element.addEventListener('mouseenter', (event) => {
+        showTooltipElement(element.tooltipElement, event);
+        element.addEventListener('mousemove', onMouseMove);
+    });
+
+    //the mouse leaves the element: hide the tooltip element
+    element.addEventListener('mouseleave', () => {
+        element.removeEventListener('mousemove', onMouseMove);
+        hideTooltipElement(element.tooltipElement);
+    });
+}
+
+//shows a tooltip element at the mouse position;
+//nothing is shown if there is no tooltip element or if it has no content.
+const showTooltipElement = (tooltipElement, event) => {
+    if (!tooltipElement || !tooltipElement.hasChildNodes()) {
+        return;
+    }
+
+    //the tooltip element is positioned relative to the window, from its top left corner,
+    //and must not get in the way of the mouse;
+    //it is moved with a transform, so that its size does not depend on its position
+    setHTMLElement(tooltipElement, {
+        style: {
+            position: 'fixed',
+            left: '0',
+            top: '0',
+            zIndex: tooltipZIndex,
+            pointerEvents: 'none'
+        }
+    });
+
+    document.body.append(tooltipElement);
+    positionTooltipElement(tooltipElement, event);
+}
+
+//places a shown tooltip element: centered horizontally over the mouse position and above it;
+//if it does not fit above the mouse position, it is placed below it;
+//it is also kept inside the window, in which case its arrow keeps pointing at the mouse position.
+const positionTooltipElement = (tooltipElement, event) => {
+    if (!tooltipElement || !tooltipElement.isConnected) {
+        return;
+    }
+
+    const { width, height } = tooltipElement.getBoundingClientRect();
+    const windowWidth = document.documentElement.clientWidth;
+    const windowHeight = document.documentElement.clientHeight;
+
+    //centered horizontally, and kept inside the window
+    const x = clamp(event.clientX - width / 2, tooltipViewportMargin, windowWidth - width - tooltipViewportMargin);
+
+    //above the mouse position; if it does not fit, below it
+    let y = event.clientY - height - tooltipOffset;
+    const isBelow = y < tooltipViewportMargin;
+    if (isBelow) {
+        y = event.clientY + tooltipCursorHeight + tooltipOffset;
+    }
+    y = clamp(y, tooltipViewportMargin, windowHeight - height - tooltipViewportMargin);
+
+    //the style is assigned directly, since this runs on every mouse move
+    tooltipElement.style.transform = `translate(${x}px, ${y}px)`;
+
+    //the default tooltip element has an arrow, which points at the mouse position
+    const arrowElement = tooltipArrows.get(tooltipElement);
+    if (arrowElement) {
+        positionTooltipArrow(arrowElement, event.clientX - x, width, isBelow);
+    }
+}
+
+//places the arrow of the default tooltip element, at the bottom of the tooltip element if it is above the mouse position,
+//or at its top if it is below; arrowX is the horizontal position of the mouse, relative to the tooltip element.
+const positionTooltipArrow = (arrowElement, arrowX, tooltipWidth, isBelow) => {
+    //the arrow stays away from the rounded corners
+    const centerX = clamp(arrowX, tooltipArrowMargin, tooltipWidth - tooltipArrowMargin);
+    arrowElement.style.left = `calc(${centerX}px - 0.5em)`;
+
+    //the rotated square inside the arrow is clipped by the arrow, so that it looks like a triangle
+    const squareElement = arrowElement.firstElementChild;
+
+    if (isBelow) {
+        arrowElement.style.top = '0';
+        arrowElement.style.bottom = 'auto';
+        arrowElement.style.marginTop = '-0.71em';
+        arrowElement.style.marginBottom = '0';
+        squareElement.style.transformOrigin = '0 100%';
+    }
+    else {
+        arrowElement.style.top = 'auto';
+        arrowElement.style.bottom = '0';
+        arrowElement.style.marginTop = '0';
+        arrowElement.style.marginBottom = '-0.71em';
+        squareElement.style.transformOrigin = '100% 0';
+    }
+}
+
+//limits a value to a range; if the range is empty, the minimum wins.
+const clamp = (value, min, max) => {
+    return Math.max(min, Math.min(value, max));
+}
+
+//removes a tooltip element from the screen, if it is shown.
+const hideTooltipElement = (tooltipElement) => {
+    if (tooltipElement && tooltipElement.isConnected) {
+        tooltipElement.remove();
+    }
+}
+
+//checks if a tooltip value is empty.
+const isEmptyTooltip = (value) => {
+    return value === null || value === undefined || value === '';
+}
+
+//creates the default tooltip element, in MUI style, with an arrow at the bottom;
+//the arrow is a real child element, because pseudo-elements are not used.
+const createDefaultTooltipElement = () => {
+    //the arrow is a clipped box with a rotated square inside it
+    const arrowElement = createHTMLElement('div',
+        {
+            style: {
+                position: 'absolute',
+                overflow: 'hidden',
+                boxSizing: 'border-box',
+                bottom: '0',
+                left: 'calc(50% - 0.5em)',
+                marginBottom: '-0.71em',
+                width: '1em',
+                height: '0.71em',
+                color: tooltipBackgroundColor
+            }
+        },
+        createHTMLElement('div', {
+            style: {
+                display: 'block',
+                margin: 'auto',
+                width: '100%',
+                height: '100%',
+                backgroundColor: 'currentColor',
+                transform: 'rotate(45deg)',
+                transformOrigin: '100% 0'
+            }
+        }));
+
+    //the element is positioned for its arrow, and does not clip it
+    const tooltipElement = createHTMLElement('div', {
+        role: 'tooltip',
+        style: {
+            position: 'relative',
+            overflow: 'visible',
+            boxSizing: 'border-box',
+            padding: '4px 8px',
+            maxWidth: '300px',
+            borderRadius: '4px',
+            backgroundColor: tooltipBackgroundColor,
+            color: '#fff',
+            fontSize: '0.6875rem',
+            fontWeight: '500',
+            overflowWrap: 'break-word'
+        }
+    });
+
+    return { tooltipElement, arrowElement };
 }
 
 //sets the properties of an element from a property bag;
