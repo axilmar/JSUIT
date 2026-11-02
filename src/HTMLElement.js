@@ -33,6 +33,19 @@ import { assert, isFunction } from './utility.js';
  * While shown, the tooltip element is given `position: fixed`, a z-index, `pointer-events: none`
  * and a `transform` that moves it; any transform it had is replaced.
  *
+ * The element also gets the `onmount` and `onunmount` properties, which hold the handlers of the
+ * `mount` and `unmount` events (see below); like the `on*` properties of the DOM, each holds one function
+ * (or null, which is the initial value), and the function is called with the element as `this`.
+ *
+ * Every HTMLElement, whether it was created by this library or not, gets a non-bubbling `mount` event
+ * when it is added to the screen, and an `unmount` event when it is removed from the screen
+ * (the events are dispatched asynchronously, after the DOM change, using a MutationObserver).
+ * An element is on the screen when the root of its tree is `document.documentElement`
+ * and neither the element nor any of its ancestors is hidden (their `hidden` property is false).
+ * When a tree is mounted, the events are dispatched from the parent to its children;
+ * when a tree is unmounted, from the children to their parent.
+ * Elements that are on the screen when this module is loaded do not get a `mount` event.
+ *
  * Since the properties are defined first, `visible`, `enabled`, `tooltip` and `tooltipElement`
  * can be used in a property bag.
  *
@@ -45,6 +58,8 @@ export const initHTMLElement = (element, ...components) => {
     defineVisibleProperty(element);
     defineEnabledProperty(element);
     defineTooltipProperties(element);
+    defineEventHandlerProperty(element, 'mount');
+    defineEventHandlerProperty(element, 'unmount');
     setHTMLElementFromComponentArray(element, components);
 }
 
@@ -180,6 +195,44 @@ export function HTMLElement_setProperty(key, value) {
 /******************************************************************************
     PRIVATE
  ******************************************************************************/
+
+//defines an event handler property (e.g. onmount) of an element, initially null;
+//like the on* properties of the DOM, it holds a single function, which is called with the element as this;
+//a value that is not a function is stored as null.
+//an existing property with the same name (e.g. defined by a derived class) is left alone.
+const defineEventHandlerProperty = (element, eventName) => {
+    const propertyName = `on${eventName}`;
+    if (propertyName in element) {
+        return;
+    }
+
+    let handler = null;
+    let isListening = false;
+
+    const listener = (event) => {
+        if (handler) {
+            handler.call(element, event);
+        }
+    }
+
+    Object.defineProperty(element, propertyName, {
+        configurable: true,
+
+        get() {
+            return handler;
+        },
+
+        set(value) {
+            handler = isFunction(value) ? value : null;
+
+            //the listener is added the first time there is a handler
+            if (handler && !isListening) {
+                element.addEventListener(eventName, listener);
+                isListening = true;
+            }
+        }
+    });
+}
 
 //defines a boolean property on an element, which is the opposite of another boolean property of the element;
 //an existing property with the same name (e.g. defined by a derived class) is left alone.
@@ -611,3 +664,128 @@ const isCustomProperty = (key) => {
 const customPropertyMessage = (key) => {
     return `Custom property '${key}' can only be set on a style object; use { style: { '${key}': ... } }.`;
 }
+
+/******************************************************************************
+    MOUNT / UNMOUNT EVENTS
+ ******************************************************************************/
+
+//the elements that are currently considered to be on the screen,
+//i.e. the elements that got a mount event and have not got an unmount event yet.
+const mountedElements = new WeakSet();
+
+//checks if an element is on the screen:
+//the root of its tree is document.documentElement, and neither the element nor any of its ancestors is hidden.
+const isElementOnScreen = (element) => {
+    let root = null;
+
+    for (let current = element; current; current = current.parentElement) {
+        if (current.hidden) {
+            return false;
+        }
+        root = current;
+    }
+
+    return root !== null && root === document.documentElement;
+}
+
+//dispatches a mount or unmount event on an element, if it is an html element; the event does not bubble.
+const dispatchMountEvent = (element, type) => {
+    if (element instanceof HTMLElement) {
+        element.dispatchEvent(new Event(type, { bubbles: false }));
+    }
+}
+
+//brings the mounted state of an element and its descendants up to date, dispatching events for the changes;
+//parentOnScreen tells if the parent of the element is on the screen.
+const updateMountedState = (element, parentOnScreen) => {
+    const wasMounted = mountedElements.has(element);
+    const isMounted = parentOnScreen && !element.hidden;
+
+    //if nothing changed for the element, nothing changes for its descendants either,
+    //unless they were changed themselves, in which case they are updated on their own
+    if (isMounted === wasMounted) {
+        return;
+    }
+
+    //mount: the parent is dispatched before its children
+    if (isMounted) {
+        mountedElements.add(element);
+        dispatchMountEvent(element, 'mount');
+    }
+
+    //the children are copied, since the event handlers may change the tree
+    for (const child of Array.from(element.children)) {
+        updateMountedState(child, isMounted);
+    }
+
+    //unmount: the children are dispatched before their parent
+    if (!isMounted) {
+        mountedElements.delete(element);
+        dispatchMountEvent(element, 'unmount');
+    }
+}
+
+//brings the mounted state of an element and its descendants up to date,
+//after the element was added, removed or had its hidden property changed.
+const updateMountedStateFrom = (element) => {
+    const parent = element.parentElement;
+    const parentOnScreen = parent ? isElementOnScreen(parent) : element === document.documentElement;
+    updateMountedState(element, parentOnScreen);
+}
+
+//marks the elements that are on the screen right now as mounted, without dispatching events;
+//they were not added after the module was loaded.
+const markMounted = (element) => {
+    if (element.hidden) {
+        return;
+    }
+
+    mountedElements.add(element);
+
+    for (const child of element.children) {
+        markMounted(child);
+    }
+}
+
+//the observer that finds out which elements were added, removed or hidden/shown.
+const mountObserver = new MutationObserver((records) => {
+    //collect the elements that were changed; each one is updated once, based on its final state
+    const changedElements = new Set();
+
+    for (const record of records) {
+        //the hidden attribute was changed
+        if (record.type === 'attributes') {
+            changedElements.add(record.target);
+            continue;
+        }
+
+        //elements were added or removed
+        for (const node of record.addedNodes) {
+            if (node instanceof Element) {
+                changedElements.add(node);
+            }
+        }
+
+        for (const node of record.removedNodes) {
+            if (node instanceof Element) {
+                changedElements.add(node);
+            }
+        }
+    }
+
+    for (const element of changedElements) {
+        updateMountedStateFrom(element);
+    }
+});
+
+//start observing the document
+if (document.documentElement) {
+    markMounted(document.documentElement);
+}
+
+mountObserver.observe(document, {
+    childList: true,
+    subtree: true,
+    attributes: true,
+    attributeFilter: ['hidden']
+});
