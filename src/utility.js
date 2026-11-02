@@ -2,6 +2,13 @@
     PUBLIC
  ******************************************************************************/
 
+export const assert = (condition, message) => {
+    if (!condition) {
+        console.error(message);
+        throw new Error(message);
+    }
+}
+
 /**
  * Checks if a value is a function.
  *

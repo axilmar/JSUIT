@@ -30,7 +30,7 @@ body.style.backgroundColor = '#fff';
 const globalSheet = new CSSStyleSheet();
 
 //make box sizing border box by default; no scrolling whatsoever for any element, except explicitly enabled by an element
-globalSheet.insertRule('* { box-sizing: border-box; overflow: hidden !important; }', globalSheet.cssRules.length);
+globalSheet.insertRule('* { box-sizing: border-box; overflow: hidden; }', globalSheet.cssRules.length);
 
 //when an object is hidden, set its display is none to avoid any interactions with the hidden element
 globalSheet.insertRule('[hidden] { display: none !important; }', globalSheet.cssRules.length);
