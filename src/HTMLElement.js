@@ -12,12 +12,18 @@ import { assert, isFunction } from './utility.js';
  * It is meant to be called from the constructors of classes derived from HTMLElement.
  * Unlike {@link setHTMLElement}, it does not return the element.
  *
+ * Before the components are processed, the element gets a `visible` property,
+ * which is the opposite of the `hidden` property (`visible = true` is the same as `hidden = false`),
+ * unless the element already has a property with that name.
+ * Since the property is defined first, `visible` can be used in a property bag.
+ *
  * @param {HTMLElement} element the element to set up.
  * @param {...*} components the components to set the element up from.
  * @throws {Error} if the element is not an instance of HTMLElement.
  */
 export const initHTMLElement = (element, ...components) => {
     assert(element instanceof HTMLElement, "Value in 'element' argument is not an instance of HTMLElement.");
+    defineVisibleProperty(element);
     setHTMLElementFromComponentArray(element, components);
 }
 
@@ -153,6 +159,24 @@ export function HTMLElement_setProperty(key, value) {
 /******************************************************************************
     PRIVATE
  ******************************************************************************/
+
+//defines the visible property of an element, which is the opposite of the hidden property;
+//an existing property with the same name (e.g. defined by a derived class) is left alone.
+const defineVisibleProperty = (element) => {
+    if ('visible' in element) {
+        return;
+    }
+
+    Object.defineProperty(element, 'visible', {
+        configurable: true,
+        get() {
+            return !this.hidden;
+        },
+        set(value) {
+            this.hidden = !value;
+        }
+    });
+}
 
 //sets the properties of an element from a property bag;
 //each key of the bag, including inherited keys, is set on the element.
